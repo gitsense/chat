@@ -1,0 +1,86 @@
+#!/usr/bin/env node
+
+/*
+ * Component: GitSense Chat Admin Config CLI
+ * Block-UUID: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+ * Parent-UUID: N/A
+ * Version: 1.0.0
+ * Description: Handles configuration management commands for GitSense Chat, such as restoring chat.json from backups.
+ * Language: JavaScript
+ * Created-at: 2025-08-12T18:50:00.000Z
+ * Authors: Gemini 2.5 Flash Thinking (v1.0.0)
+ */
+
+
+const {
+    Command
+} = require('commander');
+const {
+    listChatBackups,
+    promptForListSelection,
+    confirmAction,
+    restoreChatConfig,
+    ensureDirectoryExists,
+    CONFIG_BACKUPS_DIR
+} = require('../lib/utils-esm'); // Adjust path as necessary based on execution context
+
+const program = new Command();
+
+program.name('gsc-admin config')
+    .description('Manage GitSense Chat application configuration.');
+
+// --- Restore Command ---
+program
+    .command('restore')
+    .description('Restore chat.json from a backup.')
+    .action(async () => {
+        try {
+            await ensureDirectoryExists(CONFIG_BACKUPS_DIR); // Ensure backup directory exists before listing
+
+            const backups = await listChatBackups();
+
+            if (backups.length === 0) {
+                console.log('No chat.json backups found in ' + CONFIG_BACKUPS_DIR);
+                return;
+            }
+
+            console.log('\nAvailable chat.json backups (newest first):');
+            const choices = backups.map((backup, index) => ({
+                name: `${index}: ${backup.name} (Created: ${backup.displayDate})`,
+                value: index,
+            }));
+
+            const selectedIndex = await promptForListSelection('Select the backup to restore:', choices);
+            const selectedBackup = backups[selectedIndex];
+
+            if (!selectedBackup) {
+                console.log('No backup selected. Aborting restore.');
+                return;
+            }
+
+            const confirmationMessage = [
+                `! You are about to restore '${selectedBackup.name}'.`,
+                `! This will OVERWRITE the current '${CHAT_CONFIG_FILENAME}' file.`,
+                `? Are you sure you want to proceed?`
+            ].join('\n');
+
+            const confirmed = await confirmAction(confirmationMessage, false); // Default to No for safety
+
+            if (confirmed) {
+                await restoreChatConfig(selectedBackup.fullPath);
+            } else {
+                console.log('Restore operation cancelled.');
+            }
+
+        } catch (error) {
+            console.error(`Error restoring chat.json: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+program.parse(process.argv);
+
+// If no command is given, display help
+if (!process.argv.slice(2).length) {
+    program.outputHelp();
+}

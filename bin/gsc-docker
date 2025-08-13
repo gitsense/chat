@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # gsc-docker - Helper script for GitSense Chat Docker management
 # Component: gsc-docker helper script
 # Block-UUID: 4b5e5f71-8029-4b65-a089-684cea0642f7
@@ -8,8 +10,6 @@
 # Created-at: 2025-08-10T18:46:31.986Z
 # Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.0.1)
 
-
-#!/bin/bash
 
 CONTAINER_NAME="gitsense-chat"
 IMAGE_NAME="gitsense/chat"

@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+/*
+ * Component: GitSense Chat Admin CLI Dispatcher
+ * Block-UUID: 0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+ * Parent-UUID: 9f1a2b3c-4d5e-6f7a-8b9c-0d1e2f3a4b5c
+ * Version: 1.1.0
+ * Description: Main dispatcher script for the GitSense Chat Admin CLI. Delegates commands to specific sub-tools.
+ * Language: JavaScript
+ * Created-at: 2025-08-12T19:36:23.683Z
+ * Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0)
+ */
+
+
+const { Command } = require('commander');
+const path = require('path');
+
+const program = new Command();
+
+// Set the program name to 'gsc-admin'
+program.name('gsc-admin');
+
+// Define the 'llm' command
+// This command will be handled by a separate executable script: gsc-admin-llm
+program
+    .command('llm', 'Manage LLM models and providers (e.g., add, remove, list, order)')
+    .alias('ai'); // Optional alias for 'llm'
+
+// Define the 'config' command
+// This command will be handled by a separate executable script: gsc-admin-config
+program
+    .command('config', 'Manage application configuration (e.g., restore)')
+    .alias('conf'); // Optional alias for 'config'
+
+// Parse arguments and execute commands
+program.parse(process.argv);
+
+// If no command is given, display help
+if (!process.argv.slice(2).length) {
+    program.outputHelp();
+}

@@ -470,3 +470,20 @@ tr:hover .gs-chat-hidden-cell {
     background-color: #f5f5f5;
 }
 
+.gs-menu-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.gs-menu-button:hover {
+    border-color: #aaa;
+}
+
