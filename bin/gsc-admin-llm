@@ -278,12 +278,12 @@ addCommand
                 '  You can usually find this on the provider\'s API documentation or model list page.'
             ].join('\n'), (input) => input.trim().length > 0 || 'Model ID cannot be empty.');
 
-            // Step 4: Get Max Tokens
-            const maxTokens = await promptForNumber([
-                '? Enter the maximum number of *generated* tokens this model supports:',
-                '  (This refers to the maximum length of the model\'s response, not the total context window.)',
+            // Step 4: Get Max Output Tokens
+            const maxOutputTokens = await promptForNumber([
+                '? Enter the max allowable output tokens:',
+                '  (Your value cannot exceed the model\'s actual maximum output token capability.)',
                 '  (e.g., 8192, 20000)'
-            ].join('\n'), (input) => input > 0 || 'Max tokens must be a positive number.');
+            ].join('\n'), (input) => input > 0 || 'Max output tokens must be a positive number.');
 
             // Step 5: Set Default Model (Optional)
             let isDefault = false;
@@ -308,7 +308,7 @@ addCommand
                 providers: [{
                     name: selectedProvider.name,
                     modelId: modelId,
-                    maxTokens: maxTokens
+                    maxOutputTokens: maxOutputTokens
                 }],
                 default: isDefault
             };

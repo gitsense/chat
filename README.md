@@ -1,12 +1,12 @@
 <!--
 Component: GitSense Chat README
-Block-UUID: 84313538-6e88-4652-a8b8-ec7295a91592
-Parent-UUID: c61c6598-fc84-43f1-bda4-016aef9e28ab
-Version: 1.3.0
-Description: A comprehensive README for GitSense Chat, detailing its purpose, features, licensing, and installation.
+Block-UUID: {{GS-UUID}}
+Parent-UUID: 84313538-6e88-4652-a8b8-ec7295a91592
+Version: 1.4.0
+Description: A comprehensive README for GitSense Chat, detailing its purpose, features, licensing, and initial installation.
 Language: Markdown
-Created-at: 2025-08-11T15:31:31.637Z
-Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0), Gemini 2.5 Flash Thinking (v1.2.0), Gemini 2.5 Flash Thinking (v1.3.0)
+Created-at: 2025-08-13T14:50:49.574Z
+Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0), Gemini 2.5 Flash Thinking (v1.2.0), Gemini 2.5 Flash Thinking (v1.3.0), Gemini 2.5 Flash Thinking (v1.4.0)
 -->
 
 
@@ -22,7 +22,7 @@ GitSense Chat is reimagining how we can interact with Large Language Models (LLM
 
 *   [Why Use GitSense Chat?](#why-use-gitsense-chat)
     *   [No Lock-in, Just Better Workflows](#no-lock-in)
-    *   [Empowering Code Creation with AI](#collaborate-not-delegate)
+    *   [Empowering Code Creation with AI](#empowering-code-creation-with-ai)
     *   [Seamless Data Integration](#seamless-data-integration)
     *   [Context Engineering](#context-engineering)
     *   [AI-Assisted Search](#ai-assisted-search)
@@ -34,6 +34,7 @@ GitSense Chat is reimagining how we can interact with Large Language Models (LLM
 *   [Installation](#installation)
     *   [NPM](#npm)
     *   [Docker](#docker)
+*   [Post-Installation Configuration & Usage](#post-installation-configuration--usage)
 
 ## Why Use GitSense Chat?
 <a id=why-use-gitsense-chat></a>
@@ -42,14 +43,14 @@ GitSense Chat is more than just a chat interface; it's a powerful platform desig
 ### No Lock-in, Just Better Workflows
 <a id=no-lock-in></a>
 
-GitSense Chat is designed to be your **starting point for every LLM conversation**, not a walled garden. We empower you to define precise context, generate traceable code, and manage knowledge with unparalleled efficiency. Once you've crafted your perfect LLM interaction, our **Messages Tool** makes it dead simple to extract and copy your conversation content-including code, notes, and context-for seamless use in your IDE (like VS Code or Aider), other LLM solutions, or any documentation.
+GitSense Chat is designed to be your **starting point for every LLM conversation**, not a walled garden. We empower you to define precise context, generate traceable code, and manage knowledge with great efficiency. Once you've crafted your perfect LLM interaction, our **Messages Tool** makes it dead simple to extract and copy your conversation content-including code, notes, and context-for seamless use in your IDE (like VS Code or Aider), other LLM solutions, or any documentation.
 
 We're confident that once you experience the clarity, control, and traceability GitSense Chat provides, you'll want to come back for its other rich features. Our goal is to enhance your existing workflows, not replace them.
 
 ![No Lock-in](https://github.com/gitsense/chat/raw/main/assets/images/no-lock-in-bordered.png)
 
 ### Empowering Code Creation with AI
-<a id=collaborate-not-delegate></a>
+<a id=empowering-code-creation-with-ai></a>
 
 The quality of AI-generated code is directly dependent on the clarity and precision of human instructions. Understand every piece of generated code, with full traceability back to its conversational origin, versioning, and authorship. This isn't about humans versus AI; it's about **empowering humans** to achieve more by effectively guiding AI.
 
@@ -105,6 +106,8 @@ Our business model focuses on ensuring the long-term sustainability and continue
 ## Installation
 <a id=installation></a>
 
+This section covers the initial steps to get GitSense Chat up and running. For detailed configuration, starting/stopping the application, and using the administration tool, please refer to the [Post-Installation Configuration & Usage Guide](#post-installation-configuration--usage).
+
 ### NPM
 <a id=npm></a>
 
@@ -132,46 +135,14 @@ Navigate into the cloned directory and install the project dependencies. This st
 npm install
 ```
 
-#### 3. Configure Environment Variables
+#### 3. Initial Environment Variables Setup
 
-Create a `.env` file in the root of the `chat` directory. Copy the contents of `.env.example` into your new `.env` file and fill in your API keys for the AI model providers you wish to use (e.g., OpenAI, Anthropic, Google).
+Create a `.env` file in the root of the `chat` directory. Copy the contents of `.env.example` into your new `.env` file. You will configure your API keys in this file later.
 
 ```bash
 # Example: Copy the template to create your .env file
 cp .env.example .env
-
-# Now, open .env in a text editor and add your API keys
-# nano .env
 ```
-
-> **Important:** If GitSense Chat is currently running, you must stop and then start the application after updating your `.env` file for the changes to take effect.
-
-#### 4. Start the Application
-
-From the `chat` directory, start the application. This uses `forever` (a dependency installed via `npm install`) to keep the application running in the background.
-
-```bash
-npm start
-```
-
-The application will be accessible on port `3357`.
-
-#### 5. Access the Application
-
-Open your web browser and go to: [http://localhost:3357](http://localhost:3357)
-
-#### 6. Stop the Application
-
-To stop the running application:
-
-```bash
-npm stop
-```
-
-#### Additional Commands
-
-*   **Check Status:** `npm status`
-*   **View Logs:** `npm logs` (Note: `npm logs` is not a standard npm script. You would typically use `forever logs` if `forever` is installed globally, or inspect logs directly from the `forever` process. For simplicity, `npm status` will show if it's running.)
 
 ### Docker
 <a id=docker></a>
@@ -209,51 +180,29 @@ chmod +x gsc-docker
 
 **Important:** For convenience, you can move the `gsc-docker` script to a directory in your system's `PATH` (e.g., `/usr/local/bin/`). If you don't, you'll need to run it with `./gsc-docker` from the directory where you saved it.
 
-#### 3. Configure Environment Variables
+#### 3. Initial Environment Variables Setup
 
-Create a `.env` file in the **same directory** where you downloaded `gsc-docker` and `.env.example` (e.g., `~/gitsense-chat-docker/`).
-
-Copy the contents of `.env.example` into your new `.env` file and fill in your API keys for the AI model providers you wish to use.
+Create a `.env` file in the **same directory** where you downloaded `gsc-docker` and `.env.example` (e.g., `~/gitsense-chat-docker/`). Copy the contents of `.env.example` into your new `.env` file. You will configure your API keys in this file later.
 
 ```bash
 # Example: Copy the template to create your .env file
 cp .env.example .env
-
-# Now, open .env in a text editor and add your API keys
-# nano .env
 ```
 
-> **Important:** If GitSense Chat is currently running, you must stop and then start the application after updating your `.env` file for the changes to take effect.
+## Post-Installation Configuration & Usage
+<a id="post-installation-configuration--usage"></a>
 
-#### 4. Start the Application
+Once GitSense Chat is initially installed, you'll need to configure your LLM API keys, learn how to start and stop the application, and use the `gsc-admin` tool for managing models and providers.
 
-Navigate to the directory containing your `.env` file (e.g., `~/gitsense-chat-docker/`) and run:
+**For detailed instructions on all post-installation tasks, please refer to the dedicated guide:**
 
-```bash
-gsc-docker start
-```
+[**`docs/POST_INSTALLATION.md`**](docs/POST_INSTALLATION.md)
 
-This command will:
-*   Create a persistent Docker volume for your application data.
-*   Mount your `.env` file into the container.
-*   Start the GitSense Chat application, accessible on port `3357`.
-
-#### 5. Access the Application
-
-Open your web browser and go to: [http://localhost:3357](http://localhost:3357/)
-
-#### 6. Stop the Application
-
-To stop and remove the running container:
-
-```bash
-gsc-docker stop
-```
-
-#### Additional Commands
-
-*   **Check Status:** `gsc-docker status`
-*   **View Logs:** `gsc-docker logs` (Press `Ctrl+C` to exit)
+This comprehensive guide covers:
+*   Configuring your LLM API keys in the `.env` file.
+*   Starting, stopping, checking status, and viewing logs for both NPM and Docker installations.
+*   Using the `gsc-admin` command-line tool to manage LLM models, providers, and restore configurations from backup.
+*   A step-by-step example of adding a new LLM model.
 
 ---
 
@@ -272,3 +221,4 @@ GitSense Chat is designed to be a free-to-use application, providing **significa
 GitSense Chat's **key strength** lies in its ability to import and manage software development data, such as Git repositories, and coordinate indexing at scale. The free version of the GitSense Chat Bridge, while functional, has inherent limitations due to its JavaScript implementation, which currently lacks support for multithreading and other advanced performance optimization capabilities.
 
 Our goal is to generate revenue by charging for a commercial version of the GitSense Chat Bridge. This commercial bridge will offer enhanced performance and scalability, along with significantly more powerful search features, allowing companies to create advanced context engines for use when chatting with LLMs. This approach enables us to keep the core GitSense Chat application free and accessible to everyone, fostering a wide user base while monetizing the specialized, high-performance data ingestion component that is critical for enterprise-level adoption.
+```

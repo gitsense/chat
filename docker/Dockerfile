@@ -44,7 +44,6 @@ COPY --from=build /app/node_modules ./node_modules
 # Copy the necessary application files from the build stage
 # We explicitly list directories and files to ensure only what's needed for runtime is included
 COPY --from=build /app/index.js ./
-COPY --from=build /app/chat.json ./
 COPY --from=build /app/boards.json ./
 COPY --from=build /app/devboard ./devboard
 COPY --from=build /app/lib ./lib
