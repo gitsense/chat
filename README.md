@@ -22,12 +22,10 @@ GitSense Chat is reimagining how we can interact with Large Language Models (LLM
 
 *   [Why Use GitSense Chat?](#why-use-gitsense-chat)
     *   [No Lock-in, Just Better Workflows](#no-lock-in)
-    *   [Empowering Code Creation with AI](#empowering-code-creation-with-ai)
-    *   [Seamless Data Integration](#seamless-data-integration)
+    *   [Your Personal AI Search Assistant](#your-personal-ai-search-assistant)
     *   [Context Engineering](#context-engineering)
-    *   [AI-Assisted Search](#ai-assisted-search)
-    *   [AI-Powered Data](#ai-powered-data)
     *   [Next-Gen Knowledge Base](#next-gen-knowledge-base)
+    *   [And More](#and-more)
 *   [License and Business Model](#license-and-business-model)
     *   [License](#license)
     *   [Business Model](#business-model)
@@ -49,21 +47,12 @@ We're confident that once you experience the clarity, control, and traceability 
 
 ![No Lock-in](https://github.com/gitsense/chat/raw/main/assets/images/no-lock-in-bordered.png)
 
-### Empowering Code Creation with AI
-<a id=empowering-code-creation-with-ai></a>
+### Your Personal AI Search Assistant
+<a id=your-personal-ai-search-assistant></a>
 
-The quality of AI-generated code is directly dependent on the clarity and precision of human instructions. Understand every piece of generated code, with full traceability back to its conversational origin, versioning, and authorship. This isn't about humans versus AI; it's about **empowering humans** to achieve more by effectively guiding AI.
+Simply chat with an LLM to make your data smarter. With GitSense Chat, you can turn any text-based data into intelligent insights that can help you find bugs faster, identify security vulnerabilities, and even organize your grocery bills. For example, you could ask, "find all files with high-priority TODOs in the `mobile-app-ios` and `mobile-app-android` repositories," and have AI search your GitSense Chat knowledge base to find answers that traditional text searches like grep can't.
 
-![Traceability](https://github.com/gitsense/chat/raw/main/assets/images/traceability-bordered.png)
-
-### Seamless Data Integration
-<a id=seamless-data-integration></a>
-
-**AI <-> Your Data:** GitSense Chat lets you chat directly with your own information using Large Language Models. This means you can now chat with your codebase and other development data, turning them into interactive knowledge sources.
-
-This capability is powered by the **GitSense Chat Bridge** (available in both free and commercial versions). The Bridge seamlessly imports your Git repositories into the application, transforming your code into an interactive knowledge base. We are actively expanding its capabilities to integrate with GitHub issues, pull requests, and more, ensuring all your development data is AI-ready.
-
-![Seamless Data Integration](https://github.com/gitsense/chat/raw/main/assets/images/seamless-data-integration-bordered.png)
+![Personal AI Search Assistant Screenshot](https://github.com/gitsense/chat/raw/main/assets/images/personal-ai-search-assistant-bordered.png)
 
 ### Context Engineering
 <a id=context-engineering></a>
@@ -72,26 +61,17 @@ Significantly improve the accuracy, relevance, and cost-efficiency of LLM respon
 
 ![Context Engineering](https://github.com/gitsense/chat/raw/main/assets/images/context-engineering-bordered.png)
 
-### AI-Assisted Search
-<a id=ai-assisted-search></a>
-
-Quickly find precise, tailored answers across your data with AI-assisted search. Ask complex questions in natural language, and let AI intelligently refine your queries.
-
-![AI-Assisted Search](https://github.com/gitsense/chat/raw/main/assets/images/ai-search-bordered.png)
-
-### AI-Powered Data
-<a id=ai-powered-data></a>
-
-Turn any text into structured, actionable insights. Simply chat with an LLM to create custom Analyzers that can extract structured data and summaries, enabling powerful search and analysis.
-
-![AI-Assisted Search](https://github.com/gitsense/chat/raw/main/assets/images/ai-data-bordered.png)
-
 ### Next-Gen Knowledge Base
 <a id=next-gen-knowledge-base></a>
 
 Create a wiki that you can truly chat with, offering a dynamic and conversational experience unlike traditional wikis. This transforms how technical documents and training materials are created and consumed, fostering a more interactive and accessible learning environment.
 
 ![Knowledge Base](https://github.com/gitsense/chat/raw/main/assets/images/knowledge-base-bordered.png)
+
+### And More
+<a id=installation></a>
+
+Explore GitSense Chat's full potential by loading your own personal help guide directly within the application. Visit [https://chat.gitsense.com](https://chat.gitsense.com) to chat with the documentation, ask questions, and learn interactively about all features, from advanced context management to custom AI tools.
 
 ## License and Business Model
 <a id=license-and-business-model></a>
