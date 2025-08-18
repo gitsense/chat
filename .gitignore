@@ -26,8 +26,8 @@ Desktop.ini
 .idea/
 *.sublime-project
 *.sublime-workspace
-*.swp # Vim swap files
-*.swo # Vim swap files
+*.swp
+*.swo
 
 # Environment variables
 .env
@@ -44,9 +44,9 @@ Desktop.ini
 /libs/widgets.js
 /public/js/devboard.js
 /public/js/devboard.min.js
-/public/js/bundle.js # From your file list
-/public/css/*.min.css # If these are generated from non-minified CSS
-/public/css/tabler.css # If tabler.min.css is the source, and this is generated
+/public/js/bundle.js
+/public/css/*.min.css
+/public/css/tabler.css
 
 # Database files
 data/*.sqlite3
@@ -61,9 +61,9 @@ temp/
 *.tmp
 *.tmp-browserify*
 *.bak
-*.rej # Patch reject files
-*.orig # Patch original files
-.uuidskip # From your file list, seems like a temporary/internal marker
+*.rej
+*.orig
+.uuidskip
 
 # Compiled output directories (common for TypeScript/build processes)
 dist/

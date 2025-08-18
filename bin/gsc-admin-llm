@@ -4,11 +4,11 @@
  * Component: GitSense Chat Admin LLM CLI
  * Block-UUID: 84e58de7-3ef0-4c86-ad51-1809c21544ae
  * Parent-UUID: N/A
- * Version: 1.2.0
+ * Version: 1.3.0
  * Description: Handles LLM model and provider management commands for GitSense Chat.
  * Language: JavaScript
  * Created-at: 2025-08-12T19:15:00.000Z
- * Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0), Gemini 2.5 Flash Thinking (v1.2.0)
+ * Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0), Gemini 2.5 Flash Thinking (v1.2.0), GPT OSS 120B (v1.3.0)
  */
 
 
@@ -177,7 +177,6 @@ addCommand
                 if (config.providers.some(p => p.name === providerName)) {
                     console.log(`! A provider with the name '${providerName}' already exists.`);
                     console.log(`! If you wish to modify it, please use 'gsc-admin llm edit provider "${providerName}"' (not yet implemented).`);
-                    // For now, just re-prompt for a unique name
                 } else {
                     isUnique = true;
                 }
@@ -437,6 +436,46 @@ addCommand
         }
     });
 
+// --- New Command: set-default-model ---
+program
+    .command('set-default-model <name>')
+    .description('Set the specified model as the default model.')
+    .action(async (identifier) => {
+        try {
+            const config = await readChatConfig();
+
+            // Locate the target model (ignore dividers)
+            const found = findItem(config.models, identifier);
+            if (!found || found.item.name === '---------') {
+                console.log(`! Model '${identifier}' not found or is a divider.`);
+                return;
+            }
+            const targetModel = found.item;
+
+            // Find any existing default model
+            const currentDefault = config.models.find(m => m.default);
+            if (currentDefault && currentDefault.name === targetModel.name) {
+                console.log(`✓ '${targetModel.name}' is already the default model.`);
+                return;
+            }
+
+            const confirmed = await confirmAction(`? Set model '${targetModel.name}' as the default model?`);
+            if (!confirmed) {
+                console.log('Operation cancelled.');
+                return;
+            }
+
+            // Unset old default and set new one
+            if (currentDefault) delete currentDefault.default;
+            targetModel.default = true;
+
+            await writeChatConfig(config);
+        } catch (error) {
+            console.error(`Error setting default model: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
 // --- Remove Commands ---
 
 program
@@ -594,7 +633,7 @@ program
                 targetIndex = selectedIndex;
             }
 
-            const confirmed = await confirmAction(`? Are you sure you want to remove the divider at index ${targetIndex}?`);
+            const confirmed = await confirmAction(`? Confirm removing the divider at index ${targetIndex}?`);
 
             if (confirmed) {
                 models.splice(targetIndex, 1);

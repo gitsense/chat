@@ -26,6 +26,7 @@ Throughout this guide, commands will be presented with both NPM and Docker varia
 *   [4. Managing LLM Models and Providers](#4-managing-llm-models-and-providers)
     *   [Introduction to `gsc-admin`](#introduction-to-gsc-admin)
     *   [Command Syntax](#command-syntax)
+    *   [Example: Setting a Default LLM Model](#example-setting-default-model)
     *   [Example: Adding a New LLM Model](#example-adding-a-new-llm-model)
     *   [Other `gsc-admin llm` Commands](#other-gsc-admin-llm-commands)
 *   [5. Restoring Configuration from Backup](#5-restoring-configuration-from-backup)
@@ -142,7 +143,7 @@ GitSense Chat provides a command-line administration tool, `gsc-admin`, to manag
 
 The `gsc-admin` tool is a powerful utility for:
 *   Adding, removing, and listing LLM providers.
-*   Adding, removing, listing, and reordering LLM models.
+*   Adding, removing, listing, reordering, and setting a default LLM model.
 *   Adding and removing visual dividers in your model list.
 *   Restoring your `chat.json` configuration from backups.
 
@@ -164,6 +165,24 @@ The way you invoke `gsc-admin` depends on your installation method:
     Example: `gsc-docker admin llm list models`
 
     The `gsc-docker admin` command acts as a convenient proxy, executing the `gsc-admin` tool inside your running Docker container.
+
+### Example: Setting a Default LLM Model
+<a id="example-setting-default-model"></a>
+
+You can easily set an existing model as the default using its display name or index. This is useful if you want a specific model to be pre-selected when users open GitSense Chat.
+
+Let's say you want to make "GPT-4o" the default model.
+
+**1. Start the command:**
+
+*   **NPM:**
+    ```bash
+    npm run gsc-admin llm set-default-model "GPT-4o"
+    ```
+*   **Docker:**
+    ```bash
+    gsc-docker admin llm set-default-model "GPT-4o"
+    ```
 
 ### Example: Adding a New LLM Model
 <a id="example-adding-a-new-llm-model"></a>
@@ -282,6 +301,7 @@ The `gsc-admin llm` tool supports a variety of commands for managing your LLM co
 
 *   **`gsc-admin llm list providers`**: Lists all configured LLM providers.
 *   **`gsc-admin llm list models`**: Lists all configured LLM models and dividers in their current order.
+*   **`gsc-admin llm set-default-model [name_or_index]`**: Sets the specified model as the default. 
 *   **`gsc-admin llm add provider`**: Interactively adds a new LLM provider.
 *   **`gsc-admin llm remove model [name_or_index]`**: Removes a model by its display name or numbered index. If no argument is provided, it will prompt interactively.
 *   **`gsc-admin llm remove provider [name]`**: Removes a provider by its name. If no argument is provided, it will prompt interactively.
