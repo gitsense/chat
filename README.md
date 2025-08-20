@@ -168,6 +168,8 @@ GitSense Chat ships with four ready-to-use LLM models:
 | **GPT-5**             | OpenAI     | `gpt-5`                     | - |
 | **GPT OSS 120B**      | OpenRouter | `openai/gpt-oss-120b`       | **default** |
 
+> To add a new model or to change the default, please refer to **[docs/POST_INSTALLATION.md](docs/POST_INSTALLATION.md)** for more information.
+
 #### Required API Keys
 
 Add the following keys to your `.env` file (or the Docker-mounted `.env`):
@@ -187,8 +189,6 @@ OPENROUTER_API_KEY="YOUR_OPENROUTER_KEY"
 ```
 
 > **Tip:** Only the keys for the providers you plan to use are required. 
-
-To change the default model, use the `gsc-admin llm set-default-model <model-name>` command (e.g., `gsc-admin llm set-default-model "Claude 4.0 Sonnet"`).
 
 #### Starting GitSense Chat
 

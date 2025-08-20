@@ -13,6 +13,7 @@
     "bundle": "browserify devboard/main.js --standalone DevBoard -o public/js/devboard.js",
     "bundle-min": "browserify devboard/main.js --standalone DevBoard | uglifyjs -m -c -o public/js/devboard.min.js",
     "dev:start": "nodemon index.js",
+    "gsc-admin": "node bin/gsc-admin",
     "postinstall": "npm run build-bundle-min",
     "test": "jest",
     "start": "node scripts/start-forever.js",

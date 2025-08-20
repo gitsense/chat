@@ -17,4 +17,4 @@
  * Copyright (c) 2025 GitSense. All rights reserved.
  */
 
-let introductionDemo=require("./introductionDemo").introductionDemo,supportedDemos=[introductionDemo];module.exports={supportedDemos:supportedDemos};
+let analyzersDemo=require("./analyzersDemo").analyzersDemo,codeTraceabilityDemo=require("./codeTraceabilityDemo").codeTraceabilityDemo,contextManagementDemo=require("./contextManagementDemo").contextManagementDemo,supportedDemos=[analyzersDemo,codeTraceabilityDemo,contextManagementDemo];module.exports={supportedDemos:supportedDemos};
