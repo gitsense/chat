@@ -17,15 +17,16 @@
  * Copyright (c) 2025 GitSense. All rights reserved.
  */
 
-let{CodeBlockUtils,ChatUtils,MessageUtils}=require("@gitsense/gsc-utils"),MessageService=require("../../../../services/MessageService"),DEMO_CONSTANTS=require("../constants"),DemoUtils=require("../utils/demoUtils"),DEMO_TITLE="## AI-Assisted Search & Analyzers Demo",LIST_ANALYZERS_COMMAND="!ask list production ready analyzers that can help with code quality",SHOW_ANALYZER_SCHEMA_COMMAND="!ask show the schema for the code comment analyzer",FIND_OUTDATED_COMMENTS='!ask using the code comment analyzer, find files with outdated comments in the "Hey World" and "Hello World" repositories.',analyzersDemo={id:"analyzers",name:"AI-Assisted Search & Analyzers Demo",description:"Discover how to leverage AI-powered Analyzers to perform intelligent semantic searches and extract actionable insights from your data.",scenes:[{id:"analyzers-intro",action:"typeAndAppend",triggerCondition:(e,t,a,s)=>e.message.includes(DEMO_TITLE),contentToType:`
-Welcome! In this demo, you'll discover how to transform your unstructured data into a powerful, personalized knowledge base using our intelligent **Analyzers** (the "Brains").
+let{CodeBlockUtils,ChatUtils,MessageUtils}=require("@gitsense/gsc-utils"),MessageService=require("../../../../services/MessageService"),DEMO_CONSTANTS=require("../constants"),DemoUtils=require("../utils/demoUtils"),DEMO_TITLE="## AI-Assisted Search & Analyzers Demo",LIST_ANALYZERS_COMMAND="!ask list production ready analyzers that can help with code quality",SHOW_ANALYZER_SCHEMA_COMMAND="!ask show the schema for the code comment analyzer",FIND_OUTDATED_COMMENTS='!ask Using the code-comment analyzer, show me the distribution of spelling mistakes, outdated comments, and incorrect function references in the "Hey World" and "Hello World" repositories. Present the numbers in a markdown table with North-American formatting (e.g., 1,234) and then give a short summary in a `gitsense-search-flow` block.',analyzersDemo={id:"analyzers",name:"AI-Assisted Search & Analyzers Demo",description:"Discover how to leverage AI-powered Analyzers to perform intelligent semantic searches and extract actionable insights from your data.",scenes:[{id:"analyzers-intro",action:"typeAndAppend",triggerCondition:(e,t,s,a)=>e.message.includes(DEMO_TITLE),contentToType:`
+Welcome! This demo will demonstrate **AI-Assisted Search & Analyzers** in GitSense Chat.  You'll learn to:
 
-Analyzers allow you to teach the AI what to look for in any text file - from code to notes - and extract specific, structured data without writing a single line of code. This turns raw information into filterable, actionable insights, enabling you to:
-*   **Unlock intelligent search:** Ask complex natural language questions and get precise answers.
-*   **Automate data extraction:** Turn free-form text into organized, queryable metadata.
-*   **Enhance context building:** Precisely filter relevant files for LLM interactions.
+*   Discover AI Analyzers
+*   Explore Analyzer Schemas
+*   Perform AI Search
+*   Extract AI Insights
+*   Control AI Output
 
-The command below is ready to be sent. It will list production-ready Analyzers that can help with code quality, giving you a glimpse into the power of these "Brains."
+Ready to work smarter with GitSense Chat and AI? To begin, we will ask AI to list production-ready Analyzers that can help with code quality with the following command:
 
 \`\`\`
 ${LIST_ANALYZERS_COMMAND}
@@ -40,7 +41,7 @@ Click the link below to send this command. We'll explain the results once the se
 ---
 
 **LLM responses are live.** If the demo suddenly stops, cannot continue or becomes somewhat nonsensical, it is because we were unable to predict what the LLM would return. Most of the time, you should be able to delete messages and then click the **Send Message** link again to keep going. If that does not work, you will need to start another demo.
-            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,a,s)=>{a=a.querySelector("a");a?(await DemoUtils.simulateTyping(LIST_ANALYZERS_COMMAND,s),a.onclick=e=>{e.preventDefault(),DemoUtils.sendMessage()}):console.error(`No send link in current scene ${t.id} found`)},nextSceneId:"analyzers-await-list"},{id:"analyzers-await-list",action:"createBlankChildMessage",triggerCondition:(e,t,a,s)=>{var a=MessageUtils.getMessageById(a.chat,e.parent_id);return!!(a&&a.message.includes(LIST_ANALYZERS_COMMAND)&&(a=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,a.filter(e=>"gs-tool"===e.type).find(e=>"search"===e.toolData?.tool))&&e.message.trimStart().startsWith("## AI Search Complete"))},nextSceneId:"analyzers-explain-list"},{id:"analyzers-explain-list",action:"typeAndAppend",contentToType:`
+            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,s,a)=>{s=s.querySelector("a");s?(await DemoUtils.simulateTyping(LIST_ANALYZERS_COMMAND,a),s.onclick=e=>{e.preventDefault(),DemoUtils.sendMessage()}):console.error(`No send link in current scene ${t.id} found`)},nextSceneId:"analyzers-await-list"},{id:"analyzers-await-list",action:"createBlankChildMessage",triggerCondition:(e,t,s,a)=>{var s=MessageUtils.getMessageById(s.chat,e.parent_id);return!!(s&&s.message.includes(LIST_ANALYZERS_COMMAND)&&(s=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,s.filter(e=>"gs-tool"===e.type).find(e=>"search"===e.toolData?.tool))&&e.message.trimStart().startsWith("## AI Search Complete"))},nextSceneId:"analyzers-explain-list"},{id:"analyzers-explain-list",action:"typeAndAppend",contentToType:`
 ### What Happened
 
 The AI-assisted search found production-ready analyzers that can improve code quality, namely the \`code-comment-analyzer\`, which helps identify and report issues in code comments, such as spelling errors and outdated parameter descriptions.
@@ -58,14 +59,14 @@ ${SHOW_ANALYZER_SCHEMA_COMMAND}
 Click the link below to send the next command and move on with the demo.
 
 [**Send Message**]()
-            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,a,s)=>{a=a.querySelector("a");a?(await DemoUtils.simulateTyping(SHOW_ANALYZER_SCHEMA_COMMAND,s),a.onclick=e=>{e.preventDefault(),DemoUtils.sendMessage()}):console.error(`No send link in current scene ${t.id} found`)},nextSceneId:"analyzers-await-schema"},{id:"analyzers-await-schema",action:"createBlankChildMessage",triggerCondition:(e,t,a,s)=>{var a=MessageUtils.getMessageById(a.chat,e.parent_id);return!!(a&&a.message.includes(SHOW_ANALYZER_SCHEMA_COMMAND)&&(a=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,a.filter(e=>"gs-tool"===e.type).find(e=>"search"===e.toolData?.tool))&&e.message.trimStart().startsWith("## AI Search Complete"))},nextSceneId:"analyzers-explain-schema"},{id:"analyzers-explain-schema",action:"typeAndAppend",contentToType:`
+            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,s,a)=>{s=s.querySelector("a");s?(await DemoUtils.simulateTyping(SHOW_ANALYZER_SCHEMA_COMMAND,a),s.onclick=e=>{e.preventDefault(),DemoUtils.sendMessage()}):console.error(`No send link in current scene ${t.id} found`)},nextSceneId:"analyzers-await-schema"},{id:"analyzers-await-schema",action:"createBlankChildMessage",triggerCondition:(e,t,s,a)=>{var s=MessageUtils.getMessageById(s.chat,e.parent_id);return!!(s&&s.message.includes(SHOW_ANALYZER_SCHEMA_COMMAND)&&(s=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,s.filter(e=>"gs-tool"===e.type).find(e=>"search"===e.toolData?.tool))&&e.message.trimStart().startsWith("## AI Search Complete"))},nextSceneId:"analyzers-explain-schema"},{id:"analyzers-explain-schema",action:"typeAndAppend",contentToType:`
 ### What Happened
 
 We've successfully retrieved the schema for the \`code-comment-analyzer\`. This schema shows us the metadata fields the Analyzer can extract, such as \`has_spelling_mistakes\`, \`outdated_comment_detected\`, and \`relevance_summary\`. These fields provide a structured way to understand and query your codebase, allowing for more precise and meaningful insights.
 
 ### Next Steps
 
-Now that we have this schema, we can do a semantic search to find specific issues in your codebase. Instead of just listing files, we'll ask the LLM to *summarize* the types of spelling mistakes found, demonstrating how Analyzers enable deeper insights.
+Now that we have this schema, we can do a semantic search to find specific issues in your codebase. Instead of just listing files, we'll ask the LLM to provide a *distribution* of the types of issues found, demonstrating how Analyzers enable deeper insights into your codebase's quality. Crucially, we'll also instruct the LLM to format the numerical results using North American comma separators, showcasing how you can control the output presentation.
 
 The command below is ready to be sent.
 
@@ -76,10 +77,12 @@ ${FIND_OUTDATED_COMMENTS}
 Click the link below to send the next command and move on with the demo.
 
 [**Send Message**]()
-            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,a,s)=>{a=a.querySelector("a");a?(await DemoUtils.simulateTyping(FIND_OUTDATED_COMMENTS,s),a.onclick=e=>{e.preventDefault(),DemoUtils.sendMessage()}):console.error(`No send link in current scene ${t.id} found`)},nextSceneId:"analyzers-await-semantic-search"},{id:"analyzers-await-semantic-search",action:"createBlankChildMessage",triggerCondition:(e,t,a,s)=>{var a=MessageUtils.getMessageById(a.chat,e.parent_id);return!!(a&&a.message.includes(FIND_OUTDATED_COMMENTS)&&(a=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,a.filter(e=>"gs-tool"===e.type).find(e=>"search"===e.toolData?.tool))&&e.message.trimStart().startsWith("## AI Search Complete"))},nextSceneId:"analyzers-explain-semantic-search"},{id:"analyzers-explain-semantic-search",action:"typeAndAppend",contentToType:`
+            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,s,a)=>{s=s.querySelector("a");s?(await DemoUtils.simulateTyping(FIND_OUTDATED_COMMENTS,a),s.onclick=e=>{e.preventDefault(),DemoUtils.sendMessage()}):console.error(`No send link in current scene ${t.id} found`)},nextSceneId:"analyzers-await-semantic-search"},{id:"analyzers-await-semantic-search",action:"createBlankChildMessage",triggerCondition:(e,t,s,a)=>{var s=MessageUtils.getMessageById(s.chat,e.parent_id);return!!(s&&s.message.includes(FIND_OUTDATED_COMMENTS)&&(s=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,s.filter(e=>"gs-tool"===e.type).find(e=>"search"===e.toolData?.tool))&&e.message.trimStart().startsWith("## AI Search Complete"))},nextSceneId:"analyzers-explain-semantic-search"},{id:"analyzers-explain-semantic-search",action:"typeAndAppend",contentToType:`
 ### What Happened
 
-We've successfully demonstrated how GitSense Chat AI-assisted search, powered by **Analyzers** (our "Brains"), can transform unstructured code comments into actionable insights. By leveraging the \`code-comment-analyzer\`, we precisely identified files with outdated comments across the "Hey World" and "Hello World" repositories, turning raw text into filterable, queryable data.
+We've successfully demonstrated how GitSense Chat AI-assisted search, powered by **Analyzers** (our "Brains"), can transform unstructured code comments into actionable insights. By leveraging the \`code-comment-analyzer\`, we've obtained a clear *distribution* of code comment issues (spelling mistakes, outdated comments, incorrect function references) across the "Hey World" and "Hello World" repositories. This demonstrates how Analyzers can transform unstructured comments into structured, actionable insights, allowing you to understand the quality of your codebase at a glance.
+
+The results should also be presented in a table format with North American comma separators, illustrating the LLM's ability to adhere to specific output presentation requests for clarity and readability.
 
 ## Demo Complete
 

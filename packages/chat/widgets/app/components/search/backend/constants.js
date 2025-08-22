@@ -17,4 +17,4 @@
  * Copyright (c) 2025 GitSense. All rights reserved.
  */
 
-let getDBPath=require("../../../db").getDBPath,{getAnalyzers,getAnalyzerSchema}=require("../../chat-builder/utils/analyzerUtils");module.exports={getDBPath:getDBPath,getAnalyzers:getAnalyzers,getAnalyzerSchema:getAnalyzerSchema};
+let path=require("path"),BASE_ANALYZERS_DIR=path.resolve(__dirname,"../../chat-builder/messages/analyze");module.exports={BASE_ANALYZERS_DIR:BASE_ANALYZERS_DIR};

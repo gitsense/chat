@@ -18,7 +18,7 @@ The "search" tool is triggered by including a `gitsense-tool` block in an assist
 
 ## Tool Block Example (Minimal)
 
-```txt
+\```txt
 # GitSense Chat Tool
 
 {
@@ -28,7 +28,7 @@ The "search" tool is triggered by including a `gitsense-tool` block in an assist
       "engine": "gitsense"
    }
 }
-```
+\```
 
 ## Config Object Structure
 
@@ -258,7 +258,7 @@ Supported filters in `profile:meta-search` mode:
 
 The default output for the `metadata-filter` profile includes the `result_chat_id` at the top level and a minimal set of essential message fields (`messages.id`, `messages.type`, `messages.chat_id`) within the `result_json` object for message results. This is optimized for the frontend Metadata Filter UI, which primarily needs the chat IDs of matching items.
 
-```json
+\```json
 {
   "topLevel": ["result_chat_id"],
   "messages": [
@@ -267,7 +267,7 @@ The default output for the `metadata-filter` profile includes the `result_chat_i
     "messages.chat_id"
   ]
 }
-```
+\```
 
 ## Metadata Insights Search Syntax
 
@@ -279,7 +279,7 @@ This mode is intended to provide quick statistical overviews of metadata distrib
 *   **`analyzer:<analyzer-id>`**: **Mandatory.** Specifies the ID of the analyzer whose metadata should be used for generating insights.
     *   Example: `analyzer:tiny-overview::file-content::default`
 *   **`insight-field:<field-name>:<type>`**: **Mandatory.** Specifies the name of the metadata field for which counts should be generated. This name must match a property within the `extracted_metadata` JSON object produced by the specified `analyzer-id`.
-    *   **Updated Syntax:** The syntax is `insight-field:<field-name>:<type>`. The `<type>` is mandatory and specifies the data type of the metadata property, similar to the `meta:` filter. This is required to ensure correct type-safe aggregation and ordering in the database. Supported types for the MVP are:
+    *   **Updated Syntax:** The syntax is `insight-field:<field-name>:<type>`. The `<type>` is mandatory and specifies the data type of the metadata property, similar to the `meta:` filter. This is required to ensure correct type-safe aggregation and ordering in the database. **Multiple `insight-field` parameters can be provided in a single query, or multiple fields can be comma-separated within a single `insight-field` parameter.** Supported types for the MVP are:
         *   `string`
         *   `number`
         *   `boolean`
@@ -301,6 +301,10 @@ This mode is intended to provide quick statistical overviews of metadata distrib
     `profile:meta-insights analyzer:tiny-overview::file-content::default insight-field:state:string repo:gitsense/gsc-search`
 *   Get counts for the 'author' field from the tiny overview analyzer, filtered by specific chat IDs:
     `profile:meta-insights analyzer:tiny-overview::file-content::default insight-field:author:string chat-id:10,25,30`
+*   Get counts for `outdated_comment_detected`, `outdated_comment_type`, and `has_spelling_mistakes` from the `code-comment-analyzer` in the "Hey World" and "Hello World" repos:
+    `profile:meta-insights analyzer:code-comment-analyzer::file-content::default insight-field:outdated_comment_detected:boolean,outdated_comment_type:string,has_spelling_mistakes:boolean repo:"Hey World","Hello World"`
+*   Alternatively, using multiple `insight-field` instances for the same query:
+    `profile:meta-insights analyzer:code-comment-analyzer::file-content::default insight-field:outdated_comment_detected:boolean insight-field:outdated_comment_type:string insight-field:has_spelling_mistakes:boolean repo:"Hey World","Hello World"`
 *   Get counts for the 'issue_number' field from the tiny overview analyzer:
     `profile:meta-insights analyzer:tiny-overview::file-content::default insight-field:issue_number:number`
 

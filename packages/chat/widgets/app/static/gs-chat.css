@@ -487,3 +487,17 @@ tr:hover .gs-chat-hidden-cell {
     border-color: #aaa;
 }
 
+.gs-blink-text {
+    /* animation: gs-blinker 4s linear infinite; */
+    font-weight: bold;
+    padding: 3px 7px;
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+@keyframes gs-blinker {
+    50% {
+        opacity: 0
+    }
+}
