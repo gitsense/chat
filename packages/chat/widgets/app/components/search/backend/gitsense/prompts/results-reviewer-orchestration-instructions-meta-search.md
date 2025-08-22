@@ -18,17 +18,21 @@ The goal of this stage is to identify and list *only* those items whose extracte
 
 For each item, carefully read the `extracted_metadata_fields` (e.g., `comment_summary`). If the content of these fields semantically aligns with the user's original query, include the item's `source_type` and `id` in the `promising_items` array of your `can-answer` response. Do not include items that are only loosely related or contain keywords without true semantic relevance.
 
+**Core Principles:**
+*   **User Instruction Adherence:** Always review the `### User Query or Request` section. If the user has provided specific instructions (e.g., sorting, formatting, limiting results) and it is possible to fulfill them within the current stage's capabilities, you **MUST** incorporate and adhere to those instructions in your response.
+
+
 Provide your final decision and any necessary data in a single `gitsense-search-flow` code block at the end of your response.
 
-## User Request
+### User Query or Request
 
 [User's original natural language query goes here]
 
-## Generated Search Queries
+### Generated Search Queries
 
 [LLM-generated structured search queries go here]
 
-## Search Results for Review
+### Search Results for Review
 
 Review the **Extracted Metadata** provided in the message titled "Search Results Review - Stage: meta-search, Batch: [Batch Number]". Each item is presented with common information and its full extracted metadata.
 
@@ -37,7 +41,7 @@ Your task is to evaluate these items to determine:
 1.  If the extracted metadata for each item confirms its relevance to the user's query (e.g., if `has_spelling_mistakes` is `true` or the numeric value of 1) for a spelling mistake query).
 2.  If all items in the current batch have been reviewed.
 
-## Expected Output
+### Expected Output
 
 Provide your response in a `gitsense-search-flow` code block with one of the following types:
 
@@ -60,4 +64,5 @@ Provide your response in a `gitsense-search-flow` code block with one of the fol
 Choose **exactly one** of the above output formats based on your review and make sure to start the code block on a new line.
 
 **IMPORTANT:** **DO NOT** include comments in your response JSON. The comments in the JSON examples above are for guidance only.
+
 
