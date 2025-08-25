@@ -199,7 +199,7 @@ ${o}
             WHERE
                 uuid = ?
         `;try{var s=[t],r=await allAsync(e,a,s);return r&&r.length?r[0]:null}catch(e){throw console.error(`Failed to execute ${a}:
-`+e.message),new Error("Server side error")}})(r,a);if(!i)return{status:"failed",data:"Not found",code:404};var{id:n,main_model:o}=i,l=(await getChatMessages(r,n,o))[0];let e=SUGGEST_CHAT_TITLE.replace(/{{system}}/,null==l.message?"":`<system_prompt>${l.message}</system_prompt>`);var d;let t=null;e=("GitSense Notes"===o?(t=l.kids[0],e.replace(/{{user}}/,"")):(d=l.kids[0],t=d.kids[0],e.replace(/{{user}}/,`<user_message>${d.message}</user_message>`))).replace(/{{assistant}}/,`<assistant_message>${t.message}</assistant_message>`);var c=[{role:USER_ROLE,content:e}],m=await getChatCompletion(r,s,0,c),{status:u,data:h}=m;return"success"!==u?m:{status:"success",data:{title:h}}}finally{await closeAsync(r)}}async function getGitBlobChatMessages(e){var{"id-type":e,ids:t,"working-directory":a=!1}=e;if("chat"!==e)return{status:"failed",data:"Currently, only chat ids are supported",code:400};let s=[];try{t.split(",").forEach(e=>{if(isNaN(e))throw new Error(e+" is not a number");s.push(parseInt(e))})}catch(e){return{status:"failed",data:e.message,code:400}}let r=connect(getDBPath());try{var i,n=await(async()=>{var t=`
+`+e.message),new Error("Server side error")}})(r,a);if(!i)return{status:"failed",data:"Not found",code:404};var{id:n,main_model:o}=i,l=(await getChatMessages(r,n,o))[0];let e=SUGGEST_CHAT_TITLE.replace(/{{system}}/,null==l.message?"":`<system_prompt>${l.message}</system_prompt>`);var d;let t=null;e=("GitSense Notes"===o?(t=l.kids[0],e.replace(/{{user}}/,"")):(d=l.kids[0],t=d.kids[0],e.replace(/{{user}}/,`<user_message>${d.message}</user_message>`))).replace(/{{assistant}}/,`<assistant_message>${t.message}</assistant_message>`);var c=[{role:USER_ROLE,content:e}],m=await getChatCompletion(r,s,0,c),{status:u,data:h}=m;return"success"!==u?m:{status:"success",data:{title:h}}}finally{await closeAsync(r)}}async function getGitBlobChatMessages(e){var{"id-type":t,ids:a}=e;let s=e["working-directory"]||!1;if(s="true"===s.toLowerCase,"chat"!==t)return{status:"failed",data:"Currently, only chat ids are supported",code:400};let r=[];try{a.split(",").forEach(e=>{if(isNaN(e))throw new Error(e+" is not a number");r.push(parseInt(e))})}catch(e){return{status:"failed",data:e.message,code:400}}let i=connect(getDBPath());try{var n,o=await(async()=>{var t=`
             SELECT DISTINCT
                 c.id,
                 g.name,
@@ -209,9 +209,9 @@ ${o}
                 groups g
             WHERE
                 c.group_id=g.id AND
-                c.id IN (${s.join(",")})
-        `;try{var e=await allAsync(r,t);let s={};return e.forEach(e=>{var{id:e,meta:t,name:a}=e;s[e]=JSON.parse(t),s[e].fullName=a}),s}catch(e){throw console.error(`Failed to execute ${t}:
-`+e.message),new Error("Server side error")}})(),o=await(async()=>{var t=`
+                c.id IN (${r.join(",")})
+        `;try{var e=await allAsync(i,t);let s={};return e.forEach(e=>{var{id:e,meta:t,name:a}=e;s[e]=JSON.parse(t),s[e].fullName=a}),s}catch(e){throw console.error(`Failed to execute ${t}:
+`+e.message),new Error("Server side error")}})(),l=await(async()=>{var t=`
             SELECT
                 chat_id,
                 m.id,
@@ -227,10 +227,10 @@ ${o}
                 c.deleted = 0 AND
                 m.deleted = 0 AND
                 c.id=chat_id AND
-                c.id IN (${s.join(",")}) AND
+                c.id IN (${r.join(",")}) AND
                 m.type = 'git-blob'
-        `;try{var e=await allAsync(r,t);let o={};return e.forEach(e=>{var{id:e,type:t,parent_id:a,chat_id:s,content:r,meta:i,updated_at:n}=e;o[s]={id:e,type:t,chat_id:s,parent_id:a,content:r,meta:JSON.parse(i),updated_at:n}}),o}catch(e){throw console.error(`Failed to execute ${t}:
-`+e.message),new Error("Server side error")}})(),l={};for(i in o){var d=o[i];if(!d)return{status:"failed",data:"No Git blob message associated with chat ID: "+i};var c,m=n[i];if(!m)return{status:"failed",data:"No repository associated with chat ID: "+i};a&&(c=path.join(m.path,d.meta.path),fs.existsSync(c)?d.content=fs.readFileSync(c,"utf8"):d.content="<Not Found in Working Directory>"),l[i]={repo:m,message:d}}return{status:"success",data:{chat2Result:l}}}finally{await closeAsync(r)}}async function getTinyOverviewChatPurpose(e){e=e.ids;let s=[];try{e.split(",").forEach(e=>{if(isNaN(e))throw new Error(e+" is not a number");s.push(parseInt(e))})}catch(e){return{status:"failed",data:e.message,code:400}}let r=connect(getDBPath());try{var t,a=await(async()=>{var t=`
+        `;try{var e=await allAsync(i,t);let o={};return e.forEach(e=>{var{id:e,type:t,parent_id:a,chat_id:s,content:r,meta:i,updated_at:n}=e;o[s]={id:e,type:t,chat_id:s,parent_id:a,content:r,meta:JSON.parse(i),updated_at:n}}),o}catch(e){throw console.error(`Failed to execute ${t}:
+`+e.message),new Error("Server side error")}})(),d={};for(n in l){var c=l[n];if(!c)return{status:"failed",data:"No Git blob message associated with chat ID: "+n};var m,u=o[n];if(!u)return{status:"failed",data:"No repository associated with chat ID: "+n};s&&(m=path.join(u.path,c.meta.path),fs.existsSync(m)?c.content=fs.readFileSync(m,"utf8"):c.content="<Not Found in Working Directory>"),d[n]={repo:u,message:c}}return{status:"success",data:{chat2Result:d}}}finally{await closeAsync(i)}}async function getTinyOverviewChatPurpose(e){e=e.ids;let s=[];try{e.split(",").forEach(e=>{if(isNaN(e))throw new Error(e+" is not a number");s.push(parseInt(e))})}catch(e){return{status:"failed",data:e.message,code:400}}let r=connect(getDBPath());try{var t,a=await(async()=>{var t=`
             SELECT DISTINCT
                 c.id,
                 g.name,
