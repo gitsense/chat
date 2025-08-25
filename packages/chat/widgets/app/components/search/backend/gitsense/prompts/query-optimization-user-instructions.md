@@ -10,4 +10,6 @@ Authors: Gemini 2.5 Flash Thinking (v1.0.0)
 -->
 
 
-Process the user query from your system prompt using the 3-step decision process. End with a gitsense-search-flow code block.
+Process the user query from your system prompt using the 3-step decision process. End with a gitsense-search-flow code block. 
+
+If you can answer the user query, do so and do not reply with you can.
