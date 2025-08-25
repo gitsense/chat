@@ -65,6 +65,11 @@
             "apiKeyName": "ANTHROPIC_API_KEY"
         },
         {
+            "name": "Cerebras",
+            "apiKeyName": "CEREBRAS_API_KEY",
+            "baseURL": "https://api.cerebras.ai/v1"
+        },
+        {
             "name": "DeepInfra",
             "apiKeyName": "DEEPINFRA_API_KEY",
             "baseURL": "https://api.deepinfra.com/v1/openai"
