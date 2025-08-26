@@ -69,7 +69,7 @@ You should have received a **code patch** showing the exact changes.
 *    **Bad Patch:** If you see an **"Error"** message together with a **"Start"** button, don't worry-there are two ways to recover:
 
 1. **Use the "Start" button** - This will walk you through fixing the patch or generating a fresh, corrected version of the code.  
-2. **or** click the **refresh (↻) icon** that appears at the bottom of the message.  
+2. **or** click the **refresh icon** that appears at the bottom of the message.  
    * After you click the refresh icon, a **"Try again"** option will appear. Selecting **"Try again"** tells the LLM to re-run the patch generation automatically, and hopefully correctly.
 
 Regardless of whether an error occurred, if you inspect the patch metadata in the header, you'll find a source UUID that points directly back to the \`Block-UUID\` of the original "Hello World" program. The version number was also incremented (e.g., from \`v1.0.0\` to \`v1.0.1\`).
