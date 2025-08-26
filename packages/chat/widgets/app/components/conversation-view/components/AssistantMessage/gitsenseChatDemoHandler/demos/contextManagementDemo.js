@@ -52,8 +52,6 @@ Now, we'll load the files we found into your chat's context. This shows how easy
 
 Click the highlighted **"Review, load and add"** link in the **previous message** (the search results).
 
-![Review, load and add link]({{base-url}}/introduction-demo-review-load-add-link-bordered.png)
-
 Then do the following once the **Context Builder** loads:
 
 1. Click the checkbox in the table header to select all files.
@@ -61,7 +59,7 @@ Then do the following once the **Context Builder** loads:
 3. Click the 'Add' button (the 'Load' button will turn into the 'Add' button).
 
 After clicking the 'Add' button, the Context Builder will close, and a new **Context Message** will be added to the chat, which will begin the next demo step.
-            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{a=a.renderedMessage[e.parent_id]?.contentBody||null;if(a){var o=a.querySelectorAll("a");let t=null;for(let e=0;e<o.length;e++){var i=o[e];if("Review, load and add"===i.innerText){t=i;break}}t?t.classList.add("gs-blink-text"):console.warn("No 'Review, load and add' link found")}else console.warn("No parent body found")},nextSceneId:"context-management-await-load-context"},{id:"context-management-await-load-context",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>"context"===e.type&&(e=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,!!(e=e.find(e=>"gs-tool"===e.type&&"context-loader"===e.toolData?.tool)))&&8===(e.toolData?.config?.chatIds||[]).length,nextSceneId:"context-management-explain-ai-analysis"},{id:"context-management-explain-ai-analysis",action:"typeAndAppend",contentToType:`
+            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{a=a.renderedMessage[e.parent_id]?.contentBody||null;if(a){var o=a.querySelectorAll("a");let t=null;for(let e=0;e<o.length;e++){var s=o[e];if("Review, load and add"===s.innerText){t=s;break}}t?t.classList.add("gs-blink-text"):console.warn("No 'Review, load and add' link found")}else console.warn("No parent body found")},nextSceneId:"context-management-await-load-context"},{id:"context-management-await-load-context",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>"context"===e.type&&(e=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,!!(e=e.find(e=>"gs-tool"===e.type&&"context-loader"===e.toolData?.tool)))&&8===(e.toolData?.config?.chatIds||[]).length,nextSceneId:"context-management-explain-ai-analysis"},{id:"context-management-explain-ai-analysis",action:"typeAndAppend",contentToType:`
 ### What Happened
 
 The files we discovered are now loaded into your chat's context. Thanks to the GitSense Chat Bridge, which turns Git repositories into chat-ready "repositories," loading data is a breeze.
@@ -106,29 +104,25 @@ The LLM just created a context bundle containing only the JavaScript and Rust fi
 
 With this focused context bundle, we'll load it into your chat. Click the highlighted **"Review, load and add"** link in the **previous message** (the context bundle created by the LLM).
 
-![Review, load and add link in refined context message]({{base-url}}/introduction-demo-refined-review-load-add-link-bordered.png)
-
 Then do the following once the **Context Builder** loads:
 
 1. Click the checkbox in the table header to select all files.
 2. Click the 'Load' button.
 3. Click the 'Add' button (the 'Load' button will turn into the 'Add' button).
-            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{a=a.renderedMessage[e.parent_id]?.contentBody||null;if(a){var o=a.querySelectorAll("a");let t=null;for(let e=0;e<o.length;e++){var i=o[e];if("Review, load and add"===i.innerText){t=i;break}}t?t.classList.add("gs-blink-text"):console.warn("No 'Review, load and add' link found")}else console.warn("No parent body found")},nextSceneId:"context-management-await-load-focused-context"},{id:"context-management-await-load-focused-context",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>"context"===e.type&&(e=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,!!(e=e.find(e=>"gs-tool"===e.type&&"context-loader"===e.toolData?.tool)))&&2===(e.toolData?.config?.chatIds||[]).length,nextSceneId:"context-management-manage-cost"},{id:"context-management-manage-cost",action:"typeAndAppend",contentToType:`
+            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{a=a.renderedMessage[e.parent_id]?.contentBody||null;if(a){var o=a.querySelectorAll("a");let t=null;for(let e=0;e<o.length;e++){var s=o[e];if("Review, load and add"===s.innerText){t=s;break}}t?t.classList.add("gs-blink-text"):console.warn("No 'Review, load and add' link found")}else console.warn("No parent body found")},nextSceneId:"context-management-await-load-focused-context"},{id:"context-management-await-load-focused-context",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>"context"===e.type&&(e=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,!!(e=e.find(e=>"gs-tool"===e.type&&"context-loader"===e.toolData?.tool)))&&2===(e.toolData?.config?.chatIds||[]).length,nextSceneId:"context-management-manage-cost"},{id:"context-management-manage-cost",action:"typeAndAppend",contentToType:`
 ### What Happened
 
 You just loaded a more focused **context message** into your chat, with just the JavaScript and Rust files. We can now focus on removing context no longer required to help with LLM reasoning and reduce cost.
 
 ### Next Steps
 
-Click the **"Delete All Contexts Except Last"** link in the **previous message** (the newly loaded context message) as shown below:
-
-![Delete All Contexts Except Last]({{base-url}}/introduction-demo-delete-all-contexts-except-last-link-bordered.png)
+Click the highlighted **"Delete All Contexts Except Last"** link in the **previous message** (the newly loaded context message) as shown below:
 
 By clicking the link, all context messages in this chat will be deleted except for the last one. Note, when context messages are merged or deleted, the original chat is untouched. Instead, a copy is made first, and only that copy is updated. Your current chat then becomes a child of the copied chat.
-            `,postProcess:async(e,t,n,a)=>{e=MessageUtils.getMessageById(a.chat,e.parent_id),a=a.renderedMessage[e.id]?.contentBody;if(a){e=a.querySelector(".gsc-delete-all-contexts-except-last-link");let t=e.onclick;e.onclick=null,e.addEventListener("click",async e=>{t(e,e=>{MessageService.setChat(e)})})}else console.error("contextManagementDemo: No parent message found for scene "+t.id)},nextSceneId:"context-management-await-manage-cost"},{id:"context-management-await-manage-cost",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>{a=a.filter(e=>"context"===e.type);return!(!e.message.includes("Delete All Contexts Except Last")||1!==a.length)},nextSceneId:"context-management-conclusion"},{id:"context-management-conclusion",action:"typeAndAppend",contentToType:`
+            `,postProcess:async(e,t,n,a)=>{e=MessageUtils.getMessageById(a.chat,e.parent_id),a=a.renderedMessage[e.id]?.contentBody;if(a){e=a.querySelector(".gsc-delete-all-contexts-except-last-link");e.classList.add("gs-blink-text");let t=e.onclick;e.onclick=null,e.addEventListener("click",async e=>{t(e,e=>{MessageService.setChat(e)})})}else console.error("contextManagementDemo: No parent message found for scene "+t.id)},nextSceneId:"context-management-await-manage-cost"},{id:"context-management-await-manage-cost",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>{a=a.filter(e=>"context"===e.type);return!(!e.message.includes("Delete All Contexts Except Last")||1!==a.length)},nextSceneId:"context-management-conclusion"},{id:"context-management-conclusion",action:"typeAndAppend",contentToType:`
 ### What Happened
 
-You've successfully navigated the core aspects of context engineering in GitSense Chat! From AI-assisted search to LLM-refined context bundles and efficient management, you've seen how simple and powerful it is to curate the information your LLM uses. This ensures more accurate, relevant, and cost-efficient AI interactions.
+You've successfully navigated the core aspects of context engineering in GitSense Chat! From AI-assisted search to LLM-refined context bundles and efficient management, you've now seen how simple it is to manage LLM context with GitSense Chat.
 
 ## Demo Complete
 
