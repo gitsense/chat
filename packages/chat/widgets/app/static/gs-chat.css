@@ -1,3 +1,7 @@
+h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+    scroll-margin-top: 70px;
+}
+
 .gs-chat-container {
     display: inline-block;
     width: calc(100% - 60px);
