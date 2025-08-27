@@ -13,29 +13,45 @@
 # Use a lightweight Node.js image for building
 FROM node:20-alpine AS build
 
+# Install bash and its dependencies
+# The --no-cache flag ensures that apk does not store package indexes locally,
+# reducing the image size.
+# The rm -rf /var/cache/apk/* command cleans up the apk cache after installation.
+RUN apk add --no-cache bash \
+    && rm -rf /var/cache/apk/*
+
+# Set bash as the default shell for subsequent RUN, CMD, and ENTRYPOINT instructions
+SHELL ["/bin/bash", "-c"]
+
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json first
-# This allows Docker to cache the npm install step if these files don't change
-COPY package*.json ./
+# The .dockerignore file (if present) will exclude unnecessary files
+# Note, we we need to copy everything instead of just the package.json
+# file because we have a post install instruction which requires all
+# files to be present to ensure we can build the minified bundle.
+COPY . .
 
 # Install all dependencies (including devDependencies needed for the build-bundle script)
 RUN npm install
-
-# Copy the rest of the application source code
-# The .dockerignore file (if present) will exclude unnecessary files
-COPY . .
-
-# Build the minified bundle
-RUN npm run build-bundle-min
 
 # --- Production Stage ---
 # Use a fresh, lightweight Node.js image for the final production image
 FROM node:20-alpine AS production
 
+# Install bash and its dependencies in the production stage
+# This is necessary if you intend to use bash in the final running container.
+RUN apk add --no-cache bash \
+    && rm -rf /var/cache/apk/*
+
+# Set bash as the default shell for subsequent RUN, CMD, and ENTRYPOINT instructions in this stage
+SHELL ["/bin/bash", "-c"]
+
 # Set the working directory inside the container
 WORKDIR /app
+
+# Create a .bashrc file to add /app/bin to the PATH for interactive sessions
+RUN echo 'export PATH="/app/bin:$PATH"' >> /root/.bashrc
 
 # Copy only production dependencies from the build stage
 # This keeps the final image size minimal by excluding devDependencies
@@ -45,6 +61,7 @@ COPY --from=build /app/node_modules ./node_modules
 # We explicitly list directories and files to ensure only what's needed for runtime is included
 COPY --from=build /app/index.js ./
 COPY --from=build /app/boards.json ./
+COPY --from=build /app/bin ./bin
 COPY --from=build /app/devboard ./devboard
 COPY --from=build /app/lib ./lib
 COPY --from=build /app/public ./public
