@@ -50,6 +50,9 @@ SHELL ["/bin/bash", "-c"]
 # Set the working directory inside the container
 WORKDIR /app
 
+# Create a .bashrc file to add /app/bin to the PATH for interactive sessions
+RUN echo 'export PATH="/app/bin:$PATH"' >> /root/.bashrc
+
 # Copy only production dependencies from the build stage
 # This keeps the final image size minimal by excluding devDependencies
 COPY --from=build /app/node_modules ./node_modules

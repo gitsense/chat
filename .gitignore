@@ -44,9 +44,6 @@ Desktop.ini
 /libs/widgets.js
 /public/js/devboard.js
 /public/js/devboard.min.js
-/public/js/bundle.js
-/public/css/*.min.css
-/public/css/tabler.css
 
 # Database files
 data/*.sqlite3
