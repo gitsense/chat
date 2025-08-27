@@ -1,14 +1,13 @@
 #!/bin/bash
 
-# gsc-docker - Helper script for GitSense Chat Docker management
-# Component: gsc-docker helper script
-# Block-UUID: defefbe6-b752-4cbb-b011-a5c17504a8fa
-# Parent-UUID: 4b5e5f71-8029-4b65-a089-684cea0642f7
-# Version: 1.3.0
-# Description: Manages the GitSense Chat Docker container (start, stop, admin commands).
+# Component: gsc-docker start_app function (array-based)
+# Block-UUID: 6e160942-af36-489d-b645-f9be30fe0a69
+# Parent-UUID: 2c02a514-e9c4-41fa-b91c-7e741a7afaa5
+# Version: 1.6.0
+# Description: Manages the GitSense Chat Docker container (start, stop, admin, import, bash commands).
 # Language: Bash
-# Created-at: 2025-08-14T16:28:19.828Z
-# Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.0.1), Gemini 2.5 Flash Thinking (v1.1.0), Gemini 2.5 Flash Thinking (v1.2.0), Gemini 2.5 Flash Thinking (v1.3.0)
+# Created-at: 2025-08-27T01:22:39.383Z
+# Authors: Gemini 2.5 Flash Thinking (v1.3.0), Gemini 2.5 Flash (v1.4.0), Gemini 2.5 Flash (v1.5.0), Gemini 2.5 Flash (v1.6.0)
 
 
 CONTAINER_NAME="gitsense-chat"
@@ -66,12 +65,20 @@ start_app() {
         docker volume create "$DATA_VOLUME_NAME"
     fi
 
-    # Build the volume mount argument
-    VOLUME_MOUNTS="-v $DATA_VOLUME_NAME:/app/data"
+    # Initialize an array for Docker arguments
+    declare -a DOCKER_ARGS
+
+    # Add base arguments
+    DOCKER_ARGS+=("-d")
+    DOCKER_ARGS+=("--name" "$CONTAINER_NAME")
+    DOCKER_ARGS+=("-p" "$APP_PORT:$APP_PORT")
+
+    # Add data volume mount
+    DOCKER_ARGS+=("-v" "$DATA_VOLUME_NAME:/app/data")
 
     # Conditionally add .env file mount
     if [ -f "$ENV_FILE" ]; then
-        VOLUME_MOUNTS="$VOLUME_MOUNTS -v \"$(pwd)/$ENV_FILE\":/app/$ENV_FILE:ro"
+        DOCKER_ARGS+=("-v" "$(pwd)/$ENV_FILE:/app/$ENV_FILE:ro")
     fi
 
     # Add support for user-defined bind mounts for repositories
@@ -82,17 +89,16 @@ start_app() {
             exit 1
         fi
         # Mount the host repository directory to a known path inside the container
-        VOLUME_MOUNTS="$VOLUME_MOUNTS -v \"$GSC_REPOS_DIR\":/app/host_repos:ro" # :ro for read-only
+        DOCKER_ARGS+=("-v" "$GSC_REPOS_DIR:/app/host_repos:ro") # :ro for read-only
         echo "Mounting host directory '$GSC_REPOS_DIR' to '/app/host_repos' inside the container."
     fi
 
-    # Run the Docker container
-    docker run -d \
-        --name "$CONTAINER_NAME" \
-        -p "$APP_PORT:$APP_PORT" \
-        $VOLUME_MOUNTS \
-        --restart unless-stopped \
-        "$IMAGE_NAME"
+    # Add restart policy and image name
+    DOCKER_ARGS+=("--restart" "unless-stopped")
+    DOCKER_ARGS+=("$IMAGE_NAME")
+
+    # Run the Docker container using the array
+    docker run "${DOCKER_ARGS[@]}"
 
     if [ $? -eq 0 ]; then
         echo "GitSense Chat container '$CONTAINER_NAME' started successfully on port $APP_PORT."
@@ -156,6 +162,16 @@ run_gscb_tool() {
     docker exec -it "$CONTAINER_NAME" /app/bin/gscb "$@"
 }
 
+run_bash_session() {
+    echo "Starting bash session in '$CONTAINER_NAME'..."
+    if ! container_is_running; then
+        echo "Error: GitSense Chat container '$CONTAINER_NAME' is not running." >&2
+        echo "Please start it first using: $0 start" >&2
+        exit 1
+    fi
+    docker exec -it "$CONTAINER_NAME" /bin/bash
+}
+
 # Main script logic
 case "$1" in
     start)
@@ -164,10 +180,6 @@ case "$1" in
     admin)
         shift # Remove 'admin' from arguments
         run_admin_tool "$@"
-        ;;
-    import)
-        shift # Remove 'import' from arguments
-        run_gscb_tool "$@"
         ;;
     stop)
         stop_app
@@ -178,8 +190,11 @@ case "$1" in
     logs)
         show_logs
         ;;
+    bash)
+        run_bash_session
+        ;;
     *)
-        echo "Usage: $0 {start|stop|status|logs|admin|import}"
+        echo "Usage: $0 {start|stop|status|logs|admin|bash}"
         exit 1
         ;;
 esac
