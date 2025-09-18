@@ -40,7 +40,7 @@ let confirmationBoxStyles=`
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     animation: slideIn 0.3s ease-in-out;
 }
 
@@ -119,5 +119,28 @@ let confirmationBoxStyles=`
         transform: translate(-50%, -50%);
         opacity: 1;
     }
+}
+
+/* Disabled button styles */
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6; /* Slightly more pronounced disabled state */
+    pointer-events: none; /* Prevents hover events on disabled buttons */
+}
+
+.confirm-btn:disabled {
+    background-color: #dddddd; /* Neutral gray background for disabled confirm */
+    color: #999999; /* Darker gray text for disabled confirm */
+}
+
+.cancel-btn:disabled {
+    background-color: #e0e0e0; /* Lighter gray background for disabled cancel */
+    color: #999999; /* Darker gray text for disabled cancel */
+}
+
+.close-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.4; /* Make it visibly disabled */
+    pointer-events: none;
 }
 `;module.exports=confirmationBoxStyles;
