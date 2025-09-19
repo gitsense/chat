@@ -17,4 +17,4 @@
  * Copyright (c) 2025 GitSense. All rights reserved.
  */
 
-let widgets={},configs=(widgets["chat.app"]=require("../packages/chat/widgets/app/backend.js"),{chat:{name:"chat"},"chat.app":{package:"chat",name:"app",help:{}}});module.exports={widgets:widgets,configs:configs};
+let Table=require("./table").Table;module.exports={Table:Table};

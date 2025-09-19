@@ -17,4 +17,4 @@
  * Copyright (c) 2025 GitSense. All rights reserved.
  */
 
-let analyzersDemo=require("./analyzersDemo").analyzersDemo,codeTraceabilityDemo=require("./codeTraceabilityDemo").codeTraceabilityDemo,contextManagementDemo=require("./contextManagementDemo").contextManagementDemo,supportedDemos=[analyzersDemo,codeTraceabilityDemo,contextManagementDemo];module.exports={supportedDemos:supportedDemos};
+let analyzersDemo=require("./analyzersDemo").analyzersDemo,codeTraceabilityDemo=require("./codeTraceabilityDemo").codeTraceabilityDemo,contextManagementDemo=require("./contextManagementDemo").contextManagementDemo,metadataInsightsDemo=require("./metadataInsightsDemo").metadataInsightsDemo,supportedDemos=[analyzersDemo,codeTraceabilityDemo,contextManagementDemo,metadataInsightsDemo];module.exports={supportedDemos:supportedDemos};

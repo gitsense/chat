@@ -2,18 +2,20 @@
 
 /*
  * Component: GitSense Chat Admin CLI Dispatcher
- * Block-UUID: 0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
- * Parent-UUID: 9f1a2b3c-4d5e-6f7a-8b9c-0d1e2f3a4b5c
- * Version: 1.1.0
+ * Block-UUID: f6e5f9e6-6490-4a7a-8c1d-739b68757420
+ * Parent-UUID: 0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+ * Version: 1.2.0
  * Description: Main dispatcher script for the GitSense Chat Admin CLI. Delegates commands to specific sub-tools.
  * Language: JavaScript
- * Created-at: 2025-08-12T19:36:23.683Z
- * Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0)
+ * Created-at: 2025-09-06T16:11:00.226Z
+ * Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0), Gemini 2.5 Flash (v1.2.0)
  */
 
 
 const { Command } = require('commander');
 const path = require('path');
+const fs = require('fs');
+const { spawnSync } = require('child_process');
 
 const program = new Command();
 
@@ -31,6 +33,30 @@ program
 program
     .command('config', 'Manage application configuration (e.g., restore)')
     .alias('conf'); // Optional alias for 'config'
+
+// Define the 'batch' command
+// This command will be handled by a separate executable script: gsc-admin-batch
+program
+    .command('batch <args...>') // No description here, as we're using .action()
+    .description('Manage LLM batch jobs and worker processes (Enterprise Feature)')
+    .alias('b') // Optional alias for 'batch'
+    .action(() => {
+        const batchCliPath = path.join(__dirname, '..', 'node_modules', '@gitsense', 'gsc-enterprise-batch', 'bin', 'gsc-admin-batch.js');
+
+        if (!fs.existsSync(batchCliPath)) {
+            console.error('GitSense Chat Enterprise Batch component not installed.');
+            console.error('The `batch` command is an enterprise feature and needs  to be installed.');
+            console.error('Please install the enterprise batch component to use this command.');
+            process.exit(1);
+        }
+
+        // Manually spawn the child process, passing all arguments after 'batch'
+        const args = [batchCliPath, ...process.argv.slice(3)];
+        const result = spawnSync('node', args, { stdio: 'inherit' });
+        if (result.status !== null) { // Exit with the child process's status
+            process.exit(result.status);
+        }
+    });
 
 // Parse arguments and execute commands
 program.parse(process.argv);

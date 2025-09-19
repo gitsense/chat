@@ -17,4 +17,4 @@
  * Copyright (c) 2025 GitSense. All rights reserved.
  */
 
-async function sleep(s){return new Promise(e=>setTimeout(e,s))}module.exports={sleep:sleep};
+let NotificationManager=require("./notification-manager").NotificationManager;module.exports={NotificationManager:NotificationManager};

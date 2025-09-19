@@ -29,7 +29,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.27.3",
     "@gitsense/file-uploader": "^0.1.0",
-    "@gitsense/gsc-utils": "^0.2.0",
+    "@gitsense/gsc-utils": "^0.2.19",
     "@gitsense/gscb-cli": "^0.5.1",
     "@gitsense/gscb-db": "^0.3.1",
     "@gitsense/gscb-git-tools": "^0.4.2",
@@ -44,7 +44,6 @@
     "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "forever": "^4.0.3",
-    "groq-sdk": "^0.5.0",
     "highlight.js": "^11.11.1",
     "ignore": "^7.0.5",
     "inquirer": "^12.9.1",

@@ -41,7 +41,7 @@ Desktop.ini
 # These are outputs of your build commands and should not be committed to source control.
 /devboard/boards.js
 /devboard/widgets.js
-/libs/widgets.js
+/lib/widgets.js
 /public/js/devboard.js
 /public/js/devboard.min.js
 

@@ -1327,8 +1327,8 @@ let variables=require("../base/variables"),selectionManagement={treeTableContain
         .filter-table {
             width: 100%;
             border-collapse: collapse;
-            table-layout: fixed; /* Ensure column widths are respected */
-            font-size: ${variables.fonts.size.base};
+            table-layout: fixed;
+            font-size: .9em;
         }
 
         .filter-table th,
@@ -1408,11 +1408,10 @@ let variables=require("../base/variables"),selectionManagement={treeTableContain
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 75vw; /* 75% of viewport width */
-            height: 75vh; /* 75% of viewport height */
+            width: 95vw;
+            height: 95vh;
             background-color: white;
             border: 1px solid #666;
-            border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
@@ -1432,7 +1431,7 @@ let variables=require("../base/variables"),selectionManagement={treeTableContain
             flex: 1; /* Allow content area to grow and fill modal body */
             display: grid;
             /* grid-template-columns and grid-template-rows are set by JS */
-            gap: 15px; /* Gap between grid items */
+            gap: 20px; /* Gap between grid items */
             overflow-y: auto; /* Enable scrolling for the grid container itself */
             padding-right: 1px; /* Small padding to ensure rightmost border is visible if scrollbar appears */
             padding-bottom: 1px; /* Small padding to ensure bottommost border is visible if scrollbar appears */
