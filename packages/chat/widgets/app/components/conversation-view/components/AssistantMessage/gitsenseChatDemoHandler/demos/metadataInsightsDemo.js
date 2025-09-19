@@ -61,7 +61,9 @@ Click the link below to send this command.
 
 [**Send Message**]()
 
-> **LLM responses are live.** If the response is somewhat nonsensical, it is because we were unable to predict what the LLM would return.
+---
+
+**LLM responses are live.** If the response is somewhat nonsensical, it is because we were unable to predict what the LLM would return.
             `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{n=n.querySelector("a");n?(await DemoUtils.simulateTyping(LLM_REVIEW_QUERY,a),n.onclick=e=>{e.preventDefault(),DemoUtils.sendMessage()}):console.error(`No send link in current scene ${t.id} found`)},nextSceneId:"metadata-insights-await-llm-response"},{id:"metadata-insights-await-llm-response",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>{n=MessageUtils.getMessageById(n.chat,e.parent_id);return!(!n||n.message.trim()!==LLM_REVIEW_QUERY)&&"assistant"===e.role},nextSceneId:"metadata-insights-conclusion"},{id:"metadata-insights-conclusion",action:"typeAndAppend",contentToType:`
 ## Demo Complete
 
