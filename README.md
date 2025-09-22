@@ -166,9 +166,9 @@ GitSense Chat ships with four ready-to-use LLM models:
 | **Claude 4.0 Sonnet** | Anthropic  | `claude-sonnet-4-20250514`  | - |
 | **Gemini 2.5 Pro**    | Google     | `gemini-2.5-pro`            | - |
 | **GPT-5**             | OpenAI     | `gpt-5`                     | - |
-| **GPT OSS 120B**      | OpenRouter | `openai/gpt-oss-120b`       | **default** |
+| **GPT OSS 120B**      | OpenRouter | `openai/gpt-oss-120b`       | - |
 
-> To add a new model or to change the default, please refer to **[docs/POST_INSTALLATION.md](docs/POST_INSTALLATION.md)** for more information.
+> To set default model, please refer to **[docs/POST_INSTALLATION.md](docs/POST_INSTALLATION.md)** for more information.
 
 #### Required API Keys
 
@@ -184,7 +184,7 @@ GEMINI_API_KEY="YOUR_GEMINI_KEY"
 # OpenAI (GPT-5)
 OPENAI_API_KEY="sk-YOUR_OPENAI_KEY"
 
-# OpenRouter (GPT OSS 120B) - required for the default model
+# OpenRouter (GPT OSS 120B)
 OPENROUTER_API_KEY="YOUR_OPENROUTER_KEY"
 ```
 

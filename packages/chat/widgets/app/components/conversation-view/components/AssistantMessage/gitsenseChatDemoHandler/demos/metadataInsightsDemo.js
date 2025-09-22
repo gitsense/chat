@@ -18,7 +18,9 @@
  */
 
 let{CodeBlockUtils,ChatUtils,MessageUtils,GSToolBlockUtils}=require("@gitsense/gsc-utils"),{arrayToTree,chatApi}=require("../../../../Dependencies"),MessageService=require("../../../../services/MessageService"),DEMO_CONSTANTS=require("../constants"),DemoUtils=require("../utils/demoUtils"),DomUtils=require("../../../../utils/DomUtils"),DEMO_TITLE="# Metadata Insights Demo",LLM_REVIEW_QUERY="The files in context contain references to incorrect functions. Please review these files and provide a summary of the issues found.",CONTEXT_LOADER_TOOL_CONFIG={tool:"context-loader",config:{renderTo:{id:"context-loader-body"},showInsights:!0,chatIds:[5,6,7,8,9,10,11,12,16,17,18,19],insights:{analyzerId:"code-comment-analyzer::file-content::default",selectedMetadataFields:["incorrect_function_reference_detected"],showOptions:!1}}},metadataInsightsDemo={id:"metadata-insights",name:"Metadata Insights Demo",description:"Learn how GitSense Chat Analyzers can enhance your data, enabling intelligent analysis and more effective AI interactions.",scenes:[{id:"metadata-insights-intro",action:"typeAndAppend",triggerCondition:(e,t,n,a)=>e.message.includes(DEMO_TITLE),contentToType:`
-Welcome! In this demo, you'll learn how GitSense Chat's Analyzers can effortlessly transform your data into smart, structured insights that can help you find answers faster.
+**Welcome!** 
+
+In this demo, you'll learn how GitSense Chat's Analyzers can effortlessly transform your data into smart, structured insights that can help you find answers faster.
 
 We'll show you how to:
 *   **Extract valuable metadata:** See how Analyzers automatically identify and structure key information from your files.
