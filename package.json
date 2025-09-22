@@ -29,7 +29,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.27.3",
     "@gitsense/file-uploader": "^0.1.0",
-    "@gitsense/gsc-utils": "^0.2.19",
+    "@gitsense/gsc-utils": "^0.2.20",
     "@gitsense/gscb-cli": "^0.5.1",
     "@gitsense/gscb-db": "^0.3.1",
     "@gitsense/gscb-git-tools": "^0.4.2",

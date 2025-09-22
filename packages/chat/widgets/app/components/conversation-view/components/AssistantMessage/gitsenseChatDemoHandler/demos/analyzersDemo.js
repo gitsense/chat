@@ -18,7 +18,9 @@
  */
 
 let{CodeBlockUtils,ChatUtils,MessageUtils}=require("@gitsense/gsc-utils"),MessageService=require("../../../../services/MessageService"),DEMO_CONSTANTS=require("../constants"),DemoUtils=require("../utils/demoUtils"),DEMO_TITLE="## AI-Assisted Search & Analyzers Demo",LIST_ANALYZERS_COMMAND="!ask List production ready analyzers that can help with code quality. If you are unsure, list all production ready anaylzers.",SHOW_ANALYZER_SCHEMA_COMMAND="!ask What are the extracted metadata fields for the `code-comment-analyzer`?",FIND_OUTDATED_COMMENTS='!ask Using the code-comment analyzer, show me the distribution of spelling mistakes, outdated comments, and incorrect function references in the "Hey World" and "Hello World" repositories. Present the numbers in a markdown table with North-American formatting (e.g., 1,234) and then give a short summary in a `gitsense-search-flow` block.',analyzersDemo={id:"analyzers",name:"AI-Assisted Search & Analyzers Demo",description:"Discover how to leverage AI-powered Analyzers to perform intelligent semantic searches and extract actionable insights from your data.",scenes:[{id:"analyzers-intro",action:"typeAndAppend",triggerCondition:(e,t,s,a)=>e.message.includes(DEMO_TITLE),contentToType:`
-Welcome! This demo will demonstrate **AI-Assisted Search & Analyzers** in GitSense Chat.  You'll learn to:
+**Welcome!**
+
+This demo will demonstrate **AI-Assisted Search & Analyzers** in GitSense Chat.  You'll learn to:
 
 *   Discover AI Analyzers
 *   Explore Analyzer Schemas

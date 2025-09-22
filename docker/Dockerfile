@@ -20,6 +20,9 @@ FROM node:20-alpine AS build
 RUN apk add --no-cache bash \
     && rm -rf /var/cache/apk/*
 
+# Install dependencies to build sqlite3
+RUN apk add --no-cache python3 make g++ libstdc++
+
 # Set bash as the default shell for subsequent RUN, CMD, and ENTRYPOINT instructions
 SHELL ["/bin/bash", "-c"]
 
@@ -31,6 +34,9 @@ WORKDIR /app
 # file because we have a post install instruction which requires all
 # files to be present to ensure we can build the minified bundle.
 COPY . .
+
+# Ensure there is no node_modules directory before executing npm install
+RUN rm -rf ./node_modules
 
 # Install all dependencies (including devDependencies needed for the build-bundle script)
 RUN npm install
@@ -59,6 +65,8 @@ COPY --from=build /app/node_modules ./node_modules
 
 # Copy the necessary application files from the build stage
 # We explicitly list directories and files to ensure only what's needed for runtime is included
+# We explicitly list directories and files to ensure only what's needed for runtime is included
+COPY --from=build /app/package.json ./
 COPY --from=build /app/index.js ./
 COPY --from=build /app/boards.json ./
 COPY --from=build /app/bin ./bin
@@ -67,6 +75,7 @@ COPY --from=build /app/lib ./lib
 COPY --from=build /app/public ./public
 COPY --from=build /app/routes ./routes
 COPY --from=build /app/views ./views
+
 # We need to include pckages since it contains the backend code. We only build the bundle
 # for the frontend code but we should look at bundling the backend code as well
 COPY --from=build /app/packages ./packages

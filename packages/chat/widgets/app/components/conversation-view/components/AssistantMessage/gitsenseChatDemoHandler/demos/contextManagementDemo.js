@@ -18,7 +18,9 @@
  */
 
 let{CodeBlockUtils,ChatUtils,MessageUtils}=require("@gitsense/gsc-utils"),MessageService=require("../../../../services/MessageService"),DEMO_CONSTANTS=require("../constants"),DemoUtils=require("../utils/demoUtils"),DEMO_TITLE="## Context Engineering & Management Demo",FIND_FILES_COMMAND="!ask Find all files with spelling mistakes using the production-ready code-comment-analyzer in the repositories `Tutorial/hello-world` and `Tutorial/hey-world`.",ANALYZE_AUTOMATED_COMMAND="Review the comments in all the files in context. For each of them, identify any spelling mistakes they may have.",BUILD_CONTEXT_BUNDLE_COMMAND="Create a context bundle with just the JavaScript and Rust files.",contextManagementDemo={id:"context-management",name:"Context Engineering & Management Demo",description:"Master the art of building, refining, and managing precise LLM context to enhance accuracy, reduce costs, and streamline your workflows.",scenes:[{id:"context-management-intro",action:"typeAndAppend",triggerCondition:(e,t,n,a)=>e.message.includes(DEMO_TITLE),contentToType:`
-Welcome! This demo will guide you through **Context Engineering & Management** in GitSense Chat. You'll learn to:
+**Welcome!**
+
+This demo will guide you through **Context Engineering & Management** in GitSense Chat. You'll learn to:
 
 *   Build context with AI
 *   Load & manage context
