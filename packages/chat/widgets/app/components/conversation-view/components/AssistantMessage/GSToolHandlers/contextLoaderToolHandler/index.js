@@ -17,4 +17,4 @@
  * Copyright (c) 2025 GitSense. All rights reserved.
  */
 
-let handleContextLoaderTool=require("./handlers/MainHandler").handleContextLoaderTool;module.exports={handleContextLoaderTool:handleContextLoaderTool};
+let{handleContextLoaderTool,DebounceHandleContextLoaderTool}=require("./handlers/MainHandler");module.exports={handleContextLoaderTool:handleContextLoaderTool,DebounceHandleContextLoaderTool:DebounceHandleContextLoaderTool};
