@@ -43,6 +43,23 @@ Click the link below to send this command. We'll explain the results once the se
 ---
 
 **LLM responses are live.** If the demo suddenly stops, cannot continue or becomes somewhat nonsensical, it is because we were unable to predict what the LLM would return. Most of the time, you should be able to delete messages and then click the **Send Message** link again to keep going. If that does not work, you will need to start another demo.
+            `,hiddenText:`
+### LLM Instructions
+
+You are participating in an interactive GitSense Chat demo about Context Engineering & Management. 
+
+Your role is to:
+1. Help users understand how to build, refine, and manage LLM context
+2. Demonstrate GitSense Chat's capabilities for precise context control
+3. Guide users through the workflow of AI-assisted context engineering
+
+When presented with specific commands about analyzing code comments or building context bundles, provide clear, accurate responses that help the user learn about GitSense Chat's context management features.
+
+Focus on explaining how GitSense Chat enables users to:
+- Load relevant files into chat context
+- Analyze code quality issues like spelling mistakes
+- Create focused context bundles with specific file types
+- Manage context efficiently for better AI interactions
             `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{n=n.querySelector("a");n?(await DemoUtils.simulateTyping(FIND_FILES_COMMAND,a),n.onclick=e=>{e.preventDefault(),DemoUtils.sendMessage()}):console.error(`No send link in current scene ${t.id} found`)},nextSceneId:"context-management-await-find-files"},{id:"context-management-await-find-files",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>{var n=MessageUtils.getMessageById(n.chat,e.parent_id);return!!(n&&n.message.includes(FIND_FILES_COMMAND)&&(n=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,n.filter(e=>"gs-tool"===e.type).find(e=>"search"===e.toolData?.tool))&&e.message.trimStart().startsWith("## AI Search Complete"))},nextSceneId:"context-management-explain-find-files"},{id:"context-management-explain-find-files",action:"typeAndAppend",contentToType:`
 ### What Happened
 
@@ -61,7 +78,7 @@ Then do the following once the **Context Builder** loads:
 3. Click the 'Add' button (the 'Load' button will turn into the 'Add' button).
 
 After clicking the 'Add' button, the Context Builder will close, and a new **Context Message** will be added to the chat, which will begin the next demo step.
-            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{a=a.renderedMessage[e.parent_id]?.contentBody||null;if(a){var o=a.querySelectorAll("a");let t=null;for(let e=0;e<o.length;e++){var s=o[e];if("Review, load and add"===s.innerText){t=s;break}}t?t.classList.add("gs-blink-text"):console.warn("No 'Review, load and add' link found")}else console.warn("No parent body found")},nextSceneId:"context-management-await-load-context"},{id:"context-management-await-load-context",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>"context"===e.type&&(e=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,!!(e=e.find(e=>"gs-tool"===e.type&&"context-loader"===e.toolData?.tool)))&&8===(e.toolData?.config?.chatIds||[]).length,nextSceneId:"context-management-explain-ai-analysis"},{id:"context-management-explain-ai-analysis",action:"typeAndAppend",contentToType:`
+            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{let i=a.renderedMessage[e.parent_id]?.contentBody||null;if(i){let e=(new Date).getTime()+2e3,o=()=>{if(!((new Date).getTime()>e)){var n=i.querySelectorAll("a");let t=null;for(let e=0;e<n.length;e++){var a=n[e];if("Review, load and add"===a.innerText){t=a;break}}t?(t.classList.add("gs-blink-text"),setTimeout(o,500)):console.warn("No 'Review, load and add' link found")}};setTimeout(o,500)}else console.warn("No parent body found")},nextSceneId:"context-management-await-load-context"},{id:"context-management-await-load-context",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>"context"===e.type&&(e=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,!!(e=e.find(e=>"gs-tool"===e.type&&"context-loader"===e.toolData?.tool)))&&8===(e.toolData?.config?.chatIds||[]).length,nextSceneId:"context-management-explain-ai-analysis"},{id:"context-management-explain-ai-analysis",action:"typeAndAppend",contentToType:`
 ### What Happened
 
 The files we discovered are now loaded into your chat's context. Thanks to the GitSense Chat Bridge, which turns Git repositories into chat-ready "repositories," loading data is a breeze.
@@ -111,7 +128,7 @@ Then do the following once the **Context Builder** loads:
 1. Click the checkbox in the table header to select all files.
 2. Click the 'Load' button.
 3. Click the 'Add' button (the 'Load' button will turn into the 'Add' button).
-            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{a=a.renderedMessage[e.parent_id]?.contentBody||null;if(a){var o=a.querySelectorAll("a");let t=null;for(let e=0;e<o.length;e++){var s=o[e];if("Review, load and add"===s.innerText){t=s;break}}t?t.classList.add("gs-blink-text"):console.warn("No 'Review, load and add' link found")}else console.warn("No parent body found")},nextSceneId:"context-management-await-load-focused-context"},{id:"context-management-await-load-focused-context",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>"context"===e.type&&(e=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,!!(e=e.find(e=>"gs-tool"===e.type&&"context-loader"===e.toolData?.tool)))&&2===(e.toolData?.config?.chatIds||[]).length,nextSceneId:"context-management-manage-cost"},{id:"context-management-manage-cost",action:"typeAndAppend",contentToType:`
+            `,pauseAfterTypingMs:DEMO_CONSTANTS.SCENE_TRANSITION_PAUSE_MS,postProcess:async(e,t,n,a)=>{a=a.renderedMessage[e.parent_id]?.contentBody||null;if(a){var o=a.querySelectorAll("a");let t=null;for(let e=0;e<o.length;e++){var i=o[e];if("Review, load and add"===i.innerText){t=i;break}}t?t.classList.add("gs-blink-text"):console.warn("No 'Review, load and add' link found")}else console.warn("No parent body found")},nextSceneId:"context-management-await-load-focused-context"},{id:"context-management-await-load-focused-context",action:"createBlankChildMessage",triggerCondition:(e,t,n,a)=>"context"===e.type&&(e=CodeBlockUtils.extractCodeBlocks(e.message,{silent:!0}).blocks,!!(e=e.find(e=>"gs-tool"===e.type&&"context-loader"===e.toolData?.tool)))&&2===(e.toolData?.config?.chatIds||[]).length,nextSceneId:"context-management-manage-cost"},{id:"context-management-manage-cost",action:"typeAndAppend",contentToType:`
 ### What Happened
 
 You just loaded a more focused **context message** into your chat, with just the JavaScript and Rust files. We can now focus on removing context no longer required to help with LLM reasoning and reduce cost.
