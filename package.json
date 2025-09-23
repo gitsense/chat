@@ -19,6 +19,7 @@
     "test": "jest",
     "start": "node scripts/start-forever.js",
     "stop": "forever stop gitsense-chat",
+    "restart": "forever stop gitsense-chat; node scripts/start-forever.js",
     "status": "forever list",
     "build-bundle": "npm run build:widgets && npm run build:boards && npm run bundle",
     "build-bundle-min": "npm run build:widgets && npm run build:boards && npm run bundle-min"
