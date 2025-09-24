@@ -3,10 +3,6 @@
   "version": "0.2.0",
   "description": "",
   "main": "index.js",
-  "bin": {
-    "gitsense-chat": "scripts/start-forever.js",
-    "gitsense-chat-stop": "scripts/stop-forever.js"
-  },
   "scripts": {
     "build:boards": "node --trace-warnings devboard/build-boards.js",
     "build:widgets": "node --trace-warnings devboard/build-widgets.js",
@@ -17,9 +13,9 @@
     "gsc-caddy-admin": "node bin/gsc-caddy-admin",
     "postinstall": "npm run build-bundle-min",
     "test": "jest",
-    "start": "node scripts/start-forever.js",
-    "stop": "forever stop gitsense-chat",
-    "restart": "forever stop gitsense-chat; node scripts/start-forever.js",
+    "start": "node scripts/forever-process.js start",
+    "stop": "node scripts/forever-process.js stop",
+    "restart": "node scripts/forever-process.js stop && node scripts/forever-process.js start",
     "status": "forever list",
     "build-bundle": "npm run build:widgets && npm run build:boards && npm run bundle",
     "build-bundle-min": "npm run build:widgets && npm run build:boards && npm run bundle-min"
