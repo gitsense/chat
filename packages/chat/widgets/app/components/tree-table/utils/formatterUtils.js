@@ -17,8 +17,8 @@
  * Copyright (c) 2025 GitSense. All rights reserved.
  */
 
-function formatBytes(e){var t,o;return"number"!=typeof e||isNaN(e)||0===e?"0 bytes":(t=["bytes","KB","MB","GB"],0===(o=Math.floor(Math.log(e)/Math.log(1024)))?e+" "+t[o]:(e=e/Math.pow(1024,o)).toFixed(e%1==0?0:1)+" "+t[o])}function formatTokens(e){return"number"!=typeof e||isNaN(e)||0===e?"0":e<1e3?""+e:e<1e6?(e/1e3).toFixed(1e4<=e?1:0)+"k":e<1e9?(e/1e6).toFixed(1)+"m":(e/1e9).toFixed(1)+"b"}function createContextSummary(e,t){if(0===e.length)return"";var o=e.filter(e=>"git-blob"===e.metadata?.type),n=e.filter(e=>"git-tree"===e.metadata?.type||"git-ref"===e.metadata?.type),a=e.reduce((e,t)=>e+(t.size||0),0),r=e.reduce((e,t)=>e+(t.tokenCount||0),0);let i="file content"===t?`
-**Summary:** ${e.length} file${1===e.length?"":"s"} (${formatBytes(a)}, ${r.toLocaleString()} tokens)
+function formatBytes(e){var t,o;return"number"!=typeof e||isNaN(e)||0===e?"0 bytes":(t=["bytes","KB","MB","GB"],0===(o=Math.floor(Math.log(e)/Math.log(1024)))?e+" "+t[o]:(e=e/Math.pow(1024,o)).toFixed(e%1==0?0:1)+" "+t[o])}function formatTokens(e){return"number"!=typeof e||isNaN(e)||0===e?"0":e<1e3?""+e:e<1e6?(e/1e3).toFixed(1e4<=e?1:0)+"k":e<1e9?(e/1e6).toFixed(1)+"m":(e/1e9).toFixed(1)+"b"}function createContextSummary(e,t){if(0===e.length)return"";var o=e.filter(e=>"git-blob"===e.metadata?.type),n=e.filter(e=>"git-tree"===e.metadata?.type||"git-ref"===e.metadata?.type),r=e.reduce((e,t)=>e+(t.size||0),0),a=e.reduce((e,t)=>e+(t.tokenCount||0),0);let i="file content"===t?`
+**Summary:** ${e.length} file${1===e.length?"":"s"} (${formatBytes(r)}, ${a.toLocaleString()} tokens)
 
 `:`
 **Summary:** ${o.length} file${1===o.length?"":"s"} - ${n.length} tree${1===n.length?"":"s"}
@@ -26,22 +26,24 @@ function formatBytes(e){var t,o;return"number"!=typeof e||isNaN(e)||0===e?"0 byt
 `;t=e.slice(0,10);return 0<t.length&&(t.forEach(e=>{e.tokenCount?i+=`- ${e.name} - ${formatBytes(e.size)}, ${e.tokenCount.toLocaleString()} tokens
 `:i+=`- ${e.name} - Not analyzed
 `}),10<e.length)&&(i+=`- ... and ${e.length-10} more
-`),i+"\n"}function formatFilesForContext(e,a=!0){return e&&0!==e.length?`### Loaded Files (${e.length} files)
+`),i+"\n"}function formatFilesForContext(e,r=!0){return e&&0!==e.length?`### Loaded Files (${e.length} files)
 
 `+e.map(e=>{let t=`=== ${e.name} ===
-`;var o,n;return a&&(t=(t+=`Path: ${e.path||"N/A"}
+`;var o,n;return r&&(t=(t+=`Path: ${e.path||"N/A"}
 `)+`Size: ${formatBytes(e.size)}
 `,o=estimateTokenCount(JSON.stringify(e.metadata||{})),n=e.tokenCount||estimateTokenCount(e.content||""),t+=`Tokens: ${n} (content) + ${o} (metadata)
 `),t+=`
 ${e.content||"Content not available"}
 
-`}).join(""):""}function formatSelectedItemsInfo(e,t,a,r="short"){var o="file content"===t?e.filter(e=>"git-blob"===e.type):e;if(0===o.length)return{selectedItems:o,html:"No selected items"};let i=[];if("file content"===t){var t=o.reduce((e,t)=>e+(t.meta?.tokens?.content?.estimate||0),0);i.push({type:"file",total:o.length,tokens:t})}else{let n={file:e.filter(e=>"git-blob"===e.type),tree:e.filter(e=>"git-tree"===e.type||"git-ref"===e.type)};["file","tree"].forEach(e=>{var t,o=n[e];o.length&&(t=o.reduce((e,t)=>e=(e||0)+(t.meta?.tokens?.analysis?.[a.toLowerCase()]?.estimate||0),0),i.push({type:e,total:o.length,tokens:t}))})}let s=[],l=0;return i.forEach(e=>{var{type:e,total:t,tokens:o}=e,n=1===t?"":"s",a=1===o?"":"s";l+=o,"short"===r?s.push(t.toLocaleString()+" "+e+n):s.push(`${t.toLocaleString()} ${e+n} (${o.toLocaleString()} token${a})`)}),"short"===r&&(t=1===l?"":"s",s.push(l.toLocaleString()+" token"+t)),{selectedItems:o,html:s.join(" &middot; ")}}function escapeCodeBlocks(e){let o=[];return{escapedContent:e.replace(/\n$/,"").split("\n").map((e,t)=>(e.trimStart().startsWith("```")&&(e="\\"+e.trimStart(),o.push(t+1)),e)).join("\n"),escapedLineNums:o}}function estimateTokens(e){return e?Math.ceil(e.length/4):0}function formatOverviewTable(e){if(!e||0===e.length)return"## Context Items Overview\n\nNo items selected for overview.\n";var t=`## Context Items Overview
+`}).join(""):""}function formatSelectedItemsInfo(e,t,r,a="short"){var o="file content"===t?e.filter(e=>"git-blob"===e.type):e;if(0===o.length)return{selectedItems:o,html:"No selected items"};let i=[];if("file content"===t){var t=o.reduce((e,t)=>e+(t.meta?.tokens?.content?.estimate||0),0);i.push({type:"file",total:o.length,tokens:t})}else{let n={file:e.filter(e=>"git-blob"===e.type),tree:e.filter(e=>"git-tree"===e.type||"git-ref"===e.type)};["file","tree"].forEach(e=>{var t,o=n[e];o.length&&(t=o.reduce((e,t)=>e=(e||0)+(t.meta?.tokens?.analysis?.[r.toLowerCase()]?.estimate||0),0),i.push({type:e,total:o.length,tokens:t}))})}let s=[],l=0;return i.forEach(e=>{var{type:e,total:t,tokens:o}=e,n=1===t?"":"s",r=1===o?"":"s";l+=o,"short"===a?s.push(t.toLocaleString()+" "+e+n):s.push(`${t.toLocaleString()} ${e+n} (${o.toLocaleString()} token${r})`)}),"short"===a&&(t=1===l?"":"s",s.push(l.toLocaleString()+" token"+t)),{selectedItems:o,html:s.join(" &middot; ")}}function escapeCodeBlocks(e){let o=[];return{escapedContent:e.replace(/\n$/,"").split("\n").map((e,t)=>(e.trimStart().startsWith("```")&&(e="\\"+e.trimStart(),o.push(t+1)),e)).join("\n"),escapedLineNums:o}}function estimateTokens(e){return e?Math.ceil(e.length/4):0}function formatOverviewTable(e){if(!e||0===e.length)return"## Context Overview\n\nNo items selected for overview.\n";var t=`## Context Overview
 
-This section provides a summary of the selected items to help the AI understand the context without loading full content. Use this information to assist the user in identifying relevant items for further analysis or full content loading.
+This context overview provides metadata about files and directories that are being considered as context for your response. Each row represents a file or directory with its purpose and keywords extracted by automated analysis. 
+Use this information to understand the codebase context. When referring to specific files in your response, use their Item IDs to clearly identify them.
+When you need to see the full content of any file, indicate this by referencing its Chat ID using the "Context Bundle" format that is described in the system prompt.
 
-`,o=`| Chat ID | Type | Repo | Ref | Path | Purpose | Keywords |
+`,o=`| Chat ID | Type | Repository | Branch/Tag | Path | Purpose | Keywords |
 |---|---|---|---|---|---|---|
-`;let n="",a=estimateTokens(t)+estimateTokens(o);return e.forEach(e=>{e=`| ${e.id||"N/A"} | ${"git-blob"===e.metadata?.type?"file":"git-tree"===e.metadata?.type||"git-ref"===e.metadata?.type?"directory":"unknown"} | ${e.repo?.fullName?.split("/").pop()||"N/A"} | ${e.repo?.ref||"N/A"} | ${e.path||"N/A"} | ${e.purpose||"No purpose analysis available."} | ${e.keywords?.join(", ")||"None."} |
-`;n+=e,a+=estimateTokens(e)}),{tableString:t+`**Summary:** ${e.length} item${1===e.length?"":"s"}. Estimated overview tokens: ${a}
+`;let n="",r=estimateTokens(t)+estimateTokens(o);return e.forEach(e=>{e=`| ${e.id||"N/A"} | ${"git-blob"===e.type?"file":"git-tree"===e.type||"git-ref"===e.type?"directory":"unknown"} | ${e.repo?.fullName?.split("/").pop()||"N/A"} | ${e.repo?.ref||e.commit?.ref||"N/A"} | ${e.path||"N/A"} | ${e.purpose||"No purpose analysis available."} | ${e.keywords?.join(", ")||"None."} |
+`;n+=e,r+=estimateTokens(e)}),{tableString:t+`**Context Summary:** ${e.length} item${1===e.length?"":"s"} (${r} tokens)
 
-`+"---Start of Overview Items---\n\n"+o+n+"\n---End of Overview Items---\n",estimatedTokens:a}}module.exports={formatBytes:formatBytes,formatTokens:formatTokens,formatFilesForContext:formatFilesForContext,formatSelectedItemsInfo:formatSelectedItemsInfo,createContextSummary:createContextSummary,estimateTokens:estimateTokens,formatOverviewTable:formatOverviewTable};
+`+"---Start of Overview Items---\n\n"+o+n+"\n---End of Overview Items---\n",estimatedTokens:r}}module.exports={formatBytes:formatBytes,formatTokens:formatTokens,formatFilesForContext:formatFilesForContext,formatSelectedItemsInfo:formatSelectedItemsInfo,createContextSummary:createContextSummary,estimateTokens:estimateTokens,formatOverviewTable:formatOverviewTable};

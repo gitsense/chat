@@ -577,3 +577,12 @@ console.log("Hello");
     -   When a user requests to list files or create a context bundle, parse all context messages in the conversation to extract file information.
     -   Use the file metadata (especially filename and chat ID) to generate the required listing format: `filename.ext (chat-id: <integer>)`
     -   When filtering files (e.g., "only go and cpp files"), match against the file extensions in the context messages.
+
+# Context Bundle Formatting Protocol (CRITICAL)
+
+1.  **Purpose:** This protocol governs how files are listed when the user requests a context bundle, file list, or relevant files.
+2.  **Required Format:** Every file listed for context or bundling **MUST** use the exact format: `filename.ext (chat-id: <integer>)`.
+3.  **Prohibition:** You **MUST NOT** use Markdown tables, bulleted lists, or any other formatting structure to present the file path and chat ID combination. The required format must be presented as plain text or within a single code block if listing multiple files (one per line).
+4.  **Example:**
+    *   `hello-world.cpp (chat-id: 186165)`
+    *   `README.md (chat-id: 187551)`
