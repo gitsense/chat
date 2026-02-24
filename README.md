@@ -20,11 +20,11 @@ Software development is a conversation - a process where ideas are shared, chall
 
 GitSense Chat is built to optimize the Human <-> AI relationship by addressing three critical gaps in the professional development workflow:
 
-*   **The Context & Communication Bottleneck:** Context is king, yet most apps make it difficult to bring code into the conversation. GitSense Chat treats your repositories as native context; loading files, directories, or entire branches is a checkbox away. By combining this with a "Tree of Thought" threading model, we've created **Fuzzy Find 2.0**. Because GitSense Chat makes repositories self-aware, AI can instantly identify files by their purpose, allowing you to load the right context at the speed of thought, even when you don't know the filename.
-*   **The Provenance Gap:** In a professional codebase, "anonymous" code is a liability. We ensure every line of AI-assisted code comes with "receipts" - a full audit trail of the model, version, and conversation that produced it. This ensures that human architects get the credit they deserve for the intent and guidance that shaped the solution.
-*   **The Discovery Gap:** Coding agents often fail because they operate probabilistically - guessing which files matter. We enable **Deterministic Discovery** by allowing you to outsource the "grunt work" of repository analysis to custom AI Brains. This turns your codebase into a queryable intelligence layer, allowing you to find what `grep` cannot.
+*   **The Context & Communication Bottleneck:** Context is king, yet most apps make it difficult to bring code into the conversation. GitSense Chat treats your repositories as native context; loading files, directories, or entire branches is a checkbox away.
+*   **The Provenance Gap:** In a professional codebase, "anonymous" code is a liability. We ensure every line of AI-assisted code comes with "receipts" - a full audit trail of the model, version, and conversation that produced it.
+*   **The Discovery Gap:** Coding agents often fail because they operate probabilistically - guessing which files matter. We enable **Deterministic Discovery** by allowing you to outsource the "grunt work" of repository analysis to custom AI Brains.
 
-You don't need to trust AI to write your code for GitSense Chat to be indispensable. If you prefer to write every line yourself, GitSense Chat serves as the perfect architectural assistant - one that you train to understand the nuances of your specific codebase. By removing the cognitive load of discovery and analysis, GitSense Chat empowers you to focus on the craft of programming. AI doesn't have to write your code to help you code better.
+You don't need to trust AI to write your code for GitSense Chat to be indispensable. If you prefer to write every line yourself, GitSense Chat serves as the perfect architectural assistant - one that you train to understand the nuances of your specific codebase.
 
 ### The Context & Communication Bottleneck
 
@@ -41,9 +41,7 @@ GitSense Chat allows you to encode your domain expertise directly into your repo
 **3. The CLI Chat Bridge (The 6-Digit Handshake)**
 The "magic" happens when you connect your local environment to the chat app. Using the **CLI Chat Bridge**, you can generate a short-lived, random 6-digit code. By running a command in your terminal like:
 
-```
-gsc tree --db company --fields team --format json --code <6-digit-code>`
-```
+`gsc tree --db company --fields team --format json --code <6-digit-code>`
 
 You pipe a structured, metadata-enriched project map directly into your conversation. This isn't a text summary; it's a machine-readable map that allows the AI to understand exactly which files belong to "Team X" or which components are "Revenue Critical."
 
