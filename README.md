@@ -22,7 +22,7 @@ curl https://github.com/gitsense/chat/install.sh | bash
 ```
 *(If `gsc` is not found after install, run: `export PATH="$PATH:$HOME/.local/bin"`)*
 
-### 2. Choose Your Environment**
+### 2. Choose Your Environment
 
 **Docker (Recommended)**
 
