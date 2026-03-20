@@ -22,7 +22,7 @@ curl https://github.com/gitsense/chat/install.sh | bash
 ```
 *(If `gsc` is not found after install, run: `export PATH="$PATH:$HOME/.local/bin"`)*
 
-###  **Choose Your Environment**
+### 2. Choose Your Environment**
 
 **Docker (Recommended)**
 
@@ -42,12 +42,12 @@ gsc app install
 gsc app start
 ```
 
-### **Explore**
+### 3. Explore
 Open **http://localhost:3357** in your browser.
 
 You can immediately dive into **Ergonomic Chats 101** or **Smarter Agents 101**. These interactive guides are built into the app and do not require an AI API key to view.
 
-### **Enable AI Chat**
+### 4. Enable AI Chat
 
 **For Docker:**
 
@@ -66,9 +66,11 @@ cp .env.example ~/.gitsense/.env
 # Edit ~/.gitsense/.env to add your API keys
 ```
 
-### Integrate Your Repositories
+### 5. Integrate Your Repositories
 
-**Docker Only:** By default, Docker starts in a sandbox. To enable indexing and **Deterministic Discovery** with your actual code, configure the repository path:
+**Docker Only** 
+
+By default, Docker starts in a sandbox. To enable indexing and **Deterministic Discovery** with your actual code, configure the repository path:
 
 ```bash
 gsc docker configure --repos-dir ~/path/to/your/projects
