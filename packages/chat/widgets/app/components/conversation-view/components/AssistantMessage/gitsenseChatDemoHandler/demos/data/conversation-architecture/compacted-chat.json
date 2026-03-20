@@ -1,0 +1,40 @@
+{
+  "name": "Compacted Chat",
+  "type": "regular",
+  "meta": null,
+  "visibility": "",
+  "created_at": "2025-12-05 04:33:39.097",
+  "updated_at": "2025-12-05 04:34:16.651",
+  "messages": [
+    {
+      "type": "regular",
+      "role": "system",
+      "content": "You are helpful personal assistant.",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:33:39.097",
+      "updated_at": "2025-12-05 04:34:16.651"
+    },
+    {
+      "type": "compacted-message",
+      "role": "assistant",
+      "content": "## Compacted Message\n\n- **Original Chat:** [{original-chat-uuid}](/?chat={original-chat-uuid})\n- **Message Range:** 2-10\n- **Compacted At:** 2025-12-12T01:44:14.958Z\n\n### Requirements\n- Simple chocolate cake for daughter's birthday\n- Use common pantry ingredients  \n- Substitute vegetable oil with melted butter\n- Convert to cupcakes (yields ~24)\n- Ensure nut-free (check labels for cross-contamination)\n\n### Final Recipe\n\n#### Cupcakes:\n- 1¾ cups all-purpose flour\n- 2 cups granulated sugar\n- ¾ cup unsweetened cocoa powder\n- 2 teaspoons baking soda\n- 1 teaspoon baking powder\n- 1 teaspoon salt\n- 2 eggs\n- 1 cup buttermilk (or milk + 1 tbsp vinegar)\n- 1 cup strong black coffee (cooled)\n- ½ cup melted butter (cooled slightly)\n- 1 teaspoon vanilla extract\n\n#### Frosting:\n- ½ cup butter, softened\n- ⅓ cup cocoa powder\n- 3 cups powdered sugar\n- ⅓ cup milk\n- 1 teaspoon vanilla extract\n\n#### Instructions:\n1. Preheat oven to 350°F (175°C). Line muffin tins with paper liners\n2. Whisk dry ingredients (flour through salt) in large bowl\n3. Add wet ingredients (eggs, buttermilk, coffee, melted butter, vanilla) and beat 2 minutes\n4. Fill liners ⅔ full (use ice cream scoop for even portions)\n5. Bake 20-22 minutes until toothpick comes out clean\n6. Cool 5 minutes in pan, then transfer to wire rack\n7. Frost completely cooled cupcakes\n\n#### Safety Notes:\n- Check all ingredient labels for \"may contain nuts\" warnings\n- Clean all utensils and workspace thoroughly\n- Use nut-free certified brands when possible (especially cocoa powder)\n\n```json\n{\n  \"topics\": [\n    \"chocolate cake recipe\",\n    \"ingredient substitution\",\n    \"cupcake conversion\",\n    \"nut allergy safety\"\n  ],\n  \"parent_topics\": [\n    \"baking recipes\",\n    \"dietary restrictions\",\n    \"recipe modifications\"\n  ]\n}\n```",
+      "meta": {
+        "compactedFrom": 8495,
+        "compactedRange": "2-10"
+      },
+      "visibility": "public",
+      "created_at": "2025-12-12 01:44:14.982",
+      "updated_at": "2025-12-12 06:29:25.264"
+    },
+    {
+      "type": "regular",
+      "role": "assistant",
+      "content": "## Demo Instructions: Continue Conversation\n\n### What You're Seeing\n\nThis is a **compacted message** - a focused summary of the original conversation. Notice how it contains all the essential information in a structured format, while reducing the conversation from 9 messages to just 2 (including the system).\n\n### Key Features of Compacted Messages\n\n#### 1. Traceability to Original\nLook at the metadata at the top of this message. The **Original Chat** field contains a direct link to the full conversation that was compacted. This ensures you can always trace back to the complete context if needed.\n\n#### 2. Structured Information\nThe compacted message organizes information into clear sections:\n- **Requirements**: What the user wanted to accomplish\n- **Final Recipe**: The complete recipe with all modifications\n- **Safety Notes**: Important considerations for allergies\n\n#### 3. Topic Extraction\nThe JSON section at the bottom contains extracted topics and parent topics, which can be used for smart context loading in future conversations.\n\n### Try Continuing the Conversation\n\nNow try asking the AI a follow-up question that wasn't covered in the original conversation. For example:\n\n```\nCan this recipe be made gluten-free?\n```\n\nNotice how the AI can answer this question based on the compacted context, demonstrating that no essential information was lost during compaction.\n\n### The Value for Developers\n\nWhile this example uses a cake recipe, imagine applying this to a week-long conversation about developing a new feature. The compacted message would contain:\n- Final requirements\n- Key implementation decisions\n- Important technical considerations\n- Links to the full conversation for reference\n\nThis makes it much easier to:\n- Share with team members\n- Use as context for new conversations\n- Reduce token costs while preserving information\n- Maintain a searchable knowledge base\n\nReady to return to the main demo? Close this tab and go back to the Conversation Management demo to continue.\n`;",
+      "meta": null,
+      "visibility": "human-public",
+      "created_at": "2025-12-12 01:47:21.816",
+      "updated_at": "2025-12-15 06:21:42.575"
+    }
+  ]
+}

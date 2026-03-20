@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Component: gscb CLI Wrapper
+# Block-UUID: e21157f8-84a2-414e-86aa-536aa2ed462a
+# Parent-UUID: 5de3bb2e-f29e-4690-8960-149bda9006b4
+# Version: 1.2.0
+# Description: A wrapper script to execute the @gitsense/gscb-cli from node_modules.
+# Language: Bash
+# Created-at: 2025-08-14T04:30:15.764Z
+# Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0), GLM-4.7 (v1.2.0)
+
+
+# Define the database path based on environment or home directory
+if [ -n "$GSC_HOME" ]; then
+  BASE_DIR="$GSC_HOME"
+else
+  BASE_DIR="$HOME/.gitsense"
+fi
+DB_PATH="${BASE_DIR}/data/chats.sqlite3"
+
+# Resolve the directory where this script is located
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
+
+# Define the path to the gscb.js executable relative to the script's directory
+GSCB_CLI_PATH="${SCRIPT_DIR}/../node_modules/@gitsense/gscb-cli/dist/bin/gscb.js"
+
+# Check if the gscb.js file exists
+if [ ! -f "$GSCB_CLI_PATH" ]; then
+  echo "Error: @gitsense/gscb-cli not found at $GSCB_CLI_PATH" >&2
+  echo "Please ensure you have run 'npm install' in the parent directory." >&2
+  exit 1
+fi
+
+# Build new arguments, ensuring --db-path is always set to the hardcoded value
+NEW_ARGS=()
+SKIP_NEXT=false
+for arg in "$@"; do
+  if [ "$SKIP_NEXT" = true ]; then
+    SKIP_NEXT=false
+    continue
+  fi
+
+  if [[ "$arg" == "--db-path" ]]; then
+    SKIP_NEXT=true
+    continue
+  elif [[ "$arg" == "--db-path="* ]]; then # Handle --db-path=value
+    continue
+  fi
+  NEW_ARGS+=("$arg")
+done
+
+# Append the hardcoded --db-path ONLY if more than 2 arguments were originally provided
+if [ "$#" -gt 2 ]; then
+  NEW_ARGS+=("--db-path" "$DB_PATH")
+fi
+
+# Execute the gscb.js script using node, passing the modified arguments
+node "$GSCB_CLI_PATH" "${NEW_ARGS[@]}"

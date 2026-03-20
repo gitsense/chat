@@ -1,0 +1,20 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * This software is permitted for internal use and modification.
+ * Copying for profit or redistribution is strictly not permitted.
+ *
+ * The Fair License, which formalizes these terms, will be adopted as the official license in the future.
+ * Once finalized, the unminified source code will be freely available for internal use for non-
+ * commercial purposes.
+ *
+ * This software may not be used to develop or enhance any product or service that competes
+ * directly or indirectly with GitSense Chat without explicit permission.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ */
+
+let{SearchInput,Table,Pagination}=require("../../../Dependencies"),{formatRelativeDate,renderStatus,createHeader,createGenericSummary,createFooter}=require("./utils");function renderRepos(e,t,i,r){if(t.innerHTML="",!i.results||0===i.results.length)return(n=document.createElement("div")).innerHTML="<h2 style='margin-top:0px'>No repositories found.</h2><p>To import repositories, refer to the <strong>Importing Repositories with GitSense Chat Bridge (GSCB)</strong> guide in the Administration section of the GitSense Chat Help documentation.</p>",void t.appendChild(n);console.log({searchResults:i});var n="git-repo-owner"===e.type,e=n?e.meta?.owner||r.chat?.meta?.owner:null,r=n?""+e:"Repositories",e=createHeader(r),r=(t.appendChild(e),i.totalCounts.chats||0),e=(n||new Set(i.results.map(e=>e.git.owner)).size,createGenericSummary(r,"repos"),document.createElement("div"));e.style.marginBottom="16px",t.appendChild(e);let o=new SearchInput(e,{placeholder:n?"Filter repositories...":"Filter repositories... (e.g., owner:facebook react)",debounceMs:300,width:"100%",onFilterChange:e=>{s.setCurrentPage(1),l()}});o.render();r=document.createElement("div"),t.appendChild(r),e=[{id:"name",header:"Repository",width:"auto",renderCell:e=>{var t=document.createElement("div"),r=document.createElement("a");return r.href="/?chat="+e.chat_uuid,r.style.cursor="pointer",r.style.fontWeight=500,r.textContent=e.git.name,t.appendChild(r),t}}];n||e.push({id:"owner",header:"Owner",width:"200px",renderCell:e=>{var t=document.createElement("div");return t.innerText=e.git?.owner||"Unknown",t}}),e.push({id:"status",header:"Imported",width:"125px",renderCell:e=>{e=e.git.import;return renderStatus(e?.status,e?.startedAt?new Date(e.startedAt).getTime()/1e3:null,e?.finishedAt?new Date(e.finishedAt).getTime()/1e3:null)}});let a=new Table(r,{columns:e,options:{maxBodyHeight:"auto"}});n=document.createElement("div");t.appendChild(n),n.style.marginTop="15px";let s=new Pagination(n,{currentPage:1,itemsPerPage:10,totalItems:i.pagination.totalResults,onPageChange:e=>{l()},onPageSizeChange:e=>{s.setCurrentPage(1),l()}});s.render();r=createFooter("To add or update a repository, use the `gscb` tool. For further instructions, please refer to the administration documentation in your personal help guide, which is accessible from the GitSense Chat homepage.");function l(){var e=o.getValue(),t=s.getItemsPerPage(),r=s.getCurrentPage();let n=i.results;e=((e,t,r)=>(t=(r=(r-1)*t)+t,e.slice(r,t)))(n=(n=e&&""!==e.trim()?((e,t)=>{if(0===(t=t.trim().split(/\s+/).filter(e=>0<e.length)).length)return e;let n=[],i=[];return t.forEach(e=>{var t;e.startsWith("owner:")?0<(t=e.substring(6).toLowerCase()).length&&n.push(t):i.push(e.toLowerCase())}),e.filter(r=>{if(0<n.length&&!n.some(e=>r.git.owner.toLowerCase().includes(e)))return!1;if(0<i.length){let t=[r.git.name,r.git.owner,r.git.path].join(" ").toLowerCase();return i.every(e=>t.includes(e))}return 0<n.length||0<i.length})})(i.results,e):[...i.results]).sort((e,t)=>{e=e.git.import?.finishedAt?new Date(e.git.import.finishedAt).getTime():0;return(t.git.import?.finishedAt?new Date(t.git.import.finishedAt).getTime():0)-e}),t,r);s.setTotalItems(n.length),a.updateData(e)}t.appendChild(r),l(),l()}module.exports={renderRepos:renderRepos};

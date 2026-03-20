@@ -1,0 +1,20 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * This software is permitted for internal use and modification.
+ * Copying for profit or redistribution is strictly not permitted.
+ *
+ * The Fair License, which formalizes these terms, will be adopted as the official license in the future.
+ * Once finalized, the unminified source code will be freely available for internal use for non-
+ * commercial purposes.
+ *
+ * This software may not be used to develop or enhance any product or service that competes
+ * directly or indirectly with GitSense Chat without explicit permission.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ */
+
+let DomUtils=require("@gitsense/gsc-utils").DomUtils,CONTRACT_CONSTANTS=require("../constants").CONTRACT_CONSTANTS,PromptBox=require("../../ui/prompt-box").PromptBox,NotificationManager=require("../../ui/notification-manager").NotificationManager,h=DomUtils.h;class ChatMessageEventsModal{constructor(e,t,{onConfirm:n,onCancel:i,onExpired:o}){this.manager=e,this.eventData=t,this.onConfirm=n,this.onCancel=i,this.onExpired=o,this.promptBox=new PromptBox,this.timerInterval=null,this.elements={},this.isOpen=!1}show(e="Incoming Terminal Message"){this.isOpen=!0;let t;try{t=JSON.parse(this.eventData.payload)}catch(e){console.error("[ChatMessageEventsModal] Failed to parse payload:",e),t={text:"Error: Could not parse message content."}}var n=new Date(this.eventData.expires_at).getTime(),i=h.createDiv({style:{display:"flex",flexDirection:"column",gap:"15px"}}),o=h.createDiv({text:t.text||"",style:{backgroundColor:"#f6f8fa",border:"1px solid #d1d5da",borderRadius:"6px",padding:"15px",maxHeight:"300px",overflowY:"auto",whiteSpace:"pre-wrap",fontFamily:"'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace",fontSize:"13px"}}),o=(i.appendChild(o),h.createStrong({text:"60s",style:{color:"#d73a49"}})),o=(this.elements.timerValue=o,h.createDiv({style:{display:"flex",justifyContent:"space-between",alignItems:"center",fontSize:"14px",color:"#586069"},append:[h.createSpan({text:"Expires in:"}),o]})),o=(i.appendChild(o),h.createButton({cls:"btn btn-outline",text:"Cancel",onclick:()=>this.handleCancel()})),a=h.createButton({cls:"btn btn-primary",text:"Confirm",onclick:()=>this.handleConfirm()}),o=(this.elements.confirmBtn=a,h.createDiv({style:{display:"flex",justifyContent:"flex-end",gap:"10px"},append:[o,a]}));i.appendChild(o),this.promptBox.show({title:e,content:i,minWidth:"600px",maxWidth:"800px",showCloseButton:!1,onBeforeClose:async()=>!1}),this.startTimer(n)}startTimer(t){var e=()=>{var e=Date.now(),e=t-e;e<=0?this.handleExpire():(e=Math.ceil(e/1e3),this.elements.timerValue.textContent=e+"s")};e(),this.timerInterval=setInterval(e,1e3)}async handleConfirm(){this.onConfirm||"function"==typeof this.onConfirm?(this.onConfirm(),this.stopTimer()):NotificationManager.error("No confirmation callback defined. Unable to process message event"),this.hide()}async handleCancel(){this.onCancel||"function"==typeof this.onCancel?(this.onCancel(),this.stopTimer()):NotificationManager.error("No cancel callback defined. Unable to update event."),this.hide()}async handleExpire(){this.stopTimer(),this.elements.timerValue.textContent="Expired",this.elements.timerValue.style.color="#6a737d",this.elements.confirmBtn.disabled=!0,this.elements.confirmBtn.textContent="Expired",this.elements.confirmBtn.classList.remove("btn-primary"),this.elements.confirmBtn.classList.add("btn-secondary"),setTimeout(()=>{this.onExpired&&"function"==typeof this.onExpired?this.onExpired():NotificationManager.error("No expired callback defined. Unable to update event."),this.hide()},2e3)}stopTimer(){this.timerInterval&&(clearInterval(this.timerInterval),this.timerInterval=null)}hide(){this.isOpen=!1,this.stopTimer(),this.promptBox.hide()}isOpen(){return this.isOpen}}module.exports={ChatMessageEventsModal:ChatMessageEventsModal};

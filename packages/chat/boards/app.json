@@ -1,0 +1,10 @@
+{
+    "name": "app",
+    "displayName": "Chat",
+    "blocks": [
+        {
+            "widget": "chat.app",
+            "cols": 12
+        }
+    ]
+}

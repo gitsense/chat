@@ -1,0 +1,20 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * This software is permitted for internal use and modification.
+ * Copying for profit or redistribution is strictly not permitted.
+ *
+ * The Fair License, which formalizes these terms, will be adopted as the official license in the future.
+ * Once finalized, the unminified source code will be freely available for internal use for non-
+ * commercial purposes.
+ *
+ * This software may not be used to develop or enhance any product or service that competes
+ * directly or indirectly with GitSense Chat without explicit permission.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ */
+
+let STORAGE_KEY="gsc-chat-history",SETTINGS_STORAGE_KEY="gsc-chat-history-settings",CHAT_NAME_DISPLAYS={NAME:"name",NAME_AND_PATH:"nameAndPath",NAME_AND_ROOT:"nameAndRoot"},TIME_DISPLAYS={VIEWED:"viewed",CREATED:"created"},SORT_FIELDS={LAST_VIEWED:"last_viewed",CREATED_AT:"created_at",UPDATED_AT:"updated_at",NAME:"name"},DEFAULT_ITEMS_PER_PAGE=10,DEFAULT_ITEMS_PER_PAGE_OPTIONS=[10,25,50,100],DEFAULT_SORT=SORT_FIELDS.LAST_VIEWED,DEFAULT_SORT_ORDER="desc",DEFAULT_CHAT_NAME_DISPLAY=CHAT_NAME_DISPLAYS.NAME_AND_PATH,DEFAULT_GROUP_DISPLAY="parent",DEFAULT_TIME_DISPLAY=TIME_DISPLAYS.VIEWED,EXPORT_VERSION="1.0.0",EXPORT_FILE_PREFIX="gsc-chat-history",SETTINGS_VERSION="1.0.0",CSS_CLASSES={CONTAINER:"gsc-chat-history",SEARCH_CONTAINER:"gsc-chat-history-search-container",TABLE_CONTAINER:"gsc-chat-history-table-container",TABLE:"gsc-chat-history-table",TABLE_ROW:"gsc-chat-history-row",CHAT_NAME_CELL:"gsc-chat-history-name-cell",ROOT_CHAT_CELL:"gsc-chat-history-root-chat-cell",ACTIONS_CELL:"gsc-chat-history-quick-actions-cell",TIME_CELL:"gsc-chat-history-time-cell",OPTIONS_CELL:"gsc-chat-history-options-cell",PAGINATION_CONTAINER:"gsc-chat-history-pagination-container",EMPTY_STATE:"gsc-chat-history-empty-state",BREADCRUMB_CONTAINER:"gsc-chat-history-breadcrumb-container",EXPAND_ICON:"gsc-chat-history-expand-icon",FOCUS_ICON:"gsc-chat-history-focus-icon",PINNED_ICON:"gsc-chat-history-pinned-icon",OPTIONS_MENU:"gsc-chat-history-options-menu",LOADING_STATE:"gsc-chat-history-loading",ERROR_STATE:"gsc-chat-history-error",ARCHIVE_CHECKBOX_CONTAINER:"gsc-chat-history-archive-checkbox-container",ARCHIVE_CHECKBOX:"gsc-chat-history-archive-checkbox",ARCHIVE_LABEL:"gsc-chat-history-archive-label",ARCHIVED_ROW:"gsc-chat-history-archived-row",ARCHIVE_ICON:"gsc-chat-history-archive-icon",ROOT_CHECKBOX_CONTAINER:"gsc-chat-history-root-checkbox-container",ROOT_CHECKBOX:"gsc-chat-history-root-checkbox",ROOT_LABEL:"gsc-chat-history-root-label"},TIME_FORMATS={RELATIVE:"relative",ABSOLUTE:"absolute",SHORT_RELATIVE:"short_relative"},TABLE_COLUMN_WIDTHS={ROOT_CHAT:250,CHAT_NAME:"auto",ACTIONS:100,TIME:100},ANIMATION_DURATIONS={BREADCRUMB_TOGGLE:300,LOADING_STATE:200,FADE_IN:150},ERROR_MESSAGES={STORAGE_UNAVAILABLE:"Local storage is not available in this browser",INVALID_CHAT_DATA:"Invalid chat data format",EXPORT_FAILED:"Failed to export chat history",IMPORT_FAILED:"Failed to import chat history",NETWORK_ERROR:"Network error occurred while validating chat"};module.exports={STORAGE_KEY:STORAGE_KEY,SETTINGS_STORAGE_KEY:SETTINGS_STORAGE_KEY,CHAT_NAME_DISPLAYS:CHAT_NAME_DISPLAYS,TIME_DISPLAYS:TIME_DISPLAYS,SORT_FIELDS:SORT_FIELDS,DEFAULT_ITEMS_PER_PAGE:DEFAULT_ITEMS_PER_PAGE,DEFAULT_ITEMS_PER_PAGE_OPTIONS:DEFAULT_ITEMS_PER_PAGE_OPTIONS,DEFAULT_SORT:DEFAULT_SORT,DEFAULT_SORT_ORDER:DEFAULT_SORT_ORDER,DEFAULT_CHAT_NAME_DISPLAY:DEFAULT_CHAT_NAME_DISPLAY,DEFAULT_GROUP_DISPLAY:DEFAULT_GROUP_DISPLAY,DEFAULT_TIME_DISPLAY:DEFAULT_TIME_DISPLAY,EXPORT_VERSION:EXPORT_VERSION,EXPORT_FILE_PREFIX:EXPORT_FILE_PREFIX,SETTINGS_VERSION:SETTINGS_VERSION,CSS_CLASSES:CSS_CLASSES,TIME_FORMATS:TIME_FORMATS,TABLE_COLUMN_WIDTHS:TABLE_COLUMN_WIDTHS,ANIMATION_DURATIONS:ANIMATION_DURATIONS,ERROR_MESSAGES:ERROR_MESSAGES};

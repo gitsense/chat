@@ -1,0 +1,67 @@
+{
+    "name": "code-blocks.default",
+    "description": "The default search profile for searches explicitly targeting only code blocks. Defines outputs for a detailed code block view.",
+    "version": "2.3.0",
+    "keywords": ["code blocks", "single-target"],
+    "defaults": {
+        "targets": ["code-blocks"],
+        "scope": "all-chats",
+        "filters": {},
+        "nullFilters": [],
+        "notNullFilters": [],
+        "options": {
+            "caseSensitive": false,
+            "wildcard": "implicit",
+            "limit": 25,
+            "offset": 0
+        },
+        "pagination": {
+            "limit": 25,
+            "offset": 0
+        },
+        "outputs": {
+            "code-blocks": [
+                "code_blocks.uuid",
+                "code_blocks.parent_uuid",
+                "code_blocks.component",
+                "code_blocks.major",
+                "code_blocks.minor",
+                "code_blocks.patch",
+                "code_blocks.header",
+                "code_blocks.created_at",
+                "code_blocks.header.language",
+                "code_blocks.size",
+                "chats.name",
+                "cte.chat_path.path"
+            ],
+            "result_chat_id": true,
+            "fts_rank": true
+        }
+    },
+    "emptySearchOutputs": {
+        "code-blocks": [
+            "code_blocks.uuid",
+            "code_blocks.component",
+            "code_blocks.created_at",
+            "code_blocks.header.language",
+            "code_blocks.size"
+        ]
+    },
+    "sortBy": [
+        {
+            "field": "code_blocks.updated_at",
+            "direction": "desc"
+        }
+    ],
+    "emptySearchSortBy": {
+        "code-blocks": [
+            {
+                "field": "code_blocks.updated_at",
+                "direction": "desc"
+            }
+        ]
+    },
+    "rankingPreferences": {
+        "description": "Default ranking preferences for code block results."
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "name": "chats.default",
+    "description": "The default search profile for searches explicitly targeting only chats. Defines outputs for a detailed chat view.",
+    "version": "2.3.0",
+    "keywords": ["chats", "single-target"],
+    "defaults": {
+        "targets": ["chats"],
+        "scope": "all-chats",
+        "filters": {},
+        "nullFilters": [],
+        "notNullFilters": [],
+        "options": {
+            "caseSensitive": false,
+            "wildcard": "implicit",
+            "limit": 25,
+            "offset": 0
+        },
+        "pagination": {
+            "limit": 25,
+            "offset": 0
+        },
+        "outputs": {
+            "chats": [
+                "chats.id",
+                "chats.uuid",
+                "chats.name",
+                "chats.type",
+                "chats.deleted",
+                "chats.visibility",
+                "chats.owner",
+                "chats.parent_id",
+                "chats.group_id",
+                "chats.prompt_id",
+                "chats.main_model",
+                "chats.pinned",
+                "chats.protected",
+                "chats.forked_from_msg_id",
+                "chats.meta",
+                "chats.is_default_name",
+                "chats.created_at",
+                "chats.updated_at",
+                "chats.modified_at",
+                "cte.cte_chat_message_stats.num_messages",
+                "cte.cte_chat_message_stats.last_updated_at"
+            ],
+            "result_chat_id": true,
+            "fts_rank": true
+        }
+    },
+    "emptySearchOutputs": {
+        "chats": [
+            "chats.id",
+            "chats.uuid",
+            "chats.name",
+            "chats.type",
+            "chats.updated_at",
+            "cte.cte_chat_message_stats.num_messages",
+            "cte.cte_chat_message_stats.last_updated_at"
+        ]
+    },
+    "sortBy": [
+        {
+            "field": "cte.cte_chat_message_stats.last_updated_at",
+            "direction": "desc"
+        }
+    ],
+    "emptySearchSortBy": {
+        "chats": [
+            {
+                "field": "cte.cte_chat_message_stats.last_updated_at",
+                "direction": "desc"
+            }
+        ]
+    },
+    "rankingPreferences": {
+        "description": "Default ranking preferences for chat results."
+    }
+}

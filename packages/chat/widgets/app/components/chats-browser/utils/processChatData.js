@@ -1,0 +1,20 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * This software is permitted for internal use and modification.
+ * Copying for profit or redistribution is strictly not permitted.
+ *
+ * The Fair License, which formalizes these terms, will be adopted as the official license in the future.
+ * Once finalized, the unminified source code will be freely available for internal use for non-
+ * commercial purposes.
+ *
+ * This software may not be used to develop or enhance any product or service that competes
+ * directly or indirectly with GitSense Chat without explicit permission.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ */
+
+let{TIME_RANGES,TIME_RANGE_FILTERS,MESSAGE_COUNT_FILTERS,CHAT_TYPE_FILTERS,DEFAULT_SORTING_OPTION}=require("../constants"),sortChats=require("./sortingUtils").sortChats;function calculateChatLevels(e){if(!e||!Array.isArray(e))return[];let r=new Map,o=(e.forEach(e=>{r.set(e.id,{...e})}),(e,t=new Set)=>{var a;return!t.has(e)&&(a=r.get(e))?void 0!==a.level?{level:a.level,rootId:a.root_chat_id,rootUuid:a.root_chat_uuid,rootName:a.root_chat_name}:(t.add(e),a.parent_id?(e=o(a.parent_id,new Set(t)),a.level=e.level+1,a.root_chat_id=e.rootId,a.root_chat_uuid=e.rootUuid,a.root_chat_name=e.rootName,{level:a.level,rootId:e.rootId,rootUuid:e.rootUuid,rootName:e.rootName}):(a.level=0,a.root_chat_id=a.id,a.root_chat_uuid=a.uuid,a.root_chat_name=a.name,{level:0,rootId:a.id,rootUuid:a.uuid,rootName:a.name})):{level:0,rootId:null,rootName:null}}),t=[];return r.forEach(e=>{o(e.id),t.push(e)}),t}function filterChats(e,t){if(!e||!Array.isArray(e))return[];let{searchTerm:a="",timeRanges:r=[],messageCounts:s=[],chatTypes:n=[]}=t||{};return e.filter(o=>{if(a&&""!==a.trim()){var e=a.toLowerCase().trim();if(!o.name||!o.name.toLowerCase().includes(e))return!1}if(0<r.length&&!r.some(t=>{var e,a,r=TIME_RANGE_FILTERS.find(e=>e.id===t);return!!r&&(r.value===TIME_RANGES.YESTERDAY_ONLY?(a=new Date(o.created_at),(e=new Date).setDate(e.getDate()-1),a.toDateString()===e.toDateString()):(a=new Date(o.created_at).getTime(),(new Date).getTime()-a<=r.value))}))return!1;if(0<s.length&&!s.some(t=>{var e=MESSAGE_COUNT_FILTERS.find(e=>e.id===t);return!!e&&o.message_count>=e.min&&o.message_count<=e.max}))return!1;return!(0<n.length&&!n.includes(o.type))})}function calculateCategoryFacetCounts(e,t,a){if(!e||!Array.isArray(e))return{};e=filterChats(e,{searchTerm:a.searchTerm||"",timeRanges:"timeRanges"!==t&&a.timeRanges||[],messageCounts:"messageCounts"!==t&&a.messageCounts||[],chatTypes:"chatTypes"!==t&&a.chatTypes||[]});let r=new Date,o=new Date,s=(o.setDate(o.getDate()-1),{});return"timeRanges"===t?(TIME_RANGE_FILTERS.forEach(e=>{s[e.id]=0}),e.forEach(t=>{let a=new Date(t.created_at).getTime();TIME_RANGE_FILTERS.forEach(e=>{e.value===TIME_RANGES.YESTERDAY_ONLY?new Date(t.created_at).toDateString()===o.toDateString()&&s[e.id]++:r.getTime()-a<=e.value&&s[e.id]++})})):"messageCounts"===t?(MESSAGE_COUNT_FILTERS.forEach(e=>{s[e.id]=0}),e.forEach(t=>{MESSAGE_COUNT_FILTERS.forEach(e=>{t.message_count>=e.min&&t.message_count<=e.max&&s[e.id]++})})):"chatTypes"===t&&(CHAT_TYPE_FILTERS.forEach(e=>{s[e.id]=0}),e.forEach(t=>{CHAT_TYPE_FILTERS.forEach(e=>{t.type===e.value&&s[e.id]++})})),s}function calculateFacetCounts(e,t){return e&&Array.isArray(e)?{timeRanges:calculateCategoryFacetCounts(e,"timeRanges",t),messageCounts:calculateCategoryFacetCounts(e,"messageCounts",t),chatTypes:calculateCategoryFacetCounts(e,"chatTypes",t)}:{timeRanges:{},messageCounts:{},chatTypes:{}}}function processChatData(e,t={},a=DEFAULT_SORTING_OPTION){var r=calculateChatLevels(e),o=filterChats(r,t),r=calculateFacetCounts(r,t),t=require("../constants").SORTING_OPTIONS,a=t[a]||t[DEFAULT_SORTING_OPTION];return{chats:sortChats(o,a.criteria),facetCounts:r,totalCount:e.length,filteredCount:o.length}}module.exports={calculateChatLevels:calculateChatLevels,filterChats:filterChats,calculateFacetCounts:calculateFacetCounts,processChatData:processChatData};

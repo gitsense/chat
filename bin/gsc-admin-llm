@@ -1,0 +1,1048 @@
+#!/usr/bin/env node
+
+/*
+ * Component: GitSense Chat Admin LLM CLI
+ * Block-UUID: 5c460a3e-c0dd-48b6-9a5a-4bbf9168c39b
+ * Parent-UUID: b1866645-17a6-4419-a127-de886798d4f8
+ * Version: 1.3.2
+ * Description: Handles LLM model and provider management commands for GitSense Chat.
+ * Language: JavaScript
+ * Created-at: 2025-08-25T02:26:27.232Z
+ * Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0), Gemini 2.5 Flash Thinking (v1.2.0), GPT OSS 120B (v1.3.0), Claude 4.0 Sonnet (v1.3.1), GLM-4.7 (v1.3.2)
+ */
+
+
+const {
+    Command
+} = require('commander');
+const {
+    readChatConfig,
+    writeChatConfig,
+    confirmAction,
+    promptForInput,
+    promptForListSelection,
+    promptForNumber,
+    findItem,
+    insertItem,
+    moveItem,
+    parseIdentifier
+} = require('../lib/utils-esm');
+
+const program = new Command();
+
+program.name('gsc-admin llm')
+    .description('Manage LLM models and providers in chat-config.json.');
+
+// --- Internal Helpers ---
+
+/**
+ * Displays a formatted list of models and dividers.
+ * @param {Array<object>} models - The models array from chat-config.json.
+ */
+function displayModels(models) {
+    if (!models || models.length === 0) {
+        console.log('No models or dividers configured.');
+        return;
+    }
+    console.log('\nModels and Dividers (Current Order):');
+    models.forEach((item, index) => {
+        if (item.name === '---------') {
+            console.log(`${index}: ${item.name}`);
+        } else {
+            const providerName = item.providers && item.providers[0] ? ` (${item.providers[0].name})` : '';
+            const isDefault = item.default ? ' [default]' : '';
+            console.log(`${index}: ${item.name}${providerName}${isDefault}`);
+        }
+    });
+    console.log('');
+}
+
+/**
+ * Prompts user to select an item (model or divider) by number from a list.
+ * @param {Array<object>} items - The array of items to choose from.
+ * @param {string} itemType - 'model' or 'divider'.
+ * @returns {Promise<{item: object, index: number}|null>} The selected item and its index, or null.
+ */
+async function selectItemFromList(items, itemType) {
+    if (!items || items.length === 0) {
+        console.log(`No ${itemType}s found.`);
+        return null;
+    }
+
+    displayModels(items); // Show the full list for context
+
+    const choices = items.map((item, index) => ({
+        name: item.name === '---------' ? `${index}: ${item.name}` : `${index}: ${item.name}`,
+        value: index,
+    }));
+
+    const selectedIndex = await promptForListSelection(`Select the ${itemType} by number:`, choices);
+    const selectedItem = items[selectedIndex];
+
+    if (!selectedItem) {
+        console.log(`No ${itemType} selected. Operation cancelled.`);
+        return null;
+    }
+    return {
+        item: selectedItem,
+        index: selectedIndex
+    };
+}
+
+/**
+ * Prompts user for a position input and parses it.
+ * @param {number} currentArrayLength - The current length of the array for 'end' calculation.
+ * @returns {Promise<string|number>} The parsed position.
+ */
+async function getPositionInput(currentArrayLength) {
+    const positionInput = await promptForInput('? Where would you like to place this item? (Optional)\n  (Enter 0-based index, \'top\', \'end\', \'before <num>\', \'after <num>\')\n  (Press Enter to add to the bottom of the list)', (input) => {
+        if (input === '') return true; // Optional, so empty is fine
+        const parts = input.toLowerCase().split(' ');
+        if (parts[0] === 'top' || parts[0] === 'end') return true;
+        if ((parts[0] === 'before' || parts[0] === 'after') && parts[1]) {
+            const num = parseInt(parts[1]);
+            return !isNaN(num) && num >= 0 && num < currentArrayLength;
+        }
+        const num = parseInt(input);
+        return !isNaN(num) && num >= 0 && num <= currentArrayLength; // Allow index up to length for 'end'
+    }, '');
+
+    if (positionInput === '') {
+        return 'end'; // Default to end if optional input is empty
+    }
+    return positionInput;
+}
+
+// --- List Commands (Nested) ---
+
+const listCommand = program.command('list')
+    .description('List LLM models and providers.');
+
+listCommand.command('providers')
+    .description('List all registered LLM providers.')
+    .action(async () => {
+        try {
+            const config = await readChatConfig();
+            const providers = config.providers || [];
+
+            if (providers.length === 0) {
+                console.log('No LLM providers registered.');
+                return;
+            }
+
+            console.log('\nRegistered LLM Providers:');
+            providers.forEach(provider => {
+                console.log(`- Name: ${provider.name}`);
+                console.log(`  API Key Env: ${provider.apiKeyName}`);
+                if (provider.baseURL) {
+                    console.log(`  Base URL: ${provider.baseURL}`);
+                }
+                console.log('');
+            });
+        } catch (error) {
+            console.error(`Error listing providers: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+listCommand.command('models')
+    .description('List all registered LLM models and dividers in their configured order.')
+    .action(async () => {
+        try {
+            const config = await readChatConfig();
+            displayModels(config.models || []);
+        } catch (error) {
+            console.error(`Error listing models: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+// --- Add Commands ---
+
+const addCommand = program.command('add')
+    .description('Add LLM models, providers, or dividers.')
+    .action(() => addCommand.help()); // Show help for subcommands if 'add' is called without args
+
+addCommand
+    .command('provider')
+    .description('Add a new LLM provider.')
+    .action(async () => {
+        try {
+            const config = await readChatConfig();
+            let providerName;
+            let isUnique = false;
+
+            while (!isUnique) {
+                providerName = await promptForInput('? Enter the display name for the new provider (e.g., \'My Custom AI\'):', (input) => input.trim().length > 0 || 'Provider name cannot be empty.');
+                if (config.providers.some(p => p.name === providerName)) {
+                    console.log(`! A provider with the name '${providerName}' already exists.`);
+                    console.log(`! If you wish to modify it, please use 'gsc-admin llm edit provider "${providerName}"' (not yet implemented).`);
+                } else {
+                    isUnique = true;
+                }
+            }
+
+            const defaultApiKeyName = providerName.toUpperCase().replace(/[^A-Z0-9_]/g, '_') + '_API_KEY';
+            const apiKeyName = await promptForInput(`? Enter the name of the environment variable for the API key (e.g., '${defaultApiKeyName}'):`, (input) => input.trim().length > 0 || 'API key environment variable name cannot be empty.', defaultApiKeyName);
+
+            const baseURL = await promptForInput('? Enter the base URL for the API endpoint (optional, e.g., \'https://api.mycustomai.com/v1\'):', (input) => {
+                if (input === '') return true;
+                try {
+                    new URL(input);
+                    return true;
+                } catch (e) {
+                    return 'Please enter a valid URL or leave empty.';
+                }
+            }, '');
+
+            const newProvider = {
+                name: providerName,
+                apiKeyName: apiKeyName,
+            };
+            if (baseURL) {
+                newProvider.baseURL = baseURL;
+            }
+
+            console.log('\nNew Provider Details:');
+            console.log(`  Name:          ${newProvider.name}`);
+            console.log(`  API Key Env:   ${newProvider.apiKeyName}`);
+            console.log(`  Base URL:      ${newProvider.baseURL || 'N/A'}`);
+
+            const confirmed = await confirmAction('? Confirm adding this provider to chat-config.json?');
+
+            if (confirmed) {
+                config.providers.push(newProvider);
+                await writeChatConfig(config);
+            } else {
+                console.log('Provider addition cancelled.');
+            }
+
+        } catch (error) {
+            console.error(`Error adding provider: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+addCommand
+    .command('model')
+    .description('Add a new LLM model.')
+    .action(async () => {
+        try {
+            const config = await readChatConfig();
+            const providers = config.providers || [];
+
+            if (providers.length === 0) {
+                console.log('! No providers are registered. Please add a provider first using `gsc-admin llm add provider`.');
+                return;
+            }
+
+            // Step 1: Select Provider
+            const providerChoices = providers.map(p => ({
+                name: p.name,
+                value: p.name
+            }));
+            providerChoices.unshift({
+                name: '[Create New Provider]',
+                value: '__CREATE_NEW__'
+            });
+
+            const selectedProviderName = await promptForListSelection('? Select the provider for this model:', providerChoices);
+
+            if (selectedProviderName === '__CREATE_NEW__') {
+                console.log('! To add a new model, its provider must already exist.');
+                console.log('! Please run `gsc-admin llm add provider` first to create the new provider.');
+                console.log('! After that, you can re-run `gsc-admin llm add model`.');
+                return;
+            }
+            const selectedProvider = providers.find(p => p.name === selectedProviderName);
+
+            // Step 2: Get Model Display Name
+            let modelName;
+            let isUnique = false;
+            while (!isUnique) {
+                modelName = await promptForInput('? Enter the display name for the new model (e.g., \'My Custom GPT-4\'):', (input) => input.trim().length > 0 || 'Model name cannot be empty.');
+                if (config.models.some(m => m.name === modelName && m.name !== '---------')) {
+                    console.log(`! A model with the name '${modelName}' already exists.`);
+                    console.log(`! If you wish to modify it, please use 'gsc-admin llm edit model "${modelName}"' (not yet implemented).`);
+                    console.log(`? Please enter a unique name for this new model:`);
+                } else {
+                    isUnique = true;
+                }
+            }
+
+            // Step 3: Get Model ID
+            const modelId = await promptForInput([
+                '? Enter the model ID:',
+                '  (e.g., \'gpt-4o\', \'claude-3-5-sonnet-20241022\')',
+                '  You can usually find this on the provider\'s API documentation or model list page.'
+            ].join('\n'), (input) => input.trim().length > 0 || 'Model ID cannot be empty.');
+
+            // Step 4: Get Max Output Tokens
+            const maxOutputTokens = await promptForNumber([
+                '? Enter the max allowable output tokens:',
+                '  (Your value cannot exceed the model\'s actual maximum output token capability.)',
+                '  (e.g., 8192, 20000)'
+            ].join('\n'), (input) => input > 0 || 'Max output tokens must be a positive number.');
+
+            // Step 5: Set Default Model (Optional)
+            let isDefault = false;
+            const confirmDefault = await confirmAction('? Should this be the default model?');
+            if (confirmDefault) {
+                const currentDefaultModel = config.models.find(m => m.default);
+                if (currentDefaultModel) {
+                    const overrideConfirmed = await confirmAction(`! There is already a default model: '${currentDefaultModel.name}'.\n? Do you want to make '${modelName}' the new default and unset '${currentDefaultModel.name}'?`, false);
+                    if (overrideConfirmed) {
+                        isDefault = true;
+                        // Will unset old default during final save
+                    } else {
+                        console.log(`✓ '${modelName}' will NOT be set as the default. '${currentDefaultModel.name}' will remain the default.`);
+                    }
+                } else {
+                    isDefault = true;
+                }
+            }
+
+            const newModel = {
+                name: modelName,
+                providers: [{
+                    name: selectedProvider.name,
+                    modelId: modelId,
+                    maxOutputTokens: maxOutputTokens
+                }],
+                default: isDefault
+            };
+
+            // Step 6: Display Current Model Order
+            const currentModels = [...(config.models || [])]; // Create a copy to work with
+            displayModels(currentModels);
+
+            // Step 7: Determine New Model Position (Optional)
+            const positionInput = await getPositionInput(currentModels.length);
+            let targetIndex;
+            try {
+                // Temporarily insert to calculate final index for divider placement
+                const tempModels = [...currentModels]; // Work on a temp copy for position calculation
+                targetIndex = insertItem(tempModels, newModel, positionInput, currentModels);
+            } catch (e) {
+                console.error(`Error determining position: ${e.message}`);
+                return; // Abort if position input is invalid
+            }
+
+            // Step 8: Optional Divider Placement
+            let addDividerBefore = false;
+            let addDividerAfter = false;
+            const confirmDivider = await confirmAction('? Would you like to add a divider near this new model?');
+            if (confirmDivider) {
+                const dividerPosition = await promptForListSelection('? Add divider (before/after) the new model?', ['before', 'after']);
+                if (dividerPosition === 'before') {
+                    addDividerBefore = true;
+                } else {
+                    addDividerAfter = true;
+                }
+            }
+
+            // Step 9: Final Summary and Confirmation
+            const finalModelsArray = [...(config.models || [])]; // Start with fresh copy of original models
+            let actualModelIndex;
+
+            // Unset old default if new one is default
+            if (isDefault) {
+                finalModelsArray.forEach(m => {
+                    if (m.default) {
+                        delete m.default; // Remove default property
+                    }
+                });
+            }
+
+            // Insert model and dividers into the final array
+            if (addDividerBefore) {
+                actualModelIndex = insertItem(finalModelsArray, {
+                    name: '---------'
+                }, targetIndex);
+                insertItem(finalModelsArray, newModel, actualModelIndex + 1);
+            } else if (addDividerAfter) {
+                actualModelIndex = insertItem(finalModelsArray, newModel, targetIndex);
+                insertItem(finalModelsArray, {
+                    name: '---------'
+                }, actualModelIndex + 1);
+            } else {
+                actualModelIndex = insertItem(finalModelsArray, newModel, targetIndex);
+            }
+
+            console.log('\n--- Preview of New Order ---');
+            displayModels(finalModelsArray);
+            console.log('----------------------------');
+
+            const confirmed = await confirmAction('? Confirm adding this model (and optional divider) with the above order?');
+
+            if (confirmed) {
+                config.models = finalModelsArray; // Update the config object
+                await writeChatConfig(config);
+            } else {
+                console.log('Model addition cancelled. No changes made to chat-config.json.');
+            }
+
+        } catch (error) {
+            console.error(`Error adding model: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+addCommand
+    .command('divider')
+    .description('Add a new divider to the model list.')
+    .option('-i, --index <number>', 'Specify the 0-based index to insert the divider.')
+    .option('-b, --before <name_or_index>', 'Insert the divider before a specific model/divider (by name or index).')
+    .option('-a, --after <name_or_index>', 'Insert the divider after a specific model/divider (by name or index).')
+    .action(async (options) => {
+        try {
+            const config = await readChatConfig();
+            const models = [...(config.models || [])]; // Work on a copy
+
+            let position = 'end'; // Default to end
+            if (options.index !== undefined) {
+                position = parseInt(options.index);
+            } else if (options.before) {
+                position = `before ${options.before}`;
+            } else if (options.after) {
+                position = `after ${options.after}`;
+            } else {
+                // If no options, prompt interactively
+                displayModels(models);
+                position = await getPositionInput(models.length);
+            }
+
+            const newDivider = {
+                name: '---------'
+            };
+            insertItem(models, newDivider, position, models); // Use models as reference array
+
+            console.log('\n--- Preview of New Order ---');
+            displayModels(models);
+            console.log('----------------------------');
+
+            const confirmed = await confirmAction('? Confirm adding this divider with the above order?');
+
+            if (confirmed) {
+                config.models = models;
+                await writeChatConfig(config);
+            } else {
+                console.log('Divider addition cancelled.');
+            }
+
+        } catch (error) {
+            console.error(`Error adding divider: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+// --- New Command: set-default-model ---
+program
+    .command('set-default-model [name]')
+    .description('Set the specified model as the default model. If no name is provided, you will be prompted to select one.')
+    .action(async (identifier) => {
+        try {
+            const config = await readChatConfig();
+            let targetModel;
+
+            if (identifier) {
+                // Locate the target model (ignore dividers)
+                const found = findItem(config.models, identifier);
+                if (!found || found.item.name === '---------') {
+                    console.log(`! Model '${identifier}' not found or is a divider.`);
+                    return;
+                }
+                targetModel = found.item;
+            } else {
+                // Prompt user to select a model
+                const modelsOnly = config.models.filter(m => m.name !== '---------');
+                if (modelsOnly.length === 0) {
+                    console.log('No models available to set as default.');
+                    return;
+                }
+
+                const choices = modelsOnly.map((model) => ({
+                    name: `${model.name} (${model.providers[0]?.name || 'N/A'})`,
+                    value: model.name
+                }));
+
+                const selectedName = await promptForListSelection('? Select the model to set as default:', choices);
+                const found = findItem(config.models, selectedName);
+                if (!found) {
+                    console.log('Model not found. Aborting.');
+                    return;
+                }
+                targetModel = found.item;
+            }
+
+            // Find any existing default model
+            const currentDefault = config.models.find(m => m.default);
+            if (currentDefault && currentDefault.name === targetModel.name) {
+                console.log(`✓ '${targetModel.name}' is already the default model.`);
+                return;
+            }
+
+            const confirmed = await confirmAction(`? Set model '${targetModel.name}' as the default model?`);
+            if (!confirmed) {
+                console.log('Operation cancelled.');
+                return;
+            }
+
+            // Unset old default and set new one
+            if (currentDefault) delete currentDefault.default;
+            targetModel.default = true;
+
+            await writeChatConfig(config);
+        } catch (error) {
+            console.error(`Error setting default model: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+// --- Remove Commands (Fixed Structure) ---
+
+const removeCommand = program.command('remove')
+    .description('Remove LLM models, providers, or dividers.')
+    .action(() => removeCommand.help()); // Show help for subcommands if 'remove' is called without args
+
+removeCommand
+    .command('provider [name]')
+    .description('Remove an LLM provider.')
+    .action(async (name) => {
+        try {
+            const config = await readChatConfig();
+            let targetProvider;
+            let targetIndex;
+
+            if (name) {
+                const found = findItem(config.providers, name);
+                if (!found) {
+                    console.log(`! Provider '${name}' not found.`);
+                    return;
+                }
+                targetProvider = found.item;
+                targetIndex = found.index;
+            } else {
+                const selected = await selectItemFromList(config.providers, 'provider');
+                if (!selected) return;
+                targetProvider = selected.item;
+                targetIndex = selected.index;
+            }
+
+            // Check for dependencies
+            const dependentModels = config.models.filter(model =>
+                model.providers && model.providers[0] && model.providers[0].name === targetProvider.name
+            );
+
+            if (dependentModels.length > 0) {
+                console.log(`! Cannot remove provider '${targetProvider.name}'. It is currently used by the following models:`);
+                dependentModels.forEach(model => console.log(`  - ${model.name}`));
+                console.log('! Please remove or update these models first.');
+                return;
+            }
+
+            const confirmed = await confirmAction(`? Are you sure you want to remove provider '${targetProvider.name}'?`);
+
+            if (confirmed) {
+                config.providers.splice(targetIndex, 1);
+                await writeChatConfig(config);
+            } else {
+                console.log('Provider removal cancelled.');
+            }
+
+        } catch (error) {
+            console.error(`Error removing provider: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+removeCommand
+    .command('model [name_or_index]')
+    .description('Remove an LLM model.')
+    .action(async (nameOrIndex) => {
+        try {
+            const config = await readChatConfig();
+            let targetModel;
+            let targetIndex;
+
+            if (nameOrIndex !== undefined) {
+                const identifier = parseIdentifier(nameOrIndex);
+                const found = findItem(config.models, identifier);
+                if (!found || found.item.name === '---------') { // Cannot remove a divider via 'remove model'
+                    console.log(`! Model '${nameOrIndex}' not found or is a divider. Use 'remove divider' for dividers.`);
+                    return;
+                }
+                targetModel = found.item;
+                targetIndex = found.index;
+            } else {
+                const modelsOnly = config.models.filter(m => m.name !== '---------');
+                if (modelsOnly.length === 0) {
+                    console.log('No models to remove.');
+                    return;
+                }
+                const choices = modelsOnly.map((model, index) => ({
+                    name: `${index}: ${model.name} (${model.providers[0]?.name || 'N/A'})`,
+                    value: model.name, // Use name as value for easier lookup
+                }));
+                const selectedName = await promptForListSelection('? Select the model to remove:', choices);
+                const found = findItem(config.models, selectedName); // Find by name in original array
+                if (!found) {
+                    console.log('Model not found. Aborting removal.');
+                    return;
+                }
+                targetModel = found.item;
+                targetIndex = found.index;
+            }
+
+            const confirmed = await confirmAction(`? Are you sure you want to remove model '${targetModel.name}'?`);
+
+            if (confirmed) {
+                config.models.splice(targetIndex, 1);
+                await writeChatConfig(config);
+            } else {
+                console.log('Model removal cancelled.');
+            }
+
+        } catch (error) {
+            console.error(`Error removing model: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+removeCommand
+    .command('divider [index]')
+    .description('Remove a divider from the model list.')
+    .option('--all', 'Remove all dividers.')
+    .action(async (index, options) => {
+        try {
+            const config = await readChatConfig();
+            let models = [...(config.models || [])]; // Work on a copy
+
+            if (options.all) {
+                const confirmed = await confirmAction('? Are you sure you want to remove ALL dividers?');
+                if (confirmed) {
+                    models = models.filter(item => item.name !== '---------');
+                    config.models = models;
+                    await writeChatConfig(config);
+                } else {
+                    console.log('Removal of all dividers cancelled.');
+                }
+                return;
+            }
+
+            let targetIndex;
+            if (index !== undefined) {
+                targetIndex = parseInt(index);
+                if (isNaN(targetIndex) || targetIndex < 0 || targetIndex >= models.length || models[targetIndex].name !== '---------') {
+                    console.log(`! Invalid index or item at index ${index} is not a divider.`);
+                    return;
+                }
+            } else {
+                const dividers = models.map((item, idx) => ({
+                        item,
+                        index: idx
+                    }))
+                    .filter(entry => entry.item.name === '---------');
+                if (dividers.length === 0) {
+                    console.log('No dividers to remove.');
+                    return;
+                }
+                const choices = dividers.map(entry => ({
+                    name: `${entry.index}: ${entry.item.name}`,
+                    value: entry.index,
+                }));
+                const selectedIndex = await promptForListSelection('? Select the divider to remove:', choices);
+                targetIndex = selectedIndex;
+            }
+
+            const confirmed = await confirmAction(`? Confirm removing the divider at index ${targetIndex}?`);
+
+            if (confirmed) {
+                models.splice(targetIndex, 1);
+                config.models = models;
+                await writeChatConfig(config);
+            } else {
+                console.log('Divider removal cancelled.');
+            }
+
+        } catch (error) {
+            console.error(`Error removing divider: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+// --- Move Commands ---
+
+const moveCommand = program.command('move')
+    .description('Move LLM models or dividers to a new position.')
+    .action(() => moveCommand.help()); // Show help for subcommands if 'move' is called without args
+
+moveCommand
+    .command('model [name_or_index]')
+    .description('Move an LLM model to a new position.')
+    .option('-t, --to-index <number>', 'Specify the 0-based target index.')
+    .option('-u, --up', 'Move the model one position up.')
+    .option('-d, --down', 'Move the model one position down.')
+    .option('-b, --before <target_name_or_index>', 'Move the model before a specific model/divider.')
+    .option('-a, --after <target_name_or_index>', 'Move the model after a specific model/divider.')
+    .action(async (nameOrIndex, options) => {
+        try {
+            const config = await readChatConfig();
+            let models = [...(config.models || [])]; // Work on a copy
+
+            let sourceItem;
+            let sourceIndex;
+
+            if (nameOrIndex !== undefined) {
+                const identifier = parseIdentifier(nameOrIndex);
+                const found = findItem(models, identifier);
+                if (!found || found.item.name === '---------') {
+                    console.log(`! Model '${nameOrIndex}' not found or is a divider. Use 'move divider' for dividers.`);
+                    return;
+                }
+                sourceItem = found.item;
+                sourceIndex = found.index;
+            } else {
+                const modelsOnly = models.filter(m => m.name !== '---------');
+                if (modelsOnly.length === 0) {
+                    console.log('No models to move.');
+                    return;
+                }
+                const choices = modelsOnly.map((model, index) => ({
+                    name: `${index}: ${model.name} (${model.providers[0]?.name || 'N/A'})`,
+                    value: model.name,
+                }));
+                const selectedName = await promptForListSelection('? Select the model to move:', choices);
+                const found = findItem(models, selectedName);
+                if (!found) {
+                    console.log('Model not found. Aborting move.');
+                    return;
+                }
+                sourceItem = found.item;
+                sourceIndex = found.index;
+            }
+
+            let targetIndex;
+            if (options.toIndex !== undefined) {
+                targetIndex = parseInt(options.toIndex);
+            } else if (options.up) {
+                targetIndex = sourceIndex - 1;
+            } else if (options.down) {
+                targetIndex = sourceIndex + 1;
+            } else if (options.before) {
+                const ref = findItem(models, parseIdentifier(options.before));
+                if (!ref) {
+                    console.log(`! Reference item '${options.before}' not found.`);
+                    return;
+                }
+                targetIndex = ref.index;
+            } else if (options.after) {
+                const ref = findItem(models, parseIdentifier(options.after));
+                if (!ref) {
+                    console.log(`! Reference item '${options.after}' not found.`);
+                    return;
+                }
+                targetIndex = ref.index + 1;
+            } else {
+                // If no options, prompt interactively for position
+                console.log(`\nMoving model: '${sourceItem.name}' (current index: ${sourceIndex})`);
+                displayModels(models); // Show current order for context
+                const positionInput = await getPositionInput(models.length);
+                // Temporarily move to calculate targetIndex
+                const tempModels = [...models];
+                moveItem(tempModels, sourceIndex, sourceIndex); // Dummy move to get a mutable array
+                targetIndex = insertItem(tempModels, sourceItem, positionInput, models); // Use original models for reference
+                tempModels.splice(sourceIndex > targetIndex ? sourceIndex + 1 : sourceIndex, 1); // Remove original
+                // Re-calculate targetIndex based on the actual array after removal
+                targetIndex = tempModels.indexOf(sourceItem);
+            }
+
+            // Validate targetIndex
+            if (targetIndex < 0 || targetIndex >= models.length + (targetIndex === models.length ? 1 : 0)) { // Allow moving to end
+                console.log('! Invalid target position.');
+                return;
+            }
+
+            // Perform the move
+            moveItem(models, sourceIndex, targetIndex);
+
+            console.log('\n--- Preview of New Order ---');
+            displayModels(models);
+            console.log('----------------------------');
+
+            const confirmed = await confirmAction(`? Confirm moving '${sourceItem.name}' to index ${targetIndex}?`);
+
+            if (confirmed) {
+                config.models = models;
+                await writeChatConfig(config);
+            } else {
+                console.log('Model move cancelled.');
+            }
+
+        } catch (error) {
+            console.error(`Error moving model: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+moveCommand
+    .command('divider [index]')
+    .description('Move a divider to a new position.')
+    .option('-t, --to-index <number>', 'Specify the 0-based target index.')
+    .option('-u, --up', 'Move the divider one position up.')
+    .option('-d, --down', 'Move the divider one position down.')
+    .option('-b, --before <target_name_or_index>', 'Move the divider before a specific model/divider.')
+    .option('-a, --after <target_name_or_index>', 'Move the divider after a specific model/divider.')
+    .action(async (index, options) => {
+        try {
+            const config = await readChatConfig();
+            let models = [...(config.models || [])]; // Work on a copy
+
+            let sourceItem;
+            let sourceIndex;
+
+            if (index !== undefined) {
+                sourceIndex = parseInt(index);
+                if (isNaN(sourceIndex) || sourceIndex < 0 || sourceIndex >= models.length || models[sourceIndex].name !== '---------') {
+                    console.log(`! Invalid index or item at index ${index} is not a divider.`);
+                    return;
+                }
+                sourceItem = models[sourceIndex];
+            } else {
+                const dividers = models.map((item, idx) => ({
+                        item,
+                        index: idx
+                    }))
+                    .filter(entry => entry.item.name === '---------');
+                if (dividers.length === 0) {
+                    console.log('No dividers to move.');
+                    return;
+                }
+                const choices = dividers.map(entry => ({
+                    name: `${entry.index}: ${entry.item.name}`,
+                    value: entry.index,
+                }));
+                const selectedIndex = await promptForListSelection('? Select the divider to move:', choices);
+                sourceIndex = selectedIndex;
+                sourceItem = models[sourceIndex];
+            }
+
+            let targetIndex;
+            if (options.toIndex !== undefined) {
+                targetIndex = parseInt(options.toIndex);
+            } else if (options.up) {
+                targetIndex = sourceIndex - 1;
+            } else if (options.down) {
+                targetIndex = sourceIndex + 1;
+            } else if (options.before) {
+                const ref = findItem(models, parseIdentifier(options.before));
+                if (!ref) {
+                    console.log(`! Reference item '${options.before}' not found.`);
+                    return;
+                }
+                targetIndex = ref.index;
+            } else if (options.after) {
+                const ref = findItem(models, parseIdentifier(options.after));
+                if (!ref) {
+                    console.log(`! Reference item '${options.after}' not found.`);
+                    return;
+                }
+                targetIndex = ref.index + 1;
+            } else {
+                // If no options, prompt interactively for position
+                console.log(`\nMoving divider: (current index: ${sourceIndex})`);
+                displayModels(models); // Show current order for context
+                const positionInput = await getPositionInput(models.length);
+                const tempModels = [...models];
+                moveItem(tempModels, sourceIndex, sourceIndex); // Dummy move to get a mutable array
+                targetIndex = insertItem(tempModels, sourceItem, positionInput, models);
+                tempModels.splice(sourceIndex > targetIndex ? sourceIndex + 1 : sourceIndex, 1);
+                targetIndex = tempModels.indexOf(sourceItem);
+            }
+
+            // Validate targetIndex
+            if (targetIndex < 0 || targetIndex >= models.length + (targetIndex === models.length ? 1 : 0)) {
+                console.log('! Invalid target position.');
+                return;
+            }
+
+            // Perform the move
+            moveItem(models, sourceIndex, targetIndex);
+
+            console.log('\n--- Preview of New Order ---');
+            displayModels(models);
+            console.log('----------------------------');
+
+            const confirmed = await confirmAction(`? Confirm moving divider from index ${sourceIndex} to index ${targetIndex}?`);
+
+            if (confirmed) {
+                config.models = models;
+                await writeChatConfig(config);
+            } else {
+                console.log('Divider move cancelled.');
+            }
+
+        } catch (error) {
+            console.error(`Error moving divider: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+// --- Order Models Interactive Command ---
+
+program
+    .command('order models')
+    .description('Interactively reorder LLM models and dividers with live preview.')
+    .action(async () => {
+        try {
+            const config = await readChatConfig();
+            let models = [...(config.models || [])]; // Work on a mutable copy
+
+            console.log('Entering interactive reordering mode.');
+            console.log('Type commands like:');
+            console.log('  - `move model <name_or_index> to <target_index>`');
+            console.log('  - `move divider <index> up`');
+            console.log('  - `add divider after <name_or_index>`');
+            console.log('  - `remove model <name_or_index>`');
+            console.log('Type `done` to apply changes, or `cancel` to exit without saving.');
+
+            let running = true;
+            while (running) {
+                displayModels(models); // Show current state
+
+                const commandInput = await promptForInput('? Enter command (or `done`/`cancel`):');
+
+                if (commandInput.toLowerCase() === 'done') {
+                    running = false;
+                    break;
+                }
+                if (commandInput.toLowerCase() === 'cancel') {
+                    console.log('Interactive reordering cancelled. No changes will be saved.');
+                    return;
+                }
+
+                try {
+                    // Simple parsing for interactive mode. A more robust solution might use a mini-parser.
+                    const parts = commandInput.split(' ').filter(p => p.length > 0);
+                    if (parts.length < 2) {
+                        console.log('! Invalid command format. Please try again.');
+                        continue;
+                    }
+
+                    const action = parts[0].toLowerCase();
+                    const itemType = parts[1].toLowerCase();
+                    const identifier = parseIdentifier(parts[2]); // For move/remove
+                    const targetPosition = parts.slice(3).join(' '); // For move/add
+
+                    let sourceIndex, targetIndex;
+                    let foundItem;
+
+                    switch (action) {
+                        case 'move':
+                            foundItem = findItem(models, identifier);
+                            if (!foundItem) {
+                                console.log(`! Item '${identifier}' not found.`);
+                                break;
+                            }
+                            sourceIndex = foundItem.index;
+
+                            if (targetPosition.toLowerCase().startsWith('to ')) {
+                                targetIndex = parseInt(targetPosition.substring(3));
+                            } else if (targetPosition.toLowerCase() === 'up') {
+                                targetIndex = sourceIndex - 1;
+                            } else if (targetPosition.toLowerCase() === 'down') {
+                                targetIndex = sourceIndex + 1;
+                            } else if (targetPosition.toLowerCase().startsWith('before ')) {
+                                const refIdentifier = parseIdentifier(targetPosition.substring(7));
+                                const ref = findItem(models, refIdentifier);
+                                if (!ref) {
+                                    console.log(`! Reference item '${refIdentifier}' not found.`);
+                                    break;
+                                }
+                                targetIndex = ref.index;
+                            } else if (targetPosition.toLowerCase().startsWith('after ')) {
+                                const refIdentifier = parseIdentifier(targetPosition.substring(6));
+                                const ref = findItem(models, refIdentifier);
+                                if (!ref) {
+                                    console.log(`! Reference item '${refIdentifier}' not found.`);
+                                    break;
+                                }
+                                targetIndex = ref.index + 1;
+                            } else {
+                                console.log('! Invalid move target. Use `to <num>`, `up`, `down`, `before <name_or_index>`, `after <name_or_index>`.');
+                                break;
+                            }
+
+                            if (targetIndex < 0 || targetIndex >= models.length + (targetIndex === models.length ? 1 : 0)) {
+                                console.log('! Invalid target position.');
+                                break;
+                            }
+                            moveItem(models, sourceIndex, targetIndex);
+                            console.log(`✓ Moved ${itemType} '${foundItem.item.name || foundItem.item.name}' from ${sourceIndex} to ${targetIndex}.`);
+                            break;
+
+                        case 'add':
+                            if (itemType === 'divider') {
+                                const newDivider = {
+                                    name: '---------'
+                                };
+                                insertItem(models, newDivider, targetPosition, models);
+                                console.log(`✓ Added divider.`);
+                            } else {
+                                console.log('! Only `add divider` is supported in interactive mode. Use `gsc-admin llm add model` for models.');
+                            }
+                            break;
+
+                        case 'remove':
+                            foundItem = findItem(models, identifier);
+                            if (!foundItem) {
+                                console.log(`! Item '${identifier}' not found.`);
+                                break;
+                            }
+                            if (itemType === 'model' && foundItem.item.name === '---------') {
+                                console.log('! Cannot remove a divider using `remove model`. Use `remove divider`.');
+                                break;
+                            }
+                            if (itemType === 'divider' && foundItem.item.name !== '---------') {
+                                console.log('! Cannot remove a model using `remove divider`. Use `remove model`.');
+                                break;
+                            }
+                            models.splice(foundItem.index, 1);
+                            console.log(`✓ Removed ${itemType} '${foundItem.item.name || foundItem.item.name}'.`);
+                            break;
+
+                        default:
+                            console.log('! Unknown command. Supported actions: `move`, `add`, `remove`.');
+                    }
+                } catch (error) {
+                    console.error(`! Error executing command: ${error.message}`);
+                }
+            }
+
+            // Final confirmation after exiting the loop
+            console.log('\n--- Final Proposed Order ---');
+            displayModels(models);
+            console.log('----------------------------');
+
+            const confirmed = await confirmAction('? Confirm applying all changes to chat-config.json?');
+
+            if (confirmed) {
+                config.models = models; // Update the config object
+                await writeChatConfig(config);
+            } else {
+                console.log('Changes discarded. No changes made to chat-config.json.');
+            }
+
+        } catch (error) {
+            console.error(`Error in interactive reordering: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+
+program.parse(process.argv);
+
+// If no command is given, display help
+if (!process.argv.slice(2).length) {
+    program.outputHelp();
+}

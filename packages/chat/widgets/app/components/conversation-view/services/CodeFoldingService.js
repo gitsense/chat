@@ -1,0 +1,21 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * This software is permitted for internal use and modification.
+ * Copying for profit or redistribution is strictly not permitted.
+ *
+ * The Fair License, which formalizes these terms, will be adopted as the official license in the future.
+ * Once finalized, the unminified source code will be freely available for internal use for non-
+ * commercial purposes.
+ *
+ * This software may not be used to develop or enhance any product or service that competes
+ * directly or indirectly with GitSense Chat without explicit permission.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ */
+
+let hljs=require("../Dependencies").hljs;function CodeFoldingService(s,r){if(!r)throw new Error("No Highlight JS (hljs) defined");let c=1,g="Fold",f="Unfold",l="...",u=new Map;if(s)return{processPreElement:n,processAllPreElements:o,refreshCodeFolding:i,removeAllFoldingControls:t,foldAllCode:function(e=document){var t=e.querySelectorAll("pre");let n={};t.forEach(e=>{e.id&&(e.dataset.fullContent=e.innerHTML,n[e.id]=!1)}),s.bulkUpdate(n),i(e)},unfoldAllCode:function(e=document){var t=e.querySelectorAll("pre");let n={};t.forEach(e=>{e.id&&(n[e.id]=!0,e.innerHTML=e.dataset.fullContent)}),s.bulkUpdate(n),i(e)},foldOrUnfoldPre:function(e,n,o,l=!0){if(Array.isArray(e)){let t=n||o?new CodeFoldingService(n||s,o||r):this;e.forEach(e=>t.processPreElement(e,l))}else console.warn("Expected an array of pre elements")},initialize:function(n=document.body){o(n);let e=new MutationObserver(e=>{let t=!1;e.forEach(e=>{"childList"===e.type&&0<e.addedNodes.length&&e.addedNodes.forEach(e=>{e.nodeType===Node.ELEMENT_NODE&&(0<e.querySelectorAll("pre").length||"PRE"===e.tagName)&&(t=!0)})}),t&&i(n)});return e.observe(n,{childList:!0,subtree:!0}),()=>{e.disconnect(),t(n)}}};throw new Error("MessageStateManager is required");function h(t,n,o){var e=t.textContent.match(/^txt\n\s*# GitSense Chat Tool\n/);if(o){o=t.getAttribute("lang")||"plaintext";if(o&&"null"!==o)if(n[0].trim().startsWith("<span class='gs-chat-lang'>"))t.textContent=n.join("\n");else{n.shift();try{t.innerHTML="<code>"+`<span class='gs-chat-lang'>${o}</span>
+`+r.highlight(n.join("\n"),{language:o,ignoreIllegals:!0}).value+"</code>",n.unshift(o)}catch(e){console.warn(`Error highlighting code with language ${o}:`,e),t.textContent=n.join("\n")}}else t.textContent=n.join("\n");e&&(t.style.lineHeight=null)}else t.textContent=n.slice(0,c).join("\n")+"\n"+(e?"gitsense chat tool":"")+l,e&&(t.style.lineHeight=1.7)}function t(e=document){e.querySelectorAll(".gs-code-fold-toggle").forEach(e=>{e&&e.parentNode&&e.parentNode.removeChild(e)}),u.clear()}function n(t,n){if(!(t instanceof HTMLPreElement))return console.warn("Invalid element provided to processPreElement"),!1;if(t.id||(t.id="pre-"+Math.random().toString(36).substring(2,11)),u.has(t.id)){var o=u.get(t.id);if(o&&o.parentNode){let e=s.getState(t.id,n);return o.textContent=e?g:f,!0}}var e,l,o=t.textContent.trim();let{lines:r,needsFolding:i}={lines:e=(e=o).split("\n"),needsFolding:e.length>c};if(!i)return t.style.marginBottom=null,!1;let d=s.getState(t.id,n),a=(void 0===d&&(d=!(o.match(/# GitSense Chat Tool\n/)||!n)),e=d?g:f,n=t.id,(l=document.createElement("a")).href="#",l.textContent=e,l.className="gs-code-fold-toggle",l.dataset.target=n,l.style.fontSize="12px",l.style.display="block",l.style.textAlign="right",l.style.color="black",l.style.marginBottom="5px",l);return a.addEventListener("click",e=>(e.preventDefault(),e.stopPropagation(),d=!d,s.setState(t.id,d),h(t,r,d),a.textContent=d?g:f,!1)),h(t,r,d),document.querySelectorAll(`.gs-code-fold-toggle[data-target="${t.id}"]`).forEach(e=>{e&&e.parentNode&&e.parentNode.removeChild(e)}),t.parentNode.insertBefore(a,t.nextSibling),u.set(t.id,a),!0}function o(e=document){e.querySelectorAll("pre").forEach(n)}function i(e=document){t(e),o(e)}}let defaultService=new CodeFoldingService({getState:()=>!0,setState:()=>!0},hljs);module.exports=CodeFoldingService,module.exports.foldOrUnfoldPre=function(e,t,n,o){return defaultService.foldOrUnfoldPre(e,t,n,o)};

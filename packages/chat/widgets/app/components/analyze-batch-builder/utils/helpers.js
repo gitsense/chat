@@ -1,0 +1,20 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * This software is permitted for internal use and modification.
+ * Copying for profit or redistribution is strictly not permitted.
+ *
+ * The Fair License, which formalizes these terms, will be adopted as the official license in the future.
+ * Once finalized, the unminified source code will be freely available for internal use for non-
+ * commercial purposes.
+ *
+ * This software may not be used to develop or enhance any product or service that competes
+ * directly or indirectly with GitSense Chat without explicit permission.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ */
+
+let DomUtils=require("@gitsense/gsc-utils").DomUtils,DEFAULT_CONFIG=require("../sections/FilesToAnalyzeSection/constants").DEFAULT_CONFIG;function createSectionHeader(e,t={}){return DomUtils.h.createH2({text:e,style:{color:"#555",marginTop:"5px",...t}})}function formatFileNames(e,t=DEFAULT_CONFIG.maxFilesDisplayed){return e&&0!==e.length?(e=e.map(e=>e.name)).slice(0,t).join(", ")+(e.length>t?"...":""):""}function createLink(e,t,n={},a=!1){a={color:a?"gray":null,pointerEvents:a?"none":null},e=DomUtils.h.createLink({text:e,href:"#",style:{...a,...n}});return t&&e.addEventListener("click",e=>{e.preventDefault(),t()}),e}function enableLink(e){e&&(e.style.pointerEvents=null,e.style.opacity=1,e.style.color=null)}function disableLink(e){e&&(e.style.pointerEvents="none",e.style.opacity=.5,e.style.color="gray")}function createButton(e,t,n={}){var{variant:n="primary",disabled:a=!1,style:i={},type:l="button",cls:r=""}=n,o=["btn"],r=(n&&o.push("btn-"+n),r&&o.push(r),{padding:"8px 16px",margin:"0",border:"outline"===n?"1px solid #eee":null,cursor:a?"not-allowed":"pointer",opacity:a?.8:1,fontWeight:500,...i}),n=DomUtils.h.createButton({text:e,type:l,cls:o.join(" "),style:r,disabled:a});return t&&!a&&n.addEventListener("click",e=>{e.preventDefault(),t()}),n}function enableButton(e){e&&(e.disabled=!1,e.style.cursor="pointer",e.style.opacity=1)}function disableButton(e){e&&(e.disabled=!0,e.style.cursor="not-allowed",e.style.opacity=.8)}function convertTimeFilterToUnixTimestamp(e){if("any"===e)return 0;var t=Math.floor(Date.now()/1e3),n=e.match(/^(\d+)([hdwmy])$/);if(!n)return console.warn("Invalid time filter string: "+e),0;var a=parseInt(n[1],10);let i;switch(n[2]){case"h":i=60*a*60;break;case"d":i=60*a*60*24;break;case"w":i=60*a*60*24*7;break;case"m":i=60*a*60*24*30;break;case"y":i=60*a*60*24*365;break;default:return 0}return t-i}function getLanguageCounts(e){let t={};return e.forEach(e=>{e=e.meta?.language||"Unknown";t[e]=(t[e]||0)+1}),t}function calculateTotalTokens(e){return e.reduce((e,t)=>e+(t.meta?.tokens?.content?.estimate||0),0)}function applyFilters(e,t,l=null){let{analyzedStatus:r,lastCommitted:n,lastAnalyzed:o,selectedLanguages:a,minFileSize:i,maxFileSize:s}=t,c=convertTimeFilterToUnixTimestamp(n),u="never"===o?0:convertTimeFilterToUnixTimestamp(o),m=i||0,d=s||1/0,p=new Set(a),y=0<a.length;return e.filter(e=>{var e=e.meta||{},t=e.commit?.timestamp||0,n=e.size||0,a=e.language||"Unknown",e=e.tokens?.analysis||{},i=l&&Object.keys(e).some(e=>e.startsWith(l));if("analyzed"===r&&!i)return!1;if("not-analyzed"===r&&i)return!1;if(n<m||n>d)return!1;if(0<c&&t<c)return!1;if("never"===o){if(i)return!1}else if(0<u){n=Object.values(e).reduce((e,t)=>!e||new Date(t.estimatedAt)>new Date(e)?t.estimatedAt:e,null);if(!n||Math.floor(new Date(n).getTime()/1e3)<u)return!1}return!(y&&!p.has(a))})}module.exports={createSectionHeader:createSectionHeader,formatFileNames:formatFileNames,createLink:createLink,enableLink:enableLink,disableLink:disableLink,createButton:createButton,enableButton:enableButton,disableButton:disableButton,convertTimeFilterToUnixTimestamp:convertTimeFilterToUnixTimestamp,getLanguageCounts:getLanguageCounts,calculateTotalTokens:calculateTotalTokens,applyFilters:applyFilters};

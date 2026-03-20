@@ -1,0 +1,161 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "A unique name for the search profile."
+        },
+        "description": {
+            "type": "string",
+            "description": "A brief description of the profile's purpose."
+        },
+        "version": {
+            "type": "string",
+            "description": "The version of the profile schema."
+        },
+        "keywords": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "A list of keywords or tags associated with the profile's content or purpose, used by LLMs for profile selection."
+        },
+        "defaults": {
+            "type": "object",
+            "properties": {
+                "targets": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": ["messages", "chats", "code-blocks"]
+                    },
+                    "description": "Default search targets (e.g., ['messages', 'chats'])."
+                },
+                "scope": {
+                    "type": "string",
+                    "enum": ["current-chat", "current-chat-and-branches", "connected-chats", "all-chats"],
+                    "description": "Default search scope."
+                },
+                "filters": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^[a-zA-Z_]+$": {
+                            "oneOf": [
+                                { "type": "string" },
+                                {
+                                    "type": "array",
+                                    "items": { "type": "string" }
+                                }
+                            ]
+                        }
+                    },
+                    "description": "Default field:value filters."
+                },
+                "nullFilters": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Default field:null filters."
+                },
+                "notNullFilters": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Default field:not_null filters."
+                },
+                "options": {
+                    "type": "object",
+                    "properties": {
+                        "caseSensitive": {
+                            "type": "boolean",
+                            "description": "Default case sensitivity option."
+                        },
+                        "wildcard": {
+                            "type": "string",
+                            "enum": ["implicit", "explicit", "none"],
+                            "description": "Default wildcard handling option."
+                        },
+                        "limit": {
+                            "type": "integer",
+                            "description": "Default limit for results."
+                        },
+                        "offset": {
+                            "type": "integer",
+                            "description": "Default offset for pagination."
+                        }
+                    },
+                    "description": "Default search options."
+                },
+                "sortBy": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "field": { "type": "string" },
+                            "direction": { "type": "string", "enum": ["asc", "desc"] }
+                        },
+                        "required": ["field", "direction"]
+                    },
+                    "description": "Default sorting criteria."
+                },
+                "pagination": {
+                    "type": "object",
+                    "properties": {
+                        "limit": { "type": "integer" },
+                        "offset": { "type": "integer" }
+                    },
+                    "description": "Default pagination settings."
+                },
+                "outputs": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^[a-zA-Z0-9_-]+$": {
+                            "type": "array",
+                            "items": {
+                                "oneOf": [
+                                    {
+                                        "type": "string",
+                                        "description": "A database column name or a predefined alias (e.g., 'chats.name', 'messages.created_at')."
+                                    },
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "field": {
+                                                "type": "string",
+                                                "description": "The database column name to select or generate a snippet from."
+                                            },
+                                            "as": {
+                                                "type": "string",
+                                                "description": "An alias for the selected field in the result set."
+                                            },
+                                            "snippet": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "maxLength": { "type": "integer", "description": "The maximum length of the generated snippet." },
+                                                    "highlight": { "type": "boolean", "description": "Whether to highlight search terms in the snippet." }
+                                                },
+                                                "description": "Configuration for generating a text snippet from this field."
+                                            }
+                                        },
+                                        "description": "Configuration for generating a text snippet from this field."
+                                    }
+                                ]
+                            }
+            ]
+                        },
+                        "description": "An array specifying the fields to include in the search results. Can be simple column names or objects for aliases/snippets."
+                    }
+                },
+                "required": ["targets", "scope", "filters", "nullFilters", "notNullFilters", "options", "sortBy", "pagination", "outputs"]
+            },
+            "rankingPreferences": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Natural language description of LLM ranking preferences."
+                    }
+                },
+                "description": "Placeholder for LLM ranking preferences."
+            }
+        },
+        "required": ["name", "description", "version", "defaults"]
+    }

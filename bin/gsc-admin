@@ -1,0 +1,71 @@
+/*
+ * Component: GitSense Chat Admin CLI Dispatcher
+ * Block-UUID: 8df8c8ec-aaf7-4a17-bd64-d0d781d955f9
+ * Parent-UUID: f6e5f9e6-6490-4a7a-8c1d-739b68757420
+ * Version: 1.3.0
+ * Description: Main dispatcher script for the GitSense Chat Admin CLI. Delegates commands to specific sub-tools.
+ * Language: JavaScript
+ * Created-at: 2025-09-06T16:11:00.226Z
+ * Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0), Gemini 2.5 Flash (v1.2.0), Gemini 3 Flash (v1.3.0)
+ */
+
+
+const { Command } = require('commander');
+const path = require('path');
+const fs = require('fs');
+const { spawnSync } = require('child_process');
+
+const program = new Command();
+
+// Set the program name to 'gsc-admin'
+program.name('gsc-admin');
+
+// Define the 'setup' command
+// This command initializes the data directory from the base-state
+program
+    .command('setup', 'Initialize the data directory from the base-state')
+    .alias('init');
+
+// Define the 'llm' command
+// This command will be handled by a separate executable script: gsc-admin-llm
+program
+    .command('llm', 'Manage LLM models and providers (e.g., add, remove, list, order)')
+    .alias('ai'); // Optional alias for 'llm'
+
+// Define the 'config' command
+// This command will be handled by a separate executable script: gsc-admin-config
+program
+    .command('config', 'Manage application configuration (e.g., restore)')
+    .alias('conf'); // Optional alias for 'config'
+
+// Define the 'batch' command
+// This command will be handled by a separate executable script: gsc-admin-batch
+program
+    .command('batch <args...>') // No description here, as we're using .action()
+    .description('Manage LLM batch jobs and worker processes (Enterprise Feature)')
+    .alias('b') // Optional alias for 'batch'
+    .action(() => {
+        const batchCliPath = path.join(__dirname, '..', 'node_modules', '@gitsense', 'gsc-enterprise-batch', 'bin', 'gsc-admin-batch.js');
+
+        if (!fs.existsSync(batchCliPath)) {
+            console.error('GitSense Chat Enterprise Batch component not installed.');
+            console.error('The `batch` command is an enterprise feature and needs  to be installed.');
+            console.error('Please install the enterprise batch component to use this command.');
+            process.exit(1);
+        }
+
+        // Manually spawn the child process, passing all arguments after 'batch'
+        const args = [batchCliPath, ...process.argv.slice(3)];
+        const result = spawnSync('node', args, { stdio: 'inherit' });
+        if (result.status !== null) { // Exit with the child process's status
+            process.exit(result.status);
+        }
+    });
+
+// Parse arguments and execute commands
+program.parse(process.argv);
+
+// If no command is given, display help
+if (!process.argv.slice(2).length) {
+    program.outputHelp();
+}

@@ -1,0 +1,209 @@
+#!/usr/bin/env node
+
+/*
+ * Component: GitSense Chat Admin Setup CLI
+ * Block-UUID: 4c0e804d-f441-44b0-88ac-d89dcbb76ea6
+ * Parent-UUID: 2cbbc3e9-754b-490e-bf5e-c7521f8c214f
+ * Version: 1.1.0
+ * Description: Initializes the GitSense Chat data directory from the base-state. Added chunked SQL execution for debugging foreign key constraints.
+ * Language: JavaScript
+ * Created-at: 2026-03-16T15:10:00.000Z
+ * Authors: Gemini 3 Flash (v1.0.0), Gemini 3 Flash (v1.1.0)
+ */
+
+
+const { Command } = require('commander');
+const path = require('path');
+const fs = require('fs');
+const os = require('os');
+const zlib = require('zlib');
+const { execSync } = require('child_process');
+const Database = require('better-sqlite3');
+
+const program = new Command();
+
+// --- Constants and Path Resolution ---
+
+const DEFAULT_DATA_DIR = path.join(os.homedir(), '.gitsense', 'data');
+const BASE_STATE_DIR = path.resolve(__dirname, '..', 'base-state');
+const SCHEMA_FILE = path.resolve(__dirname, '..', 'db', 'chats-db-schema.sql');
+
+// --- Helper Functions ---
+
+/**
+ * Checks if git is installed.
+ * @returns {boolean}
+ */
+function isGitInstalled() {
+    try {
+        execSync('git --version', { stdio: 'ignore' });
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
+/**
+ * Recursively finds all files with a specific extension.
+ * @param {string} dir 
+ * @param {string} ext 
+ * @param {string[]} fileList 
+ * @returns {string[]}
+ */
+function findFiles(dir, ext, fileList = []) {
+    const files = fs.readdirSync(dir);
+    files.forEach(file => {
+        const filePath = path.join(dir, file);
+        if (fs.statSync(filePath).isDirectory()) {
+            findFiles(filePath, ext, fileList);
+        } else if (path.extname(file) === ext) {
+            fileList.push(filePath);
+        }
+    });
+    return fileList;
+}
+
+/**
+ * Copies a directory recursively, excluding specific patterns.
+ */
+function copyRecursiveSync(src, dest, excludeExts = []) {
+    const exists = fs.existsSync(src);
+    const stats = exists && fs.statSync(src);
+    const isDirectory = exists && stats.isDirectory();
+
+    if (isDirectory) {
+        if (!fs.existsSync(dest)) {
+            fs.mkdirSync(dest, { recursive: true });
+        }
+        fs.readdirSync(src).forEach(childItemName => {
+            copyRecursiveSync(
+                path.join(src, childItemName),
+                path.join(dest, childItemName),
+                excludeExts
+            );
+        });
+    } else {
+        if (!excludeExts.includes(path.extname(src)) && !src.endsWith('.sql.gz')) {
+            fs.copyFileSync(src, dest);
+        }
+    }
+}
+
+// --- CLI Setup ---
+
+program
+    .name('gsc-admin setup')
+    .description('Initialize the GitSense Chat data directory from the base-state.')
+    .option('-d, --data-dir <path>', 'Specify the destination data directory', DEFAULT_DATA_DIR)
+    .option('-f, --force', 'Overwrite existing data directory (Reset)', false)
+    .action(async (options) => {
+        const targetDir = path.resolve(options.dataDir);
+        
+        console.log(`\nInitializing GitSense Chat...`);
+        console.log(`Source:      ${BASE_STATE_DIR}`);
+        console.log(`Destination: ${targetDir}`);
+
+        // 1. Validation
+        if (!isGitInstalled()) {
+            console.error('Error: Git is not installed. Git is required to restore repositories.');
+            process.exit(1);
+        }
+
+        if (!fs.existsSync(BASE_STATE_DIR)) {
+            console.error(`Error: Base state directory not found at ${BASE_STATE_DIR}`);
+            process.exit(1);
+        }
+
+        if (fs.existsSync(targetDir)) {
+            const files = fs.readdirSync(targetDir);
+            if (files.length > 0) {
+                if (options.force) {
+                    console.log('! Force flag detected. Removing existing data directory...');
+                    fs.rmSync(targetDir, { recursive: true, force: true });
+                } else {
+                    console.error(`Error: Destination directory '${targetDir}' is not empty.`);
+                    console.error('Use --force to overwrite and reset the installation.');
+                    process.exit(1);
+                }
+            }
+        }
+
+        try {
+            // 2. Create Directory Structure and Copy Static Assets
+            console.log('Creating directory structure and copying assets...');
+            copyRecursiveSync(BASE_STATE_DIR, targetDir, ['.bundle']);
+
+            // 3. Restore Database
+            const dbPath = path.join(targetDir, 'chats.sqlite3');
+            const sqlGzPath = path.join(BASE_STATE_DIR, 'chats.sql.gz');
+
+            if (fs.existsSync(sqlGzPath)) {
+                console.log('Initializing database and seeding data...');
+                const db = new Database(dbPath);
+                
+                // Load and execute Schema first
+                console.log('  Loading schema...');
+                const schema = fs.readFileSync(SCHEMA_FILE, 'utf8');
+                db.exec(schema);
+                
+                // Decompress Data
+                const compressedData = fs.readFileSync(sqlGzPath);
+                const dataSql = zlib.gunzipSync(compressedData).toString('utf8');
+                
+                // Split into lines and filter out transaction markers to allow chunked execution
+                const lines = dataSql.split('\n').filter(line => {
+                    const t = line.trim().toUpperCase();
+                    return t !== 'BEGIN;' && t !== 'COMMIT;' && t !== 'BEGIN TRANSACTION;';
+                });
+
+                const chunkSize = 10000;
+                console.log(`  Seeding data (${lines.length} lines) in chunks of ${chunkSize}...`);
+
+                // Change the chunk size to isolate issues
+                for (let i = 0; i < lines.length; i += chunkSize) {
+                    let chunk = lines.slice(i, i + chunkSize).join('\n');
+                    if (chunk.trim().length === 0) continue;
+
+                    // Replace GSC_DATA_DIR with the target directory
+                    chunk = chunk.replace(/{GSC_DATA_DIR}/g, targetDir);
+
+                    try {
+                        db.exec(chunk);
+                    } catch (err) {
+                        console.error(`\nError in chunk starting at line ${i + 1}:`);
+                        console.error('--- CHUNK START ---');
+                        console.error(chunk);
+                        console.error('--- CHUNK END ---');
+                        throw err;
+                    }
+                }
+                
+                db.close();
+                console.log('✓ Database initialized successfully.');
+            }
+
+            // 4. Restore Git Bundles
+            console.log('Restoring Git repositories from bundles...');
+            const bundles = findFiles(BASE_STATE_DIR, '.bundle');
+
+            bundles.forEach(bundlePath => {
+                const relativePath = path.relative(BASE_STATE_DIR, bundlePath);
+                const destPath = path.join(targetDir, relativePath.replace('.bundle', ''));
+                
+                // Ensure parent directory exists
+                fs.mkdirSync(path.dirname(destPath), { recursive: true });
+
+                console.log(`  Cloning ${path.basename(bundlePath)}...`);
+                execSync(`git clone "${bundlePath}" "${destPath}"`, { stdio: 'ignore' });
+            });
+
+            console.log('\n✓ Setup complete! GitSense Chat is ready.');
+            console.log(`Data directory: ${targetDir}`);
+
+        } catch (error) {
+            console.error(`\nSetup failed: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+program.parse(process.argv);

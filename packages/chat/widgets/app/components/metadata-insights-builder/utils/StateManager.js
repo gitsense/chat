@@ -1,0 +1,20 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * This software is permitted for internal use and modification.
+ * Copying for profit or redistribution is strictly not permitted.
+ *
+ * The Fair License, which formalizes these terms, will be adopted as the official license in the future.
+ * Once finalized, the unminified source code will be freely available for internal use for non-
+ * commercial purposes.
+ *
+ * This software may not be used to develop or enhance any product or service that competes
+ * directly or indirectly with GitSense Chat without explicit permission.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ */
+
+let{CodeBlockUtils,GSToolBlockUtils}=require("@gitsense/gsc-utils"),chatApi=require("../dependencies").chatApi,METADATA_INSIGHTS_BUILDER_TOOL_NAME="metadata-insights-builder";class StateManager{static async save(t,e,s,a){var i=GSToolBlockUtils.getToolBlocksByTool(t.message,METADATA_INSIGHTS_BUILDER_TOOL_NAME,CodeBlockUtils);if(1!==i.length)throw new Error(`MetadataInsights.StateManager.save: Found ${i.length} ${METADATA_INSIGHTS_BUILDER_TOOL_NAME} tool blocks`);try{a.sections.files.items=a.sections.files.items?this._pruneItems(a.sections.files.items):[];var r={tool:METADATA_INSIGHTS_BUILDER_TOOL_NAME,id:s,config:{sections:a.sections||null,lastSavedAt:(new Date).toISOString(),version:"1.0.0"}},o=GSToolBlockUtils.formatToolBlock(r);return t.message=CodeBlockUtils.updateCodeBlockByIndex(t.message,i[0].index,o),await chatApi.updateChatMessage(e.widget,t.id,{newMessage:t.message}),{success:!0}}catch(t){return console.error("Error saving state:",t),{success:!1,error:t}}}static async restore(t,e,s){t=GSToolBlockUtils.getToolBlocksByTool(t.message,METADATA_INSIGHTS_BUILDER_TOOL_NAME,CodeBlockUtils);if(1!==t.length)throw new Error(`MetadataInsights.StateManager.restore: Expected to find one ${METADATA_INSIGHTS_BUILDER_TOOL_NAME} tool block but found `+t.length);t=t[0].toolData?.config||null;if(!t)throw new Error("MetadataInsights.StateManager.restore: No tool data config defined");try{return{sections:{files:{items:t.sections?.files?.items||[],isEditing:!1!==t.sections?.files?.isEditing},analyzers:{items:t.sections?.analyzers?.items||[],isEditing:!1!==t.sections?.analyzers?.isEditing},metadata:{items:t.sections?.metadata?.items||[],isEditing:!1!==t.sections?.metadata?.isEditing}},lastSavedAt:t.lastSavedAt||null,version:t.version||"1.0.0"}}catch(t){return console.error("Error restoring state:",t),null}}static _pruneItems(t){return Array.isArray(t)?t.map(t=>{var e=t.meta||{},s=e.commit||{},a=e.tokens||{};return{id:t.id,type:t.type,uuid:t.uuid,name:t.name,main_model:t.main_model,parent_id:t.parent_id,group_id:t.group_id,order_weight:t.order_weight,group_name:t.group_name,created_at:t.created_at,updated_at:t.updated_at,meta:{type:e.type,path:e.path,name:e.name,commit:{hash:s.hash,treeHash:s.treeHash,author:s.author,email:s.email,timestamp:s.timestamp,message:s.message,parents:s.parents},blob:e.blob,size:e.size,language:e.language,highlight:e.highlight,tokens:{content:{estimate:a.content?.estimate,estimatedAt:a.content?.estimatedAt},metadata:{estimate:a.metadata?.estimate,estimatedAt:a.metadata?.estimatedAt},analysis:a.analysis||{}},refContext:{refChatId:e.refContext?.refChatId,refName:e.refContext?.refName,refType:e.refContext?.refType},import:{status:e.import?.status,startedAt:e.import?.startedAt,finishedAt:e.import?.finishedAt}}}}).filter(t=>t.id):[]}static async update(t,e,s,a){try{var i,r=await this.restore(t,e,s);return r?(i={...r,...a},await this.save(t,e,s,i)):await this.save(t,e,s,{sections:{files:{items:[],isEditing:!1},analyzers:{items:[],isEditing:!1},metadata:{items:[],isEditing:!1}},...a})}catch(t){return console.error("Error updating state:",t),{success:!1,error:t.message}}}static generateToolId(){return`metadata-insights-${Date.now()}-`+Math.random().toString(36).substr(2,9)}}module.exports=StateManager;

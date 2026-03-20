@@ -1,0 +1,20 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * This software is permitted for internal use and modification.
+ * Copying for profit or redistribution is strictly not permitted.
+ *
+ * The Fair License, which formalizes these terms, will be adopted as the official license in the future.
+ * Once finalized, the unminified source code will be freely available for internal use for non-
+ * commercial purposes.
+ *
+ * This software may not be used to develop or enhance any product or service that competes
+ * directly or indirectly with GitSense Chat without explicit permission.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ */
+
+let chatApi=require("../../chat"),ConfirmationBox=require("../ui/confirmation-box").ConfirmationBox;class BulkBatchJobActions{constructor(t){this.context=t}async stopBatchJob(t){try{var e=await this.getBatchJobDetails(t);if(!e.success)throw new Error(e.message||"Failed to get batch details");if(!e.details.type.includes("realtime"))return{success:!1,message:"Stopping jobs is only supported for realtime batch jobs"};if(!await this._showConfirmation("Stop Batch Job","Are you sure you want to stop this batch job? This will terminate all running batch groups and cannot be undone.","Stop Job","Cancel"))return{success:!1,message:"Operation cancelled by user"};var s=await chatApi.cancelBatchJob(this.context.widget,t);if(s.success)return{success:!0,message:"Batch job stop request submitted successfully",newStatus:s.newStatus};throw new Error(s.error||"Failed to stop batch job")}catch(t){return console.error("Error stopping batch job:",t),{success:!1,message:"Failed to stop batch job: "+t.message}}}async retryGroup(t,e){try{var s=await this.getBatchJobDetails(t);if(!s.success)throw new Error(s.message||"Failed to get batch details");if(!s.details.type.includes("realtime"))return{success:!1,message:"Resetting groups is only supported for realtime batch jobs"};if(!await this._showConfirmation("Retry Batch Group",`Are you sure you want to retry batch group #${e}?`,"Retry Group","Cancel"))return{success:!1,message:"Operation cancelled by user"};var r=await chatApi.resetBatchGroup(this.context.widget,t,e);if(r.success)return{success:!0,message:`Batch group #${e} reset for retry`};throw new Error(r.error||"Failed to retry batch group")}catch(t){return console.error("Error retrying batch group:",t),{success:!1,message:"Failed to retry batch group: "+t.message}}}async stopGroup(t,e){try{var s=await this.getBatchJobDetails(t);if(!s.success)throw new Error(s.message||"Failed to get batch details");if(!s.details.type.includes("realtime"))return{success:!1,message:"Stopping groups is only supported for realtime batch jobs"};if(!await this._showConfirmation("Stop Batch Group",`Are you sure you want to stop batch group #${e}?`,"Stop Group","Cancel"))return{success:!1,message:"Operation cancelled by user"};var r=await chatApi.resetBatchGroup(this.context.widget,t,e);if(r.success)return{success:!0,message:`Batch group #${e} stopped`};throw new Error(r.error||"Failed to stop batch group")}catch(t){return console.error("Error stopping batch group:",t),{success:!1,message:"Failed to stop batch group: "+t.message}}}async getBatchJobDetails(t){try{var e=await chatApi.getBatchJobDetails(this.context.widget,t);if(e.success)return{success:!0,details:e.details};throw new Error(e.error||"Failed to get batch job details")}catch(t){return console.error("Error getting batch job details:",t),{success:!1,message:"Failed to get batch job details: "+t.message}}}async getGroupChatMessages(t,e){try{return await chatApi.getBatchGroupChatMessages(this.context.widget,t,e)}catch(t){return console.error("Error getting group chat messages:",t),{success:!1,message:"Failed to get group chat messages: "+t.message}}}_showConfirmation(e,s,r,a){return new Promise(t=>{(new ConfirmationBox).show({title:e,message:s,confirmButtonText:r,cancelButtonText:a,width:"450px"},()=>{t(!0)},()=>{t(!1)})})}cleanup(){}}module.exports=BulkBatchJobActions;

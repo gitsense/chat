@@ -1,0 +1,100 @@
+{
+  "name": "1. Pre-Compact Chat",
+  "type": "regular",
+  "meta": null,
+  "visibility": "",
+  "created_at": "2025-12-05 04:33:39.097",
+  "updated_at": "2025-12-05 04:34:16.651",
+  "messages": [
+    {
+      "type": "regular",
+      "role": "system",
+      "content": "You are helpful personal assistant.",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:33:39.097",
+      "updated_at": "2025-12-05 04:34:16.651"
+    },
+    {
+      "type": "regular",
+      "role": "user",
+      "content": "I'd like to make a simple chocolate cake for my daughter's birthday. Do you have a recipe that doesn't require too many special ingredients?",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:33:39.102",
+      "updated_at": "2025-12-05 04:33:39.102"
+    },
+    {
+      "type": "regular",
+      "role": "assistant",
+      "content": "\n# Simple Chocolate Cake Recipe\n\nI'd be happy to share a simple chocolate cake recipe that uses common ingredients you likely already have in your kitchen. This recipe is perfect for a birthday celebration!\n\n## Ingredients\n\nFor the cake:\n- 1¾ cups all-purpose flour\n- 2 cups granulated sugar\n- ¾ cup unsweetened cocoa powder\n- 2 teaspoons baking soda\n- 1 teaspoon baking powder\n- 1 teaspoon salt\n- 2 eggs\n- 1 cup buttermilk (or regular milk with 1 tablespoon vinegar)\n- 1 cup strong black coffee (cooled)\n- ½ cup vegetable oil\n- 1 teaspoon vanilla extract\n\nFor the simple chocolate frosting:\n- ½ cup butter, softened\n- ⅓ cup cocoa powder\n- 3 cups powdered sugar\n- ⅓ cup milk\n- 1 teaspoon vanilla extract\n\n## Instructions\n\n### For the cake:\n1. Preheat your oven to 350°F (175°C). Grease and flour two 9-inch round cake pans.\n2. In a large bowl, whisk together the flour, sugar, cocoa powder, baking soda, baking powder, and salt.\n3. Add eggs, buttermilk, coffee, oil, and vanilla to the dry ingredients. Beat on medium speed for about 2 minutes until well combined.\n4. Pour the batter evenly into the prepared pans.\n5. Bake for 30-35 minutes, or until a toothpick inserted into the center comes out clean.\n6. Cool the cakes in the pans for 10 minutes, then turn out onto wire racks to cool completely.\n\n### For the frosting:\n1. In a medium bowl, cream the butter until smooth.\n2. Add cocoa powder and powdered sugar alternately with milk.\n3. Beat until spreading consistency is reached.\n4. Stir in vanilla extract.\n\n### Assembly:\n1. Place one cake layer on a serving plate.\n2. Spread about 1/3 of the frosting over the first layer.\n3. Add the second cake layer and frost the top and sides with the remaining frosting.\n\n## Tips\n- If you don't have buttermilk, you can make a substitute by adding 1 tablespoon of white vinegar to 1 cup of regular milk and letting it sit for 5 minutes.\n- The coffee enhances the chocolate flavor but won't make the cake taste like coffee.\n- For a birthday touch, you can add sprinkles, chocolate shavings, or fresh berries on top.\n\nThis cake is moist, rich, and uses basic pantry ingredients. It's sure to be a hit at your daughter's birthday celebration! Would you like any variations or decorating suggestions?\n\nAuthored by LLM GLM-4.6 at Fri, 05 Dec 2025 04:33:41 GMT",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:33:39.104",
+      "updated_at": "2025-12-05 04:33:39.104"
+    },
+    {
+      "type": "regular",
+      "role": "user",
+      "content": "That looks good! I'm wondering if I can substitute the vegetable oil with something else? I don't have any on hand.",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:34:52.359",
+      "updated_at": "2025-12-05 04:34:52.359"
+    },
+    {
+      "type": "regular",
+      "role": "assistant",
+      "content": "\nOf course! It's a very common question, and you have several excellent options for substituting the vegetable oil. The best choice depends on what you have and the kind of texture you prefer.\n\nHere are the best substitutes, ranked from most recommended to least:\n\n### 1. Melted Butter (Best Substitute)\n\nThis is the most common and flavorful substitute. Your cake will be deliciously rich with a slightly more traditional, \"cakelike\" texture (a bit denser and less springy than an oil-based cake).\n\n*   **How to use:** Melt **½ cup (1 stick) of butter** and let it cool slightly so it doesn't scramble the eggs. Add it to the wet ingredients just as you would the oil.\n*   **Result:** A wonderfully rich, buttery-chocolate flavor.\n\n### 2. Other Neutral Oils\n\nIf you have another type of cooking oil, you can use it in a 1:1 swap.\n\n*   **Examples:** Canola oil, corn oil, sunflower oil, or grapeseed oil.\n*   **How to use:** Use the exact same amount (½ cup) as the recipe calls for.\n*   **Result:** Virtually identical to the original recipe.\n\n### 3. Melted Coconut Oil\n\nThis works very well and adds a subtle, pleasant flavor that pairs nicely with chocolate.\n\n*   **How to use:** Melt **½ cup of coconut oil**. Make sure your other wet ingredients (like the coffee and buttermilk) are at room temperature, otherwise the coconut oil can solidify into little chunks.\n*   **Result:** A moist cake with a very slight hint of coconut.\n\n### 4. Melted Shortening or Margarine\n\nThese are solid fats that will work in a pinch.\n\n*   **How to use:** Melt **½ cup of shortening or margarine** and let it cool slightly before adding it in.\n*   **Result:** Similar to using butter, but without the rich buttery flavor.\n\n---\n\n### **My Recommendation:**\n\nGo with the **melted butter** if you have it. The flavor it adds to a chocolate cake is fantastic and will make it taste extra special for a birthday!\n\nJust a quick tip: When you add the melted butter to the wet ingredients, mix just until combined. Over-mixing can sometimes make the cake a bit tough.\n\nHappy baking! Your daughter is going to love her homemade birthday cake.\n\nAuthored by LLM GLM-4.6 at Fri, 05 Dec 2025 04:34:57 GMT",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:34:52.365",
+      "updated_at": "2025-12-05 04:34:52.365"
+    },
+    {
+      "type": "regular",
+      "role": "user",
+      "content": "I think I'll go with melted butter since it's a birthday cake. Also, can I make this as cupcakes instead of a full cake? How would the baking time change?",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:35:13.791",
+      "updated_at": "2025-12-05 04:35:13.791"
+    },
+    {
+      "type": "regular",
+      "role": "assistant",
+      "content": "\nExcellent choice! Melted butter will make the cake extra rich and delicious for a birthday.\n\nAnd yes, this recipe is perfect for cupcakes! They're often easier for parties, especially with kids. Here’s how you can easily adapt the recipe:\n\n### How to Make Cupcakes\n\nThe batter and the oven temperature stay the same, but the preparation and baking time will change.\n\n**1. Prepare the Pan:**\n*   Line a standard 12-cup muffin tin with paper liners. You will likely need to make two batches, as this recipe yields about **24 cupcakes**.\n\n**2. Fill the Liners:**\n*   Pour the batter into the prepared liners, filling each one about **two-thirds full**.\n*   A pro tip for even cupcakes is to use a standard ice cream scoop or a ¼ cup measuring cup to distribute the batter.\n\n**3. Baking Time and Temperature:**\n*   **Bake at the same temperature: 350°F (175°C).**\n*   The baking time will be much shorter. Start checking for doneness at **18 minutes**.\n*   They will likely be done between **20-22 minutes**.\n*   To test, insert a toothpick into the center of the \"middle\" cupcake. If it comes out clean or with a few moist crumbs attached, they're ready. If there's wet batter, give them another 2-3 minutes and check again.\n\n**4. Cooling:**\n*   Let the cupcakes cool in the muffin tin for about 5 minutes.\n*   Then, carefully transfer them to a wire rack to cool completely before frosting. This is important—if they're even a little warm, the frosting will melt right off!\n\n### A Note on the Frosting:\n\nThe frosting recipe provided will be more than enough for all 24 cupcakes. You can pipe it on for a classic birthday look or simply spread it with a knife. Don't forget the sprinkles!\n\nCupcakes are a fantastic idea for a birthday party—easy to serve and no cutting required! Your daughter is going to be thrilled. Have fun baking\n\nAuthored by LLM GLM-4.6 at Fri, 05 Dec 2025 04:35:16 GMT",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:35:13.800",
+      "updated_at": "2025-12-05 04:35:13.800"
+    },
+    {
+      "type": "regular",
+      "role": "user",
+      "content": "Perfect! One last question - my daughter is allergic to nuts. Are there any hidden nuts in this recipe or common cross-contamination issues I should be aware of?",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:35:36.707",
+      "updated_at": "2025-12-05 04:35:36.707"
+    },
+    {
+      "type": "regular",
+      "role": "assistant",
+      "content": "\nThat is a very important question, and I'm so glad you asked. It's wonderful that you're being so careful.\n\nThe good news is that the recipe itself, as written, does not contain any nuts. None of the core ingredients (flour, sugar, cocoa, butter, eggs, etc.) are inherently nut-based.\n\nHowever, the risk with nut allergies often comes from **cross-contamination during manufacturing**. This is when a nut-free product is made in a factory or on equipment that also processes products containing nuts.\n\nHere is a checklist to help you ensure the cake is safe for your daughter:\n\n### 1. Read the Label on Every Single Ingredient\n\nThis is the most critical step. You need to check the packaging for each item you use. Look for two key things:\n\n*   **Allergen Warnings:** Phrases like \"**May contain nuts**\" or \"**Processed in a facility that also processes tree nuts or peanuts**.\" If you see this, you should choose a different brand.\n*   **The Ingredient List:** Make sure there are no hidden nut ingredients (like almond extract, for example).\n\n### 2. Ingredients to Pay Extra Close Attention To\n\nWhile you should check everything, some ingredients have a higher risk of cross-contamination:\n\n*   **Cocoa Powder:** This is often the biggest culprit. Many brands process their cocoa powder on shared lines. Look for a brand that is explicitly labeled as nut-free or made in a dedicated facility. (For example, many people use Hershey's cocoa powder, but you **must still check the label on the specific product you buy**, as manufacturing can change.)\n*   **Chocolate Chips (if you add any):** If you decide to add chocolate chips for decoration, be aware that these are very frequently made with nuts. Look for a brand like **Enjoy Life**, which is dedicated to being free from the top 14 allergens, including nuts.\n*   **Flour & Sugar:** While less common, it's still possible. A quick label check is always the safest practice.\n\n### 3. Consider Your Own Kitchen\n\nCross-contamination can happen at home, too. Before you start baking, make sure:\n\n*   Your bowls, measuring cups, and utensils are thoroughly washed.\n*   Your work surfaces (countertops) are wiped down clean.\n*   You are using a fresh, clean spatula or whisk that hasn't been in contact with nut products (like peanut butter).\n\n### Summary for a Safe Cake:\n\n1.  **Use the recipe as is** (with the melted butter substitution).\n2.  **Buy all your ingredients.**\n3.  **Before you mix anything, lay out all the packaging and read every label.** If any product has a nut warning, set it aside and find a safe alternative.\n4.  **Clean your kitchen tools and workspace** thoroughly before you begin.\n\nBy taking these precautions, you can confidently make a delicious and safe birthday cake that your daughter can enjoy without worry. Have a wonderful celebration\n\nAuthored by LLM GLM-4.6 at Fri, 05 Dec 2025 04:35:40 GMT",
+      "meta": {},
+      "visibility": "public",
+      "created_at": "2025-12-05 04:35:36.722",
+      "updated_at": "2025-12-05 04:35:36.722"
+    },
+    {
+      "type": "regular",
+      "role": "assistant",
+      "content": "## Demo Instructions: Start Compact Process\n\n### How to Compact This Conversation\n\nFollow these steps to compact this conversation and reduce its context size:\n\n#### Step 1: Open the Messages Tool\n\nLook for the **message position indicator** on the left side of your screen. It's a floating dock with a button showing two numbers (like \"7/9\"). The top number represents your current position in the conversation, and the bottom number shows the total **visible** messages.\n\n**Important:** This count only includes messages actually displayed on screen. For example, 'System' messages are not shown in the UI and therefore aren't counted in the total.\n\nClick on this position indicator to open the **Messages Tool**.\n\n#### Step 2: Access the Compact Messages Form\n\nIn the **Messages Tool**, you'll see an **action bar** at the top with several buttons:\n- New Chat\n- Assistant\n- **Compact** ← Click this button\n- Replace\n- Delete\n- Export\n\nClick the **Compact** button to open the Compact Messages form.\n\n#### Step 3: Configure the Compaction\n\nThe Compact Messages form will open with default settings that are perfect for this demo:\n- It will compact the entire conversation (excluding the system prompt)\n- The message range is already selected for you which includes this instructions message\n- All other settings are pre-configured\n\nAt the bottom right of the form, you'll see a **\"Start Compact Chat\"** link.\n\n#### Step 4: Start the Guided Compact Chat\n\nClick the **\"Start Compact Chat\"** link at the bottom right of the form.\n\nThis will open a new tab with the **Guided Compact Chat**, where you can interact with the AI to create a compacted version of this conversation.\n\nAfter you've created your compacted message in the **Guided Compact Chat**, we recommend closing the following two tabs:\n\n- The \"Explore Pre-Compact Chat\" tab (which contains the conversation before compaction and these instructions)\n- The \"Guided Compact Chat\" tab (which was created by clicking the **Start Compact Chat** link)\n\nThen return to the demo and click the **\"Explore Compact Chat\"** link to learn how to engage with the AI to compact a conversation.",
+      "meta": null,
+      "visibility": "human-public",
+      "created_at": "2025-12-11 18:18:42.316",
+      "updated_at": "2025-12-15 05:43:38.872"
+    }
+  ]
+}

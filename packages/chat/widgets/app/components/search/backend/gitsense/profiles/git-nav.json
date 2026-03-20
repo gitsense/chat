@@ -1,0 +1,61 @@
+{
+    "name": "git",
+    "description": "Navigate Git repository hierarchies: discover owners/organizations, explore repositories, and browse branches within the GitSense Chat system.",
+    "version": "1.0.0",
+    "keywords": ["git", "repository", "repo", "branch", "ref", "owner", "organization"],
+    "defaults": {
+        "targets": ["chats", "groups"],
+        "scope": "all-chats",
+        "filters": {
+            "chats.type": "git-repo"
+        },
+        "nullFilters": [],
+        "notNullFilters": [],
+        "options": {
+            "caseSensitive": false,
+            "wildcard": "implicit"
+        },
+        "sortBy": [
+            {
+                "field": "chats.name",
+                "direction": "asc"
+            }
+        ],
+        "pagination": {
+            "limit": 100000,
+            "offset": 0
+        },
+        "outputs": {
+            "chats": [
+                "chats.id",
+                "chats.uuid",
+                "chats.name",
+                "chats.type",
+                "chats.meta",
+                "chats.created_at",
+                "chats.updated_at",
+                "groups.meta"
+            ]
+        }
+    },
+    "emptySearchOutputs": {
+        "chats": [
+            "chats.id",
+            "chats.uuid",
+            "chats.name",
+            "chats.type",
+            "chats.meta",
+            "chats.created_at",
+            "chats.updated_at",
+            "groups.meta"
+        ]
+    },
+    "emptySearchSortBy": {
+        "chats": [
+            {
+                "field": "chats.name",
+                "direction": "asc"
+            }
+        ]
+    }
+}

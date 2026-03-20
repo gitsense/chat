@@ -1,0 +1,55 @@
+{
+    "name": "meta-raw",
+    "description": "Profile for retrieving raw, per-file metadata for a set of files, optimized for AI analysis. Supports custom lookup mappings for consistent batch processing.",
+    "version": "1.1.0",
+    "keywords": ["metadata", "raw", "analyzer", "ai"],
+    "defaults": {
+        "targets": ["messages"],
+        "scope": "all-chats",
+        "filters": {},
+        "nullFilters": {},
+        "notNullFilters": {},
+        "options": {
+            "format": "json"
+        },
+        "sortBy": [],
+        "pagination": {
+            "limit": null,
+            "offset": 0
+        },
+        "outputs": {
+            "topLevel": ["result_chat_id"],
+            "messages": [
+                "messages.id",
+                "messages.type",
+                "messages.chat_id",
+                "messages.updated_at"
+            ],
+            "chats": [
+                "chats.id",
+                "chats.type",
+                "chats.name",
+                "chats.meta.git_path",
+                "chats.meta.language"
+            ]
+        }
+    },
+    "customMappings": {
+        "description": "Custom lookup mappings for consistent batch processing. When using custom mappings, all mapping types must be provided (all-or-nothing approach) and at least one chat-id must be specified.",
+        "parameters": {
+            "repo-mapping": "Format: id=repo|\"description\" (comma-separated). Example: 1=facebook/react|\"A JavaScript library\",2=golang/go|\"\"",
+            "branch-mapping": "Format: id=branch|\"description\" (comma-separated). Example: 1=main|\"Main branch\",2=develop|\"Development branch\"",
+            "analyzer-mapping": "Format: id=analyzer|\"description\" (comma-separated). Example: 1=comment-spelling-reviewer-for-agents|\"Reviews code comments for spelling mistakes\"",
+            "field-mapping": "Format: analyzerId|fieldId=field|\"description\" (comma-separated). Example: 1|1=has_spelling_mistakes|\"Indicates if spelling mistakes were found\""
+        },
+        "requirements": [
+            "All mapping types must be provided when using custom mappings (all-or-nothing approach)",
+            "At least one chat-id must be specified when using custom mappings",
+            "IDs must be numeric (system adds prefixes: R, B, A, F)",
+            "Descriptions must be quoted (can be empty string for repositories)",
+            "Numeric IDs must be unique within each mapping type",
+            "Field mappings must reference valid analyzer IDs"
+        ],
+        "example": "profile:meta-raw format:pretty chat-id:123,456 repo-mapping:1=facebook/react|\"A JavaScript library\",2=golang/go|\"\" branch-mapping:1=main|\"Main branch\" analyzer-mapping:1=comment-spelling-reviewer-for-agents|\"Reviews code comments for spelling mistakes\" field-mapping:1|1=has_spelling_mistakes|\"Indicates if spelling mistakes were found\""
+    }
+}

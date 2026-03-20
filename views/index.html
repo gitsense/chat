@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/--/css/tabler.css">
+        <link rel="stylesheet" href="/--/css/primer.21.3.1.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/--/css/gfu.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/--/css/gte.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/--/css/diff2html.min.css" rel="stylesheet" />
+        <script src="/--/js/dayjs.min.js"></script>
+        <script src="/--/js/devboard.js"></script>
+    </head>
+    <body>
+        <div id=devboard-body></div>
+        <script>
+            // Test if IN_DEVBOARD_BROWSER_EXTENSION is defined.  If an exception is thrown, it means
+            // it isn't defined. If it is defined, it means we are viewing devboard with a browser extension
+            try {
+                IN_DEVBOARD_BROWSER_EXTENSION;
+            } catch (e) {
+                IN_DEVBOARD_BROWSER_EXTENSION = false;
+                DEVBOARD_SERVER_URL = "";
+            }
+
+            // See server.js to learn how these variables are defined
+            const board = {{board}};
+            const header = {{header}};
+
+            const devboard = new DevBoard(board, header);
+            devboard.render(document.getElementById("devboard-body"));
+        </script>
+    </body>
+</html>

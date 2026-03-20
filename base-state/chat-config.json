@@ -1,0 +1,266 @@
+{
+    "models": [
+        {
+            "name": "Claude 4.0 Sonnet",
+            "providers": [
+                {
+                    "name": "Anthropic",
+                    "modelId": "claude-sonnet-4-20250514",
+                    "maxOutputTokens": 20000
+                }
+            ]
+        },
+        {
+            "name": "Claude Haiku 4.5",
+            "providers": [
+                {
+                    "name": "Anthropic",
+                    "modelId": "claude-haiku-4-5-20251001",
+                    "maxOutputTokens": 60000
+                }
+            ],
+            "default": false
+        },
+        {
+            "name": "Gemini 3 Flash",
+            "providers": [
+                {
+                    "name": "Google",
+                    "modelId": "gemini-3-flash-preview",
+                    "maxOutputTokens": 60000
+                }
+            ]
+        },
+        {
+            "name": "Gemini 2.5 Pro",
+            "maxOutputTokens": 60000,
+            "providers": [
+                {
+                    "name": "Google",
+                    "modelId": "gemini-2.5-pro",
+                    "maxOutputTokens": 60000,
+                    "includeThoughts": false,
+                    "thinkingBudget": 0
+                }
+            ]
+        },
+        {
+            "name": "Gemini 2.5 Flash",
+            "providers": [
+                {
+                    "name": "Google",
+                    "modelId": "gemini-2.5-flash",
+                    "maxOutputTokens": 60000
+                }
+            ]
+        },
+        {
+            "name": "Gemini 2.5 Flash Lite",
+            "providers": [
+                {
+                    "name": "Google",
+                    "modelId": "gemini-flash-lite-latest",
+                    "maxOutputTokens": 20000
+                }
+            ]
+        },
+        {
+            "name": "---------"
+        },
+        {
+            "name": "Kimi K2.5",
+            "providers": [
+                {
+                    "name": "OpenRouter",
+                    "modelId": "moonshotai/kimi-k2.5",
+                    "maxOutputTokens": 60000
+                }
+            ],
+            "default": false
+        },
+        {
+            "name": "GPT-4o Mini",
+            "providers": [
+                {
+                    "name": "OpenAI",
+                    "modelId": "gpt-4o-mini",
+                    "maxOutputTokens": 8192
+                }
+            ],
+            "default": false
+        },
+        {
+            "name": "GLM-4.7",
+            "providers": [
+                {
+                    "name": "Cerebras",
+                    "modelId": "zai-glm-4.7",
+                    "maxOutputTokens": 60000
+                }
+            ],
+            "default": true
+        },
+        {
+            "name": "GPT OSS 120B - Cerebras",
+            "providers": [
+                {
+                    "name": "Cerebras",
+                    "modelId": "gpt-oss-120b",
+                    "maxOutputTokens": 20000
+                }
+            ],
+            "default": false
+        },
+        {
+            "name": "GPT-OSS 120B - together.ai",
+            "providers": [
+                {
+                    "name": "together.ai",
+                    "modelId": "openai/gpt-oss-120b",
+                    "maxOutputTokens": 60000
+                }
+            ],
+            "default": false
+        },
+        {
+            "name": "DeepSeek V3.1",
+            "providers": [
+                {
+                    "name": "OpenRouter",
+                    "modelId": "deepseek/deepseek-chat-v3.1",
+                    "maxOutputTokens": 20000
+                }
+            ],
+            "default": false
+        },
+        {
+            "name": "Qwen3 235B A22B Instruct",
+            "providers": [
+                {
+                    "name": "together.ai",
+                    "modelId": "Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+                    "maxOutputTokens": 20000
+                }
+            ],
+            "default": false
+        },
+        {
+            "name": "Mistral Medium 3.1",
+            "providers": [
+                {
+                    "name": "Mistral",
+                    "modelId": "mistral-medium-latest",
+                    "maxOutputTokens": 20000
+                }
+            ],
+            "default": false
+        },
+        {
+            "name": "Kimi K2 Thinking",
+            "providers": [
+                {
+                    "name": "together.ai",
+                    "modelId": "moonshotai/Kimi-K2-Thinking",
+                    "maxOutputTokens": 60000
+                }
+            ],
+            "default": false
+        }
+    ],
+    "prompts": [
+        {
+            "type": "system",
+            "name": "Coding Assistant",
+            "file": "coding-assistant.md",
+            "default": true
+        },
+        {
+            "type": "system",
+            "name": "Technical Writing Checker",
+            "file": "technical-writing-checker.md"
+        },
+        {
+            "type": "system",
+            "name": "Technical Writing Assistant",
+            "file": "technical-writing-assistant.md"
+        }
+    ],
+    "providers": [
+        {
+            "name": "Anthropic",
+            "apiKeyName": "ANTHROPIC_API_KEY"
+        },
+        {
+            "name": "Cerebras",
+            "apiKeyName": "CEREBRAS_API_KEY",
+            "baseURL": "https://api.cerebras.ai/v1"
+        },
+        {
+            "name": "DeepInfra",
+            "apiKeyName": "DEEPINFRA_API_KEY",
+            "baseURL": "https://api.deepinfra.com/v1/openai"
+        },
+        {
+            "name": "DeepSeek",
+            "apiKeyName": "DEEPSEEK_API_KEY",
+            "baseURL": "https://api.deepseek.com"
+        },
+        {
+            "name": "Google",
+            "apiKeyName": "GEMINI_API_KEY",
+            "baseURL": "https://generativelanguage.googleapis.com/v1beta/openai"
+        },
+        {
+            "name": "Groq",
+            "apiKeyName": "GROQ_API_KEY",
+            "baseURL": "https://api.groq.com/openai/v1"
+        },
+        {
+            "name": "OpenAI",
+            "apiKeyName": "OPENAI_API_KEY"
+        },
+        {
+            "name": "OpenRouter",
+            "apiKeyName": "OPENROUTER_API_KEY",
+            "baseURL": "https://openrouter.ai/api/v1"
+        },
+        {
+            "name": "together.ai",
+            "apiKeyName": "TOGETHER_API_KEY",
+            "baseURL": "https://api.together.xyz/v1"
+        },
+        {
+            "name": "Mistral",
+            "apiKeyName": "MISTRAL_API_KEY",
+            "baseURL": "https://api.mistral.ai"
+        }
+    ],
+    "cache": {
+        "maxTime": {
+            "getChats": "25h",
+            "getReport": "500ms"
+        }
+    },
+    "history": {
+        "rowsPerPage": 20
+    },
+    "permissions": {
+        "deleteChat": true,
+        "deleteChatMessage": true,
+        "editChatMessage": true
+    },
+    "defaultTemperature": 0,
+    "defaultModelCanBeUsedForAnalyzing": true,
+    "generateChatTitle": {
+        "enable": true,
+        "model": "default"
+    },
+    "maxChatCompletionSize": null,
+    "noProviderFatal": true,
+    "importData": {
+        "dropzone": {
+            "maxSize": 1048576,
+            "maxFiles": 10
+        }
+    }
+}
