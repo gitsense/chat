@@ -16,55 +16,63 @@ GitSense Chat is a developer-first chat app designed to help humans and AI work 
 
 ## Quick Start
 
-1. **Install the GitSense Chat CLI**
-   ```bash
-   curl https://github.com/gitsense/chat/install.sh | bash
-   ```
-   *(If `gsc` is not found after install, run: `export PATH="$PATH:$HOME/.local/bin"`)*
+### 1. Install the GitSense Chat CLI
+```bash
+curl https://github.com/gitsense/chat/install.sh | bash
+```
+*(If `gsc` is not found after install, run: `export PATH="$PATH:$HOME/.local/bin"`)*
 
-2. **Choose Your Environment**
+###  **Choose Your Environment**
 
-   **Option A: Docker (Recommended)**
-   Zero dependencies, fully sandboxed.
-   ```bash
-   gsc docker install
-   gsc docker start
-   ```
+**Docker (Recommended)**
 
-   **Option B: Native App**
-   Runs directly on your host machine.
-   ```bash
-   gsc app install
-   gsc app start
-   ```
+Zero dependencies, fully sandboxed.
 
-3. **Explore**
-   Open **http://localhost:3357** in your browser.
-   
-   You can immediately dive into **Ergonomic Chats 101** or **Smarter Agents 101**. These interactive guides are built into the app and do not require an AI API key to view.
+```bash
+gsc docker install
+gsc docker start
+```
 
-4. **Enable AI Chat**
+**Native**
 
-   **For Docker:**
-   Link your local environment file to the container.
-   ```bash
-   gsc docker env link /path/to/your/.env
-   ```
+Runs directly on your host machine.
 
-   **For Native App:**
-   Copy the example file to your GitSense home directory and add your keys.
-   ```bash
-   cp .env.example ~/.gitsense/.env
-   # Edit ~/.gitsense/.env to add your API keys
-   ```
+```bash
+gsc app install
+gsc app start
+```
 
-5. **Integrate Your Repositories (Docker Only)**
+### **Explore**
+Open **http://localhost:3357** in your browser.
 
-   By default, Docker starts in a sandbox. To enable indexing and **Deterministic Discovery** with your actual code, configure the repository path:
+You can immediately dive into **Ergonomic Chats 101** or **Smarter Agents 101**. These interactive guides are built into the app and do not require an AI API key to view.
 
-   ```bash
-   gsc docker configure --repos-dir ~/path/to/your/projects
-   ```
+### **Enable AI Chat**
+
+**For Docker:**
+
+Link your local environment file to the container.
+
+```bash
+gsc docker env link /path/to/your/.env
+```
+
+**For Native App:**
+
+Copy the example file to your GitSense home directory and add your keys.
+
+```bash
+cp .env.example ~/.gitsense/.env
+# Edit ~/.gitsense/.env to add your API keys
+```
+
+### Integrate Your Repositories
+
+**Docker Only:** By default, Docker starts in a sandbox. To enable indexing and **Deterministic Discovery** with your actual code, configure the repository path:
+
+```bash
+gsc docker configure --repos-dir ~/path/to/your/projects
+```
 
 ## Why GitSense Chat?
 
