@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Component: GitSense Chat Docker Entrypoint
 # Block-UUID: 183b418f-ae49-436d-b260-d2f4dbf517a6
 # Parent-UUID: 7769145c-1c20-41fc-8f36-113847bb8b6b
