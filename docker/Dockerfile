@@ -2,11 +2,11 @@
 # Component: GitSense Chat Dockerfile
 # Block-UUID: 223d3e2d-f36f-446d-86be-082a54090f99
 # Parent-UUID: f7cdb166-19f6-467a-a17b-c9a9a4921c67
-# Version: 1.7.0
-# Description: Added GSC CLI cross-compilation stage to bundle platform-specific binaries for auto-update functionality.
+# Version: 1.8.0
+# Description: Copied the Linux gsc binary to /gsc-docker-app/bin/gsc to ensure it is available in the PATH for interactive sessions and execution.
 # Language: Dockerfile
 # Created-at: 2025-08-10T17:41:36.129Z
-# Authors: Gemini 2.5 Flash Thinking (v1.0.0), GLM-4.7 (v1.1.0), GLM-4.7 (v1.1.1), GLM-4.7 (v1.2.0), Gemini 3 Flash (v1.3.0), GLM-4.7 (v1.4.0), Gemini 3 Flash (v1.5.0), GLM-4.7 (v1.6.0), GLM-4.7 (v1.7.0)
+# Authors: Gemini 2.5 Flash Thinking (v1.0.0), GLM-4.7 (v1.1.0), GLM-4.7 (v1.1.1), GLM-4.7 (v1.2.0), Gemini 3 Flash (v1.3.0), GLM-4.7 (v1.4.0), Gemini 3 Flash (v1.5.0), GLM-4.7 (v1.6.0), GLM-4.7 (v1.7.0), GLM-4.7 (v1.8.0)
 
 
 # --- GSC CLI Cross-Compilation Stage ---
@@ -97,6 +97,9 @@ COPY --from=gsc-cli-builder /src/gsc-darwin-amd64 /gsc-docker-app/bin/dist/
 COPY --from=gsc-cli-builder /src/gsc-darwin-arm64 /gsc-docker-app/bin/dist/
 COPY --from=gsc-cli-builder /src/gsc-windows-amd64.exe /gsc-docker-app/bin/dist/
 
+# Copy the Linux binary to the main bin directory for execution and PATH availability
+COPY --from=gsc-cli-builder /src/gsc-linux-amd64 /gsc-docker-app/bin/gsc
+
 RUN addgroup -g 1001 -S gitsense && \
     adduser -S -u 1001 -G gitsense gitsense
 
@@ -110,4 +113,4 @@ VOLUME ["/gsc-docker-app/data", "/gsc-docker-app/repos"]
 EXPOSE 3357
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
-CMD ["node_modules/.bin/forever", "index.js"]
+CMD ["gsc", "app", "start", "--foreground", "--app-dir", "/gsc-docker-app", "--data-dir", "/gsc-docker-app/data"]

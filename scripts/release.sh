@@ -42,7 +42,7 @@ fi
 # 2. Build the Docker Image
 # Note: We use -f docker/Dockerfile because the Dockerfile is in a subdirectory
 echo "Building Docker image (this cross-compiles the CLI)..."
-docker build -t "$IMAGE_NAME:latest" -t "$IMAGE_NAME:$VERSION" -f docker/Dockerfile .
+docker build --no-cache -t "$IMAGE_NAME:latest" -t "$IMAGE_NAME:$VERSION" -f docker/Dockerfile .
 
 # 3. Push Docker Image
 # This is required for 'gsc docker install' to work

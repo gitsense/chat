@@ -17,8 +17,9 @@ GitSense Chat is a developer-first chat app designed to help humans and AI work 
 ## Quick Start
 
 ### 1. Install the GitSense Chat CLI
+
 ```bash
-curl https://github.com/gitsense/chat/install.sh | bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
 *(If `gsc` is not found after install, run: `export PATH="$PATH:$HOME/.local/bin"`)*
 

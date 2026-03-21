@@ -13,10 +13,6 @@
     "gsc-caddy-admin": "node bin/gsc-caddy-admin",
     "postinstall": "npm run build-bundle-min",
     "test": "jest",
-    "start": "node scripts/forever-process.js start",
-    "stop": "node scripts/forever-process.js stop",
-    "restart": "node scripts/forever-process.js stop && node scripts/forever-process.js start",
-    "status": "forever list",
     "build-bundle": "npm run build:widgets && npm run build:boards && npm run bundle",
     "build-bundle-min": "npm run build:widgets && npm run build:boards && npm run bundle-min"
   },
@@ -41,7 +37,6 @@
     "diff2html": "^3.4.48",
     "dotenv": "^16.4.5",
     "express": "^4.18.2",
-    "forever": "^4.0.3",
     "highlight.js": "^11.11.1",
     "ignore": "^7.0.5",
     "inquirer": "^12.9.1",
