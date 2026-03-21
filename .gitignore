@@ -78,3 +78,6 @@ packages/chat/widgets/app/components/file-uploader/dist/
 minify-repo.js
 .minifyignore
 .minifyexclude
+
+# Enterprise code
+packages/chat/widgets/app/enterprise

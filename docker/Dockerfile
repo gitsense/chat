@@ -1,12 +1,12 @@
 # Dockerfile Metadata
 # Component: GitSense Chat Dockerfile
-# Block-UUID: 223d3e2d-f36f-446d-86be-082a54090f99
-# Parent-UUID: f7cdb166-19f6-467a-a17b-c9a9a4921c67
-# Version: 1.8.0
-# Description: Copied the Linux gsc binary to /gsc-docker-app/bin/gsc to ensure it is available in the PATH for interactive sessions and execution.
+# Block-UUID: 672df1f1-799f-42c0-9f32-561a499a7aa6
+# Parent-UUID: 223d3e2d-f36f-446d-86be-082a54090f99
+# Version: 1.9.0
+# Description: Copied .env.example to the production image to support the 'gsc docker env init' command for master configuration file creation.
 # Language: Dockerfile
 # Created-at: 2025-08-10T17:41:36.129Z
-# Authors: Gemini 2.5 Flash Thinking (v1.0.0), GLM-4.7 (v1.1.0), GLM-4.7 (v1.1.1), GLM-4.7 (v1.2.0), Gemini 3 Flash (v1.3.0), GLM-4.7 (v1.4.0), Gemini 3 Flash (v1.5.0), GLM-4.7 (v1.6.0), GLM-4.7 (v1.7.0), GLM-4.7 (v1.8.0)
+# Authors: Gemini 2.5 Flash Thinking (v1.0.0), GLM-4.7 (v1.1.0), GLM-4.7 (v1.1.1), GLM-4.7 (v1.2.0), Gemini 3 Flash (v1.3.0), GLM-4.7 (v1.4.0), Gemini 3 Flash (v1.5.0), GLM-4.7 (v1.6.0), GLM-4.7 (v1.7.0), GLM-4.7 (v1.8.0), GLM-4.7 (v1.9.0)
 
 
 # --- GSC CLI Cross-Compilation Stage ---
@@ -78,6 +78,7 @@ RUN echo 'export PATH="/gsc-docker-app/bin:$PATH"' >> /root/.bashrc
 COPY --from=build /gsc-docker-app/node_modules ./node_modules
 COPY --from=build /gsc-docker-app/package.json ./
 COPY --from=build /gsc-docker-app/index.js ./
+COPY --from=build /gsc-docker-app/.env.example ./
 COPY --from=build /gsc-docker-app/boards.json ./
 COPY --from=build /gsc-docker-app/bin ./bin
 COPY --from=build /gsc-docker-app/db ./db

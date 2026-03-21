@@ -2,13 +2,13 @@
 
 /*
  * Component: GitSense Chat Admin Setup CLI
- * Block-UUID: 4c0e804d-f441-44b0-88ac-d89dcbb76ea6
- * Parent-UUID: 2cbbc3e9-754b-490e-bf5e-c7521f8c214f
- * Version: 1.1.0
- * Description: Initializes the GitSense Chat data directory from the base-state. Added chunked SQL execution for debugging foreign key constraints.
+ * Block-UUID: fed4e1b5-b77a-48f9-a86a-bd92be1ffa3b
+ * Parent-UUID: 4c0e804d-f441-44b0-88ac-d89dcbb76ea6
+ * Version: 1.2.0
+ * Description: Fixed EBUSY error when resetting data directories on Docker volumes by deleting directory contents instead of the mount point itself.
  * Language: JavaScript
  * Created-at: 2026-03-16T15:10:00.000Z
- * Authors: Gemini 3 Flash (v1.0.0), Gemini 3 Flash (v1.1.0)
+ * Authors: Gemini 3 Flash (v1.0.0), Gemini 3 Flash (v1.1.0), GLM-4.7 (v1.2.0)
  */
 
 
@@ -118,8 +118,12 @@ program
             const files = fs.readdirSync(targetDir);
             if (files.length > 0) {
                 if (options.force) {
-                    console.log('! Force flag detected. Removing existing data directory...');
-                    fs.rmSync(targetDir, { recursive: true, force: true });
+                    console.log('! Force flag detected. Clearing existing data directory...');
+                    const files = fs.readdirSync(targetDir);
+                    files.forEach(file => {
+                        const filePath = path.join(targetDir, file);
+                        fs.rmSync(filePath, { recursive: true, force: true });
+                    });
                 } else {
                     console.error(`Error: Destination directory '${targetDir}' is not empty.`);
                     console.error('Use --force to overwrite and reset the installation.');
