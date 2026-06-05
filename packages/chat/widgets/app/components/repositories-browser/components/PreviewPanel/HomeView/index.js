@@ -1,0 +1,22 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * Licensed under the Fair Core License, Version 1.0 (FCL-1.0-ALv2).
+ * https://faircode.io
+ *
+ * You may use, modify, and run this software for internal, non-commercial
+ * purposes including personal projects, team workflows, and self-hosted
+ * deployments. You may not use this software to build or operate a product
+ * or service that competes directly or indirectly with GitSense Chat.
+ * Redistribution or resale is not permitted.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ *
+ * For licensing inquiries, internal-use exceptions, or business use,
+ * contact sales@gitsense.com
+ */
+
+let{DomUtils,formatBytes,formatTokens}=require("@gitsense/gsc-utils"),HomeViewTable=require("./Table").HomeViewTable,VIRTUAL_NODE_TYPES=require("../../../constants").VIRTUAL_NODE_TYPES;class HomeView{constructor(e,t,i={}){this.container=e,this.context=t,this.options=i,this.h=DomUtils.h,this.homeViewTable=null}render(e,t){this.container.innerHTML="";var{selectedNodes:t=[]}=t,t=t.filter(e=>e.type===VIRTUAL_NODE_TYPES.FILE),i=((this.options.homeTitle||this.options.homeDescription)&&(i=this.h.createDiv({className:"gsc-rb-home-title-desc-container",style:{marginBottom:"25px"}}),this.options.homeTitle&&i.appendChild(this.h.createH2({text:this.options.homeTitle,style:{margin:"5px 0px"}})),this.options.homeDescription&&i.appendChild(this.h.createP({text:this.options.homeDescription})),this.container.appendChild(i)),this.h.createDiv({className:"gsc-rb-metric-cards-container",style:{display:"flex",gap:"15px",justifyContent:"center",flexWrap:"wrap",margin:"15px 0 25px 0"}})),i=(this._renderMetricCards(i,t),this.container.appendChild(i),this.h.createDiv({className:"gsc-rb-table-container",style:{flexGrow:"1",display:"flex",flexDirection:"column",overflow:"hidden"}}));this._renderTable(i,t),this.container.appendChild(i)}_renderMetricCards(o,e){var t=this._calculateTotalRepos(),{totalFiles:e,totalTokens:i,totalSize:s,totalUniqueRepos:a}=this._calculateSelectionMetrics(e);[{id:"totalRepos",value:t,label:"Total Repositories",formatter:e=>e.toLocaleString()},{id:"totalUniqueRepos",value:a,label:"Unique Repositories Selected",formatter:e=>e.toLocaleString()},{id:"totalFiles",value:e,label:"Total Selected Files",formatter:e=>e.toLocaleString()},{id:"totalTokens",value:i,label:"Total Selected Tokens",formatter:formatTokens},{id:"totalSize",value:s,label:"Total Selected Size",formatter:formatBytes}].forEach(e=>{var t=this.h.createDiv({className:"gsc-rb-metric-card",style:{flex:"1",minWidth:"150px",padding:"10px",textAlign:"center",border:"1px solid #eee",borderRadius:"4px",backgroundColor:"#fcfcfc",transition:"background-color 0.2s"}}),i=this.h.createDiv({style:{fontSize:"2rem",fontWeight:"600",color:"#333"},text:e.formatter(e.value)}),e=this.h.createDiv({style:{fontSize:"0.9rem",color:"#666",marginTop:"5px"},text:e.label});t.appendChild(i),t.appendChild(e),o.appendChild(t)})}async _renderTable(e,t){this.homeViewTable&&this.homeViewTable.destroy(),this.homeViewTable=new HomeViewTable(e,this.context,{onFileClick:this.options.onFileClick}),await this.homeViewTable.render(t);e=this.homeViewTable.getGitFilesTable();let i=null;(i=e&&"function"==typeof e.getActionsContainer?e.getActionsContainer():i)?this._renderActionButton(i,t):console.warn("HomeView: Could not retrieve actions container from GitFilesTable.")}_renderActionButton(e,t){e.innerHTML="";let i=0===t.length;var o=this.h.createButton({className:"btn btn-primary",text:this.options.actionButtonText+` (${t.length})`,disabled:i,style:{cursor:i?"not-allowed":"pointer"},onclick:()=>{i||(this.options.onActionClick(t),this.options.onClose&&this.options.onClose())}});e.appendChild(o)}_calculateTotalRepos(){if(!this.options.reposTreeData||!this.options.reposTreeData[0]?.kids)return 0;let t=0;return this.options.reposTreeData[0].kids.forEach(e=>{e.kids&&(t+=e.kids.length)}),t}_calculateSelectionMetrics(e){let t=0,i=0,o=0,s=new Set;return e.forEach(e=>{"git-blob"===e.type&&(t++,i+=e.meta?.tokens?.content?.estimate||0,o+=e.meta?.size||0),e.group_name&&s.add(""+e.group_name)}),{totalFiles:t,totalTokens:i,totalSize:o,totalUniqueRepos:s.size}}destroy(){this.homeViewTable&&(this.homeViewTable.destroy(),this.homeViewTable=null),this.container.innerHTML=""}}module.exports={HomeView:HomeView};

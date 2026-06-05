@@ -1,0 +1,32 @@
+# Source files (only ship dist)
+lib/
+bin/worker.js.bak
+
+# Development files
+.babelrc.js
+tsconfig.json
+jest.config.js
+.eslintrc.js
+
+# Testing
+__tests__/
+*.test.js
+coverage/
+
+# Development
+.env
+.env.local
+.env.example
+data/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Runtime
+.DS_Store
+Thumbs.db

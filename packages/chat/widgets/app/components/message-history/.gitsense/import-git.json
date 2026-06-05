@@ -1,0 +1,20 @@
+{
+  "version": "1",
+  "owner": "gitsense",
+  "repo": "gsc-message-history",
+  "group_id": 473,
+  "branches": {
+    "main": {
+      "last_import": "2026-06-04T20:51:28-04:00",
+      "ref_chat_id": 2470,
+      "shadow": true,
+      "shadow_path": "/Users/terrchen/gitsense-chat/data/shadow-repos/gitsense/gsc-message-history/main",
+      "flags": {
+        "max_size": 0,
+        "include": "",
+        "exclude": "",
+        "include_binary": false
+      }
+    }
+  }
+}

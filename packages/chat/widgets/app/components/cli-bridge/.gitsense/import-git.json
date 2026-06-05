@@ -1,0 +1,20 @@
+{
+  "version": "1",
+  "owner": "gitsense",
+  "repo": "gsc-cli-bridge",
+  "group_id": 877,
+  "branches": {
+    "main": {
+      "last_import": "2026-05-21T15:21:29-04:00",
+      "ref_chat_id": 26998,
+      "shadow": true,
+      "shadow_path": "/Users/terrchen/gitsense-chat/shadow-repos/gitsense/cli-bridge/main",
+      "flags": {
+        "max_size": 0,
+        "include": "",
+        "exclude": "",
+        "include_binary": false
+      }
+    }
+  }
+}

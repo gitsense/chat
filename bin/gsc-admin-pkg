@@ -1,0 +1,148 @@
+#!/usr/bin/env node
+
+/*
+ * Component: GitSense Chat Admin Package CLI
+ * Block-UUID: 6f378cb4-1f13-46ac-b914-1da64f8131a9
+ * Parent-UUID: 86cd67bf-5633-4484-9b88-87ad73e382b9
+ * Version: 1.0.1
+ * Description: Packages the data directory into a base-state for distribution. Fixed SQL dump command generation.
+ * Language: JavaScript
+ * Created-at: 2026-03-16T16:34:00.000Z
+ * Authors: Gemini 3 Flash (v1.0.0), Gemini 3 Flash (v1.0.1)
+ */
+
+
+const { Command } = require('commander');
+const path = require('path');
+const fs = require('fs');
+const { execSync } = require('child_process');
+const zlib = require('zlib');
+const { pipeline } = require('stream');
+const { promisify } = require('util');
+
+const pipelineAsync = promisify(pipeline);
+
+const program = new Command();
+
+program
+    .name('gsc-admin pkg')
+    .description('Package the data directory into a base-state.')
+    .option('-i, --input <path>', 'Input data directory', './data')
+    .option('-o, --output <path>', 'Output base-state directory', './base-state')
+    .action(async (options) => {
+        const inputDir = path.resolve(options.input);
+        const outputDir = path.resolve(options.output);
+
+        console.log(`Packaging data from ${inputDir} to ${outputDir}...`);
+
+        if (!fs.existsSync(inputDir)) {
+            console.error(`Input directory not found: ${inputDir}`);
+            process.exit(1);
+        }
+
+        // Clean output directory
+        if (fs.existsSync(outputDir)) {
+            fs.rmSync(outputDir, { recursive: true, force: true });
+        }
+        fs.mkdirSync(outputDir, { recursive: true });
+
+        try {
+            // 1. Process Database (Data Only Dump)
+            const dbPath = path.join(inputDir, 'chats.sqlite3');
+            if (fs.existsSync(dbPath)) {
+                console.log('Processing database...');
+                
+                // Generate dump commands
+                const tempCommandsPath = path.join(outputDir, 'temp_commands.sql');
+                
+                // FIX: Use char(10) to put the dot-command and SELECT on separate lines
+                const query = `
+                    SELECT '.mode insert ' || name || char(10) || 'SELECT * FROM ' || name || ';' 
+                    FROM sqlite_master 
+                    WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name NOT LIKE 'fts_%';
+                `;
+                
+                execSync(`sqlite3 "${dbPath}" "${query}" > "${tempCommandsPath}"`);
+                
+                // Execute commands to generate the SQL dump
+                const sqlDumpPath = path.join(outputDir, 'chats-data.sql');
+                
+                // Wrap in BEGIN/COMMIT for performance and integrity
+                const command = `(echo "BEGIN;"; cat "${tempCommandsPath}"; echo "COMMIT;") | sqlite3 "${dbPath}" > "${sqlDumpPath}"`;
+                execSync(command, { stdio: 'inherit' });
+
+                // Compress the dump
+                console.log('Compressing database dump...');
+                const input = fs.createReadStream(sqlDumpPath);
+                const gzip = zlib.createGzip();
+                const output = fs.createWriteStream(path.join(outputDir, 'chats.sql.gz'));
+                await pipelineAsync(input, gzip, output);
+
+                // Cleanup
+                fs.unlinkSync(tempCommandsPath);
+                fs.unlinkSync(sqlDumpPath);
+            }
+
+            // 2. Process Git Repositories (Bundling)
+            console.log('Bundling Git repositories...');
+            bundleGitRepos(inputDir, outputDir);
+
+            // 3. Copy Static Assets
+            console.log('Copying static assets...');
+            copyRecursiveSync(inputDir, outputDir, ['.sqlite3', '.bundle']);
+
+            console.log('✓ Packaging complete.');
+
+        } catch (error) {
+            console.error(`Packaging failed: ${error.message}`);
+            process.exit(1);
+        }
+    });
+
+function bundleGitRepos(src, dest) {
+    const files = fs.readdirSync(src);
+    files.forEach(file => {
+        const filePath = path.join(src, file);
+        const stat = fs.statSync(filePath);
+
+        if (stat.isDirectory()) {
+            // Check if it's a git repo
+            if (fs.existsSync(path.join(filePath, '.git'))) {
+                const bundleName = `${file}.bundle`;
+                const bundlePath = path.join(dest, bundleName);
+                console.log(`  Bundling ${file}...`);
+                execSync(`git -C "${filePath}" bundle create "${bundlePath}" --all`);
+            } else {
+                // Recurse
+                const newDest = path.join(dest, file);
+                if (!fs.existsSync(newDest)) fs.mkdirSync(newDest, { recursive: true });
+                bundleGitRepos(filePath, newDest);
+            }
+        }
+    });
+}
+
+function copyRecursiveSync(src, dest, excludeExts = []) {
+    const exists = fs.existsSync(src);
+    const stats = exists && fs.statSync(src);
+    const isDirectory = exists && stats.isDirectory();
+
+    if (isDirectory) {
+        if (!fs.existsSync(dest)) {
+            fs.mkdirSync(dest, { recursive: true });
+        }
+        fs.readdirSync(src).forEach(childItemName => {
+            copyRecursiveSync(
+                path.join(src, childItemName),
+                path.join(dest, childItemName),
+                excludeExts
+            );
+        });
+    } else {
+        if (!excludeExts.includes(path.extname(src))) {
+            fs.copyFileSync(src, dest);
+        }
+    }
+}
+
+program.parse(process.argv);

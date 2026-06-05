@@ -1,0 +1,96 @@
+{
+    "name": "messages.default",
+    "description": "The default search profile for searches explicitly targeting only messages. Defines outputs for a detailed message view.",
+    "version": "2.3.0",
+    "keywords": ["messages", "single-target"],
+    "defaults": {
+        "targets": ["messages"],
+        "scope": "all-chats",
+        "filters": {},
+        "nullFilters": [],
+        "notNullFilters": [],
+        "options": {
+            "caseSensitive": false,
+            "wildcard": "implicit",
+            "limit": 25,
+            "offset": 0
+        },
+        "pagination": {
+            "limit": 25,
+            "offset": 0
+        },
+        "outputs": {
+            "messages": [
+                "messages.id",
+                "messages.chat_id",
+                "messages.type",
+                "messages.deleted",
+                "messages.visibility",
+                "messages.parent_id",
+                "messages.model",
+                "messages.real_model",
+                "messages.role",
+                "messages.pinned",
+                {
+                  "field": "messages.message",
+                  "snippet": {
+                    "maxLength": 200,
+                    "highlight": true
+                  }
+                },
+                "messages.meta",
+                "messages.blob_id",
+                "messages.created_at",
+                "messages.updated_at",
+                "messages.modified_at",
+                "messages.meta.file_path",
+                "messages.meta.file_name",
+                "messages.meta.file_extension",
+                "messages.meta.git_repo",
+                "messages.meta.published_date",
+                "messages.meta.release_version",
+                "messages.meta.title",
+                "messages.meta.document_type",
+                "messages.meta.language",
+                "messages.meta.issue_number",
+                "messages.meta.state",
+                "messages.meta.author",
+                "messages.meta.assignees",
+                "messages.meta.labels",
+                "chats.name",
+                "chats.uuid"
+            ],
+            "result_chat_id": true,
+            "fts_rank": true
+        }
+    },
+    "emptySearchOutputs": {
+        "messages": [
+            "messages.id",
+            "messages.chat_id",
+            "messages.type",
+            "messages.role",
+            "message.mesage",
+            "messages.created_at",
+            "messages.updated_at",
+            "chats.uuid"
+        ]
+    },
+    "sortBy": [
+        {
+            "field": "messages.updated_at",
+            "direction": "desc"
+        }
+    ],
+    "emptySearchSortBy": {
+        "messages": [
+            {
+                "field": "messages.updated_at",
+                "direction": "desc"
+            }
+        ]
+    },
+    "rankingPreferences": {
+        "description": "Default ranking preferences for message results."
+    }
+}

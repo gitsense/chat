@@ -1,0 +1,96 @@
+{
+  "_gsc_meta": {
+    "component": "Batch Processing Configuration",
+    "blockUuid": "5a962c5c-b729-475c-81ad-77e026cd843f",
+    "parentUuid": "N/A",
+    "version": "1.1.0",
+    "description": "Generic configuration for GitSense Chat Batch Processing Component. Controls timing, rate limiting, retry logic, failure thresholds, and Claude Code CLI specific settings.",
+    "language": "JSON",
+    "createdAt": "2026-02-16T03:35:00.000Z",
+    "authors": [
+      "GLM-4.7 (v1.0.0)",
+      "GLM-4.7 (v1.1.0)"
+    ]
+  },
+  "version": "1.1",
+  "description": "Generic configuration for GitSense Chat Batch Processing Component. Controls timing, rate limiting, retry logic, failure thresholds, and Claude Code CLI specific settings.",
+  "processing": {
+    "realtime": {
+      "delayMsWorkFound": 1000,
+      "delayMsNoWork": 5000,
+      "comment": "Controls the speed of the internal real-time batch processor loop. delayMsWorkFound is the pause after processing a group. delayMsNoWork is the pause when the queue is empty."
+    }
+  },
+  "polling": {
+    "scheduled": {
+      "baseIntervalMs": 60000,
+      "comment": "Base polling interval (in ms) for external/scheduled batch jobs (e.g., Google Gemini Batch)."
+    },
+    "realtime": {
+      "baseIntervalMs": 5000,
+      "comment": "Base polling interval (in ms) for internal real-time batch job status checks."
+    }
+  },
+  "rateLimiting": {
+    "defaultRequestsPerMinute": 60,
+    "comment": "Global hard limit for requests per minute to any LLM provider. The processor will sleep if this limit is reached."
+  },
+  "retryStrategies": [
+    {
+      "name": "Rate Limit (429)",
+      "match": {
+        "httpStatus": 429
+      },
+      "action": "retry",
+      "maxAttempts": 5,
+      "backoffStrategy": "exponential",
+      "initialDelayMs": 1000
+    },
+    {
+      "name": "Server Error (5xx)",
+      "match": {
+        "httpStatusRange": "500-599"
+      },
+      "action": "retry",
+      "maxAttempts": 3,
+      "backoffStrategy": "linear",
+      "initialDelayMs": 2000
+    },
+    {
+      "name": "Client Error (4xx)",
+      "match": {
+        "httpStatusRange": "400-499",
+        "exclude": [429]
+      },
+      "action": "fail",
+      "reason": "Client error indicates invalid input or auth, retrying won't help."
+    },
+    {
+      "name": "Network Timeout",
+      "match": {
+        "errorType": "timeout"
+      },
+      "action": "retry",
+      "maxAttempts": 2,
+      "backoffStrategy": "fixed",
+      "initialDelayMs": 5000
+    },
+    {
+      "name": "Parsing Error",
+      "match": {
+        "errorType": "parsing"
+      },
+      "action": "fail",
+      "reason": "LLM returned malformed data, retrying with same input is unlikely to fix."
+    }
+  ],
+  "circuitBreaker": {
+    "maxConsecutiveGroupFailures": 5,
+    "actionOnTrip": "CANCEL_JOB",
+    "comment": "If a batch job fails this many groups consecutively, the entire job is cancelled to prevent wasting resources during systemic outages."
+  },
+  "claudeCodeSettings": {
+    "fileReadMaxOutputTokens": null,
+    "comment": "Controls the max output tokens for file reads in Claude Code CLI. Default is 15000. Increase this value if Claude Code is truncating large files during analysis."
+  }
+}

@@ -1,0 +1,22 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * Licensed under the Fair Core License, Version 1.0 (FCL-1.0-ALv2).
+ * https://faircode.io
+ *
+ * You may use, modify, and run this software for internal, non-commercial
+ * purposes including personal projects, team workflows, and self-hosted
+ * deployments. You may not use this software to build or operate a product
+ * or service that competes directly or indirectly with GitSense Chat.
+ * Redistribution or resale is not permitted.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ *
+ * For licensing inquiries, internal-use exceptions, or business use,
+ * contact sales@gitsense.com
+ */
+
+let{CSS_CLASSES,STATE_VALUES,DATA_ATTRIBUTES}=require("../constants");class MainView{constructor(e,t={}){e=e.h;this.h=e,this.config={onExecute:t.onExecute||(()=>{}),onNavigate:t.onNavigate||(()=>{}),onClearScreen:t.onClearScreen||(()=>{}),...t},this.elements={}}render(e){this._createLayout(),e.appendChild(this.elements.container),this._attachEvents()}displayEntry(e){var t;e&&(this.elements.outputArea.innerHTML="",t=this.h.createSpan({cls:CSS_CLASSES.PROMPT,text:"$> "+e.command}),e=this.h.createDiv({text:e.output}),this.elements.outputArea.appendChild(t),this.elements.outputArea.appendChild(e))}appendOutput(e){e&&(0===this.elements.outputArea.children.length?this.elements.outputArea.textContent=e:this.elements.outputArea.appendChild(document.createTextNode(e)),this.elements.outputArea.scrollTop=this.elements.outputArea.scrollHeight)}clearOutput(){this.elements.outputArea.innerHTML=""}clearInput(){this.elements.commandInput.value=""}setInputValue(e){this.elements.commandInput.value=e||""}setEnabled(e){this.elements.commandInput.disabled=!e}updateState(e){this.elements.commandInput.dataset.state=e}clearFakeAttributes(){delete this.elements.commandInput.dataset[DATA_ATTRIBUTES.FAKE_COMMAND],delete this.elements.commandInput.dataset[DATA_ATTRIBUTES.FAKE_COMMENTS],delete this.elements.commandInput.dataset[DATA_ATTRIBUTES.FAKE_OUTPUT]}focusInput(){this.elements.commandInput.focus()}replaceLastLine(){var e=this.elements.outputArea.lastChild;e&&this.elements.outputArea.removeChild(e)}updatePrompt(e){this.elements.promptPath&&(e?(this.elements.promptPath.textContent=e,this.elements.pathRow.style.display="block"):this.elements.pathRow.style.display="none")}_createLayout(){this.elements.container=this.h.createDiv({cls:CSS_CLASSES.MAIN_PANE}),this.elements.outputArea=this.h.createDiv({cls:CSS_CLASSES.OUTPUT_AREA}),this.elements.inputArea=this.h.createDiv({cls:CSS_CLASSES.INPUT_AREA,style:{flexDirection:"column"}}),this.elements.pathRow=this.h.createDiv({cls:"gsc-st-path-row",style:{display:"none"}}),this.elements.promptPath=this.h.createSpan({cls:"gsc-st-prompt-path",text:""}),this.elements.pathRow.appendChild(this.elements.promptPath),this.elements.inputRow=this.h.createDiv({style:{display:"flex",alignItems:"center"}}),this.elements.promptSymbol=this.h.createSpan({cls:CSS_CLASSES.PROMPT_SYMBOL,text:"$>"}),this.elements.commandInput=this.h.createInput({cls:CSS_CLASSES.COMMAND_INPUT,type:"text",placeholder:"Type a command...",autocomplete:"off",dataset:{state:STATE_VALUES.IDLE}}),this.elements.inputRow.appendChild(this.elements.promptSymbol),this.elements.inputRow.appendChild(this.elements.commandInput),this.elements.inputArea.appendChild(this.elements.pathRow),this.elements.inputArea.appendChild(this.elements.inputRow),this.elements.container.appendChild(this.elements.outputArea),this.elements.container.appendChild(this.elements.inputArea)}_attachEvents(){this.elements.commandInput.addEventListener("keydown",e=>{var t,n;e.ctrlKey&&"l"===e.key?(e.preventDefault(),this.config.onClearScreen()):e.ctrlKey&&"i"===e.key?(e.preventDefault(),this.focusInput()):"Enter"===e.key?(t=this.elements.commandInput.value.trim())&&(n={[DATA_ATTRIBUTES.FAKE_COMMAND]:this.elements.commandInput.dataset[DATA_ATTRIBUTES.FAKE_COMMAND],[DATA_ATTRIBUTES.FAKE_COMMENTS]:this.elements.commandInput.dataset[DATA_ATTRIBUTES.FAKE_COMMENTS],[DATA_ATTRIBUTES.FAKE_OUTPUT]:this.elements.commandInput.dataset[DATA_ATTRIBUTES.FAKE_OUTPUT]},this.config.onExecute(t,n)):"ArrowUp"===e.key?(e.preventDefault(),this.config.onNavigate("up")):"ArrowDown"===e.key&&(e.preventDefault(),this.config.onNavigate("down"))})}}module.exports={MainView:MainView};

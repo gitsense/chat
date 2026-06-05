@@ -1,0 +1,20 @@
+{
+  "version": "1",
+  "owner": "gitsense",
+  "repo": "gsc-cli-contract",
+  "group_id": 805,
+  "branches": {
+    "main": {
+      "last_import": "2026-05-20T10:52:54-04:00",
+      "ref_chat_id": 26554,
+      "shadow": true,
+      "shadow_path": "/Users/terrchen/gitsense-chat/shadow-repos/gitsense/gsc-cli-contract/main",
+      "flags": {
+        "max_size": 0,
+        "include": "",
+        "exclude": "",
+        "include_binary": false
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+/*
+ * Component: GitSense Chat Admin LLM CLI (Dispatcher)
+ * Block-UUID: 8a9b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+ * Parent-UUID: eb56350b-10be-425c-8f68-083e2f13c47e
+ * Version: 1.7.0
+ * Description: Handles LLM model and provider management commands for GitSense Chat. Added flag support for non-interactive provider and model creation in add commands.
+ * Language: JavaScript
+ * Created-at: 2025-08-25T02:26:27.232Z
+ * Authors: Gemini 2.5 Flash Thinking (v1.0.0), Gemini 2.5 Flash Thinking (v1.1.0), Gemini 2.5 Flash Thinking (v1.2.0), GPT OSS 120B (v1.3.0), Claude 4.0 Sonnet (v1.3.1), GLM-4.7 (v1.3.2), GLM-4.7 (v1.4.0), GLM-4.7 (v1.5.0), DeepSeek V4 Pro (v1.6.0), GLM-4.7 (v1.7.0)
+ */
+
+
+const { Command } = require('commander');
+const program = new Command();
+
+program.name('gsc-admin llm')
+    .description('Manage LLM models and providers in chat-config.json.');
+
+// Register command modules
+require('./gsc-admin-llm-list')(program);
+require('./gsc-admin-llm-add')(program);
+require('./gsc-admin-llm-edit')(program);
+require('./gsc-admin-llm-remove')(program);
+require('./gsc-admin-llm-move')(program);
+
+program.parse(process.argv);
+
+// If no command is given, display help
+if (!process.argv.slice(2).length) {
+    program.outputHelp();
+}

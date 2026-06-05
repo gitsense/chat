@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "databases": [
+    {
+      "name": "Code Intent",
+      "database_name": "code-intent",
+      "description": "Code Intent",
+      "tags": [
+        "code-intent"
+      ],
+      "version": "1.0",
+      "created_at": "2026-05-13T13:27:07.407Z",
+      "updated_at": "2026-05-13T09:27:30.496235-04:00",
+      "source_file": "/Users/terrchen/Downloads/code-intent-20260513-092655.json"
+    }
+  ]
+}

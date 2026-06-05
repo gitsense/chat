@@ -1,0 +1,22 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * Licensed under the Fair Core License, Version 1.0 (FCL-1.0-ALv2).
+ * https://faircode.io
+ *
+ * You may use, modify, and run this software for internal, non-commercial
+ * purposes including personal projects, team workflows, and self-hosted
+ * deployments. You may not use this software to build or operate a product
+ * or service that competes directly or indirectly with GitSense Chat.
+ * Redistribution or resale is not permitted.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ *
+ * For licensing inquiries, internal-use exceptions, or business use,
+ * contact sales@gitsense.com
+ */
+
+let{ChatUtils,MessageUtils}=require("@gitsense/gsc-utils"),chatApi=require("../../../../../Dependencies").chatApi,updateConfig=require("../../../../../utils/updateConfig").updateConfig,SearchProgressRenderer=require("../../../components/SearchProgressRenderer").SearchProgressRenderer,handleSearchError=require("../../searchUtils/errorHandler").handleSearchError,CHAT_NAME_PREFIX=require("../constants").CHAT_NAME_PREFIX,{SEARCH_EXECUTION_ORCHESTRATION,RESULTS_REVIEW_ORCHESTRATION,ERROR}=require("../../../../../../common/gitsense/searchStates"),STATE_TYPE=SEARCH_EXECUTION_ORCHESTRATION;async function initiate(s,n,o,c,u){var{widget:d,chat:e}=c,t=n.states||[],h=t[t.length-1];if(h.type!==STATE_TYPE||null!==h.started_at||null!==h.finished_at)t="Invalid state for initiate: "+h.type,await handleSearchError(s,n,h,t,o,c,u);else try{h.started_at=(new Date).toISOString(),await updateConfig(s,n,c),h.progress={current:0,total:h.queries_to_execute?.length||0,totalMatches:0},u.startStage(h.type);var l=h.queries_to_execute,_=h.user_query,g=h.parent_thinking_chat_id,p=h.parent_thinking_chat_uuid;if(Array.isArray(l)&&0!==l.length)if(_&&g&&p){var E={parentId:e.id,name:`${CHAT_NAME_PREFIX} ${s.id} - State: `+h.type,model:"Notes",temperature:0,messages:[{role:"assistant",message:JSON.stringify({queries:l})}]};let a;try{a=await chatApi.newChat(d,E)}catch(e){var S="Failed to create results chat: "+e.message;return void await handleSearchError(s,n,h,S,o,c,u)}h.raw_results_chat_uuid=a.uuid;let r=a.messages[0].id;var T=l.length;let i=0;for(let t=0;t<T;t++){var f,w=(new Date).getTime(),y=l[t],R=d.dataURL,C=new URLSearchParams,m=(C.set("action","search"),C.set("query",y.query),C.set("profile",y.type),R+"?"+C.toString());let e;try{var A=await fetch(m);if(!A.ok)throw new Error(`HTTP status ${A.status}: `+A.statusText);e=await A.json()}catch(e){var O=`Backend search for type "${y.type}" failed: `+e.message;return void await handleSearchError(s,n,h,O,o,c,u)}if("success"!==e.status)return f=`Backend search for type "${y.type}" returned status 'failed': `+(e.error||"Unknown error"),void await handleSearchError(s,n,h,f,o,c,u);var q=await chatApi.newChatMessage(d,a.id,r,"Notes","assistant",JSON.stringify(e.data)),I=(r=q.message.id,h.progress.current=t+1,e.data?.totalCounts?.totalResults||0),v=(h.progress.totalMatches+=I,await updateConfig(s,n,c),parseInt((((new Date).getTime()-w)/1e3).toFixed(1)));i+=v,u.updateStageProgress(h.type,`(${t+1}/${T} - ${i} seconds)`)}h.finished_at=(new Date).toISOString();var N={type:RESULTS_REVIEW_ORCHESTRATION,created_at:(new Date).toISOString(),started_at:null,finished_at:null,raw_results_chat_uuid:a.uuid,user_query:_,final_queries:l,parent_thinking_chat_id:g,parent_thinking_chat_uuid:p};n.states.push(N),await updateConfig(s,n,c),u.completeStage(h.type,`(${T}/${T} - ${i} seconds)`),c.updateChat&&"function"==typeof c.updateChat?c.updateChat():console.warn("searchExecutionOrchestrator.initiate: Unable to update chat since it is not defined in the context")}else await handleSearchError(s,n,h,"Missing required data in state object (user_query, parent_thinking_chat_id, or parent_thinking_chat_uuid). Workflow error.",o,c,u);else await handleSearchError(s,n,h,"No queries to execute found in state data.",o,c,u)}catch(e){console.error("searchExecutionOrchestrator.initiate: Unhandled error:",e),await handleSearchError(s,n,h,e.message||"An unexpected error occurred during search execution.",o,c,u)}}async function monitor(){console.warn("searchExecutionOrchestrator.monitor: This method should not be called")}module.exports={initiate:initiate,monitor:monitor,STATE_TYPE:STATE_TYPE};

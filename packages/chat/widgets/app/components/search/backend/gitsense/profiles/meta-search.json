@@ -1,0 +1,34 @@
+{
+    "name": "meta-search",
+    "description": "Profile for searching based on analyzer extracted metadata.",
+    "version": "1.1.0",
+    "keywords": ["metadata", "filter", "analyzer"],
+    "defaults": {
+        "targets": ["messages"],
+        "scope": "all-chats",
+        "filters": {
+            "chat.type": "git-blob"
+        },
+        "nullFilters": {},
+        "notNullFilters": {},
+        "options": {},
+        "sortBy": [],
+        "pagination": {
+            "limit": null,
+            "offset": 0
+        },
+        "outputs": {
+            "topLevel": ["result_chat_id"],
+            "messages": [
+                "messages.id",
+                "messages.type",
+                "messages.chat_id",
+                "messages.updated_at",
+                "messages.meta.git_repo",
+                "messages.meta.git_path",
+                "messages.meta.file_name",
+                "messages.meta.file_extension"
+            ]
+        }
+    }
+}

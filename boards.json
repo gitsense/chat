@@ -1,0 +1,18 @@
+{
+    "header": {
+        "show": false
+    },
+    "menu": {
+        "boards": [
+            { "fullName": "chat.app", "default": true }
+        ]
+    },
+    "quickLinks": {
+        "boards": [ 
+            {
+                "fullName": "chat.app",
+                "default": true
+            }
+        ]
+    }
+}

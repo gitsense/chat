@@ -1,0 +1,54 @@
+{
+    "name": "context-builder-search-filter",
+    "description": "Search profile for the Context Builder modal filter, targeting git-blob messages.",
+    "version": "1.0.0",
+    "keywords": ["context-builder", "search-filter", "git-blob", "messages"],
+    "defaults": {
+        "targets": ["messages"],
+        "scope": "all-chats",
+        "filters": {
+            "msg-type": ["git-blob"]
+        },
+        "nullFilters": [],
+        "notNullFilters": [],
+        "options": {
+            "caseSensitive": false,
+            "wildcard": "implicit",
+            "limit": 500,
+            "offset": 0
+        },
+        "pagination": {
+            "limit": 500,
+            "offset": 0
+        },
+        "outputs": {
+            "messages": [
+                "messages.chat_id",
+                "chat_path"
+            ]
+        }
+    },
+    "emptySearchOutputs": {
+        "messages": [
+            "messages.id",
+            "chat_path"
+        ]
+    },
+    "sortBy": [
+        {
+            "field": "messages.updated_at",
+            "direction": "desc"
+        }
+    ],
+    "emptySearchSortBy": {
+        "messages": [
+            {
+                "field": "messages.updated_at",
+                "direction": "desc"
+            }
+        ]
+    },
+    "rankingPreferences": {
+        "description": "Default ranking preferences for context builder search filter results."
+    }
+}

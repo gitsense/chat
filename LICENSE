@@ -1,0 +1,21 @@
+LICENSE
+
+Copyright (c) 2026 GitSense
+
+This software is licensed under the Fair Core License, Version 1.0 (FCL-1.0).
+
+The full license terms are being finalized. The governing intent is as follows:
+
+  - You may use, modify, and run this software for internal, non-commercial
+    purposes including personal projects, team workflows, and self-hosted
+    deployments.
+
+  - You may not use this software, in whole or in part, to build or operate
+    a product or service that competes directly or indirectly with GitSense Chat.
+
+  - Redistribution or resale of this software is not permitted.
+
+The finalized license text will be published at:
+https://github.com/gitsense/chat/blob/main/LICENSE
+
+For licensing inquiries, contact: terrchen@gitsense.com

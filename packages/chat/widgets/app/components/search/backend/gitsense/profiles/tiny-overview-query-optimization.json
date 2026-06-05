@@ -1,0 +1,97 @@
+{
+    "name": "tiny-overview-query-optimization",
+    "description": "Search profile for the tiny overview query optimization stage, targeting 'tiny overview' messages within specific git-related chat types and returns the full overview content, including keywords, to find relevant files.",
+    "version": "1.4.0",
+    "keywords": ["tiny overview", "optimization", "messages", "file identification", "git"],
+    "defaults": {
+        "targets": ["messages"],
+        "scope": "all-chats",
+        "filters": {
+            "messages.type": "tiny-overview::file-content::default",
+            "chats.type": [
+                "git-repository",
+                "git-repo-owner",
+                "git-blob",
+                "git-tree",
+                "git-commit",
+                "git-diff"
+            ]
+        },
+        "nullFilters": [],
+        "notNullFilters": [
+            "messages.meta.file_path"
+        ],
+        "options": {
+            "caseSensitive": false,
+            "wildcard": "implicit"
+        },
+        "sortBy": [
+            {
+                "field": "fts_rank",
+                "direction": "asc"
+            }
+        ],
+        "pagination": {
+            "limit": 200,
+            "offset": 0
+        },
+        "outputs": {
+            "messages": [
+                "messages.id",
+                "messages.chat_id",
+                "messages.type",
+                "messages.role",
+                "messages.message",
+                "messages.meta",
+                "messages.blob_id",
+                "messages.created_at",
+                "messages.updated_at",
+                "messages.modified_at",
+                "messages.meta.purpose",
+                "messages.meta.file_path",
+                "messages.meta.file_name",
+                "messages.meta.file_extension",
+                "messages.meta.git_repo",
+                "messages.meta.published_date",
+                "messages.meta.release_version",
+                "messages.meta.title",
+                "messages.meta.document_type",
+                "messages.meta.language",
+                "messages.meta.issue_number",
+                "messages.meta.state",
+                "messages.meta.author",
+                "messages.meta.assignees",
+                "messages.meta.labels",
+                "chats.meta.commit.timestamp",
+                "chats.name",
+                "groups.name"
+            ]
+        }
+    },
+    "emptySearchOutputs": {
+        "messages": [
+            "messages.id",
+            "messages.chat_id",
+            "messages.type",
+            "messages.role",
+            "messages.created_at",
+            "messages.updated_at",
+            "chats.name",
+            "chat_path",
+            "messages.meta.purpose",
+            "messages.meta.file_path",
+            "messages.meta.git_repo"
+        ]
+    },
+    "emptySearchSortBy": {
+        "messages": [
+            {
+                "field": "messages.updated_at",
+                "direction": "desc"
+            }
+        ]
+    },
+    "rankingPreferences": {
+        "description": "Ranking preferences for tiny overview results."
+    }
+}

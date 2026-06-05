@@ -1,0 +1,89 @@
+{
+    "models": [ ],
+    "prompts": [
+        {
+            "type": "system",
+            "name": "Coding Assistant",
+            "file": "coding-assistant.md",
+            "default": true
+        }
+    ],
+    "providers": [
+        {
+            "name": "Anthropic",
+            "apiKeyName": "ANTHROPIC_API_KEY"
+        },
+        {
+            "name": "Cerebras",
+            "apiKeyName": "CEREBRAS_API_KEY",
+            "baseURL": "https://api.cerebras.ai/v1"
+        },
+        {
+            "name": "DeepInfra",
+            "apiKeyName": "DEEPINFRA_API_KEY",
+            "baseURL": "https://api.deepinfra.com/v1/openai"
+        },
+        {
+            "name": "DeepSeek",
+            "apiKeyName": "DEEPSEEK_API_KEY",
+            "baseURL": "https://api.deepseek.com"
+        },
+        {
+            "name": "Google",
+            "apiKeyName": "GEMINI_API_KEY",
+            "baseURL": "https://generativelanguage.googleapis.com/v1beta/openai"
+        },
+        {
+            "name": "Groq",
+            "apiKeyName": "GROQ_API_KEY",
+            "baseURL": "https://api.groq.com/openai/v1"
+        },
+        {
+            "name": "OpenAI",
+            "apiKeyName": "OPENAI_API_KEY"
+        },
+        {
+            "name": "OpenRouter",
+            "apiKeyName": "OPENROUTER_API_KEY",
+            "baseURL": "https://openrouter.ai/api/v1"
+        },
+        {
+            "name": "together.ai",
+            "apiKeyName": "TOGETHER_API_KEY",
+            "baseURL": "https://api.together.xyz/v1"
+        },
+        {
+            "name": "Mistral",
+            "apiKeyName": "MISTRAL_API_KEY",
+            "baseURL": "https://api.mistral.ai"
+        }
+    ],
+    "cache": {
+        "maxTime": {
+            "getChats": "25h",
+            "getReport": "500ms"
+        }
+    },
+    "history": {
+        "rowsPerPage": 20
+    },
+    "permissions": {
+        "deleteChat": true,
+        "deleteChatMessage": true,
+        "editChatMessage": true
+    },
+    "defaultTemperature": 0,
+    "defaultModelCanBeUsedForAnalyzing": true,
+    "generateChatTitle": {
+        "enable": true,
+        "model": "default"
+    },
+    "maxChatCompletionSize": null,
+    "noProviderFatal": true,
+    "importData": {
+        "dropzone": {
+            "maxSize": 1048576,
+            "maxFiles": 10
+        }
+    }
+}

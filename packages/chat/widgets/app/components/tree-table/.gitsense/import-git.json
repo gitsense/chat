@@ -1,0 +1,18 @@
+{
+  "version": "1",
+  "owner": "gitsense",
+  "repo": "gsc-tree-table",
+  "branches": {
+    "main": {
+      "last_import": "2026-05-14T09:43:32-04:00",
+      "ref_chat_id": 3811,
+      "shadow": false,
+      "flags": {
+        "max_size": 0,
+        "include": "",
+        "exclude": "",
+        "include_binary": false
+      }
+    }
+  }
+}

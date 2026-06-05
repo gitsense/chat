@@ -1,0 +1,20 @@
+{
+  "version": "1",
+  "owner": "gitsense",
+  "repo": "chat-builder",
+  "group_id": 684,
+  "branches": {
+    "main": {
+      "last_import": "2026-06-01T09:19:10-04:00",
+      "ref_chat_id": 40737,
+      "shadow": true,
+      "shadow_path": "/Users/terrchen/gitsense-chat/shadow-repos/gitsense/chat-builder/main",
+      "flags": {
+        "max_size": 0,
+        "include": "",
+        "exclude": "",
+        "include_binary": false
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "version": "1",
+  "owner": "gitsense",
+  "repo": "gsc-claude-code",
+  "group_id": 804,
+  "branches": {
+    "main": {
+      "last_import": "2026-05-25T07:56:22-04:00",
+      "ref_chat_id": 26479,
+      "shadow": true,
+      "shadow_path": "/Users/terrchen/gitsense-chat/shadow-repos/gitsense/gsc-claude-code/main",
+      "flags": {
+        "max_size": 0,
+        "include": "",
+        "exclude": "",
+        "include_binary": false
+      }
+    }
+  }
+}

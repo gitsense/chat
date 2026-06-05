@@ -1,0 +1,210 @@
+<!--
+Component: GitSense Chat README
+Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
+Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
+Version: 4.2.0
+Description: Restructured README to place "See It in Action" as a subsection under "The 30-Second Proof", updated Portable Intelligence section with two concrete examples (code-intent and owners), and refined the narrative flow.
+Language: Markdown
+Created-at: 2026-02-21T19:30:05.899Z
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0)
+-->
+
+
+# GitSense Chat: Make Agents Smarter
+
+Agents are only as smart as the context they can find. GitSense Chat turns ordinary files into structured, explainable intelligence that agents can query before they open, edit, or reason about a repository.
+
+Describe what matters in plain language, apply that reasoning across your files, and reuse the results across humans, tools, and agents. Instead of spending tokens rediscovering the same context, your agents can work from intelligence that travels with the content itself: flagged, categorized, searchable, and explainable on demand.
+
+No RAG pipeline, coding project, or AI team required.
+
+## Context Without Complexity
+
+You just need your files and an understanding of what you want to find. GitSense Chat handles the prompt engineering, batching, model selection, and reuse strategy so agents can work across large collections without reanalyzing everything from scratch. Filter what needs reanalysis, set your batch size, and pick the right model for the job.
+
+- **Students:** flag what matters in notes using your own words, not keywords
+- **Accountants:** surface suspicious patterns across thousands of financial records
+- **Lawyers:** tag documents by matter, status, or attorney across an entire case repository
+- **Developers:** capture why a pattern is wrong once and apply that reasoning across an entire codebase
+
+## The CLI
+
+The CLI is how humans and agents interact with the intelligence you build. `gsc` is the terminal half of GitSense Chat. Install it with:
+
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
+
+Or [build it yourself](https://github.com/gitsense/gsc-cli).
+
+**Using a coding agent?** Install the CLI, then run `gsc docs help` in your agent session, and let it guide you through the rest.
+
+## The 30-Second Proof
+
+See what a smarter file looks like in 30 seconds.
+
+Install the CLI and compare a standard search with a GitSense-enriched search. We'll use the `smart-ripgrep` repository, a fork of `BurntSushi/ripgrep` enhanced with one example intelligence layer: `code-intent`.
+
+```bash
+# Clone the smart repository
+git clone https://github.com/gitsense/smart-ripgrep
+
+# Enter the directory
+cd smart-ripgrep
+
+# Create the code-intent intelligence database ("The Brain")
+gsc manifest import code-intent
+
+# Search with standard ripgrep
+rg cache
+
+# Search with ripgrep enriched with GitSense intelligence
+gsc rg --db code-intent --fields purpose cache
+```
+
+Notice how the search result answers questions that would normally require opening the file. What is this code for? Is it relevant? Why does it exist?
+
+## Amplify Humans
+
+Humans are good at intent. Agents are good at scale. GitSense connects the two.
+
+Humans know the domain, the real question, and the language that matters. Agents can scan hundreds of short clues faster than a human can during an interactive coding session. The missing piece is a cheap way to give the agent useful clues before it opens files.
+
+In the hands-on exercise below, we will use a `code-intent` Brain, which attaches purpose metadata to files, to help a human guide an agent toward the right files faster and with less wandering.
+
+**Set up the repository.**
+
+```bash
+git clone https://github.com/gitsense/smart-codex
+cd smart-codex
+gsc manifest import code-intent
+```
+
+**Initialize your agent.**
+
+Start your coding agent in that repository, then run:
+
+```text
+! gsc experts init
+```
+
+**Lead, don't follow.**
+
+```text
+I want to know how to add skills programmatically to the OpenAI Codex CLI with a script or program.
+
+I know that searching for "skills" will return a lot of matches, so use `gsc rg` with `--summary` to avoid opening file contents too early. I also want files where skills are mentioned more than three times, so use `--min-matches 3`.
+
+Use the search results to identify the 10 most relevant files to consider for review.
+```
+
+The agent should converge on a command like this:
+
+```bash
+gsc rg -i "skills*" --db code-intent --fields purpose,keywords --summary --min-matches 3
+```
+
+In this repository, that search returns thousands of matches across nearly two hundred files. With GitSense, the result is still manageable because the agent sees file paths, match counts, keywords, and purpose sentences instead of raw file contents.
+
+That is the collaboration shift: the human guides by intent, GitSense supplies purpose context, and the agent does the fast triage before opening files.
+
+The point is not to replace human judgment. It is to give agents enough structured context to help humans make better decisions faster.
+
+## Portable Intelligence
+
+An Analyzer extracts structured knowledge from your repository. A Manifest packages that knowledge so it travels with the repository, independently from the data itself.
+
+A manifest can be published by the repository owner, downloaded by a developer, or regenerated nightly by a CI job. It can ship with the repository in a `.gitsense/manifests/` directory or be hosted externally and imported by URL.
+
+Manifests are plain JSON files - inspectable, committable, and importable with the open-source `gsc` CLI. You're not locked into GitSense Chat to use the intelligence you create.
+
+**Discovery in an unfamiliar codebase.**
+
+A code intent analyzer reads each file and records its purpose and when you'd want to change it. Here we import a pre-built manifest for ripgrep and search with that context attached to every result.
+
+```bash
+git clone https://github.com/BurntSushi/ripgrep
+cd ripgrep
+gsc manifest import https://chat.gitsense.com/--/manifests/BurntSushi/ripgrep/code-intent
+gsc rg --db code-intent --fields purpose cache
+```
+
+**Ownership in a large internal repository.**
+
+An owners analyzer maps files to the teams or people responsible for them, using a reference file you define in GitSense Chat. Once the manifest is imported, any agent on the team can answer ownership questions instantly.
+
+```bash
+# Import the owners manifest shipped with this repository
+gsc manifest import owners
+
+# Start your coding agent and let it know about portable intelligence
+> ! gsc experts init
+
+# Now ask your question
+> Tell me what files are owned by the payments team
+```
+
+**Ownership at a law firm. The same idea, but no code involved.**
+
+A law firm stores case files, contracts, and briefs in a repository. An Analyzer tags each document with the matter it belongs to, the attorney of record, and its review status. The manifest travels with the repository, so anyone on the team can query it instantly.
+
+```bash
+# Import the matter-owners manifest for this case repository
+gsc manifest import matter-owners
+
+# Start your agent and execute
+> ! gsc experts init
+
+# Now ask your question
+> Which files belong to the Henderson matter?
+> Show me everything still pending partner review
+```
+
+The same pattern works anywhere people manage large collections of documents and need to know who owns what, what stage things are in, or what is still outstanding. Git is just a reliable way to package, version and share that knowledge.
+
+Analyzers can capture any knowledge your team needs to carry with the repository: security patterns, code ownership, migration status, architectural intent, implicit technical debt, or anything else that lives in the repository but is hard to find with keyword search.
+
+## Quick Start
+
+GitSense is a two part system. The Chat App is where you build and package intelligence. The CLI is how you put it to work in your terminal and agent sessions.
+
+Get the app running in three commands:
+
+```bash
+# 1. Install the CLI
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+
+# 2. Install the App
+gsc app native install
+
+# 3. Start the App
+gsc app native start
+```
+
+Open **http://localhost:3357** in your browser.
+
+Once the CLI is installed, run `gsc docs help` inside your agent session for guided setup, troubleshooting, and product-specific questions.
+
+## What to Build First
+
+Start with one question your team keeps answering by hand. Build an Analyzer for it, run it across a repository, and let your agent query the result. That's the shift: from searching harder to working with intelligence your repository carries forward.
+
+The **Code Smarter 101** guide in the app walks through building your first Analyzer step by step, using an Implicit TODO Finder as the example — an Analyzer that surfaces work items buried in comments that `grep TODO` would never catch. When it comes time to create the manifest, the guide packages the TODO findings alongside purpose metadata from a separate code intent Analyzer. Two focused Analyzers, one manifest, better results than either could produce alone.
+
+## License
+
+The **`gsc` CLI** is open source — licensed under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) and available at [github.com/gitsense/gsc-cli](https://github.com/gitsense/gsc-cli). Apache 2.0 means anyone can use, modify, and distribute `gsc` freely for personal or commercial purposes, but attribution to GitSense must be preserved. The origin of the tool stays on the record regardless of where it travels.
+
+**Manifests** are plain JSON files built on an open format. You are free to create, modify, and distribute manifests for any purpose — personal or commercial. The format is documented and not owned by GitSense. Build your own tooling around it, generate manifests in your own pipelines, or ship them with your repositories without restriction.
+
+**GitSense Chat** (this repository) is licensed under the **[Fair Core License (FCL-1.0-ALv2)](https://faircode.io)**.
+
+The short version: you're welcome to use, modify, and run GitSense Chat internally — for personal projects, team workflows, or self-hosted deployments. What you may not do is use it to build or operate a product or service that competes directly with GitSense Chat.
+
+**Why not a permissive license?**
+
+GitSense Chat is the product that funds this project. A permissive license like MIT or Apache 2.0 would allow anyone to take this code, wrap it in a competing service, and undercut the very work that keeps GitSense Chat alive and improving. The FCL exists precisely for this situation — it keeps the source open and usable for the vast majority of users, while protecting the project from being used against itself.
+
+If you're a developer, researcher, or team using GitSense Chat to do your own work, the license doesn't affect you. If you're unsure whether your use case qualifies, contact [terrchen@gitsense.com](mailto:terrchen@gitsense.com) before building.
+
+The core application ships as minified source to protect against direct competition while the project is in its early stages. As GitSense Chat matures, we intend to open the source further. The `gsc` CLI and manifest format are already fully open.

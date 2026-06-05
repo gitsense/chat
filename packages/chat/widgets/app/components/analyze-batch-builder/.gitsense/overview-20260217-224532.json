@@ -1,0 +1,1459 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-02-17T03:45:40.393Z",
+  "manifest": {
+    "name": "overview",
+    "database_name": "overview",
+    "description": "overview",
+    "tags": [
+      "overview"
+    ]
+  },
+  "repositories": [
+    {
+      "ref": "R0",
+      "name": "gitsense/gsc-analyze-batch-builder"
+    }
+  ],
+  "branches": [
+    {
+      "ref": "B0",
+      "name": "main"
+    }
+  ],
+  "analyzers": [
+    {
+      "ref": "A0",
+      "id": "tiny-overview::file-content::default",
+      "name": "Tiny Overview Analyzer",
+      "description": "Generates a concise purpose and a hierarchical set of keywords for files, optimized for high-speed triage and discovery in large repositories.",
+      "version": "1.2.0"
+    }
+  ],
+  "fields": [
+    {
+      "ref": "F0",
+      "name": "purpose",
+      "type": "string",
+      "display_name": "Purpose",
+      "description": "A single, concise sentence describing the file's primary role and responsibility.",
+      "analyzer_ref": "A0"
+    },
+    {
+      "ref": "F1",
+      "name": "keywords",
+      "type": "array",
+      "display_name": "Keywords",
+      "description": "An array of 5-10 specific, highly relevant keywords or short phrases directly found in or inferred from the file's content. Prioritize technical terms, domain-specific concepts, and key identifiers. Avoid generic words unless they are central to the file's purpose.",
+      "analyzer_ref": "A0"
+    },
+    {
+      "ref": "F2",
+      "name": "parent_keywords",
+      "type": "array",
+      "display_name": "Parent Keywords",
+      "description": "An array of 2-5 broader, categorical keywords that group the more specific `keywords`. If a keyword mapping file was provided, use it to determine parent keywords; otherwise, infer them based on context and domain knowledge. For example, if `keywords` contains `[\"oauth2\", \"jwt\", \"bearer-token\"]`, `parent_keywords` might contain `[\"authentication\", \"security\"]`.",
+      "analyzer_ref": "A0"
+    },
+    {
+      "ref": "F3",
+      "name": "key_entities",
+      "type": "array",
+      "display_name": "Key Entities",
+      "description": "A list of the most important named components within the file. For code, this would be class names, function names, or module names. For a document, it could be the names of key concepts, sections, or referenced projects.",
+      "analyzer_ref": "A0"
+    }
+  ],
+  "data": [
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "views/BatchesView.js",
+      "language": "javascript",
+      "chat_id": 5370,
+      "fields": {
+        "F0": "Orchestrates the batch analysis view by rendering and managing the BatchAnalysisSection.",
+        "F1": [
+          "BatchesView",
+          "BatchAnalysisSection",
+          "view orchestration",
+          "batch analysis",
+          "state management",
+          "UI rendering",
+          "cleanup"
+        ],
+        "F2": [
+          "Views",
+          "UI Components",
+          "Batch Management"
+        ],
+        "F3": [
+          "BatchesView",
+          "BatchAnalysisSection"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "views/ConfigurationView.js",
+      "language": "javascript",
+      "chat_id": 5371,
+      "fields": {
+        "F0": "Orchestrates the configuration view by rendering and managing multiple sections to set up analysis parameters.",
+        "F1": [
+          "ConfigurationView",
+          "AnalyzerSection",
+          "FilesToAnalyzeSection",
+          "FiltersSection",
+          "BatchConfigSection",
+          "view orchestration",
+          "configuration setup",
+          "completion status"
+        ],
+        "F2": [
+          "Views",
+          "UI Components",
+          "Configuration"
+        ],
+        "F3": [
+          "ConfigurationView",
+          "AnalyzerSection",
+          "ReferenceFilesSection",
+          "FilesToAnalyzeSection",
+          "FiltersSection",
+          "BatchConfigSection"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "views/ForkView.js",
+      "language": "javascript",
+      "chat_id": 5372,
+      "fields": {
+        "F0": "Orchestrates the fork configuration view within the AnalyzeBatchBuilder, rendering the ForkConfig component and managing its lifecycle, visibility, and state updates.",
+        "F1": [
+          "ForkView",
+          "ForkConfig",
+          "view orchestration",
+          "UI rendering",
+          "state management",
+          "cleanup",
+          "visibility",
+          "AnalyzeBatchBuilder"
+        ],
+        "F2": [
+          "UI Components",
+          "Views",
+          "Configuration"
+        ],
+        "F3": [
+          "ForkView",
+          "ForkConfig"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "utils/BatchGrouper.js",
+      "language": "javascript",
+      "chat_id": 5374,
+      "fields": {
+        "F0": "Core utility class responsible for grouping files into analysis batches based on configurable limits (tokens, size, count) and language, while handling reference items and duplicate exclusion.",
+        "F1": [
+          "BatchGrouper",
+          "file grouping",
+          "batch creation",
+          "token limits",
+          "size limits",
+          "language grouping",
+          "reference items",
+          "duplicate removal"
+        ],
+        "F2": [
+          "Utilities",
+          "Batch Processing",
+          "Logic"
+        ],
+        "F3": [
+          "BatchGrouper",
+          "groupFiles",
+          "_groupByLanguage",
+          "_createBatches"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "utils/BatchGroupMessageFormatter.js",
+      "language": "javascript",
+      "chat_id": 5375,
+      "fields": {
+        "F0": "Utility class that formats comprehensive chat messages for batch analysis groups, structuring configuration details, statistics, and file overviews into a readable report.",
+        "F1": [
+          "BatchGroupMessageFormatter",
+          "message formatting",
+          "chat reporting",
+          "statistics formatting",
+          "configuration display",
+          "JSON serialization",
+          "batch summary"
+        ],
+        "F2": [
+          "Utilities",
+          "Reporting",
+          "Formatting"
+        ],
+        "F3": [
+          "BatchGroupMessageFormatter",
+          "formatBatchGroupMessage"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "utils/helpers.js",
+      "language": "javascript",
+      "chat_id": 5376,
+      "fields": {
+        "F0": "Utility module providing DOM manipulation helpers, UI element creation, and core filtering logic for file analysis batches based on metadata like language, size, and timestamps.",
+        "F1": [
+          "DOM creation",
+          "filtering logic",
+          "file metadata",
+          "UI helpers",
+          "time conversion",
+          "language counts",
+          "token calculation",
+          "button/link management"
+        ],
+        "F2": [
+          "Utilities",
+          "UI Components",
+          "Data Processing"
+        ],
+        "F3": [
+          "createSectionHeader",
+          "formatFileNames",
+          "createLink",
+          "createButton",
+          "convertTimeFilterToUnixTimestamp",
+          "applyFilters"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "utils/StateManager.js",
+      "language": "javascript",
+      "chat_id": 5377,
+      "fields": {
+        "F0": "Central state management class responsible for persisting, restoring, and validating the configuration and batch job status of the AnalyzeBatchBuilder tool within chat messages.",
+        "F1": [
+          "State persistence",
+          "tool blocks",
+          "serialization",
+          "deserialization",
+          "batch job validation",
+          "pruning",
+          "legacy support",
+          "state restoration",
+          "chat API"
+        ],
+        "F2": [
+          "State Management",
+          "Data Persistence",
+          "Architecture"
+        ],
+        "F3": [
+          "StateManager",
+          "save",
+          "restore",
+          "_pruneItems",
+          "_validateAndRestoreBatchJobs"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "ui/Header.js",
+      "language": "javascript",
+      "chat_id": 5379,
+      "fields": {
+        "F0": "Reusable UI component that renders section headers with titles and optional collapsible help text to improve user guidance within the interface.",
+        "F1": [
+          "UI component",
+          "header rendering",
+          "help text",
+          "collapsible UI",
+          "DOM manipulation",
+          "user guidance",
+          "section header"
+        ],
+        "F2": [
+          "UI Components",
+          "User Interface"
+        ],
+        "F3": [
+          "Header",
+          "render",
+          "_handleHelpToggle"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "ui/TabBar.js",
+      "language": "javascript",
+      "chat_id": 5380,
+      "fields": {
+        "F0": "A reusable UI component that renders a navigation bar with status indicators and completion counters, allowing users to switch between different application views.",
+        "F1": [
+          "TabBar",
+          "navigation",
+          "UI component",
+          "status indicators",
+          "tab switching",
+          "active tab",
+          "visibility",
+          "DomUtils"
+        ],
+        "F2": [
+          "UI",
+          "Navigation",
+          "Components"
+        ],
+        "F3": [
+          "TabBar",
+          "_renderTab",
+          "_handleTabClick",
+          "updateTab",
+          "setActiveTab"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/ReferenceFilesSection/constants.js",
+      "language": "javascript",
+      "chat_id": 5383,
+      "fields": {
+        "F0": "Defines static configuration, text labels, and CSS class names used by the Reference Files section of the batch builder interface.",
+        "F1": [
+          "constants",
+          "text labels",
+          "CSS classes",
+          "reference files",
+          "configuration",
+          "UI strings"
+        ],
+        "F2": [
+          "Configuration",
+          "UI Constants",
+          "Reference Files"
+        ],
+        "F3": [
+          "TEXT",
+          "CSS_CLASSES",
+          "DEFAULT_CONFIG"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/ReferenceFilesSection/index.js",
+      "language": "javascript",
+      "chat_id": 5384,
+      "fields": {
+        "F0": "Orchestrates the Reference Files section, managing the display of file selection and summary views while handling state updates and user interactions.",
+        "F1": [
+          "ReferenceFilesSection",
+          "orchestrator",
+          "state management",
+          "view rendering",
+          "callbacks",
+          "Selection",
+          "Summary",
+          "Header"
+        ],
+        "F2": [
+          "UI Logic",
+          "Section Management",
+          "Reference Files"
+        ],
+        "F3": [
+          "ReferenceFilesSection",
+          "render",
+          "update",
+          "_handleSaveClick",
+          "_handleChangeClick"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/ReferenceFilesSection/Selection.js",
+      "language": "javascript",
+      "chat_id": 5385,
+      "fields": {
+        "F0": "This component manages the user interface for selecting reference files that provide context for analysis.",
+        "F1": [
+          "reference files",
+          "selection",
+          "RepositoriesBrowser",
+          "UI component",
+          "file selection",
+          "context",
+          "batch builder",
+          "state management"
+        ],
+        "F2": [
+          "UI Components",
+          "Configuration",
+          "File Management"
+        ],
+        "F3": [
+          "Selection",
+          "RepositoriesBrowser",
+          "handleSelectFilesClick",
+          "handleSaveClick"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/ReferenceFilesSection/Summary.js",
+      "language": "javascript",
+      "chat_id": 5386,
+      "fields": {
+        "F0": "This component displays a summary of selected reference files, including file counts, token consumption estimates, and a detailed table view.",
+        "F1": [
+          "summary",
+          "reference files",
+          "token count",
+          "GitFilesTable",
+          "file list",
+          "display",
+          "metadata",
+          "toggle visibility"
+        ],
+        "F2": [
+          "UI Components",
+          "Reporting",
+          "File Management"
+        ],
+        "F3": [
+          "Summary",
+          "GitFilesTable",
+          "calculateTokenCount",
+          "transformData"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/FiltersSection/constants.js",
+      "language": "javascript",
+      "chat_id": 5388,
+      "fields": {
+        "F0": "This file defines the static configuration, text labels, and default filter options for the file filtering section.",
+        "F1": [
+          "constants",
+          "filters",
+          "configuration",
+          "text labels",
+          "time filters",
+          "analyzed status",
+          "languages",
+          "default config"
+        ],
+        "F2": [
+          "Configuration",
+          "Data Definitions",
+          "Filters"
+        ],
+        "F3": [
+          "TEXT",
+          "CSS_CLASSES",
+          "FILTER_OPTIONS",
+          "DEFAULT_FILTER_CONFIG"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/FiltersSection/index.js",
+      "language": "javascript",
+      "chat_id": 5389,
+      "fields": {
+        "F0": "Orchestrates the Filters section UI, managing state transitions between editing and read-only modes while handling filter persistence.",
+        "F1": [
+          "FiltersSection",
+          "orchestrator",
+          "state management",
+          "Selection view",
+          "Summary view",
+          "UI controller",
+          "filter persistence",
+          "callbacks"
+        ],
+        "F2": [
+          "UI Components",
+          "State Management",
+          "Filters"
+        ],
+        "F3": [
+          "FiltersSection",
+          "Selection",
+          "Summary",
+          "Header"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/FiltersSection/Selection.js",
+      "language": "javascript",
+      "chat_id": 5390,
+      "fields": {
+        "F0": "Provides the editing interface for filter configuration, rendering dropdowns and checkboxes for status, time, size, and language settings.",
+        "F1": [
+          "Selection",
+          "filter configuration",
+          "form inputs",
+          "dropdowns",
+          "checkboxes",
+          "language selection",
+          "file size",
+          "UI controls"
+        ],
+        "F2": [
+          "UI Components",
+          "Forms",
+          "Filters"
+        ],
+        "F3": [
+          "Selection",
+          "createDropdownFilter",
+          "createLanguageCheckboxes"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/FiltersSection/Summary.js",
+      "language": "javascript",
+      "chat_id": 5391,
+      "fields": {
+        "F0": "Displays a read-only summary of applied filter settings, showing the count of matched files and listing active criteria with options to modify or clear them.",
+        "F1": [
+          "Summary",
+          "filter summary",
+          "read-only view",
+          "filter criteria",
+          "file count",
+          "collapsible details",
+          "display logic"
+        ],
+        "F2": [
+          "UI Components",
+          "Filters",
+          "Display"
+        ],
+        "F3": [
+          "Summary",
+          "_createSummaryList",
+          "_calculateFilteredCount"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/FilesToAnalyzeSection/constants.js",
+      "language": "javascript",
+      "chat_id": 5393,
+      "fields": {
+        "F0": "Defines static text labels, CSS class names, and default configuration values used by the Files to Analyze section UI.",
+        "F1": [
+          "constants",
+          "text labels",
+          "css classes",
+          "default configuration",
+          "ui strings",
+          "file selection settings"
+        ],
+        "F2": [
+          "configuration",
+          "ui constants",
+          "static data"
+        ],
+        "F3": [
+          "TEXT",
+          "CSS_CLASSES",
+          "DEFAULT_CONFIG"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/FilesToAnalyzeSection/index.js",
+      "language": "javascript",
+      "chat_id": 5394,
+      "fields": {
+        "F0": "Orchestrates the Files to Analyze section by managing state, switching between Selection and Summary views, and handling file save or clear operations.",
+        "F1": [
+          "orchestrator",
+          "state management",
+          "view switching",
+          "selection view",
+          "summary view",
+          "callbacks",
+          "reference file exclusion"
+        ],
+        "F2": [
+          "controller",
+          "ui logic",
+          "state management"
+        ],
+        "F3": [
+          "FilesToAnalyzeSection",
+          "Header",
+          "Selection",
+          "Summary"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/FilesToAnalyzeSection/Selection.js",
+      "language": "javascript",
+      "chat_id": 5395,
+      "fields": {
+        "F0": "Renders the user interface for selecting files from the repository browser and manages the unsaved selection state before confirmation.",
+        "F1": [
+          "file selection",
+          "repository browser",
+          "user interface",
+          "selection state",
+          "event handling",
+          "dom rendering",
+          "confirmation"
+        ],
+        "F2": [
+          "ui component",
+          "user interaction",
+          "selection"
+        ],
+        "F3": [
+          "Selection",
+          "RepositoriesBrowser"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/FilesToAnalyzeSection/Summary.js",
+      "language": "javascript",
+      "chat_id": 5396,
+      "fields": {
+        "F0": "Displays a summary of selected files with a toggleable detailed table and clear selection functionality.",
+        "F1": [
+          "file selection",
+          "summary view",
+          "git files table",
+          "clear selection",
+          "file metadata",
+          "toggle visibility",
+          "batch builder",
+          "ui component"
+        ],
+        "F2": [
+          "ui component",
+          "file management",
+          "batch configuration"
+        ],
+        "F3": [
+          "Summary",
+          "GitFilesTable",
+          "_handleClearClick",
+          "_transformData"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchConfigSection/constants.js",
+      "language": "javascript",
+      "chat_id": 5398,
+      "fields": {
+        "F0": "Stores static configuration constants, default batch settings, validation rules, and UI text for the Batch Configuration section.",
+        "F1": [
+          "constants",
+          "batch configuration",
+          "validation rules",
+          "default settings",
+          "ui text",
+          "css classes",
+          "configuration limits"
+        ],
+        "F2": [
+          "configuration",
+          "constants",
+          "batch management"
+        ],
+        "F3": [
+          "TEXT",
+          "CSS_CLASSES",
+          "DEFAULT_BATCH_CONFIG",
+          "CONFIG_LIMITS",
+          "VALIDATION_MESSAGES"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchConfigSection/index.js",
+      "language": "javascript",
+      "chat_id": 5399,
+      "fields": {
+        "F0": "Orchestrates the Batch Configuration section by managing state, switching between editing and summary views, and handling configuration save/reset actions.",
+        "F1": [
+          "orchestrator",
+          "batch configuration",
+          "state management",
+          "view switching",
+          "configuration persistence",
+          "parent-child communication",
+          "section controller"
+        ],
+        "F2": [
+          "orchestration",
+          "state management",
+          "batch configuration"
+        ],
+        "F3": [
+          "BatchConfigSection",
+          "Selection",
+          "Summary",
+          "_handleSaveClick",
+          "_renderView"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchConfigSection/Selection.js",
+      "language": "javascript",
+      "chat_id": 5400,
+      "fields": {
+        "F0": "Component for configuring batch settings with explicit save behavior and reference item token accounting.",
+        "F1": [
+          "batch configuration",
+          "selection",
+          "token limits",
+          "file grouping",
+          "ungroupable files",
+          "batch preview",
+          "settings form",
+          "reference tokens"
+        ],
+        "F2": [
+          "configuration",
+          "batch management",
+          "ui components"
+        ],
+        "F3": [
+          "Selection",
+          "BatchGrouper",
+          "UngroupableFiles"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchConfigSection/Summary.js",
+      "language": "javascript",
+      "chat_id": 5401,
+      "fields": {
+        "F0": "Component for displaying a summary of saved batch configuration settings with reference item token information.",
+        "F1": [
+          "batch summary",
+          "configuration display",
+          "ungroupable files",
+          "batch count",
+          "reference tokens",
+          "read-only view",
+          "settings summary"
+        ],
+        "F2": [
+          "configuration",
+          "batch management",
+          "ui components"
+        ],
+        "F3": [
+          "Summary",
+          "BatchGrouper"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchConfigSection/UngroupableFiles.js",
+      "language": "javascript",
+      "chat_id": 5402,
+      "fields": {
+        "F0": "Component for displaying files that exceed token limits and cannot be grouped.",
+        "F1": [
+          "ungroupable files",
+          "file list",
+          "individual analysis",
+          "token limits",
+          "file metrics",
+          "overflow handling"
+        ],
+        "F2": [
+          "batch management",
+          "error handling",
+          "ui components"
+        ],
+        "F3": [
+          "UngroupableFiles"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/BatchAttempt.js",
+      "language": "javascript",
+      "chat_id": 5404,
+      "fields": {
+        "F0": "Represents a single analysis attempt within a batch, managing its lifecycle, state transitions, and serialization.",
+        "F1": [
+          "BatchAttempt",
+          "analysis attempt",
+          "state management",
+          "serialization",
+          "polling",
+          "timeout",
+          "lifecycle",
+          "runtime state",
+          "persistence"
+        ],
+        "F2": [
+          "Batch Analysis",
+          "State Management",
+          "Data Model"
+        ],
+        "F3": [
+          "BatchAttempt",
+          "checkIfTimedOut",
+          "markCompleted",
+          "markFailed",
+          "toJSON",
+          "fromJSON"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/BatchTable.js",
+      "language": "javascript",
+      "chat_id": 5405,
+      "fields": {
+        "F0": "Renders batch analysis data in a tabular format, displaying status, timestamps, and providing interactive actions like retry or cancel.",
+        "F1": [
+          "BatchTable",
+          "UI component",
+          "table rendering",
+          "status display",
+          "interactive actions",
+          "retry",
+          "cancel",
+          "time formatting",
+          "batch visualization"
+        ],
+        "F2": [
+          "UI Components",
+          "Batch Analysis",
+          "Data Visualization"
+        ],
+        "F3": [
+          "BatchTable",
+          "Table",
+          "_createStatusLink",
+          "_createRetryIcon",
+          "updateData"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/BatchTracker.js",
+      "language": "javascript",
+      "chat_id": 5406,
+      "fields": {
+        "F0": "Manages the polling and tracking of batch analysis progress, monitoring chat states, handling timeouts and errors, and triggering status updates.",
+        "F1": [
+          "BatchTracker",
+          "polling logic",
+          "state tracking",
+          "chat monitoring",
+          "timeout handling",
+          "error handling",
+          "status updates",
+          "async operations"
+        ],
+        "F2": [
+          "Batch Analysis",
+          "Background Processing",
+          "State Management"
+        ],
+        "F3": [
+          "BatchTracker",
+          "startTracking",
+          "_pollBatch",
+          "_checkAnalysisChatState",
+          "_handleTimeout"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/BulkBatch.js",
+      "language": "javascript",
+      "chat_id": 5407,
+      "fields": {
+        "F0": "Manages the creation, tracking, and display of bulk batch analysis jobs with polling functionality.",
+        "F1": [
+          "bulk batch",
+          "polling",
+          "job tracking",
+          "table display",
+          "batch processing",
+          "schedulable providers",
+          "status updates",
+          "tracking chat"
+        ],
+        "F2": [
+          "batch analysis",
+          "ui component",
+          "job management"
+        ],
+        "F3": [
+          "BulkBatch",
+          "Table",
+          "StateManager",
+          "chatApi"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/constants.js",
+      "language": "javascript",
+      "chat_id": 5408,
+      "fields": {
+        "F0": "Provides centralized constants for UI text, styling, default configuration, and batch status definitions.",
+        "F1": [
+          "constants",
+          "ui text",
+          "css classes",
+          "batch status",
+          "configuration",
+          "error types",
+          "status filters",
+          "icons"
+        ],
+        "F2": [
+          "configuration",
+          "styling",
+          "localization"
+        ],
+        "F3": [
+          "TEXT",
+          "CSS_CLASSES",
+          "DEFAULT_CONFIG",
+          "BATCH_STATUS",
+          "STATUS_ICONS"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/ForkConfig.js",
+      "language": "javascript",
+      "chat_id": 5409,
+      "fields": {
+        "F0": "Renders a form to configure and create variations (forks) of batch analysis jobs with different parameters.",
+        "F1": [
+          "fork configuration",
+          "batch analysis",
+          "analyzer selection",
+          "model selection",
+          "form validation",
+          "sibling relation",
+          "child relation",
+          "variation"
+        ],
+        "F2": [
+          "batch analysis",
+          "ui component",
+          "configuration"
+        ],
+        "F3": [
+          "ForkConfig",
+          "AnalyzersBrowser",
+          "chatApi"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/index.js",
+      "language": "javascript",
+      "chat_id": 5410,
+      "fields": {
+        "F0": "Main section component for managing batch analysis workflows, including reviewing batch groups, launching analysis jobs, tracking progress, and handling retries or timeouts.",
+        "F1": [
+          "batch analysis",
+          "batch tracking",
+          "progress monitoring",
+          "batch table",
+          "status filters",
+          "batch settings",
+          "retry logic",
+          "timeout handling"
+        ],
+        "F2": [
+          "batch management",
+          "ui components",
+          "analysis workflow"
+        ],
+        "F3": [
+          "BatchAnalysisSection",
+          "BatchTracker",
+          "BatchTable",
+          "Settings",
+          "StatusFilters",
+          "BulkBatch"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/Settings.js",
+      "language": "javascript",
+      "chat_id": 5411,
+      "fields": {
+        "F0": "UI component for configuring batch analysis parameters, including maximum active processes, batch timeout duration, and maximum failed poll attempts, using a horizontal layout.",
+        "F1": [
+          "settings configuration",
+          "max active processes",
+          "batch timeout",
+          "poll attempts",
+          "ui settings",
+          "horizontal layout"
+        ],
+        "F2": [
+          "configuration",
+          "ui components",
+          "batch settings"
+        ],
+        "F3": [
+          "Settings"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/StatusFilters.js",
+      "language": "javascript",
+      "chat_id": 5412,
+      "fields": {
+        "F0": "UI component for filtering batches by status (pending, running, completed, failed, cancelled) using the MetricCards component to display counts and allow selection.",
+        "F1": [
+          "status filtering",
+          "metric cards",
+          "batch status",
+          "ui filters",
+          "status counts",
+          "percentage calculation"
+        ],
+        "F2": [
+          "ui components",
+          "filtering",
+          "batch management"
+        ],
+        "F3": [
+          "StatusFilters",
+          "MetricCards"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/BatchAnalysisSection/TimeoutModal.js",
+      "language": "javascript",
+      "chat_id": 5413,
+      "fields": {
+        "F0": "Modal component for handling batch analysis timeouts, allowing users to retry the batch or extend the time limit.",
+        "F1": [
+          "timeout",
+          "modal",
+          "batch analysis",
+          "PromptBox",
+          "UI component",
+          "retry",
+          "extend timeout",
+          "error handling"
+        ],
+        "F2": [
+          "UI Components",
+          "Batch Management",
+          "Error Handling"
+        ],
+        "F3": [
+          "TimeoutModal",
+          "PromptBox"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/AnalyzerSection/constants.js",
+      "language": "javascript",
+      "chat_id": 5415,
+      "fields": {
+        "F0": "Defines static text labels, help content, and CSS class names used throughout the AnalyzerSection UI.",
+        "F1": [
+          "constants",
+          "text labels",
+          "CSS classes",
+          "AnalyzerSection",
+          "UI configuration",
+          "localization"
+        ],
+        "F2": [
+          "Configuration",
+          "UI Constants",
+          "AnalyzerSection"
+        ],
+        "F3": [
+          "TEXT",
+          "CSS_CLASSES",
+          "DEFAULT_CONFIG"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/AnalyzerSection/index.js",
+      "language": "javascript",
+      "chat_id": 5416,
+      "fields": {
+        "F0": "Orchestrates the AnalyzerSection UI, managing state transitions between analyzer selection and summary views.",
+        "F1": [
+          "orchestrator",
+          "AnalyzerSection",
+          "state management",
+          "view switching",
+          "Selection",
+          "Summary",
+          "UI component"
+        ],
+        "F2": [
+          "UI Logic",
+          "State Management",
+          "AnalyzerSection"
+        ],
+        "F3": [
+          "AnalyzerSection",
+          "Selection",
+          "Summary",
+          "Header"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/AnalyzerSection/Selection.js",
+      "language": "javascript",
+      "chat_id": 5417,
+      "fields": {
+        "F0": "UI component for selecting an analyzer using the AnalyzersBrowser in SINGLE mode.",
+        "F1": [
+          "analyzer selection",
+          "AnalyzersBrowser",
+          "SINGLE mode",
+          "UI component",
+          "callback"
+        ],
+        "F2": [
+          "UI",
+          "Configuration",
+          "Analyzer"
+        ],
+        "F3": [
+          "Selection",
+          "AnalyzersBrowser",
+          "chatApi"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "sections/AnalyzerSection/Summary.js",
+      "language": "javascript",
+      "chat_id": 5418,
+      "fields": {
+        "F0": "Displays a summary of the selected analyzer, including a searchable, collapsible table of metadata fields.",
+        "F1": [
+          "analyzer summary",
+          "metadata fields",
+          "schema",
+          "search",
+          "UI component",
+          "collapsible"
+        ],
+        "F2": [
+          "UI",
+          "Configuration",
+          "Analyzer"
+        ],
+        "F3": [
+          "Summary",
+          "SearchInput",
+          "Table",
+          "chatApi"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": ".gitignore",
+      "language": "plaintext",
+      "chat_id": 5419,
+      "fields": {
+        "F0": "Specifies intentionally untracked files that Git should ignore, tailored for a Node.js/JavaScript development environment.",
+        "F1": [
+          "gitignore",
+          "version control",
+          "node_modules",
+          "dependencies",
+          "environment variables",
+          "build artifacts",
+          "ide configuration",
+          "logs",
+          "os files"
+        ],
+        "F2": [
+          "configuration",
+          "version control",
+          "development tools",
+          "project management"
+        ],
+        "F3": [
+          ".git",
+          "node_modules",
+          ".env",
+          ".vscode",
+          ".idea",
+          "dist",
+          "build"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "AnalyzeBatchBuilder.js",
+      "language": "javascript",
+      "chat_id": 5420,
+      "fields": {
+        "F0": "Main orchestrator for the AnalyzeBatchBuilder component, managing state, views, and user interactions for batch analysis configuration.",
+        "F1": [
+          "orchestrator",
+          "state management",
+          "tab navigation",
+          "batch configuration",
+          "view coordination"
+        ],
+        "F2": [
+          "Core",
+          "Orchestrator",
+          "State Management"
+        ],
+        "F3": [
+          "AnalyzeBatchBuilder",
+          "TabBar",
+          "ConfigurationView",
+          "BatchesView",
+          "StateManager"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "constants.js",
+      "language": "javascript",
+      "chat_id": 5421,
+      "fields": {
+        "F0": "Defines shared constants, specifically section identifiers and CSS class names, for the AnalyzeBatchBuilder component to ensure consistency across the application.",
+        "F1": [
+          "SECTION_IDS",
+          "CSS_CLASSES",
+          "reference-files-section",
+          "files-to-analyze-section",
+          "filters-section",
+          "batch-config-section",
+          "abb-section"
+        ],
+        "F2": [
+          "configuration",
+          "constants",
+          "styling",
+          "identifiers"
+        ],
+        "F3": [
+          "SECTION_IDS",
+          "CSS_CLASSES"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "Dependencies.js",
+      "language": "javascript",
+      "chat_id": 5422,
+      "fields": {
+        "F0": "Aggregates and exports external dependencies required by the AnalyzeBatchBuilder, including chat APIs and UI components like confirmation boxes and metric cards.",
+        "F1": [
+          "chatApi",
+          "QuickChatButtons",
+          "ConfirmationBox",
+          "MetricCards",
+          "dependencies",
+          "module exports",
+          "ui-components"
+        ],
+        "F2": [
+          "dependencies",
+          "imports",
+          "ui",
+          "integration"
+        ],
+        "F3": [
+          "chatApi",
+          "QuickChatButtons",
+          "ConfirmationBox",
+          "MetricCards"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "index.js",
+      "language": "javascript",
+      "chat_id": 5423,
+      "fields": {
+        "F0": "Serves as the main entry point for the AnalyzeBatchBuilder component, exporting the primary class for use by the application.",
+        "F1": [
+          "AnalyzeBatchBuilder",
+          "entry point",
+          "module export",
+          "component initialization",
+          "main class"
+        ],
+        "F2": [
+          "initialization",
+          "exports",
+          "module-loader",
+          "entry-point"
+        ],
+        "F3": [
+          "AnalyzeBatchBuilder"
+        ]
+      }
+    },
+    {
+      "repo_ref": "R0",
+      "branch_ref": "B0",
+      "file_path": "user-guide.md",
+      "language": "markdown",
+      "chat_id": 5668,
+      "fields": {
+        "F0": "This document serves as the comprehensive user guide for the Analyze Batch Builder tool, detailing the sequential steps for configuring analyzers, selecting files, applying filters, and managing batch analyses.",
+        "F1": [
+          "user guide",
+          "analyze batch builder",
+          "configuration",
+          "batch analysis",
+          "reference files",
+          "file filters",
+          "fork",
+          "token limits",
+          "UI sections",
+          "batch tracking"
+        ],
+        "F2": [
+          "Documentation",
+          "User Interface",
+          "Configuration Management",
+          "Batch Processing"
+        ],
+        "F3": [
+          "Analyzer Section",
+          "Reference Files Section",
+          "Files to Analyze Section",
+          "File Filters Section",
+          "Batch Configuration Section",
+          "Batches Section",
+          "Fork Section"
+        ]
+      }
+    }
+  ]
+}

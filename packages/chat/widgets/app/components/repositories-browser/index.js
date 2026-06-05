@@ -1,0 +1,22 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * Licensed under the Fair Core License, Version 1.0 (FCL-1.0-ALv2).
+ * https://faircode.io
+ *
+ * You may use, modify, and run this software for internal, non-commercial
+ * purposes including personal projects, team workflows, and self-hosted
+ * deployments. You may not use this software to build or operate a product
+ * or service that competes directly or indirectly with GitSense Chat.
+ * Redistribution or resale is not permitted.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ *
+ * For licensing inquiries, internal-use exceptions, or business use,
+ * contact sales@gitsense.com
+ */
+
+let DomUtils=require("@gitsense/gsc-utils").DomUtils,PromptBox=require("../ui/prompt-box").PromptBox,Browser=require("./components/Browser").Browser,PreviewPanel=require("./components/PreviewPanel").PreviewPanel,buildReposTree=require("./utils/buildReposTree").buildReposTree,{BROWSER_WIDTH,VIRTUAL_NODE_IDS,VIRTUAL_NODE_TYPES}=require("./constants"),chatApi=require("./dependencies").chatApi;class RepositoriesBrowser{constructor(e,t={}){this.context=e,this.options={actionButtonText:t.actionButtonText||"Select Files",onActionClick:t.onActionClick||(()=>console.warn("onActionClick not implemented")),onFileClick:t.onFileClick||(()=>console.warn("onFileClick not implemented")),...t},this.currentView=null,this.promptBox=null,this.browser=null,this.previewPanel=null,this.reposTreeData=[],this.selectedNodes=[],this.h=DomUtils.h}async show(){if(this.promptBox)console.warn("RepositoriesBrowser is already shown.");else{try{var e=await chatApi.getChat(this.context.widget,{uuid:VIRTUAL_NODE_IDS.HOME,model:"GitSense Notes",maxDepth:3});this.reposTreeData=buildReposTree(e)}catch(e){console.error("RepositoriesBrowser failed to fetch initial data:",e),this.reposTreeData=[]}this.promptBox=new PromptBox({title:"Repositories",width:"100%",height:"100%",maxWidth:"none",maxHeight:"none",bodyPadding:"0px",headerPadding:"5px 15px 10px 15px",zIndex:100000000001,showCloseButton:!0,customClass:"gsc-repositories-browser-modal"});e=this._createModalContent();this.promptBox.show({content:e},()=>{this.destroy()})}}_createModalContent(){var e=this.h.createDiv({style:{height:"100%",display:"flex",flexDirection:"column"}}),t=this.h.createDiv({style:{flexGrow:"1",display:"flex",overflow:"hidden"}}),i=this.h.createDiv({id:"gsc-rb-tree-browser",style:{width:BROWSER_WIDTH,height:"100%",overflowY:"auto",borderRight:"1px solid #eee",backgroundColor:"#fafafa",flexShrink:"0",paddingRight:"10px"}}),o=this.h.createDiv({id:"gsc-rb-preview-area",style:{flexGrow:"1",width:`calc(100% - ${BROWSER_WIDTH})`,minWidth:`calc(100% - ${BROWSER_WIDTH})`,height:"calc(100%)",overflowY:"auto",padding:"20px 25px 0px 25px",backgroundColor:"#ffffff"}}),s=(this.previewPanel=new PreviewPanel(o,this.context,this._handleNodeClick.bind(this)),this.previewPanel.setHomeViewOptions(this.reposTreeData,this.options.actionButtonText,this.options.onActionClick,this.options.onFileClick,this.options.homeTitle,this.options.homeDescription,this._closeModal.bind(this)),this.browser=new Browser(i,this.reposTreeData,this.context,this._handleNodeClick.bind(this),this._handleSelectionChange.bind(this)),this.browser.render(),this.reposTreeData[0]);return s&&this.previewPanel.updateContent(s,[s],{selectedNodes:this.selectedNodes}),t.appendChild(i),t.appendChild(o),e.appendChild(t),e}_handleNodeClick(e){var t,i,o=this.browser.getTreeTable();o&&(o=(t=o.findNode(e))?o.getNodePath(e):[],t?(i=t.type===VIRTUAL_NODE_TYPES.FILE?"file":"home")!==this.currentView&&(this.currentView=i,this.previewPanel.updateContent(t,o,{selectedNodes:this.selectedNodes})):console.warn("Could not find node with ID: "+e))}_handleSelectionChange(e){this.selectedNodes=e,"file"!==this.currentView&&this.previewPanel.updateContent(this.previewPanel.node,this.previewPanel.breadcrumbPath,{selectedNodes:this.selectedNodes})}_closeModal(){this.promptBox&&this.promptBox.hide()}destroy(){this.promptBox&&(this.promptBox.destroy(),this.promptBox=null),this.previewPanel&&(this.previewPanel.destroy(),this.previewPanel=null),this.browser&&(this.browser.destroy(),this.browser=null),this.reposTreeData=[],this.selectedNodes=[]}}module.exports={RepositoriesBrowser:RepositoriesBrowser};

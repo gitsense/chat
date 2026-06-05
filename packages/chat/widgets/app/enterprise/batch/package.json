@@ -1,0 +1,95 @@
+{
+    "name": "@gitsense/gsc-enterprise-batch",
+    "version": "0.1.0",
+    "description": "GitSense Chat Enterprise Batch Processing Component for LLM-powered file analysis",
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/esm/index.js",
+    "types": "./dist/types/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.js",
+            "types": "./dist/types/index.d.ts"
+        },
+        "./worker": {
+            "import": "./dist/esm/worker/index.js",
+            "require": "./dist/cjs/worker/index.js",
+            "types": "./dist/types/worker/index.d.ts"
+        },
+        "./errors": {
+            "import": "./dist/esm/errors/index.js",
+            "require": "./dist/cjs/errors/index.js",
+            "types": "./dist/types/errors/index.d.ts"
+        }
+    },
+    "bin": {
+        "gsc-batch-poller": "./bin/batch-poller.js",
+        "gsc-realtime-batch-processor": "./bin/realtime-batch-processor.js",
+        "gsc-admin-batch": "./bin/gsc-admin-batch.js"
+    },
+    "files": [
+        "dist/",
+        "bin/",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types && npm run copy:db-schema",
+        "build:cjs": "babel lib --out-dir dist/cjs --presets=@babel/preset-env --plugins=@babel/plugin-transform-modules-commonjs",
+        "build:esm": "babel lib --out-dir dist/esm --presets=@babel/preset-env --plugins=@babel/plugin-syntax-import-meta",
+        "build:types": "tsc --emitDeclarationOnly --outDir dist/types",
+        "clean": "rimraf dist",
+        "prepublishOnly": "npm run build",
+        "test": "jest",
+        "lint": "eslint lib bin --ext .js",
+        "copy:db-schema": "node bin/copy-db-schema.js",
+        "dev:poller": "NODE_ENV=development node bin/batch-poller.js",
+        "dev:processor": "NODE_ENV=development node bin/realtime-batch-processor.js",
+        "dev:admin": "NODE_ENV=development node bin/gsc-admin-batch.js",
+        "dev:copy-schema": "NODE_ENV=development node bin/copy-db-schema.js",
+        "start:poller": "NODE_ENV=production node bin/batch-poller.js",
+        "start:processor": "NODE_ENV=production node bin/realtime-batch-processor.js",
+        "start:admin": "NODE_ENV=production node bin/gsc-admin-batch.js",
+        "start:copy-schema": "NODE_ENV=production node bin/copy-db-schema.js"
+    },
+    "keywords": [
+        "gitsense",
+        "batch",
+        "llm",
+        "analysis",
+        "gemini",
+        "enterprise"
+    ],
+    "author": "GitSense",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gitsense/gsc-enterprise-batch.git"
+    },
+    "dependencies": {
+        "@anthropic-ai/sdk": "^0.63.1",
+        "@gitsense/gsc-utils": "^0.4.0",
+        "@google/genai": "^1.16.0",
+        "better-sqlite3": "^12.9.0",
+        "commander": "^14.0.0",
+        "dayjs": "^1.11.19",
+        "forever": "^4.0.3",
+        "openai": "^5.23.0",
+        "text-table": "^0.2.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.23.0",
+        "@babel/core": "^7.23.0",
+        "@babel/plugin-syntax-import-meta": "^7.10.4",
+        "@babel/plugin-transform-modules-commonjs": "^7.23.0",
+        "@babel/preset-env": "^7.23.0",
+        "eslint": "^8.0.0",
+        "jest": "^29.0.0",
+        "rimraf": "^5.0.0",
+        "typescript": "^5.0.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "publishConfig": {
+        "@gitsense:registry": "https://npm.pkg.github.com"
+    }
+}

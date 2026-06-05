@@ -1,0 +1,22 @@
+/*
+ * GitSense Chat - Minified Distribution File
+ *
+ * This JavaScript file is part of the minified distribution of GitSense Chat.
+ * It has been optimized (minified) for performance and efficient delivery.
+ *
+ * Licensed under the Fair Core License, Version 1.0 (FCL-1.0-ALv2).
+ * https://faircode.io
+ *
+ * You may use, modify, and run this software for internal, non-commercial
+ * purposes including personal projects, team workflows, and self-hosted
+ * deployments. You may not use this software to build or operate a product
+ * or service that competes directly or indirectly with GitSense Chat.
+ * Redistribution or resale is not permitted.
+ *
+ * Copyright (c) 2026 GitSense. All rights reserved.
+ *
+ * For licensing inquiries, internal-use exceptions, or business use,
+ * contact sales@gitsense.com
+ */
+
+let{DomUtils,SVGUtils}=require("@gitsense/gsc-utils");class IntentErrorSection{constructor(e,t={}){if(this.parentElement=e,this.options=t,this.h=DomUtils.h,!t.error)throw new Error("[IntentErrorSection] error is required");this.error=t.error,this.chevronDown=SVGUtils.chevronDown({style:{fill:"#c53030"}}).outerHTML,this.chevronRight=SVGUtils.chevronRight({style:{fill:"#c53030"}}).outerHTML}render(){this.parentElement.innerHTML="";var e=this.h.createDiv({cls:"gsc-intent-workflow-error-section"}),t=(this.parentElement.appendChild(e),e.appendChild(this.h.createDiv({cls:"gsc-intent-workflow-error-title",text:this._getErrorTitle()})),this._renderErrorMessage());e.appendChild(t),this.error.details&&0<Object.keys(this.error.details).length&&e.appendChild(this._renderErrorDetails())}_getErrorTitle(){return{AUTH_INVALID:"Authorization Failed",CONTRACT_NOT_FOUND:"Contract Not Found",CONTRACT_NOT_ACTIVE:"Contract Not Active",CONTRACT_NO_WORKDIRS:"No Working Directories",INVALID_TURN_SEQUENCE:"Invalid Turn Sequence",MESSAGE_NOT_FOUND:"Message Not Found",SESSION_NOT_FOUND:"Session Not Found",LOG_FILE_NOT_FOUND:"Log File Not Found",NO_CANDIDATES_FOUND:"No Candidates Found",FILE_NOT_IN_CANDIDATES:"File Validation Failed",MISSING_BRAIN:"Missing Code Intent Brain",CLI_START_FAILED:"CLI Execution Failed",CLI_PARSE_FAILED:"CLI Parse Failed",STREAM_TIMEOUT:"Stream Timeout",UNKNOWN_ERROR:"Unknown Error"}[this.error.code]||"Turn Error"}_renderErrorMessage(){var e,t=this.h.createDiv({cls:"gsc-intent-workflow-error-message"});if("MISSING_BRAIN"!==this.error.code)return e=this.error.message||"An error occurred during the Agent session.",t.appendChild(document.createTextNode(e)),t;this._renderMissingBrainError(t)}_renderMissingBrainError(e){var t=this.error.details?.brainName||"code-intent",r=this.error.details?.workingDirectories||[];e.appendChild(this.h.createP({text:`The following working directories do not have the '${t}' brain:`,style:{marginBottom:"10px"}}));let i=this.h.createUl({style:{marginLeft:"20px",marginBottom:"10px"}});r.forEach(e=>{i.appendChild(this.h.createLi({text:e}))}),e.appendChild(i),e.appendChild(this.h.createP({text:`The '${t}' brain is required to search for files based on intent.`,style:{fontStyle:"italic",color:"#586069"}}))}_renderErrorDetails(){var e=this.h.createDiv({cls:"gsc-intent-workflow-error-details"}),t=this.h.createDiv({cls:"gsc-intent-workflow-error-details-toggle",html:this.chevronRight+" Show Details",onclick:()=>this._toggleDetails()});return e.appendChild(t),this.detailsContent=this.h.createDiv({cls:"gsc-intent-workflow-error-details-content"}),Object.entries(this.error.details).forEach(([e,t])=>{null!=t&&""!==t&&this.detailsContent.appendChild(this._renderDetailItem(e,t))}),e.appendChild(this.detailsContent),e}_renderDetailItem(e,t){var r=this.h.createDiv({cls:"gsc-intent-workflow-error-detail-item"}),e=(r.appendChild(this.h.createDiv({cls:"gsc-intent-workflow-error-detail-label",text:this._formatLabel(e)})),"object"==typeof t?JSON.stringify(t,null,2):String(t));return r.appendChild(this.h.createDiv({cls:"gsc-intent-workflow-error-detail-value",text:e})),r}_formatLabel(e){return e.split("_").map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(" ")}_toggleDetails(){this.detailsContent.classList.contains("show")?(this.detailsContent.classList.remove("show"),this.detailsContent.previousElementSibling.innerHTML=this.chevronRight+" Show Details"):(this.detailsContent.classList.add("show"),this.detailsContent.previousElementSibling.innerHTML=this.chevronDown+" Show Details")}cleanup(){}}module.exports={IntentErrorSection:IntentErrorSection};

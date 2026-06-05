@@ -1,0 +1,507 @@
+h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+    scroll-margin-top: 70px;
+}
+
+.gs-chat-container {
+    display: inline-block;
+    width: calc(100% - 60px);
+    margin-top: 20px;
+}
+
+.gs-chat-input-container {
+    border: 1px solid #666;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.gs-chat-input {
+    display: inline-block;
+    vertical-align: top;
+    flex: 1;
+    font-size: 14px;
+    padding: 0px 15px 10px 15px;
+    border: 0px;
+    border-radius: 10px;
+    resize: none; 
+    width: 100%;
+    min-height: 100px;
+    outline: none;
+    overflow-y: auto;
+}
+
+.gs-chat-input:placeholder {
+    color: black;
+}
+
+.gs-chat-enter-button {
+    display: none;
+    vertical-align: top;
+    border: 1px solid #666;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+    left: -45px;
+}
+
+.gs-chat-enter-button:hover {
+    background-color: #f4f4f4;
+}
+
+.gs-chat-header {
+    white-space: nowrap;
+    position: sticky;
+    top: 0px;
+    padding: 15px 5px;
+    background-color: white;
+    border-bottom: 1px solid #666;
+    z-index: 1000;
+}
+
+.gs-chat-header:hover {
+   /*  z-index: 1002; */
+}
+
+.gs-chat-header-stuck {
+    border-bottom: 1px solid #888;
+}
+
+.gs-chat-user-message {
+    display: inline-block;
+    max-width: 80%;
+    max-height: 800px;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.5;
+    border-radius: 25px;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    overflow: auto;
+}
+
+.gs-chat-user-message-avatar {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+    vertical-align: top;
+    background-color: black;
+}
+
+.gs-chat-user-message-content {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 15px;
+    width: 100%;
+}
+
+.gs-chat-assistant-message-content-avatar {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 6px;
+    vertical-align: top;
+    margin-top: 7px;
+    margin-right: 15px;
+}
+
+.gs-chat-assistant-message-content {
+    display: inline-block;
+    width: calc(100% - 60px);
+    margin-top: 12px;
+    vertical-align: top;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.gs-chat-modal {
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    /* Add flexbox for vertical centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gs-chat-modal-content {
+    background-color: #fefefe;
+    /* Remove margin-top and use flexbox positioning instead */
+    margin: 0 auto;
+    border: 1px solid #888;
+    width: 80%;
+    min-width: 600px;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.gs-chat-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.gs-chat-modal-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.gs-chat-modal-body {
+    padding: 20px;
+}
+
+.gs-chat-modal-footer {
+    border-top: 1px solid #e0e0e0;
+    padding: 15px;
+    text-align: right;
+}
+
+.gs-chat-table {
+}
+
+.gs-chat-table table {
+    width: 100%;
+    font-size: 14px;
+}
+
+.gs-chat-table th, .gs-chat-table td {
+    padding: 7px 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.gs-chat-table th {
+    font-weight: 500;
+    border-bottom: 1px solid #aaa;
+}
+
+.gs-chat-hidden-cell {
+    opacity: 0
+}
+
+tr:hover .gs-chat-hidden-cell {
+    opacity: 1
+}
+
+.gs-chat-clipboard-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#gsChatMessages table {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#gsChatMessages pre {
+    font-size: 13px;
+}
+
+#gsChatMessages pre:hover .gs-chat-clipboard-icon {
+    display: block;
+}
+
+.gs-chat-user-message-body {
+    text-align: right;
+}
+
+.gs-chat-user-message-body:hover .gs-chat-options-badge {
+    opacity: 1;
+}
+
+.gs-chat-options-badge {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    padding: 7px;
+    background-color: white;
+    text-align: center;
+    margin-top: 25px;
+    opacity: 0;
+}
+
+.gs-chat-options-badge:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.gs-chat-links-disabled {
+    pointer-events: none;
+    text-decoration: none;
+    color: black;
+}
+
+.gs-chat-lang {
+    color: gray;
+    font-size: 12px;
+}
+
+/*************/
+
+/* floating-div.css */
+.floating-div-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.floating-div-resize-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    cursor: ew-resize;
+    background: transparent;
+    transition: background 0.2s;
+}
+
+.floating-div-resize-handle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.floating-div-container.collapsed {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.floating-div-container.collapsed .floating-div-content,
+.floating-div-container.collapsed .floating-div-minimize,
+.floating-div-container.collapsed .floating-div-resize-handle {
+    display: none;
+}
+
+.floating-div-minimize {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: transparent;
+    z-index: 1001;
+}
+
+.floating-div-minimize:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.floating-div-content {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.floating-div-toggle {
+    display: none;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+}
+
+.floating-div-container.collapsed .floating-div-toggle {
+    display: flex;
+}
+
+/* Prevent text selection */
+.floating-div-toggle,
+.floating-div-minimize,
+.floating-div-resize-handle {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/**********/
+.conversation-timeline {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-entry {
+    display: flex;
+    position: relative;
+}
+
+.timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    height: 100%;
+    width: 2px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.timeline-entry:last-child::before {
+    height: 50%;
+}
+
+.timeline-marker {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.timeline-marker:hover {
+    /*
+    border: 2px solid #ccc;
+    transform: scale(1.1);
+    */
+}
+
+.timeline-marker.system {
+}
+
+.timeline-marker.user {
+}
+
+.timeline-marker.assistant {
+}
+
+.timeline-content {
+    padding: 5px 0px 0px 2px;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.timeline-content.collapsed {
+    padding: 5px 0px 5px 2px ;
+}
+
+.timeline-role {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.timeline-message {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.timeline-message.collapsed {
+    height: 1.5em;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+}
+
+.timeline-marker.collapsed {
+    opacity: 0.7;
+}
+
+.timeline-role.collapsed {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    display: none;
+}
+
+.controls {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.controls button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.controls button:hover {
+    background-color: #f5f5f5;
+}
+
+.gs-menu-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.gs-menu-button:hover {
+    border-color: #aaa;
+}
+
+.gs-blink-text {
+    /* animation: gs-blinker 4s linear infinite; */
+    font-weight: bold;
+    padding: 3px 7px;
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+@keyframes gs-blinker {
+    50% {
+        opacity: 0
+    }
+}

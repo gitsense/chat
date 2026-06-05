@@ -1,0 +1,20 @@
+{
+  "version": "1",
+  "owner": "gitsense",
+  "repo": "gsc-ui",
+  "group_id": 678,
+  "branches": {
+    "main": {
+      "last_import": "2026-05-17T13:55:22-04:00",
+      "ref_chat_id": 25061,
+      "shadow": true,
+      "shadow_path": "/Users/terrchen/gitsense-chat/shadow-repos/gitsense/gsc-ui/main",
+      "flags": {
+        "max_size": 0,
+        "include": "",
+        "exclude": "",
+        "include_binary": false
+      }
+    }
+  }
+}
