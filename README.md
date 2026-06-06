@@ -10,11 +10,13 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 -->
 
 
-# GitSense Chat: Make Agents Smarter
+# GitSense Chat
+
+**Intelligence that lives in your repository.**
 
 Agents are only as smart as the context they can find. GitSense Chat turns ordinary files into structured, explainable intelligence that agents can query before they open, edit, or reason about a repository.
 
-Describe what matters in plain language, apply that reasoning across your files, and reuse the results across humans, tools, and agents. Instead of spending tokens rediscovering the same context, your agents can work from intelligence that travels with the content itself: flagged, categorized, searchable, and explainable on demand.
+Describe what matters in plain language, apply that reasoning across your files, and reuse the results across humans, tools, and agents. Instead of spending tokens rediscovering the same context, your agents can work from repository intelligence that is flagged, categorized, searchable, and explainable on demand.
 
 No RAG pipeline, coding project, or AI team required.
 
@@ -117,52 +119,6 @@ An Analyzer extracts structured knowledge from your repository. A Manifest packa
 A manifest can be published by the repository owner, downloaded by a developer, or regenerated nightly by a CI job. It can ship with the repository in a `.gitsense/manifests/` directory or be hosted externally and imported by URL.
 
 Manifests are plain JSON files - inspectable, committable, and importable with the open-source `gsc` CLI. You're not locked into GitSense Chat to use the intelligence you create.
-
-**Discovery in an unfamiliar codebase.**
-
-A code intent analyzer reads each file and records its purpose and when you'd want to change it. Here we import a pre-built manifest for ripgrep and search with that context attached to every result.
-
-```bash
-git clone https://github.com/BurntSushi/ripgrep
-cd ripgrep
-gsc manifest import https://chat.gitsense.com/--/manifests/BurntSushi/ripgrep/code-intent
-gsc rg --db code-intent --fields purpose cache
-```
-
-**Ownership in a large internal repository.**
-
-An owners analyzer maps files to the teams or people responsible for them, using a reference file you define in GitSense Chat. Once the manifest is imported, any agent on the team can answer ownership questions instantly.
-
-```bash
-# Import the owners manifest shipped with this repository
-gsc manifest import owners
-
-# Start your coding agent and let it know about portable intelligence
-> ! gsc experts init
-
-# Now ask your question
-> Tell me what files are owned by the payments team
-```
-
-**Ownership at a law firm. The same idea, but no code involved.**
-
-A law firm stores case files, contracts, and briefs in a repository. An Analyzer tags each document with the matter it belongs to, the attorney of record, and its review status. The manifest travels with the repository, so anyone on the team can query it instantly.
-
-```bash
-# Import the matter-owners manifest for this case repository
-gsc manifest import matter-owners
-
-# Start your agent and execute
-> ! gsc experts init
-
-# Now ask your question
-> Which files belong to the Henderson matter?
-> Show me everything still pending partner review
-```
-
-The same pattern works anywhere people manage large collections of documents and need to know who owns what, what stage things are in, or what is still outstanding. Git is just a reliable way to package, version and share that knowledge.
-
-Analyzers can capture any knowledge your team needs to carry with the repository: security patterns, code ownership, migration status, architectural intent, implicit technical debt, or anything else that lives in the repository but is hard to find with keyword search.
 
 ## Quick Start
 
