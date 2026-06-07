@@ -12,11 +12,9 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 
 # GitSense Chat
 
-**Intelligence that lives in your repository.**
+**Build intelligence that lives in your repository.**
 
-Agents are only as smart as the context they can find. GitSense Chat turns ordinary files into structured, explainable intelligence that agents can query before they open, edit, or reason about a repository.
-
-Describe what matters in plain language, apply that reasoning across your files, and reuse the results across humans, tools, and agents. Instead of spending tokens rediscovering the same context, your agents can work from repository intelligence that is flagged, categorized, searchable, and explainable on demand.
+GitSense Chat helps you turn domain knowledge into queryable context for humans and AI agents. You decide what matters, GitSense helps apply it across your files, and the `gsc` CLI makes the results available in terminals and agent sessions.
 
 No RAG pipeline, coding project, or AI team required.
 
