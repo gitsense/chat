@@ -22,6 +22,10 @@ No RAG pipeline, coding project, or AI team required.
 
 You just need your files and an understanding of what you want to find. GitSense Chat handles the prompt engineering, batching, model selection, and reuse strategy so agents can work across large collections without reanalyzing everything from scratch. Filter what needs reanalysis, set your batch size, and pick the right model for the job.
 
+Watch the short Create, Analyze, and Package demos at [gitsense.com](https://gitsense.com) to see the workflow in action.
+
+### What You Can Capture
+
 - **Students:** flag what matters in notes using your own words, not keywords
 - **Accountants:** surface suspicious patterns across thousands of financial records
 - **Lawyers:** tag documents by matter, status, or attorney across an entire case repository
