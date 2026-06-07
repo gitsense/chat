@@ -72,7 +72,9 @@ Notice how the search result answers questions that would normally require openi
 
 ## Teach Agents Once
 
-By chatting with AI, we created a Rust test coverage Analyzer that teaches agents how to understand the intent and scope of a Rust test suite.
+Teaching an agent with GitSense Chat starts as a natural conversation.
+
+In this example, GitSense turns a conversation about Rust test coverage into an Analyzer, packages the results into a Brain, and lets an agent use that Brain to answer a real developer question. Watch the Create demo at [gitsense.com](https://gitsense.com) to see the chat-based creation process.
 
 The Analyzer is just Markdown: [rust-test-coverage-intent](data/analyzers/rust-test-coverage-intent/file-content/default/1.md).
 
