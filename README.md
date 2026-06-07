@@ -14,7 +14,7 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 
 **Build repository intelligence for AI agents.**
 
-GitSense Chat turns domain knowledge into queryable repository intelligence so agents understand your codebase faster and find what matters. You decide what intent, behavior, risks, ownership, or patterns matter; GitSense applies that knowledge across your files; and the `gsc` CLI makes the results available in terminals and agent sessions.
+GitSense Chat turns domain knowledge into queryable repository intelligence so agents understand your repository and find what matters faster. You decide what intent, behavior, risks, ownership, or patterns matter; GitSense applies that knowledge across your files; and the `gsc` CLI makes the results available in terminals and agent sessions.
 
 Less blind search. Less repeated discovery. Reusable expert intent. No RAG pipeline required.
 
