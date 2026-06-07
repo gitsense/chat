@@ -100,19 +100,23 @@ Now ask your agent:
 ```text
 I want to add a regression test for binary file handling.
 
-Use the rust test brain to find the files I should look at.
+Use the rust test coverage brain to find the files I should look at.
 Do not open the files yet. Just use the brain to guide me for now.
 ```
 
 Then ask:
 
 ```text
-If the rust test brain did not exist, how would you have helped me?
+If the rust test coverage brain did not exist, how would you have helped me?
 ```
 
 With GitSense, the agent can query test intent directly. Without GitSense, it has to search, open files, skim tests and helpers, infer coverage intent, and spend more turns reconstructing context from scratch.
 
-That is the shift: by chatting with AI, then using GitSense to analyze and package the results, you create portable intelligence that can ship with the repository.
+You get a recommendation, not just a file list.
+
+The savings come from skipping file reads and skipping inference. Fields like `test_role`, `tested_behavior`, `canonical_for`, and `add_test_guidance` already contain the conclusions of that analysis.
+
+That is the shift: by chatting with AI, then using GitSense to analyze and package the results, you pay the discovery cost once and create portable intelligence that can ship with the repository.
 
 ## Amplify Humans
 
