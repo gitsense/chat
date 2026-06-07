@@ -22,16 +22,16 @@ AI agents are useful, but repository work gets expensive when they have to redis
 
 ## Context Without Complexity
 
-You just need your files and an understanding of what you want to find. GitSense Chat handles the prompt engineering, batching, model selection, and reuse strategy so agents can work across large collections without reanalyzing everything from scratch. Filter what needs reanalysis, set your batch size, and pick the right model for the job.
+You just need your files and an understanding of what you want agents to understand. GitSense Chat handles the prompt engineering, batching, model selection, and reuse strategy so agents can work across large collections without reanalyzing everything from scratch. Filter what needs reanalysis, set your batch size, and pick the right model for the job.
 
 Watch the short Create, Analyze, and Package demos at [gitsense.com](https://gitsense.com) to see the workflow in action.
 
-### What You Can Capture
+### What Agents Can Learn
 
-- **Students:** flag what matters in notes using your own words, not keywords
-- **Accountants:** surface suspicious patterns across thousands of financial records
-- **Lawyers:** tag documents by matter, status, or attorney across an entire case repository
-- **Developers:** capture why a pattern is wrong once and apply that reasoning across an entire codebase
+- **Class notes:** what themes, definitions, sources, assignments, or open questions matter across a course
+- **Financial records:** which transactions, accounts, patterns, or anomalies need closer review
+- **Legal documents:** which matter, status, attorney, obligation, or risk applies to each file
+- **Codebases:** what a file is for, which behavior it protects, where tests belong, and what patterns are risky
 
 ## The CLI
 
