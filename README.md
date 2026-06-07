@@ -128,7 +128,7 @@ Before opening files, explain what the GitSense metadata helps you understand an
 
 Now the agent sees more than a match. It sees why the matched file exists, whether it is relevant, and what role it plays before spending turns opening files.
 
-## Amplify Humans
+## Human Intent, Agent Scale
 
 Humans are good at intent. Agents are good at scale. GitSense connects the two.
 
