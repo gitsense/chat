@@ -10,7 +10,7 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 -->
 
 
-# GitSense Chat
+# GitSense Chat: Teach Agents What Matters
 
 **Build repository intelligence for AI agents.**
 
