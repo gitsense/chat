@@ -45,31 +45,6 @@ Or [build it yourself](https://github.com/gitsense/gsc-cli).
 
 **Using a coding agent?** Install the CLI, then run `gsc docs help` in your agent session, and let it guide you through the rest.
 
-## The 30-Second Proof
-
-See what a smarter file looks like in 30 seconds.
-
-Install the CLI and compare a standard search with a GitSense-enriched search. We'll use the `smart-ripgrep` repository, a fork of `BurntSushi/ripgrep` enhanced with one example intelligence layer: `code-intent`.
-
-```bash
-# Clone the smart repository
-git clone https://github.com/gitsense/smart-ripgrep
-
-# Enter the directory
-cd smart-ripgrep
-
-# Create the code-intent intelligence database ("The Brain")
-gsc manifest import code-intent
-
-# Search with standard ripgrep
-rg cache
-
-# Search with ripgrep enriched with GitSense intelligence
-gsc rg --db code-intent --fields purpose cache
-```
-
-Notice how the search result answers questions that would normally require opening the file. What is this code for? Is it relevant? Why does it exist?
-
 ## Teach Agents Once
 
 Teaching an agent with GitSense Chat starts as a natural conversation.
@@ -119,6 +94,31 @@ You get a recommendation, not just a file list.
 The savings come from skipping file reads and skipping inference. Fields like `test_role`, `tested_behavior`, `canonical_for`, and `add_test_guidance` already contain the conclusions of that analysis.
 
 That is the shift: by chatting with AI, then using GitSense to analyze and package the results, you pay the discovery cost once and create portable intelligence that can ship with the repository.
+
+## Search Smarter
+
+See how GitSense adds repository intelligence to ordinary search.
+
+Install the CLI and compare standard search with GitSense-enriched search. We'll use the `smart-ripgrep` repository, a fork of `BurntSushi/ripgrep` enhanced with one example intelligence layer: `code-intent`.
+
+```bash
+# Clone the smart repository
+git clone https://github.com/gitsense/smart-ripgrep
+
+# Enter the directory
+cd smart-ripgrep
+
+# Create the code-intent intelligence database ("The Brain")
+gsc manifest import code-intent
+
+# Search with standard ripgrep
+rg cache
+
+# Search with ripgrep enriched with GitSense intelligence
+gsc rg --db code-intent --fields purpose cache
+```
+
+Notice how the search result answers questions that would normally require opening the file. What is this code for? Is it relevant? Why does it exist?
 
 ## Amplify Humans
 
