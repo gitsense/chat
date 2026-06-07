@@ -70,6 +70,50 @@ gsc rg --db code-intent --fields purpose cache
 
 Notice how the search result answers questions that would normally require opening the file. What is this code for? Is it relevant? Why does it exist?
 
+## Teach Agents Once
+
+By chatting with AI, we created a Rust test coverage Analyzer that teaches agents how to understand the intent and scope of a Rust test suite.
+
+The Analyzer is just Markdown: [rust-test-coverage-intent](data/analyzers/rust-test-coverage-intent/file-content/default/1.md).
+
+Try it in the smart repository:
+
+```bash
+# Clone the smart repository
+git clone https://github.com/gitsense/smart-ripgrep
+
+# Enter the directory
+cd smart-ripgrep
+
+# Import the Rust test Brain from .gitsense/manifests/
+gsc manifest import rust-test-coverage-intent
+```
+
+Start your agent in that repository, then run:
+
+```text
+! gsc experts init
+```
+
+Now ask your agent:
+
+```text
+I want to add a regression test for binary file handling.
+
+Use the rust test brain to find the files I should look at.
+Do not open the files yet. Just use the brain to guide me for now.
+```
+
+Then ask:
+
+```text
+If the rust test brain did not exist, how would you have helped me?
+```
+
+With GitSense, the agent can query test intent directly. Without GitSense, it has to search, open files, skim tests and helpers, infer coverage intent, and spend more turns reconstructing context from scratch.
+
+That is the shift: by chatting with AI, then using GitSense to analyze and package the results, you create portable intelligence that can ship with the repository.
+
 ## Amplify Humans
 
 Humans are good at intent. Agents are good at scale. GitSense connects the two.
