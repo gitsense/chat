@@ -95,7 +95,7 @@ The savings come from skipping file reads and skipping inference. Fields like `t
 
 That is the shift: by chatting with AI, then using GitSense to analyze and package the results, you pay the discovery cost once and create portable intelligence that can ship with the repository.
 
-## Search Smarter
+## Give Agents Search Context
 
 See how GitSense adds repository intelligence to ordinary search.
 
@@ -118,7 +118,15 @@ rg cache
 gsc rg --db code-intent --fields purpose cache
 ```
 
-Notice how the search result answers questions that would normally require opening the file. What is this code for? Is it relevant? Why does it exist?
+Ask your agent to compare the two searches:
+
+```text
+Compare the `rg cache` result with the `gsc rg` result.
+
+Before opening files, explain what the GitSense metadata helps you understand and which files you would inspect first.
+```
+
+Now the agent sees more than a match. It sees why the matched file exists, whether it is relevant, and what role it plays before spending turns opening files.
 
 ## Amplify Humans
 
