@@ -16,9 +16,35 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 
 GitSense Chat turns domain knowledge into queryable repository intelligence so agents know where to look, why it matters, and what to do next. You decide what intent, behavior, risks, ownership, or patterns matter; GitSense applies that knowledge across your files; and the `gsc` CLI makes the results available in terminals and agent sessions.
 
-Less noise. Better routing. Reusable expert intent. No RAG pipeline required.
+## Quick Start
 
-AI agents are useful, but repository work gets expensive when they have to rediscover context from scratch. GitSense moves that intent work earlier and makes it reusable inside the repository, so agents spend fewer turns finding direction and more time solving the actual problem.
+GitSense is a two-part system. GitSense Chat, this repository, is where you build repository intelligence. The `gsc` CLI is how you access that intelligence from your terminal or agent session.
+
+### The CLI
+
+Install `gsc` first:
+
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
+
+Or [build it yourself](https://github.com/gitsense/gsc-cli).
+
+### The App
+
+The app is where you teach AI what matters and apply that knowledge across your repository. Once `gsc` is installed, use it to install and start GitSense Chat:
+
+```bash
+# 1. Install the App
+gsc app native install
+
+# 2. Start the App
+gsc app native start
+```
+
+Open **http://localhost:3357** in your browser.
+
+**Using a coding agent?** Install the CLI, then run `gsc docs help` in your agent session, and let it guide you through the rest.
 
 ## Context Without Complexity
 
@@ -32,18 +58,6 @@ Watch the short Create, Analyze, and Package demos at [gitsense.com](https://git
 - **Financial records:** which transactions, accounts, patterns, or anomalies need closer review
 - **Legal documents:** which matter, status, attorney, obligation, or risk applies to each file
 - **Codebases:** what a file is for, which behavior it protects, where tests belong, and what patterns are risky
-
-## The CLI
-
-The CLI is how humans and agents interact with the intelligence you build. `gsc` is the terminal half of GitSense Chat. Install it with:
-
-```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
-```
-
-Or [build it yourself](https://github.com/gitsense/gsc-cli).
-
-**Using a coding agent?** Install the CLI, then run `gsc docs help` in your agent session, and let it guide you through the rest.
 
 ## Create Knowledge Assistants
 
@@ -178,26 +192,6 @@ A manifest can be published by the repository owner, downloaded by a developer, 
 
 Manifests are plain JSON files - inspectable, committable, and importable with the open-source `gsc` CLI. You're not locked into GitSense Chat to use the intelligence you create.
 
-## Quick Start
-
-GitSense is a two part system. The Chat App is where you build and package intelligence. The CLI is how you put it to work in your terminal and agent sessions.
-
-Get the app running in three commands:
-
-```bash
-# 1. Install the CLI
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
-
-# 2. Install the App
-gsc app native install
-
-# 3. Start the App
-gsc app native start
-```
-
-Open **http://localhost:3357** in your browser.
-
-Once the CLI is installed, run `gsc docs help` inside your agent session for guided setup, troubleshooting, and product-specific questions.
 
 ## What to Build First
 
