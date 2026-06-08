@@ -45,25 +45,26 @@ Or [build it yourself](https://github.com/gitsense/gsc-cli).
 
 **Using a coding agent?** Install the CLI, then run `gsc docs help` in your agent session, and let it guide you through the rest.
 
-## Teach Agents Once
+## Create Knowledge Assistants
 
-Teaching an agent with GitSense Chat starts as a natural conversation.
+Imagine you lead a team and want to stay ahead of technical debt. Finding `TODO` and `FIXME` is easy. That is not what you are worried about.
 
-In this example, GitSense turns a conversation about Rust test coverage into an Analyzer, packages the results into a Brain, and lets an agent use that Brain to answer a real developer question. Watch the Create demo at [gitsense.com](https://gitsense.com) to see the chat-based creation process.
+You care about the warning signs that are harder to search for:
 
-The Analyzer is just Markdown: [rust-test-coverage-intent](data/analyzers/rust-test-coverage-intent/file-content/default/1.md).
+```text
+This is probably not ideal.
+```
 
-Try it in the smart repository:
+Grep can find exact words. It cannot tell you which comments imply future work, which files are worth reviewing, or where hidden maintenance debt is starting to pile up.
+
+This is where GitSense comes in. By chatting with AI, you can create a Knowledge Assistant for the questions you care about. Explain what hidden technical debt looks like, and GitSense can turn that conversation into portable intelligence that can live in your repository. Import it with `gsc`, and your agent gets a local Brain it can query.
+
+To see how that works, try the `implicit-todos` example Brain in `smart-ripgrep`.
 
 ```bash
-# Clone the smart repository
 git clone https://github.com/gitsense/smart-ripgrep
-
-# Enter the directory
 cd smart-ripgrep
-
-# Import the Rust test Brain from .gitsense/manifests/
-gsc manifest import rust-test-coverage-intent
+gsc manifest import implicit-todos
 ```
 
 Start your agent in that repository, then run:
@@ -72,30 +73,25 @@ Start your agent in that repository, then run:
 ! gsc experts init
 ```
 
-Now ask your agent:
+Now ask:
 
 ```text
-I want to add a regression test for binary file handling.
+Use the implicit-todos Brain to find hidden technical debt in this repository.
 
-Use the rust test coverage brain to find the files I should look at.
-Do not open the files yet. Just use the brain to guide me for now.
+Group the results by area of the codebase and tell me which files look worth reviewing before the next release.
 ```
 
-Then ask:
+Then ask your agent how it would have found the same issues without GitSense:
 
 ```text
-If the rust test coverage brain did not exist, how would you have helped me?
+If the GitSense CLI (`gsc`) and the `implicit-todos` Brain did not exist, how would you have found these hidden technical debt signals?
+
+Be specific about the searches you would run, the files you would inspect, and what you might still miss.
 ```
 
-With GitSense, the agent can query test intent directly. Without GitSense, it has to search, open files, skim tests and helpers, infer coverage intent, and spend more turns reconstructing context from scratch.
+That comparison is the value of creating your own Knowledge Assistant: you define what matters once, and your agent can query that judgment whenever the question comes up again.
 
-You get a recommendation, not just a file list.
-
-The savings come from skipping file reads and skipping inference. Fields like `test_role`, `tested_behavior`, `canonical_for`, and `add_test_guidance` already contain the conclusions of that analysis.
-
-That is the shift: by chatting with AI, then using GitSense to analyze and package the results, you pay the discovery cost once and create portable intelligence that can ship with the repository.
-
-## Give Agents Search Context
+## Same Search, More Context
 
 See how GitSense adds repository intelligence to ordinary search.
 
