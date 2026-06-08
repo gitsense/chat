@@ -10,7 +10,7 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 -->
 
 
-# GitSense Chat: Teach Agents What Matters
+# GitSense Chat
 
 **Build repository intelligence for AI agents.**
 
@@ -46,7 +46,7 @@ Open **http://localhost:3357** in your browser.
 
 **Using a coding agent?** Install the CLI, then run `gsc docs help` in your agent session, and let it guide you through the rest.
 
-## Context Without Complexity
+## Teach AI What Matters
 
 You just need your files and an understanding of what you want agents to understand. GitSense Chat handles the prompt engineering, batching, model selection, and reuse strategy so agents can work across large collections without reanalyzing everything from scratch. Filter what needs reanalysis, set your batch size, and pick the right model for the job.
 
