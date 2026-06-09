@@ -76,8 +76,13 @@ This is where GitSense comes in. By chatting with AI, you can create a Knowledge
 To see how that works, try the `implicit-todos` example Brain in `smart-ripgrep`.
 
 ```bash
+# Clone the smart repository
 git clone https://github.com/gitsense/smart-ripgrep
+
+# Enter the directory
 cd smart-ripgrep
+
+# Create the implicit-todos intelligence database ("The Brain")
 gsc manifest import implicit-todos
 ```
 
