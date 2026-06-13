@@ -56,6 +56,11 @@
             "name": "Mistral",
             "apiKeyName": "MISTRAL_API_KEY",
             "baseURL": "https://api.mistral.ai"
+        },
+        {
+            "name": "XiaomiMIMO",
+            "apiKeyName": "MIMO_API_KEY",
+            "baseURL": "https://api.xiaomimimo.com/v1"
         }
     ],
     "cache": {

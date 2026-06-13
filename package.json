@@ -1,6 +1,6 @@
 {
   "name": "@gitsense/chat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,10 +22,10 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.27.3",
     "@cerebras/cerebras_cloud_sdk": "^1.64.1",
-    "@gitsense/gsc-utils": "^0.5.0",
-    "@gitsense/gscb-cli": "^0.11.2",
+    "@gitsense/gsc-utils": "^0.6.0",
+    "@gitsense/gscb-cli": "^0.11.4",
     "@gitsense/gscb-db": "^0.8.0",
-    "@gitsense/gscb-git-tools": "^0.9.1",
+    "@gitsense/gscb-git-tools": "^0.9.2",
     "@gitsense/tree-editor": "^0.2.2",
     "better-sqlite3": "^12.8.0",
     "browserify": "^17.0.1",

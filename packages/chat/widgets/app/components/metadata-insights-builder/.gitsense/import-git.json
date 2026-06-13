@@ -5,10 +5,10 @@
   "group_id": 673,
   "branches": {
     "main": {
-      "last_import": "2026-05-26T11:09:01-04:00",
+      "last_import": "2026-06-09T09:40:14-04:00",
       "ref_chat_id": 26438,
       "shadow": true,
-      "shadow_path": "/Users/terrchen/gitsense-chat/shadow-repos/gitsense/gsc-metadata-insights-builder/main",
+      "shadow_path": "/Users/terrchen/gitsense-chat/data/shadow-repos/gitsense/gsc-metadata-insights-builder/main",
       "flags": {
         "max_size": 0,
         "include": "",
