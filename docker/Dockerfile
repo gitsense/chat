@@ -1,12 +1,12 @@
 # Dockerfile Metadata
 # Component: GitSense Chat Dockerfile
-# Block-UUID: 672df1f1-799f-42c0-9f32-561a499a7aa6
-# Parent-UUID: 223d3e2d-f36f-446d-86be-082a54090f99
-# Version: 1.9.0
-# Description: Copied .env.example to the production image to support the 'gsc docker env init' command for master configuration file creation.
+# Block-UUID: a1f3c2e7-8b4d-4e9a-bc61-2d7f05e83a19
+# Parent-UUID: 672df1f1-799f-42c0-9f32-561a499a7aa6
+# Version: 2.0.0
+# Description: Injected git commit hash, version, and build timestamp into gsc CLI binaries at compile time via Go ldflags to populate version.GitCommit, version.Version, and version.BuildTime.
 # Language: Dockerfile
-# Created-at: 2025-08-10T17:41:36.129Z
-# Authors: Gemini 2.5 Flash Thinking (v1.0.0), GLM-4.7 (v1.1.0), GLM-4.7 (v1.1.1), GLM-4.7 (v1.2.0), Gemini 3 Flash (v1.3.0), GLM-4.7 (v1.4.0), Gemini 3 Flash (v1.5.0), GLM-4.7 (v1.6.0), GLM-4.7 (v1.7.0), GLM-4.7 (v1.8.0), GLM-4.7 (v1.9.0)
+# Created-at: 2026-06-14T00:00:00.000Z
+# Authors: Gemini 2.5 Flash Thinking (v1.0.0), GLM-4.7 (v1.1.0), GLM-4.7 (v1.1.1), GLM-4.7 (v1.2.0), Gemini 3 Flash (v1.3.0), GLM-4.7 (v1.4.0), Gemini 3 Flash (v1.5.0), GLM-4.7 (v1.6.0), GLM-4.7 (v1.7.0), GLM-4.7 (v1.8.0), GLM-4.7 (v1.9.0), Claude Sonnet 4.6 (v2.0.0)
 
 
 # --- GSC CLI Cross-Compilation Stage ---
@@ -27,10 +27,16 @@ RUN git clone --depth 1 --branch ${GSC_CLI_VERSION} ${GSC_CLI_REPO} .
 
 # Compile for multiple targets
 # Output filenames include OS and Arch for easy identification
-RUN GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o gsc-linux-amd64 ./cmd/gsc
-RUN GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -o gsc-darwin-amd64 ./cmd/gsc
-RUN GOOS=darwin GOARCH=arm64 go build -ldflags="-s -w" -o gsc-darwin-arm64 ./cmd/gsc
-RUN GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -o gsc-windows-amd64.exe ./cmd/gsc
+RUN COMMIT=$(git rev-parse HEAD) && \
+    BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%SZ) && \
+    LD_FLAGS="-s -w \
+      -X github.com/gitsense/gsc-cli/internal/version.Version=${GSC_CLI_VERSION} \
+      -X github.com/gitsense/gsc-cli/internal/version.GitCommit=${COMMIT} \
+      -X github.com/gitsense/gsc-cli/internal/version.BuildTime=${BUILD_TIME}" && \
+    GOOS=linux   GOARCH=amd64 go build -ldflags="${LD_FLAGS}" -o gsc-linux-amd64       ./cmd/gsc && \
+    GOOS=darwin  GOARCH=amd64 go build -ldflags="${LD_FLAGS}" -o gsc-darwin-amd64      ./cmd/gsc && \
+    GOOS=darwin  GOARCH=arm64 go build -ldflags="${LD_FLAGS}" -o gsc-darwin-arm64      ./cmd/gsc && \
+    GOOS=windows GOARCH=amd64 go build -ldflags="${LD_FLAGS}" -o gsc-windows-amd64.exe ./cmd/gsc
 
 
 # --- Node.js Build Stage ---
