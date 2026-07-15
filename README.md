@@ -77,7 +77,18 @@ You just need your files and an understanding of what you want agents to underst
 | :--- | :--- |
 | **Search finds where words appear.**<br><br>The agent still has to infer which matches matter before opening files.<br><br><img src="assets/readme-rg-without-placeholder.svg" alt="Placeholder for plain rg cache output" width="420"> | **Search returns matches with meaning.**<br><br>The agent sees purpose metadata alongside the same search results.<br><br><img src="assets/readme-rg-with-placeholder.svg" alt="Placeholder for gsc rg cache output with purpose metadata" width="420"> |
 | **Tree shows paths.**<br><br>The agent sees file names, but not why each file exists or when to edit it.<br><br><img src="assets/readme-tree-without-placeholder.svg" alt="Placeholder for plain tree output" width="420"> | **Tree shows paths plus context.**<br><br>The agent sees structure with repository intelligence attached to each file.<br><br><img src="assets/readme-tree-with-placeholder.svg" alt="Placeholder for gsc tree output with purpose metadata" width="420"> |
-| **Docs discovery starts broad.**<br><br>The agent searches Markdown, then reads through noisy matches to find the right docs.<br><br><img src="assets/readme-docs-without-placeholder.svg" alt="Placeholder for broad Markdown search results" width="420"> | **The Docs Brain narrows the list.**<br><br>The agent starts with relevant documents, summaries, and sections to review.<br><br><img src="assets/readme-docs-with-placeholder.svg" alt="Placeholder for docs Brain query results" width="420"> |
+
+## Similar Problems, Better Start
+
+Some questions are not hard because the words are hidden. They are hard because the answer is spread across several documents.
+
+Yes, you have to build the Brain first. That is the tradeoff. But once it exists, the knowledge is durable and reusable. If the manifest is committed with the code, everyone who clones the repository inherits that knowledge too.
+
+| Without GitSense | With GitSense |
+| :--- | :--- |
+| The user or agent has to assemble the reading list first: search Markdown, recognize which docs belong together, open enough files to understand the workflow, and put the useful parts into context.<br><br><img src="assets/readme-docs-without-placeholder.svg" alt="Placeholder for a docs discovery session without GitSense" width="420"> | The agent starts from the Docs Brain, then opens the documents most likely to answer the question.<br><br><img src="assets/readme-docs-with-placeholder.svg" alt="Placeholder for a docs discovery session with GitSense" width="420"> |
+
+Both sessions end with the same question: **How many files did you need to read to answer this?**
 
 ## License
 
