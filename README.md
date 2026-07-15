@@ -86,7 +86,7 @@ Yes, you have to build the Brain first. That is the tradeoff. But once it exists
 
 | Without GitSense | With GitSense |
 | :--- | :--- |
-| The user or agent has to assemble the reading list first: search Markdown, recognize which docs belong together, open enough files to understand the workflow, and put the useful parts into context.<br><br><img src="assets/readme-docs-without-placeholder.svg" alt="Placeholder for a docs discovery session without GitSense" width="420"> | The agent starts from the Docs Brain, then opens the documents most likely to answer the question.<br><br><img src="assets/readme-docs-with-placeholder.svg" alt="Placeholder for a docs discovery session with GitSense" width="420"> |
+| The agent searches Markdown, opens likely docs, and builds the reading path inside the chat session.<br><br><img src="assets/readme-docs-without-placeholder.svg" alt="Placeholder for a docs discovery session without GitSense" width="420"> | The agent starts from the Docs Brain, opens likely docs, and follows a reusable reading path.<br><br><img src="assets/readme-docs-with-placeholder.svg" alt="Placeholder for a docs discovery session with GitSense" width="420"> |
 
 Both sessions end with the same question: **How many files did you need to read to answer this?**
 
