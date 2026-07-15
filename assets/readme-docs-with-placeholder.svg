@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="472" viewBox="0 0 840 472" role="img" aria-labelledby="title desc">
+  <title id="title">Docs Brain screenshot placeholder</title>
+  <desc id="desc">Placeholder for a screenshot showing docs Brain query results.</desc>
+  <rect width="840" height="472" fill="#f6f8fa"/>
+  <rect x="24" y="24" width="792" height="424" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+  <rect x="24" y="24" width="792" height="52" rx="12" fill="#24292f"/>
+  <text x="52" y="58" fill="#ffffff" font-family="Menlo, Consolas, monospace" font-size="22">Screenshot placeholder</text>
+  <text x="52" y="126" fill="#57606a" font-family="Menlo, Consolas, monospace" font-size="16">$ gsc query --db docs --filter "topics=extension" --fields title,summary</text>
+  <text x="52" y="172" fill="#0969da" font-family="Menlo, Consolas, monospace" font-size="17">packages/coding-agent/docs/extensions.md</text>
+  <text x="52" y="204" fill="#24292f" font-family="Arial, sans-serif" font-size="19">Comprehensive reference for writing Pi TypeScript extensions.</text>
+  <text x="52" y="252" fill="#0969da" font-family="Menlo, Consolas, monospace" font-size="17">packages/coding-agent/docs/sdk.md</text>
+  <text x="52" y="284" fill="#24292f" font-family="Arial, sans-serif" font-size="19">SDK reference covering custom tools, extensions, and skills.</text>
+  <text x="52" y="354" fill="#57606a" font-family="Arial, sans-serif" font-size="22">The Brain returns relevant docs and why to read them.</text>
+</svg>
