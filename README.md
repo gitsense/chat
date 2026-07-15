@@ -16,28 +16,11 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 
 GitSense Chat turns domain knowledge into queryable repository intelligence so agents know where to look, why it matters, and what to do next.
 
+![Three-step GitSense Chat workflow: define what matters, store repository intelligence as manifests, and help agents start informed.](assets/three-step-process-for-intelligent-coding-agents.png)
+
+Define what matters in GitSense Chat. Store that knowledge as plain JSON manifests in the repository. Let coding agents start with relevant files and useful guidance instead of opening files cold.
+
 GitSense is a two-part system. This App is where you build the intelligence. The `gsc` CLI is how your terminal and your agent use it.
-
-Here is what that means in practice. Say you want to add a file-size warning, so you look for where size handling lives. Plain ripgrep gives you ten file names:
-
-```
-rg -l filesize | wc -l
-10
-```
-
-Ten names, and no way to tell the file that matters from the one that just mentions the word without opening each. The same search against a Brain says what each file is for, so two of the ten stand out before you open anything:
-
-```
-gsc rg filesize --db code-intent --fields purpose --summary
-
-✓ crates/ignore/src/walk.rs
-; purpose: Modify this file to change the recursive directory traversal logic, including parallel execution strategies, ignore rule application, and symlink handling.
-
-✓ crates/core/flags/lowargs.rs
-; purpose: Modify this file to change the structure of low-level CLI arguments, add new flag modes, or adjust default values for search configuration options.
-```
-
-The App built those purpose lines. The CLI delivered them. That is the intelligence: the agent looks first and thinks second, instead of opening ten files to find the two that matter.
 
 ## Quick Start
 
