@@ -73,10 +73,16 @@ You just need your files and an understanding of what you want agents to underst
 
 ## What Changes With GitSense
 
-| Without GitSense | With GitSense |
+GitSense does not replace search. It adds repository knowledge to the places where agents already start.
+
+| Command | What it gives the agent |
 | :--- | :--- |
-| **Search finds where words appear.**<br><br>The agent still has to infer which matches matter before opening files.<br><br><img src="assets/readme-rg-without-placeholder.svg" alt="Placeholder for plain rg cache output" width="420"> | **Search returns matches with meaning.**<br><br>The agent sees purpose metadata alongside the same search results.<br><br><img src="assets/readme-rg-with-placeholder.svg" alt="Placeholder for gsc rg cache output with purpose metadata" width="420"> |
-| **Tree shows paths.**<br><br>The agent sees file names, but not why each file exists or when to edit it.<br><br><img src="assets/readme-tree-without-placeholder.svg" alt="Placeholder for plain tree output" width="420"> | **Tree shows paths plus context.**<br><br>The agent sees structure with repository intelligence attached to each file.<br><br><img src="assets/readme-tree-with-placeholder.svg" alt="Placeholder for gsc tree output with purpose metadata" width="420"> |
+| `gsc rg cache --db code-intent --fields purpose` | Search still finds matching text, but the agent also sees why each matching file exists before opening it. |
+| `gsc rg TODO --db implicit-todos --fields todo_summary --summary` | The agent can look for a familiar signal and see higher-level findings, not just raw matching lines. |
+| `gsc query --db docs --filter "topics=extension" --fields title,summary,section_anchors` | The agent can ask for relevant documents by topic and start with summaries and sections instead of broad Markdown search results. |
+| `gsc query --db code-intent --filter "purpose=auth" --fields purpose,keywords` | The agent can search for concepts, not only exact strings that happen to appear in code. |
+
+The difference is not that the agent stops searching. The difference is that search starts with meaning: purpose, risk, guidance, summaries, topics, and the reading paths you already built.
 
 ## Similar Problems, Better Start
 
