@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="472" viewBox="0 0 840 472" role="img" aria-labelledby="title desc">
+  <title id="title">Import repository demo placeholder</title>
+  <desc id="desc">Placeholder for a demo showing a Git repository imported into GitSense Chat.</desc>
+  <rect width="840" height="472" fill="#f6f8fa"/>
+  <rect x="24" y="24" width="792" height="424" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+  <rect x="24" y="24" width="792" height="52" rx="12" fill="#24292f"/>
+  <text x="52" y="58" fill="#ffffff" font-family="Menlo, Consolas, monospace" font-size="22">Demo placeholder</text>
+  <text x="52" y="126" fill="#57606a" font-family="Menlo, Consolas, monospace" font-size="20">$ gsc app import git --owner BurntSushi --repo ripgrep --branch master</text>
+  <rect x="52" y="172" width="736" height="186" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="84" y="226" fill="#24292f" font-family="Arial, sans-serif" font-size="24" font-weight="700">Repository imported</text>
+  <text x="84" y="272" fill="#57606a" font-family="Arial, sans-serif" font-size="21">Branches, paths, files, and history are now selectable in GitSense Chat.</text>
+  <text x="84" y="312" fill="#57606a" font-family="Arial, sans-serif" font-size="21">Next: chat with AI to define what should be extracted.</text>
+  <text x="52" y="404" fill="#57606a" font-family="Arial, sans-serif" font-size="22">Replace with import workflow video or screenshot.</text>
+</svg>

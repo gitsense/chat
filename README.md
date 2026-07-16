@@ -18,7 +18,7 @@ GitSense Chat turns repository data into structured intelligence so agents know 
 
 ![Three-step GitSense Chat workflow: define what matters, store repository intelligence as manifests, and help agents start informed.](assets/three-step-process-for-intelligent-coding-agents.png)
 
-Define what matters in GitSense Chat. Analyze repository data at scale. Package the results as plain JSON manifests that coding agents and the `gsc` CLI can use later.
+Run `gsc app import git`, chat with AI to explain what matters, refine the data to analyze, and package the results as plain JSON manifests that coding agents and the `gsc` CLI can use later.
 
 GitSense is a two-part system. This App is where you build the intelligence. The `gsc` CLI is how your terminal and your agent use it.
 
@@ -60,9 +60,18 @@ gsc app native start
 
 Open **http://localhost:3357** in your browser.
 
-### Import Repository Data
+## Dead Simple
 
-Import a Git repository so GitSense Chat can analyze it:
+GitSense Chat is for turning data in a Git repository into reusable intelligence without designing a pipeline by hand.
+
+Import a repository, explain what matters in plain language, select and refine the data, then package the extracted metadata for agents to use later.
+
+| Step | Demo |
+| :--- | :--- |
+| **Import**<br>Bring repository data into GitSense Chat so it can be selected, analyzed, and updated later. | <img src="assets/readme-import-repository-placeholder.svg" alt="Placeholder for importing a Git repository into GitSense Chat" width="420"> |
+| **Create**<br>Describe the pattern agents should understand. GitSense turns the conversation into a reusable Analyzer. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
+| **Analyze**<br>Select files, apply filters, and run the Analyzer in batches. GitSense tracks progress and results. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
+| **Package**<br>Combine analysis into a queryable manifest that the CLI and coding agents can use later. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
 
 ```bash
 git clone https://github.com/BurntSushi/ripgrep
@@ -76,6 +85,18 @@ Later, update the imported data incrementally:
 gsc app import git --update
 ```
 
+## What This Means
+
+You do not need to decide how to stuff a prompt, track state across a long agent run, or hand-design a metadata format before you start. GitSense Chat gives you a workflow for extracting value from repository data and turning the useful parts into something durable.
+
+| Instead Of | GitSense Chat Lets You |
+| :--- | :--- |
+| Pasting raw files into a chat | Keep repository data selectable until specific context is needed. |
+| Asking an agent to invent structure each time | Save an Analyzer that extracts the same metadata consistently. |
+| Reprocessing everything after changes | Update imported data and analyze changed or not-yet-analyzed items. |
+| Trusting one long agent answer | Review batches, inspect metadata, refine instructions, and rerun. |
+| Keeping useful output trapped in a chat | Package selected fields into a manifest that agents and the CLI can import. |
+
 ## Analyze Repository Data At Scale
 
 GitSense Chat is the analysis layer for GitSense. It helps you extract structured metadata from repository data: source code, documentation, logs, notes, transcripts, financial records, legal documents, or anything else you keep in Git.
@@ -83,14 +104,6 @@ GitSense Chat is the analysis layer for GitSense. It helps you extract structure
 Define an Analyzer, run it across selected data in focused batches, review the output, and package the useful fields as portable intelligence.
 
 <img src="assets/readme-analysis-pipeline-placeholder.svg" alt="Placeholder for GitSense Chat analysis pipeline visual" width="100%">
-
-### Watch the Workflow
-
-| Step | Demo |
-| :--- | :--- |
-| **Create**<br>Describe the pattern agents should understand. GitSense turns the conversation into a reusable Analyzer. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
-| **Analyze**<br>Select files, apply filters, and run the Analyzer in batches. GitSense tracks progress and results. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
-| **Package**<br>Combine analysis into a queryable manifest that the CLI and coding agents can use later. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
 
 ## Manage Analysis Like A Pipeline
 
@@ -117,18 +130,6 @@ You will not always get the Analyzer right the first time. That is expected.
 GitSense Chat gives you a place to experiment: define an Analyzer, run it on a focused batch, inspect the metadata, adjust the instructions, and run it again. Once the results are useful, run the Analyzer across more data and package the fields you trust.
 
 The workflow is iterative: define what you want to extract, test on a small batch, review the output, refine the Analyzer, rerun only what needs updating, and package the useful metadata.
-
-## Why Not Just Ask An Agent?
-
-For a small one-off task, asking an agent to inspect the repository may be enough. GitSense Chat is for analysis you want to reuse, validate, update, combine, and share.
-
-| Ask An Agent Directly | Use GitSense Chat |
-| :--- | :--- |
-| Context fills with raw files. | Repository data stays outside the prompt until selected. |
-| Results live in one chat. | Results become structured metadata. |
-| The agent decides what to inspect once. | An Analyzer applies the same logic consistently across many files. |
-| Updates require rediscovery. | Incremental runs can focus on changed or not-yet-analyzed data. |
-| Reuse means copying prompts or summaries. | Reuse means saved Analyzers, packaged manifests, and queryable Brains. |
 
 ## What Agents Get Afterward
 
