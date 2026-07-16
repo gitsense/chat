@@ -75,6 +75,12 @@ You just need your files and an understanding of what you want agents to underst
 
 GitSense does not replace search. It adds repository knowledge to the places where agents already start.
 
+Same search, better starting point:
+
+| Without GitSense | With GitSense |
+| :--- | :--- |
+| <img src="assets/readme-rg-without-placeholder.svg" alt="Placeholder for plain rg output" width="420"> | <img src="assets/readme-rg-with-placeholder.svg" alt="Placeholder for gsc rg output with purpose metadata" width="420"> |
+
 | Command | What it gives the agent |
 | :--- | :--- |
 | `gsc rg cache --db code-intent --fields purpose` | Search still finds matching text, but the agent also sees why each matching file exists before opening it. |
@@ -83,12 +89,6 @@ GitSense does not replace search. It adds repository knowledge to the places whe
 | `gsc query --db code-intent --filter "purpose=auth" --fields purpose,keywords` | The agent can search for concepts, not only exact strings that happen to appear in code. |
 
 The difference is not that the agent stops searching. The difference is that search starts with meaning: purpose, risk, guidance, summaries, topics, and the reading paths you already built.
-
-Same search, better starting point:
-
-| Without GitSense | With GitSense |
-| :--- | :--- |
-| <img src="assets/readme-rg-without-placeholder.svg" alt="Placeholder for plain rg output" width="420"> | <img src="assets/readme-rg-with-placeholder.svg" alt="Placeholder for gsc rg output with purpose metadata" width="420"> |
 
 ## Similar Problems, Better Start
 
