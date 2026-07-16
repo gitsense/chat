@@ -97,41 +97,7 @@ You do not need to decide how to stuff a prompt, track state across a long agent
 | Trusting one long agent answer | Review batches, inspect metadata, refine instructions, and rerun. |
 | Keeping useful output trapped in a chat | Package selected fields into a manifest that agents and the CLI can import. |
 
-## Analyze Repository Data At Scale
-
-GitSense Chat is the analysis layer for GitSense. It helps you extract structured metadata from repository data: source code, documentation, logs, notes, transcripts, financial records, legal documents, or anything else you keep in Git.
-
-Define an Analyzer, run it across selected data in focused batches, review the output, and package the useful fields as portable intelligence.
-
-<img src="assets/readme-analysis-pipeline-placeholder.svg" alt="Placeholder for GitSense Chat analysis pipeline visual" width="100%">
-
-## Manage Analysis Like A Pipeline
-
-GitSense Chat is not just a chat window over a repository. It gives you a way to manage analysis work across repositories, branches, analyzers, and runs.
-
-Once data is imported, repositories, branches, paths, batches, and analysis results become selectable context instead of raw text you paste into a prompt.
-
-<img src="assets/readme-management-validation-placeholder.svg" alt="Placeholder for GitSense Chat management and validation visual" width="100%">
-
-| Need | What GitSense Chat Provides |
-| :--- | :--- |
-| Many repositories | Import each repository into the same workspace and analyze them with the same Analyzer. |
-| Multiple branches | Import and analyze branch-specific data so intelligence tracks the version of the repository it came from. |
-| Incremental updates | Focus on changed, new, or not-yet-analyzed data instead of rerunning everything. |
-| Focused LLM context | Split large analysis jobs into batches so each run sees only the data it needs. |
-| Reviewable results | Inspect batch status, metadata fields, and extracted values before packaging. |
-| Combined intelligence | Package fields from multiple Analyzers into one queryable layer, such as purpose plus risk plus hidden work items. |
-| Portable output | Publish or commit manifests so agents and the `gsc` CLI can import the same intelligence later. |
-
-## Experiment Until The Analysis Is Useful
-
-You will not always get the Analyzer right the first time. That is expected.
-
-GitSense Chat gives you a place to experiment: define an Analyzer, run it on a focused batch, inspect the metadata, adjust the instructions, and run it again. Once the results are useful, run the Analyzer across more data and package the fields you trust.
-
-The workflow is iterative: define what you want to extract, test on a small batch, review the output, refine the Analyzer, rerun only what needs updating, and package the useful metadata.
-
-## What Agents Get Afterward
+## Better Context, Sooner
 
 GitSense Chat produces the intelligence. The `gsc` CLI and coding agents use it later.
 
