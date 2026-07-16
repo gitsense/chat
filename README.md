@@ -94,13 +94,13 @@ The difference is not that the agent stops searching. The difference is that sea
 
 Some questions are not hard because the words are hidden. They are hard because the answer is spread across several documents.
 
-Yes, you have to build the Brain first. That is the tradeoff. But once it exists, the knowledge is durable and reusable. If the manifest is committed with the code, everyone who clones the repository inherits that knowledge too.
+Same question, different starting point. In both runs, the agent has to explain how to build and distribute a Pi extension, then report how many files it read.
 
 | Without GitSense | With GitSense |
 | :--- | :--- |
-| The agent searches Markdown, opens likely docs, and builds the reading path inside the chat session.<br><br><img src="assets/readme-docs-without-placeholder.svg" alt="Placeholder for a docs discovery session without GitSense" width="420"> | The agent starts from the Docs Brain, opens likely docs, and follows a reusable reading path.<br><br><img src="assets/readme-docs-with-placeholder.svg" alt="Placeholder for a docs discovery session with GitSense" width="420"> |
+| In `~/pi`, I want to understand how to build and distribute a Pi extension.<br><br>Do not use GitSense, `gsc`, or any Brain. Use normal repository search to find the documentation you think is relevant.<br><br>First, list the docs you plan to read and why. Then read only the docs you need and explain the workflow.<br><br>At the end, answer this: how many files did you need to read?<br><br><img src="assets/readme-docs-without-placeholder.svg" alt="Placeholder for a docs discovery session without GitSense" width="420"> | In `~/pi`, I want to understand how to build and distribute a Pi extension.<br><br>Use the docs Brain first to find the documentation you think is relevant. Do not open files until you have used the Brain to build the reading list.<br><br>First, list the docs you plan to read and why. Then read only the docs you need and explain the workflow.<br><br>At the end, answer this: how many files did you need to read?<br><br><img src="assets/readme-docs-with-placeholder.svg" alt="Placeholder for a docs discovery session with GitSense" width="420"> |
 
-Both sessions end with the same question: **How many files did you need to read to answer this?**
+Yes, you have to build the Brain first. That is the tradeoff. But once it exists, the knowledge is durable and reusable. If the manifest is committed with the code, everyone who clones the repository inherits that knowledge too.
 
 ## License
 
