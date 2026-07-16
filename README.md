@@ -2,11 +2,11 @@
 Component: GitSense Chat README
 Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
 Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 4.3.0
-Description: Reframed GitSense Chat as the way to extract and refine repository knowledge for GitSense's on-demand context system.
+Version: 4.4.0
+Description: Clarified the agent-guided GitSense Chat setup path and linked it to the complete built-in installation guide.
 Language: Markdown
 Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0)
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0)
 -->
 
 
@@ -40,25 +40,23 @@ Or [build it yourself](https://github.com/gitsense/gsc-cli).
 
 The app is where you teach AI what matters and apply that knowledge across your repository.
 
-The easiest setup path is to let your coding agent guide you. Once `gsc` is installed, start your agent in this repository and ask it to run:
+The easiest setup path is to let your coding agent guide you. Once `gsc` is installed, ask your agent:
 
 ```text
-gsc docs help
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
+Use the native setup unless I ask for Docker. Check what is already installed
+before changing anything, and stop when I need to enter an API key myself.
 ```
 
-That gives your agent the current setup instructions and lets it walk you through installing, configuring, and starting GitSense Chat.
+The built-in guide walks your agent through the current install, configuration, and startup steps. It also tells the agent how to verify that the app is ready.
 
-If you want to run the app setup yourself:
+If you prefer to handle setup yourself, start with:
 
 ```bash
-# 1. Install the App
-gsc app native install
-
-# 2. Start the App
-gsc app native start
+gsc docs install
 ```
 
-Open **http://localhost:3357** in your browser.
+You can install and open the interface without an API key. Chat and analysis also need a provider, model, and API key.
 
 ## Dead Simple
 
@@ -72,18 +70,6 @@ Import a repository, explain what matters in plain language, select and refine t
 | **Create**<br>Describe the pattern agents should understand. GitSense turns the conversation into a reusable Analyzer. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
 | **Analyze**<br>Select files, apply filters, and run the Analyzer in batches. GitSense tracks progress and results. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
 | **Package**<br>Combine analysis into a queryable manifest that the CLI and coding agents can use later. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
-
-```bash
-git clone https://github.com/BurntSushi/ripgrep
-cd ripgrep
-gsc app import git --owner BurntSushi --repo ripgrep --branch master
-```
-
-Later, update the imported data incrementally:
-
-```bash
-gsc app import git --update
-```
 
 ## What This Means
 
