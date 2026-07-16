@@ -84,6 +84,12 @@ GitSense does not replace search. It adds repository knowledge to the places whe
 
 The difference is not that the agent stops searching. The difference is that search starts with meaning: purpose, risk, guidance, summaries, topics, and the reading paths you already built.
 
+Same search, better starting point:
+
+| Without GitSense | With GitSense |
+| :--- | :--- |
+| <img src="assets/readme-rg-without-placeholder.svg" alt="Placeholder for plain rg output" width="420"> | <img src="assets/readme-rg-with-placeholder.svg" alt="Placeholder for gsc rg output with purpose metadata" width="420"> |
+
 ## Similar Problems, Better Start
 
 Some questions are not hard because the words are hidden. They are hard because the answer is spread across several documents.
