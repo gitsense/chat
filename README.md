@@ -38,7 +38,17 @@ Or [build it yourself](https://github.com/gitsense/gsc-cli).
 
 ### The App
 
-The app is where you teach AI what matters and apply that knowledge across your repository. Once `gsc` is installed, use it to install and start GitSense Chat:
+The app is where you teach AI what matters and apply that knowledge across your repository.
+
+The easiest setup path is to let your coding agent guide you. Once `gsc` is installed, start your agent in this repository and ask it to run:
+
+```text
+gsc docs help
+```
+
+That gives your agent the current setup instructions and lets it walk you through installing, configuring, and starting GitSense Chat.
+
+If you want to run the app setup yourself:
 
 ```bash
 # 1. Install the App
@@ -65,8 +75,6 @@ Later, update the imported data incrementally:
 ```bash
 gsc app import git --update
 ```
-
-**Using a coding agent?** Install the CLI, then run `gsc docs help` in your agent session, and let it guide you through the rest.
 
 ## Analyze Repository Data At Scale
 
