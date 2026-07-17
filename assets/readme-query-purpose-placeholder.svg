@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder for a GitSense purpose query screenshot</title>
+  <desc id="desc">A terminal placeholder for finding files by repository knowledge instead of an exact source term.</desc>
+  <rect width="1440" height="520" fill="#ffffff"/>
+  <rect x="80" y="55" width="1280" height="390" rx="6" fill="#fafafa" stroke="#111111" stroke-width="3"/>
+  <line x1="80" y1="115" x2="1360" y2="115" stroke="#111111" stroke-width="3"/>
+  <circle cx="118" cy="85" r="8" fill="#111111"/>
+  <circle cx="146" cy="85" r="8" fill="#777777"/>
+  <circle cx="174" cy="85" r="8" fill="#bbbbbb"/>
+  <text x="116" y="165" fill="#111111" font-family="Menlo, Consolas, monospace" font-size="20">$ gsc query --db code-intent --filter "purpose=cache"</text>
+  <text x="116" y="215" fill="#555555" font-family="Menlo, Consolas, monospace" font-size="21">Files found by what they do</text>
+  <rect x="116" y="255" width="790" height="14" fill="#d0d0d0"/>
+  <rect x="145" y="286" width="1010" height="12" fill="#999999"/>
+  <rect x="116" y="328" width="680" height="14" fill="#d0d0d0"/>
+  <rect x="145" y="359" width="920" height="12" fill="#999999"/>
+  <text x="720" y="413" fill="#777777" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle">SCREENSHOT PLACEHOLDER</text>
+  <text x="720" y="488" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="21" text-anchor="middle">Replace with real output from the same reproducible demo.</text>
+</svg>

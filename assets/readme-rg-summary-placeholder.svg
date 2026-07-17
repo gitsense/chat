@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder for a GitSense search summary screenshot</title>
+  <desc id="desc">A terminal placeholder for gsc rg summary output.</desc>
+  <rect width="1440" height="520" fill="#ffffff"/>
+  <rect x="80" y="55" width="1280" height="390" rx="6" fill="#fafafa" stroke="#111111" stroke-width="3"/>
+  <line x1="80" y1="115" x2="1360" y2="115" stroke="#111111" stroke-width="3"/>
+  <circle cx="118" cy="85" r="8" fill="#111111"/>
+  <circle cx="146" cy="85" r="8" fill="#777777"/>
+  <circle cx="174" cy="85" r="8" fill="#bbbbbb"/>
+  <text x="116" y="170" fill="#111111" font-family="Menlo, Consolas, monospace" font-size="23">$ gsc rg cache --db code-intent --fields purpose --summary</text>
+  <text x="116" y="230" fill="#555555" font-family="Menlo, Consolas, monospace" font-size="21">Search shape, matching files, and repository context</text>
+  <rect x="116" y="270" width="905" height="14" fill="#d0d0d0"/>
+  <rect x="116" y="307" width="1110" height="14" fill="#d0d0d0"/>
+  <rect x="116" y="344" width="780" height="14" fill="#d0d0d0"/>
+  <text x="720" y="413" fill="#777777" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle">SCREENSHOT PLACEHOLDER</text>
+  <text x="720" y="488" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="21" text-anchor="middle">Replace with real output from the same reproducible demo.</text>
+</svg>

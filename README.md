@@ -2,11 +2,11 @@
 Component: GitSense Chat README
 Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
 Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 4.5.0
-Description: Reworked the opening around better context for agent reasoning and added a side-by-side search comparison placeholder.
+Version: 4.6.0
+Description: Reframed the README around managed analysis, a concise workflow, practical examples, and a shorter Quick Start.
 Language: Markdown
 Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0)
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0)
 -->
 
 
@@ -16,101 +16,103 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 
 ![GitSense builds context by capturing knowledge during everyday work or extracting it at scale with GitSense Chat, then makes personal and repository knowledge available to coding agents through queryable Brains.](assets/gitsense-on-demand-context.png)
 
-GitSense Chat is the top-right part of the picture. It is where you work with AI to decide what matters, run that analysis across a repository, and keep refining it until it is useful.
+## Why GitSense Chat?
 
-## Why GitSense?
-
-Coding agents are designed to reason from the context they have. GitSense gives them more to go on before they decide what to read or change.
+Coding agents are designed to reason from the context they have. GitSense Chat helps you build the repository knowledge that makes that context better.
 
 ![Placeholder for a side-by-side comparison of rg search results and the same search with GitSense repository knowledge attached.](assets/readme-rg-gitsense-comparison-placeholder.svg)
 
-Both searches find the same code. GitSense adds what the repository already knows about each match, so the agent can tell which results are worth following.
+Both commands search the same code. The GitSense version also tells the agent what each file is for and why it may be worth following.
 
-### Start Broad, Then Narrow Down
+That extra information has to come from somewhere. Ask an agent to generate it once and it probably will. Keeping it consistent across thousands of files, branches, and many repositories is where it stops being a simple prompt.
 
-In a large codebase, the first search usually is not the answer. It helps the agent work out where the answer might be.
+GitSense Chat manages that work. [See how it works](#how-it-works), or [skip to the examples](#examples).
 
-A summary shows how widely something appears without filling the agent's context with every matching line:
+## How It Works
+
+Import a repository, tell GitSense Chat what you want to know, try the analysis on real files, and adjust it until the results are useful. When it is ready, package the metadata so coding agents can use it later.
+
+| Step | Demo |
+| :--- | :--- |
+| **Import**<br>Bring repository data into GitSense Chat. | <img src="assets/readme-import-repository-placeholder.svg" alt="Placeholder for importing a Git repository into GitSense Chat" width="420"> |
+| **Create**<br>Explain what you want to know and save it as an Analyzer. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
+| **Analyze**<br>Choose files, run the Analyzer, and review the results. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
+| **Package**<br>Select useful fields and package them for agents. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
+
+## Analysis You Can Manage
+
+Useful analysis is not a one-time answer. Files change, repositories grow, and the first version of an Analyzer may not find exactly what you need. GitSense Chat keeps that work visible so you can update it instead of starting over.
+
+| What you need | How GitSense Chat helps |
+| :--- | :--- |
+| Use the same analysis again | Save the instructions as a reusable Analyzer. |
+| Work across one repository or many | Run the Analyzer wherever that knowledge is needed. |
+| Avoid starting over | Analyze files that are new, changed, or still missing results. |
+| Keep large jobs manageable | Select files, apply filters, and process them in batches. |
+| Use lower batch pricing | Send work in batches when the provider offers it. |
+| Check the quality | Inspect the metadata, adjust the Analyzer, and run it again. |
+| Work across branches | Keep analysis tied to the repository and branch it came from. |
+| Share the result | Package selected fields as a portable JSON manifest. |
+
+## Examples
+
+These examples show what changes once repository knowledge is available. Each one uses a real command and will be replaced with output from a reproducible demo.
+
+### See the Shape Before Reading the Code
 
 ```bash
 gsc rg cache --db code-intent --fields purpose --summary
 ```
 
-Metadata gives those results meaning. It can tell the agent what a file is for, why it may matter, and whether it belongs to the part of the system being changed.
+![Placeholder for gsc rg summary output showing the shape of a search without loading every matching line.](assets/readme-rg-summary-placeholder.svg)
 
-The agent can start with the summary, narrow the search using that metadata, and only open the source files that deserve a closer look.
+A summary shows where something appears without loading every matching line into the agent's context.
+
+### Find Files and See What They Are For
+
+```bash
+gsc query --db code-intent --glob "**/cache*" --fields file_path,purpose
+```
+
+![Placeholder for a path-based GitSense query returning matching files with their purpose.](assets/readme-query-context-placeholder.svg)
+
+The agent can look for familiar paths and filenames while seeing what each result is for.
+
+### Find Files by What They Do
+
+```bash
+gsc query --db code-intent --filter "purpose=cache" --fields purpose,keywords
+```
+
+![Placeholder for a GitSense query that finds files by purpose instead of an exact source-code term.](assets/readme-query-purpose-placeholder.svg)
+
+The agent can also search by purpose, risk, ownership, decisions, or any other information the Analyzer was built to extract.
 
 ## Quick Start
 
-GitSense Chat, this repository, is where you build repository intelligence. The `gsc` CLI is how you access that intelligence from your terminal or agent session.
-
-### The CLI
-
-Install `gsc` first:
+Install the `gsc` CLI. You can [review the install script](install.sh) before running it:
 
 ```bash
 curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
 
-Or [build it yourself](https://github.com/gitsense/gsc-cli).
+### Ask Your Coding Agent
 
-### The App
-
-The app is where you teach AI what matters and apply that knowledge across your repository.
-
-The easiest setup path is to let your coding agent guide you. Once `gsc` is installed, ask your agent:
+Once `gsc` is installed, ask your agent:
 
 ```text
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
-Use the native setup unless I ask for Docker. Check what is already installed
-before changing anything, and stop when I need to enter an API key myself.
 ```
 
-The built-in guide walks your agent through the current install, configuration, and startup steps. It also tells the agent how to verify that the app is ready.
+Your agent will check what is already installed, guide you through setup, and stop when you need to enter an API key privately.
 
-If you prefer to handle setup yourself, start with:
+### Install It Yourself
 
 ```bash
 gsc docs install
 ```
 
-You can install and open the interface without an API key. Chat and analysis also need a provider, model, and API key.
-
-## Dead Simple
-
-GitSense Chat is for turning data in a Git repository into reusable intelligence without designing a pipeline by hand.
-
-Import a repository, explain what matters in plain language, select and refine the data, then package the extracted metadata for agents to use later.
-
-| Step | Demo |
-| :--- | :--- |
-| **Import**<br>Bring repository data into GitSense Chat so it can be selected, analyzed, and updated later. | <img src="assets/readme-import-repository-placeholder.svg" alt="Placeholder for importing a Git repository into GitSense Chat" width="420"> |
-| **Create**<br>Describe the pattern agents should understand. GitSense turns the conversation into a reusable Analyzer. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
-| **Analyze**<br>Select files, apply filters, and run the Analyzer in batches. GitSense tracks progress and results. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
-| **Package**<br>Combine analysis into a queryable manifest that the CLI and coding agents can use later. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
-
-## What This Means
-
-You do not need to decide how to stuff a prompt, track state across a long agent run, or hand-design a metadata format before you start. GitSense Chat gives you a workflow for extracting value from repository data and turning the useful parts into something durable.
-
-| Instead Of | GitSense Chat Lets You |
-| :--- | :--- |
-| Pasting raw files into a chat | Keep repository data selectable until specific context is needed. |
-| Asking an agent to invent structure each time | Save an Analyzer that extracts the same metadata consistently. |
-| Reprocessing everything after changes | Update imported data and analyze changed or not-yet-analyzed items. |
-| Trusting one long agent answer | Review batches, inspect metadata, refine instructions, and rerun. |
-| Keeping useful output trapped in a chat | Package selected fields into a manifest that agents and the CLI can import. |
-
-## Better Context, Sooner
-
-GitSense Chat produces the intelligence. The `gsc` CLI and coding agents use it later.
-
-| Command | What it gives the agent |
-| :--- | :--- |
-| `gsc rg filesize --db code-intent --fields purpose --summary` | Search results with file purpose attached before the agent opens files. |
-| `gsc query --db code-intent --filter "purpose=auth" --fields purpose,keywords` | Files found by role or concept, not just exact words. |
-| `gsc query --db ripgrep-intent-debt --filter "has_todo=true" --fields purpose,todo_summary` | Combined metadata from multiple Analyzers in one queryable layer. |
-| `gsc coverage --db code-intent` | A check on how much of the repository the packaged intelligence actually covers. |
+When the app is running, open it and start with **Code Smarter 101**.
 
 ## License
 
