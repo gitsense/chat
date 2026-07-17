@@ -2,25 +2,43 @@
 Component: GitSense Chat README
 Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
 Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 4.4.0
-Description: Clarified the agent-guided GitSense Chat setup path and linked it to the complete built-in installation guide.
+Version: 4.5.0
+Description: Reworked the opening around better context for agent reasoning and added a side-by-side search comparison placeholder.
 Language: Markdown
 Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0)
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0)
 -->
 
 
-# GitSense Chat
+# GitSense: Chat
 
-**Turn repository data into context coding agents can use.**
-
-GitSense helps coding agents understand your codebase and the way you work. Save what you learn as you build, debug, and review code, or use GitSense Chat to work through a repository and pull out what matters.
+**Help your coding agent understand your codebase and how you work before it starts changing things.**
 
 ![GitSense builds context by capturing knowledge during everyday work or extracting it at scale with GitSense Chat, then makes personal and repository knowledge available to coding agents through queryable Brains.](assets/gitsense-on-demand-context.png)
 
-GitSense Chat is the right side of the picture. You tell it what matters, try the analysis on real files, and adjust it until the results are useful. When you are happy with it, you can package that knowledge and make it available to coding agents through `gsc`.
+GitSense Chat is the top-right part of the picture. It is where you work with AI to decide what matters, run that analysis across a repository, and keep refining it until it is useful.
 
-Some knowledge is personal, such as the way you prefer to work. Other knowledge belongs with the repository, where anyone who clones it can benefit from it. `gsc` can use both when an agent needs help.
+## Why GitSense?
+
+Coding agents are designed to reason from the context they have. GitSense gives them more to go on before they decide what to read or change.
+
+![Placeholder for a side-by-side comparison of rg search results and the same search with GitSense repository knowledge attached.](assets/readme-rg-gitsense-comparison-placeholder.svg)
+
+Both searches find the same code. GitSense adds what the repository already knows about each match, so the agent can tell which results are worth following.
+
+### Start Broad, Then Narrow Down
+
+In a large codebase, the first search usually is not the answer. It helps the agent work out where the answer might be.
+
+A summary shows how widely something appears without filling the agent's context with every matching line:
+
+```bash
+gsc rg cache --db code-intent --fields purpose --summary
+```
+
+Metadata gives those results meaning. It can tell the agent what a file is for, why it may matter, and whether it belongs to the part of the system being changed.
+
+The agent can start with the summary, narrow the search using that metadata, and only open the source files that deserve a closer look.
 
 ## Quick Start
 

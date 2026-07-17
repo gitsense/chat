@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder for rg and GitSense search comparison</title>
+  <desc id="desc">Two terminal panes reserved for screenshots of the same search without and with GitSense metadata.</desc>
+  <rect width="1600" height="720" fill="#ffffff"/>
+  <text x="800" y="62" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="middle">SAME SEARCH. MORE TO GO ON.</text>
+
+  <text x="410" y="125" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle">WITHOUT GITSENSE</text>
+  <text x="1190" y="125" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle">WITH GITSENSE</text>
+
+  <rect x="80" y="155" width="660" height="470" rx="6" fill="#fafafa" stroke="#111111" stroke-width="3"/>
+  <line x1="80" y1="210" x2="740" y2="210" stroke="#111111" stroke-width="3"/>
+  <circle cx="115" cy="183" r="8" fill="#111111"/>
+  <circle cx="143" cy="183" r="8" fill="#777777"/>
+  <circle cx="171" cy="183" r="8" fill="#bbbbbb"/>
+  <text x="112" y="259" fill="#111111" font-family="Menlo, Consolas, monospace" font-size="24">$ rg cache</text>
+  <text x="112" y="318" fill="#555555" font-family="Menlo, Consolas, monospace" font-size="21">Matching paths and code</text>
+  <rect x="112" y="350" width="535" height="14" fill="#d7d7d7"/>
+  <rect x="112" y="386" width="420" height="14" fill="#d7d7d7"/>
+  <rect x="112" y="422" width="570" height="14" fill="#d7d7d7"/>
+  <rect x="112" y="458" width="385" height="14" fill="#d7d7d7"/>
+  <rect x="112" y="494" width="500" height="14" fill="#d7d7d7"/>
+  <text x="410" y="579" fill="#777777" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle">SCREENSHOT PLACEHOLDER</text>
+
+  <rect x="860" y="155" width="660" height="470" rx="6" fill="#fafafa" stroke="#111111" stroke-width="3"/>
+  <line x1="860" y1="210" x2="1520" y2="210" stroke="#111111" stroke-width="3"/>
+  <circle cx="895" cy="183" r="8" fill="#111111"/>
+  <circle cx="923" cy="183" r="8" fill="#777777"/>
+  <circle cx="951" cy="183" r="8" fill="#bbbbbb"/>
+  <text x="892" y="259" fill="#111111" font-family="Menlo, Consolas, monospace" font-size="21">$ gsc rg cache --db code-intent</text>
+  <text x="892" y="318" fill="#555555" font-family="Menlo, Consolas, monospace" font-size="21">The same matches, with context</text>
+  <rect x="892" y="350" width="535" height="14" fill="#d7d7d7"/>
+  <rect x="916" y="383" width="455" height="12" fill="#999999"/>
+  <rect x="916" y="410" width="380" height="12" fill="#b5b5b5"/>
+  <rect x="892" y="449" width="480" height="14" fill="#d7d7d7"/>
+  <rect x="916" y="482" width="420" height="12" fill="#999999"/>
+  <rect x="916" y="509" width="340" height="12" fill="#b5b5b5"/>
+  <text x="1190" y="579" fill="#777777" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle">SCREENSHOT PLACEHOLDER</text>
+
+  <text x="800" y="682" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="23" text-anchor="middle">Replace both panes with captures from the same repository, commit, search, and viewport.</text>
+</svg>
