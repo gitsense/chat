@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder for a non-technical course notes example</title>
+  <desc id="desc">A repository of course notes with themes, sources, assignments, and open questions extracted by GitSense Chat.</desc>
+  <rect width="1440" height="560" fill="#ffffff"/>
+  <rect x="80" y="55" width="1280" height="430" rx="6" fill="#fafafa" stroke="#111111" stroke-width="3"/>
+  <line x1="80" y1="115" x2="1360" y2="115" stroke="#111111" stroke-width="3"/>
+  <circle cx="118" cy="85" r="8" fill="#111111"/>
+  <circle cx="146" cy="85" r="8" fill="#777777"/>
+  <circle cx="174" cy="85" r="8" fill="#bbbbbb"/>
+  <text x="116" y="165" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">COURSE NOTES DEMO</text>
+  <text x="116" y="215" fill="#555555" font-family="Menlo, Consolas, monospace" font-size="20">notes/week-02.md</text>
+  <text x="145" y="252" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="20">Themes</text>
+  <rect x="285" y="238" width="430" height="13" fill="#b5b5b5"/>
+  <text x="145" y="293" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="20">Sources</text>
+  <rect x="285" y="279" width="570" height="13" fill="#b5b5b5"/>
+  <text x="145" y="334" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="20">Open questions</text>
+  <rect x="285" y="320" width="820" height="13" fill="#888888"/>
+  <text x="116" y="393" fill="#555555" font-family="Menlo, Consolas, monospace" font-size="20">notes/week-05.md</text>
+  <rect x="145" y="422" width="750" height="13" fill="#888888"/>
+  <text x="1165" y="449" fill="#777777" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">SCREENSHOT PLACEHOLDER</text>
+  <text x="720" y="535" fill="#333333" font-family="Arial, Helvetica, sans-serif" font-size="21" text-anchor="middle">Replace with the published sample repository and real analysis.</text>
+</svg>

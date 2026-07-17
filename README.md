@@ -2,11 +2,11 @@
 Component: GitSense Chat README
 Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
 Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 4.7.0
-Description: Reworked the examples into a compact command-and-screenshot table for GitHub rendering.
+Version: 4.8.0
+Description: Moved the compact Quick Start near the top and added a planned non-technical course-notes example.
 Language: Markdown
 Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0)
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0), Codex (v4.8.0)
 -->
 
 
@@ -27,6 +27,28 @@ Both commands search the same code. The GitSense version also tells the agent wh
 That extra information has to come from somewhere. Ask an agent to generate it once and it probably will. Keeping it consistent across thousands of files, branches, and many repositories is where it stops being a simple prompt.
 
 GitSense Chat manages that work. [See how it works](#how-it-works), or [skip to the examples](#examples).
+
+## Quick Start
+
+Review the [install script](install.sh), then install `gsc`:
+
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
+
+### Ask Your Coding Agent
+
+```text
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
+```
+
+Your agent will guide you through the rest and stop when you need to enter an API key privately.
+
+For detailed installation instructions, run:
+
+```bash
+gsc docs install
+```
 
 ## How It Works
 
@@ -108,31 +130,34 @@ These examples show what changes once repository knowledge is available. Each on
   </tbody>
 </table>
 
-## Quick Start
+## More Than Code
 
-Install the `gsc` CLI. You can [review the install script](install.sh) before running it:
+A repository can hold more than source code. GitSense Chat can pull useful fields from class notes, research, policies, records, or any other text files you keep in Git.
 
-```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
-```
+To make that concrete, we are putting together a small course-notes repository with lecture notes, readings, assignments, and unresolved questions.
 
-### Ask Your Coding Agent
+<table>
+  <thead>
+    <tr>
+      <th width="32%">Ask</th>
+      <th width="68%">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="32%" valign="top">
+        <strong>Find open questions across class notes</strong>
+        <pre><code>Which open questions show up across more than one week?</code></pre>
+        <p>The Analyzer can extract themes, definitions, sources, assignments, and open questions from each document.</p>
+      </td>
+      <td width="68%" valign="top">
+        <img src="assets/readme-course-notes-placeholder.svg" alt="Course notes repository example" width="900">
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-Once `gsc` is installed, ask your agent:
-
-```text
-Install and configure GitSense Chat for me. Start by running `gsc docs help`.
-```
-
-Your agent will check what is already installed, guide you through setup, and stop when you need to enter an API key privately.
-
-### Install It Yourself
-
-```bash
-gsc docs install
-```
-
-When the app is running, open it and start with **Code Smarter 101**.
+Once the sample repository is ready, you will be able to explore the raw notes, import its manifest, and rerun the analysis in GitSense Chat.
 
 ## License
 
