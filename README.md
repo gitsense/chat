@@ -2,11 +2,11 @@
 Component: GitSense Chat README
 Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
 Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 4.6.0
-Description: Reframed the README around managed analysis, a concise workflow, practical examples, and a shorter Quick Start.
+Version: 4.7.0
+Description: Reworked the examples into a compact command-and-screenshot table for GitHub rendering.
 Language: Markdown
 Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0)
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0)
 -->
 
 
@@ -58,35 +58,55 @@ Useful analysis is not a one-time answer. Files change, repositories grow, and t
 
 These examples show what changes once repository knowledge is available. Each one uses a real command and will be replaced with output from a reproducible demo.
 
-### See the Shape Before Reading the Code
-
-```bash
-gsc rg cache --db code-intent --fields purpose --summary
-```
-
-![Placeholder for gsc rg summary output showing the shape of a search without loading every matching line.](assets/readme-rg-summary-placeholder.svg)
-
-A summary shows where something appears without loading every matching line into the agent's context.
-
-### Find Files and See What They Are For
-
-```bash
-gsc query --db code-intent --glob "**/cache*" --fields file_path,purpose
-```
-
-![Placeholder for a path-based GitSense query returning matching files with their purpose.](assets/readme-query-context-placeholder.svg)
-
-The agent can look for familiar paths and filenames while seeing what each result is for.
-
-### Find Files by What They Do
-
-```bash
-gsc query --db code-intent --filter "purpose=cache" --fields purpose,keywords
-```
-
-![Placeholder for a GitSense query that finds files by purpose instead of an exact source-code term.](assets/readme-query-purpose-placeholder.svg)
-
-The agent can also search by purpose, risk, ownership, decisions, or any other information the Analyzer was built to extract.
+<table>
+  <thead>
+    <tr>
+      <th width="32%">Command</th>
+      <th width="68%">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="32%" valign="top">
+        <strong>See the shape before reading the code</strong>
+        <pre><code>gsc rg cache \
+  --db code-intent \
+  --fields purpose \
+  --summary</code></pre>
+        <p>See where something appears without loading every matching line.</p>
+      </td>
+      <td width="68%" valign="top">
+        <img src="assets/readme-rg-summary-placeholder.svg" alt="GitSense search summary example" width="900">
+      </td>
+    </tr>
+    <tr>
+      <td width="32%" valign="top">
+        <strong>Find files and see what they are for</strong>
+        <pre><code>gsc query \
+  --db code-intent \
+  --glob "**/cache*" \
+  --fields file_path,purpose</code></pre>
+        <p>Find familiar paths while seeing what each result does.</p>
+      </td>
+      <td width="68%" valign="top">
+        <img src="assets/readme-query-context-placeholder.svg" alt="GitSense path query example" width="900">
+      </td>
+    </tr>
+    <tr>
+      <td width="32%" valign="top">
+        <strong>Find files by what they do</strong>
+        <pre><code>gsc query \
+  --db code-intent \
+  --filter "purpose=cache" \
+  --fields purpose,keywords</code></pre>
+        <p>Search repository knowledge instead of guessing the source wording.</p>
+      </td>
+      <td width="68%" valign="top">
+        <img src="assets/readme-query-purpose-placeholder.svg" alt="GitSense purpose query example" width="900">
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Quick Start
 
