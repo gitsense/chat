@@ -132,6 +132,20 @@ These examples show what changes once repository knowledge is available. Each on
   </tbody>
 </table>
 
+## Route What You Already Have
+
+Structured knowledge does not have to replace your skills, runbooks, or project
+instructions. A GitSense note can act as a small index entry: what the source is
+for, where it lives, and which part matters. A rule can fetch the matching notes
+when an agent starts work, without loading a large table of contents into every
+conversation.
+
+The [skill-router demo](https://github.com/gitsense/gsc-rules-demos#3-route-to-an-existing-skill)
+shows the full path. Work on a documentation file loads the `doc-styling` notes,
+which point the agent to the relevant skill. GitSense Chat can help create and
+refine this kind of repository knowledge at scale; `gsc` delivers it when the
+agent needs it.
+
 ## More Than Code
 
 A repository can hold more than source code. GitSense Chat can pull useful fields from class notes, research, policies, records, or any other text files you keep in Git.
