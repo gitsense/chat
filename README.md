@@ -109,7 +109,7 @@ These examples show what changes once repository knowledge is available. Each on
         <p>See where something appears without loading every matching line.</p>
       </td>
       <td width="68%" valign="top">
-        <img src="assets/see-the-shape-before-reading-the-code" alt="GitSense search summary example" width="900">
+        <img src="assets/see-the-shape-before-reading-the-code.png" alt="GitSense search summary example" width="900">
       </td>
     </tr>
     <tr>
