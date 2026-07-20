@@ -103,12 +103,13 @@ These examples show what changes once repository knowledge is available. Each on
         <strong>See the shape before reading the code</strong>
         <pre><code>gsc rg cache \
   --db code-intent \
-  --fields purpose \
+  --glob '**/src/**' \
+  --fields purpose,keywords \
   --summary</code></pre>
         <p>See where something appears without loading every matching line.</p>
       </td>
       <td width="68%" valign="top">
-        <img src="assets/readme-rg-summary-placeholder.svg" alt="GitSense search summary example" width="900">
+        <img src="assets/see-the-shape-before-reading-the-code" alt="GitSense search summary example" width="900">
       </td>
     </tr>
     <tr>
@@ -117,11 +118,11 @@ These examples show what changes once repository knowledge is available. Each on
         <pre><code>gsc query \
   --db code-intent \
   --glob "**/cache*" \
-  --fields file_path,purpose</code></pre>
+  --fields purpose,keywords</code></pre>
         <p>Find familiar paths while seeing what each result does.</p>
       </td>
       <td width="68%" valign="top">
-        <img src="assets/readme-query-context-placeholder.svg" alt="GitSense path query example" width="900">
+        <img src="assets/find-files-and-see-what-they-are-for.png" alt="GitSense path query example" width="900">
       </td>
     </tr>
     <tr>
@@ -129,12 +130,14 @@ These examples show what changes once repository knowledge is available. Each on
         <strong>Find files by what they do</strong>
         <pre><code>gsc query \
   --db code-intent \
-  --filter "purpose=cache" \
-  --fields purpose,keywords</code></pre>
+  --glob '**/*.rs' \
+  --filter "keywords=send-input" \
+  --fields purpose,keywords \
+  --limit 20</code></pre>
         <p>Search repository knowledge instead of guessing the source wording.</p>
       </td>
       <td width="68%" valign="top">
-        <img src="assets/readme-query-purpose-placeholder.svg" alt="GitSense purpose query example" width="900">
+        <img src="assets/find-files-by-what-they-do.png" alt="GitSense purpose query example" width="900">
       </td>
     </tr>
   </tbody>
