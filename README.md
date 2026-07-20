@@ -22,7 +22,15 @@ GitSense Chat is the right side of the picture. It works with the open-source [`
 
 Coding agents are designed to reason from the context they have. GitSense Chat helps you build the repository knowledge that makes that context better.
 
+<div align="center">
+
+### Same search. Better starting point
+
+The left shows matching lines, the right shows matching lines and what each file is for.
+
 ![The same matcher search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
+
+</div>
 
 Both searches find the same matches. GitSense adds what each file is for, giving the agent better context to reason with before deciding what to read.
 
