@@ -58,7 +58,7 @@ Import a repository, tell GitSense Chat what you want to know, try the analysis 
 
 | Step | Demo |
 | :--- | :--- |
-| **Import**<br>Bring repository data into GitSense Chat. | <img src="assets/readme-import-repository-placeholder.svg" alt="Placeholder for importing a Git repository into GitSense Chat" width="420"> |
+| **Import**<br>Bring repository data into GitSense Chat. | <a href="assets/how-it-works-import-repo.mp4"><img src="assets/readme-import-repository-placeholder.svg" alt="Import a Git repository into GitSense Chat demo" width="420"></a> |
 | **Create**<br>Explain what you want to know and save it as an Analyzer. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
 | **Analyze**<br>Choose files, run the Analyzer, and review the results. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
 | **Package**<br>Select useful fields and package them for agents. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
