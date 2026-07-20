@@ -75,6 +75,8 @@ Import a repository, tell GitSense Chat what you want to know, try the analysis 
 
 Useful analysis is not a one-time answer. Files change, repositories grow, and the first version of an Analyzer may not find exactly what you need. GitSense Chat keeps that work visible so you can update it instead of starting over.
 
+![Analyzing batches with filters in GitSense Chat.](assets/analyze-batches-control-panel.png)
+
 | What you need | How GitSense Chat helps |
 | :--- | :--- |
 | Use the same analysis again | Save the instructions as a reusable Analyzer. |
@@ -156,35 +158,6 @@ shows the full path. Work on a documentation file loads the `doc-styling` notes,
 which point the agent to the relevant skill. GitSense Chat can help create and
 refine this kind of repository knowledge at scale; `gsc` delivers it when the
 agent needs it.
-
-## More Than Code
-
-A repository can hold more than source code. GitSense Chat can pull useful fields from class notes, research, policies, records, or any other text files you keep in Git.
-
-To make that concrete, we are putting together a small course-notes repository with lecture notes, readings, assignments, and unresolved questions.
-
-<table>
-  <thead>
-    <tr>
-      <th width="32%">Ask</th>
-      <th width="68%">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="32%" valign="top">
-        <strong>Find open questions across class notes</strong>
-        <pre><code>Which open questions show up across more than one week?</code></pre>
-        <p>The Analyzer can extract themes, definitions, sources, assignments, and open questions from each document.</p>
-      </td>
-      <td width="68%" valign="top">
-        <img src="assets/readme-course-notes-placeholder.svg" alt="Course notes repository example" width="900">
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-Once the sample repository is ready, you will be able to explore the raw notes, import its manifest, and rerun the analysis in GitSense Chat.
 
 ## License
 
