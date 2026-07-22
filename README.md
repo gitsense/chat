@@ -2,11 +2,11 @@
 Component: GitSense Chat README
 Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
 Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 5.2.0
-Description: Added the Same session collaboration section with placeholders for change-risk and AGENTS.md reminder examples.
+Version: 5.3.0
+Description: Added a visual screenshot placeholder to preview the Same session collaboration layout.
 Language: Markdown
 Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0), Codex (v4.8.0), Codex (v4.9.0), Codex (v5.0.0), Codex (v5.1.0), Codex (v5.2.0)
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0), Codex (v4.8.0), Codex (v4.9.0), Codex (v5.0.0), Codex (v5.1.0), Codex (v5.2.0), Codex (v5.3.0)
 -->
 
 
@@ -40,7 +40,7 @@ A session can quickly become a wall of tool calls. GitSense Chat turns those cal
 
 | Understand the risk | Check the instructions |
 | :--- | :--- |
-| _Screenshot placeholder: a smart-ripgrep edit with change-risk insights._ | _Screenshot placeholder: a Pi edit with reminders triggered from `AGENTS.md`._ |
+| ![Placeholder for a smart-ripgrep edit with change-risk insights.](assets/session-insight-placeholder.svg) | ![Placeholder for a Pi edit with reminders triggered from AGENTS.md.](assets/session-insight-placeholder.svg) |
 | This edit touches a high-risk file. Ask whether the agent considered the wider impact, or point it toward something you already know matters. | These reminders come from `AGENTS.md`. See which instructions apply, then check whether the agent followed them or ask it to confirm. |
 
 Risk and instructions are only two examples. GitSense Chat can also show who owns a file, bring up lessons from earlier work, or surface whatever else helps you understand the session and steer the agent.
