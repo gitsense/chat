@@ -12,7 +12,7 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 
 # GitSense: Chat
 
-**Help your coding agent understand your codebase and how you work before it starts changing things.**
+**Give your coding agent better context before it starts changing things, and give yourself a way to catch what it may have missed.**
 
 ![GitSense builds context by capturing knowledge during everyday work or extracting it at scale with GitSense Chat, then makes personal and repository knowledge available to coding agents through queryable Brains.](assets/gitsense-on-demand-context.png)
 
@@ -20,17 +20,13 @@ GitSense Chat is the right side of the picture. It works with the open-source [`
 
 ## Why GitSense Chat?
 
-Coding agents reason from the context they have. They can still miss when instructions apply. GitSense Chat surfaces useful context as the work happens, so you can spot what matters and steer the agent when needed.
-
-<div align="center">
+Coding agents reason from the context they have. GitSense Chat makes that context better by turning what you know about your codebase and how you work into knowledge agents can find and use. It also surfaces that knowledge as the work happens, so you can catch what may have been missed and steer the agent when needed.
 
 ### Same search. Better starting point
 
 The left shows matching lines, the right shows matching lines and what each file is for.
 
 ![The same matcher search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
-
-</div>
 
 Both searches find the same matches. GitSense adds what each file is for, giving the agent better context to reason with before deciding what to read.
 
@@ -45,6 +41,12 @@ A session can quickly become a wall of tool calls. GitSense Chat turns those cal
 
 Risk and instructions are only two examples. GitSense Chat can also show who owns a file, bring up lessons from earlier work, or surface whatever else helps you understand the session and steer the agent.
 
+### Where does that context come from?
+
+The file purpose, risk, and reminders shown above all come from metadata. Ask an agent to generate that metadata once and it probably will. Keeping it useful as files change, repositories grow, and the way your team works evolves is where it stops being a simple prompt.
+
+GitSense Chat manages that work. [See how it works](#how-it-works), [learn how analysis stays manageable](#analysis-you-can-manage), or [jump to the examples](#examples).
+
 ## Quick Start
 
 Review the [install script](install.sh), then install `gsc`:
@@ -52,6 +54,8 @@ Review the [install script](install.sh), then install `gsc`:
 ```bash
 curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
+
+or [build it yourself](https://github.com/gitsense/chat).
 
 ### Ask Your Coding Agent
 
