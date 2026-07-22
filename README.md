@@ -2,11 +2,11 @@
 Component: GitSense Chat README
 Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
 Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 4.9.0
-Description: Added a direct link between GitSense Chat and the gsc CLI below the shared system hero.
+Version: 5.2.0
+Description: Added the Same session collaboration section with placeholders for change-risk and AGENTS.md reminder examples.
 Language: Markdown
 Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0), Codex (v4.8.0), Codex (v4.9.0)
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0), Codex (v4.8.0), Codex (v4.9.0), Codex (v5.0.0), Codex (v5.1.0), Codex (v5.2.0)
 -->
 
 
@@ -20,7 +20,7 @@ GitSense Chat is the right side of the picture. It works with the open-source [`
 
 ## Why GitSense Chat?
 
-Coding agents are designed to reason from the context they have. GitSense Chat helps you build the repository knowledge that makes that context better.
+Coding agents reason from the context they have. They can still miss when instructions apply. GitSense Chat surfaces useful context as the work happens, so you can spot what matters and steer the agent when needed.
 
 <div align="center">
 
@@ -34,9 +34,16 @@ The left shows matching lines, the right shows matching lines and what each file
 
 Both searches find the same matches. GitSense adds what each file is for, giving the agent better context to reason with before deciding what to read.
 
-That extra information has to come from somewhere. Ask an agent to generate it once and it probably will. Keeping it consistent across thousands of files, branches, and many repositories is where it stops being a simple prompt.
+### Same session. Better collaboration.
 
-GitSense Chat manages that work. [See how it works](#how-it-works), or [skip to the examples](#examples).
+A session can quickly become a wall of tool calls. GitSense Chat turns those calls into insights you can act on.
+
+| Understand the risk | Check the instructions |
+| :--- | :--- |
+| _Screenshot placeholder: a smart-ripgrep edit with change-risk insights._ | _Screenshot placeholder: a Pi edit with reminders triggered from `AGENTS.md`._ |
+| This edit touches a high-risk file. Ask whether the agent considered the wider impact, or point it toward something you already know matters. | These reminders come from `AGENTS.md`. See which instructions apply, then check whether the agent followed them or ask it to confirm. |
+
+Risk and instructions are only two examples. GitSense Chat can also show who owns a file, bring up lessons from earlier work, or surface whatever else helps you understand the session and steer the agent.
 
 ## Quick Start
 
@@ -62,14 +69,23 @@ gsc docs install
 
 ## How It Works
 
-Import a repository, tell GitSense Chat what you want to know, try the analysis on real files, and adjust it until the results are useful. When it is ready, package the metadata so coding agents can use it later.
+Import a repository, define the knowledge you want, populate it with AI or deterministic tools, and package the useful results as a Brain.
 
 | Step | Demo |
 | :--- | :--- |
 | **Import**<br>Bring repository data into GitSense Chat. | <a href="assets/how-it-works-import-repo-subtitled.mp4"><img src="assets/how-it-works-import-repo-thumbnail.png" alt="Import a Git repository into GitSense Chat demo" width="420"></a> |
-| **Create**<br>Explain what you want to know and save it as an Analyzer. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
-| **Analyze**<br>Choose files, run the Analyzer, and review the results. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
-| **Package**<br>Select useful fields and package them for agents. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
+| **Define**<br>Create an Analyzer that defines the fields, types, instructions, and output you want. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
+| **Populate**<br>Generate results with GitSense Chat, deterministic programs, or both, then review them. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
+| **Package**<br>Select useful fields and package them as a portable, queryable Brain. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
+
+An Analyzer is the contract, not necessarily an AI prompt. GitSense Chat can populate it with managed model analysis. Existing programs can read other Analyzer results and write deterministic results through the same interface:
+
+```bash
+gsc app analysis get
+gsc app analysis set
+```
+
+Both paths produce the same reviewable metadata. A repository can even ship the Analyzer and the program that populates it under `.gitsense/`, keeping the analysis workflow beside the code it explains.
 
 ## Analysis You Can Manage
 
