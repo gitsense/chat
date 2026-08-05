@@ -2,11 +2,11 @@
 Component: GitSense Chat README
 Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
 Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 5.3.0
-Description: Added a visual screenshot placeholder to preview the Same session collaboration layout.
+Version: 5.4.0
+Description: Reframed session review around Files context and Session context with runnable repository examples.
 Language: Markdown
 Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0), Codex (v4.8.0), Codex (v4.9.0), Codex (v5.0.0), Codex (v5.1.0), Codex (v5.2.0), Codex (v5.3.0)
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0), Codex (v4.8.0), Codex (v4.9.0), Codex (v5.0.0), Codex (v5.1.0), Codex (v5.2.0), Codex (v5.3.0), Codex (v5.4.0)
 -->
 
 
@@ -30,16 +30,32 @@ The left shows matching lines, the right shows matching lines and what each file
 
 Both searches find the same matches. GitSense adds what each file is for, giving the agent better context to reason with before deciding what to read.
 
-### Same session. Better collaboration.
+### One prompt. Dozens of tool calls. Now what?
 
-A session can quickly become a wall of tool calls. GitSense Chat turns those calls into insights you can act on.
+A coding agent can turn one prompt into dozens of searches, file reads, edits,
+and commands. Reviewing that wall of tool calls one by one is rarely practical.
+GitSense Chat provides two ways to turn it into something you can act on.
 
-| Understand the risk | Check the instructions |
+| Files context | Session context |
 | :--- | :--- |
-| ![Placeholder for a smart-ripgrep edit with change-risk insights.](assets/session-insight-placeholder.svg) | ![Placeholder for a Pi edit with reminders triggered from AGENTS.md.](assets/session-insight-placeholder.svg) |
-| This edit touches a high-risk file. Ask whether the agent considered the wider impact, or point it toward something you already know matters. | These reminders come from `AGENTS.md`. See which instructions apply, then check whether the agent followed them or ask it to confirm. |
+| ![Placeholder for file context attached to changed files.](assets/session-insight-placeholder.svg) | ![Placeholder for a session activity report.](assets/session-insight-placeholder.svg) |
+| Attach repository knowledge directly to file reads, edits, and writes. Ask which lessons applied to the changed files and what the agent should have considered. | Analyze the session as a whole and present the result in the form that makes sense to you. A change review can reduce the session to edited files, diff size, purpose, and dependency risk. |
 
-Risk and instructions are only two examples. GitSense Chat can also show who owns a file, bring up lessons from earlier work, or surface whatever else helps you understand the session and steer the agent.
+Neither tells us that the code is correct or proves what the agent understood. They help us decide what to check first and whether the code is worth reviewing yet.
+
+#### Try both on real repositories
+
+These are runnable examples that live alongside real code, not synthetic output
+made only for a screenshot. Clone either repository and ask your coding agent
+to walk you through its `.gitsense` setup.
+
+| Example | What to try |
+| :--- | :--- |
+| [smart-ripgrep](https://github.com/gitsense/smart-ripgrep) — Files context | Its `file-review-context` Analyzer combines code intent, change risk, dependency and test metadata, and repository lessons. Ask the agent to investigate the proposed `--max-filesize-warning` change and show which lessons apply to the files it touches. |
+| [Pi](https://github.com/gitsense/pi) — Session context | Its `change-review` Analyzer turns a Pi session into `Overview` and `Details` tabs. It reports only edited or written files, then enriches them with Pi's `code-intent` and `ts-dep-nav` dependency/risk Brains. |
+
+The Analyzers are ordinary repository code. Use them as-is, inspect how they
+work, or adapt their output to surface the evidence that matters to your team.
 
 ### Where does that context come from?
 
