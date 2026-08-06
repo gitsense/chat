@@ -17,8 +17,8 @@
     "build-bundle-min": "npm run build:widgets && npm run build:boards && npm run bundle-min"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Terrence Chen (GitSense)",
+  "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.27.3",
     "@cerebras/cerebras_cloud_sdk": "^1.64.1",

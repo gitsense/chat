@@ -201,9 +201,13 @@ The **`gsc` CLI** is open source — licensed under [Apache 2.0](https://www.apa
 
 **Manifests** are plain JSON files built on an open format. You are free to create, modify, and distribute manifests for any purpose — personal or commercial. The format is documented and not owned by GitSense. Build your own tooling around it, generate manifests in your own pipelines, or ship them with your repositories without restriction.
 
-**GitSense Chat** (this repository) is licensed under the **[Fair Core License (FCL-1.0-ALv2)](https://faircode.io)**.
+**GitSense Chat** (this repository) is licensed under the **[Fair Core License (FCL-1.0-ALv2)](https://fcl.dev/)**.
 
 The short version: you're welcome to use, modify, and run GitSense Chat internally — for personal projects, shared workflows, or self-hosted deployments. What you may not do is use it to build or operate a product or service that competes directly with GitSense Chat.
+
+Each version automatically becomes available under Apache 2.0 on the second
+anniversary of the date it was made available. Copyright and origin attribution
+to Terrence Chen and GitSense must be preserved as required by the license.
 
 **Why not a permissive license?**
 
