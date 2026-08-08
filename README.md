@@ -2,25 +2,25 @@
 Component: GitSense Chat README
 Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
 Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 5.4.0
-Description: Reframed session review around Files context and Session context with runnable repository examples.
+Version: 5.5.0
+Description: Positioned GitSense Chat as the workspace for both agent context and multi-session organization.
 Language: Markdown
 Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0), Codex (v4.8.0), Codex (v4.9.0), Codex (v5.0.0), Codex (v5.1.0), Codex (v5.2.0), Codex (v5.3.0), Codex (v5.4.0)
+Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0), Codex GPT-5 (v4.3.0), Codex (v4.4.0), Codex (v4.5.0), Codex (v4.6.0), Codex (v4.7.0), Codex (v4.8.0), Codex (v4.9.0), Codex (v5.0.0), Codex (v5.1.0), Codex (v5.2.0), Codex (v5.3.0), Codex (v5.4.0), Codex (v5.5.0)
 -->
 
 
 # GitSense: Chat
 
-**Give your coding agent better context before it starts changing things, and give yourself a way to catch what it may have missed.**
+**Give every coding agent better context, and give yourself one place to organize, review, and steer their work.**
 
 ![GitSense builds context by capturing knowledge during everyday work or extracting it at scale with GitSense Chat, then makes personal and repository knowledge available to coding agents through queryable Brains.](assets/gitsense-on-demand-context.png)
 
-GitSense Chat is the right side of the picture. It works with the open-source [`gsc` CLI](https://github.com/gitsense/gsc-cli), which records what matters while you work and delivers it to agents when they need it.
+GitSense Chat is the right side of the picture: a workspace where repository knowledge and agent sessions come together. It works with the open-source [`gsc` CLI](https://github.com/gitsense/gsc-cli), which records what matters while you work, delivers it to agents when they need it, and brings their sessions into one place.
 
 ## Why GitSense Chat?
 
-Coding agents reason from the context they have. GitSense Chat makes that context better by turning what you know about your codebase and how you work into knowledge agents can find and use. It also surfaces that knowledge as the work happens, so you can catch what may have been missed and steer the agent when needed.
+Coding agents reason from the context they have, but once several agents are working, context is only half the problem. GitSense Chat turns what you know about your codebase and how you work into knowledge agents can find and use, then gives you one place to find, organize, review, and communicate with those agents. You can catch what an agent missed, steer work while it is happening, and reuse what one session learned instead of paying for every agent to rediscover it.
 
 ### Same search. Better starting point
 
@@ -57,6 +57,27 @@ to walk you through its `.gitsense` setup.
 The Analyzers are ordinary repository code. Use them as-is, inspect how they
 work, or adapt their output to surface the evidence that matters to your team.
 
+### Every agent you have working, in one place
+
+One prompt can become dozens of tool calls, and one project can quickly become
+several active sessions. GitSense Chat turns those sessions into a workspace you
+can search, arrange, watch, and act on. An existing session can be addressed as a
+worker—not only a subagent created for the current task—so an agent can ask the
+session that already has the right context and bring its response back. That
+makes knowledge easier to spread between agents, reducing repeated discovery
+and leaving more context available for reasoning.
+
+- Browse every recorded Pi session, preview recent activity, or open its complete message, tool-call, file, and phase timeline.
+- Search across all mirrored sessions, then narrow results by message, tool call, file, repository, role, operation, session, or time window.
+- Combine any set of sessions into a live tracker, organize them with named sections and board layouts, and save the group for later.
+- See working state and new activity as it arrives, along with watcher health and session import statistics.
+- Send instructions to a session from the browser, or start and resume it in the terminal with its existing context intact.
+- Give any existing Pi session a task through its mailbox and receive its response in the requesting session.
+
+Pi is the first supported agent runtime. The messaging protocol is designed to
+be agent-agnostic, creating a path for agents such as Claude Code and Pi to
+communicate through the same workspace in the future.
+
 ### Where does that context come from?
 
 The file purpose, risk, and reminders shown above all come from metadata. Ask an agent to generate that metadata once and it probably will. Keeping it useful as files change, repositories grow, and the way your team works evolves is where it stops being a simple prompt.
@@ -89,7 +110,14 @@ gsc docs install
 
 ## How It Works
 
-Import a repository, define the knowledge you want, populate it with AI or deterministic tools, and package the useful results as a Brain.
+For agent work, `gsc` mirrors Pi sessions into GitSense Chat. From there you can
+search them, group them into live trackers, open their timelines, and message or
+resume the session that should handle the next task. Session freshness depends
+on the sync watcher running.
+
+For repository knowledge, import a repository, define the knowledge you want,
+populate it with AI or deterministic tools, and package the useful results as a
+Brain.
 
 | Step | Demo |
 | :--- | :--- |
