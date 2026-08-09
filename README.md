@@ -24,21 +24,11 @@ Building useful context is only half the job. As agent sessions pile up, it beco
 
 ## Why GitSense Chat?
 
-Coding agents reason from the context they have, but once several agents are working, context is only half the problem. GitSense Chat turns what you know about your codebase and how you work into knowledge agents can find and use, then gives you one place to find, organize, review, and communicate with those agents. You can catch what an agent missed, steer work while it is happening, and reuse what one session learned instead of paying for every agent to rediscover it.
-
-### Same search. Better starting point
-
-The left shows matching lines, the right shows matching lines and what each file is for.
-
-![The same matcher search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
-
-Both searches find the same matches. GitSense adds what each file is for, giving the agent better context to reason with before deciding what to read.
-
-The [smart-ripgrep](https://github.com/gitsense/smart-ripgrep) example makes this
-concrete. Its `file-review-context` Analyzer combines code intent, change risk,
-dependency and test metadata, and repository lessons. Ask an agent to investigate
-the proposed `--max-filesize-warning` change and show which lessons apply to the
-files it touches.
+Once several coding agents are working, keeping track of their sessions becomes
+as important as the work itself. GitSense Chat gives you one place to find,
+organize, review, and communicate with those agents. It also turns what you know
+about your codebase and how you work into context agents can find and use, so
+each session can start from a better understanding of the code.
 
 ### Same sessions. Better structure
 
@@ -64,6 +54,20 @@ Pi is the first supported agent runtime. Sessions are reviewed from the local
 `gsc` mirror, so freshness depends on the sync watcher. Saved groups are stored
 per browser. The messaging protocol is designed to support more agent runtimes
 through the same workspace in the future.
+
+### Same search. Better starting point
+
+The left shows matching lines, the right shows matching lines and what each file is for.
+
+![The same matcher search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
+
+Both searches find the same matches. GitSense adds what each file is for, giving the agent better context to reason with before deciding what to read.
+
+The [smart-ripgrep](https://github.com/gitsense/smart-ripgrep) example makes this
+concrete. Its `file-review-context` Analyzer combines code intent, change risk,
+dependency and test metadata, and repository lessons. Ask an agent to investigate
+the proposed `--max-filesize-warning` change and show which lessons apply to the
+files it touches.
 
 ### Where does that context come from?
 
