@@ -61,22 +61,22 @@ to walk you through its `.gitsense` setup.
 The Analyzers are ordinary repository code. Use them as-is, inspect how they
 work, or adapt their output to surface the evidence that matters to your team.
 
-### Every agent you have working, in one place
+### Hundreds of sessions. Which one matters?
 
-One prompt can become dozens of tool calls, and one project can quickly become
-several active sessions. GitSense Chat turns those sessions into a workspace you
-can search, arrange, watch, and act on. An existing session can be addressed as a
-worker—not only a subagent created for the current task—so an agent can ask the
-session that already has the right context and bring its response back. That
-makes knowledge easier to spread between agents, reducing repeated discovery
-and leaving more context available for reasoning.
+Session logs are easy to collect and easy to grep. The harder part is turning
+what you find into something you can act on. GitSense Chat helps you find the
+session that already knows the work, inspect what happened, and decide how the
+work should continue.
 
-- Browse every recorded Pi session, preview recent activity, or open its complete message, tool-call, file, and phase timeline.
-- Search across all mirrored sessions, then narrow results by message, tool call, file, repository, role, operation, session, or time window.
-- Combine any set of sessions into a live tracker, organize them with named sections and board layouts, and save the group for later.
-- See working state and new activity as it arrives, along with watcher health and session import statistics.
-- Send instructions to a session from the browser, or start and resume it in the terminal with its existing context intact.
-- Give any existing Pi session a task through its mailbox and receive its response in the requesting session.
+| Find | Inspect | Continue or hand off |
+| :--- | :--- | :--- |
+| ![Placeholder for finding a Pi session by file, content, repository, or activity.](assets/session-insight-placeholder.svg) | ![Placeholder for inspecting a Pi session's messages, tool calls, changed files, summaries, and timeline.](assets/session-insight-placeholder.svg) | ![Placeholder for starting or messaging an agent in GitSense Chat or resuming it in a terminal.](assets/session-insight-placeholder.svg) |
+| Search across recorded sessions by file, content, repository, activity, or other filters. | Review the session's messages, tool calls, changed files, summaries, and focused slices of its timeline. | Start or message the agent in GitSense Chat, or copy the command to resume it in your terminal. |
+
+You can also arrange any set of sessions into a live tracker, organize them with
+named sections and board layouts, and watch their activity as it arrives. An
+existing session can act as a worker, so another agent can ask the session that
+already has the right context and bring its response back.
 
 Pi is the first supported agent runtime. The messaging protocol is designed to
 be agent-agnostic, creating a path for agents such as Claude Code and Pi to
