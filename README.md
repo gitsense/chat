@@ -34,53 +34,36 @@ The left shows matching lines, the right shows matching lines and what each file
 
 Both searches find the same matches. GitSense adds what each file is for, giving the agent better context to reason with before deciding what to read.
 
-### One prompt. Dozens of tool calls. Now what?
+The [smart-ripgrep](https://github.com/gitsense/smart-ripgrep) example makes this
+concrete. Its `file-review-context` Analyzer combines code intent, change risk,
+dependency and test metadata, and repository lessons. Ask an agent to investigate
+the proposed `--max-filesize-warning` change and show which lessons apply to the
+files it touches.
 
-A coding agent can turn one prompt into dozens of searches, file reads, edits,
-and commands. Reviewing that wall of tool calls one by one is rarely practical.
-GitSense Chat provides two ways to turn it into something you can act on.
+### Same sessions. Better structure
 
-| Files context | Session context |
-| :--- | :--- |
-| ![Placeholder for file context attached to changed files.](assets/session-insight-placeholder.svg) | ![Placeholder for a session activity report.](assets/session-insight-placeholder.svg) |
-| Attach repository knowledge directly to file reads, edits, and writes. Ask which lessons applied to the changed files and what the agent should have considered. | Analyze the session as a whole and present the result in the form that makes sense to you. A change review can reduce the session to edited files, diff size, purpose, and dependency risk. |
+Coding-agent sessions already contain the work, decisions, and context you need.
+GitSense Chat gives those sessions structure, so you can find the right one,
+understand what happened, and decide what should happen next.
 
-Neither tells us that the code is correct or proves what the agent understood. They help us decide what to check first and whether the code is worth reviewing yet.
-
-#### Try both on real repositories
-
-These are runnable examples that live alongside real code, not synthetic output
-made only for a screenshot. Clone either repository and ask your coding agent
-to walk you through its `.gitsense` setup.
-
-| Example | What to try |
-| :--- | :--- |
-| [smart-ripgrep](https://github.com/gitsense/smart-ripgrep) — Files context | Its `file-review-context` Analyzer combines code intent, change risk, dependency and test metadata, and repository lessons. Ask the agent to investigate the proposed `--max-filesize-warning` change and show which lessons apply to the files it touches. |
-| [Pi](https://github.com/gitsense/pi) — Session context | Its `change-review` Analyzer turns a Pi session into `Overview` and `Details` tabs. It reports only edited or written files, then enriches them with Pi's `code-intent` and `ts-dep-nav` dependency/risk Brains. |
-
-The Analyzers are ordinary repository code. Use them as-is, inspect how they
-work, or adapt their output to surface the evidence that matters to your team.
-
-### Hundreds of sessions. Which one matters?
-
-Session logs are easy to collect and easy to grep. The harder part is turning
-what you find into something you can act on. GitSense Chat helps you find the
-session that already knows the work, inspect what happened, and decide how the
-work should continue.
-
-| Find | Inspect | Continue or hand off |
+| Find | Inspect | Build a dashboard |
 | :--- | :--- | :--- |
-| ![Placeholder for finding a Pi session by file, content, repository, or activity.](assets/session-insight-placeholder.svg) | ![Placeholder for inspecting a Pi session's messages, tool calls, changed files, summaries, and timeline.](assets/session-insight-placeholder.svg) | ![Placeholder for starting or messaging an agent in GitSense Chat or resuming it in a terminal.](assets/session-insight-placeholder.svg) |
-| Search across recorded sessions by file, content, repository, activity, or other filters. | Review the session's messages, tool calls, changed files, summaries, and focused slices of its timeline. | Start or message the agent in GitSense Chat, or copy the command to resume it in your terminal. |
+| ![Placeholder for finding a Pi session by file, content, repository, or activity.](assets/session-insight-placeholder.svg) | ![Placeholder for inspecting a Pi session's messages, tool calls, changed files, summaries, and timeline.](assets/session-insight-placeholder.svg) | ![Placeholder for building a dashboard from a set of related Pi sessions.](assets/session-insight-placeholder.svg) |
+| Search across recorded sessions by file, content, repository, activity, time, and other filters. | Review messages, tool calls, changed files, summaries, and focused slices of a session timeline. | Bring any set of sessions into one live board for a project, workstream, or review. |
 
-You can also arrange any set of sessions into a live tracker, organize them with
-named sections and board layouts, and watch their activity as it arrives. An
-existing session can act as a worker, so another agent can ask the session that
-already has the right context and bring its response back.
+| Organize | Monitor | Continue or hand off |
+| :--- | :--- | :--- |
+| ![Placeholder for organizing Pi sessions with sections, layouts, sorting, and activity groups.](assets/session-insight-placeholder.svg) | ![Placeholder for monitoring working state, recent activity, liveness, and inbox status.](assets/session-insight-placeholder.svg) | ![Placeholder for starting or messaging an agent, handing off work, or resuming a Pi session in a terminal.](assets/session-insight-placeholder.svg) |
+| Add named sections, choose a board layout, reorder sessions, or group them by activity. | Watch working state, recent activity, timestamps, liveness, and inbox status as they change. | Start or message an agent, give an existing session a task, or copy a command to resume it in your terminal. |
 
-Pi is the first supported agent runtime. The messaging protocol is designed to
-be agent-agnostic, creating a path for agents such as Claude Code and Pi to
-communicate through the same workspace in the future.
+The [Pi](https://github.com/gitsense/pi) repository includes a runnable
+`change-review` Analyzer for the Inspect step. It reduces a session to the files
+that changed, then adds purpose and dependency risk from Pi's repository Brains.
+
+Pi is the first supported agent runtime. Sessions are reviewed from the local
+`gsc` mirror, so freshness depends on the sync watcher. Saved groups are stored
+per browser. The messaging protocol is designed to support more agent runtimes
+through the same workspace in the future.
 
 ### Where does that context come from?
 
@@ -114,14 +97,11 @@ gsc docs install
 
 ## How It Works
 
-For agent work, `gsc` mirrors Pi sessions into GitSense Chat. From there you can
-search them, group them into live trackers, open their timelines, and message or
-resume the session that should handle the next task. Session freshness depends
-on the sync watcher running.
-
-For repository knowledge, import a repository, define the knowledge you want,
-populate it with AI or deterministic tools, and package the useful results as a
-Brain.
+GitSense helps turn what you and your team know into context coding agents can
+use. Capture knowledge while you work with `gsc`, or use GitSense Chat to extract
+structured knowledge across a repository. Organize it into personal and
+repository scopes, package the useful results as queryable Brains, and let `gsc`
+deliver relevant files, lessons, and rules when an agent needs them.
 
 | Step | Demo |
 | :--- | :--- |
