@@ -14,13 +14,20 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 
 **Give every coding agent better context, and give yourself one place to organize, review, and steer their work.**
 
-![GitSense builds context by capturing knowledge during everyday work or extracting it at scale with GitSense Chat, then makes personal and repository knowledge available to coding agents through queryable Brains.](assets/gitsense-on-demand-context.png)
-
-GitSense Chat is the right side of the picture: a workspace where repository knowledge and agent sessions come together. It works with the open-source [`gsc` CLI](https://github.com/gitsense/gsc-cli), which records what matters while you work, delivers it to agents when they need it, and brings their sessions into one place.
-
-Building useful context is only half the job. As agent sessions pile up, it becomes harder to remember which agent touched a file and where to pick the work back up. You can grep session logs or write a script to find a match. GitSense Chat gives you a place to manage what comes next: inspect the session, resume the agent, or hand off the work.
+As agent sessions pile up, it becomes harder to remember which agent touched a
+file and where to pick the work back up. You can grep session logs or write a
+script to find a match. GitSense Chat gives you a place to manage what comes
+next: inspect the session, resume the agent, or hand off the work.
 
 ![Find the agent that already knows the work, inspect what it did, and continue in GitSense Chat or resume the session in your own tools.](assets/manage-agents.png)
+
+GitSense Chat also helps agents start with better context. The left side of the
+picture below shows the open-source [`gsc` CLI](https://github.com/gitsense/gsc-cli)
+capturing knowledge while you work. GitSense Chat is on the right, where you can
+work with AI to extract what matters across a repository. `gsc` delivers the
+resulting context when an agent needs it.
+
+![GitSense builds context by capturing knowledge during everyday work or extracting it at scale with GitSense Chat, then makes personal and repository knowledge available to coding agents through queryable Brains.](assets/gitsense-on-demand-context.png)
 
 ## Why GitSense Chat?
 
