@@ -18,6 +18,10 @@ Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v
 
 GitSense Chat is the right side of the picture: a workspace where repository knowledge and agent sessions come together. It works with the open-source [`gsc` CLI](https://github.com/gitsense/gsc-cli), which records what matters while you work, delivers it to agents when they need it, and brings their sessions into one place.
 
+Building useful context is only half the job. As agent sessions pile up, it becomes harder to remember which agent touched a file and where to pick the work back up. You can grep session logs or write a script to find a match. GitSense Chat gives you a place to manage what comes next: inspect the session, resume the agent, or hand off the work.
+
+![Find the agent that already knows the work, inspect what it did, and continue in GitSense Chat or resume the session in your own tools.](assets/manage-agents.png)
+
 ## Why GitSense Chat?
 
 Coding agents reason from the context they have, but once several agents are working, context is only half the problem. GitSense Chat turns what you know about your codebase and how you work into knowledge agents can find and use, then gives you one place to find, organize, review, and communicate with those agents. You can catch what an agent missed, steer work while it is happening, and reuse what one session learned instead of paying for every agent to rediscover it.
