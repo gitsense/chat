@@ -7,11 +7,7 @@ edits, and commands. As decisions, discoveries, and file changes pile up, the
 work can become harder to follow and the agent harder to steer. Missed context,
 wrong assumptions, and small mistakes can compound before anyone notices.
 
-GitSense Chat turns that raw activity into something you can act on. Find the
-session behind a change, trace what the agent did, review relevant repository
-context, and organize related work. This gives you a clearer view of the work,
-helps you decide when to correct course, and preserves useful context for what
-comes next:
+GitSense Chat turns that raw activity into something you can act on:
 
 ![GitSense Chat turns existing coding-agent session logs into sessions you can find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
