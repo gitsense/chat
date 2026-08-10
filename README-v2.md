@@ -46,7 +46,7 @@ sessions while they are active or after they end.
 | Search conversations, files, and operations | See which agents are running |
 | Inspect messages, tool calls, file activity, and Git state | Start an offline agent |
 | Group and organize related sessions | Send messages to an agent's inbox |
-| Jump from a file operation to the tool call that performed it | Let agents communicate with one another |
+| Mark reviewed work and focus on new activity | Let agents communicate with one another |
 | Copy resume and attach commands | Receive messages in the agent's existing interface |
 
 A session-log integration is enough for the core review and organization
@@ -62,13 +62,13 @@ they do not decide whether the code is correct.
 Pi is the working proof behind this idea: active and completed sessions become
 more useful when their logs are searchable, structured, enriched, and connected
 back to the agent. The examples below show how GitSense Chat helps you find the
-session behind a change, inspect it with relevant repository context, organize
-related work, connect agents, and resume in your own tools.
+session behind a change, review active work incrementally, organize related work,
+connect agents, and resume in your own tools.
 
 | Find | Inspect | Group |
 | :--- | :--- | :--- |
-| ![Placeholder for finding a coding-agent session by file and operation.](assets/session-insight-placeholder.svg) | ![Placeholder for reviewing a large coding-agent session with custom analyzers that surface repository-specific context.](assets/session-insight-placeholder.svg) | ![Placeholder for grouping related coding-agent sessions and filtering them by changed file.](assets/session-insight-placeholder.svg) |
-| Match a changed file, narrow the results to edit operations, and identify the session responsible. | Review the agent's summary and tool activity, then use custom analyzers to surface the repository context and review checks your team cares about. | Bring related sessions together, let the same session appear in multiple groups, and filter by changed file to find connected work. |
+| ![Placeholder for finding a coding-agent session by file and operation.](assets/session-insight-placeholder.svg) | ![Placeholder for incrementally reviewing an active coding-agent session and focusing on activity after the last review point.](assets/session-insight-placeholder.svg) | ![Placeholder for grouping related coding-agent sessions and filtering them by changed file.](assets/session-insight-placeholder.svg) |
+| Match a changed file, narrow the results to edit operations, and identify the session responsible. | Review an active session, mark the work so far as reviewed, and focus the next review on new messages and file changes. | Bring related sessions together, let the same session appear in multiple groups, and filter by changed file to find connected work. |
 
 | Organize | Collaborate | Hand off to your tools |
 | :--- | :--- | :--- |
@@ -85,13 +85,46 @@ Code, OpenCode, and other coding-agent harnesses are not yet integrated. The
 goal is a shared workspace where sessions and agent communication work across
 harnesses.
 
-## Give agents more relevant context
+## Give humans and agents more relevant context
 
-Giving an agent more tokens is not the same as giving it better context. GitSense
-can surface file purpose, risk, dependencies, tests, lessons, and other
-repository knowledge while the agent works. That gives the agent a better chance
-of choosing the right files and questions before opening everything that might
-be relevant.
+More information does not automatically create visibility. Agent sessions can
+produce more messages, tool calls, and file activity than anyone can reasonably
+review line by line. When understanding the work takes that much effort, it is
+easy to rely on the agent's final summary and move on.
+
+GitSense Chat makes it practical to stay involved. It lets you build a review
+layer around what matters to you, connecting session activity to purpose,
+ownership, risk, tests, lessons, and other repository context. Instead of
+replaying everything, you can focus on the signals that deserve attention,
+inspect the supporting evidence, and decide what happens next.
+
+Files connect agent activity to repository context. When a session records what
+the agent read or changed, GitSense Chat can surface the knowledge and review
+actions that apply to those files.
+
+### One prompt. 106 tool calls. Now what?
+
+The raw session log contains the evidence, but few people will replay 106 tool
+calls to find it.
+
+In this demo, file context surfaces a repository lesson connected to the agent's
+work. That raises a useful question: did the agent account for it? A custom
+session analyzer shows the risk level and provides a user-confirmed action for
+opening the relevant diff in Zed.
+
+![Placeholder for a video showing GitSense Chat turning 106 tool calls into a focused human review with file context, a repository lesson, risk, and a Zed diff action.](assets/human-review-context-demo-placeholder.svg)
+
+GitSense Chat does not decide whether the work is correct. It makes human review
+practical by helping the reviewer move from a wall of activity, to a question
+worth asking, to the code needed to answer it.
+
+### Same work. Better starting point.
+
+The same repository knowledge can help an agent before it acts. Giving an agent
+more tokens is not the same as giving it better context. GitSense can surface
+file purpose, risk, dependencies, tests, lessons, and other repository knowledge
+while the agent works. That gives the agent a better chance of choosing the
+right files and questions before opening everything that might be relevant.
 
 The left shows matching lines. The right shows the same matches with an
 explanation of what each file is for.
