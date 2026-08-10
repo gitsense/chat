@@ -53,6 +53,10 @@ A session-log integration is enough for the core review and organization
 workflow. Optional hooks add live state and communication, but they are not
 required to make a completed conversation useful.
 
+Custom analyzers can go further by combining observable session activity with
+repository and team-specific review context. They help focus your review, but
+they do not decide whether the code is correct.
+
 ## See it in action with Pi
 
 Pi is the working proof behind this idea: existing session logs become more
@@ -61,17 +65,15 @@ the agent. The examples below show how GitSense Chat helps you find the session
 behind a change, inspect it with relevant repository context, organize related
 work, connect agents, and resume in your own tools.
 
-The added context helps focus your review; it is not a verdict on the code.
-
 | Find | Inspect | Group |
 | :--- | :--- | :--- |
-| ![Placeholder for finding a coding-agent session by file and operation.](assets/session-insight-placeholder.svg) | ![Placeholder for following a file operation to its tool call and enriched review context.](assets/session-insight-placeholder.svg) | ![Placeholder for selecting related coding-agent sessions and adding them to reusable groups.](assets/session-insight-placeholder.svg) |
-| Match a changed file, narrow the results to edit operations, and identify the session responsible. | Open the file activity, review its operations, jump to the exact tool call, and inspect the repository context that applies. | Select any set of related sessions and save them as a group. The same session can appear in multiple groups. |
+| ![Placeholder for finding a coding-agent session by file and operation.](assets/session-insight-placeholder.svg) | ![Placeholder for reviewing a large coding-agent session with custom analyzers that surface repository-specific context.](assets/session-insight-placeholder.svg) | ![Placeholder for grouping related coding-agent sessions and filtering them by changed file.](assets/session-insight-placeholder.svg) |
+| Match a changed file, narrow the results to edit operations, and identify the session responsible. | Review the agent's summary and tool activity, then use custom analyzers to surface the repository context and review checks your team cares about. | Bring related sessions together, let the same session appear in multiple groups, and filter by changed file to find connected work. |
 
 | Organize | Collaborate | Hand off to your tools |
 | :--- | :--- | :--- |
-| ![Placeholder for organizing coding-agent sessions into sections, columns, and fixed expert areas.](assets/session-insight-placeholder.svg) | ![Placeholder for one coding agent asking an expert session for relevant context.](assets/session-insight-placeholder.svg) | ![Placeholder for copying a resume command and continuing in an editor, terminal, or multiplexer.](assets/session-insight-placeholder.svg) |
-| Move task sessions between sections as work progresses while keeping reusable expert sessions nearby. | Copy an expert session's mailbox address and ask another agent to contact it for a focused primer. | Copy the session's resume command and continue in your preferred editor, terminal, or multiplexer. |
+| ![Placeholder for arranging active, completed, and expert coding-agent sessions in an organized group.](assets/session-insight-placeholder.svg) | ![Placeholder for a working agent consulting two expert sessions and receiving their replies in its existing terminal.](assets/session-insight-placeholder.svg) | ![Placeholder for resuming a coding-agent session in its original workspace and terminal.](assets/session-insight-placeholder.svg) |
+| Arrange active and completed sessions into sections while keeping reusable expert sessions visible in a fixed panel. | Ask a working agent to consult expert sessions, wait for their replies, and bring what they know back into the current conversation. | Copy the session's resume command, paste it into your terminal, and continue in the original workspace with the session's existing context. |
 
 Groups are views over your sessions, not folders. A session can appear in every
 group where it is useful, whether that group represents a project, workstream,
