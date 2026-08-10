@@ -102,73 +102,16 @@ explanation of what each file is for.
 Both searches find the same code. GitSense adds purpose, risk, lessons, and other
 repository context before the agent decides what to open.
 
-That better starting point can reduce unnecessary searches, file reads, and tool
-calls, improving the chances that a session stays focused. Smaller, more focused
-sessions are easier to revisit, resume, and analyze, and can cost less to process
-later.
+For a runnable example, see
+[smart-ripgrep](https://github.com/gitsense/smart-ripgrep). It shows how an agent
+uses committed repository knowledge to find the right files, check earlier
+lessons before editing, and enrich session review with purpose, risk,
+dependencies, tests, and lessons.
 
-Brain results can also be surfaced during an active conversation. Instead of
-waiting until the session ends, the user or agent can inspect applicable purpose,
-risk, test guidance, and repository lessons while deciding what should happen
-next.
+### Examples
 
-The [smart-ripgrep](https://github.com/gitsense/smart-ripgrep) example makes this
-concrete. Its `file-review-context` Analyzer combines code intent, change risk,
-dependency and test metadata, and repository lessons. Ask an agent to investigate
-the proposed `--max-filesize-warning` change and show which lessons apply to the
-files it touches.
-
-## Turn a useful question into reusable context
-
-Start with something you want agents to know about your repository. Define it as
-an Analyzer, populate it with AI, deterministic programs, or both, review the
-results, and package the fields you trust as a portable, queryable Brain.
-
-| Step | Demo |
-| :--- | :--- |
-| **Import**<br>Bring repository data into GitSense Chat. | <a href="assets/how-it-works-import-repo-subtitled.mp4"><img src="assets/how-it-works-import-repo-thumbnail.png" alt="Import a Git repository into GitSense Chat demo" width="420"></a> |
-| **Define**<br>Create an Analyzer that defines the fields, types, instructions, and output you want. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
-| **Populate**<br>Generate results with GitSense Chat, deterministic programs, or both, then review them. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
-| **Package**<br>Select useful fields and package them as a portable, queryable Brain. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
-
-An Analyzer is the contract, not necessarily an AI prompt. GitSense Chat can
-populate it with managed model analysis. Existing programs can read other
-Analyzer results and write deterministic results through the same interface:
-
-```bash
-gsc app analysis get
-gsc app analysis set
-```
-
-Both paths produce the same reviewable metadata. A repository can ship the
-Analyzer and the program that populates it under `.gitsense/`, keeping the
-analysis workflow beside the code it explains.
-
-## Extract and maintain context at scale
-
-Once an Analyzer produces useful results, GitSense Chat helps you apply and
-maintain it across selected files, repositories, and branches. Process large
-jobs in batches, analyze only what is new or changed, review the results, and
-update the Analyzer as your repository evolves.
-
-![Analyzing batches with filters in GitSense Chat.](assets/analyze-batches-control-panel.png)
-
-| What you need | How GitSense Chat helps |
-| :--- | :--- |
-| Use the same analysis again | Save the instructions as a reusable Analyzer. |
-| Work across one repository or many | Run the Analyzer wherever that knowledge is needed. |
-| Avoid starting over | Analyze files that are new, changed, or still missing results. |
-| Keep large jobs manageable | Select files, apply filters, and process them in batches. |
-| Use lower batch pricing | Send work in batches when the provider offers it. |
-| Check the quality | Inspect the metadata, adjust the Analyzer, and run it again. |
-| Work across branches | Keep analysis tied to the repository and branch it came from. |
-| Share the result | Package selected fields as a portable JSON manifest. |
-
-## Examples
-
-These examples show what changes once repository knowledge is available. Each
-one uses a real command and will be replaced with output from a reproducible
-demo.
+These commands show how repository knowledge gives an agent more to work with
+before it opens the code.
 
 <table>
   <thead>
@@ -222,6 +165,52 @@ demo.
     </tr>
   </tbody>
 </table>
+
+## Turn a useful question into reusable context
+
+Start with something you want agents to know about your repository. Define it as
+an Analyzer, populate it with AI, deterministic programs, or both, review the
+results, and package the fields you trust as a portable, queryable Brain.
+
+| Step | Demo |
+| :--- | :--- |
+| **Import**<br>Bring repository data into GitSense Chat. | <a href="assets/how-it-works-import-repo-subtitled.mp4"><img src="assets/how-it-works-import-repo-thumbnail.png" alt="Import a Git repository into GitSense Chat demo" width="420"></a> |
+| **Define**<br>Create an Analyzer that defines the fields, types, instructions, and output you want. | <a href="public/assets/create-analyzer-demo.mp4"><img src="public/assets/create-analyzer-demo.png" alt="Create an Analyzer demo preview" width="420"></a> |
+| **Populate**<br>Generate results with GitSense Chat, deterministic programs, or both, then review them. | <a href="public/assets/analyze-batch-demo.mp4"><img src="public/assets/analyze-batch-demo.png" alt="Analyze Batch demo preview" width="420"></a> |
+| **Package**<br>Select useful fields and package them as a portable, queryable Brain. | <a href="public/assets/package-analysis-demo.mp4"><img src="public/assets/package-analysis-demo.png" alt="Package Analysis demo preview" width="420"></a> |
+
+An Analyzer is the contract, not necessarily an AI prompt. GitSense Chat can
+populate it with managed model analysis. Existing programs can read other
+Analyzer results and write deterministic results through the same interface:
+
+```bash
+gsc app analysis get
+gsc app analysis set
+```
+
+Both paths produce the same reviewable metadata. A repository can ship the
+Analyzer and the program that populates it under `.gitsense/`, keeping the
+analysis workflow beside the code it explains.
+
+## Extract and maintain context at scale
+
+Once an Analyzer produces useful results, GitSense Chat helps you apply and
+maintain it across selected files, repositories, and branches. Process large
+jobs in batches, analyze only what is new or changed, review the results, and
+update the Analyzer as your repository evolves.
+
+![Analyzing batches with filters in GitSense Chat.](assets/analyze-batches-control-panel.png)
+
+| What you need | How GitSense Chat helps |
+| :--- | :--- |
+| Use the same analysis again | Save the instructions as a reusable Analyzer. |
+| Work across one repository or many | Run the Analyzer wherever that knowledge is needed. |
+| Avoid starting over | Analyze files that are new, changed, or still missing results. |
+| Keep large jobs manageable | Select files, apply filters, and process them in batches. |
+| Use lower batch pricing | Send work in batches when the provider offers it. |
+| Check the quality | Inspect the metadata, adjust the Analyzer, and run it again. |
+| Work across branches | Keep analysis tied to the repository and branch it came from. |
+| Share the result | Package selected fields as a portable JSON manifest. |
 
 ## Route What You Already Have
 
