@@ -1,31 +1,23 @@
 # GitSense: Chat
 
-**Keep coding-agent conversations useful after they end.**
+**Turn session logs into actionable insights.**
 
-Coding-agent conversations contain decisions, discoveries, changed files, and
-valuable context about your code. They are also easy to forget, difficult to
-find, and often too large to revisit. When that happens, useful work becomes
-trapped in a session log and the next conversation starts over.
+One prompt can quickly become a wall of messages, tool calls, file operations,
+and commands. Those conversations contain decisions, discoveries, changed files,
+and valuable context about your code, but they can be difficult to follow while
+the work is happening and even harder to revisit later. When that happens,
+useful context goes unused, and the next conversation has to rediscover it.
 
-GitSense Chat preserves both the conversation and what should survive it:
+GitSense Chat makes that raw activity easier to inspect and organize, then adds
+relevant context to help you decide what happens next:
 
-- **The session itself.** Find it by the work it did, inspect the original
-  activity with relevant repository context, organize it with related sessions,
-  connect it to another agent, or resume it in your own tools.
-- **What should carry forward.** Turn a useful line of inquiry into a reusable
-  Analyzer, review its results, and package the fields you trust as a queryable
-  Brain.
-
-An Analyzer makes the question reusable. A Brain makes the results queryable.
-Together, they help future agents retrieve focused context instead of rereading
-entire conversations or opening files blindly.
+![GitSense Chat turns existing coding-agent session logs into sessions you can find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
 ## Start with the session logs you already have
 
-Most coding agents already record their conversations as session logs. GitSense
-Chat is designed to work from those existing records instead of sitting between
-you and the agent. The `gsc` CLI and data layer make the sessions available to
-GitSense Chat without requiring a proxy server or changing where you work.
+GitSense Chat works quietly alongside your existing workflow. It uses the
+session logs your agents already create and is there when you want to inspect,
+organize, or resume their work.
 
 | From existing session logs | With optional lifecycle integration |
 | :--- | :--- |
@@ -44,8 +36,6 @@ required to make a completed conversation useful.
 Keep using your editor, terminal, multiplexer, and agent runtime. GitSense Chat
 gives the sessions created there enough structure to remain useful after the
 conversation ends.
-
-![GitSense Chat turns existing coding-agent session logs into sessions you can find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
 Finding the right session is only the first step. Analyzers can combine recorded
 activity and Git state with repository Brains and lessons, giving you context
