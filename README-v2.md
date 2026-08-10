@@ -14,6 +14,30 @@ relevant context to help you decide what happens next:
 
 ![GitSense Chat turns existing coding-agent session logs into sessions you can find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
+## Quick Start
+
+Review the [install script](install.sh), then install `gsc`:
+
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
+
+or [build it yourself](https://github.com/gitsense/chat).
+
+### Ask Your Coding Agent
+
+```text
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
+```
+
+Your agent will guide you through the rest and stop when you need to enter an API key privately.
+
+For detailed installation instructions, run:
+
+```bash
+gsc docs install
+```
+
 ## How it works
 
 GitSense Chat works quietly alongside your existing workflow. It uses the
@@ -57,24 +81,18 @@ group where it is useful, whether that group represents a project, workstream,
 area of expertise, or temporary review. Saved groups are currently stored per
 browser.
 
-## Carry useful context forward
+**Runtime support:** Pi is currently the supported integration. Codex, Claude
+Code, OpenCode, and other coding-agent harnesses are not yet integrated. The
+goal is a shared workspace where sessions and agent communication work across
+harnesses.
 
-Sometimes the session itself is what you need. Other times, a conversation
-reveals a method worth using again: how to review a file, assess risk, find the
-right tests, identify ownership, or recognize a repository-specific lesson.
+## Give agents more relevant context
 
-GitSense Chat helps you turn that line of inquiry into reusable repository
-analysis. Work with AI to define an Analyzer, run it across the relevant files,
-review the results, and package the useful fields as a Brain.
-
-![GitSense builds context by capturing knowledge during everyday work or extracting it at scale with GitSense Chat, then makes personal and repository knowledge available to coding agents through queryable Brains.](assets/gitsense-on-demand-context.png)
-
-The [`gsc` CLI](https://github.com/gitsense/gsc-cli) captures knowledge while you
-work and delivers relevant Brain results inside coding-agent sessions. GitSense
-Chat helps create, review, and maintain that knowledge across files and
-repositories.
-
-## Give the next conversation a better starting point
+Giving an agent more tokens is not the same as giving it better context. GitSense
+can surface file purpose, risk, dependencies, tests, lessons, and other
+repository knowledge while the agent works. That gives the agent a better chance
+of choosing the right files and questions before opening everything that might
+be relevant.
 
 The left shows matching lines. The right shows the same matches with an
 explanation of what each file is for.
@@ -84,9 +102,15 @@ explanation of what each file is for.
 Both searches find the same code. GitSense adds purpose, risk, lessons, and other
 repository context before the agent decides what to open.
 
-That keeps context focused. Instead of loading every potentially relevant file
-or carrying an oversized previous conversation forward, the agent can query what
-is already known, choose the most relevant source, and verify it directly.
+That better starting point can reduce unnecessary searches, file reads, and tool
+calls, improving the chances that a session stays focused. Smaller, more focused
+sessions are easier to revisit, resume, and analyze, and can cost less to process
+later.
+
+Brain results can also be surfaced during an active conversation. Instead of
+waiting until the session ends, the user or agent can inspect applicable purpose,
+risk, test guidance, and repository lessons while deciding what should happen
+next.
 
 The [smart-ripgrep](https://github.com/gitsense/smart-ripgrep) example makes this
 concrete. Its `file-review-context` Analyzer combines code intent, change risk,
@@ -94,49 +118,12 @@ dependency and test metadata, and repository lessons. Ask an agent to investigat
 the proposed `--max-filesize-warning` change and show which lessons apply to the
 files it touches.
 
-## Runtime support
+## Extract reusable context at scale
 
-GitSense Chat currently supports Pi as its showcase integration. Pi demonstrates
-the complete model: importing existing session logs, tracking lifecycle state,
-starting and resuming agents, enriching session review, and communicating
-through agent inboxes.
-
-Codex, Claude Code, OpenCode, and other coding-agent harnesses also create
-session histories and expose lifecycle extension points. They are not yet
-integrated with GitSense Chat. The goal is a shared workspace where sessions can
-be searched and managed, and agents can communicate with one another regardless
-of the harness running them.
-
-## Quick Start
-
-Review the [install script](install.sh), then install `gsc`:
-
-```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
-```
-
-or [build it yourself](https://github.com/gitsense/chat).
-
-### Ask Your Coding Agent
-
-```text
-Install and configure GitSense Chat for me. Start by running `gsc docs help`.
-```
-
-Your agent will guide you through the rest and stop when you need to enter an API key privately.
-
-For detailed installation instructions, run:
-
-```bash
-gsc docs install
-```
-
-## Turn a conversation into reusable context
-
-A useful conversation can become a repeatable way of understanding your
-repository. Define what matters with an Analyzer, populate it with AI or
-deterministic programs, review the results, and package the fields you trust as
-a portable, queryable Brain.
+When a useful line of inquiry should outlive one conversation, turn it into an
+Analyzer. Run that Analyzer across the relevant files with AI, deterministic
+programs, or both. Review the results, then package the fields you trust as a
+portable, queryable Brain.
 
 | Step | Demo |
 | :--- | :--- |
