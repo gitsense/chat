@@ -2,15 +2,16 @@
 
 **Turn session logs into actionable insights.**
 
-One prompt can quickly become a wall of messages and tool calls: searches, file
-reads, edits, and commands. Those conversations contain decisions, discoveries,
-changed files, and valuable context about your code, but they can be difficult
-to follow while the work is happening and even harder to revisit later. When
-that happens, useful context goes unused, and the next conversation has to
-rediscover it.
+A single prompt can easily turn into a wall of tool calls: searches, file reads,
+edits, and commands. As decisions, discoveries, and file changes pile up, the
+work can become harder to follow and the agent harder to steer. Missed context,
+wrong assumptions, and small mistakes can compound before anyone notices.
 
-GitSense Chat makes that raw activity easier to inspect and organize, then adds
-relevant context to help you decide what happens next:
+GitSense Chat turns that raw activity into something you can act on. Find the
+session behind a change, trace what the agent did, review relevant repository
+context, and organize related work. This gives you a clearer view of the work,
+helps you decide when to correct course, and preserves useful context for what
+comes next:
 
 ![GitSense Chat turns existing coding-agent session logs into sessions you can find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
