@@ -1,6 +1,6 @@
 # GitSense: Chat
 
-**Turn coding-agent conversations into durable sessions and reusable context.**
+**Keep coding-agent conversations useful after they end.**
 
 Coding-agent conversations contain decisions, discoveries, changed files, and
 valuable context about your code. They are also easy to forget, difficult to
@@ -9,8 +9,9 @@ trapped in a session log and the next conversation starts over.
 
 GitSense Chat preserves both the conversation and what should survive it:
 
-- **The session itself.** Find it, organize it, inspect what happened, continue
-  the work, or let another agent ask that session for help.
+- **The session itself.** Find it by the work it did, inspect the original
+  activity with relevant repository context, organize it with related sessions,
+  connect it to another agent, or resume it in your own tools.
 - **What should carry forward.** Turn a useful line of inquiry into a reusable
   Analyzer, review its results, and package the fields you trust as a queryable
   Brain.
@@ -19,43 +20,62 @@ An Analyzer makes the question reusable. A Brain makes the results queryable.
 Together, they help future agents retrieve focused context instead of rereading
 entire conversations or opening files blindly.
 
+## Start with the session logs you already have
+
+Most coding agents already record their conversations as session logs. GitSense
+Chat is designed to work from those existing records instead of sitting between
+you and the agent. The `gsc` CLI and data layer make the sessions available to
+GitSense Chat without requiring a proxy server or changing where you work.
+
+| From existing session logs | With optional lifecycle integration |
+| :--- | :--- |
+| Search conversations, files, and operations | See which agents are running |
+| Inspect messages, tool calls, file activity, and Git state | Start an offline agent |
+| Group and organize related sessions | Send messages to an agent's inbox |
+| Jump from a file operation to the tool call that performed it | Let agents communicate with one another |
+| Copy resume and attach commands | Receive messages in the agent's existing interface |
+
+A session-log integration is enough for the core review and organization
+workflow. Optional hooks add live state and communication, but they are not
+required to make a completed conversation useful.
+
 ## Make every session reusable
 
-GitSense Chat gives recorded coding-agent sessions enough structure to remain
-useful after the conversation ends. Search by files changed, content, repository,
-activity, or time. Review the messages, tool calls, summaries, and changed files.
-Then continue the session, give it another task, or resume it in your own tools.
+Keep using your editor, terminal, multiplexer, and agent runtime. GitSense Chat
+gives the sessions created there enough structure to remain useful after the
+conversation ends.
 
-![Find the agent that already knows the work, inspect what it did, and continue in GitSense Chat or resume the session in your own tools.](assets/manage-agents.png)
+![GitSense Chat turns existing coding-agent session logs into sessions you can find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
-A session does not have to belong to a predefined project or workflow. Bring any
-related sessions together when you need them, organize them into a live board,
-and monitor their activity and working state from one place.
+Finding the right session is only the first step. Analyzers can combine recorded
+activity and Git state with repository Brains and lessons, giving you context
+such as file purpose, risk signals, dependencies, test guidance, and diff size.
+That context appears beside the original evidence so you can better understand
+what happened and guide what happens next.
 
-| Find | Inspect | Build a dashboard |
+Enrichment is context for review, not a verdict. It does not prove that an agent
+saw or followed a lesson, and it does not decide whether the code is correct.
+
+| Find | Inspect | Group |
 | :--- | :--- | :--- |
-| ![Placeholder for finding a Pi session by file, content, repository, or activity.](assets/session-insight-placeholder.svg) | ![Placeholder for inspecting a Pi session's messages, tool calls, changed files, summaries, and timeline.](assets/session-insight-placeholder.svg) | ![Placeholder for building a dashboard from a set of related Pi sessions.](assets/session-insight-placeholder.svg) |
-| Search across recorded sessions by file, content, repository, activity, time, and other filters. | Review messages, tool calls, changed files, summaries, and focused slices of a session timeline. | Bring any set of sessions into one live board for a project, workstream, or review. |
+| ![Placeholder for finding a coding-agent session by file and operation.](assets/session-insight-placeholder.svg) | ![Placeholder for following a file operation to its tool call and enriched review context.](assets/session-insight-placeholder.svg) | ![Placeholder for selecting related coding-agent sessions and adding them to reusable groups.](assets/session-insight-placeholder.svg) |
+| Match a changed file, narrow the results to edit operations, and identify the session responsible. | Open the file activity, review its operations, jump to the exact tool call, and inspect the repository context that applies. | Select any set of related sessions and save them as a group. The same session can appear in multiple groups. |
 
-| Organize | Monitor | Continue or hand off |
+| Organize | Collaborate | Hand off to your tools |
 | :--- | :--- | :--- |
-| ![Placeholder for organizing Pi sessions with sections, layouts, sorting, and activity groups.](assets/session-insight-placeholder.svg) | ![Placeholder for monitoring working state, recent activity, liveness, and inbox status.](assets/session-insight-placeholder.svg) | ![Placeholder for starting or messaging an agent, handing off work, or resuming a Pi session in a terminal.](assets/session-insight-placeholder.svg) |
-| Add named sections, choose a board layout, reorder sessions, or group them by activity. | Watch working state, recent activity, timestamps, liveness, and inbox status as they change. | Start or message an agent, give an existing session a task, or copy a command to resume it in your terminal. |
+| ![Placeholder for organizing coding-agent sessions into sections, columns, and fixed expert areas.](assets/session-insight-placeholder.svg) | ![Placeholder for one coding agent asking an expert session for relevant context.](assets/session-insight-placeholder.svg) | ![Placeholder for copying a resume command and continuing in an editor, terminal, or multiplexer.](assets/session-insight-placeholder.svg) |
+| Move task sessions between sections as work progresses while keeping reusable expert sessions nearby. | Copy an expert session's mailbox address and ask another agent to contact it for a focused primer. | Copy the session's resume command and continue in your preferred editor, terminal, or multiplexer. |
 
-The [Pi](https://github.com/gitsense/pi) repository includes a runnable
-`change-review` Analyzer for the Inspect step. It reduces a session to the files
-that changed, then adds purpose and dependency risk from Pi's repository Brains.
-
-Pi is the first supported agent runtime. Sessions are reviewed from the local
-`gsc` mirror, so freshness depends on the sync watcher. Saved boards are stored
-per browser. The messaging protocol is designed to support more agent runtimes
-through the same workspace in the future.
+Groups are views over your sessions, not folders. A session can appear in every
+group where it is useful, whether that group represents a project, workstream,
+area of expertise, or temporary review. Saved groups are currently stored per
+browser.
 
 ## Carry useful context forward
 
-Some conversations reveal more than the answer to one task. They uncover how to
-review a file, assess risk, find the right tests, identify ownership, or recognize
-a repository-specific lesson.
+Sometimes the session itself is what you need. Other times, a conversation
+reveals a method worth using again: how to review a file, assess risk, find the
+right tests, identify ownership, or recognize a repository-specific lesson.
 
 GitSense Chat helps you turn that line of inquiry into reusable repository
 analysis. Work with AI to define an Analyzer, run it across the relevant files,
@@ -63,10 +83,10 @@ review the results, and package the useful fields as a Brain.
 
 ![GitSense builds context by capturing knowledge during everyday work or extracting it at scale with GitSense Chat, then makes personal and repository knowledge available to coding agents through queryable Brains.](assets/gitsense-on-demand-context.png)
 
-The open-source [`gsc` CLI](https://github.com/gitsense/gsc-cli) captures
-knowledge while you work and delivers relevant Brain results inside coding-agent
-sessions. GitSense Chat helps create, review, and maintain that knowledge across
-files and repositories.
+The [`gsc` CLI](https://github.com/gitsense/gsc-cli) captures knowledge while you
+work and delivers relevant Brain results inside coding-agent sessions. GitSense
+Chat helps create, review, and maintain that knowledge across files and
+repositories.
 
 ## Give the next conversation a better starting point
 
@@ -87,6 +107,19 @@ concrete. Its `file-review-context` Analyzer combines code intent, change risk,
 dependency and test metadata, and repository lessons. Ask an agent to investigate
 the proposed `--max-filesize-warning` change and show which lessons apply to the
 files it touches.
+
+## Runtime support
+
+GitSense Chat currently supports Pi as its showcase integration. Pi demonstrates
+the complete model: importing existing session logs, tracking lifecycle state,
+starting and resuming agents, enriching session review, and communicating
+through agent inboxes.
+
+Codex, Claude Code, OpenCode, and other coding-agent harnesses also create
+session histories and expose lifecycle extension points. They are not yet
+integrated with GitSense Chat. The goal is a shared workspace where sessions can
+be searched and managed, and agents can communicate with one another regardless
+of the harness running them.
 
 ## Quick Start
 

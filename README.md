@@ -19,7 +19,7 @@ file and where to pick the work back up. You can grep session logs or write a
 script to find a match. GitSense Chat gives you a place to manage what comes
 next: inspect the session, resume the agent, or hand off the work.
 
-![Find the agent that already knows the work, inspect what it did, and continue in GitSense Chat or resume the session in your own tools.](assets/manage-agents.png)
+![GitSense Chat turns existing coding-agent session logs into sessions you can find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
 GitSense Chat also helps agents start with better context. The left side of the
 picture below shows the open-source [`gsc` CLI](https://github.com/gitsense/gsc-cli)
