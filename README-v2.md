@@ -118,12 +118,11 @@ dependency and test metadata, and repository lessons. Ask an agent to investigat
 the proposed `--max-filesize-warning` change and show which lessons apply to the
 files it touches.
 
-## Extract reusable context at scale
+## Turn a useful question into reusable context
 
-When a useful line of inquiry should outlive one conversation, turn it into an
-Analyzer. Run that Analyzer across the relevant files with AI, deterministic
-programs, or both. Review the results, then package the fields you trust as a
-portable, queryable Brain.
+Start with something you want agents to know about your repository. Define it as
+an Analyzer, populate it with AI, deterministic programs, or both, review the
+results, and package the fields you trust as a portable, queryable Brain.
 
 | Step | Demo |
 | :--- | :--- |
@@ -145,11 +144,12 @@ Both paths produce the same reviewable metadata. A repository can ship the
 Analyzer and the program that populates it under `.gitsense/`, keeping the
 analysis workflow beside the code it explains.
 
-## Keep repository context useful
+## Extract and maintain context at scale
 
-Repository context is not a one-time answer. Files change, repositories grow,
-and the first version of an Analyzer may not find exactly what you need. GitSense
-Chat keeps that work visible so you can update it instead of starting over.
+Once an Analyzer produces useful results, GitSense Chat helps you apply and
+maintain it across selected files, repositories, and branches. Process large
+jobs in batches, analyze only what is new or changed, review the results, and
+update the Analyzer as your repository evolves.
 
 ![Analyzing batches with filters in GitSense Chat.](assets/analyze-batches-control-panel.png)
 
