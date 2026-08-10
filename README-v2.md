@@ -2,18 +2,19 @@
 
 **Turn session logs into actionable insights.**
 
-One prompt can quickly become a wall of messages, tool calls, file operations,
-and commands. Those conversations contain decisions, discoveries, changed files,
-and valuable context about your code, but they can be difficult to follow while
-the work is happening and even harder to revisit later. When that happens,
-useful context goes unused, and the next conversation has to rediscover it.
+One prompt can quickly become a wall of messages and tool calls: searches, file
+reads, edits, and commands. Those conversations contain decisions, discoveries,
+changed files, and valuable context about your code, but they can be difficult
+to follow while the work is happening and even harder to revisit later. When
+that happens, useful context goes unused, and the next conversation has to
+rediscover it.
 
 GitSense Chat makes that raw activity easier to inspect and organize, then adds
 relevant context to help you decide what happens next:
 
 ![GitSense Chat turns existing coding-agent session logs into sessions you can find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
-## Start with the session logs you already have
+## How it works
 
 GitSense Chat works quietly alongside your existing workflow. It uses the
 session logs your agents already create and is there when you want to inspect,
@@ -31,20 +32,15 @@ A session-log integration is enough for the core review and organization
 workflow. Optional hooks add live state and communication, but they are not
 required to make a completed conversation useful.
 
-## Make every session reusable
+## See it in action with Pi
 
-Keep using your editor, terminal, multiplexer, and agent runtime. GitSense Chat
-gives the sessions created there enough structure to remain useful after the
-conversation ends.
+Pi is the working proof behind this idea: existing session logs become more
+useful when they are searchable, structured, enriched, and connected back to
+the agent. The examples below show how GitSense Chat helps you find the session
+behind a change, inspect it with relevant repository context, organize related
+work, connect agents, and resume in your own tools.
 
-Finding the right session is only the first step. Analyzers can combine recorded
-activity and Git state with repository Brains and lessons, giving you context
-such as file purpose, risk signals, dependencies, test guidance, and diff size.
-That context appears beside the original evidence so you can better understand
-what happened and guide what happens next.
-
-Enrichment is context for review, not a verdict. It does not prove that an agent
-saw or followed a lesson, and it does not decide whether the code is correct.
+The added context helps focus your review; it is not a verdict on the code.
 
 | Find | Inspect | Group |
 | :--- | :--- | :--- |
