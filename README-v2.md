@@ -9,7 +9,7 @@ wrong assumptions, and small mistakes can compound before anyone notices.
 
 GitSense Chat turns that raw activity into something you can act on:
 
-![GitSense Chat turns existing coding-agent session logs into sessions you can find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
+![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
 ## Quick Start
 
@@ -38,10 +38,10 @@ gsc docs install
 ## How it works
 
 GitSense Chat works quietly alongside your existing workflow. It uses the
-session logs your agents already create and is there when you want to inspect,
-organize, or resume their work.
+session logs your agents create as they work, so you can inspect and organize
+sessions while they are active or after they end.
 
-| From existing session logs | With optional lifecycle integration |
+| With session logs | With optional lifecycle integration |
 | :--- | :--- |
 | Search conversations, files, and operations | See which agents are running |
 | Inspect messages, tool calls, file activity, and Git state | Start an offline agent |
@@ -50,8 +50,8 @@ organize, or resume their work.
 | Copy resume and attach commands | Receive messages in the agent's existing interface |
 
 A session-log integration is enough for the core review and organization
-workflow. Optional hooks add live state and communication, but they are not
-required to make a completed conversation useful.
+workflow, both while work is unfolding and after a session ends. Optional hooks
+add live state and communication.
 
 Custom analyzers can go further by combining observable session activity with
 repository and team-specific review context. They help focus your review, but
@@ -59,11 +59,11 @@ they do not decide whether the code is correct.
 
 ## See it in action with Pi
 
-Pi is the working proof behind this idea: existing session logs become more
-useful when they are searchable, structured, enriched, and connected back to
-the agent. The examples below show how GitSense Chat helps you find the session
-behind a change, inspect it with relevant repository context, organize related
-work, connect agents, and resume in your own tools.
+Pi is the working proof behind this idea: active and completed sessions become
+more useful when their logs are searchable, structured, enriched, and connected
+back to the agent. The examples below show how GitSense Chat helps you find the
+session behind a change, inspect it with relevant repository context, organize
+related work, connect agents, and resume in your own tools.
 
 | Find | Inspect | Group |
 | :--- | :--- | :--- |
