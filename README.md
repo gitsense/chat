@@ -112,11 +112,51 @@ more actionable context. It uses Git to reveal the full change set, then shows
 what the files do, the size and potential impact of the changes, and the
 commands that ran.
 
-![Placeholder for a video showing a custom change-review analyzer turning 52 tool calls into an actionable review of the full eight-file change set.](assets/human-review-context-demo-placeholder.svg)
+Rather than explain the entire workflow in one video, the following three short
+demos show how custom review context becomes available, reusable, and
+actionable.
+
+#### Configure a custom analyzer
+
+Register an analyzer builder once, then select it from GitSense Chat when
+configuring session review. Registration connects the analyzer's local logic to
+the app and makes `change-review` available without building its assumptions
+into GitSense Chat.
+
+![Placeholder for a video showing how to register the custom change-review analyzer and make it available in GitSense Chat.](assets/human-review-context-demo-placeholder.svg)
+
+#### Load the review you need
+
+Saved views make different combinations of review context available with one
+click. A change view can focus on files, risk, and commands, while another view
+can surface the ownership, tests, policies, or lessons that matter for a
+particular kind of work. Frontend and backend changes, for example, may need
+different context and different checks even when they are part of the same
+session.
+
+![Placeholder for a video showing how to create and load different saved review views for the same agent session.](assets/load-review-view-demo-placeholder.svg)
+
+#### Turn insights into actions
+
+Loading Change Review reveals the full eight-file change set, including two
+high-risk files. The largest change, `crates/ignore/src/walk.rs`, adds 225 lines,
+has 11 dependents, and has two repository lessons attached. That gives the
+reviewer a concrete place to start.
+
+Beside the diff, the analyzer offers three ways to continue: **Terminal** runs
+`git diff` in a terminal, **Zed** opens the change in an editor, and **Modal**
+calls the analyzer and displays its response inside GitSense Chat. A callback
+can return a detailed report, load external information on demand, or simply
+confirm that another tool or agent received a request.
+
+![Placeholder for a video showing Terminal, Zed, and Modal actions beside a changed file in the custom Change Review.](assets/review-actions-demo-placeholder.svg)
 
 That is one example of the review context you can build. Analyzers could instead
 surface code ownership, architectural boundaries, required checks, test
-coverage, outstanding todos, or other signals that matter to your team.
+coverage, outstanding todos, or other signals that matter to your team. They
+can also keep conversations focused by loading dependency details, test
+information, generated artifacts, or revision history only when someone asks
+to see it.
 
 [Learn more about creating review context with analyzers](https://github.com/gitsense/smart-ripgrep/blob/master/.gitsense/analyzers/README.md).
 

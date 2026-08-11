@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
-  <title id="title">Configure analyzer video placeholder</title>
-  <desc id="description">A placeholder for a GitSense Chat video showing how to register a custom session analyzer and make it available in the app.</desc>
+  <title id="title">Load review view video placeholder</title>
+  <desc id="description">A placeholder for a GitSense Chat video showing how to create and load saved review views for an agent session.</desc>
   <rect width="960" height="600" rx="24" fill="#f6f8fa"/>
   <rect x="24" y="24" width="912" height="552" rx="16" fill="#ffffff" stroke="#8c959f" stroke-width="3" stroke-dasharray="12 12"/>
   <circle cx="480" cy="238" r="58" fill="#24292f"/>
   <path d="M462 204 L462 272 L518 238 Z" fill="#ffffff"/>
   <g fill="#24292f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" text-anchor="middle">
-    <text x="480" y="345" font-size="34" font-weight="600">Configure</text>
-    <text x="480" y="395" font-size="28">Register a custom analyzer</text>
+    <text x="480" y="345" font-size="34" font-weight="600">Views</text>
+    <text x="480" y="395" font-size="28">Load the review you need</text>
   </g>
-  <text x="480" y="458" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" text-anchor="middle">Session analyzer demo</text>
+  <text x="480" y="458" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" text-anchor="middle">Saved review views demo</text>
 </svg>
