@@ -99,21 +99,26 @@ start. File context adds the repository knowledge that applies to the files
 involved, such as purpose, ownership, risk, tests, and lessons. Review actions
 can take you directly to the supporting evidence.
 
-### One prompt. 106 tool calls. Now what?
+### One prompt. 52 tool calls. Now what?
 
-The raw session log contains the evidence, but few people will replay 106 tool
-calls to find it.
+Fifty-two tool calls are a lot to review, and counting them still understates
+the problem. Important logic can be buried inside Bash commands, where a single
+command may inspect, generate, or modify several files. In this session, the
+agent applied most of its changes through Git, so the activity view showed only
+a fraction of the eight files it modified.
 
-In this demo, file context surfaces a repository lesson connected to the agent's
-work. That raises a useful question: did the agent account for it? A custom
-session analyzer shows the risk level and provides a user-confirmed action for
-opening the relevant diff in Zed.
+For this demo, we created a custom `change-review` session analyzer to provide
+more actionable context. It uses Git to reveal the full change set, then shows
+what the files do, the size and potential impact of the changes, and the
+commands that ran.
 
-![Placeholder for a video showing GitSense Chat turning 106 tool calls into a focused human review with file context, a repository lesson, risk, and a Zed diff action.](assets/human-review-context-demo-placeholder.svg)
+![Placeholder for a video showing a custom change-review analyzer turning 52 tool calls into an actionable review of the full eight-file change set.](assets/human-review-context-demo-placeholder.svg)
 
-GitSense Chat does not decide whether the work is correct. It makes human review
-practical by helping the reviewer move from a wall of activity, to a question
-worth asking, to the code needed to answer it.
+That is one example of the review context you can build. Analyzers could instead
+surface code ownership, architectural boundaries, required checks, test
+coverage, outstanding todos, or other signals that matter to your team.
+
+[Learn more about creating review context with analyzers](https://github.com/gitsense/smart-ripgrep/blob/master/.gitsense/analyzers/README.md).
 
 ### Same work. Better starting point.
 
