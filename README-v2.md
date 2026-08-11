@@ -87,20 +87,17 @@ harnesses.
 
 ## Give humans and agents more relevant context
 
-More information does not automatically create visibility. Agent sessions can
-produce more messages, tool calls, and file activity than anyone can reasonably
-review line by line. When understanding the work takes that much effort, it is
-easy to rely on the agent's final summary and move on.
+Agent sessions can produce more messages, tool calls, and file activity than
+anyone can reasonably review line by line. When reviewing all of that takes too
+much effort, it is tempting to accept the agent's summary and move on. Often,
+that is exactly what happens.
 
-GitSense Chat makes it practical to stay involved. It lets you build a review
-layer around what matters to you, connecting session activity to purpose,
-ownership, risk, tests, lessons, and other repository context. Instead of
-replaying everything, you can focus on the signals that deserve attention,
-inspect the supporting evidence, and decide what happens next.
-
-Files connect agent activity to repository context. When a session records what
-the agent read or changed, GitSense Chat can surface the knowledge and review
-actions that apply to those files.
+GitSense Chat makes it practical to stay involved by turning a wall of agent
+activity into a review you can actually use. Custom session analyzers turn raw
+activity into a focused view of what changed, why it may matter, and where to
+start. File context adds the repository knowledge that applies to the files
+involved, such as purpose, ownership, risk, tests, and lessons. Review actions
+can take you directly to the supporting evidence.
 
 ### One prompt. 106 tool calls. Now what?
 
