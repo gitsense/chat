@@ -53,9 +53,10 @@ A session-log integration is enough for the core review and organization
 workflow, both while work is unfolding and after a session ends. Optional hooks
 add live state and communication.
 
-Custom analyzers can go further by combining observable session activity with
-repository and team-specific review context. They help focus your review, but
-they do not decide whether the code is correct.
+Custom analyzers can go further by turning observable session activity and
+repository or team knowledge into session insights. These saved views help you
+focus on what matters and can offer actions for what to do next, but they do
+not decide whether the code is correct.
 
 ## See it in action with Pi
 
@@ -85,7 +86,7 @@ Code, OpenCode, and other coding-agent harnesses are not yet integrated. The
 goal is a shared workspace where sessions and agent communication work across
 harnesses.
 
-## Give humans and agents more relevant context
+## Give humans useful insights and agents relevant context
 
 Agent sessions can produce more messages, tool calls, and file activity than
 anyone can reasonably review line by line. When reviewing all of that takes too
@@ -93,11 +94,11 @@ much effort, it is tempting to accept the agent's summary and move on. Often,
 that is exactly what happens.
 
 GitSense Chat is designed around a simple idea: you know what matters to you.
-Custom analyzers let you shape session data around your own questions, turning
-a wall of tool calls into insights you can use. You might want a compact outline
-of the conversation, a review of the files that changed, confirmation that
-`npm run check` ran, or a quick answer about whether the agent touched a
-particular file.
+Custom analyzers turn session data into insights built around your own
+questions, turning a wall of tool calls into something you can inspect and act
+on. You might want a compact outline of the conversation, a review of the files
+that changed, confirmation that `npm run check` ran, or a quick answer about
+whether the agent touched a particular file.
 
 ### One prompt. 52 tool calls. Now what?
 
@@ -127,7 +128,7 @@ also keep conversations focused by loading dependency details, test
 information, generated artifacts, or revision history only when someone asks
 to see it.
 
-[Learn more about creating review context with analyzers](https://github.com/gitsense/smart-ripgrep/blob/master/.gitsense/analyzers/README.md).
+[Learn more about creating session insights with analyzers](https://github.com/gitsense/smart-ripgrep/blob/master/.gitsense/analyzers/README.md).
 
 ### Same work. Better starting point.
 
@@ -148,7 +149,7 @@ repository context before the agent decides what to open.
 For a runnable example, see
 [smart-ripgrep](https://github.com/gitsense/smart-ripgrep). It shows how an agent
 uses committed repository knowledge to find the right files, check earlier
-lessons before editing, and enrich session review with purpose, risk,
+lessons before editing, and surface session insights about purpose, risk,
 dependencies, tests, and lessons.
 
 ### Examples
