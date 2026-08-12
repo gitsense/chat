@@ -92,12 +92,12 @@ anyone can reasonably review line by line. When reviewing all of that takes too
 much effort, it is tempting to accept the agent's summary and move on. Often,
 that is exactly what happens.
 
-GitSense Chat makes it practical to stay involved by turning a wall of agent
-activity into a review you can actually use. Custom session analyzers turn raw
-activity into a focused view of what changed, why it may matter, and where to
-start. File context adds the repository knowledge that applies to the files
-involved, such as purpose, ownership, risk, tests, and lessons. Review actions
-can take you directly to the supporting evidence.
+GitSense Chat is designed around a simple idea: you know what matters to you.
+Custom analyzers let you shape session data around your own questions, turning
+a wall of tool calls into insights you can use. You might want a compact outline
+of the conversation, a review of the files that changed, confirmation that
+`npm run check` ran, or a quick answer about whether the agent touched a
+particular file.
 
 ### One prompt. 52 tool calls. Now what?
 
@@ -107,54 +107,23 @@ command may inspect, generate, or modify several files. In this session, the
 agent applied most of its changes through Git, so the activity view showed only
 a fraction of the eight files it modified.
 
-For this demo, we created a custom `change-review` session analyzer to provide
-more actionable context. It uses Git to reveal the full change set, then shows
-what the files do, the size and potential impact of the changes, and the
-commands that ran.
+The following demos use two custom analyzers on the same session. Session
+Outline keeps the conversation and condenses repeated tool activity. Change
+Review uses Git and repository context to show the full eight-file change set,
+diff sizes, risk, lessons, and places to begin reviewing. The analyzers do not
+define what everyone should care about. They show how the same session can be
+shaped around a different focus.
 
-Rather than explain the entire workflow in one video, the following three short
-demos show how custom review context becomes available, reusable, and
-actionable.
+| Configure and load | Act on what matters |
+| :--- | :--- |
+| ![Placeholder for a video showing how to register Session Outline and Change Review, then load two different views of the same session.](assets/human-review-context-demo-placeholder.svg) | ![Placeholder for a video showing Terminal, Zed, and Modal actions beside a changed file in the custom Change Review.](assets/review-actions-demo-placeholder.svg) |
+| Register Session Outline and Change Review, then make both views available with a single click. Load the compact outline to scan the conversation and commands. Switch to Change Review to focus on the files, risks, lessons, and diffs. **Same session. Different focus.** | Start with the insight that matters, then choose what happens next. **Terminal** runs `git diff` in a terminal, **Zed** opens the change in an editor, and **Modal** calls the analyzer and displays its response inside GitSense Chat. A callback can return a report, load information on demand, or confirm that another tool or agent received a request. |
 
-#### Configure a custom analyzer
-
-Register an analyzer builder once, then select it from GitSense Chat when
-configuring session review. Registration connects the analyzer's local logic to
-the app and makes `change-review` available without building its assumptions
-into GitSense Chat.
-
-![Placeholder for a video showing how to register the custom change-review analyzer and make it available in GitSense Chat.](assets/human-review-context-demo-placeholder.svg)
-
-#### Load the review you need
-
-Saved views make different combinations of review context available with one
-click. A change view can focus on files, risk, and commands, while another view
-can surface the ownership, tests, policies, or lessons that matter for a
-particular kind of work. Frontend and backend changes, for example, may need
-different context and different checks even when they are part of the same
-session.
-
-![Placeholder for a video showing how to create and load different saved review views for the same agent session.](assets/load-review-view-demo-placeholder.svg)
-
-#### Turn insights into actions
-
-Loading Change Review reveals the full eight-file change set, including two
-high-risk files. The largest change, `crates/ignore/src/walk.rs`, adds 225 lines,
-has 11 dependents, and has two repository lessons attached. That gives the
-reviewer a concrete place to start.
-
-Beside the diff, the analyzer offers three ways to continue: **Terminal** runs
-`git diff` in a terminal, **Zed** opens the change in an editor, and **Modal**
-calls the analyzer and displays its response inside GitSense Chat. A callback
-can return a detailed report, load external information on demand, or simply
-confirm that another tool or agent received a request.
-
-![Placeholder for a video showing Terminal, Zed, and Modal actions beside a changed file in the custom Change Review.](assets/review-actions-demo-placeholder.svg)
-
-That is one example of the review context you can build. Analyzers could instead
-surface code ownership, architectural boundaries, required checks, test
-coverage, outstanding todos, or other signals that matter to your team. They
-can also keep conversations focused by loading dependency details, test
+These are only two examples. An analyzer could surface code ownership,
+architectural boundaries, required checks, test coverage, outstanding todos,
+or other signals that matter to your team. It could reduce an entire session to
+whether a required command ran or whether a specific file was touched. It can
+also keep conversations focused by loading dependency details, test
 information, generated artifacts, or revision history only when someone asks
 to see it.
 
