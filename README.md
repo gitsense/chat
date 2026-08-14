@@ -16,7 +16,7 @@ happens next.
 
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
-| **Organize related work** | **See what matters** |
+| **Organize your sessions** | **See what matters** |
 | :---: | :---: |
 | ![Placeholder for a GitSense Chat group arranged like a Kanban board.](assets/session-insight-placeholder.svg) | ![Placeholder for a GitSense Chat session with messages, tool activity, and Session Insights.](assets/session-insight-placeholder.svg) |
 
