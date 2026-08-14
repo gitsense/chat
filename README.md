@@ -18,8 +18,8 @@ happens next.
 
 | **Organize your sessions** | **See what matters** |
 | :---: | :---: |
-| ![Placeholder for a GitSense Chat group arranged like a Kanban board.](assets/session-insight-placeholder.svg) | ![Placeholder for a GitSense Chat session with messages, tool activity, and Session Insights.](assets/session-insight-placeholder.svg) |
-| ![Placeholder for a GitSense Chat dashboard organizing sessions from the week.](assets/session-insight-placeholder.svg) | ![Placeholder for a GitSense Chat Session Insight view that surfaces relevant activity and repository context.](assets/session-insight-placeholder.svg) |
+| ![GitSense Chat sessions organized as a Kanban board.](organize-your-sessions-pi-sessions-kanban.png) | ![Placeholder for a GitSense Chat session with messages, tool activity, and Session Insights.](assets/session-insight-placeholder.svg) |
+| ![GitSense Chat sessions organized using rows and a fixed side column.](organize-your-sessions-pi-sessions-rows-plus-col.png) | ![Placeholder for a GitSense Chat Session Insight view that surfaces relevant activity and repository context.](assets/session-insight-placeholder.svg) |
 
 ## Quick Start
 
