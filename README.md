@@ -4,7 +4,8 @@
 
 Your agents may work across different terminals, repositories, and tasks, but
 their sessions do not have to remain scattered. A single prompt can easily turn
-into a wall of tool calls: searches, file reads, edits, and commands.
+into a wall of tool calls, but the work that matters does not have to stay
+buried inside it.
 
 GitSense Chat brings that work together while it is happening and after the
 sessions end. Find related sessions, see what agents are doing, organize work
