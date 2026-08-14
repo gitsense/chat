@@ -3,17 +3,15 @@
 **Give your agents a home. Turn their work into actionable insights.**
 
 Your agents may work across different terminals, repositories, and tasks, but
-their sessions do not have to remain scattered. GitSense Chat brings active
-and completed sessions into one place, where you can see what is happening,
-return to past work, organize related sessions, and connect agents when needed.
+their sessions do not have to remain scattered. A single prompt can easily turn
+into a wall of tool calls: searches, file reads, edits, and commands.
 
-A single prompt can easily turn into a wall of tool calls: searches, file reads,
-edits, and commands. As decisions, discoveries, and file changes pile up, the
-work can become harder to follow and the agent harder to steer. Missed context,
-wrong assumptions, and small mistakes can compound before anyone notices.
-
-From this shared home, GitSense Chat turns raw activity into focused insights
-you and your agents can use:
+GitSense Chat brings that work together while it is happening and after the
+sessions end. Find related sessions, see what agents are doing, organize work
+across tasks, and create Session Insight views around what matters to you.
+Instead of replaying every tool call, you can surface the files, decisions,
+risks, lessons, and actions needed to understand the work and decide what
+happens next.
 
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
