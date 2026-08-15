@@ -18,7 +18,7 @@ the work and decide what happens next.
 
 <div align="center">
   <h3>Give your sessions a lead agent</h3>
-  <p>Bring any sessions together, then give the group a lead.</p>
+  <p>Create a group, add a lead, and manage your sessions through one conversation.</p>
 </div>
 
 <p align="center">
