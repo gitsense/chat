@@ -27,11 +27,12 @@ the work and decide what happens next.
 
 <div align="center">
   <h2>Data, your way</h2>
-  <p>Arrange sessions in the layout that fits the work, then choose the views that surface what matters to you.</p>
+  <p>Control what you see so important work is harder to miss.</p>
 </div>
 
 | **Organize your sessions** | **See what matters** |
 | :---: | :---: |
+| Use different layouts to organize sessions around the work. | Create custom views to see the forest, not just the trees. |
 | ![GitSense Chat sessions organized as a Kanban board.](assets/organize-your-sessions-pi-sessions-kanban.png) | ![Placeholder for a GitSense Chat session with messages, tool activity, and Session Insights.](assets/session-insight-placeholder.svg) |
 
 ## Quick Start
