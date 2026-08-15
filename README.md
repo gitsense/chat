@@ -8,18 +8,26 @@ into a wall of tool calls, but the work that matters does not have to stay
 buried inside it.
 
 GitSense Chat brings that work together while it is happening and after the
-sessions end. Find related sessions, see what agents are doing, organize work
-across tasks, and create Session Insight views around what matters to you.
-Instead of replaying every tool call, you can surface the files, decisions,
-risks, lessons, and actions needed to understand the work and decide what
-happens next.
+sessions end. Find related sessions, see what agents are doing, organize them
+around the work, coordinate agents when needed, and create Session Insight
+views around what matters to you. Instead of replaying every tool call, you can
+surface the files, decisions, risks, lessons, and actions needed to understand
+the work and decide what happens next.
 
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
 | **Organize your sessions** | **See what matters** |
 | :---: | :---: |
 | ![GitSense Chat sessions organized as a Kanban board.](assets/organize-your-sessions-pi-sessions-kanban.png) | ![Placeholder for a GitSense Chat session with messages, tool activity, and Session Insights.](assets/session-insight-placeholder.svg) |
-| ![GitSense Chat sessions organized using rows and a fixed side column.](assets/organize-your-sessions-pi-sessions-rows-plus-col.png) | ![Placeholder for a GitSense Chat Session Insight view that surfaces relevant activity and repository context.](assets/session-insight-placeholder.svg) |
+
+<div align="center">
+  <h3>Give your sessions a lead agent</h3>
+  <p>Bring any sessions together, then give the group a lead.</p>
+</div>
+
+<p align="center">
+  <img src="assets/session-insight-placeholder.svg" alt="Placeholder for a video showing how to create a lead agent for a group and check in with its sessions through one conversation." width="100%">
+</p>
 
 ## Quick Start
 
