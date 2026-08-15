@@ -30,10 +30,25 @@ the work and decide what happens next.
   <p>Control what you see so important work is harder to miss.</p>
 </div>
 
-| **Organize your sessions** | **See what matters** |
+<div align="center">
+  <h3>Organize your sessions</h3>
+  <p>Use different layouts to organize sessions around the work.</p>
+</div>
+
+| | |
 | :---: | :---: |
-| Use different layouts to organize sessions around the work. | Create custom views to see the forest, not just the trees. |
-| ![GitSense Chat sessions organized as a Kanban board.](assets/organize-your-sessions-pi-sessions-kanban.png) | ![Placeholder for a GitSense Chat session with messages, tool activity, and Session Insights.](assets/session-insight-placeholder.svg) |
+| ![GitSense Chat sessions organized as a Kanban board.](assets/organize-your-sessions-pi-sessions-kanban.png) | ![GitSense Chat sessions organized using rows and a fixed side column.](assets/organize-your-sessions-pi-sessions-rows-plus-col.png) |
+| ![Placeholder for GitSense Chat sessions organized in simple rows.](assets/session-insight-placeholder.svg) | ![Placeholder for a GitSense Chat dashboard organizing sessions around a project or week.](assets/session-insight-placeholder.svg) |
+
+<div align="center">
+  <h3>See what matters</h3>
+  <p>Create custom views to see the forest, not just the trees.</p>
+</div>
+
+| | |
+| :---: | :---: |
+| ![Placeholder for a Change Review view showing changed files, impact, and review actions.](assets/session-insight-placeholder.svg) | ![Placeholder for a Session Outline view condensing messages, tools, and commands.](assets/session-insight-placeholder.svg) |
+| ![Placeholder for a Code Ownership view matched to files an agent touched.](assets/session-insight-placeholder.svg) | ![Placeholder for a Tests and Validation view showing relevant checks and observed commands.](assets/session-insight-placeholder.svg) |
 
 ## Quick Start
 
