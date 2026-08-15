@@ -16,10 +16,6 @@ the work and decide what happens next.
 
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
-| **Organize your sessions** | **See what matters** |
-| :---: | :---: |
-| ![GitSense Chat sessions organized as a Kanban board.](assets/organize-your-sessions-pi-sessions-kanban.png) | ![Placeholder for a GitSense Chat session with messages, tool activity, and Session Insights.](assets/session-insight-placeholder.svg) |
-
 <div align="center">
   <h3>Give your sessions a lead agent</h3>
   <p>Bring any sessions together, then give the group a lead.</p>
@@ -28,6 +24,15 @@ the work and decide what happens next.
 <p align="center">
   <img src="assets/session-insight-placeholder.svg" alt="Placeholder for a video showing how to create a lead agent for a group and check in with its sessions through one conversation." width="100%">
 </p>
+
+<div align="center">
+  <h2>Data, your way</h2>
+  <p>Arrange sessions in the layout that fits the work, then choose the views that surface what matters to you.</p>
+</div>
+
+| **Organize your sessions** | **See what matters** |
+| :---: | :---: |
+| ![GitSense Chat sessions organized as a Kanban board.](assets/organize-your-sessions-pi-sessions-kanban.png) | ![Placeholder for a GitSense Chat session with messages, tool activity, and Session Insights.](assets/session-insight-placeholder.svg) |
 
 ## Quick Start
 
