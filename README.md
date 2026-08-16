@@ -26,23 +26,21 @@ the work and decide what happens next.
 </p>
 
 <div align="center">
-  <h2>Data, your way</h2>
-  <p>Control what you see so important work is harder to miss.</p>
-</div>
-
-<div align="center">
-  <h3>Organize your sessions</h3>
-  <p>Use different layouts to organize sessions around the work.</p>
+  <h2>Organize sessions. Guide the team.</h2>
+  <p>Organize the work and see what needs your attention.</p>
 </div>
 
 | | |
 | :---: | :---: |
-| ![GitSense Chat sessions organized as a Kanban board.](assets/organize-your-sessions-pi-sessions-kanban.png) | ![GitSense Chat sessions organized using rows and a fixed side column.](assets/organize-your-sessions-pi-sessions-rows-plus-col.png) |
-| ![Placeholder for GitSense Chat sessions organized in simple rows.](assets/session-insight-placeholder.svg) | ![Placeholder for a GitSense Chat dashboard organizing sessions around a project or week.](assets/session-insight-placeholder.svg) |
+| ![GitSense Chat sessions organized as a Kanban board.](assets/organize-your-sessions-pi-sessions-kanban.png) | ![Placeholder for a GitSense Chat group report showing what needs attention across the team.](assets/session-insight-placeholder.svg) |
+
+Your lead sees the same group layout you do. Columns such as `Critical`,
+`Active`, `Non-critical`, and `Done` become part of the conversation, so you
+can ask, “What are the critical agents working on?” and receive a report
+organized around the way you work.
 
 <div align="center">
-  <h3>See what matters</h3>
-  <p>Create custom views to see the forest, not just the trees.</p>
+  <h2>See what matters</h2>
 </div>
 
 | | |
