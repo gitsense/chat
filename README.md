@@ -26,18 +26,17 @@ the work and decide what happens next.
 </p>
 
 <div align="center">
-  <h2>Organize sessions. Guide the team.</h2>
-  <p>Organize the work and see what needs your attention.</p>
+  <h3>Organize sessions. Coordinate the work.</h3>
+  <p>Arrange sessions your way, then ask a lead about the work in plain language.</p>
 </div>
 
 | | |
 | :---: | :---: |
-| ![GitSense Chat sessions organized as a Kanban board.](assets/organize-your-sessions-pi-sessions-kanban.png) | ![Placeholder for a GitSense Chat group report showing what needs attention across the team.](assets/session-insight-placeholder.svg) |
+| ![GitSense Chat sessions organized in a Kanban layout.](assets/organize-pi-sessions-kanban-layout-small.png) | ![GitSense Chat lead agent composer for asking about organized sessions.](assets/pi-sessions-ask-lead-agent-small.png) |
 
-Your lead sees the same group layout you do. Columns such as `Critical`,
-`Active`, `Non-critical`, and `Done` become part of the conversation, so you
-can ask, “What are the critical agents working on?” and receive a report
-organized around the way you work.
+Your lead sees the sessions and columns as you arranged them. Ask, “Give me a
+status update on the sessions that are not in the Done column,” and receive a
+report across the relevant work without naming every session.
 
 <div align="center">
   <h2>See what matters</h2>
