@@ -3,11 +3,36 @@
 **Scale AI collaboration: give your agents a shared home and a better starting
 point.**
 
-Agents may work across different terminals, repositories, and tasks, but their
-sessions do not have to remain scattered. GitSense Chat brings that work
-together while it is happening and when it stops.
+Agents work across terminals, repositories, and tasks. GitSense Chat brings
+their sessions into one place while they are active and after they stop, making
+the work easier to find, understand, and build on.
 
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
+
+## Quick Start
+
+Review the [install script](install.sh), then install `gsc`:
+
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
+
+Or [build it yourself](https://github.com/gitsense/chat).
+
+### Ask Your Coding Agent
+
+```text
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
+```
+
+Your agent will guide you through the rest and stop when you need to enter an
+API key privately.
+
+For detailed installation instructions, run:
+
+```bash
+gsc docs install
+```
 
 ## Multiple sessions. One conversation.
 
@@ -96,31 +121,6 @@ knowledge, making it useful for more than reconstructing what happened.
     </td>
   </tr>
 </table>
-
-## Quick Start
-
-Review the [install script](install.sh), then install `gsc`:
-
-```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
-```
-
-Or [build it yourself](https://github.com/gitsense/chat).
-
-### Ask Your Coding Agent
-
-```text
-Install and configure GitSense Chat for me. Start by running `gsc docs help`.
-```
-
-Your agent will guide you through the rest and stop when you need to enter an
-API key privately.
-
-For detailed installation instructions, run:
-
-```bash
-gsc docs install
-```
 
 ## A foundation for scalable AI collaboration
 
