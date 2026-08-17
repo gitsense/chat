@@ -6,9 +6,9 @@ Agents may work across different terminals, repositories, and tasks, but their
 sessions do not have to remain scattered. GitSense Chat brings that work
 together while it is happening and when it stops.
 
-<div align="center">
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
-  
+
+<div align="center">
   <h3>Give your sessions a lead</h3>
 </div>
 
