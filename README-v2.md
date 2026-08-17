@@ -8,16 +8,18 @@ together while it is happening and when it stops.
 
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
-<h2>Give your sessions a lead</h2>
+<div align="center">
+  <h2>One conversation. Multiple sessions.</h2>
+  <p>Create a lead and manage your sessions through one conversation.</p>
+</div>
 
-Manage you and your teams work through one conversation
-
-| **Ask about your sessions** | **Ask about your team's** |
+| **Ask about your sessions** | **Ask about your team's sessions** |
 | :---: | :---: |
 | ![A lead agent helping one person understand their sessions.](assets/chat-widget-team-report.png) | ![A lead agent reporting what needs attention across a team's sessions.](assets/chat-widget-team-report.png) |
 
-A lead agent can turn checkpoints, session freshness, group structure, and
-shared activity into one report without interrupting every agent.
+Your lead works from the sessions and columns you arrange. Ask, "Give me a
+status update on every session not in Done," and get one report without opening
+or naming each session.
 
 ## Quick Start
 
