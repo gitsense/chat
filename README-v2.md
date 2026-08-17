@@ -19,7 +19,7 @@ conversation.
         "Generate a change report for every session not in Done. Use GitSense
         Markdown actions to make each changed file open in Zed."
       </p>
-      <strong>Use the context you already created</strong>
+      <strong>Work from your layout</strong>
       <p>
         The lead agent works from the sessions and columns you arranged, so you
         do not need to find or name every session.
@@ -37,7 +37,7 @@ conversation.
         Highlight stale checkpoints, blockers, coordination risks, and work
         that needs attention."
       </p>
-      <strong>Catch up without interrupting the team</strong>
+      <strong>Check status without interrupting</strong>
       <p>
         The lead agent starts with checkpoints and session freshness, then
         tells you where the available evidence may be incomplete.

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">One session with multiple views screenshot placeholder</title>
+  <desc id="description">A placeholder for a GitSense Chat screenshot showing the same agent session through Session Outline, Change Review, and Code Ownership views.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6f8fa"/>
+  <rect x="24" y="24" width="1152" height="627" rx="16" fill="#ffffff" stroke="#8c959f" stroke-width="3" stroke-dasharray="12 12"/>
+
+  <rect x="56" y="64" width="1088" height="56" rx="10" fill="#eaeef2"/>
+  <circle cx="84" cy="92" r="7" fill="#8c959f"/>
+  <circle cx="108" cy="92" r="7" fill="#8c959f"/>
+  <circle cx="132" cy="92" r="7" fill="#8c959f"/>
+  <text x="600" y="101" fill="#24292f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="600" text-anchor="middle">Session screenshot placeholder</text>
+
+  <rect x="56" y="144" width="360" height="471" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+  <text x="86" y="188" fill="#24292f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="600">Agent session</text>
+  <rect x="86" y="215" width="250" height="18" rx="9" fill="#afb8c1"/>
+  <rect x="86" y="247" width="292" height="12" rx="6" fill="#d0d7de"/>
+  <rect x="86" y="271" width="264" height="12" rx="6" fill="#d0d7de"/>
+  <rect x="86" y="319" width="292" height="76" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="102" y="340" width="190" height="11" rx="5" fill="#8c959f"/>
+  <rect x="102" y="365" width="240" height="9" rx="4" fill="#d0d7de"/>
+  <rect x="86" y="419" width="292" height="76" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="102" y="440" width="220" height="11" rx="5" fill="#8c959f"/>
+  <rect x="102" y="465" width="252" height="9" rx="4" fill="#d0d7de"/>
+
+  <rect x="440" y="144" width="704" height="471" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+  <text x="470" y="188" fill="#24292f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="600">Session Insights</text>
+
+  <rect x="470" y="215" width="190" height="46" rx="23" fill="#ddf4ff" stroke="#54aeff"/>
+  <text x="565" y="245" fill="#0969da" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="600" text-anchor="middle">Session Outline</text>
+  <rect x="676" y="215" width="180" height="46" rx="23" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="766" y="245" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="600" text-anchor="middle">Change Review</text>
+  <rect x="872" y="215" width="210" height="46" rx="23" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="977" y="245" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="600" text-anchor="middle">Code Ownership</text>
+
+  <text x="470" y="316" fill="#24292f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="600">Same session. Different focus.</text>
+  <rect x="470" y="344" width="590" height="14" rx="7" fill="#afb8c1"/>
+  <rect x="470" y="374" width="532" height="12" rx="6" fill="#d0d7de"/>
+  <rect x="470" y="400" width="620" height="12" rx="6" fill="#d0d7de"/>
+  <rect x="470" y="446" width="290" height="112" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="784" y="446" width="306" height="112" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="490" y="470" width="170" height="11" rx="5" fill="#8c959f"/>
+  <rect x="490" y="497" width="224" height="9" rx="4" fill="#d0d7de"/>
+  <rect x="804" y="470" width="180" height="11" rx="5" fill="#8c959f"/>
+  <rect x="804" y="497" width="238" height="9" rx="4" fill="#d0d7de"/>
+</svg>
