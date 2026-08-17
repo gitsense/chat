@@ -7,20 +7,13 @@ sessions do not have to remain scattered. GitSense Chat brings that work
 together while it is happening and when it stops.
 
 <div align="center">
-  <h2>Scale How You Work With Agents</h2>
-  <p>Keep your own sessions manageable, then extend the same knowledge, visibility, and coordination across a team.</p>
-</div>
-
-| **One person, many sessions** | **A team, working from shared context** |
-| :---: | :---: |
-| ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png) | ![GitSense Chat connects distributed agent sessions through shared knowledge, checkpoints, groups, and lead agents.](assets/distributed-sessions-shared-coordination.png) |
-
-<div align="center">
-  <h3>Give your sessions a lead</h3>
+  <h2>Give your sessions a lead</h2>
   <p>Ask your lead to help you stay on top of the work.</p>
 </div>
 
-<img src="assets/chat-widget-team-report.png" alt="GitSense Chat group using a Kanban layout for team sessions with a full team report open in the side panel." width="100%">
+| **Ask about your work** | **Ask about your team's work** |
+| :---: | :---: |
+| ![A lead agent helping one person understand their sessions.](assets/chat-widget-team-report.png) | ![A lead agent reporting what needs attention across a team's sessions.](assets/chat-widget-team-report.png) |
 
 A lead agent can turn checkpoints, session freshness, group structure, and
 shared activity into one report without interrupting every agent.
@@ -71,6 +64,10 @@ agents.
 | Use checkpoints to catch up without replaying transcripts | Produce group-wide reports without interrupting every agent |
 | Give any group of sessions a lead | Coordinate distributed work through lead agents |
 | Preserve personal discoveries | Turn lessons, notes, rules, and Brains into shared knowledge |
+
+![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
+
+![GitSense Chat connects distributed agent sessions through shared knowledge, checkpoints, groups, and lead agents.](assets/distributed-sessions-shared-coordination.png)
 
 ## How GitSense Chat supports this
 
