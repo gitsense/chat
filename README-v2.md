@@ -1,6 +1,7 @@
 # GitSense: Chat
 
-**Give your agents a home. Make AI collaboration manageable at scale.**
+**Give your agents one home and better context so AI collaboration stays
+manageable at scale.**
 
 Agents may work across different terminals, repositories, and tasks, but their
 sessions do not have to remain scattered. GitSense Chat brings that work
@@ -56,6 +57,13 @@ conversation.
 Choose what to surface so every session is easier to understand.
 
 ![Placeholder showing one agent session presented through several focused Session Insight views.](assets/one-session-multiple-views-placeholder.svg)
+
+## Same search. Better starting point.
+
+Keep the workflows you already use and add the repository context that helps
+you decide where to start.
+
+![The same matcher search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
 
 ## Quick Start
 
@@ -126,8 +134,6 @@ apply it at the point where it matters.
 Together, these give current and future agents more than another transcript.
 They provide durable context that can travel with the repository and improve
 the starting point for the next task.
-
-![The same matcher search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
 
 ### See what matters
 
