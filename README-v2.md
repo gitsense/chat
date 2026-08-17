@@ -39,9 +39,9 @@ gsc docs install
 Give your sessions a lead agent and stay on top of the work through one
 conversation.
 
-<table>
+<table width="100%">
   <tr>
-    <td width="35%" valign="top">
+    <td width="50%" valign="top">
       <h3>Ask about your sessions</h3>
       <p>
         "Generate a change report for every session not in Done. Use GitSense
@@ -53,12 +53,15 @@ conversation.
         do not need to find or name every session.
       </p>
     </td>
-    <td width="65%">
+    <td width="50%" valign="top">
       <img src="assets/chat-widget-team-report.png" alt="A lead agent generating a change report across sessions that are not done." width="100%">
     </td>
   </tr>
   <tr>
-    <td width="35%" valign="top">
+    <td width="50%" valign="top">
+      <img src="assets/chat-widget-team-report.png" alt="A lead agent reporting status, freshness, risks, and next steps across a team's sessions." width="100%">
+    </td>
+    <td width="50%" valign="top">
       <h3>Ask about your team's sessions</h3>
       <p>
         "Generate a team report using each session's latest checkpoint.
@@ -70,9 +73,6 @@ conversation.
         The lead agent starts with checkpoints and session freshness, then
         tells you where the available evidence may be incomplete.
       </p>
-    </td>
-    <td width="65%">
-      <img src="assets/chat-widget-team-report.png" alt="A lead agent reporting status, freshness, risks, and next steps across a team's sessions." width="100%">
     </td>
   </tr>
 </table>
