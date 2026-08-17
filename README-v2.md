@@ -10,7 +10,7 @@ together while it is happening and when it stops.
 
 <h2>Give your sessions a lead</h2>
 
-Manage your work through one conversation
+Manage you and your teams work through one conversation
 
 | **Ask about your sessions** | **Ask about your team's** |
 | :---: | :---: |
