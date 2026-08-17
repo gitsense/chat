@@ -81,7 +81,7 @@ conversation.
 
 Choose what to surface so every session is easier to understand.
 
-![Placeholder showing one agent session presented through several focused Session Insight views.](assets/one-session-multiple-views-placeholder.svg)
+![Placeholder showing one agent session presented through several focused Session Insight views.](assets/one-session-multiple-views.png)
 
 ## Same data. More insight.
 
