@@ -4,115 +4,26 @@
 
 Agents may work across different terminals, repositories, and tasks, but their
 sessions do not have to remain scattered. GitSense Chat brings that work
-together while it is happening and after sessions end.
+together while it is happening and when it stops.
 
 <div align="center">
-  <h2>Scale AI Collaboration</h2>
-  <p>Turn distributed agent work into shared knowledge, focused insights, and coordinated action.</p>
+  <h2>Scale How You Work With Agents</h2>
+  <p>Keep your own sessions manageable, then extend the same knowledge, visibility, and coordination across a team.</p>
 </div>
 
-| **Make every session more useful** | **Coordinate work across sessions** |
+| **One person, many sessions** | **A team, working from shared context** |
 | :---: | :---: |
 | ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png) | ![GitSense Chat connects distributed agent sessions through shared knowledge, checkpoints, groups, and lead agents.](assets/distributed-sessions-shared-coordination.png) |
 
-![Placeholder for the Chat Widget Team report showing checkpoint freshness, work status, coordination risks, and possible next steps across twelve sessions.](assets/session-insight-placeholder.svg)
-
-A lead agent can turn the latest checkpoints, live session freshness, group
-layout, and shared file activity into one team report. Instead of opening every
-session or interrupting every agent, ask one lead what is happening, what looks
-stale, and what needs attention.
-
-## How GitSense Chat supports this
-
-GitSense Chat provides three layers for working with agents at scale:
-
-| | Purpose | GitSense capabilities |
-| :--- | :--- | :--- |
-| **Remember** | Preserve what the team and its agents learn. | Brains, lessons, notes, and rules |
-| **Understand** | Turn agent activity into the signals people and agents need. | Search, Session Insights, checkpoints, and freshness |
-| **Coordinate** | Work across many sessions without checking each one individually. | Groups, mailboxes, lifecycle tools, and lead agents |
-
-### Build shared knowledge
-
-Brains encode structured domain knowledge about repositories and teams.
-Lessons preserve discoveries that should not be rediscovered. Notes record
-useful implementation context. Rules carry guidance into future work and can
-apply it at the point where it matters.
-
-Together, these give current and future agents more than another transcript.
-They provide durable context that can travel with the repository and improve
-the starting point for the next task.
-
-### See what matters
-
-Session Insights let developers, team leads, and managers create views around
-their own questions. One view might show a compact session outline. Another
-might focus on changed files, code ownership, risk, tests, repository lessons,
-or whether a required command ran.
-
-The same session can support different views because what matters depends on
-who is asking and what they need to decide.
-
-### Understand session state without interrupting the agent
-
-Checkpoints record an agent's goal, current task, understanding, next action,
-decisions, evidence, risks, open questions, and self-reported health. A lead
-can read these records without sending a message to each agent or replaying
-complete transcripts.
-
-Checkpoint freshness is computed when queried. `events_behind` measures how
-many session entries occurred after the checkpoint, which is often more useful
-than age alone. A three-day-old checkpoint may describe the final state when
-the session stopped immediately afterward. A checkpoint from fifteen hours ago
-may already be stale when hundreds of events followed it.
-
-Checkpoints report what was known when they were created. They are evidence,
-not proof that the work is complete or correct.
-
-### Find work wherever it happened
-
-Search sessions available to GitSense by message content, tool activity, file
-operations, changed files, repository metadata, and connected knowledge such as
-lessons, notes, and rules. This makes it practical to find relevant work even
-when nobody remembers which terminal, session, or agent produced it.
-
-Groups are views over sessions, not folders. The same session can appear in
-every project, workflow, dashboard, or temporary review where it is useful.
-
-### Give a group a lead agent
-
-Create a group, add a lead, and manage its sessions through one conversation.
-The lead receives the current group layout and roster, starts with member
-checkpoints, checks live session state, and reports uncertainty when evidence
-is stale or unavailable.
-
-Agents do not need to share a parent or have started together. A group can
-bring independently created sessions into the same coordination structure.
-The lead gives the user one place to ask what is happening across that group.
-
 <div align="center">
-  <h2>Data, your way</h2>
-  <p>Control what you see so important work is harder to miss.</p>
+  <h3>Give your sessions a lead</h3>
+  <p>Ask your lead to help you stay on top of the work.</p>
 </div>
 
-<div align="center">
-  <h3>Organize your sessions</h3>
-  <p>Use different layouts to organize sessions around the work.</p>
-</div>
+<img src="assets/chat-widget-team-report.png" alt="GitSense Chat group using a Kanban layout for team sessions with a full team report open in the side panel." width="100%">
 
-| | |
-| :---: | :---: |
-| ![GitSense Chat sessions organized in a Kanban layout.](assets/organize-pi-sessions-kanban-layout-small.png) | ![GitSense Chat lead agent composer for asking about organized sessions.](assets/pi-sessions-ask-lead-agent-small.png) |
-
-<div align="center">
-  <h3>See what matters</h3>
-  <p>Create custom views to see the forest, not just the trees.</p>
-</div>
-
-| | |
-| :---: | :---: |
-| ![Placeholder for a Change Review view showing changed files, impact, and review actions.](assets/session-insight-placeholder.svg) | ![Placeholder for a Session Outline view condensing messages, tools, and commands.](assets/session-insight-placeholder.svg) |
-| ![Placeholder for a Code Ownership view matched to files an agent touched.](assets/session-insight-placeholder.svg) | ![Placeholder for a Tests and Validation view showing relevant checks and observed commands.](assets/session-insight-placeholder.svg) |
+A lead agent can turn checkpoints, session freshness, group structure, and
+shared activity into one report without interrupting every agent.
 
 ## Quick Start
 
@@ -138,6 +49,118 @@ For detailed installation instructions, run:
 ```bash
 gsc docs install
 ```
+
+## A foundation for scalable AI collaboration
+
+Scale starts with reducing how much any one person must keep in their head.
+GitSense Chat helps individuals find, organize, and understand a growing
+history of agent sessions. The same foundation helps teams preserve knowledge,
+discover related work, and coordinate agents through shared groups and lead
+agents.
+
+| **Find the work** | **Organize your sessions** | **Understand what matters** |
+| :---: | :---: | :---: |
+| ![Screenshot placeholder for finding sessions by messages, files, and activity.](assets/session-insight-placeholder.svg) | ![Screenshot placeholder for arranging sessions into useful groups and layouts.](assets/session-insight-placeholder.svg) | ![Screenshot placeholder for Session Insights that surface relevant context and actions.](assets/session-insight-placeholder.svg) |
+| [See how to find any session](#find-work-wherever-it-happened) | [See how to organize your sessions](#organize-your-sessions) | [See how Session Insights work](#see-what-matters) |
+
+| For an individual | For a team |
+| :--- | :--- |
+| Find and return to previous sessions | Discover work across available team sessions |
+| Organize a growing session history into useful groups | Build shared project and workflow views |
+| Surface the details that matter through Session Insights | Apply ownership, policy, risk, and team-specific views |
+| Use checkpoints to catch up without replaying transcripts | Produce group-wide reports without interrupting every agent |
+| Give any group of sessions a lead | Coordinate distributed work through lead agents |
+| Preserve personal discoveries | Turn lessons, notes, rules, and Brains into shared knowledge |
+
+## How GitSense Chat supports this
+
+GitSense Chat provides three layers for working with agents at scale:
+
+| | Purpose | GitSense capabilities |
+| :--- | :--- | :--- |
+| **Remember** | Preserve what the team and its agents learn. | Brains, lessons, notes, and rules |
+| **Understand** | Turn agent activity into the signals people and agents need. | Search, Session Insights, checkpoints, and freshness |
+| **Coordinate** | Work across many sessions without checking each one individually. | Groups, mailboxes, lifecycle tools, and lead agents |
+
+### Build shared knowledge
+
+Brains encode structured domain knowledge about repositories and teams.
+Lessons preserve discoveries that should not be rediscovered. Notes record
+useful implementation context. Rules carry guidance into future work and can
+apply it at the point where it matters.
+
+Together, these give current and future agents more than another transcript.
+They provide durable context that can travel with the repository and improve
+the starting point for the next task.
+
+![The same matcher search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
+
+### See what matters
+
+Session Insights let developers, team leads, and managers create views around
+their own questions. One view might show a compact session outline. Another
+might focus on changed files, code ownership, risk, tests, repository lessons,
+or whether a required command ran.
+
+The same session can support different views because what matters depends on
+who is asking and what they need to decide.
+
+| **Session Outline** | **Change Review** | **Code Ownership** |
+| :---: | :---: | :---: |
+| ![Placeholder for a Session Outline view that condenses messages, tools, and commands.](assets/session-insight-placeholder.svg) | ![Placeholder for a Change Review view that surfaces changed files, impact, lessons, and review actions.](assets/session-insight-placeholder.svg) | ![Placeholder for a Code Ownership view matched to files an agent touched.](assets/session-insight-placeholder.svg) |
+| Condense a long session into a useful timeline. | Focus on the changes and evidence worth reviewing. | Connect file activity to the people and policies that apply. |
+
+### Organize your sessions
+
+Bring sessions together in groups built around a project, workflow, team, or
+temporary review. Choose the layout that fits the work, from ordered rows to a
+Kanban board or a fixed side panel. A session can appear in every group where
+it is useful.
+
+![Placeholder for a video showing how to organize sessions into groups and switch between layouts.](assets/session-insight-placeholder.svg)
+
+### Understand session state without interrupting the agent
+
+Checkpoints record an agent's goal, current task, understanding, next action,
+decisions, evidence, risks, open questions, and self-reported health. A lead
+can read these records without sending a message to each agent or replaying
+complete transcripts.
+
+Checkpoint freshness is computed when queried. `events_behind` measures how
+many session entries occurred after the checkpoint, which is often more useful
+than age alone. A three-day-old checkpoint may describe the final state when
+the session stopped immediately afterward. A checkpoint from fifteen hours ago
+may already be stale when hundreds of events followed it.
+
+Checkpoints report what was known when they were created. They are evidence,
+not proof that the work is complete or correct.
+
+![Placeholder for a lead-agent checkpoint report showing current tasks, checkpoint freshness, blockers, and uncertainty across a group.](assets/session-insight-placeholder.svg)
+
+### Find work wherever it happened
+
+Search sessions available to GitSense by message content, tool activity, file
+operations, changed files, repository metadata, and connected knowledge such as
+lessons, notes, and rules. This makes it practical to find relevant work even
+when nobody remembers which terminal, session, or agent produced it.
+
+Groups are views over sessions, not folders. The same session can appear in
+every project, workflow, dashboard, or temporary review where it is useful.
+
+![Placeholder for a video showing how to find a session by message content, file activity, operation, and connected repository knowledge.](assets/session-insight-placeholder.svg)
+
+### Give a group a lead agent
+
+Create a group, add a lead, and manage its sessions through one conversation.
+The lead receives the current group layout and roster, starts with member
+checkpoints, checks live session state, and reports uncertainty when evidence
+is stale or unavailable.
+
+Agents do not need to share a parent or have started together. A group can
+bring independently created sessions into the same coordination structure.
+The lead gives the user one place to ask what is happening across that group.
+
+![Placeholder for a video showing how to create a lead agent for a group and manage its sessions through one conversation.](assets/session-insight-placeholder.svg)
 
 ## How it works
 
