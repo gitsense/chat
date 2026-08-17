@@ -8,10 +8,8 @@ together while it is happening and when it stops.
 
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
-<div align="center">
-  <h2>Multiple sessions. One conversation.</h2>
-  <p>Give your sessions a lead and stay on top of the work through one conversation.</p>
-</div>
+## Multiple sessions. One conversation.
+Give your sessions a lead and stay on top of the work through one conversation.</p>
 
 <table>
   <tr>
