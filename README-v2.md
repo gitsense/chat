@@ -9,17 +9,40 @@ together while it is happening and when it stops.
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
 <div align="center">
-  <h2>One conversation. Multiple sessions.</h2>
-  <p>Create a lead and manage your sessions through one conversation.</p>
+  <h2>Multiple sessions. One conversation.</h2>
+  <p>Give your sessions a lead and stay on top of the work through one conversation.</p>
 </div>
 
-| **Ask about your sessions** | **Ask about your team's sessions** |
-| :---: | :---: |
-| ![A lead agent helping one person understand their sessions.](assets/chat-widget-team-report.png) | ![A lead agent reporting what needs attention across a team's sessions.](assets/chat-widget-team-report.png) |
+<table>
+  <tr>
+    <td width="35%" valign="top">
+      <h3>Ask about your sessions</h3>
+      <p>"Generate a change report for every session not in Done."</p>
+    </td>
+    <td width="65%">
+      <img src="assets/chat-widget-team-report.png" alt="A lead agent generating a change report across sessions that are not done." width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="35%" valign="top">
+      <h3>Ask about your team's sessions</h3>
+      <p>"Generate a team report using each session's latest checkpoint."</p>
+    </td>
+    <td width="65%">
+      <img src="assets/chat-widget-team-report.png" alt="A lead agent reporting status, freshness, risks, and next steps across a team's sessions." width="100%">
+    </td>
+  </tr>
+</table>
 
-Your lead works from the sessions and columns you arrange. Ask, "Give me a
-status update on every session not in Done," and get one report without opening
-or naming each session.
+Your lead works from the sessions and columns you arrange, so you can ask about
+the work without opening or naming each session.
+
+<div align="center">
+  <h2>One session. Multiple views.</h2>
+  <p>Choose what to surface so every session is easier to understand.</p>
+</div>
+
+![Placeholder showing one agent session presented through several focused Session Insight views.](assets/one-session-multiple-views-placeholder.svg)
 
 ## Quick Start
 
