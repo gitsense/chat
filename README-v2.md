@@ -7,8 +7,9 @@ sessions do not have to remain scattered. GitSense Chat brings that work
 together while it is happening and when it stops.
 
 <div align="center">
-  <h2>Give your sessions a lead</h2>
-  <p>Ask your lead to help you stay on top of the work.</p>
+![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
+  
+  <h3>Give your sessions a lead</h3>
 </div>
 
 | **Ask about your work** | **Ask about your team's work** |
@@ -64,8 +65,6 @@ agents.
 | Use checkpoints to catch up without replaying transcripts | Produce group-wide reports without interrupting every agent |
 | Give any group of sessions a lead | Coordinate distributed work through lead agents |
 | Preserve personal discoveries | Turn lessons, notes, rules, and Brains into shared knowledge |
-
-![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
 ![GitSense Chat connects distributed agent sessions through shared knowledge, checkpoints, groups, and lead agents.](assets/distributed-sessions-shared-coordination.png)
 
