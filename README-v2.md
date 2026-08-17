@@ -9,17 +9,22 @@ together while it is happening and when it stops.
 ![GitSense Chat makes active and completed coding-agent sessions easier to find, inspect, group, organize, enrich, collaborate through, and resume.](assets/same-sessions-more-useful.png)
 
 ## Multiple sessions. One conversation.
-Give your sessions a lead and stay on top of the work through one conversation.</p>
+
+Give your sessions a lead agent and stay on top of the work through one
+conversation.
 
 <table>
   <tr>
     <td width="35%" valign="top">
       <h3>Ask about your sessions</h3>
-      <p>"Generate a change report for every session not in Done."</p>
-      <strong>Add Context</strong>
       <p>
-        Your lead works from the sessions and columns you arrange, so you can ask about
-        the work without opening or naming each session.
+        "Generate a change report for every session not in Done. Use GitSense
+        Markdown actions to make each changed file open in Zed."
+      </p>
+      <strong>Use the context you already created</strong>
+      <p>
+        The lead agent works from the sessions and columns you arranged, so you
+        do not need to find or name every session.
       </p>
     </td>
     <td width="65%">
@@ -29,7 +34,16 @@ Give your sessions a lead and stay on top of the work through one conversation.<
   <tr>
     <td width="35%" valign="top">
       <h3>Ask about your team's sessions</h3>
-      <p>"Generate a team report using each session's latest checkpoint."</p>
+      <p>
+        "Generate a team report using each session's latest checkpoint.
+        Highlight stale checkpoints, blockers, coordination risks, and work
+        that needs attention."
+      </p>
+      <strong>Catch up without interrupting the team</strong>
+      <p>
+        The lead agent starts with checkpoints and session freshness, then
+        tells you where the available evidence may be incomplete.
+      </p>
     </td>
     <td width="65%">
       <img src="assets/chat-widget-team-report.png" alt="A lead agent reporting status, freshness, risks, and next steps across a team's sessions." width="100%">
@@ -37,9 +51,9 @@ Give your sessions a lead and stay on top of the work through one conversation.<
   </tr>
 </table>
 
+## One session. Multiple views.
 
-One session. Multiple views.
-Choose what to surface so every session is easier to understand.</p>
+Choose what to surface so every session is easier to understand.
 
 ![Placeholder showing one agent session presented through several focused Session Insight views.](assets/one-session-multiple-views-placeholder.svg)
 
