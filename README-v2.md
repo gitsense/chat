@@ -16,6 +16,11 @@ Give your sessions a lead and stay on top of the work through one conversation.<
     <td width="35%" valign="top">
       <h3>Ask about your sessions</h3>
       <p>"Generate a change report for every session not in Done."</p>
+      <strong>Add Context</strong>
+      <p>
+        Your lead works from the sessions and columns you arrange, so you can ask about
+        the work without opening or naming each session.
+      </p>
     </td>
     <td width="65%">
       <img src="assets/chat-widget-team-report.png" alt="A lead agent generating a change report across sessions that are not done." width="100%">
@@ -32,8 +37,6 @@ Give your sessions a lead and stay on top of the work through one conversation.<
   </tr>
 </table>
 
-Your lead works from the sessions and columns you arrange, so you can ask about
-the work without opening or naming each session.
 
 One session. Multiple views.
 Choose what to surface so every session is easier to understand.</p>
