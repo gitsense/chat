@@ -1,7 +1,7 @@
 # GitSense: Chat
 
-**Give your agents one home and better context so AI collaboration stays
-manageable at scale.**
+**Scale AI collaboration: give your agents a shared home and a better starting
+point.**
 
 Agents may work across different terminals, repositories, and tasks, but their
 sessions do not have to remain scattered. GitSense Chat brings that work
@@ -58,12 +58,44 @@ Choose what to surface so every session is easier to understand.
 
 ![Placeholder showing one agent session presented through several focused Session Insight views.](assets/one-session-multiple-views-placeholder.svg)
 
-## Same search. Better starting point.
+## Same data. More insight.
 
-Keep the workflows you already use and add the repository context that helps
-you decide where to start.
+GitSense Chat enriches the data your tools already produce with repository
+knowledge, making it useful for more than reconstructing what happened.
 
-![The same matcher search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
+<table>
+  <tr>
+    <td width="35%" valign="top">
+      <h3>Search with context</h3>
+      <p>Run the same search and see what each matching file is for.</p>
+      <strong>See why each match matters</strong>
+      <p>
+        File purpose helps you separate relevant results from matching text
+        before opening every file.
+      </p>
+    </td>
+    <td width="65%">
+      <img src="assets/same-search-more-to-go-on.png" alt="The same matcher search in ripgrep and GitSense, with GitSense adding the purpose of each matching file." width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="35%" valign="top">
+      <h3>Report with context</h3>
+      <p>
+        "Group the changed files by purpose and explain which parts of the
+        system this work affects."
+      </p>
+      <strong>Ask better questions</strong>
+      <p>
+        The report can use knowledge about what each file does, not just the
+        filenames and activity recorded in the session.
+      </p>
+    </td>
+    <td width="65%">
+      <img src="assets/session-insight-placeholder.svg" alt="Placeholder for a report that uses file-purpose metadata to explain which parts of a system were affected." width="100%">
+    </td>
+  </tr>
+</table>
 
 ## Quick Start
 
