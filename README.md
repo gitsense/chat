@@ -27,7 +27,7 @@ the work and decide what happens next.
 
 <div align="center">
   <h3>Organize sessions. Coordinate the work.</h3>
-  <p>Arrange sessions your way, then ask a lead about the work in plain language.</p>
+  <p>Arrange sessions your way. Ask your lead agent about the work in plain language.</p>
 </div>
 
 | | |
