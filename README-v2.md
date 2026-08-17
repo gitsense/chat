@@ -35,10 +35,8 @@ Give your sessions a lead and stay on top of the work through one conversation.<
 Your lead works from the sessions and columns you arrange, so you can ask about
 the work without opening or naming each session.
 
-<div align="center">
-  <h2>One session. Multiple views.</h2>
-  <p>Choose what to surface so every session is easier to understand.</p>
-</div>
+One session. Multiple views.
+Choose what to surface so every session is easier to understand.</p>
 
 ![Placeholder showing one agent session presented through several focused Session Insight views.](assets/one-session-multiple-views-placeholder.svg)
 
