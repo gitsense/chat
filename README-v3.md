@@ -70,6 +70,14 @@ Bring independently created sessions together and give the group a lead agent.
 Ask about the work, consult existing agents, resume useful sessions, and create
 new agents only when relevant knowledge or capacity is missing.
 
+### Checkpoints: scan more, load less
+
+Checkpoints capture the current state of a session, including its goal,
+understanding, decisions, risks, files, and next action. GitSense Chat can scan
+these compact records across dozens or hundreds of sessions without loading
+every transcript, then identify which sessions are worth opening or resuming.
+When more evidence is needed, the full session remains available.
+
 ### Insights: one session, multiple views
 
 Create Session Insight views around the questions that matter to you. Condense
