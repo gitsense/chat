@@ -64,13 +64,13 @@ and agents shared access to sessions, checkpoints, domain knowledge, and
 focused views, so individuals and teams can coordinate across growing amounts
 of work without holding everything in their heads.
 
-### Management: multiple sessions, one conversation
+### Management: bring many sessions together
 
 Bring independently created sessions together and give the group a lead agent.
 Ask about the work, consult existing agents, resume useful sessions, and create
 new agents only when relevant knowledge or capacity is missing.
 
-### Checkpoints: scan more, load less
+### Checkpoints: quickly understand which sessions matter
 
 Checkpoints capture the current state of a session, including its goal,
 understanding, decisions, risks, files, and next action. GitSense Chat can scan
@@ -78,13 +78,13 @@ these compact records across dozens or hundreds of sessions without loading
 every transcript, then identify which sessions are worth opening or resuming.
 When more evidence is needed, the full session remains available.
 
-### Insights: one session, multiple views
+### Insights: choose the views and signals needed for review
 
 Create Session Insight views around the questions that matter to you. Condense
 a long timeline, review changes, check ownership or risk, verify whether a
 command ran, and connect the evidence to actions.
 
-### Knowledge: past work, better starting point
+### Knowledge: preserve expertise and findings for future work
 
 Combine human domain expertise with useful findings gathered through agent
 work. Brains, lessons, notes, and rules make that knowledge available to people
