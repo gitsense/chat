@@ -58,6 +58,12 @@ gsc docs install
 
 ## Scaling AI collaboration
 
+Scaling AI collaboration is not just running more agents. It means making
+their work easy to find, understand, and build on. GitSense Chat gives people
+and agents shared access to sessions, checkpoints, domain knowledge, and
+focused views, so individuals and teams can coordinate across growing amounts
+of work without holding everything in their heads.
+
 ### Management: multiple sessions, one conversation
 
 Bring independently created sessions together and give the group a lead agent.
