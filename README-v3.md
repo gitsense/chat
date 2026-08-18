@@ -56,40 +56,6 @@ API key privately. For detailed installation instructions, run:
 gsc docs install
 ```
 
-## Scaling AI collaboration
-
-Scaling AI collaboration is not just running more agents. It means making
-their work easy to find, understand, and build on. GitSense Chat gives people
-and agents shared access to sessions, checkpoints, domain knowledge, and
-focused views, so individuals and teams can coordinate across growing amounts
-of work without holding everything in their heads.
-
-### Management: bring many sessions together
-
-Bring independently created sessions together and give the group a lead agent.
-Ask about the work, consult existing agents, resume useful sessions, and create
-new agents only when relevant knowledge or capacity is missing.
-
-### Checkpoints: quickly understand which sessions matter
-
-Checkpoints capture the current state of a session, including its goal,
-understanding, decisions, risks, files, and next action. GitSense Chat can scan
-these compact records across dozens or hundreds of sessions without loading
-every transcript, then identify which sessions are worth opening or resuming.
-When more evidence is needed, the full session remains available.
-
-### Insights: choose the views and signals needed for review
-
-Create Session Insight views around the questions that matter to you. Condense
-a long timeline, review changes, check ownership or risk, verify whether a
-command ran, and connect the evidence to actions.
-
-### Knowledge: preserve expertise and findings for future work
-
-Combine human domain expertise with useful findings gathered through agent
-work. Brains, lessons, notes, and rules make that knowledge available to people
-and agents when it applies.
-
 ## How GitSense Chat works
 
 ### Same sessions. One home.
@@ -127,6 +93,40 @@ GitSense Chat surfaces evidence and supports action. It does not decide whether
 an agent's work is correct, and agent findings do not automatically become
 trusted knowledge. People remain responsible for reviewing evidence, resolving
 uncertainty, and deciding what happens next.
+
+## Scaling AI collaboration
+
+GitSense Chat works alongside your existing workflow. It keeps sessions
+searchable, uses checkpoints to scan many sessions without loading every
+transcript, enriches activity with the context you define, and lets groups and
+lead agents coordinate work. People and agents can pull in the detail they need
+without interrupting every running session.
+
+### Management: bring many sessions together
+
+Bring independently created sessions together and give the group a lead agent.
+Ask about the work, consult existing agents, resume useful sessions, and create
+new agents only when relevant knowledge or capacity is missing.
+
+### Checkpoints: quickly understand which sessions matter
+
+Checkpoints capture the current state of a session, including its goal,
+understanding, decisions, risks, files, and next action. GitSense Chat can scan
+these compact records across dozens or hundreds of sessions without loading
+every transcript, then identify which sessions are worth opening or resuming.
+When more evidence is needed, the full session remains available.
+
+### Insights: choose the views and signals needed for review
+
+Create Session Insight views around the questions that matter to you. Condense
+a long timeline, review changes, check ownership or risk, verify whether a
+command ran, and connect the evidence to actions.
+
+### Knowledge: preserve expertise and findings for future work
+
+Combine human domain expertise with useful findings gathered through agent
+work. Brains, lessons, notes, and rules make that knowledge available to people
+and agents when it applies.
 
 ## License
 
