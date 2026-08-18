@@ -6,26 +6,30 @@ GitSense Chat is a human-agent collaboration platform. It brings new and
 existing agent sessions together with human expertise and knowledge gathered
 through agent work, so people and agents can build on what is already known.
 
-## Start with a lead agent, then build a team around the problem
+## Build an expert that grows with your codebase
 
-Start with the problem instead of an empty team. A lead agent can find relevant
-work, rank potential contributors, and help you reuse existing context before
-creating more agents.
+Create a group for an area of your software, give it a lead agent, and turn
+relevant sessions into durable knowledge. The expert can use checkpoints to
+find past work, organize what those sessions established, and record notes that
+make the knowledge searchable and reusable.
 
-![Video placeholder for the complete lead-agent team-building workflow.](assets/lead-agent-team-building-video-placeholder.svg)
+![Video placeholder for building a domain expert from related agent sessions.](assets/lead-agent-team-building-video-placeholder.svg)
 
-The video follows one collaboration from beginning to end:
+The video follows one expert-building workflow:
 
-1. **Create a lead agent.** Choose a model suited to planning, synthesis, and
-   coordination. Use less expensive models for bounded work when appropriate.
-2. **Explain the problem.** Describe the outcome and constraints, then ask the
-   lead to propose a name and description for the group.
-3. **Scout.** Rank relevant sessions using their work, checkpoints, freshness,
-   and current state. Show the evidence behind each recommendation.
-4. **Plan and execute.** Add the strongest candidate, resume it, and ask whether
-   it is a good fit. Create new agents only for the gaps that remain.
-5. **Review.** Bring the evidence, disagreements, risks, and open questions back
-   together. Preserve useful knowledge for the next collaboration.
+1. **Create a lead agent.** Start a group focused on Pi and GitSense Chat code,
+   and choose a model suited to planning and synthesis.
+2. **Find relevant work.** Ask the lead to identify checkpointed sessions that
+   worked on related code.
+3. **Organize what was learned.** Have the lead group the sessions by the
+   problems they addressed and the knowledge they established.
+4. **Create durable notes.** Record the relationships between common questions,
+   findings, and the sessions that contain supporting evidence.
+5. **Ask the expert.** Use the resulting index to answer a new question and
+   decide whether existing sessions are enough or more agents are needed.
+
+The knowledge is grounded in sessions and checkpoints, so a new lead can use
+the notes and session index when another agent's context becomes too large.
 
 <!-- Add timestamp links to the five steps when the final video is published. -->
 
