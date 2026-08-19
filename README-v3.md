@@ -6,8 +6,11 @@ Give every AI conversation a better starting point.
 
 GitSense Chat is a human-agent collaboration platform that turns past agent
 work, human expertise, and repository knowledge into shared context. Build on
-what is already known, then give each question only the context and expertise
-it needs.
+what is already known, then give each task the context and expertise it needs.
+
+Start with the session logs you already have. GitSense Chat can make them
+searchable, inspectable, and easy to organize while they are active and after
+they stop.
 
 ## Quick Start
 
@@ -23,6 +26,14 @@ or ask your coding agent:
 ```text
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
+
+Pi is GitSense Chat's first full reference integration. Follow
+[pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
+Insights, checkpoints, shared knowledge, messaging, and lead agents work
+together.
+
+GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
+same Brains, notes, lessons, and rules.
 
 ## Give every AI conversation a better starting point
 
@@ -40,7 +51,7 @@ knowledge into the next conversation.
 ### Reason with the context that matters
 
 Use shared knowledge and focused agents to make large domains manageable, so
-each question starts with relevant context instead of the entire corpus.
+each task starts with relevant context instead of the entire corpus.
 
 ![Video placeholder for distributing repository knowledge across focused agents.](assets/lead-agent-team-building-video-placeholder.svg)
 
