@@ -14,9 +14,8 @@ Review the [install script](install.sh), then install `gsc`:
 curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
 
-Or [build it yourself](https://github.com/gitsense/chat).
-
-### Ask your coding agent
+Install it yourself by [building from source](https://github.com/gitsense/chat),
+or ask your coding agent:
 
 ```text
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
