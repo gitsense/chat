@@ -49,17 +49,23 @@ context into the next conversation.
 Build on sessions from your own work, your team, or public sessions you can
 access. Useful context does not have to start in the current conversation.
 
-| **Find** | **Organize** |
+| **Find** | **Review** |
 | :---: | :---: |
 | Search sessions by what you know: message content, files, and the operations that touched them. | Add a lead agent and ask it to review the matched sessions using token-efficient context like checkpoints and Brains. |
-| ![Video placeholder for searching previous agent sessions.](assets/lead-agent-team-building-video-placeholder.svg) | ![Video placeholder for organizing matched sessions with a lead agent.](assets/lead-agent-team-building-video-placeholder.svg) |
+| ![Video placeholder for searching previous agent sessions.](assets/lead-agent-team-building-video-placeholder.svg) | ![Video placeholder for reviewing matched sessions with a lead agent.](assets/lead-agent-team-building-video-placeholder.svg) |
 | The sessions that worked on the problem surface with the evidence that matched. | The lead organizes the matches into a layout you can apply to the group. |
 
-| **Review** | **Start** |
+| **Investigate** | **Update team** |
 | :---: | :---: |
-| Explain what you need and ask which sessions bring the right context into the conversation. | Start a new session, explain what you want, and have it message the relevant agents for a quick primer. |
-| ![Video placeholder for reviewing what the matched sessions established.](assets/lead-agent-team-building-video-placeholder.svg) | ![Video placeholder for starting a new session primed by relevant agents.](assets/lead-agent-team-building-video-placeholder.svg) |
-| Understand what was done and what each session can contribute. | The next conversation begins with context from the work before it. |
+| Explain what you need and ask the lead which sessions bring the right context into the conversation. | Apply the lead's click-to-copy roster JSON to pull the right agents into the group. |
+| ![Video placeholder for investigating which sessions bring the right context.](assets/lead-agent-team-building-video-placeholder.svg) | ![Video placeholder for updating the team from the lead's roster report.](assets/lead-agent-team-building-video-placeholder.svg) |
+| The lead digs into checkpoints and Brains and proposes the sessions that matter. | The board grows with the agents the next session will need. |
+
+| **Consult** | **Start** |
+| :---: | :---: |
+| With the fuller team in the group, ask what you should know before building. | Start a new session, explain what you want, and have it message the relevant agents for a quick primer. |
+| ![Video placeholder for consulting the updated team on what to know.](assets/lead-agent-team-building-video-placeholder.svg) | ![Video placeholder for starting a new session primed by relevant agents.](assets/lead-agent-team-building-video-placeholder.svg) |
+| The experts surface the gotchas and constraints that matter. | The next conversation begins with context from the work before it. |
 
 ### Reason with the context that matters
 
