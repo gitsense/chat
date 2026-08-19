@@ -52,23 +52,43 @@ access. Useful context does not have to start in the current conversation.
 | **Find** | **Build team** | **Investigate** |
 | :---: | :---: | :---: |
 | Search sessions by what you know: message content, files, and the operations that touched them. | Add a lead agent and ask it to review the matched sessions using token-efficient context like checkpoints and Brains. | Explain what you need and ask the lead which sessions bring the right context into the conversation. |
-| ![Find sessions by file activity.](assets/find-sessions-by-file-activity.png) | ![Build a team around the matched sessions with a lead agent.](assets/build-team-with-lead-agent.png) | ![Investigate which sessions bring the right context.](assets/investigate-right-context-sessions.png) |
+| ![Placeholder for finding sessions by file activity.](assets/session-insight-placeholder.svg) | ![Placeholder for building a team around matched sessions with a lead agent.](assets/session-insight-placeholder.svg) | ![Placeholder for investigating which sessions bring the right context.](assets/session-insight-placeholder.svg) |
 | The sessions that worked on the problem surface with the evidence that matched. | The lead organizes the matches into a layout you can apply to the group. | The lead digs into checkpoints and Brains and proposes the sessions that matter. |
 
 | **Update team** | **Consult** | **Start** |
 | :---: | :---: | :---: |
 | Apply the lead's click-to-copy roster JSON to pull the right agents into the group. | With the fuller team in the group, ask what you should know before building. | Start a new session, explain what you want, and have it message the relevant agents for a quick primer. |
-| ![Update the team from the lead's roster report.](assets/update-team-roster-report.png) | ![Consult the updated team on what to know.](assets/consult-updated-team.png) | ![Start a new session primed by relevant agents.](assets/start-primed-session.png) |
+| ![Placeholder for updating the team from the lead's roster report.](assets/session-insight-placeholder.svg) | ![Placeholder for consulting the updated team.](assets/session-insight-placeholder.svg) | ![Placeholder for starting a new session with relevant context.](assets/session-insight-placeholder.svg) |
 | The board grows with the agents the next session will need. | The experts surface the gotchas and constraints that matter. | The next conversation begins with context from the work before it. |
 
-Watch the videos: [Find](assets/find-demo.mp4) · [Build team](assets/build-team-demo.mp4) · [Investigate](assets/investigate-demo.mp4) · [Update team](assets/update-team-demo.mp4) · [Consult](assets/consult-demo.mp4) · [Start](assets/start-demo.mp4)
+[Watch the complete video](assets/leverage-what-was-done-demo.mp4)
 
-### Reason with the context that matters
+### Build scalable domain experts
 
-Use shared knowledge and focused agents to make large domains manageable, so
-each task starts with relevant context instead of the entire corpus.
+Whether a domain contains one hundred files or one million, GitSense Chat is
+designed to help humans and agents reason efficiently with shared, queryable
+knowledge. Brains give every agent a better starting point without requiring
+each one to rediscover the entire corpus.
+
+In the video, a domain expert maps the `smart-codex` repository and coordinates
+four focused helpers. Each helper uses the existing `code-intent` Brain to
+understand a coherent part of the repository, while the lead keeps a compact
+map of who knows what and routes new questions to the right agents.
 
 ![Video placeholder for distributing repository knowledge across focused agents.](assets/lead-agent-team-building-video-placeholder.svg)
+
+[Watch the complete video](assets/build-scalable-domain-experts-demo.mp4)
+
+#### Try it yourself
+
+Start with a repository that has a `code-intent` Brain, create a domain expert,
+and give it a group of helper agents. Ask the lead to divide the repository
+along meaningful domain boundaries, brief each helper with a focused scope, and
+build a routing map from their evidence-backed handoffs.
+
+Then ask a question that crosses more than one area. The lead should identify
+the helpers with relevant context, consult them, and combine their findings
+without loading the full repository into one conversation.
 
 ### Beyond sessions
 
