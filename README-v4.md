@@ -49,10 +49,10 @@ context into the next conversation.
 Build on sessions from your own work, your team, or public sessions you can
 access. Useful context does not have to start in the current conversation.
 
-| **Find** | **Review** | **Investigate** |
+| **Find** | **Build team** | **Investigate** |
 | :---: | :---: | :---: |
 | Search sessions by what you know: message content, files, and the operations that touched them. | Add a lead agent and ask it to review the matched sessions using token-efficient context like checkpoints and Brains. | Explain what you need and ask the lead which sessions bring the right context into the conversation. |
-| ![Find sessions by file activity.](assets/find-sessions-by-file-activity.png) | ![Review matched sessions with a lead agent.](assets/review-sessions-with-lead-agent.png) | ![Investigate which sessions bring the right context.](assets/investigate-right-context-sessions.png) |
+| ![Find sessions by file activity.](assets/find-sessions-by-file-activity.png) | ![Build a team around the matched sessions with a lead agent.](assets/build-team-with-lead-agent.png) | ![Investigate which sessions bring the right context.](assets/investigate-right-context-sessions.png) |
 | The sessions that worked on the problem surface with the evidence that matched. | The lead organizes the matches into a layout you can apply to the group. | The lead digs into checkpoints and Brains and proposes the sessions that matter. |
 
 | **Update team** | **Consult** | **Start** |
@@ -61,7 +61,7 @@ access. Useful context does not have to start in the current conversation.
 | ![Update the team from the lead's roster report.](assets/update-team-roster-report.png) | ![Consult the updated team on what to know.](assets/consult-updated-team.png) | ![Start a new session primed by relevant agents.](assets/start-primed-session.png) |
 | The board grows with the agents the next session will need. | The experts surface the gotchas and constraints that matter. | The next conversation begins with context from the work before it. |
 
-Watch the videos: [Find](assets/find-demo.mp4) · [Review](assets/review-demo.mp4) · [Investigate](assets/investigate-demo.mp4) · [Update team](assets/update-team-demo.mp4) · [Consult](assets/consult-demo.mp4) · [Start](assets/start-demo.mp4)
+Watch the videos: [Find](assets/find-demo.mp4) · [Build team](assets/build-team-demo.mp4) · [Investigate](assets/investigate-demo.mp4) · [Update team](assets/update-team-demo.mp4) · [Consult](assets/consult-demo.mp4) · [Start](assets/start-demo.mp4)
 
 ### Reason with the context that matters
 
