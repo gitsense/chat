@@ -2,9 +2,12 @@
 
 **Human ↔ AI**
 
-GitSense Chat is a human-agent collaboration platform. It brings new and
-existing agent sessions together with human expertise and knowledge gathered
-through agent work, so people and agents can build on what is already known.
+Give every AI conversation a better starting point.
+
+GitSense Chat is a human-agent collaboration platform that turns past agent
+work, human expertise, and repository knowledge into shared context. Build on
+what is already known, then give each question only the context and expertise
+it needs.
 
 ## Quick Start
 
@@ -21,32 +24,25 @@ or ask your coding agent:
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
 
-## Build an expert that grows with your codebase
+## Give every AI conversation a better starting point
 
-Create a group for an area of your software, give it a lead agent, and turn
-relevant sessions into durable knowledge. The expert can use checkpoints to
-find past work, organize what those sessions established, and record notes that
-make the knowledge searchable and reusable.
+GitSense Chat brings people, sessions, and repository knowledge into one shared
+workspace. Use what has already been learned, then organize large domains into
+focused context that people and agents can use.
 
-![Video placeholder for building a domain expert from related agent sessions.](assets/lead-agent-team-building-video-placeholder.svg)
+### Leverage what was done
 
-The video follows one expert-building workflow:
+Find relevant sessions, understand what they established, and carry that
+knowledge into the next conversation.
 
-1. **Create a lead agent.** Start a group focused on Pi and GitSense Chat code,
-   and choose a model suited to planning and synthesis.
-2. **Find relevant work.** Ask the lead to identify checkpointed sessions that
-   worked on related code.
-3. **Organize what was learned.** Have the lead group the sessions by the
-   problems they addressed and the knowledge they established.
-4. **Create durable notes.** Record the relationships between common questions,
-   findings, and the sessions that contain supporting evidence.
-5. **Ask the expert.** Use the resulting index to answer a new question and
-   decide whether existing sessions are enough or more agents are needed.
+![Video placeholder for finding and reusing knowledge from previous agent sessions.](assets/lead-agent-team-building-video-placeholder.svg)
 
-The knowledge is grounded in sessions and checkpoints, so a new lead can use
-the notes and session index when another agent's context becomes too large.
+### Reason with the context that matters
 
-<!-- Add timestamp links to the five steps when the final video is published. -->
+Use shared knowledge and focused agents to make large domains manageable, so
+each question starts with relevant context instead of the entire corpus.
+
+![Video placeholder for distributing repository knowledge across focused agents.](assets/lead-agent-team-building-video-placeholder.svg)
 
 ### Beyond sessions
 
