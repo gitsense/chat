@@ -6,6 +6,22 @@ GitSense Chat is a human-agent collaboration platform. It brings new and
 existing agent sessions together with human expertise and knowledge gathered
 through agent work, so people and agents can build on what is already known.
 
+## Quick Start
+
+Review the [install script](install.sh), then install `gsc`:
+
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
+
+Or [build it yourself](https://github.com/gitsense/chat).
+
+### Ask your coding agent
+
+```text
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
+```
+
 ## Build an expert that grows with your codebase
 
 Create a group for an area of your software, give it a lead agent, and turn
@@ -33,56 +49,35 @@ the notes and session index when another agent's context becomes too large.
 
 <!-- Add timestamp links to the five steps when the final video is published. -->
 
-## Quick Start
+### Beyond sessions
 
-Review the [install script](install.sh), then install `gsc`:
+Session logs show what happened. Repository knowledge helps explain what it
+means. Brains, lessons, notes, rules, and custom analyzers can connect session
+activity to file purpose, ownership, risk, tests, and other domain knowledge.
 
-```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
-```
+A domain expert can use that context with checkpoints to build a repository-
+aware map of prior work. This gives future questions a better starting point
+than filenames or transcripts alone.
 
-Or [build it yourself](https://github.com/gitsense/chat).
-
-### Ask your coding agent
-
-```text
-Install and configure GitSense Chat for me. Start by running `gsc docs help`.
-```
-
-Your agent will guide you through the rest and stop when you need to enter an
-API key privately. For detailed installation instructions, run:
-
-```bash
-gsc docs install
-```
+The [smart-ripgrep example](https://github.com/gitsense/smart-ripgrep) shows how
+a repository can ship its knowledge and Session Insight analyzers beside its
+code.
 
 ## How GitSense Chat works
 
-### Same sessions. One home.
-
-GitSense Chat uses the session logs your agents already create. Sessions remain
-searchable and useful while agents are active and after they stop.
+GitSense Chat gives agent sessions a shared home without changing how agents
+work. It uses the logs they already produce, making sessions searchable,
+inspectable, and easy to organize while they are active and after they stop.
 
 ![GitSense Chat brings existing coding-agent sessions into one searchable, reusable workspace.](assets/same-sessions-more-useful.png)
 
-| With session logs | With optional lifecycle integration |
+| With the logs you already have | With optional runtime integration |
 | :--- | :--- |
 | Search messages, files, operations, and activity | See which agents are running |
 | Inspect tool calls, changes, Git state, and checkpoints | Start an eligible stopped session |
 | Create custom Session Insight views | Send messages through agent mailboxes |
 | Group and organize sessions | Coordinate a group through a lead agent |
 | Copy resume and attach commands | Receive messages in the agent's existing interface |
-
-### Add the context that matters
-
-GitSense Chat can connect session and file activity to repository purpose,
-ownership, risk, tests, lessons, policies, and other user-defined knowledge.
-Custom analyzers can turn that context into focused views, reports, and
-user-confirmed actions.
-
-The [smart-ripgrep example](https://github.com/gitsense/smart-ripgrep) shows how
-a repository can ship its knowledge and Session Insight analyzers beside its
-code.
 
 ### Current support and boundaries
 
