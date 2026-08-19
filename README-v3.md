@@ -43,10 +43,16 @@ focused context that people and agents can use.
 
 ### Leverage what was done
 
-Find relevant sessions, understand what they established, and carry that
-knowledge into the next conversation.
+Find relevant sessions, understand what they established, and carry the useful
+context into the next conversation.
 
-![Video placeholder for finding and reusing knowledge from previous agent sessions.](assets/lead-agent-team-building-video-placeholder.svg)
+| **Find** | ![Video placeholder for searching previous agent sessions.](assets/lead-agent-team-building-video-placeholder.svg) |
+| :--- | :---: |
+| Search messages, files, and activity to find sessions that worked on the problem. | |
+| ![Video placeholder for reviewing grouped sessions and checkpoints.](assets/lead-agent-team-building-video-placeholder.svg) | **Review** |
+| | Group related sessions, then use checkpoints and Session Insights to understand what was done. |
+| **Share** | ![Video placeholder for sharing relevant context with a new session.](assets/lead-agent-team-building-video-placeholder.svg) |
+| Share the findings, notes, and session references that give the next agent a better start. | |
 
 ### Reason with the context that matters
 
