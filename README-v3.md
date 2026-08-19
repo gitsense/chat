@@ -21,29 +21,30 @@ or ask your coding agent:
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
 
-## Spread knowledge. Improve reasoning.
+## Build an expert that grows with your codebase
 
-Let each agent focus on a manageable part of a large codebase or domain. The
-lead combines their findings, keeps track of who knows what, and routes new
-questions to the right agents.
+Create a group for an area of your software, give it a lead agent, and turn
+relevant sessions into durable knowledge. The expert can use checkpoints to
+find past work, organize what those sessions established, and record notes that
+make the knowledge searchable and reusable.
 
 ![Video placeholder for building a domain expert from related agent sessions.](assets/lead-agent-team-building-video-placeholder.svg)
 
-The video follows one knowledge-sharing workflow:
+The video follows one expert-building workflow:
 
-1. **Create a domain lead.** Start a group with a lead and several helper
-   agents, then give the lead a clear question and scope.
-2. **Divide the context.** Ask the lead to map the repository using available
-   file-purpose metadata and assign meaningful areas to focused helpers.
-3. **Combine the findings.** Each helper returns concise findings with evidence;
-   the lead builds a map of who investigated what.
-4. **Route a question.** Ask about one area and watch the lead involve the
-   relevant helper instead of loading the entire repository or its transcripts.
-5. **Connect the answers.** Ask a question that crosses two areas and watch the
-   lead involve the right agents, combine their findings, and show the evidence.
+1. **Create a lead agent.** Start a group focused on Pi and GitSense Chat code,
+   and choose a model suited to planning and synthesis.
+2. **Find relevant work.** Ask the lead to identify checkpointed sessions that
+   worked on related code.
+3. **Organize what was learned.** Have the lead group the sessions by the
+   problems they addressed and the knowledge they established.
+4. **Create durable notes.** Record the relationships between common questions,
+   findings, and the sessions that contain supporting evidence.
+5. **Ask the expert.** Use the resulting index to answer a new question and
+   decide whether existing sessions are enough or more agents are needed.
 
-The lead gains a compact working map through these handoffs. After reviewing the
-findings, you can preserve selected knowledge as durable notes for future work.
+The knowledge is grounded in sessions and checkpoints, so a new lead can use
+the notes and session index when another agent's context becomes too large.
 
 <!-- Add timestamp links to the five steps when the final video is published. -->
 
