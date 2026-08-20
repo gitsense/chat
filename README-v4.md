@@ -8,9 +8,9 @@ GitSense Chat is a human-agent collaboration platform that turns past agent
 work, human expertise, and repository knowledge into shared context. Build on
 what is already known, then give each task the context and expertise it needs.
 
-Start with the session logs you already have. GitSense Chat can make them
-searchable, inspectable, and easy to organize while they are active and after
-they stop.
+Start with the session logs you and your team already create. GitSense Chat
+makes the sessions you can access searchable, inspectable, and easy to organize
+while they are active and after they stop.
 
 ## Quick Start
 
@@ -97,20 +97,6 @@ can be used with any repository that has a `code-intent` Brain. Follow
   Ask the domain lead a question. It should answer from established knowledge
   or route the question to the helpers with the relevant context.
 
-### Beyond sessions
-
-Session logs show what happened. Repository knowledge helps explain what it
-means. Brains, lessons, notes, rules, and custom analyzers can connect session
-activity to file purpose, ownership, risk, tests, and other domain knowledge.
-
-A domain expert can use that context with checkpoints to build a repository-
-aware map of prior work. This gives future questions a better starting point
-than filenames or transcripts alone.
-
-The [smart-ripgrep example](https://github.com/gitsense/smart-ripgrep) shows how
-a repository can ship its knowledge and Session Insight analyzers beside its
-code.
-
 ## How GitSense Chat works
 
 GitSense Chat gives agent sessions a shared home without changing how agents
@@ -119,13 +105,10 @@ inspectable, and easy to organize while they are active and after they stop.
 
 ![GitSense Chat brings existing coding-agent sessions into one searchable, reusable workspace.](assets/same-sessions-more-useful.png)
 
-| With the logs you already have | With optional runtime integration |
-| :--- | :--- |
-| Search messages, files, operations, and activity | See which agents are running |
-| Inspect tool calls, changes, Git state, and checkpoints | Start an eligible stopped session |
-| Create custom Session Insight views | Send messages through agent mailboxes |
-| Group and organize sessions | Coordinate a group through a lead agent |
-| Copy resume and attach commands | Receive messages in the agent's existing interface |
+With session logs alone, GitSense Chat can make agent work searchable,
+inspectable, organized, and reusable. With a supported runtime integration, it
+can also see agent status, start eligible sessions, exchange messages, and
+coordinate groups through lead agents.
 
 ### Current support and boundaries
 
