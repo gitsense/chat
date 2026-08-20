@@ -81,14 +81,40 @@ map of who knows what and routes new questions to the right agents.
 
 #### Try it yourself
 
-Start with a repository that has a `code-intent` Brain, create a domain expert,
-and give it a group of helper agents. Ask the lead to divide the repository
-along meaningful domain boundaries, brief each helper with a focused scope, and
-build a routing map from their evidence-backed handoffs.
+The video uses the 4,878-file `smart-codex` repository, but the same workflow
+can be used with any repository that has a `code-intent` Brain. Follow
+[pi-brains](https://github.com/gitsense/pi-brains) to prepare the integration.
 
-Then ask a question that crosses more than one area. The lead should identify
-the helpers with relevant context, consult them, and combine their findings
-without loading the full repository into one conversation.
+<!-- Replace MM:SS and #t=SECONDS after the final video edit. -->
+
+- **[MM:SS · Create the domain](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Create a group, add a lead agent, and give it the `domain-expert` role.
+
+- **[MM:SS · Add a scout](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Create a short-lived helper session and add it to the group. Ask the lead to
+  have the scout inspect the repository structure and available Brain metadata.
+
+- **[MM:SS · Review the proposed split](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Have the scout recommend coherent domains and the number of helpers needed.
+  Review the boundaries before creating more sessions.
+
+- **[MM:SS · Create the helpers](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Create the recommended helper sessions, add them to the group, and ask the
+  lead to assign each one a focused domain.
+
+- **[MM:SS · Spread the knowledge](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Each helper queries the `code-intent` Brain for its assigned paths and returns
+  an evidence-backed summary of what its files do, which questions it can
+  answer, and what remains unclear.
+
+- **[MM:SS · Ask the domain expert](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Ask a question that crosses one or more domains. The lead should answer from
+  established knowledge when possible and consult only the helpers with
+  relevant context when more detail is needed.
+
+- **[MM:SS · Preserve what matters](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Review the findings, then approve the useful ones as durable domain notes. A
+  future helper can use those notes and the Brain instead of starting from zero.
 
 ### Beyond sessions
 
