@@ -70,10 +70,10 @@ designed to help humans and agents reason efficiently with shared, queryable
 knowledge. Brains give every agent a better starting point without requiring
 each one to rediscover the entire corpus.
 
-In the video, a domain expert maps the `smart-codex` repository and coordinates
-four focused helpers. Each helper uses the existing `code-intent` Brain to
-understand a coherent part of the repository, while the lead keeps a compact
-map of who knows what and routes new questions to the right agents.
+In the video, a domain expert maps the 4,878-file `smart-codex` repository and
+coordinates four focused helpers. Each helper uses the existing `code-intent`
+Brain to understand a coherent part of the repository, while the lead keeps
+a compact map of who knows what and routes new questions to the right agents.
 
 ![Video placeholder for distributing repository knowledge across focused agents.](assets/lead-agent-team-building-video-placeholder.svg)
 
