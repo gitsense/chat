@@ -49,13 +49,13 @@ context into the next conversation.
 Build on sessions from your own work, your team, or public sessions you can
 access. Useful context does not have to start in the current conversation.
 
-| **Find** | **Build team** | **Investigate** |
+| **1. Find** | **2. Build team** | **3. Investigate** |
 | :---: | :---: | :---: |
 | Search sessions by what you know: message content, files, and the operations that touched them. | Add a lead agent and ask it to review the matched sessions using token-efficient context like checkpoints and Brains. | Explain what you need and ask the lead which sessions bring the right context into the conversation. |
 | ![Placeholder for finding sessions by file activity.](assets/session-insight-placeholder.svg) | ![Placeholder for building a team around matched sessions with a lead agent.](assets/session-insight-placeholder.svg) | ![Placeholder for investigating which sessions bring the right context.](assets/session-insight-placeholder.svg) |
 | The sessions that worked on the problem surface with the evidence that matched. | The lead organizes the matches into a layout you can apply to the group. | The lead digs into checkpoints and Brains and proposes the sessions that matter. |
 
-| **Update team** | **Consult** | **Start** |
+| **4. Update team** | **5. Consult** | **6. Start** |
 | :---: | :---: | :---: |
 | Apply the lead's click-to-copy roster JSON to pull the right agents into the group. | With the fuller team in the group, ask what you should know before building. | Start a new session, explain what you want, and have it message the relevant agents for a quick primer. |
 | ![Placeholder for updating the team from the lead's roster report.](assets/session-insight-placeholder.svg) | ![Placeholder for consulting the updated team.](assets/session-insight-placeholder.svg) | ![Placeholder for starting a new session with relevant context.](assets/session-insight-placeholder.svg) |
