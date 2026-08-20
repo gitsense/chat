@@ -69,7 +69,7 @@ coordinates four focused helpers. Each helper uses the existing `code-intent`
 Brain to understand a coherent part of the repository, while the lead keeps
 a compact map of who knows what and routes new questions to the right agents.
 
-| **1. Scout** | **2. Assign** | **3. Ask** |
+| **1. Scout** | **2. Assign** | **3. Share** |
 | :---: | :---: | :---: |
 | Create a temporary planning agent to inspect the repository and Brain metadata, then recommend coherent domains and a helper count. | Create the helper agents and have the domain lead initialize each one with a focused role and scope. | Ask the domain lead a question and let it route the request to the helpers with the relevant knowledge. |
 | ![Placeholder for scouting a large repository with a planning agent.](assets/session-insight-placeholder.svg) | ![Placeholder for assigning focused domains to helper agents.](assets/session-insight-placeholder.svg) | ![Placeholder for routing a question through a domain lead.](assets/session-insight-placeholder.svg) |
@@ -93,7 +93,7 @@ can be used with any repository that has a `code-intent` Brain. Follow
   Review the scout's recommendation, create the helper sessions, and have the
   lead initialize each helper with a focused domain and role.
 
-- **[MM:SS · Ask](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+- **[MM:SS · Share](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
   Ask the domain lead a question. It should answer from established knowledge
   or route the question to the helpers with the relevant context.
 
