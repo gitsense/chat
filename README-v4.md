@@ -69,7 +69,11 @@ coordinates four focused helpers. Each helper uses the existing `code-intent`
 Brain to understand a coherent part of the repository, while the lead keeps
 a compact map of who knows what and routes new questions to the right agents.
 
-![Video placeholder for distributing repository knowledge across focused agents.](assets/lead-agent-team-building-video-placeholder.svg)
+| **1. Scout** | **2. Assign** | **3. Ask** |
+| :---: | :---: | :---: |
+| Create a temporary planning agent to inspect the repository and Brain metadata, then recommend coherent domains and a helper count. | Create the helper agents and have the domain lead initialize each one with a focused role and scope. | Ask the domain lead a question and let it route the request to the helpers with the relevant knowledge. |
+| ![Placeholder for scouting a large repository with a planning agent.](assets/session-insight-placeholder.svg) | ![Placeholder for assigning focused domains to helper agents.](assets/session-insight-placeholder.svg) | ![Placeholder for routing a question through a domain lead.](assets/session-insight-placeholder.svg) |
+| The scout helps plan the knowledge team without becoming part of it. | Each helper builds knowledge about one coherent part of the domain. | The lead combines established findings and consults only when more detail is needed. |
 
 [Watch the complete video](assets/build-scalable-domain-experts-demo.mp4)
 
@@ -81,34 +85,17 @@ can be used with any repository that has a `code-intent` Brain. Follow
 
 <!-- Replace MM:SS and #t=SECONDS after the final video edit. -->
 
-- **[MM:SS · Create the domain](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
-  Create a group, add a lead agent, and give it the `domain-expert` role.
+- **[MM:SS · Scout](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Create a domain lead and a temporary scout outside the knowledge team. Ask
+  the scout to inspect the repository structure and available Brain metadata.
 
-- **[MM:SS · Add a scout](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
-  Create a short-lived helper session and add it to the group. Ask the lead to
-  have the scout inspect the repository structure and available Brain metadata.
+- **[MM:SS · Assign](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Review the scout's recommendation, create the helper sessions, and have the
+  lead initialize each helper with a focused domain and role.
 
-- **[MM:SS · Review the proposed split](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
-  Have the scout recommend coherent domains and the number of helpers needed.
-  Review the boundaries before creating more sessions.
-
-- **[MM:SS · Create the helpers](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
-  Create the recommended helper sessions, add them to the group, and ask the
-  lead to assign each one a focused domain.
-
-- **[MM:SS · Spread the knowledge](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
-  Each helper queries the `code-intent` Brain for its assigned paths and returns
-  an evidence-backed summary of what its files do, which questions it can
-  answer, and what remains unclear.
-
-- **[MM:SS · Ask the domain expert](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
-  Ask a question that crosses one or more domains. The lead should answer from
-  established knowledge when possible and consult only the helpers with
-  relevant context when more detail is needed.
-
-- **[MM:SS · Preserve what matters](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
-  Review the findings, then approve the useful ones as durable domain notes. A
-  future helper can use those notes and the Brain instead of starting from zero.
+- **[MM:SS · Ask](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+  Ask the domain lead a question. It should answer from established knowledge
+  or route the question to the helpers with the relevant context.
 
 ### Beyond sessions
 
