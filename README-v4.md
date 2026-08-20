@@ -49,11 +49,11 @@ context into the next conversation.
 Build on sessions from your own work, your team, or public sessions you can
 access. Useful context does not have to start in the current conversation.
 
-| **1. Find** | **2. Ask AI** | **3. Start** |
+| **1. Find** | **2. Ask AI** | **3. Share** |
 | :---: | :---: | :---: |
-| Search sessions by what you know: message content, files, and the operations that touched them. | Narrow the results, then ask AI to review the checkpoints and rank the sessions that best match. | Resume the strongest candidate, explain what you are working on, and give it the context needed for a head start. |
-| ![Placeholder for finding sessions by file activity.](assets/session-insight-placeholder.svg) | ![Placeholder for asking AI to rank sessions by checkpoint evidence.](assets/session-insight-placeholder.svg) | ![Placeholder for starting a session with context from prior work.](assets/session-insight-placeholder.svg) |
-| Find the sessions that worked on the problem. | Turn a shortlist into a reasoned recommendation. | Begin with relevant work instead of starting from zero. |
+| Search sessions by what you know: message content, files, and the operations that touched them. | Narrow the results, then ask AI to review the checkpoints and rank the sessions that best match. | Give a new session the relevant context from the strongest candidate so it can get a head start. |
+| ![Placeholder for finding sessions by file activity.](assets/session-insight-placeholder.svg) | ![Placeholder for asking AI to rank sessions by checkpoint evidence.](assets/session-insight-placeholder.svg) | ![Placeholder for sharing context from prior work with a new session.](assets/session-insight-placeholder.svg) |
+| Find the sessions that worked on the problem. | Turn a shortlist into a reasoned recommendation. | Carry useful knowledge into the next conversation. |
 
 [Watch the complete video](assets/leverage-what-was-done-demo.mp4)
 
@@ -69,7 +69,7 @@ coordinates four focused helpers. Each helper uses the existing `code-intent`
 Brain to understand a coherent part of the repository, while the lead keeps
 a compact map of who knows what and routes new questions to the right agents.
 
-| **1. Scout** | **2. Assign** | **3. Share** |
+| **1. Scout** | **2. Assign** | **3. Ask** |
 | :---: | :---: | :---: |
 | Create a temporary planning agent to inspect the repository and Brain metadata, then recommend coherent domains and a helper count. | Create the helper agents and have the domain lead initialize each one with a focused role and scope. | Ask the domain lead a question and let it route the request to the helpers with the relevant knowledge. |
 | ![Placeholder for scouting a large repository with a planning agent.](assets/session-insight-placeholder.svg) | ![Placeholder for assigning focused domains to helper agents.](assets/session-insight-placeholder.svg) | ![Placeholder for routing a question through a domain lead.](assets/session-insight-placeholder.svg) |
@@ -93,7 +93,7 @@ can be used with any repository that has a `code-intent` Brain. Follow
   Review the scout's recommendation, create the helper sessions, and have the
   lead initialize each helper with a focused domain and role.
 
-- **[MM:SS · Share](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
+- **[MM:SS · Ask](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
   Ask the domain lead a question. It should answer from established knowledge
   or route the question to the helpers with the relevant context.
 
