@@ -97,6 +97,15 @@ can be used with any repository that has a `code-intent` Brain. Follow
   Ask the domain lead a question. It should answer from established knowledge
   or route the question to the helpers with the relevant context.
 
+## Give yourself and your agents a shared workspace
+
+Bring sessions into a group, then add a lead to help organize the work, track
+progress, and coordinate what happens next.
+
+![Video placeholder for organizing agent sessions with a lead.](assets/session-insight-placeholder.svg)
+
+[Watch the complete video](assets/create-agent-team-demo.mp4)
+
 ## How GitSense Chat works
 
 GitSense Chat gives agent sessions a shared home without changing how agents
@@ -120,14 +129,14 @@ an agent's work is correct, and agent findings do not automatically become
 trusted knowledge. People remain responsible for reviewing evidence, resolving
 uncertainty, and deciding what happens next.
 
-## Scale AI collaboration cost-effectively
+## Keep AI-assisted work understandable
 
-Whether you are managing your own agents or coordinating AI-assisted work
-across a team, GitSense Chat reduces the context, coordination, and review
-costs that grow with every additional session. Checkpoints make many sessions
-inexpensive to scan, Session Insights focus attention on what matters, and
-Brains let people and agents reuse established knowledge instead of
-rediscovering it.
+As AI-assisted work spreads across more sessions, repositories, and people,
+keeping track of what happened becomes a challenge of its own. GitSense Chat
+brings independent sessions together, uses checkpoints to record where each
+session stood, surfaces user-defined signals through Session Insights, and
+makes recorded domain knowledge available to the people and agents working
+next.
 
 ### Many sessions. One conversation.
 
@@ -137,11 +146,13 @@ new agents only when relevant knowledge or capacity is missing.
 
 ### Durable checkpoints. Efficient catch-up.
 
-Checkpoints capture the current state of a session, including its goal,
-understanding, decisions, risks, files, and next action. GitSense Chat can scan
-these compact records across dozens or hundreds of sessions without loading
-every transcript, then identify which sessions are worth opening or resuming.
-When more evidence is needed, the full session remains available.
+Checkpoints capture a session's state at a point in time, including its goal,
+understanding, decisions, risks, files, and next action. Their freshness helps
+show whether the summary still represents the session's later activity.
+GitSense Chat can scan these compact records across dozens or hundreds of
+sessions without loading every transcript, then identify which sessions are
+worth opening or resuming. When more evidence is needed, the full session
+remains available.
 
 ### See the forest, not just the trees.
 
@@ -152,8 +163,8 @@ command ran, and connect the evidence to actions.
 ### Brains make domain knowledge reusable.
 
 Combine human domain expertise with useful findings gathered through agent
-work. Brains, lessons, notes, and rules make that knowledge available to people
-and agents when it applies.
+work. Brains, lessons, notes, and rules make recorded domain knowledge
+available to people and agents when it applies.
 
 ## License
 
