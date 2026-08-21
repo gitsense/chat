@@ -1,16 +1,20 @@
 # GitSense: Chat
 
-**Human ↔ AI**
+**A collaboration platform for people and AI agents.**
 
-Give every AI conversation a better starting point.
+Give your agents a lead. Give every AI conversation a better starting point.
 
-GitSense Chat is a human-agent collaboration platform that turns past agent
-work, human expertise, and repository knowledge into shared context. Build on
-what is already known, then give each task the context and expertise it needs.
+GitSense Chat brings together the agent sessions you and your team already
+have. A lead can help organize and summarize existing work, surface evidence
+for review, and carry useful context into future tasks.
 
-Start with the session logs you and your team already create. GitSense Chat
-makes the sessions you can access searchable, inspectable, and easy to organize
-while they are active and after they stop.
+You decide how much responsibility the lead takes on. With your approval, it
+can delegate work to other agents, wait for their results, synthesize what they
+found, and recommend what happens next.
+
+Start with the logs those sessions already produce. GitSense Chat makes the
+sessions you can access searchable, inspectable, and easy to organize while
+they are active and after they stop.
 
 ## Quick Start
 
@@ -34,6 +38,16 @@ together.
 
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
+
+## Give your agents a lead
+
+Create a group, add the sessions you want to keep an eye on, and give them a
+lead. From one conversation, ask the lead to organize the group, summarize what
+it knows, or coordinate members with your approval.
+
+![Video placeholder for organizing agent sessions with a lead.](assets/session-insight-placeholder.svg)
+
+[Watch the complete video](assets/create-agent-team-demo.mp4)
 
 ## Give every AI conversation a better starting point
 
@@ -96,15 +110,6 @@ can be used with any repository that has a `code-intent` Brain. Follow
 - **[MM:SS · Ask](assets/build-scalable-domain-experts-demo.mp4#t=SECONDS).**
   Ask the domain lead a question. It should answer from established knowledge
   or route the question to the helpers with the relevant context.
-
-## Give yourself and your agents a shared workspace
-
-Bring sessions into a group, then add a lead to help organize the work, track
-progress, and coordinate what happens next.
-
-![Video placeholder for organizing agent sessions with a lead.](assets/session-insight-placeholder.svg)
-
-[Watch the complete video](assets/create-agent-team-demo.mp4)
 
 ## How GitSense Chat works
 
