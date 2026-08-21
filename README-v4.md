@@ -12,9 +12,9 @@ You decide how much responsibility the lead takes on. With your approval, it
 can delegate work to other agents, wait for their results, synthesize what they
 found, and recommend what happens next.
 
-Start with the logs those sessions already produce. GitSense Chat makes the
-sessions you can access searchable, inspectable, and easy to organize while
-they are active and after they stop.
+Start with the logs your agents already produce. GitSense Chat makes their
+sessions easy to find, inspect, and organize while the agents work and after
+they stop.
 
 ## Quick Start
 
