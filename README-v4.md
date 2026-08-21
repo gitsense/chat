@@ -2,19 +2,14 @@
 
 **A collaboration platform for people and AI agents.**
 
-Give your agents a lead. Give every AI conversation a better starting point.
+Give your agents a lead, a Pi Buddy, and a better starting point.
 
-GitSense Chat brings together the agent sessions you and your team already
-have. A lead can help organize and summarize existing work, surface evidence
-for review, and carry useful context into future tasks.
-
-You decide how much responsibility the lead takes on. With your approval, it
-can delegate work to other agents, wait for their results, synthesize what they
-found, and recommend what happens next.
-
-Start with the logs your agents already produce. GitSense Chat makes their
-sessions easy to find, inspect, and organize while the agents work and after
-they stop.
+GitSense Chat gives people and agents a shared place to work by bringing
+together the sessions and logs you and your team already have. Find, inspect,
+and organize sessions while agents work and after they stop, then carry useful
+context into future tasks. You decide how much responsibility agents take on;
+with your approval, they can share knowledge, delegate work, wait for results,
+and coordinate what happens next.
 
 ## Quick Start
 
