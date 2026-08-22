@@ -5,11 +5,14 @@
 Give your agents a lead, a Pi Buddy, and a better starting point.
 
 GitSense Chat gives people and agents a shared place to work by bringing
-together the sessions and logs you and your team already have. Find, inspect,
-and organize sessions while agents work and after they stop, then carry useful
-context into future tasks. You decide how much responsibility agents take on;
-with your approval, they can share knowledge, delegate work, wait for results,
-and coordinate what happens next.
+together the sessions and logs you and your team already have. Your agents can
+keep working in their existing tools and workflows. GitSense Chat adds
+visibility and coordination around the work they already produce.
+
+Find, inspect, and organize sessions while agents work and after they stop,
+then carry useful context into future tasks. You decide how much responsibility
+agents take on; with your approval, they can share knowledge, delegate work,
+wait for results, and coordinate what happens next.
 
 ## Quick Start
 
