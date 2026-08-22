@@ -41,7 +41,7 @@ sessions and Buddies into one group with a lead.
 
 | **1. Create a Pi Buddy** | **2. Give the group a lead** |
 | :---: | :---: |
-| Pair a compatible coding-agent session with a durable Pi identity for cross-agent messages and explicitly requested checkpoints. | Add Pi sessions and Pi Buddies to one group, then add a lead to organize the roster and coordinate members with your approval. |
+| Pair a compatible coding-agent session with a durable Pi identity for cross-agent messages and explicitly requested checkpoints. | Add Pi sessions and Pi Buddies to one group, then add a lead to organize the group and coordinate its work with your approval. |
 | ![Placeholder for creating a Pi Buddy for an existing coding-agent session.](assets/session-insight-placeholder.svg) | ![Placeholder for giving a group of Pi sessions and Pi Buddies a lead.](assets/session-insight-placeholder.svg) |
 | The native agent remains responsible for its work and replies. | From one conversation, the lead can ask members for information, wait for replies, and summarize what it learns. |
 
