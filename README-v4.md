@@ -44,8 +44,10 @@ agent a visual identity, role title, and description, then add a lead to help
 coordinate the group.
 
 Session names help coding agents track conversations. Personas help you see
-what each agent is doing. They are practical identity markers—not attempts to
-humanize agents—and keep role and scope information out of session names.
+what each agent is doing. They are not a gimmick intended to make agents seem
+more intelligent or human. In GitSense Chat, Personas are practical identity
+markers that clarify each agent's role and scope without overloading session
+names.
 
 | **1. Give each agent a role** | **2. Give the group a lead** |
 | :---: | :---: |
