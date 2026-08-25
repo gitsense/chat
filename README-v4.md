@@ -37,18 +37,21 @@ together.
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
 
-## Give your agents a lead and a Pi Buddy
+## Give your agents a role and a lead
 
-Connect compatible coding-agent sessions through Pi Buddies, then bring Pi
-sessions and Buddies into one group with a lead.
+Personas make groups of agents easier to understand at a glance. Give each
+agent a visual identity, role title, and description, then add a lead to help
+coordinate the group.
 
-| **1. Create a Pi Buddy** | **2. Give the group a lead** |
+Session names help coding agents track conversations. Personas help you see
+what each agent is doing. They are practical identity markers—not attempts to
+humanize agents—and keep role and scope information out of session names.
+
+| **1. Give each agent a role** | **2. Give the group a lead** |
 | :---: | :---: |
-| Pair a compatible coding-agent session with a durable Pi identity for cross-agent messages and explicitly requested checkpoints. | Add Pi sessions and Pi Buddies to one group, then add a lead to organize the group and coordinate its work with your approval. |
-| ![Placeholder for creating a Pi Buddy for an existing coding-agent session.](assets/session-insight-placeholder.svg) | ![Placeholder for giving a group of Pi sessions and Pi Buddies a lead.](assets/session-insight-placeholder.svg) |
-| The native agent remains responsible for its work and replies. | From one conversation, the lead can ask members for information, wait for replies, and summarize what it learns. |
-
-[Watch the complete video](assets/pi-buddy-and-lead-demo.mp4)
+| Assign a Persona with a visual marker, title, and description that explains the agent's role and scope. | Bring related agents into a group, then add a lead to organize and coordinate their work with your approval. |
+| ![Placeholder for assigning Personas to agents.](assets/session-insight-placeholder.svg) | ![Placeholder for giving a group of agents a lead.](assets/session-insight-placeholder.svg) |
+| Quickly distinguish researchers, implementers, reviewers, parallel workers, and handoff agents without overloading session names. | From one conversation, the lead can ask members for information, wait for replies, and summarize what it learns. |
 
 ## Give every AI conversation a better starting point
 
