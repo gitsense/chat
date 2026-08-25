@@ -2,7 +2,7 @@
 
 **A collaboration platform for people and AI agents.**
 
-Give your agents a lead, a Pi Buddy, and a better starting point.
+Give your agents clear roles, a lead, and a better starting point.
 
 GitSense Chat gives people and agents a shared place to work by bringing
 together the sessions and logs you and your team already have. Your agents can
