@@ -13,9 +13,8 @@ happens next.
 
 **Find your sessions by more than a name.**
 
-Coding agents give each session a name. GitSense Chat also shows you what was
-said last. Scan a dozen sessions in seconds to see what each one was about. No
-need to open every transcript or click through each session. If the name is not
+Scan a dozen sessions and their last messages in seconds to see what each was
+about. No transcripts to open or sessions to click through. If the name is not
 enough, search messages or files touched. If you remember the goal but not the
 words, use checkpoints to ask an agent which sessions match the intent.
 
@@ -23,6 +22,17 @@ words, use checkpoints to ask an agent which sessions match the intent.
 | :---: | :---: | :---: |
 | Scan the latest message and checkpoint without opening every transcript. | Search conversations, files, and the operations that touched them. | Ask AI which sessions best match the work you want to continue. |
 | ![Session cards showing recent messages and checkpoint notes.](assets/session-insight-placeholder.svg) | ![Session search results matched by message content and file activity.](assets/session-insight-placeholder.svg) | ![An agent ranking matching sessions from checkpoint evidence.](assets/session-insight-placeholder.svg) |
+
+### Stay organized
+
+Do not sort sessions one by one. Ask AI to review your 20 most recent sessions,
+use their checkpoints to group related work, and create sections for the
+projects and topics it recognizes. Sessions it cannot place stay easy to
+review.
+
+> Review my 20 most recent sessions. Use their latest checkpoints to group
+> related work. Create sections for the projects or topics you recognize, and
+> put anything unclear in “Needs review.”
 
 Checkpoints give the search enough context to compare many sessions without
 loading every conversation. The full transcript is still there when you need
