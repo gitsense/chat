@@ -11,7 +11,7 @@ happens next.
 
 ## Resume Faster.
 
-**Find the conversation that already did the work.**
+**Find your sessions by more than a name.**
 
 Coding agents give each session a name. GitSense Chat also shows you what was
 said last. Scan a dozen sessions in seconds to see what each one was about. No
