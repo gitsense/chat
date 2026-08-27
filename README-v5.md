@@ -1,11 +1,11 @@
 # GitSense: Chat
 
-**Turn your session logs into insights, reusable knowledge, and a better starting point for your agents.**
+**Turn session logs into insights. Make knowledge reusable. Give every agent a better starting point.**
 
-GitSense Chat works with the logs your agents already create. Your agents keep
-working in the same tools while GitSense Chat helps you find past work,
-understand what happened, and share what was learned across sessions, agents,
-repositories, and teams.
+GitSense Chat works with the logs your agents already create and the knowledge
+around your work. Turn sessions into useful views, build focused knowledge
+around repositories, pull requests, and domains, and make it available to every
+agent that needs it. Your agents keep working in the same tools.
 
 ## Resume Faster.
 
