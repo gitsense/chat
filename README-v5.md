@@ -5,7 +5,9 @@
 GitSense Chat works with the logs your agents already create and the knowledge
 around your work. Turn sessions into useful views, build focused knowledge
 around repositories, pull requests, and domains, and make it available to every
-agent that needs it. Your agents keep working in the same tools.
+agent that needs it. Your workflow does not have to change. GitSense Chat gives
+you more ways to understand the work, reuse what was learned, and decide what
+happens next.
 
 ## Resume Faster.
 
