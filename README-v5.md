@@ -25,14 +25,17 @@ words, use checkpoints to ask an agent which sessions match the intent.
 
 ### Stay organized
 
-Do not sort sessions one by one. Ask AI to review your 20 most recent sessions,
-use their checkpoints to group related work, and create sections for the
-projects and topics it recognizes. Sessions it cannot place stay easy to
-review.
+A session name is a start. Add a lead agent and ask it to give your sessions a
+clearer identity with personas, titles, descriptions, and tags. It can use
+checkpoints to understand what each session is working on, choose avatars that
+fit their roles, and organize related sessions into sections.
 
-> Review my 20 most recent sessions. Use their latest checkpoints to group
-> related work. Create sections for the projects or topics you recognize, and
-> put anything unclear in “Needs review.”
+![Placeholder for the persona editor showing an agent lead assigning session personas, avatars, titles, descriptions, and tags.](assets/stay-organized-persona-editor-placeholder.svg)
+
+> Review my 20 most recent sessions. Use their latest checkpoints to understand
+> each session’s work. Suggest a persona, avatar, title, description, and tags
+> for each one. Group related sessions into sections and put anything unclear
+> in “Needs review.”
 
 Checkpoints give the search enough context to compare many sessions without
 loading every conversation. The full transcript is still there when you need
