@@ -13,10 +13,11 @@ happens next.
 
 **Find the conversation that already did the work.**
 
-You should not have to remember which terminal, session, or agent worked on a
-problem. Review sessions by their latest message and checkpoint. Search by
-message content, files, and operations. When keywords are not enough, ask AI to
-rank sessions by intent using checkpoints as compact summaries.
+Coding agents give each session a name. GitSense Chat also shows you what was
+said last. Scan a dozen sessions in seconds to see what each one was about. No
+need to open every transcript or click through each session. If the name is not
+enough, search messages or files touched. If you remember the goal but not the
+words, use checkpoints to ask an agent which sessions match the intent.
 
 | **Review quickly** | **Search what you remember** | **Ask by intent** |
 | :---: | :---: | :---: |
