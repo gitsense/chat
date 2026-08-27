@@ -123,7 +123,7 @@ GitSense Chat gives agent sessions a shared home without changing how agents
 work. It uses the logs they already produce, making sessions searchable,
 inspectable, and easy to organize while they are active and after they stop.
 
-![GitSense Chat brings existing coding-agent sessions into one searchable, reusable workspace.](assets/same-sessions-more-useful.png)
+![GitSense Chat brings existing coding-agent sessions into one searchable, reusable workspace.](assets/same-sessions-more-useful-no-title.png)
 
 With session logs alone, GitSense Chat can make agent work searchable,
 inspectable, organized, and reusable. With a supported runtime integration, it
