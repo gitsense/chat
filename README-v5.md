@@ -9,6 +9,31 @@ agent that needs it. Your workflow does not have to change. GitSense Chat gives
 you more ways to understand the work, reuse what was learned, and decide what
 happens next.
 
+![Placeholder for a GitSense Chat workspace showing session search, organized groups, Session Insights, and reusable knowledge.](assets/hero-workspace-placeholder.svg)
+
+## Quick Start
+
+Review the [install script](install.sh), then install `gsc`:
+
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
+
+Install it yourself by [building from source](https://github.com/gitsense/chat),
+or ask your coding agent:
+
+```text
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
+```
+
+Pi is GitSense Chat's first full reference integration. Follow
+[pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
+Insights, checkpoints, shared knowledge, messaging, and lead agents work
+together.
+
+GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
+same Brains, notes, lessons, and rules.
+
 ## Resume Faster.
 
 **Find your sessions by more than a name.**
@@ -71,6 +96,25 @@ to ask questions and coordinate the work.
 The lead works from the sessions and layout you chose. You do not have to find
 and name every session again.
 
+### Coordinate with ease.
+
+**A group and a lead are all you need to get started.**
+
+Tell the lead what you want to accomplish. It can help decide how many agents
+are needed, define their responsibilities, organize them around the work, and
+explain how they should collaborate. When you ask, the lead can create agents
+and add or remove agents from the group as the workflow evolves.
+
+A simple chain reaction makes the idea tangible: the lead starts the first
+handoff, each agent performs a meaningful step and passes the result to the
+next, and the completed result returns to the lead. The tracker layout makes
+that sequence visible while you keep one conversation with the lead.
+
+This model can grow much further. Leads from different groups can coordinate
+with one another to organize larger systems of work. GitSense Chat does not
+visualize those cross-group relationships yet, but the foundation is already
+there: groups, leads, agent identities, messaging, and reusable sessions.
+
 ## Make Knowledge Reusable.
 
 **What one agent learns should not stay in one transcript.**
@@ -105,29 +149,6 @@ runtime integration adds live status, messaging, and coordination.
 | Create focused Session Insight views | Send messages through agent mailboxes |
 | Group and organize related sessions | Let agents communicate with one another |
 | Copy resume and attach commands | Coordinate a group through a lead agent |
-
-## Quick Start
-
-Review the [install script](install.sh), then install `gsc`:
-
-```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
-```
-
-Install it yourself by [building from source](https://github.com/gitsense/chat),
-or ask your coding agent:
-
-```text
-Install and configure GitSense Chat for me. Start by running `gsc docs help`.
-```
-
-Pi is GitSense Chat's first full reference integration. Follow
-[pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
-Insights, checkpoints, shared knowledge, messaging, and lead agents work
-together.
-
-GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
-same Brains, notes, lessons, and rules.
 
 ## How GitSense Chat works
 
