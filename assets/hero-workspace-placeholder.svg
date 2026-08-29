@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">GitSense Chat workspace placeholder</title>
+  <desc id="desc">Placeholder for a screenshot showing session search, organized groups, Session Insights, and reusable knowledge.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f8fa"/>
+      <stop offset="1" stop-color="#eef2f6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1f2328" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="70" y="70" width="1460" height="760" rx="18" fill="#fff" stroke="#d0d7de"/>
+  <rect x="70" y="70" width="1460" height="74" rx="18" fill="#24292f"/>
+  <circle cx="108" cy="107" r="9" fill="#ff7b72"/><circle cx="140" cy="107" r="9" fill="#d29922"/><circle cx="172" cy="107" r="9" fill="#3fb950"/>
+  <text x="220" y="115" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="25" font-weight="600">GitSense Chat</text>
+  <text x="1260" y="115" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20">Your workspace</text>
+
+  <rect x="105" y="180" width="360" height="590" rx="12" fill="#f6f8fa" stroke="#d8dee4"/>
+  <text x="140" y="226" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="700">Sessions</text>
+  <rect x="140" y="250" width="290" height="44" rx="7" fill="#fff" stroke="#8c959f"/>
+  <text x="162" y="279" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Search sessions...</text>
+  <text x="140" y="337" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="600">ORGANIZED GROUPS</text>
+  <rect x="140" y="359" width="290" height="50" rx="7" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+  <text x="164" y="391" fill="#0969da" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="600">Recent activity</text>
+  <text x="140" y="457" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="600">KNOWLEDGE</text>
+  <text x="164" y="492" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18">Brains</text>
+  <text x="164" y="530" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18">Lessons and notes</text>
+  <text x="164" y="568" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18">Rules</text>
+
+  <rect x="505" y="180" width="640" height="590" rx="12" fill="#fff" stroke="#d8dee4" filter="url(#shadow)"/>
+  <text x="545" y="226" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="700">Recent activity</text>
+  <text x="545" y="260" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18">See more than a session name</text>
+  <rect x="545" y="295" width="560" height="106" rx="10" fill="#f6f8fa" stroke="#d8dee4"/>
+  <circle cx="590" cy="348" r="28" fill="#ddf4ff"/><text x="590" y="358" text-anchor="middle" fill="#0969da" font-family="sans-serif" font-size="27">⌘</text>
+  <text x="640" y="335" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="19" font-weight="600">Review pull requests</text>
+  <text x="640" y="367" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Last message: checking validation evidence</text>
+  <rect x="545" y="421" width="560" height="106" rx="10" fill="#f6f8fa" stroke="#d8dee4"/>
+  <circle cx="590" cy="474" r="28" fill="#fff8c5"/><text x="590" y="484" text-anchor="middle" fill="#9a6700" font-family="sans-serif" font-size="25">✦</text>
+  <text x="640" y="461" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="19" font-weight="600">Investigate cache behavior</text>
+  <text x="640" y="493" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Checkpoint: tracing the invalidation path</text>
+  <rect x="545" y="547" width="560" height="106" rx="10" fill="#f6f8fa" stroke="#d8dee4"/>
+  <circle cx="590" cy="600" r="28" fill="#fbefff"/><text x="590" y="610" text-anchor="middle" fill="#8250df" font-family="sans-serif" font-size="25">◆</text>
+  <text x="640" y="587" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="19" font-weight="600">Update documentation</text>
+  <text x="640" y="619" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Persona: documentation writer</text>
+
+  <rect x="1185" y="180" width="305" height="590" rx="12" fill="#f6f8fa" stroke="#d8dee4"/>
+  <text x="1220" y="226" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="23" font-weight="700">Session Insight</text>
+  <text x="1220" y="260" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Change review</text>
+  <rect x="1220" y="295" width="235" height="12" rx="6" fill="#0969da"/><rect x="1220" y="330" width="180" height="12" rx="6" fill="#8c959f"/><rect x="1220" y="365" width="210" height="12" rx="6" fill="#8c959f"/>
+  <text x="1220" y="445" fill="#1f2328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="600">Lead agent</text>
+  <text x="1220" y="480" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Ask about this group</text>
+  <rect x="1220" y="510" width="235" height="48" rx="7" fill="#fff" stroke="#8c959f"/>
+  <text x="1240" y="541" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">What needs attention?</text>
+  <rect x="1220" y="580" width="150" height="43" rx="7" fill="#0969da"/>
+  <text x="1295" y="608" text-anchor="middle" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="600">Ask the lead</text>
+  <text x="800" y="805" text-anchor="middle" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-style="italic">Screenshot placeholder · replace with the workspace capture</text>
+</svg>
