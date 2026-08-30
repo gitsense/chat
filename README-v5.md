@@ -66,6 +66,27 @@ Checkpoints give the search enough context to compare many sessions without
 loading every conversation. The full transcript is still there when you need
 more evidence.
 
+## `/goal`, But Better.
+
+**Set a goal. Give it a team. See how the work is going.**
+
+A harness-level `/goal` keeps one agent working toward an objective. GitSense
+Groups turn that private execution loop into a visible management loop. Create
+a group with a lead and as many focused agents and configurations as the work
+requires. Define the goal with the lead, then let it coordinate responsibilities,
+handoffs, and progress across the group.
+
+| **Give the goal a team** | **See the latest status** | **Protect reasoning quality** |
+| :---: | :---: | :---: |
+| Use focused agents with different roles, tools, and model configurations. | Open the group report to review progress, blockers, evidence, and what happens next. | Monitor every agent's context usage and intervene before it leaves a safe region for effective reasoning. |
+
+`/goal` reduces the need to prompt one agent between turns. GitSense Groups
+reduce the need to manage every agent separately. The latest report is a
+generated snapshot of the group's work, while live session signals let you
+monitor the agents as they continue.
+
+**`/goal` for a team of agents, with the visibility to trust it.**
+
 ## Same Sessions. More Useful.
 
 **One prompt. 52 tool calls. Now what?**
