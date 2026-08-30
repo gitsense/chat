@@ -1,21 +1,22 @@
 # GitSense: Chat
 
-**GitSense Chat is the intelligence layer that works alongside your agentic
+**GitSense is the intelligence layer that works alongside your agentic
 development tools.**
 
 Here, intelligence means useful information gathered from the work, not a
-smarter underlying model. GitSense Chat works from session logs, checkpoints,
-tool calls, file activity, and reviewed knowledge to give people and AI agents
-better information to work with.
+smarter underlying model. GitSense turns session logs, checkpoints, tool calls,
+file activity, and reviewed knowledge into better information for people and
+AI agents.
 
-GitSense has two parts. The Chat app turns sessions and repository data into
-views, reports, and reusable knowledge. The open source
-[`gsc` CLI](https://github.com/gitsense/gsc-cli) brings that intelligence into
-terminals, scripts, and coding agents.
+GitSense Chat makes that intelligence easy to work with. Find sessions, ask AI
+about the work, organize related sessions into Groups, monitor reports, and
+build reusable knowledge. The open source
+[`gsc` CLI](https://github.com/gitsense/gsc-cli) brings the same intelligence
+into terminals, scripts, and coding agents.
 
-Work with GitSense Chat when you need to understand the work, or let it quietly
-monitor what matters and keep a report ready for when you return. Your workflow
-does not have to change.
+Work with GitSense Chat when you need it, or let it quietly monitor what
+matters and keep a report ready for when you return. Your workflow does not
+have to change.
 
 ![GitSense Chat captures the sessions agents already create and makes them searchable, organized, and reusable.](assets/same-sessions-more-useful-no-title.png)
 
