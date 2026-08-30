@@ -3,11 +3,32 @@
 **GitSense Chat is the intelligence layer that works alongside your agentic
 development tools.**
 
-It uses the session logs your agents already create. Open it when you need to
-understand the work, or let it quietly monitor what matters and keep a report
-ready for when you return. Your workflow does not have to change.
+Here, intelligence means useful information gathered from the work—not a
+smarter underlying model. GitSense Chat works from session logs, checkpoints,
+tool calls, file activity, and reviewed knowledge to give people and AI agents
+better information to work with.
+
+Open it when you need to understand the work, or let it quietly monitor what
+matters and keep a report ready for when you return. Your workflow does not
+have to change.
 
 ![GitSense Chat captures the sessions agents already create and makes them searchable, organized, and reusable.](assets/same-sessions-more-useful-no-title.png)
+
+## What Intelligence Looks Like
+
+GitSense Chat turns the activity and knowledge around agentic work into
+information that helps people and agents understand what happened, what
+matters, and where to look next.
+
+| **Understand work across sessions** | **Focus on the evidence that matters** |
+| :---: | :---: |
+| ![A Group lead report covering status, checkpoint freshness, and risks across a team of sessions.](assets/chat-widget-team-report.png) | ![One 52-tool-call session presented as focused Session Outline and Change Review views.](assets/one-session-multiple-views.png) |
+| Ask one lead what is happening across a Group and get a report grounded in the available session evidence. | Turn a wall of tool calls into views for the files, commands, risks, and decisions you care about. |
+
+| **Search with more to go on** | **Make knowledge portable** |
+| :---: | :---: |
+| ![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png) | ![A portable-intelligence demonstration using repository knowledge to answer one question across thousands of files.](assets/portable-intelligence-demo-billboard.png) |
+| Find the same matching code while seeing what each file is for before deciding what to open. | Turn repository knowledge into a queryable Brain that people and agents can use without loading the entire corpus. |
 
 ## Quick Start
 
