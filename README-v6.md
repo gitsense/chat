@@ -10,8 +10,9 @@ AI agents.
 
 GitSense Chat makes that intelligence easy to work with. Find sessions, ask AI
 about the work, organize related sessions into Groups, monitor reports, and
-build reusable knowledge. The open source
-[`gsc` CLI](https://github.com/gitsense/gsc-cli) brings the same intelligence
+build reusable knowledge. The [`gsc` CLI](https://github.com/gitsense/gsc-cli)
+uses `gsc pi sessions sync` to import the session logs Pi already creates into
+a local SQLite mirror for fast querying. It also brings the same intelligence
 into terminals, scripts, and coding agents.
 
 Work with GitSense Chat when you need it, or let it quietly monitor what
@@ -210,7 +211,7 @@ uncertainty, and deciding what happens next.
 
 ## License
 
-The [`gsc` CLI](https://github.com/gitsense/gsc-cli) is open source under the
+The [`gsc` CLI](https://github.com/gitsense/gsc-cli) is licensed under the
 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 GitSense Chat is licensed under the
