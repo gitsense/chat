@@ -10,10 +10,7 @@ AI agents.
 
 GitSense Chat makes that intelligence easy to work with. Find sessions, ask AI
 about the work, organize related sessions into Groups, monitor reports, and
-build reusable knowledge. The [`gsc` CLI](https://github.com/gitsense/gsc-cli)
-uses `gsc pi sessions sync` to import the session logs Pi already creates into
-a local SQLite mirror for fast querying. It also brings the same intelligence
-into terminals, scripts, and coding agents.
+build reusable knowledge.
 
 Work with GitSense Chat when you need it, or let it quietly monitor what
 matters and keep a report ready for when you return. Your workflow does not
