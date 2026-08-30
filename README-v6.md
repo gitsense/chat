@@ -1,14 +1,11 @@
 # GitSense: Chat
 
-**Your agents. Your workflow. GitSense when you need it.**
+**GitSense Chat is the intelligence layer that works alongside your agentic
+development tools.**
 
-Your agents already leave a useful trail as they work. GitSense Chat helps you
-pick up where they left off, see how work is going, bring related sessions
-together, and carry what was learned into the next conversation.
-
-It works with the session logs and tools you already use. GitSense Chat can
-stay out of the way until you need it, or help monitor the work and keep a
-report ready for when you return. Your workflow does not have to change.
+It uses the session logs your agents already create. Open it when you need to
+understand the work, or let it quietly monitor what matters and keep a report
+ready for when you return. Your workflow does not have to change.
 
 ![Placeholder for a GitSense Chat workspace showing session discovery, a group report, Session Insights, and reusable knowledge.](assets/hero-workspace-placeholder.svg)
 
