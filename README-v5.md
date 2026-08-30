@@ -48,24 +48,6 @@ words, use checkpoints to ask an agent which sessions match the intent.
 | Scan the latest message and checkpoint without opening every transcript. | Search conversations, files, and the operations that touched them. | Ask AI which sessions best match the work you want to continue. |
 | ![Session cards showing recent messages and checkpoint notes.](assets/session-insight-placeholder.svg) | ![Session search results matched by message content and file activity.](assets/session-insight-placeholder.svg) | ![An agent ranking matching sessions from checkpoint evidence.](assets/session-insight-placeholder.svg) |
 
-### Stay organized
-
-A session name is a start. Add a lead agent and ask it to give your sessions a
-clearer identity with personas, titles, descriptions, and tags. It can use
-checkpoints to understand what each session is working on, choose avatars that
-fit their roles, and organize related sessions into sections.
-
-![Placeholder for the persona editor showing an agent lead assigning session personas, avatars, titles, descriptions, and tags.](assets/stay-organized-persona-editor-placeholder.svg)
-
-> Review my 20 most recent sessions. Use their latest checkpoints to understand
-> each session’s work. Suggest a persona, avatar, title, description, and tags
-> for each one. Group related sessions into sections and put anything unclear
-> in “Needs review.”
-
-Checkpoints give the search enough context to compare many sessions without
-loading every conversation. The full transcript is still there when you need
-more evidence.
-
 ## `/goal`, But Better.
 
 **Set a goal. Give it a team. See how the work is going.**
