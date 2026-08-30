@@ -7,7 +7,7 @@ It uses the session logs your agents already create. Open it when you need to
 understand the work, or let it quietly monitor what matters and keep a report
 ready for when you return. Your workflow does not have to change.
 
-![Placeholder for a GitSense Chat workspace showing session discovery, a group report, Session Insights, and reusable knowledge.](assets/hero-workspace-placeholder.svg)
+![GitSense Chat captures the sessions agents already create and makes them searchable, organized, and reusable.](assets/same-sessions-more-useful-no-title.png)
 
 ## Quick Start
 
@@ -162,8 +162,6 @@ GitSense Chat reads the session logs agents already produce and makes them
 searchable, inspectable, and reusable while sessions are active and after they
 stop. Analyzers can turn recorded activity into Session Insights. Brains,
 lessons, notes, and rules carry reviewed knowledge into future work.
-
-![GitSense Chat captures the sessions agents already create and makes them searchable, organized, and reusable.](assets/same-sessions-more-useful-no-title.png)
 
 With a supported runtime integration, a Group lead can also check live session
 state, communicate with agents, coordinate work, and run observation loops that
