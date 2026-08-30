@@ -166,6 +166,8 @@ searchable, inspectable, and reusable while sessions are active and after they
 stop. Analyzers can turn recorded activity into Session Insights. Brains,
 lessons, notes, and rules carry reviewed knowledge into future work.
 
+![GitSense Chat captures the sessions agents already create and makes them searchable, organized, and reusable.](assets/same-sessions-more-useful-no-title.png)
+
 With a supported runtime integration, a Group lead can also check live session
 state, communicate with agents, coordinate work, and run observation loops that
 update a report over time.
