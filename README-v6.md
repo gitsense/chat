@@ -19,15 +19,40 @@ generate reports from their activity, and build reusable knowledge.
 Here are a few ways GitSense Chat turns agent activity and repository knowledge
 into useful information for people and AI agents.
 
-| **Many Sessions. One Conversation.** | **One Session. Multiple Perspectives.** |
-| :---: | :---: |
-| ![A Group lead report covering status, checkpoint freshness, and risks across a team of sessions.](assets/chat-widget-team-report.png) | ![One 52-tool-call session presented as focused Session Outline and Change Review views.](assets/one-session-multiple-views.png) |
-| Bring related sessions into a Group and ask one lead what is happening across all of them. | Create custom views to examine the same session through different lenses. |
+### Many Sessions. One Conversation.
 
-| **Same Search. More Context.** | **One Expert. Many Agents.** |
+Bring related sessions into a Group and ask one lead what is happening across
+all of them.
+
+| **Organize the sessions** | **Ask once, get one report** |
 | :---: | :---: |
-| ![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png) | ![A domain expert serving repository knowledge to coding agents.](assets/portable-intelligence-demo-billboard.png) |
-| Give agents enough context to decide what matters before spending tokens on entire files. | Build Pi domain experts that grow with your work, then let Claude, Codex, and other agents consult them through `gsc ask`. |
+| ![Placeholder for sessions organized into a Group.](assets/session-insight-placeholder.svg) | ![Placeholder for asking a Group lead and reviewing its report.](assets/session-insight-placeholder.svg) |
+
+### One Session. Multiple Perspectives.
+
+Create custom views to examine the same session through different lenses.
+
+| **Start with the same session** | **Choose the perspective that matters** |
+| :---: | :---: |
+| ![Placeholder for a session with messages and tool calls.](assets/session-insight-placeholder.svg) | ![Placeholder for custom views over the same session.](assets/session-insight-placeholder.svg) |
+
+### Same Search. More Context.
+
+Give agents enough context to decide what matters before spending tokens on
+entire files.
+
+| **See why matches matter** | **See the shape before reading** |
+| :---: | :---: |
+| ![Placeholder for the same search with repository context.](assets/session-insight-placeholder.svg) | ![Placeholder for a summary of matching files before opening them.](assets/session-insight-placeholder.svg) |
+
+### One Expert. Many Agents.
+
+Build Pi domain experts that grow with your work, then let Claude, Codex, and
+other agents consult them through `gsc ask`.
+
+| **Build the domain expert** | **Let agents ask what it knows** |
+| :---: | :---: |
+| ![Placeholder for building a domain expert from repository knowledge.](assets/session-insight-placeholder.svg) | ![Placeholder for Claude and Codex consulting the same domain expert.](assets/session-insight-placeholder.svg) |
 
 ## Quick Start
 
