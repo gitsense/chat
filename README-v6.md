@@ -30,7 +30,8 @@ all of them. The answer reflects the sessions and purpose of that Group.
 
 ### One Session. Multiple Perspectives.
 
-Create custom views to examine the same session through different lenses.
+Create custom views to examine the same session through different lenses. See
+how one prompt and 52 tool calls become something you can actually review.
 
 | **The session** | **Change Review** | **Session Outline** |
 | :---: | :---: | :---: |
