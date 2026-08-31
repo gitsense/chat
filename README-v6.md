@@ -3,36 +3,31 @@
 **GitSense is the intelligence layer that works alongside your agentic
 development tools.**
 
-Here, intelligence means useful information gathered from the work, not a
-smarter underlying model. GitSense turns session logs, checkpoints, tool calls,
-file activity, and reviewed knowledge into better information for people and
-AI agents.
+Here, intelligence means useful information gathered from your agent sessions
+and codebase, not a smarter underlying model. GitSense turns session logs,
+checkpoints, tool calls, file activity, and reviewed repository knowledge into
+better information for people and AI agents.
 
 GitSense Chat makes that intelligence easy to work with. Find sessions, ask AI
 about the work, organize related sessions into Groups, monitor sessions and
 generate reports from their activity, and build reusable knowledge.
 
-Make GitSense Chat your first stop for planning, or simply use it when you need
-it; the intelligence is there whenever you return, without changing your
-workflow.
-
 ![GitSense Chat captures the sessions agents already create and makes them searchable, organized, and reusable.](assets/same-sessions-more-useful-no-title.png)
 
 ## What Intelligence Looks Like
 
-GitSense Chat turns the activity and knowledge around agentic work into
-information that helps people and agents understand what happened, what
-matters, and where to look next.
+Here are a few ways GitSense Chat turns agent activity and repository knowledge
+into useful information for people and AI agents.
 
-| **Understand work across sessions** | **Focus on the evidence that matters** |
+| **Many Sessions. One Conversation.** | **One Session. Multiple Perspectives.** |
 | :---: | :---: |
 | ![A Group lead report covering status, checkpoint freshness, and risks across a team of sessions.](assets/chat-widget-team-report.png) | ![One 52-tool-call session presented as focused Session Outline and Change Review views.](assets/one-session-multiple-views.png) |
-| Ask one lead what is happening across a Group and get a report grounded in the available session evidence. | Turn a wall of tool calls into views for the files, commands, risks, and decisions you care about. |
+| Bring related sessions into a Group and ask one lead what is happening across all of them. | Create custom views to examine the same session through different lenses. |
 
-| **Search with more to go on** | **Make knowledge portable** |
+| **Same Search. More Context.** | **One Expert. Many Agents.** |
 | :---: | :---: |
-| ![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png) | ![A portable-intelligence demonstration using repository knowledge to answer one question across thousands of files.](assets/portable-intelligence-demo-billboard.png) |
-| Find the same matching code while seeing what each file is for before deciding what to open. | Turn repository knowledge into a queryable Brain that people and agents can use without loading the entire corpus. |
+| ![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png) | ![A domain expert serving repository knowledge to coding agents.](assets/portable-intelligence-demo-billboard.png) |
+| Give agents enough context to decide what matters before spending tokens on entire files. | Build Pi domain experts that grow with your work, then let Claude, Codex, and other agents consult them through `gsc ask`. |
 
 ## Quick Start
 
