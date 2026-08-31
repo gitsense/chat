@@ -9,8 +9,8 @@ file activity, and reviewed knowledge into better information for people and
 AI agents.
 
 GitSense Chat makes that intelligence easy to work with. Find sessions, ask AI
-about the work, organize related sessions into Groups, monitor reports, and
-build reusable knowledge.
+about the work, organize related sessions into Groups, monitor sessions and
+generate reports from their activity, and build reusable knowledge.
 
 Make GitSense Chat your first stop for planning, or simply use it when you need
 it; the intelligence is there whenever you return, without changing your
