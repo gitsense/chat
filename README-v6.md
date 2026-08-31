@@ -21,8 +21,10 @@ into useful information for people and AI agents.
 
 ### Many Sessions. One Conversation.
 
-Organize related sessions your way and ask one lead what is happening across
-all of them. The answer reflects the sessions and purpose of that Group.
+Organize related sessions into a Group, then give that Group an agent with a
+purpose. A Personal Assistant can keep track of your work, while a Team Lead
+can watch progress, blockers, and coordination risks across the team. Both can
+provide ongoing updates as often as you need them.
 
 | **My Work** | **My Team** |
 | :---: | :---: |
