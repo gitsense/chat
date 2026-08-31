@@ -21,38 +21,68 @@ into useful information for people and AI agents.
 
 ### Many Sessions. One Conversation.
 
-Bring related sessions into a Group and ask one lead what is happening across
-all of them.
+Organize related sessions your way and ask one lead what is happening across
+all of them. The answer reflects the sessions and purpose of that Group.
 
-| **Organize the sessions** | **Ask once, get one report** |
+| **My Work** | **My Team** |
 | :---: | :---: |
-| ![Placeholder for sessions organized into a Group.](assets/session-insight-placeholder.svg) | ![Placeholder for asking a Group lead and reviewing its report.](assets/session-insight-placeholder.svg) |
+| ![Placeholder for a My Work Group with a response about personal sessions.](assets/session-insight-placeholder.svg) | ![Placeholder for a My Team Group with a response about shared team sessions.](assets/session-insight-placeholder.svg) |
 
 ### One Session. Multiple Perspectives.
 
 Create custom views to examine the same session through different lenses.
 
-| **Start with the same session** | **Choose the perspective that matters** |
-| :---: | :---: |
-| ![Placeholder for a session with messages and tool calls.](assets/session-insight-placeholder.svg) | ![Placeholder for custom views over the same session.](assets/session-insight-placeholder.svg) |
+| **The session** | **Change Review** | **Session Outline** |
+| :---: | :---: | :---: |
+| ![Placeholder for a session page with no custom views configured.](assets/session-insight-placeholder.svg) | ![Placeholder for a custom Change Review view over the same session.](assets/session-insight-placeholder.svg) | ![Placeholder for a custom Session Outline view over the same session.](assets/session-insight-placeholder.svg) |
 
 ### Same Search. More Context.
 
 Give agents enough context to decide what matters before spending tokens on
 entire files.
 
-| **See why matches matter** | **See the shape before reading** |
-| :---: | :---: |
-| ![Placeholder for the same search with repository context.](assets/session-insight-placeholder.svg) | ![Placeholder for a summary of matching files before opening them.](assets/session-insight-placeholder.svg) |
+<table>
+  <tr>
+    <td width="35%" valign="top">
+      <strong>Same matches. More to go on.</strong>
+      <p>Plain ripgrep finds the matching code:</p>
+      <pre><code>rg -g '**/src/**/s*.rs' matcher</code></pre>
+      <p>GitSense returns the same matches with the purpose of each file:</p>
+      <pre><code>gsc rg matcher \
+  -g '**/src/**/s*.rs' \
+  --db code-intent \
+  --fields purpose</code></pre>
+      <p>Agents can decide what matters before loading entire files.</p>
+    </td>
+    <td width="65%" valign="top">
+      <img src="assets/session-insight-placeholder.svg" alt="Placeholder comparing the same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file." width="100%">
+    </td>
+  </tr>
+</table>
 
 ### One Expert. Many Agents.
 
-Build Pi domain experts that grow with your work, then let Claude, Codex, and
-other agents consult them through `gsc ask`.
+Build a Pi domain expert over knowledge too large for one context window. Five
+focused helpers each cover part of the GitHub issue history, while the lead
+keeps a lightweight map of who knows what and routes questions to the right
+agent.
 
-| **Build the domain expert** | **Let agents ask what it knows** |
+Agents are designed to be swappable. Save what needs to survive as durable
+notes so new agents can pick up where previous agents left off.
+
+**Build the GitHub Issues Expert**
+
+![Placeholder for a GitHub Issues Expert Group with one lead and five focused helpers.](assets/session-insight-placeholder.svg)
+
+Codex, Claude Code, and other agents can consult the same expert through
+`gsc ask`:
+
+> Do we already have an issue similar to [problem]? Return the matching issue
+> numbers and explain why they are related.
+
+| **Ask from Codex** | **Ask from Claude Code** |
 | :---: | :---: |
-| ![Placeholder for building a domain expert from repository knowledge.](assets/session-insight-placeholder.svg) | ![Placeholder for Claude and Codex consulting the same domain expert.](assets/session-insight-placeholder.svg) |
+| ![Placeholder for Codex consulting the GitHub Issues Expert through gsc ask.](assets/session-insight-placeholder.svg) | ![Placeholder for Claude Code consulting the same GitHub Issues Expert through gsc ask.](assets/session-insight-placeholder.svg) |
 
 ## Quick Start
 
