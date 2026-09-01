@@ -52,11 +52,12 @@ into useful information for people and AI agents.
 
 ### Resume Faster
 
-**Search what you remember, not what the session was called.**
+**Find your sessions by more than a name.**
 
-Combine conversation content with files an agent read, wrote, or edited.
-GitSense shows why each session matched, so you can return to the right work
-without opening transcripts one by one.
+Scan a dozen sessions and their last messages in seconds to see what each was
+about. No transcripts to open or sessions to click through. If the name is not
+enough, search messages or files touched. If you remember the goal but not the
+words, use checkpoints to ask an agent which sessions match the intent.
 
 ![Session search results matching both file activity and conversation content.](assets/resume-faster-search.png)
 
