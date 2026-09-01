@@ -56,15 +56,27 @@ into useful information for people and AI agents.
 
 The Sessions page shows the latest message beside each session, so you can
 preview the work before opening the transcript. Search by file or conversation
-content when you remember a detail instead of a title. Browse checkpoint
-summaries when you remember what the agent was trying to accomplish.
+content when you remember a detail instead of a title.
 
-| **Preview the work** | **Search by file or content** | **Browse by intent** |
-| :---: | :---: | :---: |
-| ![The Sessions page with sessions on the left and the latest message in a preview pane.](assets/resume-faster-browse.png) | ![Session search results matching both file activity and conversation content.](assets/resume-faster-search.png) | ![The Checkpoints page with checkpoint summaries on the left and the selected checkpoint on the right.](assets/resume-faster-checkpoints.png) |
+| **Preview before you open** | **Search what you remember** |
+| :---: | :---: |
+| ![The Sessions page with sessions on the left and the latest message in a preview pane.](assets/resume-faster-browse.png) | ![Session search results matching both file activity and conversation content.](assets/resume-faster-search.png) |
 
-If you still cannot find it, ask AI to review the available checkpoints and
-identify the sessions that best match the work you want to continue.
+When a conversation starts to wander, when you finish a task, or before context
+is compacted, capture what matters while it is still fresh:
+
+> **Ask your agent:**
+>
+> Create a GitSense checkpoint for this session. Capture the goal, what has
+> happened, key decisions, evidence, risks, open questions, files changed, and
+> next action.
+
+Later, resume by asking what you remember:
+
+> **Then ask:**
+>
+> What issue did I flag while updating `TrackerView.js`, and what did I plan to
+> do next?
 
 ### Many Sessions. One Conversation.
 
