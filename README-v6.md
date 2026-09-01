@@ -113,9 +113,22 @@ updates as often as the team needs.
 Create custom views to examine the same session through different lenses. See
 how one prompt and 52 tool calls become something you can actually review.
 
-| **The session** | **Change Review** | **Session Outline** |
-| :---: | :---: | :---: |
-| ![Placeholder for a session page with no custom views configured.](assets/session-insight-placeholder.svg) | ![Placeholder for a custom Change Review view over the same session.](assets/session-insight-placeholder.svg) | ![Placeholder for a custom Session Outline view over the same session.](assets/session-insight-placeholder.svg) |
+<table>
+  <thead>
+    <tr>
+      <th width="33%" align="center">The session</th>
+      <th width="33%" align="center">Change Review</th>
+      <th width="33%" align="center">Session Outline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="33%" valign="top"><img src="assets/one-session-the-session.png" alt="The original session with 52 tool calls and its available Session Insight views." width="100%"></td>
+      <td width="33%" valign="top"><img src="assets/one-session-change-review.png" alt="A custom Change Review perspective over the same session." width="100%"></td>
+      <td width="33%" valign="top"><img src="assets/one-session-session-outline.png" alt="A custom Session Outline perspective over the same session." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Same Search. More Context.
 
