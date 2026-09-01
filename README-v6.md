@@ -52,31 +52,13 @@ into useful information for people and AI agents.
 
 ### Resume Faster
 
-**Need more than a session name?**
+**Search what you remember, not what the session was called.**
 
-The Sessions page shows the latest message beside each session, so you can
-preview the work before opening the transcript. Search by file or conversation
-content when you remember a detail instead of a title.
+Combine conversation content with files an agent read, wrote, or edited.
+GitSense shows why each session matched, so you can return to the right work
+without opening transcripts one by one.
 
-| **Preview before you open** | **Search what you remember** |
-| :---: | :---: |
-| ![The Sessions page with sessions on the left and the latest message in a preview pane.](assets/resume-faster-browse.png) | ![Session search results matching both file activity and conversation content.](assets/resume-faster-search.png) |
-
-When a conversation starts to wander, when you finish a task, or before context
-is compacted, capture what matters while it is still fresh:
-
-> **Ask your agent:**
->
-> Create a GitSense checkpoint for this session. Capture the goal, what has
-> happened, key decisions, evidence, risks, open questions, files changed, and
-> next action.
-
-Later, resume by asking what you remember:
-
-> **Then ask:**
->
-> What issue did I flag while updating `TrackerView.js`, and what did I plan to
-> do next?
+![Session search results matching both file activity and conversation content.](assets/resume-faster-search.png)
 
 ### Many Sessions. One Place.
 
