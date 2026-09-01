@@ -91,22 +91,24 @@ the work.
   </tr>
 </table>
 
-### Team Coordination at Agent Speed
+### Build Dashboards You Can Talk To
 
-Tickets, branches, pull requests, and standups give teams visibility at planned
-handoffs. Coding agents create a new layer of activity between those handoffs,
-with many sessions exploring, changing, and reviewing work in parallel. The
-work moves faster, but decisions, overlap, and emerging risks can become harder
-to see.
+Every card can have its own agent session, context, history, and responsibility.
+Instead of asking one agent to understand everything, distribute the work
+across specialists. A dashboard with 30 cards can represent 30 independent
+contexts, each focused on one team member, system, domain, risk, or source of
+activity.
 
-GitSense Groups give teams a shared view of that work. A project manager can
-bring every session for a feature into one page. A team lead can watch for
-overlapping file changes and possible merge conflicts. A domain expert can
-follow changes to their area and help the team respond before issues reach
-review. Give the Group a lead, ask how things are going, or have it provide
-updates as often as the team needs.
+Mix team status reports with heads-up agents that watch Slack, GitHub, tests,
+coordination risks, or anything else the team needs to keep in view. Ask the
+agent behind a card why something changed, tell it what deserves attention, or
+ask Roboto to coordinate the agents behind the entire dashboard.
 
-![A My Team Group with Tom, a Team Lead agent, monitoring team sessions and coordination risks.](assets/group-my-team.png)
+> **Why this scales:** GitSense Chat consolidates agent session activity into
+> one place and makes it fast to query. Dashboards can reflect new activity in
+> near real time, even when the work is spread across dozens of sessions.
+
+![A My Team dashboard combining team status reports, heads-up metric cards, and Roboto as its AI assistant.](assets/group-my-team.png)
 
 ### One Session. Multiple Perspectives.
 
