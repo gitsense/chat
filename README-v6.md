@@ -81,8 +81,8 @@ same session can appear in more than one Group, so you can create personal
 workspaces, project views, temporary reviews, or any other arrangement without
 moving or duplicating the underlying session.
 
-Choose a view and arrange the sessions to create a layout that makes sense for
-the work.
+Choose a view and arrange the sessions to create a layout that matches how you
+work.
 
 <table>
   <tr>
@@ -104,11 +104,11 @@ coordination risks, or anything else the team needs to keep in view. Ask the
 agent behind a card why something changed, tell it what deserves attention, or
 ask Roboto to coordinate the agents behind the entire dashboard.
 
+![A My Team dashboard combining team status reports, heads-up metric cards, and Roboto as its AI assistant.](assets/group-my-team.png)
+
 > **Why this scales:** GitSense Chat consolidates agent session activity into
 > one place and makes it fast to query. Dashboards can reflect new activity in
 > near real time, even when the work is spread across dozens of sessions.
-
-![A My Team dashboard combining team status reports, heads-up metric cards, and Roboto as its AI assistant.](assets/group-my-team.png)
 
 ### One Session. Multiple Perspectives.
 
