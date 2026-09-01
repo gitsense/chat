@@ -75,7 +75,7 @@ provide ongoing updates as often as you need them.
 
 | **My Work** | **My Team** |
 | :---: | :---: |
-| ![Placeholder for a My Work Group with a response about personal sessions.](assets/session-insight-placeholder.svg) | ![Placeholder for a My Team Group with a response about shared team sessions.](assets/session-insight-placeholder.svg) |
+| ![A My Work Group with an AI assistant watching personal sessions and highlighting what needs attention.](assets/group-my-work.png) | ![A My Team Group with Tom, a Team Lead agent, watching team sessions for progress and coordination risks.](assets/group-my-team.png) |
 
 ### One Session. Multiple Perspectives.
 
