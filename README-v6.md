@@ -59,9 +59,20 @@ about. No transcripts to open or sessions to click through. If the name is not
 enough, search messages or files touched. If you remember the goal but not the
 words, use checkpoints to ask an agent which sessions match the intent.
 
-| **Review quickly** | **Search what you remember** |
-| :---: | :---: |
-| ![The Sessions page with sessions on the left and the latest message in a preview pane.](assets/resume-faster-browse.png) | ![Session search results matching both file activity and conversation content.](assets/resume-faster-search.png) |
+<table>
+  <thead>
+    <tr>
+      <th width="50%" align="center">Review quickly</th>
+      <th width="50%" align="center">Search what you remember</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><img src="assets/resume-faster-browse.png" alt="The Sessions page with sessions on the left and the latest message in a preview pane." width="100%"></td>
+      <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="Session search results matching both file activity and conversation content." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Many Sessions. One Place.
 
