@@ -70,16 +70,13 @@ same session can appear in more than one Group, so you can create personal
 workspaces, project views, temporary reviews, or any other arrangement without
 moving or duplicating the underlying session.
 
-![A My Work Group bringing personal sessions and an AI assistant together.](assets/group-my-work.png)
-
 Switch between layouts to see the same sessions in the way that makes the most
 sense for the work.
 
 <table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/session-insight-placeholder.svg" alt="Placeholder for sessions organized in a card layout." width="100%"></td>
-    <td width="33%" valign="top"><img src="assets/session-insight-placeholder.svg" alt="Placeholder for sessions organized in a row layout." width="100%"></td>
-    <td width="33%" valign="top"><img src="assets/session-insight-placeholder.svg" alt="Placeholder for sessions organized in a column layout." width="100%"></td>
+    <td width="50%" valign="top"><img src="assets/group-my-work.png" alt="A My Work Group bringing personal sessions and an AI assistant together." width="100%"></td>
+    <td width="50%" valign="top"><img src="assets/group-my-work.png" alt="The same My Work Group, temporarily repeated to preview an alternate layout." width="100%"></td>
   </tr>
 </table>
 
