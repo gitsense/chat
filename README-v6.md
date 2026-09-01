@@ -78,16 +78,42 @@ Later, resume by asking what you remember:
 > What issue did I flag while updating `TrackerView.js`, and what did I plan to
 > do next?
 
-### Many Sessions. One Conversation.
+### Many Sessions. One Place.
 
-Organize related sessions into a Group, then give that Group an agent with a
-purpose. A Personal Assistant can keep track of your work, while a Team Lead
-can watch progress, blockers, and coordination risks across the team. Both can
-provide ongoing updates as often as you need them.
+Bring related sessions into a Group and organize them around how you work. The
+same session can appear in more than one Group, so you can create personal
+workspaces, project views, temporary reviews, or any other arrangement without
+moving or duplicating the underlying session.
 
-| **My Work** | **My Team** |
-| :---: | :---: |
-| ![A My Work Group with an AI assistant watching personal sessions and highlighting what needs attention.](assets/group-my-work.png) | ![A My Team Group with Tom, a Team Lead agent, watching team sessions for progress and coordination risks.](assets/group-my-team.png) |
+![A My Work Group bringing personal sessions and an AI assistant together.](assets/group-my-work.png)
+
+Switch between layouts to see the same sessions in the way that makes the most
+sense for the work.
+
+<table>
+  <tr>
+    <td width="33%" valign="top"><img src="assets/session-insight-placeholder.svg" alt="Placeholder for sessions organized in a card layout." width="100%"></td>
+    <td width="33%" valign="top"><img src="assets/session-insight-placeholder.svg" alt="Placeholder for sessions organized in a row layout." width="100%"></td>
+    <td width="33%" valign="top"><img src="assets/session-insight-placeholder.svg" alt="Placeholder for sessions organized in a column layout." width="100%"></td>
+  </tr>
+</table>
+
+### Team Coordination at Agent Speed
+
+Tickets, branches, pull requests, and standups give teams visibility at planned
+handoffs. Coding agents create a new layer of activity between those handoffs,
+with many sessions exploring, changing, and reviewing work in parallel. The
+work moves faster, but decisions, overlap, and emerging risks can become harder
+to see.
+
+GitSense Groups give teams a shared view of that work. A project manager can
+bring every session for a feature into one page. A team lead can watch for
+overlapping file changes and possible merge conflicts. A domain expert can
+follow changes to their area and help the team respond before issues reach
+review. Give the Group a lead, ask how things are going, or have it provide
+updates as often as the team needs.
+
+![A My Team Group with Tom, a Team Lead agent, monitoring team sessions and coordination risks.](assets/group-my-team.png)
 
 ### One Session. Multiple Perspectives.
 
