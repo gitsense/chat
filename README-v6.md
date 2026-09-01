@@ -61,7 +61,7 @@ summaries when you remember what the agent was trying to accomplish.
 
 | **Preview the work** | **Search by file or content** | **Browse by intent** |
 | :---: | :---: | :---: |
-| ![Placeholder for the Sessions page with sessions on the left and the latest message in a preview pane.](assets/session-insight-placeholder.svg) | ![Placeholder for session search results matching both file activity and conversation content.](assets/session-insight-placeholder.svg) | ![Placeholder for the Checkpoints page with session and checkpoint summaries on the left and the selected checkpoint on the right.](assets/session-insight-placeholder.svg) |
+| ![The Sessions page with sessions on the left and the latest message in a preview pane.](assets/resume-faster-browse.png) | ![Session search results matching both file activity and conversation content.](assets/resume-faster-search.png) | ![The Checkpoints page with checkpoint summaries on the left and the selected checkpoint on the right.](assets/resume-faster-checkpoints.png) |
 
 If you still cannot find it, ask AI to review the available checkpoints and
 identify the sessions that best match the work you want to continue.
