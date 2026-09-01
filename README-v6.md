@@ -81,8 +81,8 @@ same session can appear in more than one Group, so you can create personal
 workspaces, project views, temporary reviews, or any other arrangement without
 moving or duplicating the underlying session.
 
-Switch between layouts to see the same sessions in the way that makes the most
-sense for the work.
+Choose a view and arrange the sessions to create a layout that makes sense for
+the work.
 
 <table>
   <tr>
@@ -129,14 +129,14 @@ entire files.
       <p>Plain ripgrep finds the matching code:</p>
       <pre><code>rg -g '**/src/**/s*.rs' matcher</code></pre>
       <p>GitSense returns the same matches with the purpose of each file:</p>
-      <pre><code>gsc rg matcher \
-  -g '**/src/**/s*.rs' \
+      <pre><code>gsc rg -g '**/src/**/s*.rs' \
   --db code-intent \
-  --fields purpose</code></pre>
+  --fields purpose \
+  matcher</code></pre>
       <p>Agents can decide what matters before loading entire files.</p>
     </td>
     <td width="65%" valign="top">
-      <img src="assets/session-insight-placeholder.svg" alt="Placeholder comparing the same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file." width="100%">
+      <img src="assets/same-search-more-to-go-on.png" alt="The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file." width="100%">
     </td>
   </tr>
 </table>
