@@ -59,9 +59,9 @@ about. No transcripts to open or sessions to click through. If the name is not
 enough, search messages or files touched. If you remember the goal but not the
 words, use checkpoints to ask an agent which sessions match the intent.
 
-| **Review quickly** | **Search what you remember** | **Ask by intent** |
-| :---: | :---: | :---: |
-| ![The Sessions page with sessions on the left and the latest message in a preview pane.](assets/resume-faster-browse.png) | ![Session search results matching both file activity and conversation content.](assets/resume-faster-search.png) | ![The Checkpoints page with checkpoint summaries on the left and the selected checkpoint on the right.](assets/resume-faster-checkpoints.png) |
+| **Review quickly** | **Search what you remember** |
+| :---: | :---: |
+| ![The Sessions page with sessions on the left and the latest message in a preview pane.](assets/resume-faster-browse.png) | ![Session search results matching both file activity and conversation content.](assets/resume-faster-search.png) |
 
 ### Many Sessions. One Place.
 
