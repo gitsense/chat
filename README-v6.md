@@ -96,10 +96,9 @@ tmux, cmux, and Herdr help you run and arrange agent sessions. Add those active
 sessions to a GitSense Chat Group and give your multiplexer a lead that can
 monitor the work happening inside every pane.
 
-Tell the lead to create a loop with `gsc pi sessions groups messages`. It will
-know how to efficiently monitor messages across the Group, skip reviews when
-nothing has changed, and alert you to progress, blockers, or agents stuck in a
-loop without rereading every transcript.
+Ask the lead to create a loop that checks recent messages across the Group.
+GitSense leads know how to retrieve only the context they need, avoid
+reprocessing unchanged activity, and keep the monitoring token efficient.
 
 ![Placeholder for a 5 by 4 GitSense Tiles view with 20 active sessions and a lead monitoring them for agents stuck in a loop.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
