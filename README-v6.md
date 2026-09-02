@@ -88,6 +88,28 @@ moving or duplicating the underlying session.
   </tr>
 </table>
 
+### Give Your Multiplexer a Lead.
+
+tmux, cmux, and Herdr help you run and arrange agent sessions. Add those active
+sessions to a GitSense Chat Group and assign them a lead to help you monitor the
+work happening inside every pane.
+
+The lead can review a bounded number of recent user and assistant messages from
+each session without processing every transcript or wall of tool results. On
+the next pass, it can check the Group signature and skip another review when
+nothing has changed. Ask it for a progress summary, potential blockers,
+sessions that need attention, or anything else you would normally check one
+pane at a time.
+
+Have the lead check the Group every few minutes for agents stuck in a loop.
+Instead of only showing that a session is active, the lead can identify
+repeated actions, errors, or approaches that are not producing meaningful
+progress, explain the evidence, and suggest how to intervene.
+
+```sh
+gsc pi sessions groups messages <group-id> --last 5
+```
+
 ### Build Dashboards You Can Talk To
 
 Every card can have its own agent session, context, history, and responsibility.
