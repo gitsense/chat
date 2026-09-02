@@ -2,10 +2,11 @@
 
 **GitSense is the intelligence platform for AI agent workflows.**
 
-It works quietly alongside the tools you already use, gathering useful
-information from agent sessions, codebase activity, and reviewed knowledge.
-Use it to understand what your agents are doing, guide work while it is
-underway, and give every agent a better starting point.
+It works quietly alongside the tools you already use. No proxy or wrapper is
+required. GitSense gathers useful information from agent sessions, codebase
+activity, and reviewed knowledge. Use it to understand what your agents are
+doing, guide work while it is underway, and give every agent a better starting
+point.
 
 GitSense Chat makes that intelligence easy to work with. Find sessions, ask AI
 about the work, organize related sessions into Groups, monitor sessions and
@@ -74,7 +75,7 @@ words, use checkpoints to ask an agent which sessions match the intent.
   </tbody>
 </table>
 
-### Many Sessions. One Place.
+### Give your sessions context.
 
 Bring related sessions into a Group and organize them around how you work. The
 same session can appear in more than one Group, so you can create personal
@@ -91,24 +92,15 @@ moving or duplicating the underlying session.
 ### Give Your Multiplexer a Lead.
 
 tmux, cmux, and Herdr help you run and arrange agent sessions. Add those active
-sessions to a GitSense Chat Group and assign them a lead to help you monitor the
-work happening inside every pane.
+sessions to a GitSense Chat Group and give your multiplexer a lead that can
+monitor the work happening inside every pane.
 
-The lead can review a bounded number of recent user and assistant messages from
-each session without processing every transcript or wall of tool results. On
-the next pass, it can check the Group signature and skip another review when
-nothing has changed. Ask it for a progress summary, potential blockers,
-sessions that need attention, or anything else you would normally check one
-pane at a time.
+Tell the lead to create a loop with `gsc pi sessions groups messages`. It will
+know how to efficiently monitor messages across the Group, skip reviews when
+nothing has changed, and alert you to progress, blockers, or agents stuck in a
+loop without rereading every transcript.
 
-Have the lead check the Group every few minutes for agents stuck in a loop.
-Instead of only showing that a session is active, the lead can identify
-repeated actions, errors, or approaches that are not producing meaningful
-progress, explain the evidence, and suggest how to intervene.
-
-```sh
-gsc pi sessions groups messages <group-id> --last 5
-```
+![Placeholder for a 5 by 4 GitSense Tiles view with 20 active sessions and a lead monitoring them for agents stuck in a loop.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
 ### Build Dashboards You Can Talk To
 
