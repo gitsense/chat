@@ -135,24 +135,33 @@ and monitor the Group token efficiently.
   </tbody>
 </table>
 
-### Build Dashboards You Can Talk To
+### Build an observation system that scales.
 
-Every card can have its own agent session, context, history, and responsibility.
-Instead of asking one agent to understand everything, distribute the work
-across specialists. A dashboard with 30 cards can represent 30 independent
-contexts, each focused on one team member, system, domain, risk, or source of
-activity.
+Start with one focused task. Create a Group, add the agents it needs, and give
+the Group a lead. Each agent keeps the context for its part of the work, while
+the lead combines what they learn.
 
-Mix team status reports with heads-up agents that watch Slack, GitHub, tests,
-coordination risks, or anything else the team needs to keep in view. Ask the
-agent behind a card why something changed, tell it what deserves attention, or
-ask Roboto to coordinate the agents behind the entire dashboard.
+To bring that work into a larger view, add the lead to another Group. The
+GitHub Watcher can lead a focused Group for issues and pull requests while
+appearing as one agent in the My Team Dashboard Group. The dashboard stays
+simple, but you can open the GitHub Watcher Group whenever you need the details.
 
-![A My Team dashboard combining team status reports, heads-up metric cards, and Roboto as its AI assistant.](assets/group-my-team.png)
+![A GitHub Watcher appearing in the My Team Dashboard Group while leading a focused Group of GitHub observers.](assets/scalable-observation-groups.svg)
 
-> **Why this scales:** GitSense Chat consolidates agent session activity into
-> one place and makes it fast to query. Dashboards can reflect new activity in
-> near real time, even when the work is spread across dozens of sessions.
+<table>
+  <thead>
+    <tr>
+      <th width="50%" align="center">My Team Dashboard Group</th>
+      <th width="50%" align="center">GitHub Watcher Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><img src="assets/group-my-team.png" alt="The My Team Dashboard Group with GitHub Watcher, Product Health Monitor, Slack Watcher, team members, and Roboto." width="100%"></td>
+      <td width="50%" valign="top"><img src="assets/github-watcher-group-placeholder.svg" alt="Placeholder for the GitHub Watcher Group with focused agents for issues and pull requests." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### One Session. Multiple Perspectives.
 
