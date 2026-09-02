@@ -76,12 +76,17 @@ to ask an agent which sessions match the intent.
   </tbody>
 </table>
 
-### Give your sessions context.
+### Give yourself a better starting point.
 
-Bring related sessions into a Group and organize them around how you work. The
-same session can appear in more than one Group, so you can create personal
-workspaces, project views, temporary reviews, or any other arrangement without
-moving or duplicating the underlying session.
+Your agents may be spread across many sessions and multiplexer panes. GitSense
+helps you understand what is happening across them before deciding what needs
+your attention.
+
+#### Organize around how you work.
+
+Bring related sessions into a Group and organize them around how you work. Use
+sections and layouts to give those sessions context without changing where
+your agents run.
 
 <table>
   <tr>
@@ -90,11 +95,12 @@ moving or duplicating the underlying session.
   </tr>
 </table>
 
-### Give Your Multiplexer a Lead.
+#### Add a lead that understands the work.
 
-tmux, cmux, and Herdr help you run and arrange agent sessions. Add those active
-sessions to a GitSense Chat Group and give your multiplexer a lead that can
-monitor the work happening inside every pane.
+Adding a lead takes three clicks. The lead receives the Group's sections,
+session placement, and current roster as context with every message, so you can
+ask what is happening across the layout without explaining how the work is
+organized.
 
 Ask the lead to create a loop that checks recent messages across the Group.
 GitSense leads know how to retrieve only the context they need, avoid
