@@ -50,10 +50,9 @@ into useful information for people and AI agents.
 **Find your sessions by more than a name.**
 
 Scan a dozen sessions and their last messages in seconds to see what each was
-about. Browse them in GitSense without resuming each underlying agent session
-just to remember what it was doing. If the name is not enough, search messages
-or files touched. If you remember the goal but not the words, use checkpoints
-to ask an agent which sessions match the intent.
+about. If that is not enough, search messages or files touched. If you remember
+the goal but not the words, use checkpoints to ask an agent which sessions
+match the intent.
 
 <table>
   <thead>
@@ -77,9 +76,6 @@ is a pane, tab, or workspace. GitSense builds on that by letting you bring
 related sessions into a Group, use sections and layouts to show how the work
 fits together, and filter which sessions you see without changing where your
 agents run.
-
-As agents produce more information and conversations wander, this structure
-helps you decide whether to continue a session, compact it, or start fresh.
 
 <table>
   <thead>
