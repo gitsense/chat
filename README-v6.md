@@ -76,7 +76,7 @@ to ask an agent which sessions match the intent.
   </tbody>
 </table>
 
-### Give yourself a better starting point.
+### Turn session noise into clarity.
 
 Your agents may be spread across many sessions and multiplexer panes. GitSense
 helps you understand what is happening across them before deciding what needs
