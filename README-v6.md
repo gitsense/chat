@@ -45,30 +45,6 @@ same Brains, notes, lessons, and rules.
 Here are a few ways GitSense Chat turns agent activity and repository knowledge
 into useful information for people and AI agents.
 
-### Resume Faster
-
-**Find your sessions by more than a name.**
-
-Scan a dozen sessions and their last messages in seconds to see what each was
-about. If that is not enough, search messages or files touched. If you remember
-the goal but not the words, use checkpoints to ask an agent which sessions
-match the intent.
-
-<table>
-  <thead>
-    <tr>
-      <th width="50%" align="center">Review quickly</th>
-      <th width="50%" align="center">Search what you remember</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top"><img src="assets/resume-faster-browse.png" alt="The Sessions page with sessions on the left and the latest message in a preview pane." width="100%"></td>
-      <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="Session search results matching both file activity and conversation content." width="100%"></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Organize around how you work.
 
 Terminals and multiplexers give each agent session a place to run, whether that
