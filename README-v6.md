@@ -93,11 +93,25 @@ Bring related sessions into a Group and organize them around how you work. Use
 sections and layouts to give those sessions context without changing where
 your agents run.
 
+Multiplexers arrange panes. GitSense lets you filter which Group sections are
+shown, so a recency layout can narrow the view to sessions active within the
+time windows you care about.
+
 <table>
+  <thead>
+    <tr>
+      <th width="33%" align="center">Organize by status</th>
+      <th width="33%" align="center">Review recent activity</th>
+      <th width="34%" align="center">Filter what you see</th>
+    </tr>
+  </thead>
+  <tbody>
   <tr>
-    <td width="50%" valign="top"><img src="assets/many-sessions-my-work-kanban.png" alt="A My Work Group organized as a Kanban board with an AI assistant monitoring the sessions." width="100%"></td>
-    <td width="50%" valign="top"><img src="assets/many-sessions-my-work-recent-activity.png" alt="The same My Work Group organized by recent session activity with an AI assistant alongside it." width="100%"></td>
+    <td width="33%" valign="top"><img src="assets/many-sessions-my-work-kanban.png" alt="A My Work Group organized as a Kanban board with an AI assistant monitoring the sessions." width="100%"></td>
+    <td width="33%" valign="top"><img src="assets/many-sessions-my-work-recent-activity.png" alt="The same My Work Group organized into sections by recent session activity with an AI assistant alongside it." width="100%"></td>
+    <td width="34%" valign="top"><img src="assets/many-sessions-my-work-recent-activity-tiles.png" alt="A Tiles view filtered to show selected recent-activity sections from the My Work Group." width="100%"></td>
   </tr>
+  </tbody>
 </table>
 
 #### Add a lead that understands the work.
