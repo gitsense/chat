@@ -96,9 +96,7 @@ agents run.
 
 ### Add a lead that understands your work.
 
-**Two clicks and a prompt. That is all it takes.** You do not need to recreate
-or rearrange the sessions already in the Group. The lead receives the Group's
-sections, session placement, and current roster as context with every message.
+**Two clicks and a prompt. That is all it takes.**
 
 Tell the lead what you want to know or monitor. GitSense leads know how to
 retrieve only the context they need, avoid reprocessing unchanged activity,
