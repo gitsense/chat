@@ -76,22 +76,14 @@ to ask an agent which sessions match the intent.
   </tbody>
 </table>
 
-### Bring structure to how your agents work.
+### Organize around how you work.
 
-Tabs and workspaces give sessions a name and a place. As agents produce more
-information and conversations wander, that is not enough to explain how the
-work fits together or help you decide whether to continue, compact, or start
-fresh.
+Tabs and workspaces give sessions a name and a place. GitSense lets you bring
+related sessions into a Group, then use sections and layouts to show how the
+work fits together without changing where your agents run.
 
-GitSense adds structure around those sessions. Organize them around the work,
-then add a lead that understands the Group and can help you decide what needs
-your attention.
-
-#### Organize around how you work.
-
-Bring related sessions into a Group and organize them around how you work. Use
-sections and layouts to give those sessions context without changing where
-your agents run.
+As agents produce more information and conversations wander, this structure
+helps you decide whether to continue a session, compact it, or start fresh.
 
 Multiplexers arrange panes. GitSense lets you filter which Group sections are
 shown, so a recency layout can narrow the view to sessions active within the
@@ -114,7 +106,7 @@ time windows you care about.
   </tbody>
 </table>
 
-#### Add a lead that understands the work.
+### Add a lead that understands your work.
 
 **Two clicks and a prompt. That is all it takes.** You do not need to recreate
 or rearrange the sessions already in the Group. The lead receives the Group's
