@@ -45,6 +45,30 @@ same Brains, notes, lessons, and rules.
 Here are a few ways GitSense Chat turns agent activity and repository knowledge
 into useful information for people and AI agents.
 
+### Give your agents a head start.
+
+Give agents enough context to decide what matters before spending tokens on
+entire files.
+
+<table>
+  <tr>
+    <td width="35%" valign="top">
+      <strong>Same matches. More to go on.</strong>
+      <p>Plain ripgrep finds the matching code:</p>
+      <pre><code>rg -g '**/src/**/s*.rs' matcher</code></pre>
+      <p>GitSense returns the same matches with the purpose of each file:</p>
+      <pre><code>gsc rg -g '**/src/**/s*.rs' \
+  --db code-intent \
+  --fields purpose \
+  matcher</code></pre>
+      <p>Agents can decide what matters before loading entire files.</p>
+    </td>
+    <td width="65%" valign="top">
+      <img src="assets/same-search-more-to-go-on.png" alt="The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file." width="100%">
+    </td>
+  </tr>
+</table>
+
 ### Organize around how you work.
 
 Terminals and multiplexers give each agent session a place to run, whether that
@@ -149,78 +173,6 @@ how one prompt and 52 tool calls become something you can actually review.
     </tr>
   </tbody>
 </table>
-
-### Same Search. More Context.
-
-Give agents enough context to decide what matters before spending tokens on
-entire files.
-
-<table>
-  <tr>
-    <td width="35%" valign="top">
-      <strong>Same matches. More to go on.</strong>
-      <p>Plain ripgrep finds the matching code:</p>
-      <pre><code>rg -g '**/src/**/s*.rs' matcher</code></pre>
-      <p>GitSense returns the same matches with the purpose of each file:</p>
-      <pre><code>gsc rg -g '**/src/**/s*.rs' \
-  --db code-intent \
-  --fields purpose \
-  matcher</code></pre>
-      <p>Agents can decide what matters before loading entire files.</p>
-    </td>
-    <td width="65%" valign="top">
-      <img src="assets/same-search-more-to-go-on.png" alt="The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file." width="100%">
-    </td>
-  </tr>
-</table>
-
-### One Expert. Many Agents.
-
-Build a Pi domain expert over knowledge too large for one context window. Five
-focused helpers each cover part of the GitHub issue history, while the lead
-keeps a lightweight map of who knows what and routes questions to the right
-agent.
-
-Agents are designed to be swappable. Save what needs to survive as durable
-notes so new agents can pick up where previous agents left off.
-
-**Build the GitHub Issues Expert**
-
-![Placeholder for a GitHub Issues Expert Group with one lead and five focused helpers.](assets/session-insight-placeholder.svg)
-
-Codex, Claude Code, and other agents can consult the same expert through
-`gsc ask`:
-
-> Do we already have an issue similar to [problem]? Return the matching issue
-> numbers and explain why they are related.
-
-| **Ask from Codex** | **Ask from Claude Code** |
-| :---: | :---: |
-| ![Placeholder for Codex consulting the GitHub Issues Expert through gsc ask.](assets/session-insight-placeholder.svg) | ![Placeholder for Claude Code consulting the same GitHub Issues Expert through gsc ask.](assets/session-insight-placeholder.svg) |
-
-## One Goal. 4,878 Files. Start With a Conversation.
-
-The examples above show a few things intelligence makes possible. This
-walkthrough shows how they work together.
-
-Create a Group and add a lead in three clicks. Then explain what you need. The
-lead helps you turn the request into a goal with clear acceptance criteria,
-decide how to divide the work, and create focused agents, each with a clear
-name, identity, and responsibility.
-
-In the demo, a human and a lead agent divide and conquer the 4,878-file Codex
-repository. The lead coordinates focused agents, keeps the plan visible, and
-helps the human monitor progress and steer the work through conversation.
-
-The same workflow can build knowledge without stuffing the whole repository
-into every context. Agents can preserve what matters in durable notes, and the
-lead can keep a lightweight map of who knows what. Observation loops can watch
-session activity and generate focused reports, giving both the human and the
-lead better information for deciding what happens next.
-
-The agents can work independently without turning the work into a black box.
-
-![Placeholder for a video showing a lead agent helping a human divide and conquer a 4,878-file repository through conversation.](assets/lead-agent-team-building-video-placeholder.svg)
 
 ## Current Support and Boundaries
 
