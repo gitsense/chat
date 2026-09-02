@@ -116,16 +116,34 @@ time windows you care about.
 
 #### Add a lead that understands the work.
 
-Adding a lead takes three clicks. The lead receives the Group's sections,
-session placement, and current roster as context with every message, so you can
-ask what is happening across the layout without explaining how the work is
-organized.
+**Two clicks and a prompt. That is all it takes.** You do not need to recreate
+or rearrange the sessions already in the Group. The lead receives the Group's
+sections, session placement, and current roster as context with every message.
 
-Ask the lead to create a loop that checks recent messages across the Group.
-GitSense leads know how to retrieve only the context they need, avoid
-reprocessing unchanged activity, and keep the monitoring token efficient.
+Tell the lead what you want to know or monitor. GitSense leads know how to
+retrieve only the context they need, avoid reprocessing unchanged activity,
+and monitor the Group token efficiently.
 
-![Placeholder for a 5 by 4 GitSense Tiles view with 20 active sessions and a lead monitoring them for agents stuck in a loop.](assets/give-your-multiplexer-a-lead-placeholder.svg)
+<table>
+  <tbody>
+    <tr>
+      <td width="25%" valign="top"><strong>1. Add a lead</strong><br><br>Click <strong>Add a lead</strong> from the Group.</td>
+      <td width="75%" valign="top"><img src="assets/create-a-lead-step-1-start.png" alt="A GitSense Chat Group with the Add a lead button ready to be selected." width="100%"></td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top"><strong>2. Create the lead agent</strong><br><br>Confirm the settings and click <strong>Create lead agent</strong>.</td>
+      <td width="75%" valign="top"><img src="assets/create-a-lead-step-2-confirm.png" alt="The Add a lead agent dialog with a managed lead ready to be created." width="100%"></td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top"><strong>3. Describe what you need</strong><br><br>Tell the lead what to monitor, how often to check, and the safeguards to follow.</td>
+      <td width="75%" valign="top"><img src="assets/create-a-lead-step-3-create-loop.png" alt="A prompt asking the Group lead to create a bounded read-only monitoring loop." width="100%"></td>
+    </tr>
+    <tr>
+      <td width="25%" valign="top"><strong>4. Review the report</strong><br><br>The report appears beside the Group and shows what needs your attention.</td>
+      <td width="75%" valign="top"><img src="assets/create-a-lead-step-4-review-reports.png" alt="A Group monitoring report showing loop status, timing, controls, and sessions needing attention." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Build Dashboards You Can Talk To
 
