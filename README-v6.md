@@ -117,14 +117,23 @@ and monitor the Group token efficiently.
 
 ### Build an observation system that scales.
 
-Start with one focused task. Create a Group, add the agents it needs, and give
-the Group a lead. Each agent keeps the context for its part of the work, while
-the lead combines what they learn.
+Creating agents is easy. Keeping them connected and making their combined work
+visible is harder. GitSense gives them Groups, agent-to-agent messaging, and
+leads that can coordinate the work, then lets you see the result through
+dashboards and reports.
 
-To bring that work into a larger view, add the lead to another Group. The
-GitHub Watcher can lead a focused Group for issues and pull requests while
-appearing as one agent in the My Team Dashboard Group. The dashboard stays
-simple, but you can open the GitHub Watcher Group whenever you need the details.
+Every Pi agent running the Pi Brains extension sends a heartbeat, so GitSense
+Chat can show whether it is online, stopped, or unresponsive and whether it is
+running in tmux or a terminal. From the Chat app, start and stop GitSense-managed
+agents and send messages to steer their work. Managed agents run in tmux, so
+they can stay online in the background and you can attach whenever you want,
+hand one off to your own terminal, or run an agent there directly.
+
+Start with one focused task. Create a Group, add the agents it needs, and give
+the Group a lead. Each agent keeps the context for its part of the work. To
+bring that work into a larger view, add the lead to another Group. The GitHub
+Watcher can lead a focused Group for issues and pull requests while appearing
+as one agent in the My Team Dashboard Group.
 
 ![A GitHub Watcher appearing in the My Team Dashboard Group while leading a focused Group of GitHub observers.](assets/scalable-observation-groups.svg)
 
