@@ -83,8 +83,8 @@ moving or duplicating the underlying session.
 
 <table>
   <tr>
-    <td width="50%" valign="top"><img src="assets/group-my-work.png" alt="A My Work Group bringing personal sessions and an AI assistant together." width="100%"></td>
-    <td width="50%" valign="top"><img src="assets/group-my-work.png" alt="The same My Work Group, temporarily repeated to preview an alternate layout." width="100%"></td>
+    <td width="50%" valign="top"><img src="assets/many-sessions-my-work-kanban.png" alt="A My Work Group organized as a Kanban board with an AI assistant monitoring the sessions." width="100%"></td>
+    <td width="50%" valign="top"><img src="assets/many-sessions-my-work-recent-activity.png" alt="The same My Work Group organized by recent session activity with an AI assistant alongside it." width="100%"></td>
   </tr>
 </table>
 
