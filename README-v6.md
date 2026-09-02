@@ -8,12 +8,6 @@ activity, and reviewed knowledge. Use it to understand what your agents are
 doing, guide work while it is underway, and give every agent a better starting
 point.
 
-GitSense Chat makes that intelligence easy to work with. Find sessions, ask AI
-about the work, organize related sessions into Groups, monitor sessions and
-generate reports from their activity, and build reusable knowledge. The `gsc`
-CLI makes the same intelligence available to terminal workflows and other
-agents.
-
 ## How GitSense Chat Works
 
 Your agents keep working in the tools you already use. GitSense works with the
