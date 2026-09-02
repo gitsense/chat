@@ -50,24 +50,26 @@ into useful information for people and AI agents.
 Give agents enough context to decide what matters before spending tokens on
 entire files.
 
-<table>
-  <tr>
-    <td width="35%" valign="top">
-      <strong>Same matches. More to go on.</strong>
-      <p>Plain ripgrep finds the matching code:</p>
-      <pre><code>rg -g '**/src/**/s*.rs' matcher</code></pre>
-      <p>GitSense returns the same matches with the purpose of each file:</p>
-      <pre><code>gsc rg -g '**/src/**/s*.rs' \
+**Same matches. More to go on.**
+
+Plain ripgrep finds the matching code:
+
+```bash
+rg -g '**/src/**/s*.rs' matcher
+```
+
+GitSense returns the same matches with the purpose of each file:
+
+```bash
+gsc rg -g '**/src/**/s*.rs' \
   --db code-intent \
   --fields purpose \
-  matcher</code></pre>
-      <p>Agents can decide what matters before loading entire files.</p>
-    </td>
-    <td width="65%" valign="top">
-      <img src="assets/same-search-more-to-go-on.png" alt="The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file." width="100%">
-    </td>
-  </tr>
-</table>
+  matcher
+```
+
+Agents can decide what matters before loading entire files.
+
+![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
 
 ### Organize around how you work.
 
