@@ -122,13 +122,6 @@ visible is harder. GitSense gives them Groups, agent-to-agent messaging, and
 leads that can coordinate the work, then lets you see the result through
 dashboards and reports.
 
-Every Pi agent running the Pi Brains extension sends a heartbeat, so GitSense
-Chat can show whether it is online, stopped, or unresponsive and whether it is
-running in tmux or a terminal. From the Chat app, start and stop GitSense-managed
-agents and send messages to steer their work. Managed agents run in tmux, so
-they can stay online in the background and you can attach whenever you want,
-hand one off to your own terminal, or run an agent there directly.
-
 Start with one focused task. Create a Group, add the agents it needs, and give
 the Group a lead. Each agent keeps the context for its part of the work. To
 bring that work into a larger view, add the lead to another Group. The GitHub
@@ -151,6 +144,13 @@ as one agent in the My Team Dashboard Group.
     </tr>
   </tbody>
 </table>
+
+Every Pi agent running the Pi Brains extension sends a heartbeat, so GitSense
+Chat can show whether it is online, stopped, or unresponsive and whether it is
+running in tmux or a terminal. From the Chat app, start and stop GitSense-managed
+agents and send messages to steer their work. Managed agents run in tmux, so
+they can stay online in the background and you can attach whenever you want,
+hand one off to your own terminal, or run an agent there directly.
 
 ### One Session. Multiple Perspectives.
 
