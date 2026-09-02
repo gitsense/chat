@@ -78,16 +78,14 @@ to ask an agent which sessions match the intent.
 
 ### Organize around how you work.
 
-Tabs and workspaces give sessions a name and a place. GitSense lets you bring
-related sessions into a Group, then use sections and layouts to show how the
-work fits together without changing where your agents run.
+Terminals and multiplexers give each agent session a place to run, whether that
+is a pane, tab, or workspace. GitSense builds on that by letting you bring
+related sessions into a Group, use sections and layouts to show how the work
+fits together, and filter which sessions you see without changing where your
+agents run.
 
 As agents produce more information and conversations wander, this structure
 helps you decide whether to continue a session, compact it, or start fresh.
-
-Multiplexers arrange panes. GitSense lets you filter which Group sections are
-shown, so a recency layout can narrow the view to sessions active within the
-time windows you care about.
 
 <table>
   <thead>
