@@ -76,10 +76,15 @@ to ask an agent which sessions match the intent.
   </tbody>
 </table>
 
-### Turn session noise into clarity.
+### Bring structure to how your agents work.
 
-Your agents may be spread across many sessions and multiplexer panes. GitSense
-helps you understand what is happening across them before deciding what needs
+Tabs and workspaces give sessions a name and a place. As agents produce more
+information and conversations wander, that is not enough to explain how the
+work fits together or help you decide whether to continue, compact, or start
+fresh.
+
+GitSense adds structure around those sessions. Organize them around the work,
+then add a lead that understands the Group and can help you decide what needs
 your attention.
 
 #### Organize around how you work.
