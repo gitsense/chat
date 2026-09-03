@@ -67,10 +67,35 @@ helps you track progress and guide the work.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
-GitSense gives agents the tools they need to understand what is happening across
-your workflow and respond efficiently.
+## Put that intelligence to work
 
-## Organize around how you work.
+The examples above show the basic idea. The capabilities below show how GitSense
+applies that intelligence as the scope grows—from understanding one session to
+coordinating groups of agents.
+
+### Understand one session from multiple perspectives
+
+Create custom views to examine the same session through different lenses. See
+how one prompt and 52 tool calls become something you can actually review.
+
+<table>
+  <thead>
+    <tr>
+      <th width="33%" align="center">The session</th>
+      <th width="33%" align="center">Change Review</th>
+      <th width="33%" align="center">Session Outline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="33%" valign="top"><img src="assets/one-session-the-session.png" alt="The original session with 52 tool calls and its available Session Insight views." width="100%"></td>
+      <td width="33%" valign="top"><img src="assets/one-session-change-review.png" alt="A custom Change Review perspective over the same session." width="100%"></td>
+      <td width="33%" valign="top"><img src="assets/one-session-session-outline.png" alt="A custom Session Outline perspective over the same session." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
+
+### Organize sessions around how you work
 
 Terminals and multiplexers give each agent session a place to run, whether that
 is a pane, tab, or workspace. GitSense builds on that by letting you bring
@@ -95,7 +120,7 @@ agents run.
   </tbody>
 </table>
 
-## Add a lead that understands your work.
+### Add a lead that understands your work
 
 **Two clicks and a prompt. That is all it takes.**
 
@@ -116,7 +141,7 @@ and monitor the Group token efficiently.
   </tbody>
 </table>
 
-## Build an observation system that scales.
+### Build an observation system that scales
 
 Creating agents is easy. Keeping them connected and making their combined work
 visible is harder. GitSense gives them Groups, agent-to-agent messaging, and
@@ -152,28 +177,6 @@ running in tmux or a terminal. From the Chat app, start and stop GitSense-manage
 agents and send messages to steer their work. Managed agents run in tmux, so
 they can stay online in the background and you can attach whenever you want,
 hand one off to your own terminal, or run an agent there directly.
-
-## One Session. Multiple Perspectives.
-
-Create custom views to examine the same session through different lenses. See
-how one prompt and 52 tool calls become something you can actually review.
-
-<table>
-  <thead>
-    <tr>
-      <th width="33%" align="center">The session</th>
-      <th width="33%" align="center">Change Review</th>
-      <th width="33%" align="center">Session Outline</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="33%" valign="top"><img src="assets/one-session-the-session.png" alt="The original session with 52 tool calls and its available Session Insight views." width="100%"></td>
-      <td width="33%" valign="top"><img src="assets/one-session-change-review.png" alt="A custom Change Review perspective over the same session." width="100%"></td>
-      <td width="33%" valign="top"><img src="assets/one-session-session-outline.png" alt="A custom Session Outline perspective over the same session." width="100%"></td>
-    </tr>
-  </tbody>
-</table>
 
 ## Current Support and Boundaries
 
