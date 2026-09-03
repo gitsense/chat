@@ -53,8 +53,11 @@ they find, giving them more to reason with as they decide what to do next.
 
 ![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file as one example of useful context.](assets/same-search-more-to-go-on.png)
 
-Here, the context explains what each file is for. It can also show details such
-as which team owns the code, known risks, or previously reviewed guidance.
+On the left is a regular ripgrep search; on the right is the same search enriched
+with GitSense. Both find the same files, but GitSense also explains what each
+file is for and can surface details such as which team owns the code, known risks,
+or previously reviewed guidance. The agent now has more to reason with before
+deciding whether a file is worth spending tokens on.
 
 ### For people
 
