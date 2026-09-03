@@ -61,6 +61,8 @@ When you work with GitSense, you can turn activity across your sessions into a
 single conversation with an AI lead that keeps you informed and helps guide the
 work.
 
+![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
+
 GitSense gives the lead one place to query activity across your workflow instead
 of monitoring dozens of session logs individually. The lead can retrieve the
 information needed for its task and tell you what requires attention.
