@@ -47,11 +47,10 @@ into useful information for people and AI agents.
 
 ### Give your agents a head start.
 
-**Same Search. Better Start.**
+When agents search with GitSense, they get matches with enough context to decide
+which files are worth opening.
 
 ![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
-
-GitSense returns the same matches as plain ripgrep, but now the agent can now tell if a file is worth loading or not.
 
 ### Organize around how you work.
 
