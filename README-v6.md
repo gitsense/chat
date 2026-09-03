@@ -47,29 +47,11 @@ into useful information for people and AI agents.
 
 ### Give your agents a head start.
 
-Give agents enough context to decide what matters before spending tokens on
-entire files.
-
-**Same matches. More to go on.**
-
-Plain ripgrep finds the matching code:
-
-```bash
-rg -g '**/src/**/s*.rs' matcher
-```
-
-GitSense returns the same matches with the purpose of each file:
-
-```bash
-gsc rg -g '**/src/**/s*.rs' \
-  --db code-intent \
-  --fields purpose \
-  matcher
-```
-
-Agents can decide what matters before loading entire files.
+**Same Search. Better Start.**
 
 ![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
+
+GitSense returns the same matches as plain ripgrep, but now the agent can now tell if a file is worth loading or not.
 
 ### Organize around how you work.
 
