@@ -43,7 +43,8 @@ same Brains, notes, lessons, and rules.
 ## So what is an intelligence platform for AI agent workflows?
 
 GitSense gives people and AI agents the information they need to make more
-informed decisions about what to do next.
+informed decisions about what to do next. Here are two examples of what that can
+look like.
 
 ### For agents
 
