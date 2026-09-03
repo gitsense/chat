@@ -61,9 +61,9 @@ deciding whether a file is worth spending tokens on.
 
 ### For people
 
-When you work with GitSense, you can turn activity across your sessions into a
-single conversation with an AI lead that keeps you informed and helps guide the
-work.
+When you work with GitSense, intelligence from across your sessions lets you
+bring the ones you care about into a single conversation with an AI lead that
+helps you track progress and guide the work.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
