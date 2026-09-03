@@ -63,9 +63,8 @@ work.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
-GitSense gives the lead one place to query activity across your workflow instead
-of monitoring dozens of session logs individually. The lead can retrieve the
-information needed for its task and tell you what requires attention.
+GitSense gives agents the tools they need to understand what is happening across
+your workflow and respond efficiently.
 
 ## Organize around how you work.
 
