@@ -15,7 +15,7 @@ activity they create and connects it with reviewed knowledge, giving people and
 AI agents more ways to understand and guide the work without replacing the
 workflow.
 
-![GitSense Chat captures the sessions agents already create and makes them searchable, organized, and reusable.](assets/same-sessions-more-useful-no-title.png)
+![GitSense Chat works with existing agent sessions and adds context for understanding and guiding the work.](assets/how-gitsense-works.png)
 
 ## Quick Start
 
@@ -40,19 +40,32 @@ observation loops work together.
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
 
-## What Intelligence Lets You Do
+## So what is an intelligence platform for AI agent workflows?
 
-Here are a few ways GitSense Chat turns agent activity and repository knowledge
-into useful information for people and AI agents.
+GitSense gives people and AI agents the information they need to make more
+informed decisions about what to do next.
 
-### Give your agents a head start.
+### For agents
 
-When agents search with GitSense, they get matches with enough context to decide
-which files are worth opening.
+When agents work with GitSense, they get useful context alongside the information
+they find, giving them more to reason with as they decide what to do next.
 
-![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
+![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file as one example of useful context.](assets/same-search-more-to-go-on.png)
 
-### Organize around how you work.
+Here, the context explains what each file is for. It can also show details such
+as which team owns the code, known risks, or previously reviewed guidance.
+
+### For people
+
+When you work with GitSense, you can turn activity across your sessions into a
+single conversation with an AI lead that keeps you informed and helps guide the
+work.
+
+GitSense gives the lead one place to query activity across your workflow instead
+of monitoring dozens of session logs individually. The lead can retrieve the
+information needed for its task and tell you what requires attention.
+
+## Organize around how you work.
 
 Terminals and multiplexers give each agent session a place to run, whether that
 is a pane, tab, or workspace. GitSense builds on that by letting you bring
@@ -77,7 +90,7 @@ agents run.
   </tbody>
 </table>
 
-### Add a lead that understands your work.
+## Add a lead that understands your work.
 
 **Two clicks and a prompt. That is all it takes.**
 
@@ -98,7 +111,7 @@ and monitor the Group token efficiently.
   </tbody>
 </table>
 
-### Build an observation system that scales.
+## Build an observation system that scales.
 
 Creating agents is easy. Keeping them connected and making their combined work
 visible is harder. GitSense gives them Groups, agent-to-agent messaging, and
@@ -135,7 +148,7 @@ agents and send messages to steer their work. Managed agents run in tmux, so
 they can stay online in the background and you can attach whenever you want,
 hand one off to your own terminal, or run an agent there directly.
 
-### One Session. Multiple Perspectives.
+## One Session. Multiple Perspectives.
 
 Create custom views to examine the same session through different lenses. See
 how one prompt and 52 tool calls become something you can actually review.
