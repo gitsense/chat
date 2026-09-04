@@ -122,9 +122,7 @@ you need one agent or dozens, the lead can create and organize them with your
 direction. The examples below show how one lead can help you scale management,
 observation, and knowledge.
 
-### Add a lead that understands your work
-
-**Two clicks and a prompt. That is all it takes.**
+### Create a lead in seconds
 
 Tell the lead what you want to know or monitor. GitSense leads know how to
 retrieve only the context they need, avoid reprocessing unchanged activity,
@@ -141,7 +139,7 @@ and monitor the Group token efficiently.
   </tbody>
 </table>
 
-### Scale management
+### Scale your attention with a lead
 
 Use one conversation to coordinate many agents while each keeps its own context
 and responsibility. In the Hello World Lab demo, the lead asks nine agents to
@@ -154,7 +152,7 @@ cross-session results without replacing terminals or multiplexers.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
-### Scale observation
+### Build dashboards that scale
 
 Tell the lead what you want the dashboard to cover, which agents to create, and
 what each one should be responsible for. The lead can build the team, coordinate
@@ -176,7 +174,7 @@ team behind the scenes and bring their combined work back as one card.
   </tbody>
 </table>
 
-### Scale knowledge
+### Build knowledge once, use it everywhere
 
 Ask the lead to make knowledge available across a 4,800-file repository. It can
 first create a short-lived scout to assess the architecture and recommend how
