@@ -122,7 +122,7 @@ you need one agent or dozens, the lead can create and organize them with your
 direction. The examples below show how one lead can help you scale management,
 observation, and knowledge.
 
-### Create a lead in seconds
+### Create a lead in seconds, then put it to work
 
 Tell the lead what you want to know or monitor. GitSense leads know how to
 retrieve only the context they need, avoid reprocessing unchanged activity,
