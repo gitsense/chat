@@ -83,10 +83,51 @@ the direction and safeguards you set.
 This turns the lead into an active participant in the workflow, collaborating
 with you to understand and guide the work of other agents.
 
-## See GitSense in action
+### Scale through conversation
 
-The examples above show why GitSense matters. The capabilities below show how it
-helps you organize, guide, and coordinate groups of agents.
+**Start with an empty Group and a lead.**
+
+Tell the lead what you want the dashboard to cover, which agents to create, and
+what each one should be responsible for. The lead can build the team, coordinate
+its work, and turn the Group into a live dashboard.
+
+Every card in the dashboard is an agent with its own context and responsibility.
+An agent can gather and report information on its own, or it can lead a focused
+team behind the scenes and bring their combined work back as one card.
+
+The GitHub Watcher appears as one card in the My Team Dashboard Group. Behind
+it, the GitHub Watcher leads separate agents for issues and pull requests.
+
+![A GitHub Watcher appearing in the My Team Dashboard Group while leading a focused Group of GitHub observers.](assets/scalable-observation-groups.svg)
+
+<table>
+  <thead>
+    <tr>
+      <th width="50%" align="center">My Team Dashboard Group</th>
+      <th width="50%" align="center">GitHub Watcher Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><img src="assets/group-my-team.png" alt="The My Team Dashboard Group with GitHub Watcher, Product Health Monitor, Slack Watcher, team members, and Roboto." width="100%"></td>
+      <td width="50%" valign="top"><img src="assets/github-watcher-group-placeholder.svg" alt="Placeholder for the GitHub Watcher Group with focused agents for issues and pull requests." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
+
+Every Pi agent running the Pi Brains extension sends a heartbeat, so GitSense
+Chat can show whether it is online, stopped, or unresponsive and whether it is
+running in tmux or a terminal. From the Chat app, start and stop GitSense-managed
+agents and send messages to steer their work. Managed agents run in tmux, so
+they can stay online in the background and you can attach whenever you want,
+hand one off to your own terminal, or run an agent there directly.
+
+See how to [add a lead that understands your work](#add-a-lead-that-understands-your-work).
+
+## Explore GitSense's capabilities
+
+The examples above show why GitSense matters. The walkthroughs below show how to
+organize sessions and give a Group its first lead.
 
 ### Organize sessions around how you work
 
@@ -134,42 +175,13 @@ and monitor the Group token efficiently.
   </tbody>
 </table>
 
-### Build an observation system that scales
+## Scale knowledge across your agents
 
-Creating agents is easy. Keeping them connected and making their combined work
-visible is harder. GitSense gives them Groups, agent-to-agent messaging, and
-leads that can coordinate the work, then lets you see the result through
-dashboards and reports.
+Knowledge built with GitSense is not tied to Pi or the session where it was
+created. Any agent that can run `gsc ask` can query the same reviewed knowledge,
+so what one workflow learns can become a better starting point for the next.
 
-Start with one focused task. Create a Group, add the agents it needs, and give
-the Group a lead. Each agent keeps the context for its part of the work. To
-bring that work into a larger view, add the lead to another Group. The GitHub
-Watcher can lead a focused Group for issues and pull requests while appearing
-as one agent in the My Team Dashboard Group.
-
-![A GitHub Watcher appearing in the My Team Dashboard Group while leading a focused Group of GitHub observers.](assets/scalable-observation-groups.svg)
-
-<table>
-  <thead>
-    <tr>
-      <th width="50%" align="center">My Team Dashboard Group</th>
-      <th width="50%" align="center">GitHub Watcher Group</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top"><img src="assets/group-my-team.png" alt="The My Team Dashboard Group with GitHub Watcher, Product Health Monitor, Slack Watcher, team members, and Roboto." width="100%"></td>
-      <td width="50%" valign="top"><img src="assets/github-watcher-group-placeholder.svg" alt="Placeholder for the GitHub Watcher Group with focused agents for issues and pull requests." width="100%"></td>
-    </tr>
-  </tbody>
-</table>
-
-Every Pi agent running the Pi Brains extension sends a heartbeat, so GitSense
-Chat can show whether it is online, stopped, or unresponsive and whether it is
-running in tmux or a terminal. From the Chat app, start and stop GitSense-managed
-agents and send messages to steer their work. Managed agents run in tmux, so
-they can stay online in the background and you can attach whenever you want,
-hand one off to your own terminal, or run an agent there directly.
+<!-- Add the gsc ask portable-knowledge video here. -->
 
 ## Current Support and Boundaries
 
