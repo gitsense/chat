@@ -71,17 +71,13 @@ knowledge.
   </tbody>
 </table>
 
-### Better human-AI collaboration
+### Steer and query your agents through one conversation
 
-Instead of checking every session yourself, you can work with a lead agent that
-understands activity across the group. From a single conversation, ask the lead
-to track progress, surface what needs attention, and guide other agents within
-the direction and safeguards you set.
+Give a Group a lead, then use one conversation to steer its agents and query
+their work. Each agent keeps its own context and responsibility while the lead
+brings their progress and results together.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
-
-This turns the lead into an active participant in the workflow, collaborating
-with you to understand and guide the work of other agents.
 
 ### Scale with ease
 
