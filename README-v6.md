@@ -45,12 +45,12 @@ same Brains, notes, lessons, and rules.
 GitSense changes both how work begins and how people and agents collaborate while
 it is underway.
 
-### Give you and your agents a better way to work together
+### Give you and your agents a better starting point
 
 GitSense gives you and your agents more to work with before starting something
-new, and a better way to stay oriented while work is underway. Agents can
-understand why a file matters before reading it, while you can find previous
-sessions worth continuing, reusing, or turning into shared knowledge.
+new. Agents can understand why a file matters before reading it, while you can
+find previous sessions worth continuing, reusing, or turning into shared
+knowledge.
 
 <table>
   <thead>
@@ -65,11 +65,13 @@ sessions worth continuing, reusing, or turning into shared knowledge.
       <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="GitSense session search filtering previous work by content, time, repository, role, and file activity." width="100%"></td>
     </tr>
     <tr>
-      <td width="50%" valign="top">Regular ripgrep is on the left; GitSense-enriched search is on the right. Both find the same files, but GitSense adds purpose, ownership, risks, and reviewed guidance, so agents can choose what deserves their tokens.</td>
+      <td width="50%" valign="top">Regular ripgrep is on the left; GitSense-enriched search is on the right. Both find the same files, but GitSense can add purpose, ownership, risks, and reviewed guidance, so agents can choose what deserves their tokens.</td>
       <td width="50%" valign="top">Search past sessions by conversation, files, repository, role, or time to quickly resume work, reuse findings, or extract knowledge.</td>
     </tr>
   </tbody>
 </table>
+
+### Give you and your agents a better way to work together
 
 <p align="center"><img src="assets/many-sessions-lead-dashboard.png" alt="A lead agent at the top of a 3 by 3 tile view coordinating nine active sessions." width="100%"></p>
 
