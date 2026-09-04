@@ -141,9 +141,9 @@ and monitor the Group token efficiently.
 
 ### Scale your attention with a lead
 
-Use one conversation to coordinate many agents while each keeps its own context
-and responsibility. In the Hello World Lab demo, the lead asks nine agents to
-create language-specific files, verifies their replies, then directs only the
+Use one conversation to coordinate many agents while the lead tracks each task
+and brings the results together. In the Hello World Lab demo, the lead asks nine
+agents to create language-specific files, verifies their replies, then directs
 selected agents to change `Hello` to `Hey`. It reports exact paths and provides
 actions to open each file in Zed or inspect its git diff.
 
