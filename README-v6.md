@@ -165,14 +165,15 @@ team behind the scenes and bring their combined work back as one card.
 <table>
   <tbody>
     <tr>
-      <td width="50%" valign="top"><strong>Observation architecture</strong><br><br><img src="assets/scalable-observation-groups.svg" alt="An observation architecture showing a GitHub Watcher lead coordinating focused agents and appearing in a larger dashboard Group." width="100%"></td>
+      <td width="50%" valign="top"><strong>Observation Group architecture</strong><br><br><img src="assets/scalable-observation-groups.svg" alt="An observation architecture showing a GitHub Watcher lead coordinating focused agents and appearing in a larger dashboard Group." width="100%"></td>
       <td width="50%" valign="top"><strong>My Team Dashboard Group</strong><br><br><img src="assets/group-my-team.png" alt="The My Team Dashboard Group with GitHub Watcher, Product Health Monitor, Slack Watcher, team members, and Roboto." width="100%"></td>
-    </tr>
-    <tr>
-      <td colspan="2" valign="top"><strong>Create a GitHub Watcher through conversation</strong><br><br><img src="assets/github-watcher-group-placeholder.svg" alt="Placeholder for a video showing a lead creating a GitHub Watcher Group with focused agents for issues and pull requests." width="100%"></td>
     </tr>
   </tbody>
 </table>
+
+**Create a GitHub Watcher through conversation**
+
+![Placeholder for a video showing a lead creating a GitHub Watcher Group with focused agents for issues and pull requests.](assets/github-watcher-group-placeholder.svg)
 
 ### Build knowledge once, use it everywhere
 
