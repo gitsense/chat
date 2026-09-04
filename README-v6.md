@@ -165,35 +165,16 @@ An agent can gather and report information on its own, or it can lead a focused
 team behind the scenes and bring their combined work back as one card.
 
 <table>
-  <thead>
-    <tr>
-      <th width="33%" align="center">Observation architecture</th>
-      <th width="33%" align="center">My Team Dashboard Group</th>
-      <th width="34%" align="center">GitHub Watcher Group</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td width="33%" valign="top"><img src="assets/scalable-observation-groups.svg" alt="An observation architecture showing a GitHub Watcher lead coordinating focused agents and appearing in a larger dashboard Group." width="100%"></td>
-      <td width="33%" valign="top"><img src="assets/group-my-team.png" alt="The My Team Dashboard Group with GitHub Watcher, Product Health Monitor, Slack Watcher, team members, and Roboto." width="100%"></td>
-      <td width="34%" valign="top"><img src="assets/github-watcher-group-placeholder.svg" alt="Placeholder for the GitHub Watcher Group with focused agents for issues and pull requests." width="100%"></td>
+      <td width="50%" valign="top"><strong>Observation architecture</strong><br><br><img src="assets/scalable-observation-groups.svg" alt="An observation architecture showing a GitHub Watcher lead coordinating focused agents and appearing in a larger dashboard Group." width="100%"></td>
+      <td width="50%" valign="top"><strong>My Team Dashboard Group</strong><br><br><img src="assets/group-my-team.png" alt="The My Team Dashboard Group with GitHub Watcher, Product Health Monitor, Slack Watcher, team members, and Roboto." width="100%"></td>
     </tr>
     <tr>
-      <td width="33%" valign="top">One lead can represent a focused team inside a larger dashboard.</td>
-      <td width="33%" valign="top">The dashboard shows one card for each area of work.</td>
-      <td width="34%" valign="top">The GitHub Watcher lead coordinates separate agents for issues and pull requests.</td>
+      <td colspan="2" valign="top"><strong>Create a GitHub Watcher through conversation</strong><br><br><img src="assets/github-watcher-group-placeholder.svg" alt="Placeholder for a video showing a lead creating a GitHub Watcher Group with focused agents for issues and pull requests." width="100%"></td>
     </tr>
   </tbody>
 </table>
-
-Every Pi agent running the Pi Brains extension sends a heartbeat, so GitSense
-Chat can show whether it is online, stopped, or unresponsive and whether it is
-running in tmux or a terminal. From the Chat app, start and stop GitSense-managed
-agents and send messages to steer their work. Managed agents run in tmux, so
-they can stay online in the background and you can attach whenever you want,
-hand one off to your own terminal, or run an agent there directly.
-
-See how to [add a lead that understands your work](#add-a-lead-that-understands-your-work).
 
 ### Scale knowledge
 
