@@ -40,7 +40,7 @@ observation loops work together.
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
 
-## What does intelligence make possible?
+## Why GitSense?
 
 GitSense changes both how work begins and how people and agents collaborate while
 it is underway.
@@ -83,11 +83,11 @@ the direction and safeguards you set.
 This turns the lead into an active participant in the workflow, collaborating
 with you to understand and guide the work of other agents.
 
-## Put that intelligence to work
+## See GitSense in action
 
-The examples above show the basic idea. The capabilities below show how GitSense
-applies that intelligence as the scope grows, from understanding one session to
-coordinating groups of agents.
+The examples above show why GitSense matters. The capabilities below show how it
+supports work at increasing scope, from understanding one session to coordinating
+groups of agents.
 
 ### Understand one session from multiple perspectives
 
