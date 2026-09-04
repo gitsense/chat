@@ -182,23 +182,13 @@ the work should be divided, then help create the agents needed to build that
 knowledge. Once it is reviewed, any agent that can run `gsc ask` can use it.
 
 <table>
-  <thead>
-    <tr>
-      <th width="33%" align="center">Knowledge architecture</th>
-      <th width="33%" align="center">Repository Group</th>
-      <th width="34%" align="center">Query from any agent</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td width="33%" valign="top"><img src="assets/scale-knowledge-architecture-placeholder.png" alt="Placeholder knowledge architecture showing a repository becoming shared reviewed knowledge for multiple agents." width="100%"></td>
-      <td width="33%" valign="top"><img src="assets/scale-knowledge-repository-group-placeholder.png" alt="Placeholder Repository Group with four agents responsible for architecture, API, data, and tests." width="100%"></td>
-      <td width="34%" valign="top"><img src="assets/scale-knowledge-agents-ask-placeholder.png" alt="Placeholder showing Claude and Codex querying shared reviewed knowledge with gsc ask." width="100%"></td>
+      <td width="50%" valign="top"><strong>Knowledge architecture</strong><br><br><img src="assets/scale-knowledge-architecture-placeholder.png" alt="Placeholder knowledge architecture showing a repository becoming shared reviewed knowledge for multiple agents." width="100%"></td>
+      <td width="50%" valign="top"><strong>Repository Group</strong><br><br><img src="assets/scale-knowledge-repository-group-placeholder.png" alt="Placeholder Repository Group with four agents responsible for architecture, API, data, and tests." width="100%"></td>
     </tr>
     <tr>
-      <td width="33%" valign="top">One knowledge layer can support many focused agents.</td>
-      <td width="33%" valign="top">A lead can divide a repository into focused responsibilities.</td>
-      <td width="34%" valign="top">Different agents can query the same reviewed knowledge with <code>gsc ask</code>.</td>
+      <td colspan="2" valign="top"><strong>Query from any agent</strong><br><br><img src="assets/scale-knowledge-agents-ask-placeholder.png" alt="Placeholder showing Claude and Codex querying shared reviewed knowledge with gsc ask." width="100%"><br><br>Different agents can query the same reviewed knowledge with <code>gsc ask</code>.</td>
     </tr>
   </tbody>
 </table>
