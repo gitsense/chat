@@ -40,16 +40,19 @@ observation loops work together.
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
 
-## So what is an intelligence platform for AI agent workflows?
+## What does intelligence make possible?
 
-GitSense gives people and AI agents the information they need to make more
-informed decisions about what to do next. Here are two examples of what that can
-look like.
+GitSense changes both how work begins and how people and agents collaborate while
+it is underway.
 
-### For agents
+### Give you and your agents a better starting point
 
-When agents work with GitSense, they get useful context alongside the information
-they find, giving them more to reason with as they decide what to do next.
+GitSense gives you and your agents more to work with before starting something
+new. Agents can understand why a file matters before reading it, while you can
+find previous sessions worth continuing, reusing, or turning into shared
+knowledge.
+
+#### Same search, more context
 
 ![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file as one example of useful context.](assets/same-search-more-to-go-on.png)
 
@@ -59,13 +62,26 @@ file is for and can surface details such as which team owns the code, known risk
 or previously reviewed guidance. The agent now has more to reason with before
 deciding whether a file is worth spending tokens on.
 
-### For people
+#### Find work worth reusing
 
-When you work with GitSense, intelligence from across your sessions lets you
-bring the ones you care about into a single conversation with an AI lead that
-helps you track progress and guide the work.
+![GitSense session search filtering previous work by content, time, repository, role, and file activity.](assets/resume-faster-search.png)
+
+GitSense lets you search activity across previous sessions by what was said,
+which files were touched, repository, role, and time. This makes it easier to
+find work worth resuming or reusing, or sessions with knowledge you want to
+extract and review.
+
+### Better human-AI collaboration
+
+Instead of checking every session yourself, you can work with a lead agent that
+understands activity across the group. From a single conversation, ask the lead
+to track progress, surface what needs attention, and guide other agents within
+the direction and safeguards you set.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
+
+This turns the lead into an active participant in the workflow, collaborating
+with you to understand and guide the work of other agents.
 
 ## Put that intelligence to work
 
