@@ -110,15 +110,13 @@ sense for the work.
   </tbody>
 </table>
 
-### Steer and query your agents through one conversation
+## All you need is a lead, really
 
-Give a Group a lead, then use one conversation to steer its agents and query
-their work. Each agent keeps its own context and responsibility while the lead
-brings their progress and results together.
-
-![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
-
-## Scale with ease
+A lead knows how GitSense organizes Groups, sessions, agents, and knowledge.
+Describe the outcome you want, and it can help turn a complex problem into
+coordinated work: creating the right team, querying progress, guiding agents,
+and bringing the results back in a report. The examples below show how one lead
+can help you scale management, observation, and knowledge.
 
 ### It starts with a lead
 
@@ -128,6 +126,19 @@ A Group lead understands how GitSense organizes sessions, agents, Groups, and
 knowledge. Describe the outcome you want, and the lead can guide you through
 turning it into an organized team. Whether you need one agent or dozens, the
 lead can create and organize them with your direction.
+
+### Scale management
+
+Use one conversation to coordinate many agents while each keeps its own context
+and responsibility. In the Hello World Lab demo, the lead asks nine agents to
+create language-specific files, verifies their replies, then directs only the
+selected agents to change `Hello` to `Hey`. It reports exact paths and provides
+actions to open each file in Zed or inspect its git diff.
+
+This demonstrates scalable visibility, targeted coordination, and actionable
+cross-session results without replacing terminals or multiplexers.
+
+![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
 ### Add a lead that understands your work
 
