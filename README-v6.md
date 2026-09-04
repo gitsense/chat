@@ -73,16 +73,17 @@ knowledge.
 
 ### Give you and your agents a better way to work together
 
+Add a lead to a Group, then bring the agent sessions you already have into it
+and add dedicated agents for the responsibilities that need them. Arrange
+everything around the work you need to solve by organizing sessions by status,
+recent activity, role, or any structure that makes sense to you. Each agent
+keeps its own context and workspace, while you and the Group lead get a shared
+view for understanding and guiding the work.
+
 <p align="center"><img src="assets/many-sessions-lead-dashboard.png" alt="A lead agent at the top of a 3 by 3 tile view coordinating nine active sessions." width="100%"></p>
 
 The lead sits alongside the sessions it coordinates, giving you one place to
 see the work and guide agents as it unfolds.
-
-Terminals and multiplexers give each agent session a place to run, whether that
-is a pane, tab, or workspace. GitSense builds on that by letting you bring
-related sessions into a Group, use sections and layouts to show how the work
-fits together, and filter which sessions you see without changing where your
-agents run.
 
 <table>
   <thead>
