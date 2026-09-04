@@ -1,12 +1,12 @@
 # GitSense: Chat
 
-**GitSense is the intelligence platform for AI agent workflows.**
+**GitSense is an intelligence platform for your agents and their workflows.**
 
 It works quietly alongside the tools you already use. No proxy or wrapper is
-required. GitSense gathers useful information from agent sessions, codebase
-activity, and reviewed knowledge. Use it to understand what your agents are
-doing, guide work while it is underway, and give every agent a better starting
-point.
+required. GitSense gathers useful information from agent sessions and codebase
+activity, then helps you turn it into reviewed, reusable knowledge. Use that
+intelligence to understand what your agents are doing, guide work while it is
+underway, and give you and your agents a better starting point.
 
 ## How GitSense Chat Works
 
@@ -70,7 +70,7 @@ helps you track progress and guide the work.
 ## Put that intelligence to work
 
 The examples above show the basic idea. The capabilities below show how GitSense
-applies that intelligence as the scope grows—from understanding one session to
+applies that intelligence as the scope grows, from understanding one session to
 coordinating groups of agents.
 
 ### Understand one session from multiple perspectives
