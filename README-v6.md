@@ -65,8 +65,8 @@ sessions worth continuing, reusing, or turning into shared knowledge.
       <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="GitSense session search filtering previous work by content, time, repository, role, and file activity." width="100%"></td>
     </tr>
     <tr>
-      <td width="50%" valign="top">On the left is a regular ripgrep search; on the right is the same search enriched with GitSense. Both find the same files, but GitSense also explains what each file is for and can surface details such as which team owns the code, known risks, or previously reviewed guidance. The agent now has more to reason with before deciding whether a file is worth spending tokens on.</td>
-      <td width="50%" valign="top">GitSense lets you search activity across previous sessions by what was said, which files were touched, repository, role, and time. This makes it easier to find work worth resuming or reusing, or sessions with knowledge you want to extract and review.</td>
+      <td width="50%" valign="top">Regular ripgrep is on the left; GitSense-enriched search is on the right. Both find the same files, but GitSense adds purpose, ownership, risks, and reviewed guidance, so agents can choose what deserves their tokens.</td>
+      <td width="50%" valign="top">Search past sessions by conversation, files, repository, role, or time to quickly resume work, reuse findings, or extract knowledge.</td>
     </tr>
   </tbody>
 </table>
