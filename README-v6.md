@@ -83,9 +83,16 @@ the direction and safeguards you set.
 This turns the lead into an active participant in the workflow, collaborating
 with you to understand and guide the work of other agents.
 
-### Scale through conversation
+### Scale with ease
 
-**Start with an empty Group and a lead.**
+**Create an empty Group and add a lead with two clicks to get started.**
+
+A Group lead understands how GitSense organizes sessions, agents, Groups, and
+knowledge. Describe the outcome you want, and the lead can guide you through
+turning it into an organized team. Whether you need one agent or dozens, the
+lead can create and organize them with your direction.
+
+#### Scale observation
 
 Tell the lead what you want the dashboard to cover, which agents to create, and
 what each one should be responsible for. The lead can build the team, coordinate
@@ -95,22 +102,24 @@ Every card in the dashboard is an agent with its own context and responsibility.
 An agent can gather and report information on its own, or it can lead a focused
 team behind the scenes and bring their combined work back as one card.
 
-The GitHub Watcher appears as one card in the My Team Dashboard Group. Behind
-it, the GitHub Watcher leads separate agents for issues and pull requests.
-
-![A GitHub Watcher appearing in the My Team Dashboard Group while leading a focused Group of GitHub observers.](assets/scalable-observation-groups.svg)
-
 <table>
   <thead>
     <tr>
-      <th width="50%" align="center">My Team Dashboard Group</th>
-      <th width="50%" align="center">GitHub Watcher Group</th>
+      <th width="33%" align="center">Observation architecture</th>
+      <th width="33%" align="center">My Team Dashboard Group</th>
+      <th width="34%" align="center">GitHub Watcher Group</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td width="50%" valign="top"><img src="assets/group-my-team.png" alt="The My Team Dashboard Group with GitHub Watcher, Product Health Monitor, Slack Watcher, team members, and Roboto." width="100%"></td>
-      <td width="50%" valign="top"><img src="assets/github-watcher-group-placeholder.svg" alt="Placeholder for the GitHub Watcher Group with focused agents for issues and pull requests." width="100%"></td>
+      <td width="33%" valign="top"><img src="assets/scalable-observation-groups.svg" alt="An observation architecture showing a GitHub Watcher lead coordinating focused agents and appearing in a larger dashboard Group." width="100%"></td>
+      <td width="33%" valign="top"><img src="assets/group-my-team.png" alt="The My Team Dashboard Group with GitHub Watcher, Product Health Monitor, Slack Watcher, team members, and Roboto." width="100%"></td>
+      <td width="34%" valign="top"><img src="assets/github-watcher-group-placeholder.svg" alt="Placeholder for the GitHub Watcher Group with focused agents for issues and pull requests." width="100%"></td>
+    </tr>
+    <tr>
+      <td width="33%" valign="top">One lead can represent a focused team inside a larger dashboard.</td>
+      <td width="33%" valign="top">The dashboard shows one card for each area of work.</td>
+      <td width="34%" valign="top">The GitHub Watcher lead coordinates separate agents for issues and pull requests.</td>
     </tr>
   </tbody>
 </table>
@@ -123,6 +132,15 @@ they can stay online in the background and you can attach whenever you want,
 hand one off to your own terminal, or run an agent there directly.
 
 See how to [add a lead that understands your work](#add-a-lead-that-understands-your-work).
+
+#### Scale knowledge
+
+Ask the lead to make knowledge available across a 4,800-file repository. It can
+first create a short-lived scout to assess the architecture and recommend how
+the work should be divided, then help create the agents needed to build that
+knowledge. Once it is reviewed, any agent that can run `gsc ask` can use it.
+
+<!-- Add the knowledge architecture, repository Group, and gsc ask images here in a three-column table. -->
 
 ## Explore GitSense's capabilities
 
@@ -174,14 +192,6 @@ and monitor the Group token efficiently.
     </tr>
   </tbody>
 </table>
-
-## Scale knowledge across your agents
-
-Knowledge built with GitSense is not tied to Pi or the session where it was
-created. Any agent that can run `gsc ask` can query the same reviewed knowledge,
-so what one workflow learns can become a better starting point for the next.
-
-<!-- Add the gsc ask portable-knowledge video here. -->
 
 ## Current Support and Boundaries
 
