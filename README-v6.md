@@ -45,12 +45,12 @@ same Brains, notes, lessons, and rules.
 GitSense changes both how work begins and how people and agents collaborate while
 it is underway.
 
-### Give you and your agents a better starting point
+### Give you and your agents a better way to work together
 
 GitSense gives you and your agents more to work with before starting something
-new. Agents can understand why a file matters before reading it, while you can
-find previous sessions worth continuing, reusing, or turning into shared
-knowledge.
+new, and a better way to stay oriented while work is underway. Agents can
+understand why a file matters before reading it, while you can find previous
+sessions worth continuing, reusing, or turning into shared knowledge.
 
 <table>
   <thead>
@@ -71,6 +71,34 @@ knowledge.
   </tbody>
 </table>
 
+<p align="center"><img src="assets/many-sessions-lead-dashboard.png" alt="A lead agent at the top of a 3 by 3 tile view coordinating nine active sessions." width="100%"></p>
+
+The lead sits alongside the sessions it coordinates, giving you one place to
+see the work and guide agents as it unfolds.
+
+Terminals and multiplexers give each agent session a place to run, whether that
+is a pane, tab, or workspace. GitSense builds on that by letting you bring
+related sessions into a Group, use sections and layouts to show how the work
+fits together, and filter which sessions you see without changing where your
+agents run.
+
+<table>
+  <thead>
+    <tr>
+      <th width="33%" align="center">Organize by status</th>
+      <th width="33%" align="center">Review recent activity</th>
+      <th width="34%" align="center">Filter what you see</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td width="33%" valign="top"><img src="assets/many-sessions-my-work-kanban.png" alt="A My Work Group organized as a Kanban board with an AI assistant monitoring the sessions." width="100%"></td>
+    <td width="33%" valign="top"><img src="assets/many-sessions-my-work-recent-activity.png" alt="The same My Work Group organized into sections by recent session activity with an AI assistant alongside it." width="100%"></td>
+    <td width="34%" valign="top"><img src="assets/many-sessions-my-work-recent-activity-tiles.png" alt="A Tiles view filtered to show selected recent-activity sections from the My Work Group." width="100%"></td>
+  </tr>
+  </tbody>
+</table>
+
 ### Steer and query your agents through one conversation
 
 Give a Group a lead, then use one conversation to steer its agents and query
@@ -79,7 +107,9 @@ brings their progress and results together.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
-### Scale with ease
+## Scale with ease
+
+### It starts with a lead
 
 **Create an empty Group and add a lead with two clicks to get started.**
 
@@ -88,7 +118,28 @@ knowledge. Describe the outcome you want, and the lead can guide you through
 turning it into an organized team. Whether you need one agent or dozens, the
 lead can create and organize them with your direction.
 
-#### Scale observation
+### Add a lead that understands your work
+
+**Two clicks and a prompt. That is all it takes.**
+
+Tell the lead what you want to know or monitor. GitSense leads know how to
+retrieve only the context they need, avoid reprocessing unchanged activity,
+and monitor the Group token efficiently.
+
+<table>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><strong>1. Add a lead</strong><br><br>Click <strong>Add a lead</strong> from the Group.<br><br><img src="assets/create-a-lead-step-1-start.png" alt="A GitSense Chat Group with the Add a lead button ready to be selected." width="100%"></td>
+      <td width="50%" valign="top"><strong>2. Create the lead agent</strong><br><br>Confirm the settings and click <strong>Create lead agent</strong>.<br><br><img src="assets/create-a-lead-step-2-confirm.png" alt="The Add a lead agent dialog with a managed lead ready to be created." width="100%"></td>
+    </tr>
+    <tr>
+      <td width="50%" valign="top"><strong>3. Describe what you need</strong><br><br>Tell the lead what to monitor, how often to check, and the safeguards to follow.<br><br><img src="assets/create-a-lead-step-3-create-loop.png" alt="A prompt asking the Group lead to create a bounded read-only monitoring loop." width="100%"></td>
+      <td width="50%" valign="top"><strong>4. Review the report</strong><br><br>The report appears beside the Group and shows what needs your attention.<br><br><img src="assets/create-a-lead-step-4-review-reports.png" alt="A Group monitoring report showing loop status, timing, controls, and sessions needing attention." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
+
+### Scale observation
 
 Tell the lead what you want the dashboard to cover, which agents to create, and
 what each one should be responsible for. The lead can build the team, coordinate
@@ -129,7 +180,7 @@ hand one off to your own terminal, or run an agent there directly.
 
 See how to [add a lead that understands your work](#add-a-lead-that-understands-your-work).
 
-#### Scale knowledge
+### Scale knowledge
 
 Ask the lead to make knowledge available across a 4,800-file repository. It can
 first create a short-lived scout to assess the architecture and recommend how
@@ -154,62 +205,6 @@ knowledge. Once it is reviewed, any agent that can run `gsc ask` can use it.
       <td width="33%" valign="top">One knowledge layer can support many focused agents.</td>
       <td width="33%" valign="top">A lead can divide a repository into focused responsibilities.</td>
       <td width="34%" valign="top">Different agents can query the same reviewed knowledge with <code>gsc ask</code>.</td>
-    </tr>
-  </tbody>
-</table>
-
-## Explore GitSense's capabilities
-
-The examples above show why GitSense matters. The walkthroughs below show how to
-organize sessions and give a Group its first lead.
-
-### Organize sessions around how you work
-
-<p align="center"><img src="assets/many-sessions-lead-dashboard.png" alt="A lead agent at the top of a 3 by 3 tile view coordinating nine active sessions." width="100%"></p>
-
-The lead sits alongside the sessions it coordinates, giving you one place to
-see the work and guide agents as it unfolds.
-
-Terminals and multiplexers give each agent session a place to run, whether that
-is a pane, tab, or workspace. GitSense builds on that by letting you bring
-related sessions into a Group, use sections and layouts to show how the work
-fits together, and filter which sessions you see without changing where your
-agents run.
-
-<table>
-  <thead>
-    <tr>
-      <th width="33%" align="center">Organize by status</th>
-      <th width="33%" align="center">Review recent activity</th>
-      <th width="34%" align="center">Filter what you see</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td width="33%" valign="top"><img src="assets/many-sessions-my-work-kanban.png" alt="A My Work Group organized as a Kanban board with an AI assistant monitoring the sessions." width="100%"></td>
-    <td width="33%" valign="top"><img src="assets/many-sessions-my-work-recent-activity.png" alt="The same My Work Group organized into sections by recent session activity with an AI assistant alongside it." width="100%"></td>
-    <td width="34%" valign="top"><img src="assets/many-sessions-my-work-recent-activity-tiles.png" alt="A Tiles view filtered to show selected recent-activity sections from the My Work Group." width="100%"></td>
-  </tr>
-  </tbody>
-</table>
-
-### Add a lead that understands your work
-
-**Two clicks and a prompt. That is all it takes.**
-
-Tell the lead what you want to know or monitor. GitSense leads know how to
-retrieve only the context they need, avoid reprocessing unchanged activity,
-and monitor the Group token efficiently.
-
-<table>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top"><strong>1. Add a lead</strong><br><br>Click <strong>Add a lead</strong> from the Group.<br><br><img src="assets/create-a-lead-step-1-start.png" alt="A GitSense Chat Group with the Add a lead button ready to be selected." width="100%"></td>
-      <td width="50%" valign="top"><strong>2. Create the lead agent</strong><br><br>Confirm the settings and click <strong>Create lead agent</strong>.<br><br><img src="assets/create-a-lead-step-2-confirm.png" alt="The Add a lead agent dialog with a managed lead ready to be created." width="100%"></td>
-    </tr>
-    <tr>
-      <td width="50%" valign="top"><strong>3. Describe what you need</strong><br><br>Tell the lead what to monitor, how often to check, and the safeguards to follow.<br><br><img src="assets/create-a-lead-step-3-create-loop.png" alt="A prompt asking the Group lead to create a bounded read-only monitoring loop." width="100%"></td>
-      <td width="50%" valign="top"><strong>4. Review the report</strong><br><br>The report appears beside the Group and shows what needs your attention.<br><br><img src="assets/create-a-lead-step-4-review-reports.png" alt="A Group monitoring report showing loop status, timing, controls, and sessions needing attention." width="100%"></td>
     </tr>
   </tbody>
 </table>
