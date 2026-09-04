@@ -52,24 +52,24 @@ new. Agents can understand why a file matters before reading it, while you can
 find previous sessions worth continuing, reusing, or turning into shared
 knowledge.
 
-#### Same search, more context
-
-![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file as one example of useful context.](assets/same-search-more-to-go-on.png)
-
-On the left is a regular ripgrep search; on the right is the same search enriched
-with GitSense. Both find the same files, but GitSense also explains what each
-file is for and can surface details such as which team owns the code, known risks,
-or previously reviewed guidance. The agent now has more to reason with before
-deciding whether a file is worth spending tokens on.
-
-#### Find work worth reusing
-
-![GitSense session search filtering previous work by content, time, repository, role, and file activity.](assets/resume-faster-search.png)
-
-GitSense lets you search activity across previous sessions by what was said,
-which files were touched, repository, role, and time. This makes it easier to
-find work worth resuming or reusing, or sessions with knowledge you want to
-extract and review.
+<table>
+  <thead>
+    <tr>
+      <th width="50%" align="center">Same search, more context</th>
+      <th width="50%" align="center">Find work worth reusing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><img src="assets/same-search-more-to-go-on.png" alt="The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file as one example of useful context." width="100%"></td>
+      <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="GitSense session search filtering previous work by content, time, repository, role, and file activity." width="100%"></td>
+    </tr>
+    <tr>
+      <td width="50%" valign="top">On the left is a regular ripgrep search; on the right is the same search enriched with GitSense. Both find the same files, but GitSense also explains what each file is for and can surface details such as which team owns the code, known risks, or previously reviewed guidance. The agent now has more to reason with before deciding whether a file is worth spending tokens on.</td>
+      <td width="50%" valign="top">GitSense lets you search activity across previous sessions by what was said, which files were touched, repository, role, and time. This makes it easier to find work worth resuming or reusing, or sessions with knowledge you want to extract and review.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Better human-AI collaboration
 
