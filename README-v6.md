@@ -1,12 +1,12 @@
 # GitSense: Chat
 
-**Build complex agent workflows with ease.**
+**GitSense is an intelligence platform for your agents and their workflows.**
 
-GitSense helps you create specialized agents, connect them as a team, and make
-what they know available wherever you work. A Team Lead gives people and agents
-one place to ask questions, routes each request to the right specialist, and
-brings the answer back. It works alongside the tools you already use; no proxy
-or wrapper is required.
+It works quietly alongside the tools you already use. No proxy or wrapper is
+required. GitSense gathers useful information from agent sessions and codebase
+activity, then helps you turn it into reviewed, reusable knowledge. Use that
+intelligence to understand what your agents are doing, guide work while it is
+underway, and give you and your agents a better starting point.
 
 ## How GitSense Chat Works
 
@@ -119,8 +119,8 @@ and add a lead with two clicks. Describe the outcome you want, and it can help
 turn a complex problem into coordinated work: creating the right team, querying
 progress, guiding agents, and bringing the results back in a report. Whether
 you need one agent or dozens, the lead can create and organize them with your
-direction. The examples below show how one lead can simplify management,
-observation, and knowledge sharing.
+direction. The examples below show how one lead can help you scale management,
+observation, and knowledge.
 
 ### Create a lead in seconds, then put it to work
 
@@ -139,7 +139,7 @@ and monitor the Group token efficiently.
   </tbody>
 </table>
 
-### Coordinate more work through one lead
+### Scale your attention with a lead
 
 Use one conversation to coordinate many agents while the lead tracks each task
 and brings the results together. In the Hello World Lab demo, the lead asks nine
@@ -147,21 +147,20 @@ agents to create language-specific files, verifies their replies, then directs
 selected agents to change `Hello` to `Hey`. It reports exact paths and provides
 actions to open each file in Zed or inspect its git diff.
 
-This demonstrates shared visibility, targeted coordination, and actionable
+This demonstrates scalable visibility, targeted coordination, and actionable
 cross-session results without replacing terminals or multiplexers.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
-### Build complex agent workflows with ease
+### Build dashboards that scale
 
-Tell the lead what outcome you want, which sources matter, and what each agent
-should be responsible for. The lead can build the team, coordinate its work,
-and turn the Group into a live view of the workflow.
+Tell the lead what you want the dashboard to cover, which agents to create, and
+what each one should be responsible for. The lead can build the team, coordinate
+its work, and turn the Group into a live dashboard.
 
 Every card in the dashboard is an agent with its own context and responsibility.
-That agent might watch GitHub, monitor a single website, or gather and report on
-another focused source. It can work on its own or lead a team behind the scenes
-and bring their combined work back as one card.
+An agent can gather and report information on its own, or it can lead a focused
+team behind the scenes and bring their combined work back as one card.
 
 <table>
   <tbody>
@@ -176,28 +175,24 @@ and bring their combined work back as one card.
 
 ![Placeholder for a video showing a lead creating a GitHub Watcher Group with focused agents for issues and pull requests.](assets/github-watcher-group-placeholder.svg)
 
-### Share what your agents know
+### Build knowledge once, use it everywhere
 
-Specialized knowledge is more useful when people and other agents can reach it
-without learning how the team is organized. Give them one place to ask: the
-Team Lead. The lead identifies the right specialist, routes the question, and
-returns the answer to whoever asked.
+Ask the lead to make knowledge available across a 4,800-file repository. It can
+first create a short-lived scout to assess the architecture and recommend how
+the work should be divided, then help create the agents needed to build that
+knowledge. Once it is reviewed, any agent that can run `gsc ask` can use it.
 
-In the GitHub Watcher demo, agents working in Claude Code and Codex each ask the
-dashboard's Team Lead a question with `gsc ask`. The lead routes those questions
-to the GitHub Watcher, which answers from the knowledge gathered by its focused
-team. Claude and Codex do not need a direct connection to the Watcher or need to
-know which agent owns the information.
-
-```text
-Claude Code ─┐
-             ├──→ Team Lead ──→ GitHub Watcher
-Codex ───────┘         ↑               │
-                       └──── answer ────┘
-```
-
-Build the expertise once, then access it from the dashboard, terminal, or any
-agent that can run `gsc ask`.
+<table>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><strong>Knowledge architecture</strong><br><br><img src="assets/scale-knowledge-architecture-placeholder.png" alt="Placeholder knowledge architecture showing a repository becoming shared reviewed knowledge for multiple agents." width="100%"></td>
+      <td width="50%" valign="top"><strong>Repository Group</strong><br><br><img src="assets/scale-knowledge-repository-group-placeholder.png" alt="Placeholder Repository Group with four agents responsible for architecture, API, data, and tests." width="100%"></td>
+    </tr>
+    <tr>
+      <td colspan="2" valign="top"><strong>Query from any agent</strong><br><br><img src="assets/scale-knowledge-agents-ask-placeholder.png" alt="Placeholder showing Claude and Codex querying shared reviewed knowledge with gsc ask." width="100%"><br><br>Different agents can query the same reviewed knowledge with <code>gsc ask</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Current Support and Boundaries
 
