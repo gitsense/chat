@@ -86,30 +86,7 @@ with you to understand and guide the work of other agents.
 ## See GitSense in action
 
 The examples above show why GitSense matters. The capabilities below show how it
-supports work at increasing scope, from understanding one session to coordinating
-groups of agents.
-
-### Understand one session from multiple perspectives
-
-Create custom views to examine the same session through different lenses. See
-how one prompt and 52 tool calls become something you can actually review.
-
-<table>
-  <thead>
-    <tr>
-      <th width="33%" align="center">The session</th>
-      <th width="33%" align="center">Change Review</th>
-      <th width="33%" align="center">Session Outline</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="33%" valign="top"><img src="assets/one-session-the-session.png" alt="The original session with 52 tool calls and its available Session Insight views." width="100%"></td>
-      <td width="33%" valign="top"><img src="assets/one-session-change-review.png" alt="A custom Change Review perspective over the same session." width="100%"></td>
-      <td width="33%" valign="top"><img src="assets/one-session-session-outline.png" alt="A custom Session Outline perspective over the same session." width="100%"></td>
-    </tr>
-  </tbody>
-</table>
+helps you organize, guide, and coordinate groups of agents.
 
 ### Organize sessions around how you work
 
