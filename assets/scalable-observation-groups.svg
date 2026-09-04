@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
-  <title id="title">A dashboard card can represent an observation team</title>
-  <desc id="description">The My Team Dashboard Group contains a GitHub Watcher card. The same GitHub Watcher leads another Group containing a GitHub Issues Tracker and Pull Request Monitor, then rolls their findings up to the dashboard.</desc>
+  <title id="title">A Group lead can also be a member of another Group</title>
+  <desc id="description">The GitHub Watcher is a member of the My Team Dashboard Group and the lead of another Group containing a GitHub Issues Tracker and Pull Request Monitor. It brings that Group's combined findings back to the larger dashboard.</desc>
 
   <defs>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
@@ -17,8 +17,8 @@
   <rect width="1600" height="1000" fill="#f6f8fa"/>
 
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-    <text x="800" y="64" text-anchor="middle" fill="#1f2328" font-size="38" font-weight="700">One card can represent an observation team</text>
-    <text x="800" y="104" text-anchor="middle" fill="#59636e" font-size="21">Keep the dashboard simple while focused agents retain their own context.</text>
+    <text x="800" y="64" text-anchor="middle" fill="#1f2328" font-size="38" font-weight="700">A Group lead can also be a member of another Group</text>
+    <text x="800" y="104" text-anchor="middle" fill="#59636e" font-size="21">The lead brings the work of its Group into a larger dashboard as one card.</text>
 
     <rect x="70" y="142" width="1460" height="248" rx="20" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
     <text x="106" y="187" fill="#1f2328" font-size="24" font-weight="700">My Team Dashboard Group</text>
@@ -42,8 +42,8 @@
     </g>
 
     <line x1="800" y1="354" x2="800" y2="550" stroke="#0969da" stroke-width="5" marker-end="url(#arrow-blue)"/>
-    <rect x="674" y="425" width="252" height="42" rx="21" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
-    <text x="800" y="452" text-anchor="middle" fill="#0969da" font-size="17" font-weight="700">Same agent, two Groups</text>
+    <rect x="625" y="425" width="350" height="42" rx="21" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+    <text x="800" y="452" text-anchor="middle" fill="#0969da" font-size="17" font-weight="700">GitHub Watcher leads this Group</text>
 
     <rect x="260" y="500" width="1080" height="422" rx="22" fill="#ffffff" stroke="#8c959f" stroke-width="2"/>
     <text x="298" y="548" fill="#1f2328" font-size="25" font-weight="700">GitHub Watcher Group</text>
@@ -74,6 +74,6 @@
     <rect x="606" y="710" width="388" height="34" rx="17" fill="#ffffff"/>
     <text x="800" y="733" text-anchor="middle" fill="#1a7f37" font-size="16" font-weight="700">Focused findings roll up to the lead</text>
 
-    <text x="800" y="968" text-anchor="middle" fill="#59636e" font-size="18">Open the Group for detail. Talk to the dashboard card for the combined picture.</text>
+    <text x="800" y="968" text-anchor="middle" fill="#59636e" font-size="18">Talk to the GitHub Watcher card for the combined findings from its Group.</text>
   </g>
 </svg>
