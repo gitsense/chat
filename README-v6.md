@@ -165,6 +165,11 @@ organize sessions and give a Group its first lead.
 
 ### Organize sessions around how you work
 
+<p align="center"><img src="assets/many-sessions-lead-dashboard.png" alt="A lead agent at the top of a 3 by 3 tile view coordinating nine active sessions." width="100%"></p>
+
+The lead sits alongside the sessions it coordinates, giving you one place to
+see the work and guide agents as it unfolds.
+
 Terminals and multiplexers give each agent session a place to run, whether that
 is a pane, tab, or workspace. GitSense builds on that by letting you bring
 related sessions into a Group, use sections and layouts to show how the work
