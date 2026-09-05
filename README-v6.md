@@ -1,12 +1,12 @@
 # GitSense: Chat
 
-**GitSense is an intelligence platform for your agents and their workflows.**
+**GitSense adds intelligence and coordination to your agent workflows.**
 
-It works quietly alongside the tools you already use. No proxy or wrapper is
-required. GitSense gathers useful information from agent sessions and codebase
-activity, then helps you turn it into reviewed, reusable knowledge. Use that
-intelligence to understand what your agents are doing, guide work while it is
-underway, and give you and your agents a better starting point.
+GitSense works quietly alongside the tools you already use. No proxy or wrapper
+is required. It gives you a clearer view of your agent sessions, lets you
+organize them under leads that can monitor and coordinate the work, and turns
+session and codebase activity into reviewed, reusable knowledge that other
+agents can use.
 
 <h2 align="center">What GitSense Makes Possible</h2>
 
