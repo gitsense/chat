@@ -8,12 +8,7 @@ activity, then helps you turn it into reviewed, reusable knowledge. Use that
 intelligence to understand what your agents are doing, guide work while it is
 underway, and give you and your agents a better starting point.
 
-<h2 align="center">Give your agents a lead. Give your lead a job.</h2>
-
-<p align="center">
-Organize the sessions you want to keep an eye on. Then tell the lead what you
-want it to do.
-</p>
+<h3 align="center">Give your agents a lead. Give your lead a job.</h3>
 
 ![Placeholder for a GIF showing a Group lead being instructed to send a system notification when every session has finished.](assets/give-your-lead-a-job-placeholder.svg)
 
