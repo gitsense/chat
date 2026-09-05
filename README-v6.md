@@ -8,7 +8,7 @@ activity, then helps you turn it into reviewed, reusable knowledge. Use that
 intelligence to understand what your agents are doing, guide work while it is
 underway, and give you and your agents a better starting point.
 
-<p align="center"><strong>Give your agents a lead. Give your lead a job.</strong></p>
+<h2 align="center">Give your agents a lead. Give your lead a job.</h2>
 
 <p align="center">
 Organize the sessions you want to keep an eye on. Then tell the lead what you
