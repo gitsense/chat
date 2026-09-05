@@ -8,7 +8,26 @@ activity, then helps you turn it into reviewed, reusable knowledge. Use that
 intelligence to understand what your agents are doing, guide work while it is
 underway, and give you and your agents a better starting point.
 
+<h2 align="center">What GitSense Makes Possible</h2>
+
+<p align="center"><strong>Give agents a lead. Give the lead a job.</strong></p>
+
 ![Placeholder for a GIF showing a Group lead being instructed to send a system notification when every session has finished.](assets/give-your-lead-a-job-placeholder.svg)
+
+<table>
+  <thead>
+    <tr>
+      <th width="50%" align="center">Create knowledge any agent can use.</th>
+      <th width="50%" align="center">See more than spinners.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><img src="assets/scale-knowledge-agents-ask-placeholder.png" alt="Claude and Codex using GitSense knowledge created by another agent." width="100%"></td>
+      <td width="50%" valign="top"><img src="assets/many-sessions-my-work-recent-activity-tiles.png" alt="GitSense Chat showing the activity, progress, and results behind multiple agent sessions." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
 
 ## How GitSense Chat Works
 
