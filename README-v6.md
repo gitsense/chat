@@ -8,6 +8,13 @@ activity, then helps you turn it into reviewed, reusable knowledge. Use that
 intelligence to understand what your agents are doing, guide work while it is
 underway, and give you and your agents a better starting point.
 
+<p align="center"><strong>Give your agents a lead. Give your lead a job.</strong></p>
+
+<p align="center">
+Organize the sessions you want to keep an eye on. Then tell the lead what you
+want it to do.
+</p>
+
 ## How GitSense Chat Works
 
 Your agents keep working in the tools you already use. GitSense works with the
@@ -152,47 +159,57 @@ cross-session results without replacing terminals or multiplexers.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
-### Build dashboards that scale
+## Build complex workflows with ease
 
-Tell the lead what you want the dashboard to cover, which agents to create, and
-what each one should be responsible for. The lead can build the team, coordinate
-its work, and turn the Group into a live dashboard.
+GitSense Chat gives you the building blocks to meet a wide range of needs. You
+can create specialized agents, organize them into teams, and combine those
+teams into larger workflows, all through conversation.
 
-Every card in the dashboard is an agent with its own context and responsibility.
-An agent can gather and report information on its own, or it can lead a focused
-team behind the scenes and bring their combined work back as one card.
+The example below is intentionally simple, but it is not a gimmick. In agentic
+coding, work is increasingly distributed across repositories, pull requests,
+issues, coding agents, and communication tools. Keeping that activity visible
+and making it available to people and agents is a practical, recurring need.
 
-<table>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top"><strong>Observation Group architecture</strong><br><br><img src="assets/scalable-observation-groups.svg" alt="An observation architecture showing a GitHub Watcher lead coordinating focused agents and appearing in a larger dashboard Group." width="100%"></td>
-      <td width="50%" valign="top"><strong>My Team Dashboard Group</strong><br><br><img src="assets/group-my-team.png" alt="The My Team Dashboard Group with GitHub Watcher, Product Health Monitor, Slack Watcher, team members, and Roboto." width="100%"></td>
-    </tr>
-  </tbody>
-</table>
+### Start with a team dashboard
 
-**Create a GitHub Watcher through conversation**
+Each card represents an agent responsible for keeping one part of the dashboard
+current. Some agents monitor a product, service, repository, or communication
+channel. Others represent a person or coordinate an entire team behind the
+scenes.
+
+![The My Team Dashboard Group with agents responsible for GitHub activity, product health, Slack activity, and an overall team report.](assets/group-my-team.png)
+
+The GitHub Watcher is one of those cards. To see how a dashboard becomes a
+workflow, we can look at how that capability is created and added to the team.
+
+### Build a GitHub Watcher through conversation
+
+Tell the lead that you need visibility into GitHub activity. It can create a
+GitHub Watcher, organize focused agents for issues and pull requests, and give
+each one a clear responsibility. Their findings roll up to the Watcher, which
+keeps one dashboard card current for the rest of the team.
 
 ![Placeholder for a video showing a lead creating a GitHub Watcher Group with focused agents for issues and pull requests.](assets/github-watcher-group-placeholder.svg)
 
-### Build knowledge once, use it everywhere
+The GitHub Watcher hides the organization and coordination of its underlying
+agents. The rest of the workflow interacts with its lead through a simple,
+stable interface, much like calling an API without needing to understand its
+implementation. Once it is ready, the Watcher can be added to the team dashboard
+as a single card.
 
-Ask the lead to make knowledge available across a 4,800-file repository. It can
-first create a short-lived scout to assess the architecture and recommend how
-the work should be divided, then help create the agents needed to build that
-knowledge. Once it is reviewed, any agent that can run `gsc ask` can use it.
+![The GitHub Watcher coordinating focused agents for GitHub issues and pull requests while contributing one combined view to the team dashboard.](assets/scalable-observation-groups.svg)
 
-<table>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top"><strong>Knowledge architecture</strong><br><br><img src="assets/scale-knowledge-architecture-placeholder.png" alt="Placeholder knowledge architecture showing a repository becoming shared reviewed knowledge for multiple agents." width="100%"></td>
-      <td width="50%" valign="top"><strong>Repository Group</strong><br><br><img src="assets/scale-knowledge-repository-group-placeholder.png" alt="Placeholder Repository Group with four agents responsible for architecture, API, data, and tests." width="100%"></td>
-    </tr>
-    <tr>
-      <td colspan="2" valign="top"><strong>Query from any agent</strong><br><br><img src="assets/scale-knowledge-agents-ask-placeholder.png" alt="Placeholder showing Claude and Codex querying shared reviewed knowledge with gsc ask." width="100%"><br><br>Different agents can query the same reviewed knowledge with <code>gsc ask</code>.</td>
-    </tr>
-  </tbody>
-</table>
+### Share information with ease
+
+The information gathered by the GitHub Watcher is not confined to its dashboard
+card. People can ask for it through GitSense Chat, while Claude, Codex, and other
+agents can ask through `gsc ask`.
+
+They do not need to know how the Watcher is organized or which specialist owns
+the answer. The request is routed to the right agent, and the result comes back
+through the same simple interface.
+
+![Placeholder showing Claude and Codex using gsc ask to access information gathered by the GitHub Watcher.](assets/scale-knowledge-agents-ask-placeholder.png)
 
 ## Current Support and Boundaries
 
