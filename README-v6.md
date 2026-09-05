@@ -15,6 +15,8 @@ Organize the sessions you want to keep an eye on. Then tell the lead what you
 want it to do.
 </p>
 
+![Placeholder for a GIF showing a Group lead being instructed to send a system notification when every session has finished.](assets/give-your-lead-a-job-placeholder.svg)
+
 ## How GitSense Chat Works
 
 Your agents keep working in the tools you already use. GitSense works with the
