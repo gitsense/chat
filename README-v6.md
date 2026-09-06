@@ -8,13 +8,14 @@ organize them under leads that can monitor and coordinate the work, and turns
 session and codebase activity into reviewed, reusable knowledge that you and
 other agents can use.
 
-<p align="center"><strong>Create specialized knowledge any agent can use.</strong><br>
-Spread knowledge to improve reasoning, then access it from Claude, Codex, or any
-other agent.</p>
+<h3 align="center">Create specialized knowledge agents</h3>
+
+<p align="center">Make what they know available to Claude, Codex, or any other
+agent.</p>
 
 ![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask-play.png)
 
-## Scale how you work
+<h3 align="center">Scale how you work</h3>
 
 <table>
   <tr>
