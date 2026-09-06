@@ -8,25 +8,24 @@ organize them under leads that can monitor and coordinate the work, and turns
 session and codebase activity into reviewed, reusable knowledge that you and
 other agents can use.
 
-<p align="center"><strong>Create knowledge any agent can use.</strong><br>
+<p align="center"><strong>Create specialized knowledge any agent can use.</strong><br>
 Spread knowledge to improve reasoning, then access it from Claude, Codex, or any
 other agent.</p>
 
 ![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask-play.png)
 
+## Scale how you work
+
 <table>
   <tr>
-    <td width="33%" align="center"><strong>Scale knowledge with a conversation.</strong></td>
-    <td width="34%" align="center"><strong>Give your agents a lead.</strong></td>
-    <td width="33%" align="center"><strong>Build a team you can talk to.</strong></td>
+    <td width="50%" align="center"><strong>Scale attention.</strong></td>
+    <td width="50%" align="center"><strong>Scale coordination.</strong></td>
   </tr>
   <tr>
-    <td align="center" valign="top">Add focused agents as your knowledge needs grow.</td>
-    <td align="center" valign="top">Ask it to check back later and remind you only if something still needs your attention.</td>
-    <td align="center" valign="top">Create an agent team to help you manage your own.</td>
+    <td align="center" valign="top">Delegate what to watch and when to alert you.</td>
+    <td align="center" valign="top">Bring agents together into a team you can talk to.</td>
   </tr>
   <tr>
-    <td valign="top"><img src="assets/build-scaleable-knowledge.png" alt="A GitHub Watcher Group expanding with agents that monitor OpenCode and Pi." width="100%"></td>
     <td valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
     <td valign="top"><img src="assets/team-dashboard.png" alt="A GitSense Chat team dashboard with focused agent cards and an assistant that can query and coordinate them." width="100%"></td>
   </tr>
