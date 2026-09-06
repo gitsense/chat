@@ -12,7 +12,7 @@ other agents can use.
 Spread knowledge to improve reasoning, then access it from Claude, Codex, or any
 other agent.</p>
 
-![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask.png)
+![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask-play.png)
 
 <table>
   <tr>
