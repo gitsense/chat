@@ -9,7 +9,7 @@ session and codebase activity into reviewed, reusable knowledge that you and
 other agents can use.
 
 <p align="center"><strong>Give your agents a lead. Then put it to work.</strong><br>
-Ask it to watch a task and remind you when it needs a nudge.</p>
+Ask it to check back later and remind you only if something still needs your attention.</p>
 
 ![A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished.](assets/give-your-lead-a-job.png)
 
@@ -20,8 +20,8 @@ they know from Claude, Codex, or any other agent.</p>
 ![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask.png)
 
 <p align="center"><strong>Build dashboards you can talk to.</strong><br>
-Each card is an agent that keeps its view current and answers questions about
-its work.</p>
+Each card is a focused agent with its own context, skills, and knowledge.
+Together, they let you scale observation.</p>
 
 ![A GitSense Chat dashboard whose agent-maintained cards can be queried and guided through conversation.](assets/many-sessions-my-work-recent-activity-tiles.png)
 
