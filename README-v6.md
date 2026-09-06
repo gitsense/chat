@@ -16,8 +16,8 @@ other agent.</p>
 
 <table>
   <tr>
-    <td width="33%" align="center"><strong>Build scalable knowledge.</strong></td>
-    <td width="34%" align="center"><strong>Give your agents a lead. Then put it to work.</strong></td>
+    <td width="33%" align="center"><strong>Scale knowledge with a conversation.</strong></td>
+    <td width="34%" align="center"><strong>Create an assistant that works your way.</strong></td>
     <td width="33%" align="center"><strong>Build an agent team.</strong></td>
   </tr>
   <tr>
