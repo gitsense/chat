@@ -29,7 +29,7 @@ other agents can use.
   </thead>
   <tbody>
     <tr>
-      <td valign="top"><img src="assets/scale-knowledge-agents-ask-placeholder.png" alt="Claude and Codex using GitSense knowledge created by another agent." width="100%"></td>
+      <td valign="top"><img src="assets/scale-knowledge-agents-ask.png" alt="A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues." width="100%"></td>
     </tr>
   </tbody>
 </table>
@@ -241,7 +241,7 @@ They do not need to know how the Watcher is organized or which specialist owns
 the answer. The request is routed to the right agent, and the result comes back
 through the same simple interface.
 
-![Placeholder showing Claude and Codex using gsc ask to access information gathered by the GitHub Watcher.](assets/scale-knowledge-agents-ask-placeholder.png)
+![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask.png)
 
 ## Current Support and Boundaries
 
