@@ -11,7 +11,7 @@ other agents can use.
 <table>
   <thead>
     <tr>
-      <th align="center">Give agents a lead. Give the lead a job.</th>
+      <th align="center">Give your agents a lead. Then put it to work.</th>
     </tr>
   </thead>
   <tbody>
