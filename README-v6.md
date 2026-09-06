@@ -24,14 +24,25 @@ other agents can use.
 <table>
   <thead>
     <tr>
-      <th width="50%" align="center">Create knowledge any agent can use.</th>
-      <th width="50%" align="center">See more than spinners.</th>
+      <th align="center">Create knowledge any agent can use.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td width="50%" valign="top"><img src="assets/scale-knowledge-agents-ask-placeholder.png" alt="Claude and Codex using GitSense knowledge created by another agent." width="100%"></td>
-      <td width="50%" valign="top"><img src="assets/many-sessions-my-work-recent-activity-tiles.png" alt="GitSense Chat showing the activity, progress, and results behind multiple agent sessions." width="100%"></td>
+      <td valign="top"><img src="assets/scale-knowledge-agents-ask-placeholder.png" alt="Claude and Codex using GitSense knowledge created by another agent." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th align="center">Build dashboards you can talk to.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top"><img src="assets/many-sessions-my-work-recent-activity-tiles.png" alt="A GitSense Chat dashboard whose agent-maintained cards can be queried and guided through conversation." width="100%"></td>
     </tr>
   </tbody>
 </table>
