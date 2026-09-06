@@ -20,8 +20,7 @@ Ask it to check back later and remind you only if something still needs your att
 ![A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished.](assets/give-your-lead-a-job.png)
 
 <p align="center"><strong>Build dashboards you can talk to.</strong><br>
-Each card is a focused agent with its own context.
-Together, they form a team you can talk to as a whole or one agent at a time.</p>
+Create an agent team to help you manage your own.</p>
 
 ![A GitSense Chat team dashboard with focused agent cards and an assistant that can query and coordinate them.](assets/team-dashboard.png)
 
