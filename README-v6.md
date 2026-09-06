@@ -5,10 +5,8 @@
 GitSense works quietly alongside the tools you already use. No proxy or wrapper
 is required. It gives you a clearer view of your agent sessions, lets you
 organize them under leads that can monitor and coordinate the work, and turns
-session and codebase activity into reviewed, reusable knowledge that other
-agents can use.
-
-<h2 align="center">What GitSense Makes Possible</h2>
+session and codebase activity into reviewed, reusable knowledge that you and
+other agents can use.
 
 <table>
   <thead>
