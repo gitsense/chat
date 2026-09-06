@@ -8,44 +8,22 @@ organize them under leads that can monitor and coordinate the work, and turns
 session and codebase activity into reviewed, reusable knowledge that you and
 other agents can use.
 
-<table>
-  <thead>
-    <tr>
-      <th align="center">Give your agents a lead. Then put it to work.</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
-    </tr>
-  </tbody>
-</table>
+<p align="center"><strong>Give your agents a lead. Then put it to work.</strong><br>
+Ask it to watch a task and remind you when it needs a nudge.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th align="center">Create knowledge any agent can use.</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top"><img src="assets/scale-knowledge-agents-ask.png" alt="A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues." width="100%"></td>
-    </tr>
-  </tbody>
-</table>
+![A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished.](assets/give-your-lead-a-job.png)
 
-<table>
-  <thead>
-    <tr>
-      <th align="center">Build dashboards you can talk to.</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top"><img src="assets/many-sessions-my-work-recent-activity-tiles.png" alt="A GitSense Chat dashboard whose agent-maintained cards can be queried and guided through conversation." width="100%"></td>
-    </tr>
-  </tbody>
-</table>
+<p align="center"><strong>Create knowledge any agent can use.</strong><br>
+Spread context across focused specialists to improve reasoning, then access what
+they know from Claude, Codex, or any other agent.</p>
+
+![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask.png)
+
+<p align="center"><strong>Build dashboards you can talk to.</strong><br>
+Each card is an agent that keeps its view current and answers questions about
+its work.</p>
+
+![A GitSense Chat dashboard whose agent-maintained cards can be queried and guided through conversation.](assets/many-sessions-my-work-recent-activity-tiles.png)
 
 ## How GitSense Chat Works
 
