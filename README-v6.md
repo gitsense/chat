@@ -169,58 +169,6 @@ cross-session results without replacing terminals or multiplexers.
 
 ![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
 
-## Build complex workflows with ease
-
-GitSense Chat gives you the building blocks to meet a wide range of needs. You
-can create specialized agents, organize them into teams, and combine those
-teams into larger workflows, all through conversation.
-
-The example below is intentionally simple, but it is not a gimmick. In agentic
-coding, work is increasingly distributed across repositories, pull requests,
-issues, coding agents, and communication tools. Keeping that activity visible
-and making it available to people and agents is a practical, recurring need.
-
-### Start with a team dashboard
-
-Each card represents an agent responsible for keeping one part of the dashboard
-current. Some agents monitor a product, service, repository, or communication
-channel. Others represent a person or coordinate an entire team behind the
-scenes.
-
-![The My Team Dashboard Group with agents responsible for GitHub activity, product health, Slack activity, and an overall team report.](assets/group-my-team.png)
-
-The GitHub Watcher is one of those cards. To see how a dashboard becomes a
-workflow, we can look at how that capability is created and added to the team.
-
-### Build a GitHub Watcher through conversation
-
-Tell the lead that you need visibility into GitHub activity. It can create a
-GitHub Watcher, organize focused agents for issues and pull requests, and give
-each one a clear responsibility. Their findings roll up to the Watcher, which
-keeps one dashboard card current for the rest of the team.
-
-![Placeholder for a video showing a lead creating a GitHub Watcher Group with focused agents for issues and pull requests.](assets/github-watcher-group-placeholder.svg)
-
-The GitHub Watcher hides the organization and coordination of its underlying
-agents. The rest of the workflow interacts with its lead through a simple,
-stable interface, much like calling an API without needing to understand its
-implementation. Once it is ready, the Watcher can be added to the team dashboard
-as a single card.
-
-![The GitHub Watcher coordinating focused agents for GitHub issues and pull requests while contributing one combined view to the team dashboard.](assets/scalable-observation-groups.svg)
-
-### Share information with ease
-
-The information gathered by the GitHub Watcher is not confined to its dashboard
-card. People can ask for it through GitSense Chat, while Claude, Codex, and other
-agents can ask through `gsc ask`.
-
-They do not need to know how the Watcher is organized or which specialist owns
-the answer. The request is routed to the right agent, and the result comes back
-through the same simple interface.
-
-![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask.png)
-
 ## Current Support and Boundaries
 
 Pi is currently the supported runtime integration. Codex, Claude Code,
