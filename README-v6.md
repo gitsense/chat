@@ -8,11 +8,20 @@ organize them under leads that can monitor and coordinate the work, and turns
 session and codebase activity into reviewed, reusable knowledge that you and
 other agents can use.
 
-<p align="center"><strong>Create knowledge any agent can use.</strong><br>
+<p align="center"><strong>Create scalable knowledge.</strong><br>
 Spread knowledge to improve reasoning, then access it from Claude, Codex, or any
 other agent.</p>
 
-![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask.png)
+<table>
+  <tr>
+    <td width="50%" align="center"><strong>Step 1. Add agents to scale knowledge</strong></td>
+    <td width="50%" align="center"><strong>Step 2. Give GitSense to Claude, Codex, and other agents</strong></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/github-watcher-group-placeholder.svg" alt="A GitHub Watcher Group with room to add more focused knowledge agents." width="100%"></td>
+    <td width="50%" valign="top"><img src="assets/scale-knowledge-agents-ask.png" alt="Claude Code and Codex terminals asking a GitHub Watcher lead for recent GitHub issues." width="100%"></td>
+  </tr>
+</table>
 
 <p align="center"><strong>Give your agents a lead. Then put it to work.</strong><br>
 Ask it to check back later and remind you only if something still needs your attention.</p>
