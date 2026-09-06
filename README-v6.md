@@ -10,9 +10,18 @@ agents can use.
 
 <h2 align="center">What GitSense Makes Possible</h2>
 
-<p align="center"><strong>Give agents a lead. Give the lead a job.</strong></p>
-
-![A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished.](assets/give-your-lead-a-job.png)
+<table>
+  <thead>
+    <tr>
+      <th align="center">Give agents a lead. Give the lead a job.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
 
 <table>
   <thead>
