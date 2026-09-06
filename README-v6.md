@@ -12,7 +12,7 @@ agents can use.
 
 <p align="center"><strong>Give agents a lead. Give the lead a job.</strong></p>
 
-![Placeholder for a GIF showing a Group lead being instructed to send a system notification when every session has finished.](assets/give-your-lead-a-job-placeholder.svg)
+![A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished.](give-your-lead-a-job.png)
 
 <table>
   <thead>
