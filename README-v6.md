@@ -8,22 +8,22 @@ organize them under leads that can monitor and coordinate the work, and turns
 session and codebase activity into reviewed, reusable knowledge that you and
 other agents can use.
 
+<p align="center"><strong>Create knowledge any agent can use.</strong><br>
+Spread knowledge to improve reasoning, then access it from Claude, Codex, or any
+other agent.</p>
+
+![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask.png)
+
 <p align="center"><strong>Give your agents a lead. Then put it to work.</strong><br>
 Ask it to check back later and remind you only if something still needs your attention.</p>
 
 ![A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished.](assets/give-your-lead-a-job.png)
 
-<p align="center"><strong>Create knowledge any agent can use.</strong><br>
-Spread context across focused specialists to improve reasoning, then access what
-they know from Claude, Codex, or any other agent.</p>
-
-![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask.png)
-
 <p align="center"><strong>Build dashboards you can talk to.</strong><br>
 Each card is a focused agent with its own context.
 Together, they form a team you can talk to as a whole or one agent at a time.</p>
 
-![A GitSense Chat dashboard whose agent-maintained cards can be queried and guided through conversation.](assets/many-sessions-my-work-recent-activity-tiles.png)
+![A GitSense Chat team dashboard with focused agent cards and an assistant that can query and coordinate them.](assets/team-dashboard.png)
 
 ## How GitSense Chat Works
 
