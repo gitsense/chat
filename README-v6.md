@@ -21,7 +21,7 @@ they know from Claude, Codex, or any other agent.</p>
 
 <p align="center"><strong>Build dashboards you can talk to.</strong><br>
 Each card is a focused agent with its own context, skills, and knowledge.
-Together, they scale your insight.</p>
+Together, they form a team you can talk to as a whole or one agent at a time.</p>
 
 ![A GitSense Chat dashboard whose agent-maintained cards can be queried and guided through conversation.](assets/many-sessions-my-work-recent-activity-tiles.png)
 
