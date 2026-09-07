@@ -38,7 +38,7 @@ agent.</p>
 bring their results together in a review-ready handoff with actions you
 control.</p>
 
-![A video showing a lead reviewing agent sessions and creating a report with clickable next steps.](assets/agent-responses-actions-video-placeholder.svg)
+![A lead reviewing independently scoped agent work and preparing a review-ready handoff with actions the user controls.](assets/give-complex-work-a-lead-play.png)
 
 ## How GitSense Chat Works
 
