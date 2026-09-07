@@ -32,10 +32,11 @@ agent.</p>
   </tr>
 </table>
 
-<h3 align="center">Let your agents respond with more than words</h3>
+<h3 align="center">Give complex work a lead</h3>
 
-<p align="center">Have your lead review your sessions and create a report with
-clickable next steps.</p>
+<p align="center">Let focused agents work independently, then have the lead
+bring their results together in a review-ready handoff with actions you
+control.</p>
 
 ![A video showing a lead reviewing agent sessions and creating a report with clickable next steps.](assets/agent-responses-actions-video-placeholder.svg)
 
