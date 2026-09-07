@@ -23,14 +23,21 @@ agent.</p>
     <td width="50%" align="center"><strong>Scale coordination.</strong></td>
   </tr>
   <tr>
-    <td align="center" valign="top">Delegate what to watch and when to alert you.</td>
-    <td align="center" valign="top">Bring agents together into a team you can talk to.</td>
+    <td align="center" valign="top">Create a group lead to watch your sessions and alert you.</td>
+    <td align="center" valign="top">Create a personal assistant to coordinate your team’s work.</td>
   </tr>
   <tr>
     <td valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
     <td valign="top"><img src="assets/team-dashboard.png" alt="A GitSense Chat team dashboard with focused agent cards and an assistant that can query and coordinate them." width="100%"></td>
   </tr>
 </table>
+
+<h3 align="center">Let your agents respond with more than words</h3>
+
+<p align="center">Have your lead review your sessions and create a report with
+clickable next steps.</p>
+
+![A video showing a lead reviewing agent sessions and creating a report with clickable next steps.](assets/agent-responses-actions-video-placeholder.svg)
 
 ## How GitSense Chat Works
 
