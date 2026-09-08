@@ -13,7 +13,13 @@ other agents can use.
 <p align="center">Make what they know available to Claude, Codex, or any other
 agent.</p>
 
-![A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues.](assets/scale-knowledge-agents-ask-play.png)
+<p align="center">
+  <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4">▶ Download and watch the demo video (MP4, 3.1 MB)</a></strong>
+</p>
+
+<p align="center">
+  <em>The video will be downloaded. Open it from your browser's downloads to watch it.</em>
+</p>
 
 <h3 align="center">Scale how you work</h3>
 
