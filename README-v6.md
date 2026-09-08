@@ -18,8 +18,7 @@ agent.</p>
 </p>
 
 <p align="center">
-  <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4">▶ Download and watch the demo video (MP4, 3.1 MB)</a></strong><br>
-  <em>Clicking the preview or link downloads the video. Open it from your browser's downloads to watch it.</em>
+  <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4">▶ Download and watch the demo video (MP4, 3.1 MB)</a></strong>
 </p>
 
 <h3 align="center">Scale how you work</h3>
