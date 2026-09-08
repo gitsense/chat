@@ -32,21 +32,22 @@ related sessions into one Group, where a lead gathers the results into a single
 report and GitSense action links take you directly to the work.
 
 ```text
-I want to quickly review the work across this Group. Summarize what each agent
-did and, for every session that changed files, include a GitSense action link
-that opens its diff.
+I want to quickly review the work across this Group. Give me one report that
+summarizes what each agent did, calls out important decisions, risks, blockers,
+and anything that needs my attention. For sessions that changed files, include
+GitSense action links that take me directly to the relevant diff or test.
 ```
+
+![A lead's report bringing together insights, decisions, risks, blockers, and GitSense action links from multiple agent sessions.](assets/give-complex-work-a-lead-review-the-report.png)
 
 <table>
   <tr>
-    <td width="33%" align="center"><strong>Review the report</strong></td>
-    <td width="33%" align="center"><strong>Click to open the diff</strong></td>
-    <td width="34%" align="center"><strong>Click to run the test</strong></td>
+    <td width="50%" align="center"><strong>Click to open the diff</strong></td>
+    <td width="50%" align="center"><strong>Click to run the test</strong></td>
   </tr>
   <tr>
-    <td width="33%" valign="top"><img src="assets/give-complex-work-a-lead-review-the-report.png" alt="A lead's report bringing together results and GitSense action links from multiple agent sessions." width="100%"></td>
-    <td width="33%" valign="top"><img src="assets/give-complex-work-a-lead-open-the-diff.png" alt="A GitSense action link opening the relevant code diff for review." width="100%"></td>
-    <td width="34%" valign="top"><img src="assets/give-complex-work-a-lead-run-the-test.png" alt="A GitSense action link opening a terminal and running the relevant test." width="100%"></td>
+    <td width="50%" valign="top"><img src="assets/give-complex-work-a-lead-open-the-diff.png" alt="A GitSense action link opening the relevant code diff for review." width="100%"></td>
+    <td width="50%" valign="top"><img src="assets/give-complex-work-a-lead-run-the-test.png" alt="A GitSense action link opening a terminal and running the relevant test." width="100%"></td>
   </tr>
 </table>
 
