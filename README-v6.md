@@ -44,7 +44,13 @@ agent.</p>
 bring their results together in a review-ready handoff with actions you
 control.</p>
 
-![A lead reviewing independently scoped agent work and preparing a review-ready handoff with actions the user controls.](assets/give-complex-work-a-lead.png)
+<p align="center">
+  <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/give-complex-work-a-lead.mp4">▶ Download and watch the demo video (MP4, 833 KB)</a></strong>
+</p>
+
+<p align="center">
+  <a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/give-complex-work-a-lead.mp4"><img src="assets/give-complex-work-a-lead.png" alt="A lead reviewing independently scoped agent work and preparing a review-ready handoff with actions the user controls." width="100%"></a>
+</p>
 
 ## How GitSense Chat Works
 
