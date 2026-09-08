@@ -38,8 +38,6 @@ and anything that needs my attention. For sessions that changed files, include
 GitSense action links that take me directly to the relevant diff or test.
 ```
 
-![A lead's report bringing together insights, decisions, risks, blockers, and GitSense action links from multiple agent sessions.](assets/give-complex-work-a-lead-review-the-report.png)
-
 **Click to open the diff**
 
 ![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
