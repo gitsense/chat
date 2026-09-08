@@ -18,7 +18,7 @@ agent.</p>
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4"><img src="assets/scale-knowledge-agents-ask-play.png" alt="A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues." width="100%"></a>
+  <a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4"><img src="assets/create-specialized-knowledge-agents.png" alt="A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues." width="100%"></a>
 </p>
 
 <h3 align="center">Scale how you work</h3>
