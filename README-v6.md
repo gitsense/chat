@@ -200,19 +200,6 @@ and monitor the Group token efficiently.
   </tbody>
 </table>
 
-### Scale your attention with a lead
-
-Use one conversation to coordinate many agents while the lead tracks each task
-and brings the results together. In the Hello World Lab demo, the lead asks nine
-agents to create language-specific files, verifies their replies, then directs
-selected agents to change `Hello` to `Hey`. It reports exact paths and provides
-actions to open each file in Zed or inspect its git diff.
-
-This demonstrates scalable visibility, targeted coordination, and actionable
-cross-session results without replacing terminals or multiplexers.
-
-![Video placeholder showing active agent sessions with a lead monitoring the work and checking for agents stuck in loops.](assets/give-your-multiplexer-a-lead-placeholder.svg)
-
 ## Current Support and Boundaries
 
 Pi is currently the supported runtime integration. Codex, Claude Code,
