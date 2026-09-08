@@ -14,11 +14,12 @@ other agents can use.
 agent.</p>
 
 <p align="center">
-  <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4">▶ Download and watch the demo video (MP4, 3.1 MB)</a></strong>
+  <a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4"><img src="assets/scale-knowledge-agents-ask-play.png" alt="A GitHub Watcher in Pi alongside Claude Code and Codex terminals asking its lead for recent GitHub issues." width="100%"></a>
 </p>
 
 <p align="center">
-  <em>The video will be downloaded. Open it from your browser's downloads to watch it.</em>
+  <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4">▶ Download and watch the demo video (MP4, 3.1 MB)</a></strong><br>
+  <em>Clicking the preview or link downloads the video. Open it from your browser's downloads to watch it.</em>
 </p>
 
 <h3 align="center">Scale how you work</h3>
