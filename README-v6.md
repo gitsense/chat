@@ -18,7 +18,7 @@ agent.</p>
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4"><img src="assets/create-specialized-knowledge-agents.png" alt="A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues." width="100%"></a>
+  <a href="assets/create-specialized-knowledge-agents.png"><img src="assets/create-specialized-knowledge-agents.png" alt="A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues." width="100%"></a>
 </p>
 
 <h3 align="center">Scale how you work</h3>
@@ -48,7 +48,7 @@ takes you straight to the work.</p>
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/give-complex-work-a-lead.mp4"><img src="assets/give-complex-work-a-lead.png" alt="A lead reviewing independently scoped agent work and preparing a review-ready handoff with actions the user controls." width="100%"></a>
+  <a href="assets/give-complex-work-a-lead.png"><img src="assets/give-complex-work-a-lead.png" alt="A lead reviewing independently scoped agent work and preparing a review-ready handoff with actions the user controls." width="100%"></a>
 </p>
 
 <table>
@@ -58,9 +58,9 @@ takes you straight to the work.</p>
     <td width="34%" align="center"><strong>Run the test</strong></td>
   </tr>
   <tr>
-    <td valign="top"><img src="assets/give-complex-work-report-placeholder.svg" alt="Placeholder showing the lead's review-ready report." width="100%"></td>
-    <td valign="top"><img src="assets/give-complex-work-diff-placeholder.svg" alt="Placeholder showing the source diff opened from the lead's report." width="100%"></td>
-    <td valign="top"><img src="assets/give-complex-work-test-placeholder.svg" alt="Placeholder showing the test launched from the lead's report." width="100%"></td>
+    <td valign="top"><img src="assets/give-complex-work-a-lead-review-the-report.png" alt="A lead's review-ready report bringing together results from focused agents." width="100%"></td>
+    <td valign="top"><img src="assets/give-complex-work-a-lead-open-the-diff.png" alt="The source diff opened from the lead's report." width="100%"></td>
+    <td valign="top"><img src="assets/give-complex-work-a-lead-run-the-test.png" alt="A test launched from the lead's report." width="100%"></td>
   </tr>
 </table>
 
