@@ -117,11 +117,6 @@ sessions into a Group, where you can organize them by status, activity, role, or
 any structure that helps you understand the work without changing where your
 agents run.
 
-#### Organize sessions your way
-
-Arrange sessions by status, recent activity, role, or any structure that makes
-sense for the work.
-
 <table>
   <thead>
     <tr>
