@@ -25,11 +25,13 @@ for knowledge or send them information through GitSense.
 
 [![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
 
-### Give your agents a shared workspace. Give yourself a lead.
+### Give your agents more ways to help
 
-Keep your agents in the panes, tabs, and workspaces you already use. Bring their
-related sessions into one Group, where a lead gathers the results into a single
-report and GitSense action links take you directly to the work.
+Working with a coding agent often means another round of requests: "Show me the
+diff." "Open that file." "Run this command."
+
+GitSense lets agents include those next steps directly in their answers and
+reports, so you can choose what to inspect or run when you're ready.
 
 ```text
 I want to quickly review the work across this Group. Give me one report that
