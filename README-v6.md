@@ -121,13 +121,12 @@ knowledge.
   </tbody>
 </table>
 
-### Bring your agents into one workspace
+### Organize sessions around the work
 
-Terminals and multiplexers give each agent session a place to run, whether that
-is a pane, tab, or workspace. GitSense builds on them by bringing related
-sessions into a Group, where you can organize them by status, activity, role, or
-any structure that helps you understand the work without changing where your
-agents run.
+Groups let you organize related sessions by status, recent activity, role, or
+whatever structure fits the work. The same session can appear in more than one
+Group, giving you different views without moving or duplicating the underlying
+work.
 
 <table>
   <thead>
