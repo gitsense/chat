@@ -8,10 +8,13 @@ organize them under leads that can monitor and coordinate the work, and turns
 session and codebase activity into reviewed, reusable knowledge that you and
 other agents can use.
 
-<h3 align="center">Create specialized knowledge agents</h3>
+<h3 align="center">Give your agents specialized knowledge at scale</h3>
 
-<p align="center">Make what they know available to Claude, Codex, or any other
-agent.</p>
+<p align="center">Let focused agents build knowledge about one source, then
+make what they know available to any agent that needs it.</p>
+
+<p align="center">GitSense gives agents a conversational API for specialized
+knowledge.</p>
 
 <p align="center">
   <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4">▶ Download and watch the demo video (MP4, 3.1 MB)</a></strong>
