@@ -44,7 +44,7 @@ agent.</p>
 bring their results together in a review-ready handoff with actions you
 control.</p>
 
-![A lead reviewing independently scoped agent work and preparing a review-ready handoff with actions the user controls.](assets/give-complex-work-a-lead-play.png)
+![A lead reviewing independently scoped agent work and preparing a review-ready handoff with actions the user controls.](assets/give-complex-work-a-lead.png)
 
 ## How GitSense Chat Works
 
