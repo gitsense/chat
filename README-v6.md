@@ -38,29 +38,28 @@ agent.</p>
   </tr>
 </table>
 
-<h3 align="center">Give complex work a lead</h3>
+<h3 align="center">Give complex work a home and a lead</h3>
 
-<p align="center">Group your agents under a lead, then ask for a report with
-GitSense action links.</p>
-
-<p align="center">
-  <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/give-complex-work-a-lead.mp4">▶ Download and watch the demo video (MP4, 833 KB)</a></strong>
-</p>
-
-<p align="center">
-  <a href="assets/give-complex-work-a-lead.png"><img src="assets/give-complex-work-a-lead.png" alt="A lead reviewing independently scoped agent work and preparing a review-ready handoff with actions the user controls." width="100%"></a>
-</p>
+<p align="center">Start with an empty group, add a lead, and let it help you
+build the agents you need. Ask for a report with GitSense action links, then
+review and act.</p>
 
 <table>
   <tr>
-    <td width="33%" align="center"><strong>Review the report</strong></td>
-    <td width="33%" align="center"><strong>Click to open the diff</strong></td>
-    <td width="34%" align="center"><strong>Click to run the test</strong></td>
+    <td width="50%" align="center"><strong>Start with an empty group</strong></td>
+    <td width="50%" align="center"><strong>Ask your lead to build the team</strong></td>
   </tr>
   <tr>
-    <td valign="top"><img src="assets/give-complex-work-a-lead-review-the-report.png" alt="A lead's review-ready report bringing together results from focused agents." width="100%"></td>
-    <td valign="top"><img src="assets/give-complex-work-a-lead-open-the-diff.png" alt="The source diff opened from the lead's report." width="100%"></td>
-    <td valign="top"><img src="assets/give-complex-work-a-lead-run-the-test.png" alt="A test launched from the lead's report." width="100%"></td>
+    <td valign="top"><img src="assets/give-complex-work-a-lead-empty-group.png" alt="An empty GitSense Chat group ready for a lead and agents." width="100%"></td>
+    <td valign="top"><img src="assets/give-complex-work-a-lead-ask-lead.png" alt="A user asking the lead to build the agent team." width="100%"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><strong>Add the agents you need</strong></td>
+    <td width="50%" align="center"><strong>Review the report</strong></td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="assets/give-complex-work-a-lead-added-agents.png" alt="Agents added to the group with help from the lead." width="100%"></td>
+    <td valign="top"><img src="assets/give-complex-work-a-lead-review-report.png" alt="A lead's review-ready report bringing together results from focused agents." width="100%"></td>
   </tr>
 </table>
 
