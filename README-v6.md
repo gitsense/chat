@@ -40,9 +40,8 @@ agent.</p>
 
 <h3 align="center">Give complex work a lead</h3>
 
-<p align="center">Let focused agents work independently, then have the lead
-bring their results together in a review-ready handoff with actions you
-control.</p>
+<p align="center">Group your agents, add a lead, and get a report that takes
+you straight to the work.</p>
 
 <p align="center">
   <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/give-complex-work-a-lead.mp4">▶ Download and watch the demo video (MP4, 833 KB)</a></strong>
