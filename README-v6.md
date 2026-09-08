@@ -40,8 +40,8 @@ agent.</p>
 
 <h3 align="center">Give complex work a lead</h3>
 
-<p align="center">Group your agents, add a lead, and get a report that takes
-you straight to the work.</p>
+<p align="center">Group your agents under a lead, then ask for a report that
+takes you straight to the work.</p>
 
 <p align="center">
   <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/give-complex-work-a-lead.mp4">▶ Download and watch the demo video (MP4, 833 KB)</a></strong>
@@ -50,6 +50,19 @@ you straight to the work.</p>
 <p align="center">
   <a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/give-complex-work-a-lead.mp4"><img src="assets/give-complex-work-a-lead.png" alt="A lead reviewing independently scoped agent work and preparing a review-ready handoff with actions the user controls." width="100%"></a>
 </p>
+
+<table>
+  <tr>
+    <td width="33%" align="center"><strong>Review the report</strong></td>
+    <td width="33%" align="center"><strong>Open the diff</strong></td>
+    <td width="34%" align="center"><strong>Run the test</strong></td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="assets/give-complex-work-report-placeholder.svg" alt="Placeholder showing the lead's review-ready report." width="100%"></td>
+    <td valign="top"><img src="assets/give-complex-work-diff-placeholder.svg" alt="Placeholder showing the source diff opened from the lead's report." width="100%"></td>
+    <td valign="top"><img src="assets/give-complex-work-test-placeholder.svg" alt="Placeholder showing the test launched from the lead's report." width="100%"></td>
+  </tr>
+</table>
 
 ## How GitSense Chat Works
 

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="24" fill="#111827"/>
+  <text x="400" y="235" text-anchor="middle" fill="#f8fafc" font-family="Arial, sans-serif" font-size="36" font-weight="700">Run the test</text>
+  <text x="400" y="285" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="22">Screenshot placeholder</text>
+</svg>
