@@ -53,9 +53,9 @@ as knowledge moves between agents.
 
 ### Give your agents a shared workspace. Give yourself a lead.
 
-Bring work scattered across agents, sessions, and directories into one Group.
-Its lead gathers the results into a single report, while GitSense action links
-take you directly to the work.
+Keep your agents in the panes, tabs, and workspaces you already use. Bring their
+related sessions into one Group, where a lead gathers the results into a single
+report and GitSense action links take you directly to the work.
 
 ```text
 I want to quickly review the work across this Group. Summarize what each agent
