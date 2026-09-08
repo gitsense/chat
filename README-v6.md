@@ -40,8 +40,8 @@ agent.</p>
 
 <h3 align="center">Give complex work a lead</h3>
 
-<p align="center">Group your agents under a lead, then ask for a report that
-takes you straight to the work.</p>
+<p align="center">Group your agents under a lead, then ask for a report with
+GitSense action links.</p>
 
 <p align="center">
   <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/give-complex-work-a-lead.mp4">▶ Download and watch the demo video (MP4, 833 KB)</a></strong>
