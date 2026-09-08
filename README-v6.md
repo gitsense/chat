@@ -51,12 +51,17 @@ introduce relevant context and behavior at the right time, and Checkpoints
 create compact handoffs of the current work. Together, they keep context focused
 as knowledge moves between agents.
 
-### Let your agents respond with more than words
+### Give your agents a shared workspace. Give yourself a lead.
 
-Ask a lead to review your sessions and return a report with GitSense action
-links that take you directly to the work. Open a diff, run a test, load a
-spreadsheet, or start the next job from the response, while you choose which
-actions run.
+Bring work scattered across agents, sessions, and directories into one Group.
+Its lead gathers the results into a single report, while GitSense action links
+take you directly to the work.
+
+```text
+I want to quickly review the work across this Group. Summarize what each agent
+did and, for every session that changed files, include a GitSense action link
+that opens its diff.
+```
 
 <table>
   <tr>
