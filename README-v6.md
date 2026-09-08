@@ -40,16 +40,9 @@ GitSense action links that take me directly to the relevant diff or test.
 
 ![A lead's report bringing together insights, decisions, risks, blockers, and GitSense action links from multiple agent sessions.](assets/give-complex-work-a-lead-review-the-report.png)
 
-<table>
-  <tr>
-    <td width="50%" align="center"><strong>Click to open the diff</strong></td>
-    <td width="50%" align="center"><strong>Click to run the test</strong></td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top"><img src="assets/shared-workspace-with-lead-open-diff.gif" alt="A GitSense action link opening the relevant code diff for review with one click." width="100%"></td>
-    <td width="50%" valign="top"><img src="assets/give-complex-work-a-lead-run-the-test.png" alt="A GitSense action link opening a terminal and running the relevant test." width="100%"></td>
-  </tr>
-</table>
+**Click to open the diff**
+
+![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
 
 ## How GitSense Chat Works
 
