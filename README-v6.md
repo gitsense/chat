@@ -177,7 +177,11 @@ and monitor the Group token efficiently.
   </tbody>
 </table>
 
-<h3 align="center">Scale how you work</h3>
+### Scale how you work
+
+Use your lead to scale how you work. Have it create reminders so you don’t
+forget what needs attention, add specialized agents to monitor what matters,
+and coordinate many agents from one conversation.
 
 <table>
   <tr>
