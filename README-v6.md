@@ -4,31 +4,58 @@
 
 GitSense works quietly alongside the tools you already use. No proxy or wrapper
 is required. It gives you a clearer view of your agent sessions, lets you
-organize them under leads that can monitor and coordinate the work, and turns
-session and codebase activity into reviewed, reusable knowledge that you and
-other agents can use.
+organize related sessions into Groups with leads that can monitor and coordinate
+the work, and turns session and codebase activity into reviewed, reusable
+knowledge that you and other agents can use.
 
-<h3 align="center">Give your agents specialized knowledge at scale</h3>
+**Keep working with the agents you already use. GitSense connects them to shared
+knowledge and coordinated work.**
 
-<p align="center">Let focused agents build knowledge about one source, then
-make what they know available to any agent that needs it.</p>
+### Give your agents specialized knowledge at scale
 
-<p align="center">GitSense gives agents a conversational API for specialized
-knowledge.</p>
+Let focused Pi agents build knowledge about specific sources, then make what
+they know available to any agent that needs it. GitSense gives agents a
+conversational API for specialized knowledge.
 
-<p align="center">
-  <strong><a href="https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4">▶ Download and watch the demo video (MP4, 3.1 MB)</a></strong>
-</p>
+GitSense Chat currently supports Pi sessions, but you do not need to move your
+coding work into Pi. Claude, Codex, OpenCode, and other agents can ask Pi agents
+for knowledge or send them information through GitSense.
 
-<p align="center">
-  <a href="assets/create-specialized-knowledge-agents.png"><img src="assets/create-specialized-knowledge-agents.png" alt="A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues." width="100%"></a>
-</p>
+**[▶ Download and watch the demo video (MP4, 3.1 MB)](https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4)**
 
-<h3 align="center">Give complex work a home and a lead</h3>
+[![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
 
-<p align="center">Start with an empty group, add a lead, and let it help you
-build the agents you need. Ask for a report with GitSense action links, then
-review and act.</p>
+### Bring your development workflow into the agentic age
+
+Start with an Agent Development Group that understands issues and pull requests
+across your projects. Ask what needs attention, then create a dedicated Group
+and lead for the work you choose. Any agent can report the new Group back,
+giving the Agent Development lead visibility as the work grows.
+
+![Video placeholder showing agents asking what needs attention, selecting an issue or pull request, creating a dedicated Group and lead, and reporting it back to the Agent Development Group.](assets/development-workflow-video-placeholder.svg)
+
+## How GitSense Chat Works
+
+Your agents keep working in the tools you already use. GitSense works with the
+activity they create and connects it with reviewed knowledge, giving people and
+AI agents more ways to understand and guide the work without replacing the
+workflow.
+
+![GitSense Chat works with existing agent sessions and adds context for understanding and guiding the work.](assets/how-gitsense-works.png)
+
+### Share knowledge without sharing entire conversations
+
+GitSense keeps knowledge outside an agent's context until it is needed. Notes
+capture information worth sharing, Lessons preserve reusable experience, Rules
+introduce relevant context and behavior at the right time, and Checkpoints
+create compact handoffs of the current work. Together, they keep context focused
+as knowledge moves between agents.
+
+### Turn an issue into a working Group
+
+Create a Group and lead for the selected issue or pull request. Add agents as
+the work grows, then ask the lead to bring their progress and results together
+for review.
 
 <table>
   <tr>
@@ -48,15 +75,6 @@ review and act.</p>
     <td valign="top"><img src="assets/give-complex-work-a-lead-review-report.png" alt="A lead's review-ready report bringing together results from focused agents." width="100%"></td>
   </tr>
 </table>
-
-## How GitSense Chat Works
-
-Your agents keep working in the tools you already use. GitSense works with the
-activity they create and connects it with reviewed knowledge, giving people and
-AI agents more ways to understand and guide the work without replacing the
-workflow.
-
-![GitSense Chat works with existing agent sessions and adds context for understanding and guiding the work.](assets/how-gitsense-works.png)
 
 ## Quick Start
 
