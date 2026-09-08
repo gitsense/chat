@@ -21,29 +21,6 @@ agent.</p>
   <a href="assets/create-specialized-knowledge-agents.png"><img src="assets/create-specialized-knowledge-agents.png" alt="A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues." width="100%"></a>
 </p>
 
-<h3 align="center">Scale how you work</h3>
-
-<table>
-  <tr>
-    <td width="50%" align="center"><strong>Scale attention.</strong></td>
-    <td width="50%" align="center"><strong>Scale observation.</strong></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">Create a group lead to watch your sessions and alert you.</td>
-    <td align="center" valign="top">Create specialized agents to monitor what matters.</td>
-  </tr>
-  <tr>
-    <td valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
-    <td valign="top"><img src="assets/team-dashboard.png" alt="A GitSense Chat dashboard showing focused agents monitoring different responsibilities." width="100%"></td>
-  </tr>
-</table>
-
-<p align="center"><strong>Scale coordination.</strong></p>
-
-<p align="center">Ask a lead to coordinate your agents' work.</p>
-
-<p align="center"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating nine agents in the Hello World Lab." width="100%"></p>
-
 <h3 align="center">Give complex work a home and a lead</h3>
 
 <p align="center">Start with an empty group, add a lead, and let it help you
@@ -199,6 +176,29 @@ and monitor the Group token efficiently.
     </tr>
   </tbody>
 </table>
+
+<h3 align="center">Scale how you work</h3>
+
+<table>
+  <tr>
+    <td width="50%" align="center"><strong>Scale attention.</strong></td>
+    <td width="50%" align="center"><strong>Scale observation.</strong></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">Create a group lead to watch your sessions and alert you.</td>
+    <td align="center" valign="top">Create specialized agents to monitor what matters.</td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
+    <td valign="top"><img src="assets/team-dashboard.png" alt="A GitSense Chat dashboard showing focused agents monitoring different responsibilities." width="100%"></td>
+  </tr>
+</table>
+
+<p align="center"><strong>Scale coordination.</strong></p>
+
+<p align="center">Ask a lead to coordinate your agents' work.</p>
+
+<p align="center"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating nine agents in the Hello World Lab." width="100%"></p>
 
 ## Current Support and Boundaries
 
