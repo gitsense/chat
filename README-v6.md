@@ -54,8 +54,8 @@ takes you straight to the work.</p>
 <table>
   <tr>
     <td width="33%" align="center"><strong>Review the report</strong></td>
-    <td width="33%" align="center"><strong>Open the diff</strong></td>
-    <td width="34%" align="center"><strong>Run the test</strong></td>
+    <td width="33%" align="center"><strong>Click to open the diff</strong></td>
+    <td width="34%" align="center"><strong>Click to run the test</strong></td>
   </tr>
   <tr>
     <td valign="top"><img src="assets/give-complex-work-a-lead-review-the-report.png" alt="A lead's review-ready report bringing together results from focused agents." width="100%"></td>
