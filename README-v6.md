@@ -51,28 +51,23 @@ introduce relevant context and behavior at the right time, and Checkpoints
 create compact handoffs of the current work. Together, they keep context focused
 as knowledge moves between agents.
 
-### Turn an issue into a working Group
+### Let your agents respond with more than words
 
-Create a Group and lead for the selected issue or pull request. Add agents as
-the work grows, then ask the lead to bring their progress and results together
-for review.
+Ask a lead to review your sessions and return a report with GitSense action
+links that take you directly to the work. Open a diff, run a test, load a
+spreadsheet, or start the next job from the response, while you choose which
+actions run.
 
 <table>
   <tr>
-    <td width="50%" align="center"><strong>Start with an empty group</strong></td>
-    <td width="50%" align="center"><strong>Ask your lead to build the team</strong></td>
+    <td width="33%" align="center"><strong>Review the report</strong></td>
+    <td width="33%" align="center"><strong>Click to open the diff</strong></td>
+    <td width="34%" align="center"><strong>Click to run the test</strong></td>
   </tr>
   <tr>
-    <td valign="top"><img src="assets/give-complex-work-a-lead-empty-group.png" alt="An empty GitSense Chat group ready for a lead and agents." width="100%"></td>
-    <td valign="top"><img src="assets/give-complex-work-a-lead-ask-lead.png" alt="A user asking the lead to build the agent team." width="100%"></td>
-  </tr>
-  <tr>
-    <td width="50%" align="center"><strong>Add the agents you need</strong></td>
-    <td width="50%" align="center"><strong>Review the report</strong></td>
-  </tr>
-  <tr>
-    <td valign="top"><img src="assets/give-complex-work-a-lead-added-agents.png" alt="Agents added to the group with help from the lead." width="100%"></td>
-    <td valign="top"><img src="assets/give-complex-work-a-lead-review-report.png" alt="A lead's review-ready report bringing together results from focused agents." width="100%"></td>
+    <td width="33%" valign="top"><img src="assets/give-complex-work-a-lead-review-the-report.png" alt="A lead's report bringing together results and GitSense action links from multiple agent sessions." width="100%"></td>
+    <td width="33%" valign="top"><img src="assets/give-complex-work-a-lead-open-the-diff.png" alt="A GitSense action link opening the relevant code diff for review." width="100%"></td>
+    <td width="34%" valign="top"><img src="assets/give-complex-work-a-lead-run-the-test.png" alt="A GitSense action link opening a terminal and running the relevant test." width="100%"></td>
   </tr>
 </table>
 
