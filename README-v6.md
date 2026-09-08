@@ -25,32 +25,6 @@ for knowledge or send them information through GitSense.
 
 [![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
 
-### Bring your development workflow into the agentic age
-
-Start with an Agent Development Group that understands issues and pull requests
-across your projects. Ask what needs attention, then create a dedicated Group
-and lead for the work you choose. Any agent can report the new Group back,
-giving the Agent Development lead visibility as the work grows.
-
-![Video placeholder showing agents asking what needs attention, selecting an issue or pull request, creating a dedicated Group and lead, and reporting it back to the Agent Development Group.](assets/development-workflow-video-placeholder.svg)
-
-## How GitSense Chat Works
-
-Your agents keep working in the tools you already use. GitSense works with the
-activity they create and connects it with reviewed knowledge, giving people and
-AI agents more ways to understand and guide the work without replacing the
-workflow.
-
-![GitSense Chat works with existing agent sessions and adds context for understanding and guiding the work.](assets/how-gitsense-works.png)
-
-### Share knowledge without sharing entire conversations
-
-GitSense keeps knowledge outside an agent's context until it is needed. Notes
-capture information worth sharing, Lessons preserve reusable experience, Rules
-introduce relevant context and behavior at the right time, and Checkpoints
-create compact handoffs of the current work. Together, they keep context focused
-as knowledge moves between agents.
-
 ### Give your agents a shared workspace. Give yourself a lead.
 
 Keep your agents in the panes, tabs, and workspaces you already use. Bring their
@@ -75,6 +49,23 @@ that opens its diff.
     <td width="34%" valign="top"><img src="assets/give-complex-work-a-lead-run-the-test.png" alt="A GitSense action link opening a terminal and running the relevant test." width="100%"></td>
   </tr>
 </table>
+
+## How GitSense Chat Works
+
+Your agents keep working in the tools you already use. GitSense works with the
+activity they create and connects it with reviewed knowledge, giving people and
+AI agents more ways to understand and guide the work without replacing the
+workflow.
+
+![GitSense Chat works with existing agent sessions and adds context for understanding and guiding the work.](assets/how-gitsense-works.png)
+
+### Share knowledge without sharing entire conversations
+
+GitSense keeps knowledge outside an agent's context until it is needed. Notes
+capture information worth sharing, Lessons preserve reusable experience, Rules
+introduce relevant context and behavior at the right time, and Checkpoints
+create compact handoffs of the current work. Together, they keep context focused
+as knowledge moves between agents.
 
 ## Quick Start
 
