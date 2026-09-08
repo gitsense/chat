@@ -109,22 +109,13 @@ knowledge.
   </tbody>
 </table>
 
-### Give you and your agents a better way to work together
+### Bring your agents into one workspace
 
 Terminals and multiplexers give each agent session a place to run, whether that
-is a pane, tab, or workspace. GitSense builds on them by letting you bring
-related sessions into a Group, organize them around the work, and use sections
-and layouts to see how everything fits together without changing where your
+is a pane, tab, or workspace. GitSense builds on them by bringing related
+sessions into a Group, where you can organize them by status, activity, role, or
+any structure that helps you understand the work without changing where your
 agents run.
-
-#### Coordinate sessions with a lead
-
-Bring the sessions you already have into a Group, then add a lead and dedicated
-agents for the responsibilities that need them. Each agent keeps its own
-context and workspace, while you and the Group lead get a shared view for
-understanding and guiding the work.
-
-<p align="center"><img src="assets/many-sessions-lead-dashboard.png" alt="A lead agent at the top of a 3 by 3 tile view coordinating nine active sessions." width="100%"></p>
 
 #### Organize sessions your way
 
