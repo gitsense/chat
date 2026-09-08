@@ -46,7 +46,7 @@ GitSense action links that take me directly to the relevant diff or test.
     <td width="50%" align="center"><strong>Click to run the test</strong></td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><img src="assets/give-complex-work-a-lead-open-the-diff.png" alt="A GitSense action link opening the relevant code diff for review." width="100%"></td>
+    <td width="50%" valign="top"><img src="assets/shared-workspace-with-lead-open-diff.gif" alt="A GitSense action link opening the relevant code diff for review with one click." width="100%"></td>
     <td width="50%" valign="top"><img src="assets/give-complex-work-a-lead-run-the-test.png" alt="A GitSense action link opening a terminal and running the relevant test." width="100%"></td>
   </tr>
 </table>
