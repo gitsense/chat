@@ -2,15 +2,10 @@
 
 **Give your agents more to work with. Give yourself more ways to guide the work.**
 
-GitSense works quietly alongside the tools you already use. No proxy or wrapper
-is required. It connects agents to shared knowledge and helps you understand and
-coordinate work across sessions. Organize related sessions into Groups with
-lead agents that bring together progress, dependencies, and decisions that need
-your attention. Responses can include actions so you can inspect the evidence or
-take the next step when you're ready.
-
-**Keep working with the agents you already use. GitSense connects them to shared
-knowledge and coordinated work.**
+GitSense Chat is how you and your agents work better together. The terminal is
+where your agents work. GitSense Chat is where you bring them together: group
+related sessions, give the group a lead, and turn what they learn into knowledge
+any agent can reuse.
 
 ### Scale knowledge with a lead
 
