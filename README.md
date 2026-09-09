@@ -152,10 +152,9 @@ and monitor the Group while limiting unnecessary token use.
 
 ### Work smarter with a lead
 
-A lead takes over the following along so you can focus on deciding. Give it
-the outcome you care about, and it can remind you when something needs
-attention, keep specialized agents monitoring what matters, and coordinate
-several agents from one conversation.
+Describe the outcome you care about. The lead keeps an eye on the sessions,
+alerts you when something needs attention, watches what matters through
+specialized agents, and coordinates the work from one conversation.
 
 <table>
   <tr>
