@@ -36,26 +36,9 @@ reports, so you can choose what to inspect or run when you're ready.
 
 Here, a lead brings together findings from multiple sessions and includes
 actions alongside them. You don't have to request every detail up front or keep
-asking to see more—choose what to inspect when you're ready.
+asking to see more. Choose what to inspect when you're ready.
 
 ![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
-
-## How GitSense Chat Works
-
-Your agents keep working in the tools you already use. GitSense works with the
-activity they create and connects it with reviewed knowledge, giving people and
-AI agents more ways to understand and guide the work without replacing the
-workflow.
-
-![GitSense Chat works with existing agent sessions and adds context for understanding and guiding the work.](assets/how-gitsense-works.png)
-
-### Share knowledge without sharing entire conversations
-
-GitSense keeps knowledge outside an agent's context until it is needed. Notes
-capture information worth sharing, Lessons preserve reusable experience, Rules
-introduce relevant context and behavior at the right time, and Checkpoints
-create compact handoffs of the current work. Together, they keep context focused
-as knowledge moves between agents.
 
 ## Quick Start
 
