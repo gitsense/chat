@@ -6,6 +6,14 @@ Keep working with the tools you already use. No proxy or wrapper is required.
 GitSense Chat helps you find and organize sessions, coordinate work with lead
 agents, and turn conversations into context you and your agents can reuse.
 
+### Multiple sessions, one conversation
+
+Tell your lead what needs to happen and which agents should work on it.
+Here, one request reaches nine agents, then a follow-up changes only the C
+and Go programs.
+
+![A lead coordinating nine agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
+
 ### Build and scale knowledge through conversation
 
 Create a group in GitSense Chat and add a lead in two clicks. Your lead knows
@@ -156,11 +164,10 @@ Once it's running, tell the lead what you need or ask how it can help:
 
 ### Work smarter with a lead
 
-Describe the outcome you care about. The lead can keep an eye on your
-sessions, alert you when something needs attention, watch what matters
-through specialized agents, and coordinate the work from one conversation. It
-retrieves only the context it needs, avoids reprocessing unchanged activity,
-and monitors the Group while limiting unnecessary token use.
+Give your lead something to watch, remind you about, or help coordinate. It
+can check for changes and use saved checkpoints to stay informed without
+rereading every conversation. The examples below show a few ways to put it
+to work.
 
 <table>
   <tr>
@@ -176,12 +183,6 @@ and monitors the Group while limiting unnecessary token use.
     <td valign="top"><img src="assets/team-dashboard.png" alt="A GitSense Chat dashboard showing focused agents monitoring different responsibilities." width="100%"></td>
   </tr>
 </table>
-
-<p align="center"><strong>Coordinate the work</strong></p>
-
-<p align="center">Ask a lead to bring your agents' work together.</p>
-
-<p align="center"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating nine agents in the Hello World Lab." width="100%"></p>
 
 ## Current Support and Boundaries
 
