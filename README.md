@@ -130,15 +130,9 @@ those sessions.
 
 ## All you need is a lead, really
 
-GitSense is built around AI assistance. Agents know how to get more help when
-they need it, and creating a Group with a lead gives you a personal GitSense
-assistant to organize, coordinate, and guide the work. Start with an empty Group
-and add a lead with two clicks. Describe the outcome you want, and it can help
-turn a complex problem into coordinated work: creating the right team, querying
-progress, guiding agents, and bringing the results back in a report. Whether
-you need one agent or dozens, the lead can create and organize them with your
-direction. The examples below show how one lead can help you scale management,
-observation, and knowledge.
+Your lead is a personal GitSense assistant. Tell it what you need help with,
+from keeping an eye on sessions to creating agents and coordinating their work.
+Start small and let it help you grow, without managing every session yourself.
 
 ### Create a lead in seconds
 
