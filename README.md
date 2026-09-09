@@ -105,10 +105,11 @@ useful work without remembering what the session was called.
 
 ### Organize sessions around the work
 
-Groups let you organize related sessions by status, recent activity, role, or
-whatever structure fits the work. The same session can appear in more than one
-Group, giving you different views without moving or duplicating the underlying
-work.
+Keep your terminals and panes arranged how you like. Groups give you another
+way to organize sessions by status, recent activity, role, or whatever makes
+sense for the work. The same session can appear in multiple Groups without
+moving or copying it. Add a lead to help you keep track of the work across
+those sessions.
 
 <table>
   <thead>
