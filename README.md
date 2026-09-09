@@ -147,7 +147,12 @@ Adding a lead to a Group takes two clicks. No setup, no scripting.
   </tbody>
 </table>
 
-Once it's running, tell the lead what you care about.
+Once it's running, tell the lead what you need or ask how it can help:
+
+- Create agents or bring existing sessions into the Group.
+- Arrange sessions into columns or sections that fit your work.
+- Check progress and bring findings together.
+- Set up reminders or monitoring for things you care about.
 
 ### Work smarter with a lead
 
