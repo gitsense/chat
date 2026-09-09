@@ -12,15 +12,16 @@ take the next step when you're ready.
 **Keep working with the agents you already use. GitSense connects them to shared
 knowledge and coordinated work.**
 
-### Give your agents specialized knowledge at scale
+### Scale knowledge with a lead
 
-Let focused Pi agents build knowledge about specific sources, then make what
-they know available to any agent that needs it. GitSense gives agents a
-conversational API for specialized knowledge.
+GitSense Chat makes it easy to group agents and give each group a lead.
+Describe a source you want covered, like the GitHub Watcher following recent
+issues, and the group's lead can help organize the specialists, decide who to
+ask, and bring their answers together.
 
-GitSense Chat currently supports Pi sessions, but you do not need to move your
-coding work into Pi. Claude, Codex, OpenCode, and other agents can ask Pi agents
-for knowledge or send them information through GitSense.
+Keep coding with the tools you already use. Claude Code, Codex, OpenCode, and
+other agents can ask your specialists for help or share information with them
+through `gsc`.
 
 **[▶ Download and watch the demo video (MP4, 3.1 MB)](https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4)**
 
