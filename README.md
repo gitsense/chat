@@ -3,10 +3,11 @@
 **GitSense adds intelligence and coordination to your agent workflows.**
 
 GitSense works quietly alongside the tools you already use. No proxy or wrapper
-is required. It gives you a clearer view of your agent sessions, lets you
-organize related sessions into Groups with leads that can monitor and coordinate
-the work, and turns session and codebase activity into reviewed, reusable
-knowledge that you and other agents can use.
+is required. It connects agents to shared knowledge and helps you understand and
+coordinate work across sessions. Organize related sessions into Groups with
+lead agents that bring together progress, dependencies, and decisions that need
+your attention. Responses can include actions so you can inspect the evidence or
+take the next step when you're ready.
 
 **Keep working with the agents you already use. GitSense connects them to shared
 knowledge and coordinated work.**
