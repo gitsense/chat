@@ -150,9 +150,9 @@ Once it's running, tell the lead what you care about.
 
 ### Work smarter with a lead
 
-Describe the outcome you care about. The lead keeps an eye on the sessions,
-alerts you when something needs attention, watches what matters through
-specialized agents, and coordinates the work from one conversation. It
+Describe the outcome you care about. The lead can keep an eye on your
+sessions, alert you when something needs attention, watch what matters
+through specialized agents, and coordinate the work from one conversation. It
 retrieves only the context it needs, avoids reprocessing unchanged activity,
 and monitors the Group while limiting unnecessary token use.
 
