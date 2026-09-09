@@ -59,9 +59,10 @@ coding agent:
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
 
-You can also [build the CLI from source](https://github.com/gitsense/chat).
+You can also [build the CLI from source](https://github.com/gitsense/gsc-cli).
 
-Pi is GitSense Chat's first full reference integration. Follow
+GitSense Chat currently supports Pi sessions, which you can organize into Groups
+with lead agents. Follow
 [pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
 Insights, checkpoints, shared knowledge, messaging, lead agents, and group
 observation loops work together.
