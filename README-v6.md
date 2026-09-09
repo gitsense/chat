@@ -33,8 +33,9 @@ diff." "Open that file." "Run this command."
 GitSense lets agents include those next steps directly in their answers and
 reports, so you can choose what to inspect or run when you're ready.
 
-Here, a lead brings together findings from multiple sessions. Instead of asking
-what you want to do next, it presents actions you can take when you're ready.
+Here, a lead brings together findings from multiple sessions and includes
+actions alongside them. You don't have to request every detail up front or keep
+asking to see more—choose what to inspect when you're ready.
 
 ![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
 
@@ -57,18 +58,20 @@ as knowledge moves between agents.
 
 ## Quick Start
 
-Review the [install script](install.sh), then install `gsc`:
+Review the [install script](install.sh), then install the `gsc` CLI:
 
 ```bash
 curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
 
-Install it yourself by [building from source](https://github.com/gitsense/chat),
-or ask your coding agent:
+This installs the `gsc` CLI. To install and configure GitSense Chat, ask your
+coding agent:
 
 ```text
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
+
+You can also [build the CLI from source](https://github.com/gitsense/chat).
 
 Pi is GitSense Chat's first full reference integration. Follow
 [pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
@@ -149,7 +152,7 @@ observation, and knowledge.
 
 Tell the lead what you want to know or monitor. GitSense leads know how to
 retrieve only the context they need, avoid reprocessing unchanged activity,
-and monitor the Group token efficiently.
+and monitor the Group while limiting unnecessary token use.
 
 <table>
   <tbody>
@@ -198,10 +201,11 @@ logs, lifecycle state, or Group coordination.
 GitSense knowledge is portable. Any agent that can run `gsc` can query the same
 Brains, notes, lessons, and rules without requiring runtime integration.
 
-GitSense Chat surfaces evidence and supports action. It does not decide whether
-an agent's work is correct, and agent findings do not automatically become
-trusted knowledge. People remain responsible for reviewing evidence, resolving
-uncertainty, and deciding what happens next.
+GitSense Chat surfaces evidence and supports action. Executable actions remain
+subject to application authorization and command validation. It does not decide
+whether an agent's work is correct, and agent findings do not automatically
+become trusted knowledge. People remain responsible for reviewing evidence,
+resolving uncertainty, and deciding what happens next.
 
 ## License
 
