@@ -70,10 +70,10 @@ observation loops work together.
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
 
-## Why GitSense?
+## Why GitSense Chat?
 
-GitSense changes both how work begins and how people and agents collaborate while
-it is underway.
+Spend less time finding past work, explaining it again, and keeping track of
+separate sessions.
 
 ### Give you and your agents a better starting point
 
