@@ -12,9 +12,11 @@ any agent can reuse.
 GitSense Chat makes it easy to group agents and give each group a lead.
 Describe a source you want covered, like the GitHub Watcher following recent
 issues, and the lead can organize the specialists, decide who to ask, and bring
-their answers together. As your work grows, the lead can also help you grow the
-team: add agents for new sources, retire sessions whose context is full, or
-start a fresh session to take over its own role, whenever you ask.
+their answers together.
+
+As your needs grow, the lead can also help you grow the team: add agents for
+new sources, retire sessions whose context is full, or start a fresh session to
+take over its own role, whenever you ask.
 
 **[▶ Download and watch the demo video (MP4, 3.1 MB)](https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4)**
 
