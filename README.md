@@ -77,12 +77,12 @@ separate sessions.
 
 ### Give you and your agents a better starting point
 
-GitSense Chat gives you and your agents more to work with before starting
-something new. That extra context is built here: describe what matters in a
-conversation, and GitSense turns it into analyzers and lessons agents can
-query. Agents understand why a file matters before reading it, while you can
-find previous sessions worth continuing, reusing, or turning into shared
-knowledge.
+Turn what you explain in a conversation into context agents can find and reuse.
+Enrich code searches with what files do and why they matter, so agents have
+more to go on before opening them.
+
+Find past sessions by what was discussed or worked on, so you can pick up
+useful work without remembering what the session was called.
 
 <table>
   <thead>
@@ -97,8 +97,8 @@ knowledge.
       <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="GitSense session search filtering previous work by content, time, repository, role, and file activity." width="100%"></td>
     </tr>
     <tr>
-      <td width="50%" valign="top">Regular ripgrep is on the left; GitSense-enriched search is on the right. Both find the same files, but GitSense gives the agent more to reason with before opening a file.</td>
-      <td width="50%" valign="top">Search past sessions by conversation, files, repository, role, or time to quickly resume work, reuse findings, or extract knowledge.</td>
+      <td width="50%" valign="top">Regular ripgrep on the left. GitSense adds each file’s purpose on the right, helping agents decide where to look next.</td>
+      <td width="50%" valign="top">Search sessions by conversation, files, repository, role, or time to find the work you want to pick up again.</td>
     </tr>
   </tbody>
 </table>
