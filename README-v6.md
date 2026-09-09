@@ -33,14 +33,8 @@ diff." "Open that file." "Run this command."
 GitSense lets agents include those next steps directly in their answers and
 reports, so you can choose what to inspect or run when you're ready.
 
-```text
-I want to quickly review the work across this Group. Give me one report that
-summarizes what each agent did, calls out important decisions, risks, blockers,
-and anything that needs my attention. For sessions that changed files, include
-GitSense action links that take me directly to the relevant diff or test.
-```
-
-**Click to open the diff**
+Here, a lead brings together findings from multiple sessions. Instead of asking
+what you want to do next, it presents actions you can take when you're ready.
 
 ![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
 
