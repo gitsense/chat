@@ -17,8 +17,8 @@ Refer to a session by name, section, or member number to tell it where to focus.
 
 Tell it what needs to happen. Here, one request reaches nine agents, then a
 follow-up changes only the C and Go programs. The example is Hello World.
-The same approach can coordinate independent code reviews, competing
-implementations, or experiments across agents.
+The same approach can help you tackle complex tasks through independent code
+reviews, competing implementations, or experiments across agents.
 
 ![A lead coordinating nine agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
 
