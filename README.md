@@ -1,6 +1,6 @@
 # GitSense: Chat
 
-**GitSense adds intelligence and coordination to your agent workflows.**
+**Give your agents more to work with. Give yourself more ways to guide the work.**
 
 GitSense works quietly alongside the tools you already use. No proxy or wrapper
 is required. It connects agents to shared knowledge and helps you understand and
