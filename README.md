@@ -8,18 +8,24 @@ agents, and turn conversations into context you and your agents can reuse.
 
 ### Multiple sessions, one conversation
 
-Tell your lead what needs to happen and which agents should work on it.
-Here, one request reaches nine agents, then a follow-up changes only the C
-and Go programs.
+Create a group in GitSense Chat and add a lead in two clicks. Your lead knows
+how to use GitSense to help you create agents, bring existing ones into the
+group, and organize their work.
+
+Your lead knows which sessions are in the group and how they're organized.
+Refer to a session by name, section, or member number to tell it where to focus.
+
+Tell it what needs to happen. Here, one request reaches nine agents, then a
+follow-up changes only the C and Go programs. The example is Hello World.
+The same approach can coordinate independent code reviews, competing
+implementations, or experiments across agents.
 
 ![A lead coordinating nine agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
 
 ### Build and scale knowledge through conversation
 
-Create a group in GitSense Chat and add a lead in two clicks. Your lead knows
-how to use GitSense to help you create agents, bring existing ones into the
-group, and organize their work. Tell it what knowledge you need, and let it
-help you build and grow the group.
+Tell your lead what knowledge you want your agents to have, and let it help
+you build and grow the group.
 
 Agents can save findings as notes and lessons, letting the lead pass along
 references without pulling every detail into its own conversation. As your
