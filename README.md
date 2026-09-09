@@ -133,28 +133,28 @@ you need one agent or dozens, the lead can create and organize them with your
 direction. The examples below show how one lead can help you scale management,
 observation, and knowledge.
 
-### Create a lead in seconds, then put it to work
+### Create a lead in seconds
 
-Tell the lead what you want to know or monitor. GitSense leads know how to
-retrieve only the context they need, avoid reprocessing unchanged activity,
-and monitor the Group while limiting unnecessary token use.
+Adding a lead to a Group takes two clicks. No setup, no scripting.
 
 <table>
   <tbody>
     <tr>
-      <td width="25%" valign="top"><strong>1. Add a lead</strong><br><br><img src="assets/create-a-lead-step-1-start.png" alt="A GitSense Chat Group with the Add a lead button ready to be selected." width="100%"><br><br>Click <strong>Add a lead</strong> from the Group.</td>
-      <td width="25%" valign="top"><strong>2. Create the lead agent</strong><br><br><img src="assets/create-a-lead-step-2-confirm.png" alt="The Add a lead agent dialog with a managed lead ready to be created." width="100%"><br><br>Confirm the settings and click <strong>Create lead agent</strong>.</td>
-      <td width="25%" valign="top"><strong>3. Describe what you need</strong><br><br><img src="assets/create-a-lead-step-3-create-loop.png" alt="A prompt asking the Group lead to create a bounded read-only monitoring loop." width="100%"><br><br>Tell the lead what to monitor, how often to check, and the safeguards to follow.</td>
-      <td width="25%" valign="top"><strong>4. Review the report</strong><br><br><img src="assets/create-a-lead-step-4-review-reports.png" alt="A Group monitoring report showing loop status, timing, controls, and sessions needing attention." width="100%"><br><br>The report appears beside the Group and shows what needs your attention.</td>
+      <td width="50%" valign="top"><strong>1. Add a lead</strong><br><br><img src="assets/create-a-lead-step-1-start.png" alt="A GitSense Chat Group with the Add a lead button ready to be selected." width="100%"><br><br>Click <strong>Add a lead</strong> from the Group.</td>
+      <td width="50%" valign="top"><strong>2. Create the lead agent</strong><br><br><img src="assets/create-a-lead-step-2-confirm.png" alt="The Add a lead agent dialog with a managed lead ready to be created." width="100%"><br><br>Confirm the settings and click <strong>Create lead agent</strong>.</td>
     </tr>
   </tbody>
 </table>
+
+Once it's running, tell the lead what you care about.
 
 ### Work smarter with a lead
 
 Describe the outcome you care about. The lead keeps an eye on the sessions,
 alerts you when something needs attention, watches what matters through
-specialized agents, and coordinates the work from one conversation.
+specialized agents, and coordinates the work from one conversation. It
+retrieves only the context it needs, avoids reprocessing unchanged activity,
+and monitors the Group while limiting unnecessary token use.
 
 <table>
   <tr>
