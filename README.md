@@ -150,20 +150,21 @@ and monitor the Group while limiting unnecessary token use.
   </tbody>
 </table>
 
-### Scale how you work
+### Work smarter with a lead
 
-Use your lead to scale how you work. Have it create reminders so you don’t
-forget what needs attention, add specialized agents to monitor what matters,
-and coordinate many agents from one conversation.
+A lead takes over the following along so you can focus on deciding. Give it
+the outcome you care about, and it can remind you when something needs
+attention, keep specialized agents monitoring what matters, and coordinate
+several agents from one conversation.
 
 <table>
   <tr>
-    <td width="50%" align="center"><strong>Scale attention.</strong></td>
-    <td width="50%" align="center"><strong>Scale observation.</strong></td>
+    <td width="50%" align="center"><strong>Delegate the watching</strong></td>
+    <td width="50%" align="center"><strong>Monitor what matters</strong></td>
   </tr>
   <tr>
-    <td align="center" valign="top">Create a group lead to watch your sessions and alert you.</td>
-    <td align="center" valign="top">Create specialized agents to monitor what matters.</td>
+    <td align="center" valign="top">Give the lead a job, like notifying you when a session stalls or finishes.</td>
+    <td align="center" valign="top">Add focused agents that each watch a responsibility.</td>
   </tr>
   <tr>
     <td valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
@@ -171,9 +172,9 @@ and coordinate many agents from one conversation.
   </tr>
 </table>
 
-<p align="center"><strong>Scale coordination.</strong></p>
+<p align="center"><strong>Coordinate the work</strong></p>
 
-<p align="center">Ask a lead to coordinate your agents' work.</p>
+<p align="center">Ask a lead to bring your agents' work together.</p>
 
 <p align="center"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating nine agents in the Hello World Lab." width="100%"></p>
 
