@@ -11,16 +11,17 @@ any agent can reuse.
 
 GitSense Chat makes it easy to group agents and give each group a lead.
 Describe a source you want covered, like the GitHub Watcher following recent
-issues, and the group's lead can help organize the specialists, decide who to
-ask, and bring their answers together.
-
-Keep coding with the tools you already use. Claude Code, Codex, OpenCode, and
-other agents can ask your specialists for help or share information with them
-through `gsc`.
+issues, and the lead can organize the specialists, decide who to ask, and bring
+their answers together. As your work grows, the lead can also help you grow the
+team: add agents for new sources, retire sessions whose context is full, or
+start a fresh session to take over its own role, whenever you ask.
 
 **[▶ Download and watch the demo video (MP4, 3.1 MB)](https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4)**
 
 [![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
+
+Claude Code, Codex, OpenCode, and other agents can ask your specialists for
+help or share information with them through `gsc`.
 
 ### Give your agents more ways to help
 
