@@ -2,40 +2,45 @@
 
 **Give your agents more to work with. Give yourself more ways to guide the work.**
 
-GitSense Chat is how you and your agents work better together. The terminal is
-where your agents work. GitSense Chat is where you bring them together: group
-related sessions, give the group a lead, and turn what they learn into knowledge
-any agent can reuse.
+Keep working with the tools you already use. No proxy or wrapper is required.
+GitSense Chat helps you find and organize sessions, coordinate work with lead
+agents, and turn conversations into context you and your agents can reuse.
 
-### Scale knowledge with a lead
+### Build and scale knowledge through conversation
 
-GitSense Chat makes it easy to group agents and give each group a lead.
-Describe a source you want covered, like the GitHub Watcher following recent
-issues, and the lead can organize the specialists, decide who to ask, and bring
-their answers together.
+Create a group in GitSense Chat and add a lead in two clicks. Your lead knows
+how to use GitSense to help you create agents, bring existing ones into the
+group, and organize their work. Tell it what knowledge you need, and let it
+help you build and grow the group.
 
-As your needs grow, the lead can also help you grow the team: add agents for
-new sources, retire sessions whose context is full, or start a fresh session to
-take over its own role, whenever you ask.
+Agents can save findings as notes and lessons, letting the lead pass along
+references without pulling every detail into its own conversation. As your
+needs grow, ask it to add agents or help fresh sessions take over, without
+juggling every conversation yourself.
+
+Here, a GitHub Watcher brings together recent issues from two repositories and
+answers questions from Claude Code, Codex, and OpenCode.
 
 **[▶ Download and watch the demo video (MP4, 3.1 MB)](https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/assets/create-specialized-knowledge-agents.mp4)**
 
 [![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
 
-Claude Code, Codex, OpenCode, and other agents can ask your specialists for
-help or share information with them through `gsc`.
+Any agent that can run `gsc` can ask your knowledge agents for help or share
+information with them, such as new findings or a progress update.
 
 ### Give your agents more ways to help
 
-Working with a coding agent often means another round of requests: "Show me the
-diff." "Open that file." "Run this command."
+You can ask an agent to open a diff or run a command. But coming back later can
+mean finding the right session and asking again. GitSense Chat lets agents
+include actions directly in their answers and reports, so you can open files,
+launch applications, or run commands when you're ready.
 
-GitSense lets agents include those next steps directly in their answers and
-reports, so you can choose what to inspect or run when you're ready.
+You control execution permissions, including which commands can run without
+another confirmation and for how long.
 
-Here, a lead brings together findings from multiple sessions and includes
-actions alongside them. You don't have to request every detail up front or keep
-asking to see more. Choose what to inspect when you're ready.
+Here, a lead brings together findings from multiple sessions and adds actions
+that take you to the work. Opening Zed is already approved for this demo, so
+the diff opens with one click.
 
 ![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
 
