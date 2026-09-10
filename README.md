@@ -12,15 +12,16 @@ to follow every conversation yourself.
 
 ### Beyond terminal tabs and panes
 
-Keep your terminal or multiplexer arranged how you like. GitSense Groups let you
-organize sessions around the work, without moving or copying them.
+Keep using your terminal, agent environment, and existing workspace setup.
+GitSense Chat adds a shared view across sessions so you can review, coordinate,
+and monitor work without changing where you do it.
 
-Find the 20 most recent sessions that changed a file and bring them into a
-Group. Review them together, or add a lead to the Group and ask it to compare
-their approaches and summarize what changed.
+Find sessions by what was discussed or which files they touched, then bring
+them into a Group. Add a lead to compare approaches, summarize progress, and
+help coordinate the work.
 
-GitSense tracks session activity and file changes in near real time, so you can
-follow ongoing work as well as review past sessions.
+Session activity stays up to date as agents work, giving you visibility across
+the Group without switching between individual conversations.
 
 <p align="center"><strong>Review and monitor the work</strong></p>
 <p align="center">
