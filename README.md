@@ -17,8 +17,8 @@ GitSense Chat adds a shared view across sessions so you can review, coordinate,
 and monitor work without changing where you do it.
 
 Find sessions by what was discussed or which files they touched, then bring
-them into a Group. Add a lead to compare approaches, summarize progress, and
-help coordinate the work.
+them into a Group. Add a lead or a dedicated agent to compare approaches,
+summarize progress, and help coordinate the work.
 
 Session activity stays up to date as agents work, giving you visibility across
 the Group without switching between individual conversations.
