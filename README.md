@@ -10,6 +10,36 @@ Start with the agents you have. As your work grows, use leads to bring in more
 agents, organize sessions into focused groups, and track progress without having
 to follow every conversation yourself.
 
+### Beyond terminal tabs and panes
+
+Keep your terminal or multiplexer arranged how you like. GitSense Groups let you
+organize sessions around the work, without moving or copying them.
+
+Find the 20 most recent sessions that changed a file and bring them into a
+Group. Review them together, or ask a lead to compare their approaches and
+summarize what changed.
+
+GitSense tracks session activity and file changes in near real time, so you can
+follow ongoing work as well as review past sessions.
+
+<p align="center"><strong>Review and monitor the work</strong></p>
+<p align="center">
+  <img src="assets/beyond-tabs-review-monitor-placeholder.svg" alt="Placeholder for reviewing and monitoring grouped sessions in GitSense Chat" width="100%">
+</p>
+
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <p align="center"><strong>Find relevant sessions</strong></p>
+      <p align="center"><img src="assets/beyond-tabs-find-sessions-placeholder.svg" alt="Placeholder for finding relevant sessions in GitSense Chat" width="100%"></p>
+    </td>
+    <td width="50%" valign="top">
+      <p align="center"><strong>Bring them into a Group</strong></p>
+      <p align="center"><img src="assets/beyond-tabs-group-sessions-placeholder.svg" alt="Placeholder for bringing selected sessions into a GitSense Chat Group" width="100%"></p>
+    </td>
+  </tr>
+</table>
+
 ### Multiple sessions, one conversation
 
 Create a group in GitSense Chat and add a lead in two clicks. Your lead knows

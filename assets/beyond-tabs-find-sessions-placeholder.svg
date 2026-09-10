@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 360" role="img" aria-labelledby="title desc">
+  <title id="title">Find relevant sessions</title>
+  <desc id="desc">Placeholder for a GitSense Chat session search.</desc>
+  <rect width="580" height="360" fill="#f3f4f6"/>
+  <rect x="18" y="18" width="544" height="324" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="290" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#475569">Find relevant sessions</text>
+</svg>
