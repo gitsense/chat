@@ -28,19 +28,20 @@ the Group without switching between individual conversations.
   <img src="assets/beyond-tabs-review-monitor.png" alt="Reviewing and monitoring grouped sessions in GitSense Chat" width="100%">
 </p>
 
-### Multiple sessions, one conversation
+### Make complex workflows easier to manage
 
-Create a group in GitSense Chat and add a lead in two clicks. Your lead knows
-how to use GitSense to help you create agents, bring existing ones into the
-group, and organize their work.
+Create a group in GitSense Chat and add a lead in two clicks. Ask it to create
+agents or bring existing sessions into the group, then help coordinate their
+work.
 
-Your lead knows which sessions are in the group and how they're organized.
-Refer to a session by name, section, or member number to tell it where to focus.
+Use the group for independent code reviews, competing implementations, or
+experiments across agents. Your lead knows which sessions are in the group and
+how they’re organized. Refer to a session by name, section, or member number to
+direct follow-ups where they’re needed.
 
-Tell it what needs to happen. Here, one request reaches nine agents, then a
-follow-up changes only the C and Go programs. The example is Hello World.
-The same approach can help you tackle complex tasks through independent code
-reviews, competing implementations, or experiments across agents.
+Here, one request reaches nine agents, then a follow-up changes only the C and Go
+programs. The task is Hello World, demonstrating how you can guide the whole
+group and then focus on specific agents as the work changes.
 
 ![A lead coordinating nine agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
 
