@@ -16,8 +16,8 @@ Keep your terminal or multiplexer arranged how you like. GitSense Groups let you
 organize sessions around the work, without moving or copying them.
 
 Find the 20 most recent sessions that changed a file and bring them into a
-Group. Review them together, or ask a lead to compare their approaches and
-summarize what changed.
+Group. Review them together, or add a lead to the Group and ask it to compare
+their approaches and summarize what changed.
 
 GitSense tracks session activity and file changes in near real time, so you can
 follow ongoing work as well as review past sessions.
