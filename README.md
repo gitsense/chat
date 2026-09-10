@@ -7,8 +7,8 @@ build knowledge you and your agents can reuse. Keep using the tools you already
 use. No proxy or wrapper is required.
 
 Start with the agents you have. As your work grows, use leads to bring in more
-agents, organize sessions into focused groups, and track progress without having
-to follow every conversation yourself.
+agents, share knowledge across them, organize sessions into focused groups, and
+track progress without having to follow every conversation yourself.
 
 ### Beyond terminal tabs and panes
 
