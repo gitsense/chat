@@ -6,6 +6,11 @@ Keep working with the tools you already use. No proxy or wrapper is required.
 GitSense Chat helps you find and organize sessions, coordinate work with lead
 agents, and turn conversations into context you and your agents can reuse.
 
+Build on what your agents can already do. Give them knowledge they can reuse,
+organize work into focused groups with leads to help manage the complexity, and
+keep track of progress across sessions. Start with the agents you have and
+develop the knowledge and workflows to make them more useful over time.
+
 ### Multiple sessions, one conversation
 
 Create a group in GitSense Chat and add a lead in two clicks. Your lead knows
