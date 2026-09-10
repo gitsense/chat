@@ -25,21 +25,8 @@ the Group without switching between individual conversations.
 
 <p align="center"><strong>Review and monitor the work</strong></p>
 <p align="center">
-  <img src="assets/beyond-tabs-review-monitor-placeholder.svg" alt="Placeholder for reviewing and monitoring grouped sessions in GitSense Chat" width="100%">
+  <img src="assets/beyond-tabs-review-monitor.png" alt="Reviewing and monitoring grouped sessions in GitSense Chat" width="100%">
 </p>
-
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <p align="center"><strong>Find relevant sessions</strong></p>
-      <p align="center"><img src="assets/beyond-tabs-find-sessions-placeholder.svg" alt="Placeholder for finding relevant sessions in GitSense Chat" width="100%"></p>
-    </td>
-    <td width="50%" valign="top">
-      <p align="center"><strong>Bring them into a Group</strong></p>
-      <p align="center"><img src="assets/beyond-tabs-group-sessions-placeholder.svg" alt="Placeholder for bringing selected sessions into a GitSense Chat Group" width="100%"></p>
-    </td>
-  </tr>
-</table>
 
 ### Multiple sessions, one conversation
 
