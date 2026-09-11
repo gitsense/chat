@@ -20,15 +20,15 @@ related work into a Group. Follow activity across the Group, and add a lead or
 dedicated agent to compare approaches, summarize progress, and help coordinate
 what happens next.
 
-Session activity stays current while agents work, so you can follow the Group
-from one place even when its sessions are scattered across terminal tabs,
+Session activity stays current while your agents work, so you can follow the
+Group from one place even when its sessions are scattered across terminal tabs,
 windows, or workspaces.
 
 <p align="center"><strong>Review and monitor the work</strong></p>
 
 ![Reviewing and monitoring grouped sessions in GitSense Chat](assets/beyond-tabs-review-monitor.png)
 
-Groups can organize the same sessions by status, recent activity, role, or
+Use Groups to organize your sessions by status, recent activity, role, or
 whatever makes sense for the work. A session can appear in multiple Groups
 without being moved or copied.
 
@@ -51,10 +51,10 @@ without being moved or copied.
 
 ### Make complex workflows easier to manage
 
-Use a Group when a task benefits from several agents, such as independent code
-reviews, competing implementations, or experiments. A lead can create agents,
-bring in existing sessions, and direct follow-ups to specific members as the
-work changes.
+Use a Group when your task benefits from several agents, such as independent
+code reviews, competing implementations, or experiments. Your lead can create
+agents, bring in existing sessions, and direct follow-ups to specific members
+as the work changes.
 
 This example uses Hello World to keep the workflow easy to follow. One request
 reaches nine agents, then a follow-up changes only the C and Go programs.
@@ -86,7 +86,7 @@ which files were changed, without requiring you to remember a session name.
       <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="GitSense session search filtering previous work by content, time, repository, role, and file activity." width="100%"></td>
     </tr>
     <tr>
-      <td width="50%" valign="top">Regular ripgrep on the left. GitSense adds each file’s purpose on the right, helping agents decide where to look next.</td>
+      <td width="50%" valign="top">Regular ripgrep on the left. GitSense adds each file’s purpose on the right, helping your agents decide where to look next.</td>
       <td width="50%" valign="top">Search sessions by conversation, files, repository, role, or time to find work you want to pick up again.</td>
     </tr>
   </tbody>
@@ -104,9 +104,10 @@ information with them, such as new findings or a progress update.
 
 ### Scaling includes debugging
 
-Doing more with agents also means being able to understand what went wrong and
-improve the next run. Bring sessions into a Group, track their activity, and
-start or stop managed agents as needed. Open a session to inspect its history,
+Doing more with your agents also means being able to understand what went wrong
+and improve the next run. Bring sessions into a Group, track their activity, and
+start or stop your managed agents as needed. Open a session to inspect its
+history,
 review message and tool-call counts, or browse reads, writes, and edits by file.
 
 | Start and stop agents | Session overview | File activity |
