@@ -10,6 +10,9 @@ complex system, GitSense Chat helps you coordinate related work, build
 knowledge you and your agents can reuse, and inspect activity when something
 goes wrong.
 
+Keep using the tools and workflows you already have. GitSense Chat works
+alongside them; no proxy or wrapper is required.
+
 ### See related work in one place
 
 Find sessions by what was discussed or which files they touched, then bring
