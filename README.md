@@ -56,12 +56,26 @@ code reviews, competing implementations, or experiments. Your lead can create
 agents, bring in existing sessions, and direct follow-ups to specific members
 as the work changes.
 
-This example uses Hello World to keep the workflow easy to follow. One request
-reaches nine agents, then a follow-up changes only the C and Go programs.
+Add agents without leaving the Group. Create and configure an agent directly,
+bring in one already running in your terminal, or tell your lead what team you
+need.
+
+| Create an agent directly | Ask your lead to create the team |
+| --- | --- |
+| ![Creating and configuring a managed agent in GitSense Chat.](assets/create-agent-dialog.png) | ![Asking a lead to create six language-specific agents in an empty Group.](assets/lead-create-six-agents.png) |
+| Choose its model, name, working directory, and thinking level. | Ask: “Create six agents named C, Go, Rust, Python, JavaScript, and Java. Use the default model for each agent and give each one its own working directory.” |
+
+Managed agents can keep working in the background. Use
+`gsc pi sessions attach <session-id>` to join one or
+`gsc pi sessions handoff <session-id>` to move it into your terminal.
+
+This example uses Hello World to keep the workflow easy to follow. The lead
+creates six agents named C, Go, Rust, Python, JavaScript, and Java. One request
+reaches all six, then a follow-up changes only the C and Go programs.
 
 **[▶ Download and watch the demo video (MP4, 5.8 MB)](assets/scale-coordination-hello-world-lab.mp4)**
 
-![A lead coordinating nine agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
+![A lead coordinating six agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
 
 ### Make knowledge available to all
 
