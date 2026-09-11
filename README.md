@@ -90,9 +90,9 @@ The Overview shows message and tool-call counts and links to Session Insights.
 File activity organizes every read, write, and edit as a file tree. Select a
 file to see the operations recorded for it.
 
-| Start a managed agent | Stop a managed agent | Session overview | File activity |
-| --- | --- | --- | --- |
-| ![Starting a managed agent from its session view.](assets/start-agent.png) | ![Stopping a managed agent from its session view.](assets/stop-agent.png) | ![Session overview with activity counts and Session Insights links.](assets/overview.png) | ![File activity organized as a tree of reads, writes, and edits.](assets/file-activity.png) |
+| Start and stop agents | Session overview | File activity |
+| --- | --- | --- |
+| ![Starting and stopping a managed agent from its session view.](assets/start-stop-agents.png) | ![Session overview with activity counts and Session Insights links.](assets/overview.png) | ![File activity organized as a tree of reads, writes, and edits.](assets/file-activity.png) |
 
 For example, when building a GitHub Watcher, create an analyzer to review its API
 calls and look for evidence that it read the required skill instructions. Use
