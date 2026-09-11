@@ -69,36 +69,23 @@ information with them, such as new findings or a progress update.
 ### Scaling includes debugging
 
 Scaling agent work also means understanding what went wrong and how to improve
-it. Bring dozens of sessions into a Group, run them in gsc-managed tmux, and
-track their activity. Start or stop agents and jump into inspection when
-something needs attention.
-
-#### Start and stop agents
-
-Start or stop a managed agent from its session view while keeping the session
-and its history available for inspection.
-
-Turn a wall of tool calls into findings you can act on. Session Insights can
-surface failed commands, recovery attempts, and whether an agent ran
-verification after its final edit. Create different analyzers to examine the
-same session logs from different perspectives, such as tool usage, code changes,
-or progress.
-
-#### Inspect session activity
-
-The Overview shows message and tool-call counts and links to Session Insights.
-File activity organizes every read, write, and edit as a file tree. Select a
-file to see the operations recorded for it.
+it. Bring sessions into a Group, track their activity, and start or stop
+managed agents as needed. Open a session to inspect its history, review message
+and tool-call counts, or browse reads, writes, and edits by file.
 
 | Start and stop agents | Session overview | File activity |
 | --- | --- | --- |
 | ![Starting and stopping a managed agent from its session view.](assets/start-stop-agents.png) | ![Session overview with activity counts and Session Insights links.](assets/overview.png) | ![File activity organized as a tree of reads, writes, and edits.](assets/file-activity.png) |
 
+Turn a wall of tool calls into findings you can act on. From the Overview, open
+Session Insights to investigate failed commands, recovery attempts, and
+verification after edits. Create different analyzers to examine the same logs
+from different perspectives, such as tool usage, code changes, or progress.
+
 For example, when building a GitHub Watcher, create an analyzer to review its API
 calls and look for evidence that it read the required skill instructions. Use
-the findings to investigate mistakes and refine the agent's instructions. Each
-view helps you focus on a question, with the recorded activity available for
-closer inspection.
+the findings to investigate mistakes, refine instructions, and improve future
+runs.
 
 ### Give your agents more ways to help
 
