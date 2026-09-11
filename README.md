@@ -230,6 +230,21 @@ to work.
   </tr>
 </table>
 
+## Security
+
+GitSense Chat is currently designed to complement an individual’s local agent
+workflow. It does not provide authentication or multi-user access controls.
+
+Only make GitSense Chat available through the local loopback interface, such as
+`localhost` or `127.0.0.1`. Do not expose it directly to a local network or the
+public internet.
+
+If you access GitSense Chat through a tunnel, restrict access to yourself and
+make sure the tunnel provides its own authentication. Treat anyone with access
+as having terminal-level access to your agent environment: they may be able to
+send messages to your agents, inspect session activity, and trigger actions
+allowed by your existing permissions.
+
 ## Current Support and Boundaries
 
 Pi is currently the supported runtime integration. Codex, Claude Code,
