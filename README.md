@@ -63,11 +63,11 @@ need.
 | Create an agent directly | Ask your lead to create the team |
 | --- | --- |
 | ![Creating and configuring a managed agent in GitSense Chat.](assets/create-agent-dialog.png) | ![Asking a lead to create six language-specific agents in an empty Group.](assets/lead-create-six-agents.png) |
-| Choose its model, name, working directory, and thinking level. | Ask: “Create six agents named C, Go, Rust, Python, JavaScript, and Java. Use the default model for each agent and give each one its own working directory.” |
+| Click **Create agent** to add it to the Group. You can change the model or thinking level whenever you need to. | Tell your lead how many agents you need or explain the problem first. Refine the team before creating it. |
 
-Managed agents can keep working in the background. Use
-`gsc pi sessions attach <session-id>` to join one or
-`gsc pi sessions handoff <session-id>` to move it into your terminal.
+Managed agents can keep working in the background. When you want to interact
+with one, use the GitSense Chat CLI: `gsc pi sessions attach <session-id>` to
+join it or `gsc pi sessions handoff <session-id>` to move it into your terminal.
 
 This example uses Hello World to keep the workflow easy to follow. The lead
 creates six agents named C, Go, Rust, Python, JavaScript, and Java. One request
@@ -79,13 +79,15 @@ reaches all six, then a follow-up changes only the C and Go programs.
 
 ### Make knowledge available to all
 
-Tell a lead what you want your agents to know. It can help create focused
-knowledge agents, save useful findings as notes and lessons, and make that
-knowledge available to you and any agent that can run `gsc`.
+Share what you know and what you want your agents to know in a conversation.
+GitSense Chat can turn it into useful context your agents can query. It can
+help create focused knowledge agents, save useful findings as notes and
+lessons, and make that knowledge available to you and any agent that can run
+the GitSense Chat CLI, `gsc`.
 
-Saved knowledge gives new work a better starting point. GitSense can add useful
-context to code searches and find previous sessions by what was discussed or
-which files were changed, without requiring you to remember a session name.
+Saved knowledge gives new work a better starting point. It can also help you
+find previous sessions when all you remember is what was discussed or which
+files were changed.
 
 <table>
   <thead>
