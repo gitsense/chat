@@ -1,15 +1,14 @@
 # GitSense: Chat
 
-**A platform for getting more from your agents.**
+**A platform for getting more from your agents so you can do more.**
 
 The terminal is where your agents work. GitSense Chat is where you bring their
 work together.
 
-Organize related sessions into Groups and add a lead to help coordinate them.
-Build knowledge through conversation and make it available to you and your
-agents. As you bring in more agents, keep track of progress, guide their work,
-and inspect what happened when something goes wrong. Keep using the tools you
-already use. No proxy or wrapper is required.
+Whether you are keeping track of a few sessions or building and maintaining a
+complex system, GitSense Chat helps you coordinate related work, build
+knowledge you and your agents can reuse, and inspect activity when something
+goes wrong.
 
 ### See related work in one place
 
