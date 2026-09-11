@@ -1,10 +1,10 @@
 # GitSense: Chat
 
-**A platform for scaling agent work through coordination and shared knowledge.**
+**A platform for understanding, coordinating, and improving agent work.**
 
-GitSense Chat helps you organize sessions, coordinate work with lead agents, and
-build knowledge you and your agents can reuse. Keep using the tools you already
-use. No proxy or wrapper is required.
+GitSense Chat helps you understand agent activity, coordinate work across
+sessions, and build knowledge you and your agents can reuse. Keep using the
+tools you already use. No proxy or wrapper is required.
 
 Start with the agents you have. As your work grows, use leads to bring in more
 agents, share knowledge across them, organize sessions into focused groups, and
