@@ -1,8 +1,8 @@
-# GitSense: Chat
-
 > **Coming soon:** This README previews the next iteration of GitSense Chat,
 > where you bring your agents’ work together. The repository will be updated
 > shortly.
+
+# GitSense: Chat
 
 **A platform for getting more from your agents.**
 
