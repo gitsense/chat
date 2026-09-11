@@ -2,8 +2,8 @@
 
 **A platform for getting more from your agents.**
 
-The terminal is where your agents work. GitSense Chat is where you bring their
-work together.
+Your terminal, multiplexer, or agent development environment is where you run
+your agents. GitSense Chat is where you bring their work together.
 
 Whether you are keeping track of a few sessions or building and maintaining a
 complex system, GitSense Chat helps you coordinate related work, build
