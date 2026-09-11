@@ -45,10 +45,11 @@ group and then focus on specific agents as the work changes.
 
 ![A lead coordinating nine agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
 
-### Build and scale knowledge through conversation
+### Make knowledge available to all
 
-Tell your lead what knowledge you want your agents to have, and let it help
-you build and grow the group.
+Build knowledge through conversation and make it available to you and all your
+agents. Tell your lead what you want to learn, and let it help you create
+knowledge agents, save findings, and share what they know.
 
 Agents can save findings as notes and lessons, letting the lead pass along
 references without pulling every detail into its own conversation. As your
@@ -64,6 +65,25 @@ answers questions from Claude Code, Codex, and OpenCode.
 
 Any agent that can run `gsc` can ask your knowledge agents for help or share
 information with them, such as new findings or a progress update.
+
+### Scaling includes debugging
+
+Scaling agent work also means understanding what went wrong and how to improve
+it. Bring dozens of sessions into a Group, run them in gsc-managed tmux, and
+track their activity. Start or stop agents and jump into inspection when
+something needs attention.
+
+Turn a wall of tool calls into findings you can act on. Session Insights can
+surface failed commands, recovery attempts, and whether an agent ran
+verification after its final edit. Create different analyzers to examine the
+same session logs from different perspectives, such as tool usage, code changes,
+or progress.
+
+For example, when building a GitHub Watcher, create an analyzer to review its API
+calls and look for evidence that it read the required skill instructions. Use
+the findings to investigate mistakes and refine the agent's instructions. Each
+view helps you focus on a question, with the recorded activity available for
+closer inspection.
 
 ### Give your agents more ways to help
 
