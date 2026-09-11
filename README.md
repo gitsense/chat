@@ -63,7 +63,7 @@ need.
 | Create an agent directly | Ask your lead to create the team |
 | --- | --- |
 | ![Creating and configuring a managed agent in GitSense Chat.](assets/create-agent-dialog.png) | ![Asking a lead to create six language-specific agents in an empty Group.](assets/lead-create-six-agents.png) |
-| Click **Create agent** to add it to the Group. You can change the model or thinking level whenever you need to. | Tell your lead how many agents you need or explain the problem first. Refine the team before creating it. |
+| Click **Create agent** to add it to the Group. You can always change the model or thinking level later. | Tell your lead how many agents you need or explain the problem first. Refine the team before creating it. |
 
 Managed agents can keep working in the background. When you want to interact
 with one, use the GitSense Chat CLI: `gsc pi sessions attach <session-id>` to
