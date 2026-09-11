@@ -1,247 +1,286 @@
-<!--
-Component: GitSense Chat README
-Block-UUID: fd3dfd8f-5a0c-4ed5-9aee-72330693e45b
-Parent-UUID: 4b090c76-74a3-4ffb-921b-97aaf7482cf3
-Version: 4.2.0
-Description: Restructured README to place "See It in Action" as a subsection under "The 30-Second Proof", updated Portable Intelligence section with two concrete examples (code-intent and owners), and refined the narrative flow.
-Language: Markdown
-Created-at: 2026-02-21T19:30:05.899Z
-Authors: LLM GLM-4.7 (v1.0.0), Gemini 2.5 Flash Lite (v2.0.0), Gemini 3 Flash (v2.1.0), Gemini 3 Flash (v2.2.0), DeepSeek V4 Pro (v2.3.0), Gemini 3 Flash (v2.4.0), claude-sonnet-4-6 (v2.5.0), DeepSeek V4 Pro (v2.6.0), DeepSeek V4 Pro (v2.7.0), GLM-4.7 (v2.8.0), Gemini 3 Flash (v2.9.0), Gemini 3 Flash (v3.0.0), claude-sonnet-4-6 (v4.0.0), claude-sonnet-4-6 (v4.1.0), claude-sonnet-4-6 (v4.2.0)
--->
+> **Coming soon:** This README previews the next iteration of GitSense Chat,
+> where you bring your agents’ work together. The repository will be updated
+> shortly.
 
+# GitSense: Chat
 
-# GitSense Chat
+**A platform for getting more from your agents.**
 
-**Build intelligence for AI agents that lives in your repository.**
+Your terminal, multiplexer, or agent development environment is where you run
+your agents. GitSense Chat is where you bring their work together.
 
-GitSense Chat turns domain knowledge into queryable repository intelligence so agents know where to look, why it matters, and what to do next.
+Whether you are keeping track of a few sessions or building and maintaining a
+complex system, GitSense Chat helps you coordinate related work, build
+knowledge you and your agents can reuse, and inspect activity when something
+goes wrong.
 
-GitSense is a two-part system. This App is where you build the intelligence. The `gsc` CLI is how your terminal and your agent use it.
+Keep using the tools and workflows you already have. GitSense Chat works
+alongside them. No proxy or wrapper is required.
 
-Here is what that means in practice. Say you want to add a file-size warning, so you look for where size handling lives. Plain ripgrep gives you ten file names:
+### See related work in one place
 
-```
-rg -l filesize | wc -l
-10
-```
+Find sessions by what was discussed or which files they touched, then bring
+related work into a Group. Follow activity across the Group, and add a lead or
+dedicated agent to compare approaches, summarize progress, and help coordinate
+what happens next.
 
-Ten names, and no way to tell the file that matters from the one that just mentions the word without opening each. The same search against a Brain says what each file is for, so two of the ten stand out before you open anything:
+Session activity stays current while your agents work, so you can follow the
+Group from one place even when its sessions are scattered across terminal tabs,
+windows, or workspaces.
 
-```
-gsc rg filesize --db code-intent --fields purpose --summary
+<p align="center"><strong>Review and monitor the work</strong></p>
 
-✓ crates/ignore/src/walk.rs
-; purpose: Modify this file to change the recursive directory traversal logic, including parallel execution strategies, ignore rule application, and symlink handling.
+![Reviewing and monitoring grouped sessions in GitSense Chat](assets/beyond-tabs-review-monitor.png)
 
-✓ crates/core/flags/lowargs.rs
-; purpose: Modify this file to change the structure of low-level CLI arguments, add new flag modes, or adjust default values for search configuration options.
-```
+Use Groups to organize your sessions by status, recent activity, role, or
+whatever makes sense for the work. A session can appear in multiple Groups
+without being moved or copied.
 
-The App built those purpose lines. The CLI delivered them. That is the intelligence: the agent looks first and thinks second, instead of opening ten files to find the two that matter.
+<table>
+  <thead>
+    <tr>
+      <th width="33%" align="center">Organize by status</th>
+      <th width="33%" align="center">Review recent activity</th>
+      <th width="34%" align="center">Filter what you see</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td width="33%" valign="top"><img src="assets/organize-by-status.png" alt="A My Work Group organized as a Kanban board with an AI assistant monitoring the sessions." width="100%"></td>
+    <td width="33%" valign="top"><img src="assets/organize-by-recency.png" alt="The same My Work Group organized into sections by recent session activity with an AI assistant alongside it." width="100%"></td>
+    <td width="34%" valign="top"><img src="assets/filter-what-you-see.png" alt="A Tiles view filtered to show selected recent-activity sections from the My Work Group." width="100%"></td>
+  </tr>
+  </tbody>
+</table>
+
+### Make complex workflows easier to manage
+
+Use a Group when your task benefits from several agents, such as independent
+code reviews, competing implementations, or experiments. Your lead can create
+agents, bring in existing sessions, and direct follow-ups to specific members
+as the work changes.
+
+Add agents without leaving the Group. Create and configure an agent directly,
+bring in one already running in your terminal, or tell your lead what team you
+need.
+
+| Create an agent directly | Ask your lead to create the team |
+| --- | --- |
+| ![Creating and configuring a managed agent in GitSense Chat.](assets/create-agent-dialog.png) | ![Asking a lead to create six language-specific agents in an empty Group.](assets/lead-create-six-agents.png) |
+| Click **Create agent** to add it to the Group. You can always change the model or thinking level later. | Tell your lead how many agents you need or explain the problem first. Refine the team before creating it. |
+
+Managed agents can keep working in the background. When you want to interact
+with one, use the GitSense Chat CLI: `gsc pi sessions attach <session-id>` to
+join it or `gsc pi sessions handoff <session-id>` to move it into your terminal.
+
+This example uses Hello World to keep the workflow easy to follow. The lead
+creates six agents named C, Go, Rust, Python, JavaScript, and Java. One request
+reaches all six, then a follow-up changes only the C and Go programs.
+
+**[▶ Download and watch the demo video (MP4, 5.8 MB)](assets/scale-coordination-hello-world-lab.mp4)**
+
+![A lead coordinating six agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
+
+### Make knowledge available to all
+
+Share what you know and what you want your agents to know in a conversation.
+GitSense Chat can turn it into useful context your agents can query. It can
+help create focused knowledge agents, save useful findings as notes and
+lessons, and make that knowledge available to you and any agent that can run
+the GitSense Chat CLI, `gsc`.
+
+Saved knowledge gives new work a better starting point. It can also help you
+find previous sessions when all you remember is what was discussed or which
+files were changed.
+
+<table>
+  <thead>
+    <tr>
+      <th width="50%" align="center">Same search, more context</th>
+      <th width="50%" align="center">Find work worth reusing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><img src="assets/same-search-more-to-go-on.png" alt="The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file as one example of useful context." width="100%"></td>
+      <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="GitSense session search filtering previous work by content, time, repository, role, and file activity." width="100%"></td>
+    </tr>
+    <tr>
+      <td width="50%" valign="top">Regular ripgrep on the left. GitSense adds each file’s purpose on the right, helping your agents decide where to look next.</td>
+      <td width="50%" valign="top">Search sessions by conversation, files, repository, role, or time to find work you want to pick up again.</td>
+    </tr>
+  </tbody>
+</table>
+
+Here, a GitHub Watcher brings together recent issues from two repositories and
+answers questions from Claude Code, Codex, and OpenCode.
+
+**[▶ Download and watch the demo video (MP4, 3.1 MB)](assets/create-specialized-knowledge-agents.mp4)**
+
+[![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
+
+Any agent that can run `gsc` can ask your knowledge agents for help or share
+information with them, such as new findings or a progress update.
+
+### Scaling includes debugging
+
+Doing more with your agents also means being able to understand what went wrong
+and improve the next run. Bring sessions into a Group, track their activity, and
+start or stop your managed agents as needed. Open a session to inspect its
+history,
+review message and tool-call counts, or browse reads, writes, and edits by file.
+
+| Start and stop agents | Session overview | File activity |
+| --- | --- | --- |
+| ![Starting and stopping a managed agent from its session view.](assets/start-stop-agents.png) | ![Session overview with activity counts and Session Insights links.](assets/overview.png) | ![File activity organized as a tree of reads, writes, and edits.](assets/file-activity.png) |
+
+Turn a wall of tool calls into findings you can act on. From the Overview, open
+Session Insights to investigate failed commands, recovery attempts, and
+verification after edits. Create different analyzers to examine the same logs
+from different perspectives, such as tool usage, code changes, or progress.
+
+For example, when building a GitHub Watcher, create an analyzer to review its API
+calls and look for evidence that it read the required skill instructions. Use
+the findings to investigate mistakes, refine instructions, and improve future
+runs.
+
+### Take action from the conversation
+
+You can ask an agent to open a diff or run a command. But coming back later can
+mean finding the right session and asking again. GitSense Chat lets agents
+include actions directly in their answers and reports, so you can open files,
+launch applications, or run commands when you're ready.
+
+You control execution permissions, including which commands can run without
+another confirmation and for how long.
+
+Here, a lead brings together findings from multiple sessions and adds actions
+that take you to the work. Opening Zed is already approved for this demo, so
+the diff opens with one click.
+
+![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
 
 ## Quick Start
 
-GitSense Chat, this repository, is where you build repository intelligence. The `gsc` CLI is how you access that intelligence from your terminal or agent session.
-
-### The CLI
-
-Install `gsc` first:
+Review the [install script](install.sh), then install the `gsc` CLI:
 
 ```bash
 curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
 
-Or [build it yourself](https://github.com/gitsense/gsc-cli).
-
-### The App
-
-The app is where you teach AI what matters and apply that knowledge across your repository. Once `gsc` is installed, use it to install and start GitSense Chat:
-
-```bash
-# 1. Install the App
-gsc app native install
-
-# 2. Start the App
-gsc app native start
-```
-
-Open **http://localhost:3357** in your browser.
-
-**Using a coding agent?** Install the CLI, then run `gsc docs help` in your agent session, and let it guide you through the rest.
-
-## Teach AI What Matters
-
-You just need your files and an understanding of what you want agents to understand. GitSense Chat handles the prompt engineering, batching, model selection, and reuse strategy so agents can work across large collections without reanalyzing everything from scratch. Filter what needs reanalysis, set your batch size, and pick the right model for the job.
-
-Watch the short Create, Analyze, and Package demos at [gitsense.com](https://gitsense.com) to see the workflow in action.
-
-### What Agents Can Learn
-
-- **Class notes:** what themes, definitions, sources, assignments, or open questions matter across a course
-- **Financial records:** which transactions, accounts, patterns, or anomalies need closer review
-- **Legal documents:** which matter, status, attorney, obligation, or risk applies to each file
-- **Codebases:** what a file is for, which behavior it protects, where tests belong, and what patterns are risky
-
-## Create Knowledge Assistants
-
-Imagine you lead a team and want to stay ahead of technical debt. Finding `TODO` and `FIXME` is easy. That is not what you are worried about.
-
-You care about the warning signs that are harder to search for:
+This installs the `gsc` CLI. To install and configure GitSense Chat, ask your
+coding agent:
 
 ```text
-This is probably not ideal.
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
 
-Grep can find exact words. It cannot tell you which comments imply future work, which files are worth reviewing, or where hidden maintenance debt is starting to pile up.
+You can also [build the CLI from source](https://github.com/gitsense/gsc-cli).
 
-This is where GitSense comes in. By chatting with AI, you can create a Knowledge Assistant for the questions you care about. Explain what hidden technical debt looks like, and GitSense can turn that conversation into portable intelligence that can live in your repository. Import it with `gsc`, and your agent gets a local Brain it can query.
+GitSense Chat currently supports Pi sessions, which you can organize into Groups
+with lead agents. Follow
+[pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
+Insights, checkpoints, shared knowledge, messaging, lead agents, and group
+observation loops work together.
 
-To see how that works, try the `implicit-todos` example Brain in `smart-ripgrep`.
+GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
+same Brains, notes, lessons, and rules.
 
-```bash
-# Clone the smart repository
-git clone https://github.com/gitsense/smart-ripgrep
+## Start with a lead
 
-# Enter the directory
-cd smart-ripgrep
+Your lead is a personal GitSense assistant. Tell it what you need help with,
+from keeping an eye on sessions to creating agents and coordinating their work.
+Start small and let it help you grow, without managing every session yourself.
 
-# Create the implicit-todos intelligence database ("The Brain")
-gsc manifest import implicit-todos
-```
+### Create a lead in seconds
 
-Start your agent in that repository, then run:
+Adding a lead to a Group takes two clicks. No setup, no scripting.
 
-```text
-! gsc experts init
-```
+<table>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><strong>1. Add a lead</strong><br><br><img src="assets/create-a-lead-step-1-start.png" alt="A GitSense Chat Group with the Add a lead button ready to be selected." width="100%"><br><br>Click <strong>Add a lead</strong> from the Group.</td>
+      <td width="50%" valign="top"><strong>2. Create the lead agent</strong><br><br><img src="assets/create-a-lead-step-2-confirm.png" alt="The Add a lead agent dialog with a managed lead ready to be created." width="100%"><br><br>Confirm the settings and click <strong>Create lead agent</strong>.</td>
+    </tr>
+  </tbody>
+</table>
 
-Now ask:
+Once it's running, tell the lead what you need or ask how it can help:
 
-```text
-Use the implicit-todos Brain to find hidden technical debt in this repository.
+- Create agents or bring existing sessions into the Group.
+- Arrange sessions into columns or sections that fit your work.
+- Check progress and bring findings together.
+- Set up reminders or monitoring for things you care about.
 
-Group the results by area of the codebase and tell me which files look worth reviewing before the next release.
-```
+### Work smarter with a lead
 
-Then ask your agent how it would have found the same issues without GitSense:
+Give your lead something to watch, remind you about, or help coordinate. It
+can check for changes and use saved checkpoints to stay informed without
+rereading every conversation. The examples below show a few ways to put it
+to work.
 
-```text
-If the GitSense CLI (`gsc`) and the `implicit-todos` Brain did not exist, how would you have found these hidden technical debt signals?
+<table>
+  <tr>
+    <td width="50%" align="center"><strong>Delegate the watching</strong></td>
+    <td width="50%" align="center"><strong>Monitor what matters</strong></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">Give the lead a job, like notifying you when a session stalls or finishes.</td>
+    <td align="center" valign="top">Add focused agents that each watch a responsibility.</td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
+    <td valign="top"><img src="assets/team-dashboard.png" alt="A GitSense Chat dashboard showing focused agents monitoring different responsibilities." width="100%"></td>
+  </tr>
+</table>
 
-Be specific about the searches you would run, the files you would inspect, and what you might still miss.
-```
+## Security
 
-That comparison is the value of creating your own Knowledge Assistant: you define what matters once, and your agent can query that judgment whenever the question comes up again.
+GitSense Chat is currently designed to complement an individual’s local agent
+workflow. It does not provide authentication or multi-user access controls.
 
-## Same Search, More Context
+Only make GitSense Chat available through the local loopback interface, such as
+`localhost` or `127.0.0.1`. Do not expose it directly to a local network or the
+public internet.
 
-This is the two-part system in one example. The App builds the intelligence; the CLI puts it in your search.
+If you access GitSense Chat through a tunnel, restrict access to yourself and
+make sure the tunnel provides its own authentication. Treat anyone with access
+as having terminal-level access to your agent environment: they may be able to
+send messages to your agents, inspect session activity, and trigger actions
+allowed by your existing permissions.
 
-We'll use the `smart-ripgrep` repository, a fork of `BurntSushi/ripgrep` enhanced with one example intelligence layer: `code-intent`.
+## Current Support and Boundaries
 
-```bash
-# Clone the smart repository and import the Brain
-git clone https://github.com/gitsense/smart-ripgrep
-cd smart-ripgrep
-gsc manifest import code-intent
-```
+Pi is currently the supported runtime integration. Codex, Claude Code,
+OpenCode, and other coding-agent harnesses are not yet integrated for session
+logs, lifecycle state, or Group coordination.
 
-Plain ripgrep finds the string:
+GitSense knowledge is portable. Any agent that can run `gsc` can query the same
+Brains, notes, lessons, and rules without requiring runtime integration.
 
-    rg cache
-
-`gsc` returns the same matches plus what each file is for, so the agent can drop the junk before it opens anything:
-
-    gsc rg --db code-intent --fields purpose cache
-
-    crates/ignore/src/dir.rs
-    purpose: Modify this file to change how ignore rules are loaded, matched, and prioritized during directory traversal, including support for custom ignore files and git integration.
-
-The App built that purpose line. The CLI delivered it. Same search, but now the agent sees why the matched file exists and what role it plays before spending turns opening files.
-
-Want your agent to weigh in? Ask it to compare the two searches:
-
-```text
-Compare the `rg cache` result with the `gsc rg` result.
-
-Before opening files, explain what the GitSense metadata helps you understand and which files you would inspect first.
-```
-
-## Human Intent, Agent Scale
-
-Humans are good at intent. Agents are good at scale. GitSense connects the two.
-
-Humans know the domain, the real question, and the language that matters. Agents can scan hundreds of short clues faster than a human can during an interactive coding session. The missing piece is a cheap way to give the agent useful clues before it opens files.
-
-In the hands-on exercise below, we will use a `code-intent` Brain, which attaches purpose metadata to files, to help a human guide an agent toward the right files faster and with less wandering.
-
-**Set up the repository.**
-
-```bash
-git clone https://github.com/gitsense/smart-codex
-cd smart-codex
-gsc manifest import code-intent
-```
-
-**Initialize your agent.**
-
-Start your coding agent in that repository, then run:
-
-```text
-! gsc experts init
-```
-
-**Lead, don't follow.**
-
-```text
-I want to know how to add skills programmatically to the OpenAI Codex CLI with a script or program.
-
-I know that searching for "skills" will return a lot of matches, so use `gsc rg` with `--summary` to avoid opening file contents too early. I also want files where skills are mentioned more than three times, so use `--min-matches 3`.
-
-Use the search results to identify the 10 most relevant files to consider for review.
-```
-
-The agent should converge on a command like this:
-
-```bash
-gsc rg -i "skills*" --db code-intent --fields purpose,keywords --summary --min-matches 3
-```
-
-In this repository, that search returns thousands of matches across nearly two hundred files. With GitSense, the result is still manageable because the agent sees file paths, match counts, keywords, and purpose sentences instead of raw file contents.
-
-That is the collaboration shift: the human guides by intent, GitSense supplies purpose context, and the agent does the fast triage before opening files.
-
-The point is not to replace human judgment. It is to give agents enough structured context to help humans make better decisions faster.
-
-## Portable Intelligence
-
-An Analyzer extracts structured knowledge from your repository. A Manifest packages that knowledge so it travels with the repository, independently from the data itself.
-
-A manifest can be published by the repository owner, downloaded by a developer, or regenerated nightly by a CI job. It can ship with the repository in a `.gitsense/manifests/` directory or be hosted externally and imported by URL.
-
-Manifests are plain JSON files - inspectable, committable, and importable with the open-source `gsc` CLI. You're not locked into GitSense Chat to use the intelligence you create.
-
-
-## What to Build First
-
-Start with one question your team keeps answering by hand. Build an Analyzer for it, run it across a repository, and let your agent query the result. That's the shift: from searching harder to working with intelligence your repository carries forward.
-
-The **Code Smarter 101** guide in the app walks through building your first Analyzer step by step, using an Implicit TODO Finder as the example — an Analyzer that surfaces work items buried in comments that `grep TODO` would never catch. When it comes time to create the manifest, the guide packages the TODO findings alongside purpose metadata from a separate code intent Analyzer. Two focused Analyzers, one manifest, better results than either could produce alone.
+GitSense Chat surfaces evidence and supports action. Executable actions remain
+subject to application authorization and command validation. It does not decide
+whether an agent's work is correct, and agent findings do not automatically
+become trusted knowledge. People remain responsible for reviewing evidence,
+resolving uncertainty, and deciding what happens next.
 
 ## License
 
-The **`gsc` CLI** is open source — licensed under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) and available at [github.com/gitsense/gsc-cli](https://github.com/gitsense/gsc-cli). Apache 2.0 means anyone can use, modify, and distribute `gsc` freely for personal or commercial purposes, but attribution to GitSense must be preserved. The origin of the tool stays on the record regardless of where it travels.
+The [`gsc` CLI](https://github.com/gitsense/gsc-cli) is licensed under the
+[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-**Manifests** are plain JSON files built on an open format. You are free to create, modify, and distribute manifests for any purpose — personal or commercial. The format is documented and not owned by GitSense. Build your own tooling around it, generate manifests in your own pipelines, or ship them with your repositories without restriction.
+Manifests are plain JSON files built on an open format. You can create, modify,
+distribute, and use them with the open-source `gsc` CLI without requiring
+GitSense Chat.
 
-**GitSense Chat** (this repository) is licensed under the **[Fair Core License (FCL-1.0-ALv2)](https://faircode.io)**.
+GitSense Chat is licensed under the
+[Fair Core License (FCL-1.0-ALv2)](https://fcl.dev/). You may use, modify, and
+run it internally, including for personal projects, shared workflows, and
+self-hosted deployments. You may not use it to build or operate a product or
+service that competes directly with GitSense Chat.
 
-The short version: you're welcome to use, modify, and run GitSense Chat internally — for personal projects, team workflows, or self-hosted deployments. What you may not do is use it to build or operate a product or service that competes directly with GitSense Chat.
-
-**Why not a permissive license?**
-
-GitSense Chat is the product that funds this project. A permissive license like MIT or Apache 2.0 would allow anyone to take this code, wrap it in a competing service, and undercut the very work that keeps GitSense Chat alive and improving. The FCL exists precisely for this situation — it keeps the source open and usable for the vast majority of users, while protecting the project from being used against itself.
-
-If you're a developer, researcher, or team using GitSense Chat to do your own work, the license doesn't affect you. If you're unsure whether your use case qualifies, contact [terrchen@gitsense.com](mailto:terrchen@gitsense.com) before building.
-
-The core application ships as minified source to protect against direct competition while the project is in its early stages. As GitSense Chat matures, we intend to open the source further. The `gsc` CLI and manifest format are already fully open.
+The core GitSense Chat application currently ships as minified source while the
+project is in its early stages. We intend to open the source further as the
+project matures. Under the Fair Core License, each release becomes available
+under Apache 2.0 two years after it is published. See [LICENSE](LICENSE) and
+[NOTICE](NOTICE) for the complete terms.

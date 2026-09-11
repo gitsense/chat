@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Review and monitor the work</title>
+  <desc id="desc">Placeholder for a GitSense Chat view showing grouped sessions and live activity.</desc>
+  <rect width="1200" height="520" fill="#f3f4f6"/>
+  <rect x="24" y="24" width="1152" height="472" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="24" y="24" width="1152" height="64" rx="12" fill="#e2e8f0"/>
+  <text x="600" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#475569">Review and monitor the work</text>
+</svg>
