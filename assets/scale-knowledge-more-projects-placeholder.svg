@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">Expanded GitHub Watcher Group screenshot placeholder</title>
+  <desc id="description">A placeholder for a GitSense Chat tiles view showing the GitHub Watcher Group expanded with agents for Pi, OpenCode, and other projects.</desc>
+  <rect width="960" height="600" rx="24" fill="#f6f8fa"/>
+  <rect x="24" y="24" width="912" height="552" rx="16" fill="#ffffff" stroke="#8c959f" stroke-width="3" stroke-dasharray="12 12"/>
+  <g fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" text-anchor="middle">
+    <text x="480" y="264" font-size="32" font-weight="600">Screenshot placeholder</text>
+    <text x="480" y="316" font-size="24">Add agents for more projects</text>
+    <text x="480" y="372" font-size="20">Pi · OpenCode · other project trackers</text>
+  </g>
+</svg>

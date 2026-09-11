@@ -50,9 +50,9 @@ files were changed.
 
 **Build knowledge once, share it across agents**
 
-Create a knowledge agent that other agents can turn to for help. Here, a
-GitHub Watcher running in Pi brings together recent issues from two repositories
-and answers questions from Claude Code, Codex, and OpenCode through `gsc`.
+Create a Group that other agents can turn to for help. Here, the GitHub
+Watcher’s lead brings together recent issues from two repositories and answers
+questions from Claude Code, Codex, and OpenCode through `gsc`.
 
 **[▶ Download and watch the demo video (MP4, 3.1 MB)](assets/create-specialized-knowledge-agents.mp4)**
 
@@ -60,6 +60,33 @@ and answers questions from Claude Code, Codex, and OpenCode through `gsc`.
 
 Any agent that can run `gsc` can ask your knowledge agents for help or share
 information with them, such as new findings or a progress update.
+
+**Scale knowledge across projects**
+
+GitHub Watcher is a Group with a lead and dedicated agents tracking Claude Code
+and Codex issues. Claude Code, Codex, and OpenCode ask the lead questions, and
+it brings together information from those trackers. To cover another project,
+add another tracker agent to the Group. Your other agents can keep asking the
+same lead for updates.
+
+<table>
+  <thead>
+    <tr>
+      <th width="50%" align="center">Current GitHub Watcher Group</th>
+      <th width="50%" align="center">Add agents for other projects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><img src="assets/scale-knowledge-current-placeholder.svg" alt="Placeholder for the GitHub Watcher Group with its lead and Claude Code and Codex issue tracker agents." width="100%"></td>
+      <td width="50%" valign="top"><img src="assets/scale-knowledge-more-projects-placeholder.svg" alt="Placeholder for the GitHub Watcher Group expanded with agents tracking additional projects such as Pi and OpenCode." width="100%"></td>
+    </tr>
+    <tr>
+      <td width="50%" valign="top">The lead coordinates the issue tracker agents and answers questions from other agents.</td>
+      <td width="50%" valign="top">Add another project agent to extend the knowledge the same lead can provide.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### See related work in one place
 
