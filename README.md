@@ -24,9 +24,7 @@ Session activity stays up to date as agents work, giving you visibility across
 the Group without switching between individual conversations.
 
 <p align="center"><strong>Review and monitor the work</strong></p>
-<p align="center">
-  <img src="assets/beyond-tabs-review-monitor.png" alt="Reviewing and monitoring grouped sessions in GitSense Chat" width="100%">
-</p>
+![Reviewing and monitoring grouped sessions in GitSense Chat](assets/beyond-tabs-review-monitor.png)
 
 ### Make complex workflows easier to manage
 
@@ -42,6 +40,8 @@ direct follow-ups where they’re needed.
 Here, one request reaches nine agents, then a follow-up changes only the C and Go
 programs. The task is Hello World, demonstrating how you can guide the whole
 group and then focus on specific agents as the work changes.
+
+**[▶ Download and watch the demo video (MP4, 5.8 MB)](assets/scale-coordination-hello-world-lab.mp4)**
 
 ![A lead coordinating nine agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
 
