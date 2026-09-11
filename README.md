@@ -24,6 +24,7 @@ Session activity stays up to date as agents work, giving you visibility across
 the Group without switching between individual conversations.
 
 <p align="center"><strong>Review and monitor the work</strong></p>
+
 ![Reviewing and monitoring grouped sessions in GitSense Chat](assets/beyond-tabs-review-monitor.png)
 
 ### Make complex workflows easier to manage
