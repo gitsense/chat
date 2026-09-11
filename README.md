@@ -48,8 +48,11 @@ files were changed.
   </tbody>
 </table>
 
-The GitHub Watcher runs in Pi. Claude Code, Codex, and OpenCode ask it
-questions through `gsc`, the GitSense Chat CLI.
+**Build knowledge once, share it across agents**
+
+Create a knowledge agent that other agents can turn to for help. Here, a
+GitHub Watcher running in Pi brings together recent issues from two repositories
+and answers questions from Claude Code, Codex, and OpenCode through `gsc`.
 
 **[▶ Download and watch the demo video (MP4, 3.1 MB)](assets/create-specialized-knowledge-agents.mp4)**
 
