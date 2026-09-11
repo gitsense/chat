@@ -1,5 +1,9 @@
 # GitSense: Chat
 
+> **Coming soon:** This README previews the next iteration of GitSense Chat,
+> where you bring your agents’ work together. The repository will be updated
+> shortly.
+
 **A platform for getting more from your agents.**
 
 Your terminal, multiplexer, or agent development environment is where you run
@@ -265,10 +269,18 @@ resolving uncertainty, and deciding what happens next.
 The [`gsc` CLI](https://github.com/gitsense/gsc-cli) is licensed under the
 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
+Manifests are plain JSON files built on an open format. You can create, modify,
+distribute, and use them with the open-source `gsc` CLI without requiring
+GitSense Chat.
+
 GitSense Chat is licensed under the
 [Fair Core License (FCL-1.0-ALv2)](https://fcl.dev/). You may use, modify, and
 run it internally, including for personal projects, shared workflows, and
 self-hosted deployments. You may not use it to build or operate a product or
-service that competes directly with GitSense Chat. Each version becomes
-available under Apache 2.0 two years after its release. See [LICENSE](LICENSE)
-and [NOTICE](NOTICE) for the complete terms.
+service that competes directly with GitSense Chat.
+
+The core GitSense Chat application currently ships as minified source while the
+project is in its early stages. We intend to open the source further as the
+project matures. Under the Fair Core License, each release becomes available
+under Apache 2.0 two years after it is published. See [LICENSE](LICENSE) and
+[NOTICE](NOTICE) for the complete terms.
