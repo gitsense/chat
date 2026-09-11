@@ -17,6 +17,47 @@ goes wrong.
 Keep using the tools and workflows you already have. GitSense Chat works
 alongside them. No proxy or wrapper is required.
 
+### Make knowledge available to all
+
+Share what you know and what you want your agents to know in a conversation.
+GitSense Chat can turn it into useful context your agents can query. It can
+help create focused knowledge agents, save useful findings as notes and
+lessons, and make that knowledge available to you and any agent that can run
+the GitSense Chat CLI, `gsc`.
+
+Saved knowledge gives new work a better starting point. It can also help you
+find previous sessions when all you remember is what was discussed or which
+files were changed.
+
+<table>
+  <thead>
+    <tr>
+      <th width="50%" align="center">Same search, more context</th>
+      <th width="50%" align="center">Find work worth reusing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top"><img src="assets/same-search-more-to-go-on.png" alt="The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file as one example of useful context." width="100%"></td>
+      <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="GitSense session search filtering previous work by content, time, repository, role, and file activity." width="100%"></td>
+    </tr>
+    <tr>
+      <td width="50%" valign="top">Regular ripgrep on the left. GitSense adds each file’s purpose on the right, helping your agents decide where to look next.</td>
+      <td width="50%" valign="top">Search sessions by conversation, files, repository, role, or time to find work you want to pick up again.</td>
+    </tr>
+  </tbody>
+</table>
+
+The GitHub Watcher runs in Pi. Claude Code, Codex, and OpenCode ask it
+questions through `gsc`, the GitSense Chat CLI.
+
+**[▶ Download and watch the demo video (MP4, 3.1 MB)](assets/create-specialized-knowledge-agents.mp4)**
+
+[![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
+
+Any agent that can run `gsc` can ask your knowledge agents for help or share
+information with them, such as new findings or a progress update.
+
 ### See related work in one place
 
 Find sessions by what was discussed or which files they touched, then bring
@@ -77,50 +118,9 @@ This example uses Hello World to keep the workflow easy to follow. The lead
 creates six agents named C, Go, Rust, Python, JavaScript, and Java. One request
 reaches all six, then a follow-up changes only the C and Go programs.
 
-**[▶ Download and watch the demo video (MP4, 5.8 MB)](assets/scale-coordination-hello-world-lab.mp4)**
+**[▶ Download and watch the demo video (MP4, 7.4 MB)](assets/scale-coordination-hello-world-lab.mp4)**
 
 ![A lead coordinating six agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
-
-### Make knowledge available to all
-
-Share what you know and what you want your agents to know in a conversation.
-GitSense Chat can turn it into useful context your agents can query. It can
-help create focused knowledge agents, save useful findings as notes and
-lessons, and make that knowledge available to you and any agent that can run
-the GitSense Chat CLI, `gsc`.
-
-Saved knowledge gives new work a better starting point. It can also help you
-find previous sessions when all you remember is what was discussed or which
-files were changed.
-
-<table>
-  <thead>
-    <tr>
-      <th width="50%" align="center">Same search, more context</th>
-      <th width="50%" align="center">Find work worth reusing</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top"><img src="assets/same-search-more-to-go-on.png" alt="The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file as one example of useful context." width="100%"></td>
-      <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="GitSense session search filtering previous work by content, time, repository, role, and file activity." width="100%"></td>
-    </tr>
-    <tr>
-      <td width="50%" valign="top">Regular ripgrep on the left. GitSense adds each file’s purpose on the right, helping your agents decide where to look next.</td>
-      <td width="50%" valign="top">Search sessions by conversation, files, repository, role, or time to find work you want to pick up again.</td>
-    </tr>
-  </tbody>
-</table>
-
-Here, a GitHub Watcher brings together recent issues from two repositories and
-answers questions from Claude Code, Codex, and OpenCode.
-
-**[▶ Download and watch the demo video (MP4, 3.1 MB)](assets/create-specialized-knowledge-agents.mp4)**
-
-[![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
-
-Any agent that can run `gsc` can ask your knowledge agents for help or share
-information with them, such as new findings or a progress update.
 
 ### Scaling includes debugging
 
