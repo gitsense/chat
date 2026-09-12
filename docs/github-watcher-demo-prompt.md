@@ -40,11 +40,12 @@ coordinate with people.
 
 ## Interaction protocol
 
-I may send `next`, ask questions, request clarification, change priorities, or
-provide additional direction.
+I may ask you to begin or continue, send `next`, ask questions, request
+clarification, change priorities, or provide additional direction.
 
-When I send exactly `next`, perform the **first unchecked checklist step in the
-order listed**.
+When I clearly ask you to begin or continue, perform the **first unchecked
+checklist step in the order listed**. Treat `next`, `start`, `begin`, `continue`,
+`next step`, and clear natural-language equivalents as advance requests.
 
 After each meaningful interaction:
 
@@ -54,12 +55,15 @@ After each meaningful interaction:
 4. Explain briefly what the human should notice.
 5. Stop and wait for my next message.
 
-When I send anything other than `next`, treat it as normal human input. Answer
-the question or follow the direction without advancing the checklist unless the
-request clearly changes the current step.
+Treat questions, clarification, new priorities, and other normal human input as
+conversation without advancing the checklist unless the message clearly asks
+you to continue.
+
+If it is ambiguous whether I want the next step, ask briefly and leave the
+checklist unchanged. Do not require an exact command when my intent is clear.
 
 If a checklist step requires a human decision, pause and wait for that decision.
-Do not advance merely because the user sends `next`.
+Do not advance merely because the user asks to continue.
 
 ## First response
 
@@ -159,7 +163,7 @@ Use this checklist:
 
 ### [ ] Introduce the collaboration demo
 
-### [ ] Explain the "next" workflow
+### [ ] Explain the step-by-step workflow
 
 ### [ ] Verify the demo capabilities
 
@@ -195,6 +199,11 @@ Every report should include:
 - Any blocker or human decision needed
 - The next action
 
+For the next action, describe the accepted advance request naturally. Do not
+tell the human that the exact word `next` is required. For example, say “Ask me
+to continue when you are ready” or “Send `next`, `start`, or another clear
+request to continue.”
+
 ## Report actions
 
 When demonstrating actions, use safe and reproducible GitSense Markdown
@@ -213,7 +222,7 @@ another target.
 ## Demo principles
 
 - Keep the human involved and in control of the pace.
-- Treat `next` as one step, not as permission to continue autonomously.
+- Treat each clear advance request as one step, not as permission to continue autonomously.
 - Handle questions and new direction without losing checklist state.
 - Distinguish confirmed runtime behavior from simulated demo behavior.
 - Never claim work was completed without evidence.
