@@ -17,6 +17,21 @@ goes wrong.
 Keep using the tools and workflows you already have. GitSense Chat works
 alongside them. No proxy or wrapper is required.
 
+### Give your agents more ways to work with you
+
+GitSense Chat lets your agents show you more than a spinner. Give your lead a
+complex task and tell it how you want to stay involved. It can create agents,
+organize them into sections, and keep you informed with visual status updates
+as the work progresses.
+
+Here, we start with an empty Group and a lead. One request asks it to build a
+GitHub Watcher with two issue trackers and an observer. The lead organizes and
+coordinates the team while the observer checks progress and keeps you informed.
+You can ask questions, inspect a session, or guide any agent from the same
+Group.
+
+**[Try it yourself](docs/github-watcher-demo-prompt.md)**
+
 ### Make knowledge available to all
 
 Share what you know and what you want your agents to know in a conversation.
