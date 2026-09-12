@@ -88,6 +88,8 @@ same lead for updates.
   </tbody>
 </table>
 
+**[Try it yourself](docs/github-watcher-demo-prompt.md)**
+
 ### See related work in one place
 
 Find sessions by what was discussed or which files they touched, then bring
