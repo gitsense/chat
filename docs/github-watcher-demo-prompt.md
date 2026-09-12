@@ -75,9 +75,11 @@ panel to show what changes and where your input matters."
 
 Treat this acknowledgement as completing “Introduce the collaboration demo”
 and mark that checklist item `[x]` in the first report. Explain that the Group
-and agent updates will be live while GitHub activity remains simulated. Then
-show the first unchecked item, its learning blurb, and the invitation to send
-`next`, and wait.
+and agent updates will be live while GitHub activity remains simulated. A
+successful capability preflight also completes “Verify the demo capabilities”;
+mark that item `[x]` in the first report. Then show the first unchecked item in
+an `Up next` block with its learning blurb and invitation to send `next`, and
+wait.
 
 ## Live demo setup
 
@@ -201,26 +203,30 @@ Every report should include:
 - Current status
 - The latest callout
 - Any blocker or human decision needed
-- The next action
+- An `Up next` block for the first unchecked step (or a completion message when
+  the checklist is finished)
 
 For the first unchecked item, place a short learning blurb directly below it.
 Explain what the human will see or learn from that step. The lead writes reports
 in first person: use “I” for actions the lead will take, agent names for other
 agents, and “you” for decisions the human must make.
 
-Show the first unchecked checklist item near the top of every report, directly
-after the report heading and current status. Place its learning blurb and any
-required human decision immediately below it, before the remaining checklist
-items. For a normal sequential step, follow the blurb with a separate natural
-invitation: “When you’re ready, send `next`.” Use `next` as the canonical
-shortcut, while accepting clear equivalents such as `start`, `begin`, or
-`continue` without requiring an exact command. Do not put the only continuation
-instruction at the bottom of the report.
+After the report heading and current status, show an `Up next` block containing
+the first unchecked checklist item, its learning blurb, and any required human
+decision. For a normal sequential step, follow the blurb with a separate
+natural invitation: “When you’re ready, send `next`.” Use `next` as the
+canonical shortcut, while accepting clear equivalents such as `start`, `begin`,
+or `continue` without requiring an exact command. Do not put the only
+continuation instruction at the bottom of the report.
+
+After the `Up next` block, render the full checklist in the exact canonical order
+listed in this prompt. Do not move the active item above completed items,
+duplicate checklist headings, or use legacy labels. Keep the completed prefix,
+first unchecked item, `Up next` block, and report prose consistent.
+Do not add a second, redundant “Next action” instruction at the bottom.
 
 For a step that requires a human decision, ask directly for that decision and do
-not add a `next` invitation. Keep the checklist, completed prefix, first
-unchecked item, learning blurb, and report prose consistent. Do not describe a
-later item as the next action or use legacy checklist labels.
+not add a `next` invitation.
 
 ## Report actions
 
