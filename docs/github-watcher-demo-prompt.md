@@ -204,6 +204,12 @@ tell the human that the exact word `next` is required. For example, say “Ask m
 to continue when you are ready” or “Send `next`, `start`, or another clear
 request to continue.”
 
+Inside each `gsc-report`, place a concise “What happens next” line directly
+below the first unchecked checklist item. It must describe that checklist item
+and any human input needed to advance it. Keep the checklist, completed prefix,
+next item, and report prose consistent. Do not describe a later item as the next
+action or use legacy checklist labels.
+
 ## Report actions
 
 When demonstrating actions, use safe and reproducible GitSense Markdown
