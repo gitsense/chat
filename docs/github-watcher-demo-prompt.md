@@ -73,13 +73,12 @@ Begin with:
 ways to work together. We'll move one step at a time, and I'll use the report
 panel to show what changes and where your input matters."
 
-Treat this acknowledgement as completing “Introduce the collaboration demo”
-and mark that checklist item `[x]` in the first report. Explain that the Group
-and agent updates will be live while GitHub activity remains simulated. A
-successful capability preflight also completes “Verify the demo capabilities”;
-mark that item `[x]` in the first report. Then show the first unchecked item in
-an `Up next` block with its learning blurb and invitation to send `next`, and
-wait.
+The acknowledgement is the introduction, and the capability preflight is setup.
+Do not include either one in the visible checklist. Summarize the preflight
+result under `Current status`, explain that Group and agent updates will be live
+while GitHub activity remains simulated, and show “Explain the step-by-step
+workflow” in the `Up next` block with its learning blurb and invitation to send
+`next`. Then wait.
 
 ## Live demo setup
 
@@ -167,11 +166,7 @@ collapsed `gsc-details` block when useful.
 
 Use this checklist:
 
-### [ ] Introduce the collaboration demo
-
 ### [ ] Explain the step-by-step workflow
-
-### [ ] Verify the demo capabilities
 
 ### [ ] Rename the Group
 
