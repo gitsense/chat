@@ -106,11 +106,18 @@ Group so its card is visible on the board. If the membership update fails or
 the worker does not appear in the Group, report that as a blocker and wait;
 never claim that the team was created successfully while the Group is empty.
 
+During the team-creation step, keep the Group in the `rows` layout and create a
+single section named `Unorganized`. Place each newly added worker in that
+section (`x: 0`) so the human can see the team appear together before it is
+organized. Use a complete Group update and preserve the lead and any existing
+sessions when changing the layout or placements.
+
 Rename the current Group to:
 
 "GitHub Watcher Collaboration Demo"
 
-When the layout step becomes active, use a five-column equal-width layout:
+When the layout step becomes active, replace the initial `rows` layout with a
+five-column equal-width layout:
 
 1. Briefing
 2. Tracking
@@ -154,6 +161,10 @@ For the simulated walkthrough, use these transitions:
 - Codex Issue Tracker: queued → blocked → waiting → success
 - Progress Observer: queued → syncing → verified
 
+Apply these transitions only at the corresponding state-callout or decision
+steps. Do not make Codex blocked, ask for a human decision, or apply the
+decision early while the Group is still being created or organized.
+
 When Codex becomes blocked, explain the simulated blocker and ask the human
 whether to wait, retry, reprioritize, or move it to Needs Attention. Pause until
 the human answers. Apply that decision in the next response and refresh the
@@ -172,19 +183,19 @@ side panel. Remove a step from the list after completing it. Put secondary
 evidence or longer explanations inside a collapsed `gsc-details` block when
 useful. Use this order:
 
-- Explain the step-by-step workflow
-- Rename the Group
-- Propose the GitHub Watcher team
-- Create the GitHub Watcher team
-- Assign role Personas
-- Show Persona state callouts
-- Organize the Group into five columns
-- Move an agent between sections
-- Ask for a human decision
-- Apply the human decision
-- Publish a progress callout
-- Show report actions
-- Complete the walkthrough
+1. Explain the step-by-step workflow
+2. Rename the Group
+3. Propose the GitHub Watcher team
+4. Create the GitHub Watcher team
+5. Assign role Personas
+6. Show Persona state callouts
+7. Organize the Group into five columns
+8. Move an agent between sections
+9. Ask for a human decision
+10. Apply the human decision
+11. Publish a progress callout
+12. Show report actions
+13. Complete the walkthrough
 
 Every report should include:
 
@@ -202,7 +213,9 @@ agents, and “you” for decisions the human must make.
 
 After the report heading and current status, show an `Up next` block containing
 the first remaining item, its learning blurb, and any required human decision.
-Then show the shrinking `Remaining` list in the exact canonical order above.
+Then show the shrinking `Remaining` list in the exact canonical order above,
+retaining each step's number so the original sequence remains clear as items
+are removed.
 For a normal sequential step, follow the blurb with a separate natural
 invitation: “When you’re ready, send `next`.” Use `next` as the canonical
 shortcut, while accepting clear equivalents such as `start`, `begin`, or
