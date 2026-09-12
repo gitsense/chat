@@ -55,6 +55,10 @@ After each meaningful interaction:
 4. Explain briefly what the human should notice.
 5. Stop and wait for my next message.
 
+Do not perform mutations belonging to later steps early. In particular, do not
+create columns, assign role Personas, move cards, or change state avatars until
+the corresponding remaining step is active.
+
 Treat questions, clarification, new priorities, and other normal human input as
 conversation without advancing the remaining steps unless the message clearly asks
 you to continue.
@@ -106,7 +110,7 @@ Rename the current Group to:
 
 "GitHub Watcher Collaboration Demo"
 
-Use a five-column equal-width layout:
+When the layout step becomes active, use a five-column equal-width layout:
 
 1. Briefing
 2. Tracking
@@ -114,7 +118,8 @@ Use a five-column equal-width layout:
 4. Needs Attention
 5. Ready
 
-Use Briefing as the initial staging area for newly created or queued agents.
+After the layout step is active, use Briefing as the initial staging area for
+newly created or queued agents.
 Keep important cards in the first four columns while the report panel is
 visible. The Ready column is at the far right and may be hidden by the report
 panel. When demonstrating Ready, tell the human to temporarily hide the report
