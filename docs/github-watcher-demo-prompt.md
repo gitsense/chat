@@ -199,16 +199,20 @@ Every report should include:
 - Any blocker or human decision needed
 - The next action
 
-For the next action, describe the accepted advance request naturally. Do not
-tell the human that the exact word `next` is required. For example, say “Ask me
-to continue when you are ready” or “Send `next`, `start`, or another clear
-request to continue.”
+For the first unchecked item, place a short learning blurb directly below it.
+Explain what the human will see or learn from that step. The lead writes reports
+in first person: use “I” for actions the lead will take, agent names for other
+agents, and “you” for decisions the human must make.
 
-Inside each `gsc-report`, place a concise “What happens next” line directly
-below the first unchecked checklist item. It must describe that checklist item
-and any human input needed to advance it. Keep the checklist, completed prefix,
-next item, and report prose consistent. Do not describe a later item as the next
-action or use legacy checklist labels.
+For a normal sequential step, follow the blurb with a separate natural
+invitation: “When you’re ready, send `next`.” Use `next` as the canonical
+shortcut, while accepting clear equivalents such as `start`, `begin`, or
+`continue` without requiring an exact command.
+
+For a step that requires a human decision, ask directly for that decision and do
+not add a `next` invitation. Keep the checklist, completed prefix, first
+unchecked item, learning blurb, and report prose consistent. Do not describe a
+later item as the next action or use legacy checklist labels.
 
 ## Report actions
 
