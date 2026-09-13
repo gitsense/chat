@@ -2,7 +2,7 @@
 
 Copy the contents of this block into the current Group lead.
 
-~~~md
+````md
 Help me connect the coding agents I already use to this GitSense Chat Group.
 Guide me one step at a time. Keep the context compact and read detailed
 instructions only when the current step needs them.
@@ -183,4 +183,4 @@ Finish after the connected Buddies are visible, at least one published update
 has been shown, and any requested Observer has been created and given the
 current roster. Summarize the exact harnesses and Buddy IDs, the Observer ID if
 one exists, and what remains to be designed for the Observer role.
-~~~
+````
