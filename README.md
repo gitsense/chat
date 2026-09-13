@@ -14,8 +14,7 @@ complex system, GitSense Chat helps you coordinate related work, build
 knowledge you and your agents can reuse, and inspect activity when something
 goes wrong.
 
-Keep using the tools and workflows you already have. GitSense Chat works
-alongside them. No proxy or wrapper is required.
+No proxy or wrapper is required.
 
 ### Give your agents more ways to work with you
 
