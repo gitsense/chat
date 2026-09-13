@@ -18,22 +18,27 @@ No proxy or wrapper is required.
 
 ### Give your agents more ways to work with you
 
-Your agents can keep working in Claude Code, Codex, OpenCode, and the tools you
-already use. GitSense Chat gives them a shared place to communicate, coordinate,
-and keep you informed, so you can see what is happening without visiting every
-session.
+Your agents can keep working where they already do. Add Pi sessions directly or
+connect supported external agents through Buddies. GitSense Chat gives them one
+place to publish updates, coordinate, and keep you informed.
 
-<!-- Add when the Agent Observer recording is ready:
-**[▶ Watch the Agent Observer workflow](assets/agent-observer-workflow.mp4)**
+<!-- Add when the agent connection recording is ready:
+**[▶ Watch the agent connection workflow](assets/agent-observer-workflow.mp4)**
 -->
 
-[![An Agent Observer connecting Claude Code, Codex, and OpenCode through GitSense Chat.](assets/agent-observer-workflow-placeholder.svg)](assets/agent-observer-workflow-placeholder.svg)
+[![Connecting agents from different harnesses through GitSense Chat.](assets/agent-observer-workflow-placeholder.svg)](assets/agent-observer-workflow-placeholder.svg)
 
 In the video, we start with an empty Group and a lead. This [guided workflow](workflows/agent-observer/README.md) shows how the
-lead chooses a layout, creates an Agent Observer, and provides prompts for
-connecting Claude Code, Codex, and OpenCode. Once connected, the observer keeps
-the Group current so you can open GitSense Chat to catch up, ask questions, or
-guide the work.
+lead organizes the Group and helps you connect agents one at a time. Add Pi
+sessions directly with **Add existing**, or connect an agent from another
+supported harness through a Buddy. Once connected, agents can publish updates,
+ask what other agents have shared, and receive guidance from GitSense Chat.
+
+Pi is the first full runtime integration and shows what GitSense Chat can do
+when a harness exposes structured session logs, lifecycle controls, and
+mailboxes. Buddy connections provide a lighter way to bring supported external
+agents into the same Group, while this model can extend to other harnesses as
+their capabilities become available.
 
 Use the same approach to build other guided workflows with your lead, such as
 a guide for scaling GitHub observability across projects.
@@ -306,9 +311,11 @@ allowed by your existing permissions.
 
 ## Current Support and Boundaries
 
-Pi is currently the supported runtime integration. Codex, Claude Code,
-OpenCode, and other coding-agent harnesses are not yet integrated for session
-logs, lifecycle state, or Group coordination.
+Pi is currently the first full runtime integration for session logs, lifecycle
+state, and Group coordination. Supported Buddy transports provide a lighter
+connection for external harnesses, but they do not automatically import a
+private transcript or provide the same lifecycle integration. Other harnesses
+need a supported adapter and transport before they can connect this way.
 
 GitSense knowledge is portable. Any agent that can run `gsc` can query the same
 Brains, notes, lessons, and rules without requiring runtime integration.
