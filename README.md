@@ -30,8 +30,8 @@ place to publish updates, coordinate, and keep you informed.
 
 In the video, we start with an empty Group and a lead. This [guided workflow](workflows/agent-observer/README.md) shows how the
 lead organizes the Group and helps you connect agents one at a time. Add Pi
-sessions directly with **Add existing**, or connect an agent from another
-supported harness through a Buddy. Once connected, agents can publish updates,
+sessions directly, or connect an agent from another supported harness through a
+Buddy. Once connected, agents can publish updates,
 ask what other agents have shared, and receive guidance from GitSense Chat.
 
 Pi is the first full runtime integration and shows what GitSense Chat can do
