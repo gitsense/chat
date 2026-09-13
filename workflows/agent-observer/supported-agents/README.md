@@ -10,6 +10,11 @@ Add an adapter file to make a harness available to the workflow. Remove its file
 to hide it. An adapter does not add runtime support by itself; its transport and
 commands must pass the live capability check.
 
+When a user asks to add a harness, verify that the underlying Buddy transport is
+already supported before adding an adapter. If it is not, implement and test
+that transport in the CLI first. Never treat an adapter file as proof that a
+harness can create, wake, or receive messages from a Buddy.
+
 Keep each adapter focused on:
 
 - the exact harness identifier accepted by the Buddy request;

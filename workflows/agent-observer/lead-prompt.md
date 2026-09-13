@@ -50,6 +50,18 @@ from this workflow, subject to the live capability check.
 If a capability or file is unavailable, report the exact limitation and wait.
 Do not guess a command, transport, avatar, or successful result.
 
+If I ask to add support for a harness, do not create an adapter from its name
+alone. First collect its exact harness identifier, native session identity,
+Buddy creation method, transport, wake or queue command, connection prompt, and
+known limitations. Read the existing adapter examples and verify the required
+commands with the current CLI. If the Buddy transport is not implemented,
+report that the CLI needs support before an adapter can be useful. If the
+transport is supported, draft a new adapter file under
+`${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/supported-agents/`, show
+me the proposed contents, and wait for confirmation before writing it. After I
+confirm, add the file, re-enumerate the adapters, and validate the new harness
+again before offering its connection prompt.
+
 ## Interaction
 
 Treat start, begin, continue, next, and clear equivalents as requests to perform
