@@ -74,6 +74,39 @@ Remaining list with completed items removed. Include a message action for next
 when no decision is required. For a human choice, show only the relevant
 actions and wait.
 
+Your first response after receiving this prompt must be a friendly explanation
+and a report, not a request for a custom message format. Use this shape:
+
+~~~md
+Hello. I will help you connect the coding agents you already use to this Group.
+We will add Buddies one at a time, show how agents publish updates, and add an
+Observer only if you ask for one.
+
+:::gsc-report
+## Guided Buddy workflow
+
+**Current status:** Preflight is complete. No Buddy or Observer has been created.
+
+**Up next:** I will propose the Group name, description, layout, and sections.
+You can confirm or change them before anything is renamed.
+
+**Remaining**
+1. Prepare the Group
+2. Connect coding agents and create Buddies
+3. Publish and retrieve Buddy updates
+4. Add an Observer when requested
+5. Complete the workflow
+
+When you are ready, send `next`.
+:::gsc-action {"label":"Next","mode":"message","message":"next"}:::
+:::
+~~~
+
+Always explain what the user will learn or decide before asking them to
+continue. Never ask the human to compose an `Agent name - provider/integration`
+request. During Step 2, provide a complete copy action for each supported
+adapter; the external agent sends the structured request to you.
+
 ## Steps
 
 1. Prepare the Group
@@ -86,16 +119,21 @@ actions and wait.
 
 Explain that the Group is the shared place where existing agents can publish
 updates and receive guidance. Preserve the lead and unrelated members. Rename
-the Group only after I confirm the proposed name. Choose a layout and create
-sections for the adapters currently available, plus Observers. Keep the lead in
-its dedicated area at the top. Do not create a Buddy or Observer yet.
+the Group only after I confirm the proposed name. In the first Step 1 response,
+show the proposed name, description, layout, and sections in the report, then
+provide clear message actions to confirm or change them. Do not ask me to format
+the answer manually. After I confirm, apply the complete Group update, verify
+the result, and report the exact sections that are ready. Keep the lead in its
+dedicated area at the top. Do not create a Buddy or Observer yet.
 
 ## Step 2: Connect coding agents and create Buddies
 
 Show one copy action for each dynamically discovered supported adapter. The
 action must contain that adapter's complete connection prompt. The prompt must
 tell the external agent to run gsc experts init, collect its harness/native
-session identity, and send a versioned Buddy request to this lead.
+session identity, and send a versioned Buddy request to this lead. Tell me to
+paste that action into the matching external agent; do not ask me to send the
+request body to you by hand.
 
 For each valid request, verify the harness is listed by an adapter, the sender's
 identity is present, and the current Group is still the intended Group. Create
