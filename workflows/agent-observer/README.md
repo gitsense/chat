@@ -42,10 +42,12 @@ reports changes to the lead and user.
 2. Copy the prompt from [`lead-prompt.md`](lead-prompt.md) into the lead.
 3. Use the report actions or send `next` to move through the guided setup.
 4. Choose a Group layout when the lead presents the two options.
-5. Start the bounded observer loop when instructed by GitSense Chat.
-6. Replace `<lead-mailbox-id>` in one or more connection prompts and paste each
+5. Choose the language for the standalone observer controller.
+6. Verify that the lead reports its active PID, latest check, and control
+   commands after startup.
+7. Replace `<lead-mailbox-id>` in one or more connection prompts and paste each
    prompt into the matching external coding agent.
-7. After Claude Code connects, tell it:
+8. After Claude Code connects, tell it:
 
    > Tell your buddy that you are pausing for a while and that your displayed
    > state should be changed to paused.
@@ -59,6 +61,13 @@ success report.
 The five-second interval is for testing. The observer stops after ten minutes,
 120 checks, removal from the Group, deletion of the Group, a user stop request,
 or repeated observation failures.
+
+The observer uses a standalone controller in its isolated workspace. It records
+its PID and a status heartbeat, prevents duplicate instances, and exposes
+file-based stop and restart controls. A PID alone is not proof that the correct
+controller is healthy, so the workflow also checks its process start time,
+command path, run ID, and latest successful check. Restarting never extends the
+original deadline or check budget without explicit direction.
 
 A Group can contain any number of agents. Activity is near real time for Groups
 with up to 20 agents. In larger Groups, an update may take up to 10 seconds to

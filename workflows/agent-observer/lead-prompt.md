@@ -18,6 +18,8 @@ For this workflow, I authorize you to:
   when a valid buddy request arrives at your mailbox;
 - add those sessions to the current Group and assign their Personas;
 - onboard the observer and buddies through their mailboxes; and
+- authorize the observer to create and run one bounded loop controller inside
+  its own isolated workspace; and
 - enable the observer to update buddy state avatars, publish reports, inform
   you of relevant changes, and raise local macOS notifications for attention
   states when that capability is available.
@@ -84,9 +86,10 @@ Use these remaining steps:
 2. Prepare the Group
 3. Choose the Group layout
 4. Apply the layout and create the observer
-5. Onboard and start the observer
-6. Connect coding agents
-7. Verify status propagation and complete the workflow
+5. Choose the observer loop language
+6. Build, onboard, and start the observer
+7. Connect coding agents
+8. Verify status propagation and complete the workflow
 
 ## Step 1: Explain the workflow
 
@@ -153,11 +156,63 @@ Assign a stable Persona title such as `Agent Observer`, a description explaining
 that it summarizes explicit buddy updates, and `state-queued`. Preserve Persona
 fields through complete, group-aware Persona writes.
 
-## Step 5: Onboard and start the observer
+## Step 5: Choose the observer loop language
 
-Read `workflows/agent-observer/observer-prompt.md`. Substitute the exact Group
-ID, observer session ID, lead mailbox ID, start time, and deadline, then deliver
-the complete prompt to the observer and wait for its acknowledgement.
+Explain that the observer uses a small standalone controller to wake itself on
+a schedule. Let me choose its implementation language:
+
+```text
+:::gsc-action {"label":"Node.js","mode":"message","message":"Write the observer loop in Node.js."}:::
+:::gsc-action {"label":"Python","mode":"message","message":"Write the observer loop in Python."}:::
+:::gsc-action {"label":"Go","mode":"message","message":"Write the observer loop in Go."}:::
+:::gsc-action {"label":"Another language","mode":"message","message":"I want to choose another language for the observer loop."}:::
+```
+
+Wait for my choice. If I choose another language, ask me to name it. Before
+continuing, verify that the selected runtime or compiler is available in the
+observer workspace. Prefer its standard library and do not add dependencies
+unless I explicitly approve them.
+
+## Step 6: Build, onboard, and start the observer
+
+Resolve
+`${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/observer-prompt.md` and
+verify that it is readable before continuing. If it is unavailable, report the
+exact expected path and wait. Do not guess another path or reconstruct the
+prompt from memory.
+
+Read the complete prompt. Generate a fresh loop run ID and onboarding challenge,
+then substitute them together with the selected language, exact observer
+workspace, Group ID, observer session ID, lead mailbox ID, RFC3339 start time,
+and RFC3339 deadline. Before delivery, verify from current data that:
+
+- the observer is a managed, reachable Pi session using the selected model;
+- it is a current member of this Group and is placed in `Observers`;
+- its stable Persona and `state-queued` avatar are present; and
+- the selected avatar exists in the current state-signals manifest.
+
+Create a bounded wait group with `--expected-count 1` using the current Pi
+messaging guidance. Deliver the complete prompt as a wait-group message and
+use one explicit idempotency key for that logical send and all of its retries.
+Require exactly one acknowledgement on the same message thread, as one line
+with no surrounding Markdown:
+
+```text
+GSC_OBSERVER_READY {"version":1,"group_id":"<group-id>","observer_session_id":"<observer-session-id>","run_id":"<loop-run-id>","challenge":"<onboarding-challenge>","language":"<loop-language>","program_path":"<program-path>","control_dir":"<control-dir>","status_command":"<status-command>","stop_command":"<stop-command>","restart_command":"<restart-command>","interval_seconds":5,"max_checks":120,"deadline":"<deadline>","status":"ready"}
+```
+
+After the wait-group completion notification, fetch and claim its reply,
+validate it, and complete the claimed message. Reject an acknowledgement if
+its challenge, identifiers, or bounds differ from the values sent. On timeout,
+malformed acknowledgement, or verification failure, do not schedule the loop;
+report the exact failure and wait. A successful delivery does not prove that
+the observer read or accepted the prompt. Onboarding is complete only after
+the acknowledgement is validated and the claimed reply is completed.
+
+After onboarding, tell me that the controller has been built and the observer
+is ready, but observation has not started. Process startup is a separate gate.
+Never infer that the loop is running from session liveness, prompt delivery,
+or acknowledgement.
 
 When the observer later sends a valid `GSC_OBSERVER_UPDATE`, verify its Group,
 observer, buddy, and evidence IDs against current data. Refresh the lead's
@@ -165,25 +220,49 @@ observer, buddy, and evidence IDs against current data. Refresh the lead's
 reported evidence `session_id` plus `entry_id` so one observation cannot update
 the report twice.
 
-Use a supported GitSense Chat loop to wake the observer every five seconds for
-at most 120 checks and ten minutes. Do not use a detached query-only shell loop;
-it cannot wake an idle model. If the current host requires me to start the loop
-through its Loops control, show the exact recurring prompt and settings and wait
-for me to start it.
+When the observer sends a valid `GSC_OBSERVER_PROCESS` lifecycle update, verify
+its Group, observer, run ID, PID metadata, and process command before replacing
+the recorded process state. Keep only the newest verified PID as current. If I
+ask for an observer PID later, check that PID, process start time, command path,
+and status heartbeat again; otherwise label it as the last reported PID rather
+than claiming it is active.
 
-The observer's recurring prompt is:
+Create a second bounded one-reply wait and send the observer this exact start
+request with the current values:
 
-`Run one bounded Agent Observer check using your onboarding contract. Publish an update only for a new relevant observation, state transition, blocker, or stopping condition.`
+```text
+GSC_OBSERVER_START {"version":1,"group_id":"<group-id>","observer_session_id":"<observer-session-id>","run_id":"<loop-run-id>","challenge":"<onboarding-challenge>"}
+```
 
-Do not claim the loop is running until the supported scheduler confirms it.
+Use one explicit idempotency key for this logical start request and all of its
+retries. Require one reply on the same thread:
 
-## Step 6: Connect coding agents
+```text
+GSC_OBSERVER_LOOP_STARTED {"version":1,"group_id":"<group-id>","observer_session_id":"<observer-session-id>","run_id":"<loop-run-id>","challenge":"<onboarding-challenge>","pid":<positive-integer>,"language":"<loop-language>","program_path":"<program-path>","control_dir":"<control-dir>","started_at":"<rfc3339>","status":"running"}
+```
+
+Validate and complete the reply. Verify that the reported PID is active, its
+process command resolves to the reported program inside the observer workspace,
+the control directory resolves inside that workspace, and the controller status
+shows a recent successful check for this run. Verify that the status, stop, and
+restart commands target those exact paths. Reject stale, mismatched, reused, or
+escaping process metadata. On any failure, do not report the observer as
+running.
+
+Once verified, record the PID, run ID, program path, control directory, status
+command, stop command, restart command, and latest check time in the report.
+Change only the observer's state avatar from `state-queued` to `state-syncing`,
+preserving its stable Persona fields. Do not advance to Step 7 until these
+checks pass.
+
+## Step 7: Connect coding agents
 
 Publish three copy actions containing complete connection prompts, one each for
 Claude Code, Codex, and OpenCode. Use the corresponding files in
-`workflows/agent-observer/`, replace `<lead-mailbox-id>` with your exact mailbox,
-and put each full prompt in the copy action's `text` field. Keep the readable
-versions inside a collapsed `gsc-details` block.
+`${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/`, replace
+`<lead-mailbox-id>` with your exact mailbox, and put each full prompt in the
+copy action's `text` field. Keep the readable versions inside a collapsed
+`gsc-details` block.
 
 When a `GSC_BUDDY_REQUEST` arrives, validate version `1` and allow only
 `claude-code`, `codex`, or `opencode`. Generate the buddy UUID yourself and name
@@ -198,8 +277,9 @@ For each valid request:
    isolated workspace.
 3. Add it to the matching Group section and verify that its card is visible.
 4. Assign a stable `<Harness> Buddy` Persona and initial `state-queued` avatar.
-5. Read `workflows/agent-observer/buddy-prompt.md`, substitute the exact buddy
-   and Group values, and deliver it to the buddy. Wait for its acknowledgement.
+5. Read `${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/buddy-prompt.md`,
+   substitute the exact buddy and Group values, and deliver it to the buddy.
+   Wait for its acknowledgement.
 6. Reply with a machine-readable `GSC_BUDDY_READY` block containing version,
    harness, buddy ID, canonical session ID, and mailbox ID.
 
@@ -207,7 +287,7 @@ A `gsc inform` success confirms delivery was committed; it does not prove the
 buddy read the introduction. Keep this step active until at least one buddy
 introduction becomes visible to the observer. Report other harnesses as waiting.
 
-## Step 7: Verify status propagation and complete
+## Step 8: Verify status propagation and complete
 
 After Claude Code is connected, give me this natural-language test instruction
 in a copy action:
