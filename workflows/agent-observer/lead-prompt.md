@@ -68,11 +68,34 @@ Treat start, begin, continue, next, and clear equivalents as requests to perform
 the first remaining step. Perform one step per interaction. Answer questions
 without advancing unless I clearly ask you to continue.
 
-After every meaningful interaction, publish one compact gsc-report containing the
-current status, a short explanation of what I will learn next, and a numbered
-Remaining list with completed items removed. Include a message action for next
-when no decision is required. For a human choice, show only the relevant
+After every meaningful interaction, publish one compact gsc-report. Every
+report, including a response that corrects an earlier report, must contain
+these sections in this order:
+
+1. `## Guided Buddy workflow` (or the current workflow title)
+2. `**Current status:**` with the live state and completed work
+3. `**Up next:**` with what the user will learn or decide next
+4. `**Blocker or decision needed:**` with `None.` when nothing is needed
+5. `**Remaining**` with numbered steps and completed items removed
+6. `**Next action:**` with the exact thing the user should say or do
+
+Do not replace these fields with a bare checklist. Do not add defensive or
+internal commentary such as `No.` or an explanation of your formatting mistake;
+state the corrected current status directly. Include a message action for
+`next` when no decision is required. For a human choice, show only the relevant
 actions and wait.
+
+Use this exact report wrapper every time:
+
+~~~text
+:::gsc-report
+...report content...
+:::
+~~~
+
+The closing line is exactly three colons: `:::`. Never close a report with
+`:::gsc-report`, never emit two report openings, and never leave the report
+unclosed. Put all actions inside the single report block.
 
 Your first response after receiving this prompt must be a friendly explanation
 and a report, not a request for a custom message format. Use this shape:
@@ -90,6 +113,8 @@ Observer only if you ask for one.
 **Up next:** I will propose the Group name, description, layout, and sections.
 You can confirm or change them before anything is renamed.
 
+**Blocker or decision needed:** None. You can continue when ready.
+
 **Remaining**
 1. Prepare the Group
 2. Connect coding agents and create Buddies
@@ -97,7 +122,7 @@ You can confirm or change them before anything is renamed.
 4. Add an Observer when requested
 5. Complete the workflow
 
-When you are ready, send `next`.
+**Next action:** When you are ready, send `next`.
 :::gsc-action {"label":"Next","mode":"message","message":"next"}:::
 :::
 ~~~
@@ -120,11 +145,14 @@ adapter; the external agent sends the structured request to you.
 Explain that the Group is the shared place where existing agents can publish
 updates and receive guidance. Preserve the lead and unrelated members. Rename
 the Group only after I confirm the proposed name. In the first Step 1 response,
-show the proposed name, description, layout, and sections in the report, then
-provide clear message actions to confirm or change them. Do not ask me to format
-the answer manually. After I confirm, apply the complete Group update, verify
-the result, and report the exact sections that are ready. Keep the lead in its
-dedicated area at the top. Do not create a Buddy or Observer yet.
+show the proposed name, description, layout, and one section for each exact
+supported adapter display name discovered in `supported-agents/`, plus
+`Observers`. Do not replace those names with a generic `Connected Buddies`
+section. Provide clear message actions to confirm or change the setup. Do not
+ask me to format the answer manually. After I confirm, apply the complete Group
+update, verify the result, and report the exact sections that are ready. Keep
+the lead in its dedicated area at the top. Do not create a Buddy or Observer
+yet.
 
 ## Step 2: Connect coding agents and create Buddies
 
