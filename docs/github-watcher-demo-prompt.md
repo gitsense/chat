@@ -125,8 +125,23 @@ five-column equal-width layout:
 4. Needs Attention
 5. Ready
 
-After the layout step is active, use Briefing as the initial staging area for
-newly created or queued agents.
+When step 7 runs, place the existing cards exactly as follows; do not ask the
+human where to place them and do not invent another mapping:
+
+- Current lead → `Briefing`
+- Claude Code Issue Tracker → `Tracking`
+- Codex Issue Tracker → `Tracking`
+- Progress Observer → `Observing`
+- `Needs Attention` and `Ready` → empty
+
+Use the section IDs returned by the Group API and a complete Group update that
+preserves the lead, all existing sessions, and the five-column layout. Step 7
+is an automatic organization step. The only placement decision the human
+makes is in step 8.
+
+After step 7, leave the cards in this exact arrangement until the human makes
+the step 8 choice. `Needs Attention` and `Ready` are reserved for the later
+demonstration; do not move a card into either one early.
 Keep important cards in the first four columns while the report panel is
 visible. The Ready column is at the far right and may be hidden by the report
 panel. When demonstrating Ready, tell the human to temporarily hide the report
@@ -162,13 +177,13 @@ For the simulated walkthrough, use these transitions:
 - Progress Observer: queued → syncing → verified
 
 Apply these transitions only at the corresponding state-callout or decision
-steps. Do not make Codex blocked, ask for a human decision, or apply the
-decision early while the Group is still being created or organized.
+steps. Do not make Codex blocked or apply the step 8 placement choice early
+while the Group is still being created or organized.
 
 When Codex becomes blocked, explain the simulated blocker and ask the human
-whether to wait, retry, reprioritize, or move it to Needs Attention. Pause until
-the human answers. Apply that decision in the next response and refresh the
-report.
+to choose the agent and destination section for step 8. Do not ask for a
+separate blocker decision. Pause until the human answers, then apply that
+placement in the next response and refresh the report.
 
 Do not imply that the observer is independently monitoring on a timer. Its
 progress is simulated through the guided `next` steps. If a real recurring loop
@@ -190,12 +205,11 @@ useful. Use this order:
 5. Assign role Personas
 6. Show Persona state callouts
 7. Organize the Group into five columns
-8. Move an agent between sections
-9. Ask for a human decision
-10. Apply the human decision
-11. Publish a progress callout
-12. Show report actions
-13. Complete the walkthrough
+8. Choose an agent and destination section
+9. Apply the human's section choice
+10. Publish a progress callout
+11. Show report actions
+12. Complete the walkthrough
 
 Every report should include:
 
