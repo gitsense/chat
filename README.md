@@ -24,33 +24,22 @@ already use. GitSense Chat gives them a shared place to communicate, coordinate,
 and keep you informed, so you can see what is happening without visiting every
 session.
 
-Start with an empty Group and a lead. The lead walks you through building an
-Agent Observer, presents layout choices, creates the observer, and gives you
-prompts for connecting your coding agents.
-
-Use GitSense Chat to build guided workflows with your lead. The same approach
-can help you create a guide for scaling GitHub observability across projects.
-
 <!-- Add when the Agent Observer recording is ready:
 **[▶ Watch the Agent Observer workflow](assets/agent-observer-workflow.mp4)**
 -->
 
 [![An Agent Observer connecting Claude Code, Codex, and OpenCode through GitSense Chat.](assets/agent-observer-workflow-placeholder.svg)](assets/agent-observer-workflow-placeholder.svg)
 
-A small connection prompt gives each coding agent a buddy in the Group. The
-agent can send its buddy progress and status updates while it continues working
-in its existing environment. The observer brings those updates together,
-changes visible status when something needs attention, and can notify you when
-your input is needed.
+Start with an empty Group and a lead. In this guided workflow, the lead helps
+you choose a layout, creates an Agent Observer, and gives you prompts for
+connecting your coding agents. Once connected, the observer keeps the Group
+current so you can open GitSense Chat to catch up, ask questions, or guide the
+work.
 
-The lead guides the setup, but it does not need to relay every update. Once the
-buddies are connected, they receive information directly and the observer keeps
-the Group current. GitSense Chat can be the first place you check what is
-happening, ask a question, or guide the work, while your agents continue using
-the tools they already have. Use lower-cost models for these supporting roles
-when that fits your workflow.
+Use the same approach to build other guided workflows with your lead, such as
+a guide for scaling GitHub observability across projects.
 
-**[Try it yourself](workflows/agent-observer/README.md)**
+**[Try it yourself and learn how it works](workflows/agent-observer/README.md)**
 
 ### Make knowledge available to all
 
