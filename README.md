@@ -29,11 +29,11 @@ session.
 
 [![An Agent Observer connecting Claude Code, Codex, and OpenCode through GitSense Chat.](assets/agent-observer-workflow-placeholder.svg)](assets/agent-observer-workflow-placeholder.svg)
 
-Start with an empty Group and a lead. In this guided workflow, the lead helps
-you choose a layout, creates an Agent Observer, and gives you prompts for
-connecting your coding agents. Once connected, the observer keeps the Group
-current so you can open GitSense Chat to catch up, ask questions, or guide the
-work.
+In the video, we start with an empty Group and a lead. This [guided workflow](workflows/agent-observer/README.md) shows how the
+lead chooses a layout, creates an Agent Observer, and provides prompts for
+connecting Claude Code, Codex, and OpenCode. Once connected, the observer keeps
+the Group current so you can open GitSense Chat to catch up, ask questions, or
+guide the work.
 
 Use the same approach to build other guided workflows with your lead, such as
 a guide for scaling GitHub observability across projects.
