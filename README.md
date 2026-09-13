@@ -19,20 +19,33 @@ alongside them. No proxy or wrapper is required.
 
 ### Give your agents more ways to work with you
 
-GitSense Chat lets your agents show you more than a spinner. Tell your lead
-what you need and how you want to stay involved. It can organize a team,
-present visual updates, and bring decisions to you. Your questions and
-direction help shape what happens next.
+GitSense Chat turns instructions into guided workflows you build with your
+agents. They can keep working in Claude Code, Codex, OpenCode, and the tools you
+already use while GitSense Chat gives them a shared place to communicate,
+coordinate, and keep you informed.
 
-![Placeholder for a collaboration demo showing a lead organizing agents, presenting visual updates, and responding to human direction.](assets/github-watcher-collaboration-demo-placeholder.svg)
+Start with an empty Group and a lead. The lead walks you through building an
+Agent Observer, presents layout choices, creates the observer, and gives you
+prompts for connecting your coding agents.
 
-Start with an empty Group and a lead. In this guided demo, the lead creates two
-issue tracker agents and an observer, organizes the team, and uses visual
-reports to explain what needs your attention. You set the pace, ask questions,
-and decide how the team responds to a simulated blocker. The agents and Group
-updates are live; GitHub activity is simulated.
+<!-- Add when the Agent Observer recording is ready:
+**[▶ Watch the Agent Observer workflow](assets/agent-observer-workflow.mp4)**
+-->
 
-**[Try it yourself](docs/github-watcher-demo-prompt.md)**
+[![An Agent Observer connecting Claude Code, Codex, and OpenCode through GitSense Chat.](assets/agent-observer-workflow-placeholder.svg)](assets/agent-observer-workflow-placeholder.svg)
+
+A small connection prompt gives each coding agent a buddy in the Group. The
+agent can send its buddy progress and status updates while it continues working
+in its existing environment. The observer brings those updates together,
+changes visible status when something needs attention, and can notify you when
+your input is needed.
+
+The lead guides the setup, but it does not need to relay every update. Once the
+buddies are connected, they receive information directly and the observer keeps
+the Group current. Use lower-cost models for these supporting roles when that
+fits your workflow.
+
+**[Try it yourself](workflows/agent-observer/README.md)**
 
 ### Make knowledge available to all
 
