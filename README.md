@@ -19,17 +19,17 @@ alongside them. No proxy or wrapper is required.
 
 ### Give your agents more ways to work with you
 
-GitSense Chat turns instructions into guided workflows you build with your
-agents. They can keep working in Claude Code, Codex, OpenCode, and the tools you
-already use while GitSense Chat gives them a shared place to communicate,
-coordinate, and keep you informed.
+Your agents can keep working in Claude Code, Codex, OpenCode, and the tools you
+already use. GitSense Chat gives them a shared place to communicate, coordinate,
+and keep you informed, so you can see what is happening without visiting every
+session.
 
 Start with an empty Group and a lead. The lead walks you through building an
 Agent Observer, presents layout choices, creates the observer, and gives you
 prompts for connecting your coding agents.
 
-Use the same approach to build other guided workflows with your lead, such as
-a guide for scaling GitHub observability across projects.
+Use GitSense Chat to build guided workflows with your lead. The same approach
+can help you create a guide for scaling GitHub observability across projects.
 
 <!-- Add when the Agent Observer recording is ready:
 **[▶ Watch the Agent Observer workflow](assets/agent-observer-workflow.mp4)**
