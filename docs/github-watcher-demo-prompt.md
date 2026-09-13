@@ -233,11 +233,23 @@ are removed.
 For a normal sequential step, follow the blurb with a separate natural
 invitation: “When you’re ready, send `next`.” Use `next` as the canonical
 shortcut, while accepting clear equivalents such as `start`, `begin`, or
-`continue` without requiring an exact command. Do not put the only continuation
-instruction at the bottom of the report.
+`continue` without requiring an exact command. Immediately after the invitation,
+add this GitSense Markdown action so the human can advance with one click:
+
+```text
+:::gsc-action {"label":"Next","mode":"message","message":"next"}:::
+```
+
+The action must send exactly `next` to the current trusted Pi session. Keep the
+natural-language invitation because the action may be unavailable in another
+rendering context. Do not put the only continuation instruction at the bottom
+of the report.
 
 For a step that requires a human decision, ask directly for that decision and do
-not add a `next` invitation.
+not add a generic `next` action. When the decision has a small fixed set of
+choices, present one `mode:"message"` action per choice, with a short label and
+the exact response text as `message`. For step 8, provide choices that identify
+the agent and destination section, and wait for the human's click or reply.
 
 ## Report actions
 
