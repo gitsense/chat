@@ -1,75 +1,71 @@
-# Agent Observer guided workflow
+# Connect your agents with Buddies
 
-This workflow builds a reusable observer for coding agents that already run in
-Claude Code, Codex, OpenCode, or another supported environment. A GitSense Chat
-lead guides the setup, creates one buddy for each connected agent, and creates
-an observer that turns buddy updates into Group status, reports, and optional
-local notifications.
+This guided workflow connects coding agents that already run in their own tools
+to a shared GitSense Chat Group. Each agent gets a visible Buddy with a
+mailbox, Persona, and published updates. The Group lead owns structure and
+coordination.
 
-This is an experimental workflow for testing. It creates live managed Pi
-sessions and can incur model usage.
+It starts with Buddies. The Observer is optional and is created only when you
+ask the lead to add one. Its monitoring behavior is intentionally left for a
+later workflow.
 
-## Workflow files
+## Start here
 
-- [`lead-prompt.md`](lead-prompt.md) starts the guided setup in the current
-  Group lead.
-- [`observer-prompt.md`](observer-prompt.md) defines the observer's delegated
-  authority, polling contract, reports, and stopping conditions.
-- [`buddy-prompt.md`](buddy-prompt.md) defines the durable counterpart created
-  for each external coding agent.
-- [`connect-claude-code.md`](connect-claude-code.md),
-  [`connect-codex.md`](connect-codex.md), and
-  [`connect-opencode.md`](connect-opencode.md) connect external coding agents.
+Copy the contents of [lead-prompt.md](lead-prompt.md) into the current Group
+lead. That is the only prompt you need to provide to start the workflow. The
+lead will guide you one step at a time and read the supporting files when a
+step needs them.
 
-## What it builds
+## Supporting files
 
-The lead remains in its dedicated area at the top of the Group. The user chooses
-one of two layouts:
+You do not need to paste these files into the lead separately. Review them for
+more detail, or ask the lead to read the relevant file when prompted:
 
-- `rows-25`: Claude Code, Codex, and OpenCode are rows on the left; Observers is
-  a fixed panel on the right. This leaves room to add more buddies or observers.
-- `4eq`: Claude Code, Codex, OpenCode, and Observers are equal-width columns.
+- [supported-agents/](supported-agents/) contains the harness adapters the lead
+  discovers and offers dynamically.
+- [buddy-prompt.md](buddy-prompt.md) defines the narrow role assigned to each
+  newly created Buddy.
+- [observer-setup.md](observer-setup.md) defines the optional Observer setup.
+- [observer-prompt.md](observer-prompt.md) is a legacy monitoring draft and is
+  not used by the current workflow.
 
-Each external agent asks the lead to create a buddy. The lead generates the
-buddy identity, creates its Pi session, places it in the matching section, and
-returns its mailbox. The external agent then sends structured updates directly
-to that buddy. The observer watches the Group, updates buddy state avatars, and
-reports changes to the lead and user.
+## Try it yourself
 
-## Test the workflow
+1. Open or create a GitSense Chat Group with a lead.
+2. Copy the contents of [lead-prompt.md](lead-prompt.md) into the lead.
+3. Let the lead enumerate the adapter files in
+   ${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/supported-agents/.
+4. Follow the lead's instructions and copy the connection prompt it provides
+   for a supported harness into that external agent.
+5. The external agent runs gsc experts init, requests a Buddy, and waits for
+   the lead to return its Buddy mailbox.
+6. Ask the external agent to tell its Buddy to publish a short status update.
+7. Ask another connected agent to ask its Buddy for the latest published update
+   from the first Buddy.
+8. When ready, ask the lead to add an Observer for all current Buddies.
 
-1. Open an empty GitSense Chat Group with a lead.
-2. Copy the prompt from [`lead-prompt.md`](lead-prompt.md) into the lead.
-3. Use the report actions or send `next` to move through the guided setup.
-4. Choose a Group layout when the lead presents the two options.
-5. Choose the language for the standalone observer controller.
-6. Verify that the lead reports its active PID, latest check, and control
-   commands after startup.
-7. Replace `<lead-mailbox-id>` in one or more connection prompts and paste each
-   prompt into the matching external coding agent.
-8. After Claude Code connects, tell it:
+## What this demonstrates
 
-   > Tell your buddy that you are pausing for a while and that your displayed
-   > state should be changed to paused.
+Your agents keep working in Claude Code, Codex, or another supported harness.
+GitSense Chat gives each one a visible place to publish updates, learn from
+other agents' published information, and receive guidance. The external agent's
+private transcript is not silently imported.
 
-The test succeeds when the observer sees Claude Code's explicit update, changes
-the Claude buddy to `state-paused`, informs the lead, and publishes the final
-success report.
+A Buddy may update only its own Persona through the partial gsc pi sessions
+personas set command. Group structure remains the lead's responsibility and
+uses complete, optimistic-concurrency-safe updates.
 
-## Operating bounds
+The adapter list is intentionally data-driven. To add a harness, add an adapter
+file with its exact request identifier, creation command, transport, connection
+prompt, and limitations. To remove one, remove its adapter file. The lead still
+verifies that the current CLI and runtime support it before offering the prompt.
 
-The five-second interval is for testing. The observer stops after ten minutes,
-120 checks, removal from the Group, deletion of the Group, a user stop request,
-or repeated observation failures.
+## Current boundaries
 
-The observer uses a standalone controller in its isolated workspace. It records
-its PID and a status heartbeat, prevents duplicate instances, and exposes
-file-based stop and restart controls. A PID alone is not proof that the correct
-controller is healthy, so the workflow also checks its process start time,
-command path, run ID, and latest successful check. Restarting never extends the
-original deadline or check budget without explicit direction.
+Buddy support is transport-specific. The adapter files are the source of truth
+for what is currently available. A successful message delivery means the
+message was committed, not that the external agent read or completed it.
 
-A Group can contain any number of agents. Activity is near real time for Groups
-with up to 20 agents. In larger Groups, an update may take up to 10 seconds to
-appear. Use longer intervals for ordinary work and lower-cost models for buddies
-and observers when their role is limited to recording and summarizing updates.
+The Observer setup step creates one visible Group member and gives it the
+current Buddy roster. It does not start a loop or define automated monitoring,
+state interpretation, notifications, or cross-Buddy authority.

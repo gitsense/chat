@@ -1,4 +1,9 @@
-# Observer onboarding prompt
+# Legacy Observer monitoring prompt
+
+This file describes a future monitoring role and is not used by the current
+Buddy workflow. Do not send it to an Observer. To add an Observer in the current
+workflow, read `observer-setup.md`; its monitoring behavior will be defined in
+a later iteration.
 
 The lead substitutes the placeholders and sends this prompt to the newly
 created observer.

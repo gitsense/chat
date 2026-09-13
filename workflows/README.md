@@ -7,7 +7,6 @@ and prompts used to connect other tools or agents.
 
 Available for testing:
 
-- [Agent Observer](agent-observer/README.md) builds a Group that receives status
-  from external coding agents through buddies and summarizes it through a
-  delegated observer.
-
+- [Connect your agents with Buddies](agent-observer/README.md) builds a Group
+  where external coding agents publish updates through visible Buddies, with an
+  optional Observer added when requested.
