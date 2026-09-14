@@ -7,6 +7,6 @@ and prompts used to connect other tools or agents.
 
 Available for testing:
 
-- [Connect your agents with Buddies](agent-observer/README.md) builds a Group
-  where external coding agents publish updates through visible Buddies, with an
-  optional Observer added when requested.
+- [Connect agents across tools](agent-observer/README.md) brings Pi sessions and
+  supported external coding agents into one Group. External agents use visible
+  Buddies, and an Observer can be added when requested.

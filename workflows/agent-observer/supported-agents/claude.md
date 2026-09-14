@@ -4,6 +4,7 @@ harness: claude
 display_name: Claude Code
 buddy_transport: claude-print-resume
 create_command: gsc pi sessions buddy create --agent claude --native-session <native-session-uuid>
+buddy_persona_tags: role:buddy,harness:claude
 
 Use this prompt after replacing <lead-mailbox-id>:
 
@@ -31,4 +32,3 @@ identity for this connection.
 
 The Claude transport is a restricted headless continuation. It does not wake or
 update the live Claude TUI and must not modify repository files.
-

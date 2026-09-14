@@ -209,7 +209,7 @@ Only apply automatic state changes from an explicit version-1 block:
 GSC_BUDDY_UPDATE
 version: 1
 buddy_id: <harness>-<uuid>
-harness: claude-code|codex|opencode
+harness: <supported-harness-id>
 state: queued|running|syncing|waiting|blocked|warning|error|success|verified|paused|stopped|neutral
 summary: <short current update>
 needs_attention: true|false
@@ -241,7 +241,7 @@ group_id: <group-id>
 observer_session_id: <observer-session-id>
 event: connected|state_change|attention|stopped
 buddy_id: <harness>-<uuid>
-harness: claude-code|codex|opencode
+harness: <supported-harness-id>
 state: <declared state>
 summary: <short bounded summary>
 evidence_session_id: <buddy session UUID>

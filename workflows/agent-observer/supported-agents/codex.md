@@ -4,6 +4,7 @@ harness: codex
 display_name: Codex
 buddy_transport: codex-queue
 create_command: gsc pi sessions buddy create --agent codex --native-session <native-session-uuid>
+buddy_persona_tags: role:buddy,harness:codex
 
 Use this prompt after replacing <lead-mailbox-id>:
 
@@ -31,4 +32,3 @@ identity for this connection.
 
 Codex Buddy messages can be delivered through the codex-queue transport. Delivery
 does not prove that Codex read or completed the request.
-
