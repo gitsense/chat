@@ -11,11 +11,12 @@ instructions only when the current step needs them.
 ## Boundaries
 
 You may prepare this Group, help me add existing Pi sessions, create and add one
-Buddy for each valid external-agent request, assign each Buddy a Persona, answer
-questions using published messages, and create one Group Observer when I
-explicitly request one. You may not modify application source code, invent a
-harness transport, expose an external transcript that the agent did not
-publish, or create agents merely because a workflow would benefit from them.
+standard managed Pi Buddy for each valid external-agent request, assign each
+Buddy a Persona, answer questions using published messages, and create one
+Group Observer when I explicitly request one. You may not modify application
+source code, invent a harness identity, expose an external transcript that the
+agent did not publish, or create agents merely because a workflow would benefit
+from them.
 
 The lead owns Group structure. A Buddy owns only its own Persona and published
 updates. Use complete, concurrency-safe Group writes with the current
@@ -70,22 +71,24 @@ Read only the file needed for the current step. Enumerate regular files in
 `$supported_agents` to build the supported-harness list dynamically. Exclude
 README.md and any file without adapter metadata. Read each adapter completely;
 the adapter is the source of truth for its harness identifier, display name,
-connection prompt, and available transport. Verify every adapter against the
-current CLI help before offering it. Adding or removing an adapter file adds or
-removes that harness from this workflow, subject to the live capability check.
+native session discovery, connection prompt, Persona tags, and limitations.
+Verify the discovery command and the current `gsc ask`, `gsc inform`, and `gsc
+pi sessions new` help before offering it. Adding or removing an adapter file
+adds or removes that harness from this workflow, subject to the live capability
+check.
 If the literal workflow path or a required file does not exist, report that
 exact limitation and wait.
 
 If a capability or file is unavailable, report the exact limitation and wait.
-Do not guess a command, transport, avatar, path, or successful result.
+Do not guess a command, identity, avatar, path, or successful result.
 
 If I ask to add support for a harness, do not create an adapter from its name
-alone. First collect its exact harness identifier, native session identity,
-Buddy creation method, transport, wake or queue command, connection prompt, and
-known limitations. Read the existing adapter examples and verify the required
-commands with the current CLI. If the Buddy transport is not implemented,
-report that the CLI needs support before an adapter can be useful. If the
-transport is supported, draft a new adapter file under
+alone. First collect its exact harness identifier, native session identity and
+discovery method, connection prompt, Persona tags, and known limitations. Read
+the existing adapter examples and verify the required commands with the current
+CLI. If the harness cannot run `gsc ask` and `gsc inform` against the shared
+GitSense store, report that limitation before adding an adapter. Draft a new
+adapter file under
 `${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/supported-agents/`, show
 me the proposed contents, and wait for confirmation before writing it. After I
 confirm, add the file, re-enumerate the adapters, and validate the new harness
@@ -202,12 +205,15 @@ matching external agent; do not ask me to send the request body to you by hand.
 
 For each valid request, verify the harness is listed by an adapter, the sender's
 identity is present, and the current Group is still the intended Group. Create
-exactly one Buddy for that native external session using the adapter's
-documented transport and the configured default model/workspace. Add it to the
-`Agents` section and verify that its card is visible. Read
-${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/buddy-prompt.md, substitute the exact
-IDs, and deliver it to the Buddy. Wait for and validate its acknowledgement
-before returning the Buddy mailbox to the external agent.
+exactly one standard managed Pi session for that native external session. Name
+it `<harness>-<native-session-id>`, use the configured default model and an
+isolated workspace, and create it with `gsc pi sessions new`. Record the
+returned Pi session UUID. Add it to the `Agents` section and verify that its
+card is visible. Read
+`${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/buddy-prompt.md`, substitute the
+exact IDs, and deliver it to the Buddy. Wait for and validate its
+acknowledgement before returning the Buddy Pi session UUID to the external
+agent.
 
 Assign a stable Harness Buddy Persona with `personas set`, including the
 adapter's declared Buddy Persona tags. Adapters should provide stable tags such
@@ -231,9 +237,10 @@ Give me two copyable test messages:
 
 Show the result as declared, attributed information with its source Buddy and
 timestamp. Do not infer progress from silence or claim that GitSense Chat has
-imported a private transcript. If I ask a Buddy to send guidance back to its
-external agent, use the adapter's supported wake or queue command and report
-delivery separately from completion.
+imported a private transcript. A Buddy can answer requests sent with `gsc ask`
+and receive updates sent with `gsc inform`. It cannot send a message back into
+the external harness in this workflow. Do not claim that an external agent
+received anything from its Buddy.
 
 ## Step 4: Add an Observer when requested
 

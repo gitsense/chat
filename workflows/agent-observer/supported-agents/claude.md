@@ -2,8 +2,8 @@
 
 harness: claude
 display_name: Claude Code
-buddy_transport: claude-print-resume
-create_command: gsc pi sessions buddy create --agent claude --native-session <native-session-uuid>
+session_identity: native Claude session UUID
+session_discovery: inspect the current Claude Code session context and report its native session UUID
 buddy_persona_tags: role:buddy,harness:claude
 
 Use this prompt after replacing <lead-mailbox-id>:
@@ -24,11 +24,13 @@ repository: <repository root or unavailable>
 branch: <branch or unavailable>
 task: <current task or unavailable>
 
-Wait for GSC_BUDDY_READY. Save the returned Buddy and mailbox IDs. Then use
-gsc inform to send the Buddy a concise introduction and any status I explicitly
-ask you to publish. Treat the Buddy's returned mailbox as the only GitSense
-identity for this connection.
+Wait for GSC_BUDDY_READY. Save the returned Buddy Pi session UUID. Use
+`gsc inform <buddy-pi-session-uuid>` to publish a concise introduction or any
+status I explicitly ask you to share. Use `gsc ask --mailbox
+<buddy-pi-session-uuid>` when you need to ask the Buddy what another connected
+agent has published. The Buddy cannot send messages back into the Claude Code
+session yet.
 ~~~
 
-The Claude transport is a restricted headless continuation. It does not wake or
-update the live Claude TUI and must not modify repository files.
+Claude Code remains the source of its private transcript and local work. The
+Buddy receives only the messages explicitly sent through `gsc`.

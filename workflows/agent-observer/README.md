@@ -2,13 +2,15 @@
 
 This guided workflow brings the coding agents you already use into a shared
 GitSense Chat Group. Add an existing Pi session directly, or connect an agent
-from another harness through a visible Buddy with a mailbox, Persona, and
-published updates. The Group lead owns structure and coordination.
+from another harness through a visible Buddy. The lead creates each Buddy as a
+regular managed Pi session with a mailbox, Persona, and published updates.
 
 Pi sessions do not need Buddies. External agents use Buddies to publish the
 information they choose to share while they continue working in their own
-tools. The Observer is optional and is created only when you ask the lead to
-add one; its monitoring behavior is intentionally left for a later workflow.
+tools. Communication uses `gsc ask` and `gsc inform`; the Buddy cannot send a
+message back into the external harness yet. The Observer is optional and is
+created only when you ask the lead to add one; its monitoring behavior is
+intentionally left for a later workflow.
 
 The default layout uses rows with a fixed `Observers` column. Connected Pi
 sessions and Buddies start in one `Agents` section, while the lead remains in
@@ -65,15 +67,17 @@ tags. Group structure remains the lead's responsibility and uses complete,
 optimistic-concurrency-safe updates.
 
 The adapter list is intentionally data-driven. To add a harness, add an adapter
-file with its exact request identifier, creation command, transport, connection
-prompt, and limitations. To remove one, remove its adapter file. The lead still
-verifies that the current CLI and runtime support it before offering the prompt.
+file with its exact request identifier, native-session discovery method,
+connection prompt, Persona tags, and limitations. To remove one, remove its
+adapter file. The lead still verifies that the current CLI and runtime support
+it before offering the prompt.
 
 ## Current boundaries
 
-Buddy support is transport-specific. The adapter files are the source of truth
-for what is currently available. A successful message delivery means the
-message was committed, not that the external agent read or completed it.
+Buddy support is message-based. The adapter files are the source of truth for
+what is currently available. A successful `gsc ask` or `gsc inform` delivery
+means the message was committed, not that the external agent read or completed
+it.
 
 The Observer setup step creates one visible Group member and gives it the
 current connected-agent roster. It does not start a loop or define automated

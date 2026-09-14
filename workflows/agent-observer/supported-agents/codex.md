@@ -2,8 +2,8 @@
 
 harness: codex
 display_name: Codex
-buddy_transport: codex-queue
-create_command: gsc pi sessions buddy create --agent codex --native-session <native-session-uuid>
+session_identity: native Codex session UUID
+session_discovery: inspect the current Codex session context and report its native session UUID
 buddy_persona_tags: role:buddy,harness:codex
 
 Use this prompt after replacing <lead-mailbox-id>:
@@ -24,11 +24,13 @@ repository: <repository root or unavailable>
 branch: <branch or unavailable>
 task: <current task or unavailable>
 
-Wait for GSC_BUDDY_READY. Save the returned Buddy and mailbox IDs. Then use
-gsc inform to send the Buddy a concise introduction and any status I explicitly
-ask you to publish. Treat the Buddy's returned mailbox as the only GitSense
-identity for this connection.
+Wait for GSC_BUDDY_READY. Save the returned Buddy Pi session UUID. Use
+`gsc inform <buddy-pi-session-uuid>` to publish a concise introduction or any
+status I explicitly ask you to share. Use `gsc ask --mailbox
+<buddy-pi-session-uuid>` when you need to ask the Buddy what another connected
+agent has published. The Buddy cannot send messages back into the Codex
+session yet.
 ~~~
 
-Codex Buddy messages can be delivered through the codex-queue transport. Delivery
-does not prove that Codex read or completed the request.
+Codex remains the source of its private transcript and local work. The Buddy
+receives only the messages explicitly sent through `gsc`.
