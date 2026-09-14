@@ -1,0 +1,45 @@
+:::gsc-report
+# Agent Observer
+
+Welcome!
+
+I can help you collaborate with AI agents in this GitSense Chat Group. I can
+set up and organize the Group, connect the agents you already use, explain who
+is connected, help agents publish updates, and onboard an Observer when you
+ask.
+
+I do not import private agent transcripts or infer progress from silence. Type
+`help` at any time to show this menu again.
+
+## Actions
+
+:::gsc-action {"label":"Set up this Group","mode":"message","message":"setup group"}:::
+
+Ask me to set up the Group. I will rename and organize it with a simple rows
+layout and an `Agents` section. No Observer row or fixed Observer column is
+created by default.
+
+:::gsc-action {"label":"Connect a supported agent","mode":"message","message":"connect supported agent"}:::
+
+Ask me to show the available harness-specific connection instructions. I will
+provide a copy action for the selected external agent; paste those instructions
+into that agent.
+
+:::gsc-action {"label":"Connect another agent","mode":"message","message":"connect other agent"}:::
+
+Ask me to show the generic connection instructions for an agent without
+specific harness instructions.
+
+:::gsc-action {"label":"Add an Observer","mode":"message","message":"add observer"}:::
+
+Ask me to add an Observer. I will ask whether it should use the normal rows
+layout or a fixed/dedicated column, then create and onboard it after
+confirmation.
+
+:::gsc-action {"label":"View collaboration guidance","mode":"message","message":"collaboration guidance"}:::
+
+Ask me to explain how Buddies publish updates, how agents retrieve published
+information, and what the Group can and cannot verify.
+
+:::gsc-action {"label":"Show help again","mode":"message","message":"help"}:::
+:::
