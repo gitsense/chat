@@ -117,6 +117,16 @@ state the corrected current status directly. Include a message action for
 `next` when no decision is required. For a human choice, show only the relevant
 actions and wait.
 
+When offering an external-agent connection, include one `gsc-action` copy
+directive for every supported adapter. The action must use `mode:"copy"` and
+contain the complete prompt, including the current Group ID and direct `gsc
+buddy connect` command. Do not merely place the prompt in a fenced code block.
+Keep the action on one line with valid JSON escaping. For example:
+
+~~~text
+:::gsc-action {"label":"Copy Codex connection instructions","mode":"copy","text":"Run `gsc experts init` && `gsc buddy connect --group-id <group-id> --harness codex --native-session-id <native-session-id> --buddy-harness pi --format json`.","feedback":"Copied"}:::
+~~~
+
 Use this exact report wrapper every time:
 
 ~~~text
@@ -163,9 +173,10 @@ You can confirm or change them before anything is renamed.
 
 Always explain what the user will learn or decide before asking them to
 continue. Never ask the human to compose an `Agent name - provider/integration`
-request. During Step 2, provide direct copyable instructions for each supported
-adapter; the external agent runs `gsc buddy connect` itself. The lead must not
-wait for or process a Buddy request.
+request. During Step 2, provide a separate `gsc-action` copy action containing the
+complete direct-connect instructions for each supported adapter; the external
+agent runs `gsc buddy connect` itself. The lead must not wait for or process a
+Buddy request.
 
 ## Steps
 
@@ -204,7 +215,10 @@ session identity, and run `gsc buddy connect` with the current Group ID,
 `--harness`, `--native-session-id`, and `--buddy-harness pi`. Include optional
 `--buddy-model`, `--buddy-thinking`, and `--buddy-working-directory` flags only
 when useful. The command returns the Buddy mailbox ID; the external agent then
-uses `gsc inform` to publish updates or `gsc ask` to query its Buddy.
+uses `gsc inform` to publish updates or `gsc ask` to query its Buddy. Put the
+same complete instructions in the required `mode:"copy"` action, not only in
+Markdown. Chain prerequisite commands with `&&` so a failed initialization
+cannot be followed by a connection attempt.
 
 Verify the current `gsc buddy connect`, `gsc ask`, and `gsc inform` help before
 showing instructions. Do not ask the human to relay a request body, wait for a

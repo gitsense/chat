@@ -9,10 +9,11 @@ buddy_persona_tags: role:buddy,harness:codex
 Use these instructions in Codex after replacing `<group-id>`:
 
 ~~~md
-Run `gsc experts init`. Collect your native Codex session UUID, current working
-directory, repository, branch, and task when available. Then run:
+Collect your native Codex session UUID, current working directory, repository,
+branch, and task when available. Then run this fail-fast command:
 
 ```bash
+gsc experts init && \
 gsc buddy connect \
   --group-id <group-id> \
   --harness codex \

@@ -14,11 +14,12 @@ If OpenCode support is added, use these instructions after replacing
 `<group-id>`:
 
 ~~~md
-Run `gsc experts init`. Use `opencode session list --format json` to identify
-your current native OpenCode session. Collect your current working directory,
-repository, branch, and task when available. Then run:
+Use `opencode session list --format json` to identify your current native
+OpenCode session. Collect your current working directory, repository, branch,
+and task when available. Then run this fail-fast command:
 
 ```bash
+gsc experts init && \
 gsc buddy connect \
   --group-id <group-id> \
   --harness opencode \

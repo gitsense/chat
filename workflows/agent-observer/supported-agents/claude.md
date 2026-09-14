@@ -9,10 +9,11 @@ buddy_persona_tags: role:buddy,harness:claude
 Use these instructions in Claude Code after replacing `<group-id>`:
 
 ~~~md
-Run `gsc experts init`. Collect your native Claude session UUID, current working
-directory, repository, branch, and task when available. Then run:
+Collect your native Claude session UUID, current working directory, repository,
+branch, and task when available. Then run this fail-fast command:
 
 ```bash
+gsc experts init && \
 gsc buddy connect \
   --group-id <group-id> \
   --harness claude \
