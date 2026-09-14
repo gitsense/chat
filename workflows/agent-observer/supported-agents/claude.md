@@ -9,10 +9,7 @@ buddy_persona_tags: role:buddy,harness:claude
 Use these instructions in Claude Code after replacing `<group-id>`:
 
 ~~~md
-If your Claude environment exposes a native session UUID, collect it along
-with the current working directory, repository, branch, and task. Otherwise,
-omit `--native-session-id`; the Buddy command generates an identity-only
-placeholder and still connects the Buddy mailbox. Then run this command:
+Run:
 
 ```bash
 gsc experts init && \
@@ -23,23 +20,23 @@ gsc buddy connect \
   --format json
 ```
 
-When a native UUID is available, add `--native-session-id <uuid>` before
-`--buddy-harness`.
+If a native Claude session UUID is available, add
+`--native-session-id <uuid>`. It is optional provenance only; no placeholder is
+generated when it is omitted. The command returns immediately by default with
+the Buddy `buddy_session_id`/`mailbox_id` and usually `status: "starting"`.
 
-Execute the command and inspect its JSON output. Verify the returned Buddy ID
-appears in `gsc pi sessions groups show <group-id> --format json` before
-claiming success. Save the returned `buddy_session_id` or `mailbox_id`, then send the Buddy one
-message saying you are ready:
+Send the formal one-way readiness message to the returned mailbox:
 
 ```bash
-printf '%s\n' 'I am ready.' | gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
+printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<mailbox_id>","group_id":"<group-id>","harness":"claude"}' | \
+  gsc inform --mailbox <mailbox_id> --message-file - --format json
 ```
 
-That completes the connection. Later, use `gsc inform` with the mailbox to
-publish status updates or `gsc ask` with it to query published information. The command is
-idempotent and adds the Buddy to the Group's `Agents` section when available;
-it does not import your private transcript. The Buddy cannot send messages
-back into this Claude Code session yet.
+Include `native_session_id` in the JSON when available. This visible message is
+the sole handshake. Use `gsc inform` with the mailbox for future updates. Do
+not use `gsc ask`, native callbacks, partner contracts, or lead-mediated
+communication. The Buddy does not send messages back into this Claude Code
+session.
 ~~~
 
 Claude Code remains the source of its private transcript and local work. The
