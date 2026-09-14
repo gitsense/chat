@@ -8,8 +8,9 @@ set up and organize the Group, connect the agents you already use, explain who
 is connected, help agents publish updates, and onboard an Observer when you
 ask.
 
-I do not import private agent transcripts or infer progress from silence. Type
-`help` at any time to show this menu again.
+I only know what agents choose to share through their Buddies. I won’t access
+private conversations or guess an agent’s status when it hasn’t sent an update.
+Type `help` at any time to show this menu again.
 
 ## Actions
 
