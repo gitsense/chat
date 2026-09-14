@@ -67,32 +67,33 @@ codex_adapter="${supported_agents}/codex.md"
 ~~~
 
 Read only the file needed for the current step. When explaining an external
-connection, enumerate regular files in `$supported_agents` to build the
-supported-harness list dynamically. Exclude README.md and any file without
+connection, enumerate regular files in `$supported_agents` to discover
+harness-specific guidance dynamically. Exclude README.md and any file without
 adapter metadata. Read each selected adapter completely; the adapter is the
 source of truth for its harness identifier, display name, native session
 discovery, direct `gsc buddy connect` invocation, Persona tags, and
 limitations. Verify the discovery command and the current `gsc buddy connect`,
-`gsc ask`, and `gsc inform` help before offering it. Adding or removing an
-adapter file adds or removes that harness from this workflow, subject to the
-live capability check.
+`gsc ask`, and `gsc inform` help before offering it. Adapter files customize the
+experience; they are not the complete list of supported harnesses, because the
+generic connection fallback works for any valid harness identifier.
 If the literal workflow path or a required file does not exist, report that
 exact limitation and wait.
 
 If a capability or file is unavailable, report the exact limitation and wait.
 Do not guess a command, identity, avatar, path, or successful result.
 
-If I ask to add support for a harness, do not create an adapter from its name
-alone. First collect its exact harness identifier, native session identity and
-discovery method, direct-connect instructions, Persona tags, and known
-limitations. Read the existing adapter examples and verify the required
-commands with the current CLI. If the harness cannot run `gsc buddy connect`,
-`gsc ask`, and `gsc inform` against the shared GitSense store, report that
-limitation before adding an adapter. Draft a new adapter file under
-`${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/supported-agents/`, show
-me the proposed contents, and wait for confirmation before writing it. After I
-confirm, add the file, re-enumerate the adapters, and validate the new harness
-again before offering its direct connection instructions.
+If I ask to add harness-specific guidance, explain that the generic fallback
+already supports any valid harness identifier, while a file in
+`${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/supported-agents/` adds
+custom discovery, connection instructions, Persona tags, transport details,
+and limitations. Do not create an adapter from a name alone. First collect the
+exact harness identifier, native session identity and discovery method, direct
+connect instructions, Persona tags, and known limitations. Read the existing
+adapter examples and verify the required commands with the current CLI. Draft
+the new adapter file, show me its proposed contents, and wait for confirmation
+before writing it. After I confirm, add the file, re-enumerate adapters, and
+validate the new harness again. Until then, offer the generic connection
+instructions rather than claiming the harness is unavailable.
 
 ## Interaction
 
@@ -208,17 +209,17 @@ use `groups put` as a fallback.
 
 Explain that external agents connect themselves through the deterministic
 `gsc buddy connect` command; the lead does not create a Buddy or process a
-request. Enumerate the supported adapter files and read the selected adapter
-completely. Provide one copyable instruction block per supported harness. Each
-block must tell the external agent to run `gsc experts init`, discover its native
-session identity, and run `gsc buddy connect` with the current Group ID,
-`--harness`, `--native-session-id`, and `--buddy-harness pi`. Include optional
-`--buddy-model`, `--buddy-thinking`, and `--buddy-working-directory` flags only
-when useful. The command returns the Buddy mailbox ID; the external agent then
-uses `gsc inform` to publish updates or `gsc ask` to query its Buddy. Put the
-same complete instructions in the required `mode:"copy"` action, not only in
-Markdown. Chain prerequisite commands with `&&` so a failed initialization
-cannot be followed by a connection attempt.
+request. Enumerate adapter files and read the matching adapter completely when
+one exists. Provide one `mode:"copy"` action with its complete harness-specific
+instructions for each matching adapter. Also provide one generic fallback
+copy action for any harness without an adapter. The generic prompt must tell
+the external agent to run `gsc experts init` and then `gsc buddy connect` with
+the current Group ID, `--harness <harness-id>`, and `--buddy-harness pi`; the
+native session ID and model, thinking, and working-directory flags are
+optional. Chain prerequisite commands with `&&`. Explain that the command
+returns the Buddy mailbox ID and that the external agent uses `gsc inform` and
+`gsc ask` with it. Put complete instructions in copy actions, not only in
+Markdown.
 
 Verify the current `gsc buddy connect`, `gsc ask`, and `gsc inform` help before
 showing instructions. Do not ask the human to relay a request body, wait for a
