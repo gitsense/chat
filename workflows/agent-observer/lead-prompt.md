@@ -118,14 +118,21 @@ state the corrected current status directly. Include a message action for
 `next` when no decision is required. For a human choice, show only the relevant
 actions and wait.
 
-When offering an external-agent connection, include one `gsc-action` copy
-directive for every supported adapter. The action must use `mode:"copy"` and
-contain the complete prompt, including the current Group ID and direct `gsc
-buddy connect` command. Do not merely place the prompt in a fenced code block.
-Keep the action on one line with valid JSON escaping. For example:
+When offering an external-agent connection, keep the visible report compact:
+show only dynamically generated `Copy for <harness>` labels and a short
+instruction to paste the copied text into the matching agent. Derive each
+specific `<harness>` label and prompt from the adapter metadata discovered in
+`supported-agents`; always include a generic `Copy for other agent` fallback.
+Do not hard-code Codex, Claude, or any other harness in this workflow prompt.
+Do not expose command details, UUID discovery, flags, or protocol explanation
+in the visible report. Include one `gsc-action` copy directive for every
+relevant option. Each action must use `mode:"copy"` and contain the complete prompt,
+including the current Group ID and direct `gsc buddy connect` command. Do not
+merely place the prompt in a fenced code block. Keep the action on one line with
+valid JSON escaping. For example:
 
 ~~~text
-:::gsc-action {"label":"Copy Codex connection instructions","mode":"copy","text":"Run `gsc experts init` && `gsc buddy connect --group-id <group-id> --harness codex --native-session-id <native-session-id> --buddy-harness pi --format json`.","feedback":"Copied"}:::
+:::gsc-action {"label":"Copy for <harness>","mode":"copy","text":"Run `gsc experts init` && `gsc buddy connect --group-id <group-id> --harness <harness-id> --buddy-harness pi --format json`.","feedback":"Copied"}:::
 ~~~
 
 Use this exact report wrapper every time:
@@ -209,17 +216,16 @@ use `groups put` as a fallback.
 
 Explain that external agents connect themselves through the deterministic
 `gsc buddy connect` command; the lead does not create a Buddy or process a
-request. Enumerate adapter files and read the matching adapter completely when
-one exists. Provide one `mode:"copy"` action with its complete harness-specific
-instructions for each matching adapter. Also provide one generic fallback
-copy action for any harness without an adapter. The generic prompt must tell
-the external agent to run `gsc experts init` and then `gsc buddy connect` with
-the current Group ID, `--harness <harness-id>`, and `--buddy-harness pi`; the
-native session ID and model, thinking, and working-directory flags are
-optional. Chain prerequisite commands with `&&`. Explain that the command
-returns the Buddy mailbox ID and that the external agent uses `gsc inform` and
-`gsc ask` with it. Put complete instructions in copy actions, not only in
-Markdown.
+request. Enumerate regular adapter files at runtime and read each relevant
+adapter completely. For every discovered adapter, derive a compact visible
+`Copy for <harness>` action from its metadata, and always provide a generic
+`Copy for other agent` action. The visible text must only say to copy the
+relevant instructions and paste them into that agent. The hidden copied prompt
+must contain the complete adapter-specific or generic instructions, the current
+Group ID, `gsc experts init && gsc buddy connect`, and the required/optional
+identity flags. The external agent, not the human, handles UUID discovery,
+mailbox capture, and messaging details. Never hard-code a harness list in this
+workflow prompt.
 
 Verify the current `gsc buddy connect`, `gsc ask`, and `gsc inform` help before
 showing instructions. Do not ask the human to relay a request body, wait for a
