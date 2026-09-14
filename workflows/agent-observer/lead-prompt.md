@@ -114,8 +114,9 @@ help before presenting instructions.
 Present compact copy actions labeled dynamically as `Copy for <harness>`. Do
 not hard-code a harness list in this prompt or in the visible response. Each
 copy action must contain the complete adapter prompt, including the current
-Group ID. The external agent executes `gsc buddy connect`; the lead does not
-create a Buddy or wait for a request.
+Group ID. The external agent executes `gsc buddy connect`, sends one `I am ready.` message
+to the returned Buddy mailbox, and is then connected; the lead does not create
+a Buddy or wait for a request.
 
 ### `connect other agent`
 
@@ -130,8 +131,11 @@ gsc buddy connect --group-id <group-id> --harness <harness-id> \
 
 The prompt must explain that `--native-session-id` is optional, and that the
 external agent may provide it along with Buddy model, thinking, and working
-directory options. Keep these details inside the copied action, not in the
-visible help response.
+directory options. After the command returns, it must send exactly one
+readiness message such as `I am ready.` to the returned Buddy mailbox. That
+completes the connection; there is no partner-refresh or lead-acknowledgement
+step. Keep these details inside the copied action, not in the visible help
+response.
 
 ### `collaboration guidance`
 

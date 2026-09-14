@@ -28,10 +28,15 @@ When a native UUID is available, add `--native-session-id <uuid>` before
 
 Execute the command and inspect its JSON output. Verify the returned Buddy ID
 appears in `gsc pi sessions groups show <group-id> --format json` before
-claiming success. Save the returned `buddy_session_id` or `mailbox_id`. Use
-`gsc inform` with that
-mailbox to publish concise status updates, and `gsc ask` with it to ask what
-published information is available from other connected agents. The command is
+claiming success. Save the returned `buddy_session_id` or `mailbox_id`, then send the Buddy one
+message saying you are ready:
+
+```bash
+printf '%s\n' 'I am ready.' | gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
+```
+
+That completes the connection. Later, use `gsc inform` with the mailbox to
+publish status updates or `gsc ask` with it to query published information. The command is
 idempotent and adds the Buddy to the Group's `Agents` section when available;
 it does not import your private transcript. The Buddy cannot send messages
 back into this Claude Code session yet.
