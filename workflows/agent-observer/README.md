@@ -1,21 +1,21 @@
 # Connect agents across tools
 
 This guided workflow brings the coding agents you already use into a shared
-GitSense Chat Group. Add an existing Pi session directly, or connect an agent
-from another harness through a visible Buddy. The lead creates each Buddy as a
-regular managed Pi session with a mailbox, Persona, and published updates.
+GitSense Chat Group. The lead prepares the Group and provides guidance.
+External agents connect themselves through `gsc buddy connect`, which creates
+or reuses a visible Pi Buddy with a mailbox, Persona, and published updates.
 
 Pi sessions do not need Buddies. External agents use Buddies to publish the
 information they choose to share while they continue working in their own
 tools. Communication uses `gsc ask` and `gsc inform`; the Buddy cannot send a
 message back into the external harness yet. The Observer is optional and is
-created only when you ask the lead to add one; its monitoring behavior is
-intentionally left for a later workflow.
+created and onboarded by the lead only when you request one; its monitoring
+behavior is intentionally left for a later workflow.
 
-The default layout uses rows with a fixed `Observers` column. Connected Pi
-sessions and Buddies start in one `Agents` section, while the lead remains in
-its dedicated area at the top. You can reorganize the Group manually or ask the
-lead to arrange it around the way you work.
+The default layout uses a simple rows arrangement with one `Agents` section.
+The lead remains in its dedicated area at the top. No Observer row or fixed
+Observer column is created by default. If you request an Observer, the lead
+asks whether it should use the normal rows layout or a fixed/dedicated column.
 
 ## Start here
 
@@ -42,16 +42,13 @@ more detail, or ask the lead to read the relevant file when prompted:
 
 1. Open or create a GitSense Chat Group with a lead.
 2. Copy the contents of [lead-prompt.md](lead-prompt.md) into the lead.
-3. Let the lead enumerate the adapter files in
-   ${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/supported-agents/.
-4. Add an existing Pi session directly from the Group, or follow the lead's
-   instructions and copy a connection prompt into a supported external agent.
-5. The external agent runs gsc experts init, requests a Buddy, and waits for
-   the lead to return its Buddy mailbox.
-6. Ask a connected agent to tell its Buddy to publish a short status update,
-   then ask another connected agent for that published update.
-7. When ready, ask the lead to add an Observer for the current connected agent
-   roster.
+3. Let the lead prepare the simple rows layout with an `Agents` section.
+4. Ask the lead for the adapter instructions, then run `gsc buddy connect` in
+   each supported external agent.
+5. The command returns the Buddy mailbox; use `gsc inform` to publish updates.
+6. Ask another connected agent for a published update using `gsc ask`.
+7. When ready, ask the lead to add an Observer and choose normal rows or a
+   fixed/dedicated column.
 
 ## What this demonstrates
 

@@ -3,35 +3,37 @@
 harness: opencode
 display_name: OpenCode
 session_identity: native OpenCode session ID
-session_discovery: opencode session list --format json
+session_discovery: `opencode session list --format json`
 buddy_persona_tags: role:buddy,harness:opencode
 
-Use this prompt after replacing <lead-mailbox-id>:
+Limitation: the current `gsc buddy connect` implementation supports only
+Codex and Claude native transports. Do not offer this adapter until an
+OpenCode transport is implemented and passes the live capability check.
+
+If OpenCode support is added, use these instructions after replacing
+`<group-id>`:
 
 ~~~md
-Run gsc experts init. Use `opencode session list --format json` to identify
+Run `gsc experts init`. Use `opencode session list --format json` to identify
 your current native OpenCode session. Collect your current working directory,
-repository, branch, and task when available. Do not fail if this is not a Git
-repository.
+repository, branch, and task when available. Then run:
 
-Use gsc ask --mailbox <lead-mailbox-id> to send this request:
+```bash
+gsc buddy connect \
+  --group-id <group-id> \
+  --harness opencode \
+  --native-session-id <native OpenCode session ID> \
+  --buddy-harness pi \
+  --format json
+```
 
-GSC_BUDDY_REQUEST
-version: 1
-harness: opencode
-native_session_id: <native OpenCode session ID>
-cwd: <current working directory>
-repository: <repository root or unavailable>
-branch: <branch or unavailable>
-task: <current task or unavailable>
-
-Wait for GSC_BUDDY_READY. Save the returned Buddy Pi session UUID. Use
-`gsc inform <buddy-pi-session-uuid>` to publish a concise introduction or any
-status I explicitly ask you to share. Use `gsc ask --mailbox
-<buddy-pi-session-uuid>` when you need to ask the Buddy what another connected
-agent has published. The Buddy cannot send messages back into this OpenCode
-session yet.
+Save the returned `buddy_session_id` or `mailbox_id`. Use `gsc inform` with that
+mailbox to publish concise status updates, and `gsc ask` with it to ask what
+published information is available from other connected agents. The command is
+idempotent and adds the Buddy to the Group's `Agents` section when available;
+it does not import your private transcript. The Buddy cannot send messages
+back into this OpenCode session yet.
 ~~~
 
 OpenCode remains the source of its private transcript and local work. The Buddy
-receives only the messages explicitly sent through `gsc`.
+receives only messages explicitly sent through `gsc`.

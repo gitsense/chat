@@ -3,28 +3,27 @@
 Copy the contents of this block into the current Group lead.
 
 ````md
-Help me bring the coding agents I already use into this GitSense Chat Group.
-Guide me one step at a time. Pi sessions can be added directly; external
-agents connect through Buddies. Keep the context compact and read detailed
-instructions only when the current step needs them.
+Help me prepare this GitSense Chat Group for the coding agents I already use.
+Guide me one step at a time. Pi sessions remain a user-controlled Group action;
+external agents connect themselves through `gsc buddy connect`. Keep the
+context compact and read detailed instructions only when the current step needs
+them.
 
 ## Boundaries
 
-You may prepare this Group, help me add existing Pi sessions, create and add one
-standard managed Pi Buddy for each valid external-agent request, assign each
-Buddy a Persona, answer questions using published messages, and create one
-Group Observer when I explicitly request one. You may not modify application
+You may prepare this Group, explain the direct `gsc buddy connect` workflow,
+answer questions using published messages, and create and onboard one Group
+Observer when I explicitly request one. You may not create or manage Buddies,
+process Buddy connection requests, modify Buddy Personas, modify application
 source code, invent a harness identity, expose an external transcript that the
 agent did not publish, or create agents merely because a workflow would benefit
 from them.
 
-The lead owns Group structure. A Buddy owns only its own Persona and published
-updates. Use complete, concurrency-safe Group writes with the current
-updated_at as expected_updated_at; on conflict, reread the Group, reapply only
-the intended change, and retry a small bounded number of times. Never let a
-Buddy rewrite the Group document. Use gsc pi sessions personas set for a
-Buddy's own avatar, title, or description. Preserve fields it did not change;
-on a Persona conflict, reread and retry the intended field update.
+The lead owns Group structure and Observer onboarding. Buddies own their own
+Personas and published updates. Use complete, concurrency-safe Group writes
+with the current updated_at as expected_updated_at; on conflict, reread the
+Group, reapply only the intended change, and retry a small bounded number of
+times. Never let a Buddy rewrite the Group document.
 
 Use the targeted Group update command for routine changes:
 
@@ -67,15 +66,16 @@ supported_agents="${workflow_root}/supported-agents"
 codex_adapter="${supported_agents}/codex.md"
 ~~~
 
-Read only the file needed for the current step. Enumerate regular files in
-`$supported_agents` to build the supported-harness list dynamically. Exclude
-README.md and any file without adapter metadata. Read each adapter completely;
-the adapter is the source of truth for its harness identifier, display name,
-native session discovery, connection prompt, Persona tags, and limitations.
-Verify the discovery command and the current `gsc ask`, `gsc inform`, and `gsc
-pi sessions new` help before offering it. Adding or removing an adapter file
-adds or removes that harness from this workflow, subject to the live capability
-check.
+Read only the file needed for the current step. When explaining an external
+connection, enumerate regular files in `$supported_agents` to build the
+supported-harness list dynamically. Exclude README.md and any file without
+adapter metadata. Read each selected adapter completely; the adapter is the
+source of truth for its harness identifier, display name, native session
+discovery, direct `gsc buddy connect` invocation, Persona tags, and
+limitations. Verify the discovery command and the current `gsc buddy connect`,
+`gsc ask`, and `gsc inform` help before offering it. Adding or removing an
+adapter file adds or removes that harness from this workflow, subject to the
+live capability check.
 If the literal workflow path or a required file does not exist, report that
 exact limitation and wait.
 
@@ -84,15 +84,15 @@ Do not guess a command, identity, avatar, path, or successful result.
 
 If I ask to add support for a harness, do not create an adapter from its name
 alone. First collect its exact harness identifier, native session identity and
-discovery method, connection prompt, Persona tags, and known limitations. Read
-the existing adapter examples and verify the required commands with the current
-CLI. If the harness cannot run `gsc ask` and `gsc inform` against the shared
-GitSense store, report that limitation before adding an adapter. Draft a new
-adapter file under
+discovery method, direct-connect instructions, Persona tags, and known
+limitations. Read the existing adapter examples and verify the required
+commands with the current CLI. If the harness cannot run `gsc buddy connect`,
+`gsc ask`, and `gsc inform` against the shared GitSense store, report that
+limitation before adding an adapter. Draft a new adapter file under
 `${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/supported-agents/`, show
 me the proposed contents, and wait for confirmation before writing it. After I
 confirm, add the file, re-enumerate the adapters, and validate the new harness
-again before offering its connection prompt.
+again before offering its direct connection instructions.
 
 ## Interaction
 
@@ -134,9 +134,9 @@ and a report, not a request for a custom message format. Use this shape:
 
 ~~~md
 Hello. I will help you bring the coding agents you already use into this Group.
-You can add Pi sessions directly or connect external agents through Buddies. We
-will add connections one at a time, show how agents publish updates, and add an
-Observer only if you ask for one.
+External agents connect themselves through `gsc buddy connect`. We will prepare
+the Group, show how agents publish updates, and add an Observer only if you ask
+for one.
 
 :::gsc-report
 ## Agent connection workflow
@@ -151,7 +151,7 @@ You can confirm or change them before anything is renamed.
 
 **Remaining**
 1. Prepare the Group
-2. Add Pi sessions or connect external agents
+2. Explain direct Buddy connections
 3. Publish and retrieve Buddy updates
 4. Add an Observer when requested
 5. Complete the setup
@@ -163,13 +163,14 @@ You can confirm or change them before anything is renamed.
 
 Always explain what the user will learn or decide before asking them to
 continue. Never ask the human to compose an `Agent name - provider/integration`
-request. During Step 2, provide a complete copy action for each supported
-adapter; the external agent sends the structured request to you.
+request. During Step 2, provide direct copyable instructions for each supported
+adapter; the external agent runs `gsc buddy connect` itself. The lead must not
+wait for or process a Buddy request.
 
 ## Steps
 
 1. Prepare the Group
-2. Add Pi sessions or connect external agents
+2. Explain direct Buddy connections
 3. Publish and retrieve Buddy updates
 4. Add an Observer when requested
 5. Complete the setup
@@ -179,53 +180,39 @@ adapter; the external agent sends the structured request to you.
 Explain that the Group is the shared place where connected agents can publish
 updates and receive guidance. Preserve the lead and unrelated members. Rename
 the Group only after I confirm the proposed name. In the first Step 1 response,
-show the proposed name, description, and a rows-plus-fixed-panel layout. Use a
-`rows-25` layout unless the current Group or the guide calls for another rows
-token. Set `Agents` as the first section and `Observers` as the last fixed
-panel. New Pi sessions and Buddies belong in `Agents`. The lead remains in its
-dedicated area at the top. Do not create a Buddy or Observer yet. Provide clear
-message actions to confirm or change the setup. Do not ask me to format the
-answer manually. After I confirm, apply the targeted Group update flags that
-are available, verify the result, and report the exact layout and sections that
-are ready. If changing the sections or placements requires a capability that
-`groups update` does not provide, explain that limitation and wait; do not use
-`groups put` as a fallback.
+show the proposed name, description, and a simple rows layout. Use a `rows`
+layout token unless the current Group or the guide calls for another rows
+token. Configure only an `Agents` section; do not create an `Observers` row or
+fixed observer column during setup. New Pi sessions and Buddies belong in
+`Agents`, when they are added by the user or by `gsc buddy connect`. The lead
+remains in its dedicated area at the top. Do not create a Buddy or Observer yet.
+Provide clear message actions to confirm or change the setup. Do not ask me to
+format the answer manually. After I confirm, apply the targeted Group update
+flags that are available, verify the result, and report the exact layout and
+`Agents` section that are ready. If changing the section requires a capability
+that `groups update` does not provide, explain that limitation and wait; do not
+use `groups put` as a fallback.
 
-## Step 2: Add Pi sessions or connect external agents
+## Step 2: Explain direct Buddy connections
 
-Explain both connection paths. For a Pi session, tell me to use the Group's
-`Add existing` control and then verify that the selected session is in the
-current Group's `Agents` section. Do not create a Buddy for a Pi session that is
-already a Group member. For an external agent, show one copy action for each
-dynamically discovered supported adapter. The action must contain that
-adapter's complete connection prompt. The prompt must tell the external agent
-to run gsc experts init, collect its harness/native session identity, and send a
-versioned Buddy request to this lead. Tell me to paste that action into the
-matching external agent; do not ask me to send the request body to you by hand.
+Explain that external agents connect themselves through the deterministic
+`gsc buddy connect` command; the lead does not create a Buddy or process a
+request. Enumerate the supported adapter files and read the selected adapter
+completely. Provide one copyable instruction block per supported harness. Each
+block must tell the external agent to run `gsc experts init`, discover its native
+session identity, and run `gsc buddy connect` with the current Group ID,
+`--harness`, `--native-session-id`, and `--buddy-harness pi`. Include optional
+`--buddy-model`, `--buddy-thinking`, and `--buddy-working-directory` flags only
+when useful. The command returns the Buddy mailbox ID; the external agent then
+uses `gsc inform` to publish updates or `gsc ask` to query its Buddy.
 
-For each valid request, verify the harness is listed by an adapter, the sender's
-identity is present, and the current Group is still the intended Group. Create
-exactly one standard managed Pi session for that native external session. Name
-it `<harness>-<native-session-id>`, use the configured default model and an
-isolated workspace, and create it with `gsc pi sessions new`. Record the
-returned Pi session UUID. Add it to the `Agents` section and verify that its
-card is visible. Read
-`${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/buddy-prompt.md`, substitute the
-exact IDs, and deliver it to the Buddy. Wait for and validate its
-acknowledgement before returning the Buddy Pi session UUID to the external
-agent.
-
-Assign a stable Harness Buddy Persona with `personas set`, including the
-adapter's declared Buddy Persona tags. Adapters should provide stable tags such
-as `role:buddy` and `harness:<harness-id>`. A Buddy may update only its own
-Persona after validating an avatar against the installed state-signals
-manifest. A declared code red, blocked, or error state maps to state-error and
-needs_attention: true; preserve the stable title, description, tags, and token
-settings.
-
-Do not create a duplicate Buddy for the same native session identity during this
-run; multiple agents using one harness are allowed. If the request is
-unsupported, incomplete, stale, or ambiguous, report what is missing and wait.
+Verify the current `gsc buddy connect`, `gsc ask`, and `gsc inform` help before
+showing instructions. Do not ask the human to relay a request body, wait for a
+lead acknowledgement, create a duplicate Buddy, or claim that a private
+transcript was imported. Explain that the command adds the Buddy to `Agents`
+when that section exists and otherwise leaves it unorganized. A successful
+command means the connection was committed, not that the lead or external
+agent has read any subsequent message.
 
 ## Step 3: Publish and retrieve Buddy updates
 
@@ -244,13 +231,17 @@ received anything from its Buddy.
 
 ## Step 4: Add an Observer when requested
 
-Do not create an Observer during setup. If I ask to add one, read
+Do not create an Observer during setup. If I ask to add one, first ask whether I
+want a fixed/dedicated column for the Observer or want it placed in the normal
+rows layout. Wait for that choice. Then read
 ${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/observer-setup.md and follow it
 completely. Create an Observer only if one does not already exist in the
-current Group. Add it to `Observers`, assign its Persona with personas set, and
+current Group. Add it using the requested placement, assign its Persona, and
 provide the current connected-agent roster, including Pi sessions and Buddies.
-Do not start a loop or assign automated monitoring, state interpretation,
-notifications, or cross-agent authority yet. Those are later workflow steps.
+Do not create an `Observers` section or fixed column unless I explicitly choose
+the dedicated-column option. Do not start a loop or assign automated
+monitoring, state interpretation, notifications, or cross-agent authority yet.
+Those are later workflow steps.
 
 ## Step 5: Complete the workflow
 

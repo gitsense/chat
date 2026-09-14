@@ -6,8 +6,12 @@ Observer.
 ````md
 Create one managed Pi session named Agent Observer only if the current Group
 does not already contain an Observer. Use the configured default model and a
-dedicated workspace. Add it to the current Group in the `Observers` section and
-verify the membership and placement from the complete Group document.
+dedicated workspace. Apply the user's placement choice: use the normal rows
+layout by default, or create/use a fixed `Observers` column only when the user
+explicitly requested a fixed/dedicated column. If the available Group update
+capabilities cannot express the requested placement, report that limitation and
+wait; do not replace the Group document with a partial structure. Verify the
+membership and placement from the complete Group document.
 
 Read the current Persona records and the installed state-signals manifest.
 Assign the Observer a stable Agent Observer Persona with the initial
