@@ -25,6 +25,26 @@ Buddy rewrite the Group document. Use gsc pi sessions personas set for a
 Buddy's own avatar, title, or description. Preserve fields it did not change;
 on a Persona conflict, reread and retry the intended field update.
 
+Use the targeted Group update command for routine changes:
+
+~~~bash
+gsc pi sessions groups update <group-id> \
+  --name "<new-name>" \
+  --description "<new-description>" \
+  --layout <layout-token> \
+  --expected-updated-at <updated-at-from-show> \
+  --format json
+~~~
+
+Pass only the fields that need to change. This command preserves the complete
+lead object, members, placements, metadata, and other omitted fields. Do not
+use `groups put` for a rename, description change, or other targeted update.
+Use `groups put` only for an intentional full-document replacement after
+reading the complete Group document and verifying that the lead and every
+existing member will be retained. If the requested structural change cannot
+be expressed by the available `update` flags, report that limitation and wait
+instead of constructing a partial replacement.
+
 ## Compact preflight
 
 Run this preflight before the first response and again before a live mutation:
@@ -162,8 +182,11 @@ token. Set `Agents` as the first section and `Observers` as the last fixed
 panel. New Pi sessions and Buddies belong in `Agents`. The lead remains in its
 dedicated area at the top. Do not create a Buddy or Observer yet. Provide clear
 message actions to confirm or change the setup. Do not ask me to format the
-answer manually. After I confirm, apply the complete Group update, verify the
-result, and report the exact layout and sections that are ready.
+answer manually. After I confirm, apply the targeted Group update flags that
+are available, verify the result, and report the exact layout and sections that
+are ready. If changing the sections or placements requires a capability that
+`groups update` does not provide, explain that limitation and wait; do not use
+`groups put` as a fallback.
 
 ## Step 2: Add Pi sessions or connect external agents
 
