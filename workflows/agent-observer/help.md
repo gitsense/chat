@@ -20,16 +20,11 @@ Ask me to set up the Group. I will rename and organize it with a simple rows
 layout and an `Agents` section. No Observer row or fixed Observer column is
 created by default.
 
-:::gsc-action {"label":"Connect a supported agent","mode":"message","message":"connect supported agent"}:::
+:::gsc-action {"label":"Connect an agent","mode":"message","message":"connect an agent"}:::
 
-Ask me to show the available harness-specific connection instructions. I will
-provide a copy action for the selected external agent; paste those instructions
-into that agent.
-
-:::gsc-action {"label":"Connect another agent","mode":"message","message":"connect other agent"}:::
-
-Ask me to show the generic connection instructions for an agent without
-specific harness instructions.
+Ask me to show all connection options. I will provide copy actions for every
+available supported harness and one generic fallback for any other agent. Paste
+the selected instructions into that external agent.
 
 :::gsc-action {"label":"Add an Observer","mode":"message","message":"add observer"}:::
 

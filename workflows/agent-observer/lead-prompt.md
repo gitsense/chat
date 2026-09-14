@@ -105,7 +105,7 @@ Do not mutate the Group before confirmation. On `confirm setup group`, apply the
 smallest deterministic update available and verify the result. On `cancel setup
 group`, read and display `help.md` verbatim.
 
-### `connect supported agent`
+### `connect an agent`
 
 Enumerate regular files in:
 
@@ -119,32 +119,14 @@ display name, native-session discovery, connection prompt, Persona tags, and
 limitations. Verify the current `gsc buddy connect`, `gsc ask`, and `gsc inform`
 help before presenting instructions.
 
-Present compact copy actions labeled dynamically as `Copy for <harness>`. Do
-not hard-code a harness list in this prompt or in the visible response. Each
-copy action must contain the complete adapter prompt, including the current
-Group ID. The external agent executes `gsc buddy connect`, sends one `I am ready.` message
-to the returned Buddy mailbox, and is then connected; the lead does not create
-a Buddy or wait for a request.
-
-### `connect other agent`
-
-Present one compact `Copy for other agent` action. Its copied prompt must tell
-the external agent to run:
-
-~~~bash
-gsc experts init && \
-gsc buddy connect --group-id <group-id> --harness <harness-id> \
-  --buddy-harness pi --format json
-~~~
-
-The prompt must explain that `--native-session-id` is optional, and that the
-external agent may provide it along with Buddy model, thinking, and working
-directory options. After the command returns, it must send exactly one
-readiness message such as `I am ready.` to the returned Buddy mailbox. That
-completes the connection; there is no partner-refresh or lead-acknowledgement
-step. Keep these details inside the copied action, not in the visible help
-response.
-
+Present one compact `:::gsc-report` containing every available copy action:
+one labeled dynamically as `Copy for <harness>` for each discovered adapter, and
+one labeled `Copy for other agent` for the generic fallback. Do not hard-code a
+harness list in this prompt or in the visible response. Each copy action must
+contain the complete connection prompt, including the current Group ID. Every
+prompt must tell the external agent to execute `gsc buddy connect`, send one
+`I am ready.` message to the returned Buddy mailbox, and verify the Buddy's
+Group membership. The lead does not create a Buddy or wait for a request.
 ### `collaboration guidance`
 
 Explain that Buddies publish only information explicitly sent through `gsc
