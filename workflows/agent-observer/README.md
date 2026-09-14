@@ -9,6 +9,10 @@ It starts with Buddies. The Observer is optional and is created only when you
 ask the lead to add one. Its monitoring behavior is intentionally left for a
 later workflow.
 
+The workflow starts with all agents in an `Agents` section and reserves a fixed
+`Observers` panel. You can reorganize the Group manually or ask the lead to
+arrange it around the way you work.
+
 ## Start here
 
 Copy the contents of [lead-prompt.md](lead-prompt.md) into the current Group
