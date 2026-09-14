@@ -225,7 +225,11 @@ must contain the complete adapter-specific or generic instructions, the current
 Group ID, `gsc experts init && gsc buddy connect`, and the required/optional
 identity flags. The external agent, not the human, handles UUID discovery,
 mailbox capture, and messaging details. Never hard-code a harness list in this
-workflow prompt.
+workflow prompt. The copied prompt must instruct the external agent to execute
+the command, not merely explain it, and verify that the returned Buddy ID
+appears in `gsc pi sessions groups show <group-id> --format json` before
+claiming success. If verification fails, it must report the actual error or
+store mismatch rather than inventing a connected result.
 
 Verify the current `gsc buddy connect`, `gsc ask`, and `gsc inform` help before
 showing instructions. Do not ask the human to relay a request body, wait for a

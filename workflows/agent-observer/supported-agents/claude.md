@@ -9,20 +9,27 @@ buddy_persona_tags: role:buddy,harness:claude
 Use these instructions in Claude Code after replacing `<group-id>`:
 
 ~~~md
-Collect your native Claude session UUID, current working directory, repository,
-branch, and task when available. Then run this fail-fast command:
+If your Claude environment exposes a native session UUID, collect it along
+with the current working directory, repository, branch, and task. Otherwise,
+omit `--native-session-id`; the Buddy command generates an identity-only
+placeholder and still connects the Buddy mailbox. Then run this command:
 
 ```bash
 gsc experts init && \
 gsc buddy connect \
   --group-id <group-id> \
   --harness claude \
-  --native-session-id <native Claude session UUID> \
   --buddy-harness pi \
   --format json
 ```
 
-Save the returned `buddy_session_id` or `mailbox_id`. Use `gsc inform` with that
+When a native UUID is available, add `--native-session-id <uuid>` before
+`--buddy-harness`.
+
+Execute the command and inspect its JSON output. Verify the returned Buddy ID
+appears in `gsc pi sessions groups show <group-id> --format json` before
+claiming success. Save the returned `buddy_session_id` or `mailbox_id`. Use
+`gsc inform` with that
 mailbox to publish concise status updates, and `gsc ask` with it to ask what
 published information is available from other connected agents. The command is
 idempotent and adds the Buddy to the Group's `Agents` section when available;
