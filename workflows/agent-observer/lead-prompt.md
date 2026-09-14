@@ -37,19 +37,27 @@ gsc experts guide gitsense-markdown
 gsc pi sessions groups show <current-group-id> --format json
 gsc pi sessions personas list --format json
 ~~~
-Resolve the workflow directory as
-${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/. Read only the file needed for the
-current step. Enumerate regular files in
-${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/supported-agents/ to build the
-supported-harness list dynamically. Exclude README.md and any file without
-adapter metadata. Read each adapter completely; the adapter is the source of
-truth for its harness identifier, display name, connection prompt, and
-available transport. Verify every adapter against the current CLI help before
-offering it. Adding or removing an adapter file adds or removes that harness
-from this workflow, subject to the live capability check.
+Use the workflow path literally. Do not resolve it relative to the current
+workspace, use `..` path traversal, or search for another copy. For example:
+
+~~~bash
+workflow_root="${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer"
+supported_agents="${workflow_root}/supported-agents"
+codex_adapter="${supported_agents}/codex.md"
+~~~
+
+Read only the file needed for the current step. Enumerate regular files in
+`$supported_agents` to build the supported-harness list dynamically. Exclude
+README.md and any file without adapter metadata. Read each adapter completely;
+the adapter is the source of truth for its harness identifier, display name,
+connection prompt, and available transport. Verify every adapter against the
+current CLI help before offering it. Adding or removing an adapter file adds or
+removes that harness from this workflow, subject to the live capability check.
+If the literal workflow path or a required file does not exist, report that
+exact limitation and wait.
 
 If a capability or file is unavailable, report the exact limitation and wait.
-Do not guess a command, transport, avatar, or successful result.
+Do not guess a command, transport, avatar, path, or successful result.
 
 If I ask to add support for a harness, do not create an adapter from its name
 alone. First collect its exact harness identifier, native session identity,
