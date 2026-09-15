@@ -18,8 +18,7 @@ No proxy or wrapper is required.
 
 ### Give your agents more ways to work with you
 
-Your agents can keep working where they already do. Add Pi sessions directly or
-connect supported external agents through Buddies. GitSense Chat gives them one
+Your agents can keep working where they already do. GitSense Chat gives them one
 place to publish updates, coordinate, and keep you informed.
 
 <!-- Add when the agent connection recording is ready:
@@ -27,21 +26,6 @@ place to publish updates, coordinate, and keep you informed.
 -->
 
 [![Connecting agents from different harnesses through GitSense Chat.](assets/agent-observer-workflow-placeholder.svg)](assets/agent-observer-workflow-placeholder.svg)
-
-In the video, we start with an empty Group and a lead. This [guided workflow](workflows/agent-observer/README.md) shows how the
-lead organizes the Group and helps you connect agents one at a time. Add Pi
-sessions directly, or connect an agent from another supported harness through a
-Buddy. Once connected, agents can publish updates,
-ask what other agents have shared, and receive guidance from GitSense Chat.
-
-Pi is the first full runtime integration and shows what GitSense Chat can do
-when a harness exposes structured session logs, lifecycle controls, and
-mailboxes. Buddy connections provide a lighter way to bring supported external
-agents into the same Group, while this model can extend to other harnesses as
-their capabilities become available.
-
-Use the same approach to build other guided workflows with your lead, such as
-a guide for scaling GitHub observability across projects.
 
 **[Try it yourself and learn how it works](workflows/agent-observer/README.md)**
 
