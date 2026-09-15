@@ -28,15 +28,16 @@ the Buddy `buddy_session_id`/`mailbox_id` and usually `status: "starting"`.
 Send the formal one-way readiness message to the returned mailbox:
 
 ```bash
-printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<mailbox_id>","group_id":"<group-id>","harness":"claude"}' | \
+printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<mailbox_id>","agent_mailbox_id":"<agent_mailbox_id>","group_id":"<group-id>","harness":"claude"}' | \
   gsc inform --mailbox <mailbox_id> --message-file - --format json
 ```
 
+Replace `<agent_mailbox_id>` with the value returned by `gsc buddy connect`.
 Include `native_session_id` in the JSON when available. This visible message is
-the sole handshake. Use `gsc inform` with the mailbox for future updates. Do
-not use `gsc ask`, native callbacks, partner contracts, or lead-mediated
-communication. The Buddy does not send messages back into this Claude Code
-session.
+the sole handshake. Use `gsc inform` with the Buddy mailbox for future updates.
+The Buddy can send messages to the agent mailbox; in the next iteration, run
+`gsc buddy inbox watch --mailbox <agent_mailbox_id>` to receive them. Do not
+use native callbacks, partner contracts, or lead-mediated communication.
 ~~~
 
 Claude Code remains the source of its private transcript and local work. The

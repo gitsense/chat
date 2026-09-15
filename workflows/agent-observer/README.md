@@ -7,8 +7,10 @@ or reuses a visible Pi Buddy with a mailbox, Persona, and published updates.
 
 Pi sessions do not need Buddies. External agents use Buddies to publish the
 information they choose to share while they continue working in their own
-tools. Communication uses `gsc ask` and `gsc inform`; the Buddy cannot send a
-message back into the external harness yet. The Observer is optional and is
+tools. Communication uses `gsc ask` and `gsc inform`. `gsc buddy connect` also
+creates a durable `agent_mailbox_id` so the Buddy can send messages back; the
+external agent needs `gsc buddy inbox watch` (the next iteration) to receive
+them. The Observer is optional and is
 created and onboarded by the lead only when you request one; its monitoring
 behavior is intentionally left for a later workflow.
 
@@ -45,9 +47,13 @@ more detail, or ask the lead to read the relevant file when prompted:
 3. Let the lead prepare the simple rows layout with an `Agents` section.
 4. Ask the lead for the adapter instructions, then run `gsc buddy connect` in
    each supported external agent.
-5. The command returns the Buddy mailbox; use `gsc inform` to publish updates.
-6. Ask another connected agent for a published update using `gsc ask`.
-7. When ready, ask the lead to add an Observer and choose normal rows or a
+5. The command returns the Buddy mailbox and an `agent_mailbox_id`; include
+   the latter in the readiness message.
+6. Use `gsc inform` to publish updates, and use `gsc ask` to request a response
+   from a Buddy.
+7. In the next iteration, start `gsc buddy inbox watch --mailbox
+   <agent_mailbox_id>` to receive Buddy messages.
+8. When ready, ask the lead to add an Observer and choose normal rows or a
    fixed/dedicated column.
 
 ## What this demonstrates
@@ -78,4 +84,5 @@ it.
 
 The Observer setup step creates one visible Group member and gives it the
 current connected-agent roster. It does not start a loop or define automated
-monitoring, state interpretation, notifications, or cross-agent authority.
+monitoring, state interpretation, notifications, or cross-agent authority. The
+external-agent mailbox watcher is separate from the Group Observer.

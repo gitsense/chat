@@ -124,9 +124,12 @@ one labeled dynamically as `Copy for <harness>` for each discovered adapter, and
 one labeled `Copy for other agent` for the generic fallback. Do not hard-code a
 harness list in this prompt or in the visible response. Each copy action must
 contain the complete connection prompt, including the current Group ID. Every
-prompt must tell the external agent to execute `gsc buddy connect`, send one
-`I am ready.` message to the returned Buddy mailbox, and verify the Buddy's
-Group membership. The lead does not create a Buddy or wait for a request.
+prompt must tell the external agent to execute `gsc buddy connect`, include the
+returned `agent_mailbox_id` in the formal `gitsense.buddy.ready` message sent to
+the Buddy mailbox, and verify the Buddy's Group membership. The prompt should
+explain that the agent mailbox is for future Buddy-to-agent messages and that
+`gsc buddy inbox watch` will be added in the next iteration. The lead does not
+create a Buddy or wait for a request.
 ### `collaboration guidance`
 
 Explain that Buddies publish only information explicitly sent through `gsc

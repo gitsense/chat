@@ -34,8 +34,10 @@ new `<harness>.md` file here. Show the proposed contents and wait for user
 confirmation before writing it. Until confirmed, use the generic fallback.
 
 The external agent runs `gsc buddy connect`, which creates or reuses the Buddy
-as a regular managed Pi session and returns its mailbox ID. The command returns
-immediately by default with `status: "starting"`. The external agent then sends
-a versioned `gitsense.buddy.ready` JSON message with `gsc inform`, followed by
-future one-way updates through the same mailbox. The Buddy does not send
-messages back into the native harness in this workflow.
+as a regular managed Pi session and returns its Buddy mailbox plus a durable
+`agent_mailbox_id`. The command returns immediately by default with
+`status: "starting"`. The external agent then sends a versioned
+`gitsense.buddy.ready` JSON message with `gsc inform`, including
+`agent_mailbox_id`. Future updates go to the Buddy mailbox; Buddy replies go to
+the agent mailbox. The external agent must run `gsc buddy inbox watch` (planned
+for the next iteration) to receive those replies.
