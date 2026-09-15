@@ -119,11 +119,24 @@ ${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/scripts/connections-report
   --group-id <current-group-id>
 ~~~
 
-Display the script's output verbatim. Do not inspect adapter files, construct
-prompts, select a harness, or add explanatory text. The report contains one
-copy action for every supported harness plus the generic fallback. The user
-copies the selected prompt and pastes it into the external agent. The lead does
-not create a Buddy or wait for a request.
+After running the script, return this compact embed as the complete response,
+replacing `<group-id>` with the current Group ID:
+
+~~~md
+:::gsc-report
+:::gsc-embed {"src":"/--/workflows/agent-observer/reports/connections-report-<group-id>.md","type":"text/markdown"}
+:::
+:::
+~~~
+
+Do not add explanatory text or copy the generated report into your response.
+Do not inspect adapter files, read the report it writes, construct prompts, or
+select a harness. The script writes the full group-specific report and copy
+actions to the local workflow report; the host expands the embed before display. The expanded
+report contains one copy action for every supported harness plus the generic
+fallback. The user copies the selected prompt and pastes it into the external
+agent. The lead does not create a Buddy or wait for a request.
+
 ### `collaboration guidance`
 
 Explain that Buddies publish only information explicitly sent through `gsc
