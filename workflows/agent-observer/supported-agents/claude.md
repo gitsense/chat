@@ -4,16 +4,19 @@ harness: claude
 display_name: Claude Code
 session_identity: native Claude session UUID
 session_discovery: inspect the current Claude Code session context and report its native session UUID
+communication: two-way
 buddy_persona_tags: role:buddy,harness:claude
 
 Use these instructions in Claude Code after replacing `<group-id>`:
 
 ~~~md
+Connect this Claude session to its GitSense Buddy in Group `<group-id>`.
+
 Run:
 
 ```bash
 gsc experts init && \
-gsc buddy connect \
+  gsc buddy connect \
   --group-id <group-id> \
   --harness claude \
   --buddy-harness pi \
@@ -22,22 +25,30 @@ gsc buddy connect \
 
 If a native Claude session UUID is available, add
 `--native-session-id <uuid>`. It is optional provenance only; no placeholder is
-generated when it is omitted. The command returns immediately by default with
-the Buddy `buddy_session_id`/`mailbox_id` and usually `status: "starting"`.
+generated when it is omitted. Save the returned `buddy_session_id`/`mailbox_id`
+and `agent_mailbox_id`.
 
-Send the formal one-way readiness message to the returned mailbox:
+Send the formal readiness message to the Buddy mailbox:
 
 ```bash
-printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<mailbox_id>","agent_mailbox_id":"<agent_mailbox_id>","group_id":"<group-id>","harness":"claude"}' | \
-  gsc inform --mailbox <mailbox_id> --message-file - --format json
+printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<buddy-mailbox-id>","agent_mailbox_id":"<agent-mailbox-id>","group_id":"<group-id>","harness":"claude"}' | \
+  gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
 ```
 
-Replace `<agent_mailbox_id>` with the value returned by `gsc buddy connect`.
-Include `native_session_id` in the JSON when available. This visible message is
-the sole handshake. Use `gsc inform` with the Buddy mailbox for future updates.
-The Buddy can send messages to the agent mailbox; in the next iteration, run
-`gsc buddy inbox watch --mailbox <agent_mailbox_id>` to receive them. Do not
-use native callbacks, partner contracts, or lead-mediated communication.
+This Claude session supports two-way Agent ↔ Buddy messaging. Start a
+non-blocking forked subagent with the Agent tool:
+
+```text
+Agent(
+  subagent_type: "fork",
+  description: "Watch the GitSense Buddy mailbox",
+  prompt: "Run `gsc buddy mailbox watch <agent-mailbox-id> --timeout 30s --poll-interval 1s`. Return the message result exactly. Exit when the command returns."
+)
+```
+
+The fork wakes this Claude session when a Buddy message arrives. Use
+`gsc inform --mailbox <buddy-mailbox-id>` for future updates. Do not use native
+callbacks, partner contracts, or lead-mediated communication.
 ~~~
 
 Claude Code remains the source of its private transcript and local work. The

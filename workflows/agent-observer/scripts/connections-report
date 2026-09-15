@@ -1,0 +1,172 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('node:fs');
+const path = require('node:path');
+
+function usage() {
+  console.error('Usage: connections-report --group-id <group-id>');
+  process.exit(2);
+}
+
+function parseArgs(argv) {
+  const index = argv.indexOf('--group-id');
+  if (index === -1 || !argv[index + 1] || argv[index + 1].startsWith('-')) usage();
+  return argv[index + 1];
+}
+
+function parseMetadata(lines) {
+  const metadata = {};
+  for (const line of lines) {
+    const match = line.match(/^([a-z][a-z0-9_]*)\s*:\s*(.*)$/i);
+    if (!match) {
+      if (Object.keys(metadata).length) break;
+      continue;
+    }
+    metadata[match[1]] = match[2].trim();
+  }
+  return metadata;
+}
+
+function extractPrompt(source, file) {
+  const lines = source.split(/\r?\n/);
+  let opening = -1;
+  let marker = null;
+  for (let i = 0; i < lines.length; i += 1) {
+    const match = lines[i].match(/^(~~~+|```+)(?:[a-z0-9_-]+)?\s*$/i);
+    if (match) {
+      opening = i;
+      marker = match[1];
+      break;
+    }
+  }
+  if (opening === -1) throw new Error(`${file}: missing prompt code block`);
+
+  const close = new RegExp(`^${marker[0]}{${marker.length},}\\s*$`);
+  for (let i = opening + 1; i < lines.length; i += 1) {
+    if (close.test(lines[i])) return lines.slice(opening + 1, i).join('\n').trim();
+  }
+  throw new Error(`${file}: unterminated prompt code block`);
+}
+
+function fenceFor(text) {
+  let longest = 0;
+  for (const match of text.matchAll(/`+/g)) longest = Math.max(longest, match[0].length);
+  return '`'.repeat(Math.max(4, longest + 1));
+}
+
+function adapterFiles(directory) {
+  return fs.readdirSync(directory, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name !== 'README.md' && entry.name.endsWith('.md'))
+    .map((entry) => path.join(directory, entry.name))
+    .sort();
+}
+
+function readAdapters(directory, groupId) {
+  return adapterFiles(directory).map((file) => {
+    const source = fs.readFileSync(file, 'utf8');
+    const metadata = parseMetadata(source.split(/\r?\n/));
+    if (!metadata.harness || !metadata.display_name) {
+      throw new Error(`${path.basename(file)}: required harness/display_name metadata is missing`);
+    }
+    const prompt = extractPrompt(source, path.basename(file)).replaceAll('<group-id>', groupId);
+    const communication = metadata.communication ||
+      (metadata.harness === 'claude' || metadata.harness === 'codex' ? 'two-way' : 'one-way');
+    return {
+      harness: metadata.harness,
+      displayName: metadata.display_name,
+      communication,
+      prompt,
+    };
+  });
+}
+
+function genericPrompt(groupId) {
+  return `Connect this external agent to its GitSense Buddy in Group ${groupId}.
+
+Replace <harness-id> with the harness identifier for this agent, then run:
+
+~~~bash
+gsc experts init && \\
+gsc buddy connect \\
+  --group-id ${groupId} \\
+  --harness <harness-id> \\
+  --buddy-harness pi \\
+  --format json
+~~~
+
+The command returns the Buddy \`buddy_session_id\`/\`mailbox_id\` and this
+agent's \`agent_mailbox_id\`. Send the formal readiness message to the Buddy:
+
+~~~bash
+printf '%s\\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<buddy-mailbox-id>","agent_mailbox_id":"<agent-mailbox-id>","group_id":"${groupId}","harness":"<harness-id>"}' | \\
+  gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
+~~~
+
+This generic connection supports one-way Agent → Buddy messaging. Send future
+updates with gsc inform to the Buddy mailbox. This harness cannot currently
+receive messages from the Buddy through this workflow.`;
+}
+
+function action(label, text) {
+  return `:::gsc-action ${JSON.stringify({
+    label,
+    mode: 'copy',
+    text,
+    feedback: 'Copied',
+  })}:::`;
+}
+
+function renderEntry(entry) {
+  const fence = fenceFor(entry.prompt);
+  const mode = entry.communication === 'two-way' ? 'two-way Agent ↔ Buddy messaging' : 'Agent → Buddy updates only';
+  return [
+    `## ${entry.displayName}`,
+    '',
+    `**Creates or reuses:** ${entry.displayName} Buddy  `,
+    `**Communication:** ${mode}`,
+    '',
+    `${fence}md`,
+    entry.prompt,
+    fence,
+    '',
+    action(`Copy prompt for ${entry.displayName}`, entry.prompt),
+  ].join('\n');
+}
+
+function main() {
+  const groupId = parseArgs(process.argv.slice(2));
+  const workflowDirectory = path.resolve(__dirname, '..');
+  const adaptersDirectory = path.join(workflowDirectory, 'supported-agents');
+  const entries = readAdapters(adaptersDirectory, groupId);
+  const fallback = genericPrompt(groupId);
+  const sections = [
+    ':::gsc-report',
+    '# Connect an agent',
+    '',
+    `Choose the external agent to connect to Group \`${groupId}\`. Copy the matching prompt and paste it into that agent's composer. The external agent runs \`gsc buddy connect\` to create or reuse its Buddy.`,
+    '',
+    ...entries.flatMap((entry) => [renderEntry(entry), '']),
+    '## Other agent',
+    '',
+    '**Creates or reuses:** Buddy for the specified harness  ',
+    '**Communication:** Agent → Buddy updates only',
+    '',
+    `${fenceFor(fallback)}md`,
+    fallback,
+    fenceFor(fallback),
+    '',
+    action('Copy prompt for another agent', fallback),
+    ':::',
+    '',
+  ];
+  process.stdout.write(sections.join('\n'));
+}
+
+try {
+  main();
+} catch (error) {
+  console.error(`connections-report: ${error.message}`);
+  process.exit(1);
+}

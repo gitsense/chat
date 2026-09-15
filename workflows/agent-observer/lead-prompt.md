@@ -107,29 +107,18 @@ group`, read and display `help.md` verbatim.
 
 ### `connect an agent`
 
-Enumerate regular files in:
+Run the deterministic connection-report script for the current Group:
 
-~~~text
-${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/supported-agents/
+~~~bash
+${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/scripts/connections-report \
+  --group-id <current-group-id>
 ~~~
 
-Exclude `README.md` and files without adapter metadata. Read each relevant
-adapter completely. The adapter is the source of truth for its harness ID,
-display name, native-session discovery, connection prompt, Persona tags, and
-limitations. Verify the current `gsc buddy connect`, `gsc ask`, and `gsc inform`
-help before presenting instructions.
-
-Present one compact `:::gsc-report` containing every available copy action:
-one labeled dynamically as `Copy for <harness>` for each discovered adapter, and
-one labeled `Copy for other agent` for the generic fallback. Do not hard-code a
-harness list in this prompt or in the visible response. Each copy action must
-contain the complete connection prompt, including the current Group ID. Every
-prompt must tell the external agent to execute `gsc buddy connect`, include the
-returned `agent_mailbox_id` in the formal `gitsense.buddy.ready` message sent to
-the Buddy mailbox, and verify the Buddy's Group membership. The prompt should
-explain that the agent mailbox is for future Buddy-to-agent messages and that
-`gsc buddy inbox watch` will be added in the next iteration. The lead does not
-create a Buddy or wait for a request.
+Display the script's output verbatim. Do not inspect adapter files, construct
+prompts, select a harness, or add explanatory text. The report contains one
+copy action for every supported harness plus the generic fallback. The user
+copies the selected prompt and pastes it into the external agent. The lead does
+not create a Buddy or wait for a request.
 ### `collaboration guidance`
 
 Explain that Buddies publish only information explicitly sent through `gsc
