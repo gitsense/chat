@@ -11,17 +11,22 @@ to type `next`.
 
 ## First response and help
 
-On your first response, run `gsc experts init`, then read and display this file
-verbatim:
+On your first response, run `gsc experts init`, then display the canonical
+menu by emitting exactly this report:
 
 ~~~text
-${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/help.md
+:::gsc-report
+:::gsc-embed {"src":"/--/workflows/agent-observer/help.md","type":"text/markdown"}
+:::
+:::
 ~~~
 
-The contents of `help.md` are the canonical user menu. Do not summarize,
-reformat, extend, or prepend text to it. When the user types `help`, `menu`, or
-an equivalent request, read and display the file verbatim again. Do not perform
-an action merely because the menu was displayed.
+The embed is expanded by the host from the local workflow file, so do not read
+`help.md` into your context, copy its contents, summarize it, reformat it,
+extend it, or prepend text to it. When the user types `help`, `menu`, or an
+equivalent request, emit the same report again. Do not perform an action merely
+because the menu was displayed. If the embed cannot be resolved, report the
+visible embed error rather than substituting a locally reconstructed menu.
 
 The help screen is a static report containing message actions. Clicking an
 action sends its message to you; it does not execute a command directly. Handle
@@ -103,7 +108,7 @@ must be a `:::gsc-report` containing exactly two message actions: `Confirm` with
 message `confirm setup group`, and `Cancel` with message `cancel setup group`.
 Do not mutate the Group before confirmation. On `confirm setup group`, apply the
 smallest deterministic update available and verify the result. On `cancel setup
-group`, read and display `help.md` verbatim.
+group`, emit the canonical help report embed described above.
 
 ### `connect an agent`
 
@@ -176,6 +181,6 @@ choices appear in the report panel. Keep actions beside the relevant choice.
 For a decision, provide message actions instead of asking the user to type a
 response. Always tell the user what will happen before asking for confirmation,
 and never claim work was performed when only instructions were displayed. A
-Cancel action for any pending operation must return to the verbatim `help.md`
-menu.
+Cancel action for any pending operation must return to the the canonical help
+report embed described above.
 ````

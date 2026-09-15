@@ -22,8 +22,9 @@ asks whether it should use the normal rows layout or a fixed/dedicated column.
 
 Copy the contents of [lead-prompt.md](lead-prompt.md) into the current Group
 lead. That is the only prompt you need to provide to start the workflow. The lead
-displays the canonical help menu and runs the connection-report script when you
-choose an action.
+displays the canonical help menu through a `gsc-embed` report, keeping the
+menu out of the lead's context while rendering the current workflow file. It
+runs the connection-report script when you choose an action.
 
 ## Supporting files
 
@@ -33,13 +34,20 @@ more detail, or ask the lead to read the relevant file when prompted:
 - [supported-agents/](supported-agents/) contains the harness adapter content
   used by the connection report.
 - [scripts/connections-report](scripts/connections-report) deterministically
-  generates the complete connection report and copy actions.
+  generates a connection report file with copy actions and emits a compact
+  embed report for the Group.
 - [buddy-prompt.md](buddy-prompt.md) defines the narrow role assigned to each
   newly created Buddy.
 - [observer-setup.md](observer-setup.md) defines the optional Observer setup
   for the connected agent roster.
 - [observer-prompt.md](observer-prompt.md) is a legacy monitoring draft and is
   not used by the current workflow.
+
+The lead's menu embed references `/--/workflows/agent-observer/help.md`. This
+is a root-relative local workflow URL and is intentionally not copied into the
+lead prompt. Connection reports use the same local workflow server and write
+runtime-specific documents under `reports/`; the script emits an embed pointing
+to the report so copy actions remain available after expansion.
 
 ## Try it yourself
 

@@ -5,8 +5,9 @@ coding harness. `README.md` is documentation, not an adapter. Pi connects
 directly from the Group and does not need an adapter or Buddy.
 
 The workflow script at `../scripts/connections-report` discovers adapter files,
-reads their metadata and prompts, and generates the complete connection report
-with copy actions. The lead does not interpret adapter files or construct
+reads their metadata and prompts, writes the complete connection report with
+copy actions under the workflow `reports/` directory, and emits a compact
+`gsc-embed` report. The lead does not interpret adapter files or construct
 prompts.
 
 The report always includes a generic `gsc buddy connect` fallback for any valid

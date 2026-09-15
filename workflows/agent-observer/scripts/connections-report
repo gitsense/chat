@@ -13,7 +13,11 @@ function usage() {
 function parseArgs(argv) {
   const index = argv.indexOf('--group-id');
   if (index === -1 || !argv[index + 1] || argv[index + 1].startsWith('-')) usage();
-  return argv[index + 1];
+  const groupId = argv[index + 1];
+  if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(groupId)) {
+    throw new Error('group-id must be a canonical UUID');
+  }
+  return groupId;
 }
 
 function parseMetadata(lines) {
@@ -135,14 +139,23 @@ function renderEntry(entry) {
   ].join('\n');
 }
 
+function writeReport(workflowDirectory, groupId, report) {
+  const reportsDirectory = path.join(workflowDirectory, 'reports');
+  fs.mkdirSync(reportsDirectory, { recursive: true, mode: 0o700 });
+  const reportPath = path.join(reportsDirectory, `connections-report-${groupId}.md`);
+  const temporaryPath = `${reportPath}.${process.pid}.tmp`;
+  fs.writeFileSync(temporaryPath, report, { encoding: 'utf8', mode: 0o600 });
+  fs.renameSync(temporaryPath, reportPath);
+  return `/--/workflows/agent-observer/reports/connections-report-${groupId}.md`;
+}
+
 function main() {
   const groupId = parseArgs(process.argv.slice(2));
   const workflowDirectory = path.resolve(__dirname, '..');
   const adaptersDirectory = path.join(workflowDirectory, 'supported-agents');
   const entries = readAdapters(adaptersDirectory, groupId);
   const fallback = genericPrompt(groupId);
-  const sections = [
-    ':::gsc-report',
+  const report = [
     '# Connect an agent',
     '',
     `Choose the external agent to connect to Group \`${groupId}\`. Copy the matching prompt and paste it into that agent's composer. The external agent runs \`gsc buddy connect\` to create or reuse its Buddy.`,
@@ -158,10 +171,16 @@ function main() {
     fenceFor(fallback),
     '',
     action('Copy prompt for another agent', fallback),
+    '',
+  ].join('\n');
+  const reportUrl = writeReport(workflowDirectory, groupId, report);
+  process.stdout.write([
+    ':::gsc-report',
+    `:::gsc-embed ${JSON.stringify({ src: reportUrl, type: 'text/markdown' })}`,
+    ':::',
     ':::',
     '',
-  ];
-  process.stdout.write(sections.join('\n'));
+  ].join('\n'));
 }
 
 try {
