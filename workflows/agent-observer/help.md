@@ -1,4 +1,3 @@
-:::gsc-report
 # Agent Observer
 
 Welcome!
@@ -33,4 +32,3 @@ Ask me to add an Observer. I will ask whether it should use the normal rows layo
 Ask me to explain how Buddies publish updates, how agents retrieve published information, and what the Group can and cannot verify.
 
 :::gsc-action {"label":"Show help again","mode":"message","message":"help"}:::
-:::
