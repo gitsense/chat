@@ -4,13 +4,14 @@ harness: claude
 display_name: Claude Code
 session_identity: native Claude session UUID
 session_discovery: inspect the current Claude Code session context and report its native session UUID
-communication: two-way
+communication: bidirectional
 buddy_persona_tags: role:buddy,harness:claude
 
 Use these instructions in Claude Code after replacing `<group-id>`:
 
 ~~~md
 Connect this Claude session to its GitSense Buddy in Group `<group-id>`.
+Use the Buddy instructions in `<buddy-instructions-dir>/claude.md`.
 
 Run:
 
@@ -20,6 +21,8 @@ gsc experts init && \
   --group-id <group-id> \
   --harness claude \
   --buddy-harness pi \
+  --communication bidirectional \
+  --buddy-instructions-dir <buddy-instructions-dir> \
   --format json
 ```
 

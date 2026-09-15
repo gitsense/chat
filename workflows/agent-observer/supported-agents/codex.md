@@ -4,13 +4,14 @@ harness: codex
 display_name: Codex
 session_identity: native Codex session UUID
 session_discovery: inspect the current Codex session context and report its native session UUID
-communication: two-way
+communication: bidirectional
 buddy_persona_tags: role:buddy,harness:codex
 
 Use these instructions in Codex after replacing `<group-id>`:
 
 ~~~md
 Connect this Codex session to its GitSense Buddy in Group `<group-id>`.
+Use the Buddy instructions in `<buddy-instructions-dir>/codex.md`.
 
 Run:
 
@@ -20,6 +21,8 @@ gsc experts init && \
   --group-id <group-id> \
   --harness codex \
   --buddy-harness pi \
+  --communication bidirectional \
+  --buddy-instructions-dir <buddy-instructions-dir> \
   --format json
 ```
 

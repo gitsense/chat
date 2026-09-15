@@ -36,8 +36,9 @@ more detail, or ask the lead to read the relevant file when prompted:
 - [scripts/connections-report](scripts/connections-report) deterministically
   generates a connection report file with copy actions and emits a compact
   embed report for the Group.
-- [buddy-prompt.md](buddy-prompt.md) defines the narrow role assigned to each
-  newly created Buddy.
+- [buddy-instructions/](buddy-instructions/) contains the harness-specific
+  Buddy behavior used when bidirectional communication is selected.
+- [buddy-prompt.md](buddy-prompt.md) is a general reference for the Buddy role.
 - [observer-setup.md](observer-setup.md) defines the optional Observer setup
   for the connected agent roster.
 - [observer-prompt.md](observer-prompt.md) is a legacy monitoring draft and is

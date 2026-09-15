@@ -67,16 +67,28 @@ function adapterFiles(directory) {
     .sort();
 }
 
-function readAdapters(directory, groupId) {
+function readAdapters(directory, groupId, buddyInstructionsDirectory) {
   return adapterFiles(directory).map((file) => {
     const source = fs.readFileSync(file, 'utf8');
     const metadata = parseMetadata(source.split(/\r?\n/));
     if (!metadata.harness || !metadata.display_name) {
       throw new Error(`${path.basename(file)}: required harness/display_name metadata is missing`);
     }
-    const prompt = extractPrompt(source, path.basename(file)).replaceAll('<group-id>', groupId);
-    const communication = metadata.communication ||
-      (metadata.harness === 'claude' || metadata.harness === 'codex' ? 'two-way' : 'one-way');
+    const prompt = extractPrompt(source, path.basename(file))
+      .replaceAll('<group-id>', groupId)
+      .replaceAll('<buddy-instructions-dir>', '${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/buddy-instructions');
+    const communication = metadata.communication || 'one-way';
+    if (!['one-way', 'bidirectional'].includes(communication)) {
+      throw new Error(`${path.basename(file)}: communication must be one-way or bidirectional`);
+    }
+    if (communication === 'bidirectional') {
+      const instructionsPath = path.join(buddyInstructionsDirectory, `${metadata.harness}.md`);
+      try {
+        fs.accessSync(instructionsPath, fs.constants.R_OK);
+      } catch {
+        throw new Error(`${path.basename(file)}: bidirectional communication requires readable ${instructionsPath}`);
+      }
+    }
     return {
       harness: metadata.harness,
       displayName: metadata.display_name,
@@ -97,6 +109,7 @@ gsc buddy connect \\
   --group-id ${groupId} \\
   --harness <harness-id> \\
   --buddy-harness pi \\
+  --communication one-way \\
   --format json
 ~~~
 
@@ -124,18 +137,22 @@ function action(label, text) {
 
 function renderEntry(entry) {
   const fence = fenceFor(entry.prompt);
-  const mode = entry.communication === 'two-way' ? 'two-way Agent ↔ Buddy messaging' : 'Agent → Buddy updates only';
+  const mode = entry.communication === 'bidirectional' ? 'two-way Agent ↔ Buddy messaging' : 'Agent → Buddy updates only';
   return [
     `## ${entry.displayName}`,
     '',
     `**Creates or reuses:** ${entry.displayName} Buddy  `,
     `**Communication:** ${mode}`,
     '',
+    action(`Copy prompt for ${entry.displayName}`, entry.prompt),
+    '',
+    `:::gsc-details ${JSON.stringify({ summary: `Show ${entry.displayName} connection prompt` })}`,
+    '',
     `${fence}md`,
     entry.prompt,
     fence,
     '',
-    action(`Copy prompt for ${entry.displayName}`, entry.prompt),
+    ':::',
   ].join('\n');
 }
 
@@ -153,7 +170,8 @@ function main() {
   const groupId = parseArgs(process.argv.slice(2));
   const workflowDirectory = path.resolve(__dirname, '..');
   const adaptersDirectory = path.join(workflowDirectory, 'supported-agents');
-  const entries = readAdapters(adaptersDirectory, groupId);
+  const buddyInstructionsDirectory = path.join(workflowDirectory, 'buddy-instructions');
+  const entries = readAdapters(adaptersDirectory, groupId, buddyInstructionsDirectory);
   const fallback = genericPrompt(groupId);
   const report = [
     '# Connect an agent',
@@ -166,11 +184,15 @@ function main() {
     '**Creates or reuses:** Buddy for the specified harness  ',
     '**Communication:** Agent → Buddy updates only',
     '',
+    action('Copy prompt for another agent', fallback),
+    '',
+    `:::gsc-details ${JSON.stringify({ summary: 'Show connection prompt for another agent' })}`,
+    '',
     `${fenceFor(fallback)}md`,
     fallback,
     fenceFor(fallback),
     '',
-    action('Copy prompt for another agent', fallback),
+    ':::',
     '',
   ].join('\n');
   const reportUrl = writeReport(workflowDirectory, groupId, report);
