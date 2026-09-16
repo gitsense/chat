@@ -1,4 +1,4 @@
-# Create Buddies across tools
+# Pair agents across tools
 
 This guided workflow brings the coding agents you already use into a shared
 GitSense Chat Group. The lead prepares the Group and provides guidance.
@@ -60,11 +60,11 @@ to the report so copy actions remain available after expansion.
 1. Open or create a GitSense Chat Group with a lead.
 2. Copy the contents of [lead-prompt.md](lead-prompt.md) into the lead.
 3. Choose **Set up this Group** if you want the lead to organize the Group.
-4. Choose **Create a Buddy**. The lead runs the deterministic report script.
-5. Copy one generated prompt and paste it into the external agent's composer.
-6. The external agent runs `gsc buddy connect` to create a new task-scoped
+4. Choose **Pair an existing agent**. The lead runs the deterministic report script.
+5. Copy one generated prompt and paste it into the existing agent's composer.
+6. The agent runs `gsc buddy connect` to create a new task-scoped
    Buddy. The common Buddy prompt and optional harness-specific instructions
-   are injected into the new Buddy session. The external agent then sends the
+   are injected into the new Buddy session. The existing agent then sends the
    formal readiness message and follows its harness-specific messaging
    instructions. The optional `--agent-mailbox-id`
    identifies the parent agent's shared inbox; it does not identify or reuse a

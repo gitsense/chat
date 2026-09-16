@@ -144,9 +144,9 @@ This action returns the user to the canonical menu, where they can see and
 choose the available workflows. On `cancel setup group`, emit the canonical
 help report embed described above.
 
-### `create a buddy`
+### `pair an existing agent`
 
-Run the deterministic connection-report script for the current Group:
+Pair an existing agent with a task-scoped Buddy. Run the deterministic connection-report script for the current Group:
 
 ~~~bash
 ${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/scripts/connections-report \
@@ -170,7 +170,7 @@ actions to the local workflow report; the host expands the embed before display.
 report contains one copy action for every supported harness plus the generic
 fallback. Each copied option creates a new task-scoped Buddy; it does not
 reuse or restart an existing Buddy. The user copies the selected prompt and
-pastes it into the external agent, which creates its own Buddy by running the
+pastes it into the existing agent, which creates its own Buddy by running the
 instructions. The lead does not create a Buddy or wait for a request.
 
 ### `collaboration guidance`

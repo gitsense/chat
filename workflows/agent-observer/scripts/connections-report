@@ -100,7 +100,7 @@ function readAdapters(directory, groupId, buddyInstructionsDirectory) {
 }
 
 function genericPrompt(groupId) {
-  return `Create a GitSense Buddy for this external agent in Group ${groupId}.
+  return `Pair this existing agent with a GitSense Buddy in Group ${groupId}.
 
 Replace <harness-id> with the harness identifier for this agent, then run:
 
@@ -175,9 +175,9 @@ function main() {
   const entries = readAdapters(adaptersDirectory, groupId, buddyInstructionsDirectory);
   const fallback = genericPrompt(groupId);
   const report = [
-    '# Create a Buddy',
+    '# Pair an existing agent',
     '',
-    `Choose the external agent for this task in Group \`${groupId}\`. Copy the matching prompt and paste it into that agent's composer. The external agent runs \`gsc buddy connect\` to create a new task-scoped Buddy.`,
+    `Choose the existing agent for this task in Group \`${groupId}\`. Copy the matching prompt and paste it into that agent's composer. The agent runs \`gsc buddy connect\` to create a new task-scoped Buddy.`,
     '',
     ...entries.flatMap((entry) => [renderEntry(entry), '']),
     '## Other agent',
