@@ -177,7 +177,7 @@ function main() {
   const report = [
     '# Pair an existing agent',
     '',
-    `Choose the existing agent for this task in Group \`${groupId}\`. Copy the matching prompt and paste it into that agent's composer. The agent runs \`gsc buddy connect\` to create a new task-scoped Buddy.`,
+    'Choose the existing agent to pair. Copy the matching prompt and paste it into that agent\'s composer. Once setup succeeds, a task-scoped Buddy for the agent will be created and added to this Group.',
     '',
     ...entries.flatMap((entry) => [renderEntry(entry), '']),
     '## Other agent',
