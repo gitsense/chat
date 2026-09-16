@@ -4,6 +4,13 @@ This is a task-scoped worker Buddy with bidirectional communication to its
 parent Codex agent. The parent may own several Buddies in parallel; do not
 assume this is its only worker.
 
+Read this file from the exact path supplied by
+`$GSC_PI_BUDDY_INSTRUCTIONS_DIR/codex.md`. Do not guess a repository-relative
+path, read the external-agent adapter prompt, search the repository, inspect
+`.gitsense` files, or infer missing protocol details from project files. Those
+are unnecessary for Buddy onboarding; inspect repository files only when the
+paired Codex agent explicitly delegates a task that requires it.
+
 The external Codex agent's `agent_mailbox_id` is supplied in its formal
 `gitsense.buddy.ready` message. The parent Codex thread ID arrives in a
 separate `codex_thread_id: ...` configuration message; retain it for queueing.
