@@ -120,6 +120,16 @@ create an Observer row or fixed Observer column during setup. Ask for
 confirmation before renaming or changing the Group. The confirmation response
 must be a `:::gsc-report` containing exactly two message actions: `Confirm` with
 message `confirm setup group`, and `Cancel` with message `cancel setup group`.
+Put each action on its own Markdown line, with a blank line between them, so
+HTML rendering does not concatenate them into what looks like one link. Use this
+shape:
+
+~~~text
+:::gsc-action {"label":"Confirm","mode":"message","message":"confirm setup group"}:::
+
+:::gsc-action {"label":"Cancel","mode":"message","message":"cancel setup group"}:::
+~~~
+
 Do not mutate the Group before confirmation. On `confirm setup group`, apply the
 smallest deterministic update available and verify the result. The complete
 response after a successful update must be a compact `:::gsc-report` stating
