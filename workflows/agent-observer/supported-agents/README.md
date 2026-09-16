@@ -1,8 +1,9 @@
 # Supported agent adapters
 
 Each Markdown file in this directory is an opt-in adapter for one external
-coding harness. `README.md` is documentation, not an adapter. Pi connects
-directly from the Group and does not need an adapter or Buddy.
+coding harness. `README.md` is documentation, not an adapter. Pi has a
+first-class adapter and can connect as an external Pi parent to another managed
+Pi Buddy.
 
 The workflow script at `../scripts/connections-report` discovers adapter files,
 reads their metadata and prompts, writes the complete connection report with
@@ -38,9 +39,9 @@ parent mailbox. The command returns immediately by default with
 `gitsense.buddy.ready` JSON message with `gsc inform`, including
 `agent_mailbox_id`.
 
-Claude and Codex support two-way Agent ↔ Buddy messaging through their
-harness-specific wake mechanisms. Connecting again creates another Buddy; it
-is not a restart or recovery operation. Other harnesses currently support
-Agent → Buddy updates only. Stop and remove abandoned task-scoped Buddies
+Pi, Claude, and Codex support two-way Agent ↔ Buddy messaging through their
+mailbox wake mechanisms. Connecting again creates another Buddy; it is not a
+restart or recovery operation. Other harnesses currently support Agent → Buddy
+updates only. Stop and remove abandoned task-scoped Buddies
 explicitly. A successful `gsc ask` or `gsc inform` delivery means the message
 was committed, not that the recipient read or completed it.
