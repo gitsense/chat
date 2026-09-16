@@ -22,6 +22,7 @@ gsc experts init && \
   --harness codex \
   --buddy-harness pi \
   --communication bidirectional \
+  --buddy-prompt "<buddy-prompt-file>" \
   --buddy-instructions-dir "<buddy-instructions-dir>" \
   --format json
 ```

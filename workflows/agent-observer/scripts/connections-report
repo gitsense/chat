@@ -76,6 +76,7 @@ function readAdapters(directory, groupId, buddyInstructionsDirectory) {
     }
     const prompt = extractPrompt(source, path.basename(file))
       .replaceAll('<group-id>', groupId)
+      .replaceAll('<buddy-prompt-file>', '${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/buddy-prompt.md')
       .replaceAll('<buddy-instructions-dir>', '${GSC_HOME:-$HOME/.gitsense}/workflows/agent-observer/buddy-instructions');
     const communication = metadata.communication || 'one-way';
     if (!['one-way', 'bidirectional'].includes(communication)) {

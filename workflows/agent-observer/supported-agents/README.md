@@ -21,6 +21,8 @@ Keep each adapter focused on:
 - the display name and native session identity the harness provides;
 - the command or method used to discover that native session identity;
 - the complete prompt to paste into that harness;
+- the common Buddy prompt file passed with `--buddy-prompt`;
+- the optional harness-specific instructions directory passed with `--buddy-instructions-dir`;
 - whether communication is `two-way` or `one-way`; and
 - the Buddy Persona tags, including a stable harness tag.
 

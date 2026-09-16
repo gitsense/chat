@@ -38,9 +38,10 @@ more detail, or ask the lead to read the relevant file when prompted:
 - [scripts/connections-report](scripts/connections-report) deterministically
   generates a connection report file with copy actions and emits a compact
   embed report for the Group.
-- [buddy-instructions/](buddy-instructions/) contains the harness-specific
-  Buddy behavior used when bidirectional communication is selected.
-- [buddy-prompt.md](buddy-prompt.md) is a general reference for the Buddy role.
+- [buddy-instructions/](buddy-instructions/) contains optional harness-specific
+  Buddy behavior passed with `--buddy-instructions-dir`.
+- [buddy-prompt.md](buddy-prompt.md) is the common workflow prompt passed with
+  `--buddy-prompt` and injected into each new Buddy session.
 - [observer-setup.md](observer-setup.md) defines the optional Observer setup
   for the connected agent roster.
 - [observer-prompt.md](observer-prompt.md) is a legacy monitoring draft and is
@@ -60,8 +61,10 @@ to the report so copy actions remain available after expansion.
 4. Choose **Connect an agent**. The lead runs the deterministic report script.
 5. Copy one generated prompt and paste it into the external agent's composer.
 6. The external agent runs `gsc buddy connect` to create a new task-scoped
-   Buddy, sends the formal readiness message, and follows its
-   harness-specific messaging instructions. The optional `--agent-mailbox-id`
+   Buddy. The common Buddy prompt and optional harness-specific instructions
+   are injected into the new Buddy session. The external agent then sends the
+   formal readiness message and follows its harness-specific messaging
+   instructions. The optional `--agent-mailbox-id`
    identifies the parent agent's shared inbox; it does not identify or reuse a
    Buddy. Reuse the first connection's returned `agent_mailbox_id` for
    additional task-scoped Buddies owned by the same parent.
