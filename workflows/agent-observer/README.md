@@ -63,7 +63,8 @@ to the report so copy actions remain available after expansion.
    Buddy, sends the formal readiness message, and follows its
    harness-specific messaging instructions. The optional `--agent-mailbox-id`
    identifies the parent agent's shared inbox; it does not identify or reuse a
-   Buddy.
+   Buddy. Reuse the first connection's returned `agent_mailbox_id` for
+   additional task-scoped Buddies owned by the same parent.
 7. Claude and Codex can receive Buddy messages; other harnesses currently send
    updates only.
 8. When ready, ask the lead to add an Observer and choose normal rows or a

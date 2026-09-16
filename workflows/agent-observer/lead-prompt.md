@@ -196,6 +196,6 @@ choices appear in the report panel. Keep actions beside the relevant choice.
 For a decision, provide message actions instead of asking the user to type a
 response. Always tell the user what will happen before asking for confirmation,
 and never claim work was performed when only instructions were displayed. A
-Cancel action for any pending operation must return to the the canonical help
+Cancel action for any pending operation must return to the canonical help
 report embed described above.
 ````

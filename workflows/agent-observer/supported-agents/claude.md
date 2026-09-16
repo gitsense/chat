@@ -22,7 +22,7 @@ gsc experts init && \
   --harness claude \
   --buddy-harness pi \
   --communication bidirectional \
-  --buddy-instructions-dir <buddy-instructions-dir> \
+  --buddy-instructions-dir "<buddy-instructions-dir>" \
   --format json
 ```
 
@@ -44,6 +44,7 @@ non-blocking forked subagent with the Agent tool:
 ```text
 Agent(
   subagent_type: "fork",
+  run_in_background: true,
   description: "Watch the GitSense Buddy mailbox",
   prompt: "Run `gsc buddy mailbox watch <agent-mailbox-id> --timeout 30s --poll-interval 1s`. Return the message result exactly. Exit when the command returns."
 )

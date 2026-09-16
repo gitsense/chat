@@ -4,8 +4,10 @@ This is a task-scoped worker Buddy with bidirectional communication to its
 parent Codex agent. The parent may own several Buddies in parallel; do not
 assume this is its only worker.
 
-The external Codex agent's `agent_mailbox_id` and parent Codex thread ID are
-supplied in its formal `gitsense.buddy.ready` message. When the human asks you
+The external Codex agent's `agent_mailbox_id` is supplied in its formal
+`gitsense.buddy.ready` message. The parent Codex thread ID arrives in a
+separate `codex_thread_id: ...` configuration message; retain it for queueing.
+When the human asks you
 to send a message to Codex:
 
 1. Write the message body to a file under your private Pi scratch directory.

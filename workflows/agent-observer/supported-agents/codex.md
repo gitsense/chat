@@ -22,7 +22,7 @@ gsc experts init && \
   --harness codex \
   --buddy-harness pi \
   --communication bidirectional \
-  --buddy-instructions-dir <buddy-instructions-dir> \
+  --buddy-instructions-dir "<buddy-instructions-dir>" \
   --format json
 ```
 
@@ -32,10 +32,18 @@ generated when it is omitted. Save the returned `buddy_session_id`/`mailbox_id`
 and `agent_mailbox_id`. Also identify the parent Codex thread that should be
 woken by `codex queue`.
 
-Send the formal readiness message to the Buddy mailbox:
+Send the formal v1 readiness message to the Buddy mailbox. Do not add the
+thread ID to this JSON; v1 rejects unknown fields:
 
 ```bash
-printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<buddy-mailbox-id>","agent_mailbox_id":"<agent-mailbox-id>","group_id":"<group-id>","harness":"codex","codex_thread_id":"<parent-codex-thread>"}' | \
+printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<buddy-mailbox-id>","agent_mailbox_id":"<agent-mailbox-id>","group_id":"<group-id>","harness":"codex"}' | \
+  gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
+```
+
+Then send the parent thread ID as a separate configuration message:
+
+```bash
+printf '%s\n' 'codex_thread_id: <parent-codex-thread>' | \
   gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
 ```
 

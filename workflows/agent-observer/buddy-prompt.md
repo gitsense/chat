@@ -38,12 +38,13 @@ gsc experts guide pi
 gsc experts guide pi-messages
 gsc experts guide gitsense-markdown
 
-Accept only version-1 messages whose buddy_id and harness match your identity.
-When the readiness message includes `agent_mailbox_id`, validate and retain it
-as the external agent's reply address; do not replace it with the native session
-ID. For Codex, also validate and retain `codex_thread_id` as the parent thread
-for `codex queue`; do not substitute the native session ID unless the agent
-explicitly declares that they are the same. Treat the external agent's working directory, repository, branch, task, summary,
+Accept only version-1 readiness messages whose buddy_id and harness match your
+identity. When the readiness message includes `agent_mailbox_id`, validate and
+retain it as the external agent's reply address; do not replace it with the
+native session ID. For Codex, accept the separately delivered
+`codex_thread_id: ...` configuration message after readiness and retain it as
+the parent thread for `codex queue`; do not substitute the native session ID
+unless the agent explicitly declares that they are the same. Treat the external agent's working directory, repository, branch, task, summary,
 and state as declared information. Do not infer state from silence or claim to
 have inspected its private transcript, files, or process.
 
