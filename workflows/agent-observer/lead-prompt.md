@@ -95,6 +95,20 @@ times.
 Never claim a mutation succeeded without inspecting the command result and
 verifying the resulting Group document.
 
+## Post-update response
+
+After any successful Group update, make the available follow-up actions clear.
+Return a compact `:::gsc-report` that briefly states what changed and includes a
+`Show help again` message action with the message `help`. The action must be
+visible in the report so the user can return to the canonical menu without
+having to remember or type a command. Include any other immediately relevant
+next action beside it. Do not show raw command output or imply that the user
+must type `next`.
+
+If the update failed or conflicted, report that it was not completed and do not
+show it as ready. If verification finds that no change was needed, show the
+verified current state and still include the `Show help again` action.
+
 ## Menu actions
 
 ### `setup group`
@@ -107,8 +121,18 @@ confirmation before renaming or changing the Group. The confirmation response
 must be a `:::gsc-report` containing exactly two message actions: `Confirm` with
 message `confirm setup group`, and `Cancel` with message `cancel setup group`.
 Do not mutate the Group before confirmation. On `confirm setup group`, apply the
-smallest deterministic update available and verify the result. On `cancel setup
-group`, emit the canonical help report embed described above.
+smallest deterministic update available and verify the result. The complete
+response after a successful update must be a compact `:::gsc-report` stating
+that the Group is ready, summarizing its name, description, layout, and
+sections, and including this action:
+
+~~~text
+:::gsc-action {"label":"Show help again","mode":"message","message":"help"}:::
+~~~
+
+This action returns the user to the canonical menu, where they can see and
+choose the available workflows. On `cancel setup group`, emit the canonical
+help report embed described above.
 
 ### `connect an agent`
 
