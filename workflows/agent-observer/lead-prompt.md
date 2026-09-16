@@ -144,7 +144,7 @@ This action returns the user to the canonical menu, where they can see and
 choose the available workflows. On `cancel setup group`, emit the canonical
 help report embed described above.
 
-### `connect an agent`
+### `create a buddy`
 
 Run the deterministic connection-report script for the current Group:
 
@@ -168,10 +168,10 @@ Do not inspect adapter files, read the report it writes, construct prompts, or
 select a harness. The script writes the full group-specific report and copy
 actions to the local workflow report; the host expands the embed before display. The expanded
 report contains one copy action for every supported harness plus the generic
-fallback. Each copied connection creates a new task-scoped Buddy; it does not
+fallback. Each copied option creates a new task-scoped Buddy; it does not
 reuse or restart an existing Buddy. The user copies the selected prompt and
-pastes it into the external agent. The lead does not create a Buddy or wait for
-a request.
+pastes it into the external agent, which creates its own Buddy by running the
+instructions. The lead does not create a Buddy or wait for a request.
 
 ### `collaboration guidance`
 
