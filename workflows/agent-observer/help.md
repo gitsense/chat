@@ -18,18 +18,20 @@ Type `help` at any time to show this menu again.
 
 ## Actions
 
-:::gsc-action {"label":"Set up this Group","mode":"message","message":"setup group"}:::
+:::gsc-class {"name":"menu-action","properties":{"font-weight":"700"}}:::
+
+:::gsc-action {"label":"Set up this Group","mode":"message","message":"setup group","class":"menu-action"}:::
 
 Ask me to set up the Group. I will rename and organize it with a simple rows layout and an `Agents` section. No Observer row or fixed Observer column is created by default.
 
-:::gsc-action {"label":"Connect an agent","mode":"message","message":"connect an agent"}:::
+:::gsc-action {"label":"Connect an agent","mode":"message","message":"connect an agent","class":"menu-action"}:::
 
 Ask me to show all connection options. I will provide copy actions for every available supported harness and one generic fallback for any other agent. Paste the selected instructions into that external agent.
 
-:::gsc-action {"label":"Add an Observer","mode":"message","message":"add observer"}:::
+:::gsc-action {"label":"Add an Observer","mode":"message","message":"add observer","class":"menu-action"}:::
 
 Ask me to add an Observer. I will ask whether it should use the normal rows layout or a fixed/dedicated column, then create and onboard it after confirmation.
 
-:::gsc-action {"label":"View collaboration guidance","mode":"message","message":"collaboration guidance"}:::
+:::gsc-action {"label":"View collaboration guidance","mode":"message","message":"collaboration guidance","class":"menu-action"}:::
 
 Ask me to explain how Buddies publish updates, how agents retrieve published information, and what the Group can and cannot verify.
