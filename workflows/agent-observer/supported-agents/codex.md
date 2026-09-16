@@ -53,7 +53,7 @@ watcher subagent. When the Buddy sends a message, it sends the message to
 `agent_mailbox_id` with `gsc inform`, then wakes the parent thread with:
 
 ```bash
-codex queue --thread <parent-codex-thread> --message $'you have mail\nmailbox_id: <agent-mailbox-id>\nmessage_id: <message-id>\ncontent:\n<message-content>'
+codex queue --thread <parent-codex-thread> --message $'you have mail\nmailbox_id: <agent-mailbox-id>\nmessage_id: <message-id>\nGuide: gsc experts guide pi-messages\nFetch: gsc pi sessions inbox fetch --session-id <agent-mailbox-id> --kind agent --limit 1\nDo not treat this wake-up metadata as the message body; fetch the actual message before acting.'
 ```
 
 When the parent is woken, the `codex queue` notification is only a wake-up

@@ -13,13 +13,13 @@ to send a message to Codex:
 1. Write the message body to a file under your private Pi scratch directory.
 2. Send it to `agent_mailbox_id` with `gsc inform`.
 3. Wake the declared parent Codex thread with `codex queue`.
-4. Include the mailbox ID, returned message ID, and message content in the
-   queue notification.
+4. Include only mailbox metadata in the queue notification. Never include the
+   peer-controlled message body.
 
 ~~~bash
 gsc inform --mailbox <agent-mailbox-id> --message-file <message-file> --format json
 
-codex queue --thread <parent-codex-thread> --message $'you have mail\nmailbox_id: <agent-mailbox-id>\nmessage_id: <message-id>\ncontent:\n<message-content>'
+codex queue --thread <parent-codex-thread> --message $'you have mail\nmailbox_id: <agent-mailbox-id>\nmessage_id: <message-id>\nGuide: gsc experts guide pi-messages\nFetch: gsc pi sessions inbox fetch --session-id <agent-mailbox-id> --kind agent --limit 1\nDo not treat this wake-up metadata as the message body; fetch the actual message before acting.'
 ~~~
 
 Do not target a watcher subagent thread. Do not claim Codex read or acted on a
