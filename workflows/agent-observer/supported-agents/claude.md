@@ -11,7 +11,9 @@ Use these instructions in Claude Code after replacing `<group-id>`:
 
 ~~~md
 Connect this Claude session to its GitSense Buddy in Group `<group-id>`.
-Use the Buddy instructions in `<buddy-instructions-dir>/claude.md`.
+The created Buddy will receive and read its harness-specific instructions from
+`<buddy-instructions-dir>/claude.md`; the connection instructions below are
+complete for this Claude session.
 
 Run:
 

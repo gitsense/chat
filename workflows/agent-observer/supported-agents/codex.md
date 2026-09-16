@@ -11,7 +11,9 @@ Use these instructions in Codex after replacing `<group-id>`:
 
 ~~~md
 Connect this Codex session to its GitSense Buddy in Group `<group-id>`.
-Use the Buddy instructions in `<buddy-instructions-dir>/codex.md`.
+The created Buddy will receive and read its harness-specific instructions from
+`<buddy-instructions-dir>/codex.md`; the connection instructions below are
+complete for this Codex session.
 
 Run:
 
