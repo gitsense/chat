@@ -7,9 +7,12 @@ I can help you collaborate with AI agents in this GitSense Chat Group. I can set
 I only know what agents choose to share through their Buddies. I won’t access
 private conversations or guess an agent’s status when it hasn’t sent an update.
 
-Claude and Codex support two-way Agent ↔ Buddy messaging. Other harnesses can
-send updates to their Buddies but cannot currently receive messages back. The
-connection options identify which mode each harness supports.
+Each connection creates a new task-scoped Buddy; a parent agent can create
+multiple Buddies in this Group. Claude and Codex support two-way Agent ↔ Buddy
+messaging. Other harnesses can send updates to their Buddies but cannot
+currently receive messages back. The connection options identify which mode
+each harness supports. Abandoned task Buddies should be explicitly stopped and
+removed.
 
 Type `help` at any time to show this menu again.
 

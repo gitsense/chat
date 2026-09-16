@@ -134,8 +134,10 @@ Do not inspect adapter files, read the report it writes, construct prompts, or
 select a harness. The script writes the full group-specific report and copy
 actions to the local workflow report; the host expands the embed before display. The expanded
 report contains one copy action for every supported harness plus the generic
-fallback. The user copies the selected prompt and pastes it into the external
-agent. The lead does not create a Buddy or wait for a request.
+fallback. Each copied connection creates a new task-scoped Buddy; it does not
+reuse or restart an existing Buddy. The user copies the selected prompt and
+pastes it into the external agent. The lead does not create a Buddy or wait for
+a request.
 
 ### `collaboration guidance`
 

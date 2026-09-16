@@ -28,14 +28,17 @@ When a user wants harness-specific behavior, show a proposed `<harness>.md`
 file and wait for confirmation before writing it. Until confirmed, use the
 generic fallback.
 
-The external agent runs `gsc buddy connect`, which creates or reuses the Buddy
-as a regular managed Pi session and returns its Buddy mailbox plus a durable
-`agent_mailbox_id`. The command returns immediately by default with
+The external agent runs `gsc buddy connect`, which creates a new task-scoped
+Buddy as a regular managed Pi session and returns its Buddy mailbox plus an
+optional parent `agent_mailbox_id`. Multiple task-scoped Buddies may share the
+parent mailbox. The command returns immediately by default with
 `status: "starting"`. The external agent then sends a versioned
 `gitsense.buddy.ready` JSON message with `gsc inform`, including
 `agent_mailbox_id`.
 
 Claude and Codex support two-way Agent ↔ Buddy messaging through their
-harness-specific wake mechanisms. Other harnesses currently support Agent →
-Buddy updates only. A successful `gsc ask` or `gsc inform` delivery means the
-message was committed, not that the recipient read or completed it.
+harness-specific wake mechanisms. Connecting again creates another Buddy; it
+is not a restart or recovery operation. Other harnesses currently support
+Agent → Buddy updates only. Stop and remove abandoned task-scoped Buddies
+explicitly. A successful `gsc ask` or `gsc inform` delivery means the message
+was committed, not that the recipient read or completed it.

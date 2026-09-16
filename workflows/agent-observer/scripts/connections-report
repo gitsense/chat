@@ -141,7 +141,7 @@ function renderEntry(entry) {
   return [
     `## ${entry.displayName}`,
     '',
-    `**Creates or reuses:** ${entry.displayName} Buddy  `,
+    `**Creates:** task-scoped ${entry.displayName} Buddy  `,
     `**Communication:** ${mode}`,
     '',
     action(`Copy prompt for ${entry.displayName}`, entry.prompt),
@@ -176,12 +176,12 @@ function main() {
   const report = [
     '# Connect an agent',
     '',
-    `Choose the external agent to connect to Group \`${groupId}\`. Copy the matching prompt and paste it into that agent's composer. The external agent runs \`gsc buddy connect\` to create or reuse its Buddy.`,
+    `Choose the external agent for this task in Group \`${groupId}\`. Copy the matching prompt and paste it into that agent's composer. Each invocation of \`gsc buddy connect\` creates a new task-scoped Buddy.`,
     '',
     ...entries.flatMap((entry) => [renderEntry(entry), '']),
     '## Other agent',
     '',
-    '**Creates or reuses:** Buddy for the specified harness  ',
+    '**Creates:** task-scoped Buddy for the specified harness  ',
     '**Communication:** Agent → Buddy updates only',
     '',
     action('Copy prompt for another agent', fallback),

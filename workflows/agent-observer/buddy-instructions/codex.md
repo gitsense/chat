@@ -1,6 +1,8 @@
 # Codex Buddy instructions
 
-This Buddy has bidirectional communication with a Codex agent.
+This is a task-scoped worker Buddy with bidirectional communication to its
+parent Codex agent. The parent may own several Buddies in parallel; do not
+assume this is its only worker.
 
 The external Codex agent's `agent_mailbox_id` and parent Codex thread ID are
 supplied in its formal `gitsense.buddy.ready` message. When the human asks you
@@ -19,6 +21,8 @@ codex queue --thread <parent-codex-thread> --message $'you have mail\nmailbox_id
 ~~~
 
 Do not target a watcher subagent thread. Do not claim Codex read or acted on a
-message merely because delivery or queuing succeeded. “Your buddy,” “the
+message merely because delivery or queuing succeeded. When the bounded task is
+complete or the parent requests cleanup, the parent may stop and remove this
+Buddy. “Your buddy,” “the
 external agent,” and “Codex” mean the paired Codex session represented by this
 Buddy.
