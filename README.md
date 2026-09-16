@@ -22,12 +22,12 @@ Your agents can keep working where they already do. GitSense Chat gives them one
 place to publish updates, coordinate, and keep you informed.
 
 <!-- Add when the agent connection recording is ready:
-**[▶ Watch the agent connection workflow](assets/agent-observer-workflow.mp4)**
+**[▶ Watch the agent connection workflow](assets/agent-collaboration-workflow.mp4)**
 -->
 
-[![Connecting agents from different harnesses through GitSense Chat.](assets/agent-observer-workflow-placeholder.svg)](assets/agent-observer-workflow-placeholder.svg)
+[![Pairing agents through GitSense Chat.](assets/agent-collaboration-workflow-placeholder.svg)](assets/agent-collaboration-workflow-placeholder.svg)
 
-**[Try it yourself and learn how it works](workflows/agent-observer/README.md)**
+**[Try it yourself and learn how it works](workflows/agent-collaboration/README.md)**
 
 ### Make knowledge available to all
 

@@ -1,4 +1,4 @@
-# Agent Observer
+# Agent Collaboration
 
 Welcome!
 

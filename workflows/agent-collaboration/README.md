@@ -49,7 +49,7 @@ more detail, or ask the lead to read the relevant file when prompted:
 - [observer-prompt.md](observer-prompt.md) is a legacy monitoring draft and is
   not used by the current workflow.
 
-The lead's menu embed references `/--/workflows/agent-observer/help.md`. This
+The lead's menu embed references `/--/workflows/agent-collaboration/help.md`. This
 is a root-relative local workflow URL and is intentionally not copied into the
 lead prompt. Connection reports use the same local workflow server and write
 runtime-specific documents under `reports/`; the script emits an embed pointing
