@@ -197,7 +197,7 @@ function main() {
   const report = [
     '# Pair an existing agent',
     '',
-    'Choose the existing agent to pair. Copy the matching prompt and paste it into that agent\'s composer. Once setup succeeds, a task-scoped Buddy for the agent will be created and added to this Group.',
+    'Choose an existing agent and the Group section where its Buddy should appear. Copy the matching prompt and paste it into that agent\'s composer. Once setup succeeds, its task-scoped Buddy will be added to this Group.',
     '',
     ...entries.flatMap((entry) => [renderEntry(entry, groupId, sections), '']),
     '## Other agent',
@@ -216,6 +216,8 @@ function main() {
     fenceFor(fallback),
     '',
     ':::',
+    '',
+    ':::gsc-action {"label":"Back to help","mode":"message","message":"help"}:::',
     '',
   ].join('\n');
   const reportUrl = writeReport(workflowDirectory, groupId, report);
