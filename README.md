@@ -18,11 +18,11 @@ No proxy or wrapper is required.
 
 ### Give your agents more ways to work with you
 
-Your agents can do more than reply with text. Let them guide you through a workflow, delegate work to a Buddy, or publish a focused display that updates as the work changes.
+Give an agent a role and let it guide you through a workflow. Bring in the agents you already use, ask their Buddies to take on work, and follow updates without switching between conversations.
 
 <img src="assets/agent-collaboration-workflow-placeholder.svg" alt="GitSense Chat agent collaboration overview" width="100%">
 
-**More on screen, less in context.** A compact embed loads the full help menu without asking the agent to generate it again.
+The agent displays the existing help menu with a short embed instead of generating it again.
 
 <table>
   <thead>
