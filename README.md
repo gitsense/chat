@@ -20,11 +20,11 @@ No proxy or wrapper is required.
 
 Bring related agent sessions into a Group so you can follow their work in one place. Add a lead to help coordinate them, and arrange sessions into sections or columns that fit how you work.
 
-In this example, the lead knows how to guide you through pairing your Claude Code and Codex agents with Buddies in Chat.
+In this example, the lead knows how to guide you through pairing your Claude Code and Codex agents with Buddies in GitSense Chat.
 
 <img src="assets/agent-collaboration-workflow.png" alt="GitSense Chat agent collaboration overview" width="100%">
 
-The lead doesn’t need to carry the exact instructions in its context. It can reference saved documentation by location, using a short embed to reuse the content and save tokens.
+The lead doesn’t need to keep the exact instructions in its context. It can reference saved documentation by location, using a short embed to reuse the content and save tokens.
 
 <table>
   <tbody>
