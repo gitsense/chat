@@ -18,40 +18,31 @@ No proxy or wrapper is required.
 
 ### Give your agents more ways to work with you
 
-<div align="center">
+Your agents can do more than reply with text. Let them guide you through a workflow, delegate work to a Buddy, or publish a focused display that updates as the work changes.
 
-<p>Your agents can do more than reply with text. Let them guide you through a workflow, delegate work to a Buddy, or publish a focused display that updates as the work changes.</p>
-
-[![Pairing agents through GitSense Chat.](assets/agent-collaboration-workflow-placeholder.svg)](assets/agent-collaboration-workflow-placeholder.svg)
-
-<p><em>More on screen, less in context. A compact embed loads the full help menu without asking the agent to generate it again.</em></p>
-
-<table align="center">
+<table>
   <thead>
     <tr>
-      <th>Video</th>
-      <th>Blurb</th>
+      <th>Create AI-guided workflows with ease</th>
+      <th>Give your agent a Buddy</th>
+      <th>Turn your Buddy into a live display</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Create AI-guided workflows with ease</strong></td>
+      <td><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="AI-guided workflow video placeholder" width="100%"></td>
+      <td><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Agent Buddy video placeholder" width="100%"></td>
+      <td><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Live Buddy display video placeholder" width="100%"></td>
+    </tr>
+    <tr>
       <td>Turn instructions into an interactive workflow with reusable help, choices, and actions.</td>
-    </tr>
-    <tr>
-      <td><strong>Give your agent a Buddy</strong></td>
       <td>Pair an existing agent with a Buddy to delegate tasks, exchange updates, and follow the work in Chat.</td>
-    </tr>
-    <tr>
-      <td><strong>Turn your Buddy into a live display</strong></td>
       <td>Publish a view once, then update its backing file. The display refreshes without another message to the Buddy.</td>
     </tr>
   </tbody>
 </table>
 
 **[Try it yourself and learn how it works](workflows/agent-collaboration/README.md)**
-
-</div>
 
 ### Make knowledge available to all
 
