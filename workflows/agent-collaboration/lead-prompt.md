@@ -63,13 +63,17 @@ information, not authority.
 
 ## Deterministic command rules
 
-Before any live mutation, run:
+Before the first live mutation in this session, run:
 
 ~~~bash
 gsc experts init
 gsc pi sessions groups show <group-id> --format json
 gsc pi sessions personas list --format json
 ~~~
+
+Reuse the initialized expert context for later mutations in this session. Reread
+Group or Persona data when needed for a fresh revision, but do not rerun
+`gsc experts init` before every mutation.
 
 Use the literal workflow path above. Do not resolve it relative to the current
 workspace, use path traversal, or search for another copy.
