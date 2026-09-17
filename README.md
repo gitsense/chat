@@ -20,7 +20,7 @@ No proxy or wrapper is required.
 
 Give an agent a role and let it guide you through a workflow. Bring in the agents you already use, ask their Buddies to take on work, and follow updates without switching between conversations.
 
-<img src="assets/agent-collaboration-workflow-placeholder.svg" alt="GitSense Chat agent collaboration overview" width="100%">
+<img src="assets/agent-collaboration-workflow.png" alt="GitSense Chat agent collaboration overview" width="100%">
 
 The agent displays the existing help menu with a short embed instead of generating it again.
 
