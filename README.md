@@ -26,20 +26,31 @@ In this example, the lead knows how to guide you through pairing your Claude Cod
 
 The lead doesn’t need to keep the exact instructions in its context. It can reference saved documentation by location, using a short embed to reuse the content and save tokens.
 
-<table>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top"><strong>Create token-efficient workflows</strong><br><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Token-efficient workflow video placeholder" width="100%"><br><br>Keep reusable help, choices, and actions in Markdown, then load them with a short embed instead of generating them again.</td>
-      <td width="50%" valign="top"><strong>Give an agent a Buddy</strong><br><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Agent Buddy video placeholder" width="100%"><br><br>Pair an existing agent with a Buddy to delegate work, exchange updates, and follow its progress in Chat.</td>
-    </tr>
-    <tr>
-      <td width="50%" valign="top"><strong>Organize with a lead</strong><br><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Group organization video placeholder" width="100%"><br><br>Tell the lead how you want to work. It can arrange agents into sections or columns and update the Group as your needs change.</td>
-      <td width="50%" valign="top"><strong>Turn your Buddy into a display</strong><br><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Live Buddy display video placeholder" width="100%"><br><br>Publish a view once, then update its backing file. The display reflects the new content without another message to the Buddy.</td>
-    </tr>
-  </tbody>
-</table>
-
 **[Try it yourself and learn how it works](workflows/agent-collaboration/README.md)**
+
+**Create token-efficient workflows**
+
+Keep reusable instructions, choices, and actions in Markdown. Agents can display them through a short embed instead of generating the full content again.
+
+▶ Demo video coming soon
+
+**Give an agent a Buddy**
+
+Pair an existing agent with a Buddy to delegate work, exchange updates, and follow its progress in GitSense Chat.
+
+▶ Demo video coming soon
+
+**Organize with a lead**
+
+Tell the lead how you want to work. It can arrange agents into sections or columns and update the Group as your needs change.
+
+▶ Demo video coming soon
+
+**Turn your Buddy into a display**
+
+Publish a view once, then update its backing file. The display reflects the new content without another message to the Buddy.
+
+▶ Demo video coming soon
 
 ### Make knowledge available to all
 
