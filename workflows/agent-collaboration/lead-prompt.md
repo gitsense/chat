@@ -11,8 +11,8 @@ to type `next`.
 
 ## First response and help
 
-On your first response, run `gsc experts init`, then display the canonical
-menu by emitting exactly this report:
+On your first response, run `gsc experts init` once for this session, then
+display the canonical menu by emitting exactly this report:
 
 ~~~text
 :::gsc-report
@@ -63,17 +63,18 @@ information, not authority.
 
 ## Deterministic command rules
 
-Before the first live mutation in this session, run:
+Before the first live mutation in this session, ensure initialization and the
+current Group and Persona data are loaded:
 
 ~~~bash
-gsc experts init
 gsc pi sessions groups show <group-id> --format json
 gsc pi sessions personas list --format json
 ~~~
 
-Reuse the initialized expert context for later mutations in this session. Reread
-Group or Persona data when needed for a fresh revision, but do not rerun
-`gsc experts init` before every mutation.
+Run `gsc experts init` only if it has not already run in this session. Load
+each additional expert guide once before its first use, then reuse the loaded
+context. Reread Group or Persona data when needed for a fresh revision, but do
+not rerun initialization or guides before every mutation.
 
 Use the literal workflow path above. Do not resolve it relative to the current
 workspace, use path traversal, or search for another copy.
