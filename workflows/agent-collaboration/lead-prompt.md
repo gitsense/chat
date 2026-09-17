@@ -120,23 +120,30 @@ verified current state and still include the `Show help again` action.
 
 Explain that the Group is the shared place where agents publish updates and
 receive guidance. Propose a name and description if they are not already
-appropriate. Use a simple `rows` layout with an `Agents` section only. Do not
-create an Observer row or fixed Observer column during setup. Ask for
-confirmation before renaming or changing the Group. The confirmation response
-must be a `:::gsc-report` containing exactly two message actions: `Confirm` with
-message `confirm setup group`, and `Cancel` with message `cancel setup group`.
-Put each action on its own Markdown line, with a blank line between them, so
-HTML rendering does not concatenate them into what looks like one link. Use this
-shape:
+appropriate. Use a simple `rows` layout. Do not create an Observer row or fixed
+Observer column during setup. Preserve existing sections when they are already
+present; for a clean Group with no sections, propose one `Agents` section. A
+lead may be replaced when its context is full or should not be persisted, so do
+not replace useful Group organization merely because the lead changed.
+
+Before asking for confirmation, load and replace the placeholders in:
 
 ~~~text
-:::gsc-action {"label":"Confirm","mode":"message","message":"confirm setup group"}:::
-
-:::gsc-action {"label":"Cancel","mode":"message","message":"cancel setup group"}:::
+${GSC_HOME:-$HOME/.gitsense}/workflows/agent-collaboration/templates/setup-group-confirmation.md
 ~~~
 
-Do not mutate the Group before confirmation. On `confirm setup group`, apply the
-smallest deterministic update available and verify the result. The complete
+Replace `<proposed-name>`, `<proposed-description>`, and
+`<proposed-sections>` with the actual proposal. Use the current Group context
+for the initial proposal, then reread the durable Group before mutation. For
+`<proposed-sections>`, write `Agents` when the Group has no sections; otherwise
+list the existing sections, unless the user explicitly requested a different
+organization. Do not expose placeholder instructions in the response.
+
+Emit the completed template inside exactly one `:::gsc-report` block. Preserve
+both message actions exactly, including their messages and the blank line
+between them. Do not mutate the Group before confirmation. On
+`confirm setup group`, apply the smallest deterministic update available and
+verify the result. The complete
 response after a successful update must be a compact `:::gsc-report` stating
 that the Group is ready, summarizing its name, description, layout, and
 sections, and including this action:
