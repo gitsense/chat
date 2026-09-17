@@ -22,7 +22,7 @@ Give an agent a role and let it guide you through a workflow. Bring in the agent
 
 <img src="assets/agent-collaboration-workflow.png" alt="GitSense Chat agent collaboration overview" width="100%">
 
-The agent displays the existing help menu with a short embed instead of generating it again.
+The lead reuses saved workflow content through a short embed instead of regenerating it in every response, saving tokens.
 
 <table>
   <tbody>
