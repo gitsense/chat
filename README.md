@@ -18,9 +18,11 @@ No proxy or wrapper is required.
 
 ### Give your agents more ways to work with you
 
-Give an agent a role and let it guide you through a workflow. Bring in the agents you already use, ask their Buddies to take on work, and follow updates without switching between conversations.
+Bring related agent sessions into a Group so you can follow their work in one place. Add a lead to help coordinate them, and arrange sessions into sections or columns that fit how you work.
 
 <img src="assets/agent-collaboration-workflow.png" alt="GitSense Chat agent collaboration overview" width="100%">
+
+Here, the lead guides you through connecting Claude Code and Codex with Buddies.
 
 The lead reuses saved workflow content through a short embed instead of regenerating it in every response, saving tokens.
 
