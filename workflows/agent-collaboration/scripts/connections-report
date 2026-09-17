@@ -4,6 +4,7 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const { execFileSync } = require('node:child_process');
 
 function usage() {
   console.error('Usage: connections-report --group-id <group-id>');
@@ -99,6 +100,26 @@ function readAdapters(directory, groupId, buddyInstructionsDirectory) {
   });
 }
 
+function loadGroupSections(groupId) {
+  const output = execFileSync('gsc', [
+    'pi', 'sessions', 'groups', 'show', groupId, '--format', 'json',
+  ], { encoding: 'utf8' });
+  const group = JSON.parse(output);
+  return Array.isArray(group.dividers)
+    ? group.dividers.filter((section) => typeof section === 'string' && section.trim())
+    : [];
+}
+
+function shellQuote(value) {
+  return `'${value.replaceAll("'", "'\\''")}'`;
+}
+
+function promptForSection(prompt, groupId, section) {
+  const marker = `  --group-id ${groupId} \\\n`;
+  if (!prompt.includes(marker)) throw new Error('connection prompt is missing the group-id argument');
+  return prompt.replace(marker, `${marker}  --group-section ${shellQuote(section)} \\\n`);
+}
+
 function genericPrompt(groupId) {
   return `Pair this existing agent with a GitSense Buddy in Group ${groupId}.
 
@@ -136,24 +157,26 @@ function action(label, text) {
   })}:::`;
 }
 
-function renderEntry(entry) {
-  const fence = fenceFor(entry.prompt);
+function renderEntry(entry, groupId, sections) {
   const mode = entry.communication === 'bidirectional' ? 'two-way Agent ↔ Buddy messaging' : 'Agent → Buddy updates only';
+  const prompts = sections.length
+    ? sections.map((section) => ({ section, prompt: promptForSection(entry.prompt, groupId, section) }))
+    : [{ section: null, prompt: entry.prompt }];
+  const choices = prompts.flatMap(({ section, prompt }) => {
+    const label = section ? `Copy ${entry.displayName} prompt for ${section}` : `Copy prompt for ${entry.displayName}`;
+    return [
+      section ? `- **${section}** ${action(label, prompt)}` : action(label, prompt),
+      '',
+    ];
+  });
   return [
     `## ${entry.displayName}`,
     '',
     `**Communication:** ${mode}`,
     '',
-    action(`Copy prompt for ${entry.displayName}`, entry.prompt),
-    '',
-    `:::gsc-details ${JSON.stringify({ summary: `Show ${entry.displayName} connection prompt` })}`,
-    '',
-    `${fence}md`,
-    entry.prompt,
-    fence,
-    '',
-    ':::',
-  ].join('\n');
+    sections.length ? '**Choose a Group section:**' : '',
+    ...choices,
+  ].join('\n').trim();
 }
 
 function writeReport(workflowDirectory, groupId, report) {
@@ -172,18 +195,25 @@ function main() {
   const adaptersDirectory = path.join(workflowDirectory, 'supported-agents');
   const buddyInstructionsDirectory = path.join(workflowDirectory, 'buddy-instructions');
   const entries = readAdapters(adaptersDirectory, groupId, buddyInstructionsDirectory);
+  const sections = loadGroupSections(groupId);
   const fallback = genericPrompt(groupId);
   const report = [
     '# Pair an existing agent',
     '',
     'Choose the existing agent to pair. Copy the matching prompt and paste it into that agent\'s composer. Once setup succeeds, a task-scoped Buddy for the agent will be created and added to this Group.',
     '',
-    ...entries.flatMap((entry) => [renderEntry(entry), '']),
+    ...entries.flatMap((entry) => [renderEntry(entry, groupId, sections), '']),
     '## Other agent',
     '',
     '**Communication:** Agent → Buddy updates only',
     '',
-    action('Copy prompt for another agent', fallback),
+    sections.length ? '**Choose a Group section:**' : '',
+    ...(sections.length
+      ? sections.flatMap((section) => [
+        `- **${section}** ${action(`Copy prompt for another agent in ${section}`, promptForSection(fallback, groupId, section))}`,
+        '',
+      ])
+      : [action('Copy prompt for another agent', fallback)]),
     '',
     `:::gsc-details ${JSON.stringify({ summary: 'Show connection prompt for another agent' })}`,
     '',
