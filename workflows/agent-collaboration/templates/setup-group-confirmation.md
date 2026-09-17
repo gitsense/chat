@@ -4,7 +4,7 @@ I will update this Group to:
 
 - **Name:** `<proposed-name>`
 - **Description:** `<proposed-description>`
-- **Layout:** `rows`
+- **Layout:** `<proposed-layout>`
 - **Sections:** `<proposed-sections>`
 
 No changes have been made yet. Continue?
