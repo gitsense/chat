@@ -163,20 +163,16 @@ function renderEntry(entry, groupId, sections) {
   const prompts = sections.length
     ? sections.map((section) => ({ section, prompt: promptForSection(entry.prompt, groupId, section) }))
     : [{ section: null, prompt: entry.prompt }];
-  const choices = prompts.flatMap(({ section, prompt }) => {
+  const choices = prompts.map(({ section, prompt }) => {
     const label = section || `Copy prompt for ${entry.displayName}`;
-    return [
-      section ? `- ${action(label, prompt)}` : action(label, prompt),
-      '',
-    ];
-  });
+    return section ? action(label, prompt) : action(label, prompt);
+  }).join(', ');
   return [
     `## ${entry.displayName}`,
     '',
     `**Communication:** ${mode}`,
     '',
-    sections.length ? '**Choose a Group section:**' : '',
-    ...choices,
+    sections.length ? `**Choose a Group section:** ${choices}` : choices,
   ].join('\n').trim();
 }
 
@@ -210,10 +206,7 @@ function main() {
     '',
     sections.length ? '**Choose a Group section:**' : '',
     ...(sections.length
-      ? sections.flatMap((section) => [
-        `- ${action(section, promptForSection(fallback, groupId, section))}`,
-        '',
-      ])
+      ? [sections.map((section) => action(section, promptForSection(fallback, groupId, section))).join(', ')]
       : [action('Copy prompt for another agent', fallback)]),
     '',
     `:::gsc-details ${JSON.stringify({ summary: 'Show connection prompt for another agent' })}`,
