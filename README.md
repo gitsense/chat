@@ -22,6 +22,8 @@ Your agents can do more than reply with text. Let them guide you through a workf
 
 <img src="assets/agent-collaboration-workflow-placeholder.svg" alt="GitSense Chat agent collaboration overview" width="100%">
 
+**More on screen, less in context.** A compact embed loads the full help menu without asking the agent to generate it again.
+
 <table>
   <thead>
     <tr>
