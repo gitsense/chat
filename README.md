@@ -20,6 +20,8 @@ No proxy or wrapper is required.
 
 Your agents can do more than reply with text. Let them guide you through a workflow, delegate work to a Buddy, or publish a focused display that updates as the work changes.
 
+<img src="assets/agent-collaboration-workflow-placeholder.svg" alt="GitSense Chat agent collaboration overview" width="100%">
+
 <table>
   <thead>
     <tr>
