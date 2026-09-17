@@ -104,7 +104,8 @@ function loadGroupSections(groupId) {
   const output = execFileSync('gsc', [
     'pi', 'sessions', 'groups', 'show', groupId, '--format', 'json',
   ], { encoding: 'utf8' });
-  const group = JSON.parse(output);
+  const payload = JSON.parse(output);
+  const group = payload.group ?? payload;
   return Array.isArray(group.dividers)
     ? group.dividers.filter((section) => typeof section === 'string' && section.trim())
     : [];
