@@ -164,9 +164,9 @@ function renderEntry(entry, groupId, sections) {
     ? sections.map((section) => ({ section, prompt: promptForSection(entry.prompt, groupId, section) }))
     : [{ section: null, prompt: entry.prompt }];
   const choices = prompts.flatMap(({ section, prompt }) => {
-    const label = section ? `Copy ${entry.displayName} prompt for ${section}` : `Copy prompt for ${entry.displayName}`;
+    const label = section || `Copy prompt for ${entry.displayName}`;
     return [
-      section ? `- **${section}** ${action(label, prompt)}` : action(label, prompt),
+      section ? `- ${action(label, prompt)}` : action(label, prompt),
       '',
     ];
   });
@@ -211,7 +211,7 @@ function main() {
     sections.length ? '**Choose a Group section:**' : '',
     ...(sections.length
       ? sections.flatMap((section) => [
-        `- **${section}** ${action(`Copy prompt for another agent in ${section}`, promptForSection(fallback, groupId, section))}`,
+        `- ${action(section, promptForSection(fallback, groupId, section))}`,
         '',
       ])
       : [action('Copy prompt for another agent', fallback)]),
