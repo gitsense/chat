@@ -46,8 +46,7 @@ more detail, or ask the lead to read the relevant file when prompted:
   `--buddy-prompt` and injected into each new Buddy session.
 - [observer-setup.md](observer-setup.md) defines the optional Observer setup
   for the connected agent roster.
-- [observer-prompt.md](observer-prompt.md) is a legacy monitoring draft and is
-  not used by the current workflow.
+
 
 The lead's menu embed references `/--/workflows/agent-collaboration/help.md`. This
 is a root-relative local workflow URL and is intentionally not copied into the
