@@ -16,6 +16,8 @@ goes wrong.
 
 No proxy or wrapper is required.
 
+![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
+
 ## Quick Start
 
 Review the [install script](install.sh), then install the `gsc` CLI:
@@ -195,22 +197,6 @@ For example, when building a GitHub Watcher, create an analyzer to review its AP
 calls and look for evidence that it read the required skill instructions. Use
 the findings to investigate mistakes, refine instructions, and improve future
 runs.
-
-### Take action from the conversation
-
-You can ask an agent to open a diff or run a command. But coming back later can
-mean finding the right session and asking again. GitSense Chat lets agents
-include actions directly in their answers and reports, so you can open files,
-launch applications, or run commands when you're ready.
-
-You control execution permissions, including which commands can run without
-another confirmation and for how long.
-
-Here, a lead brings together findings from multiple sessions and adds actions
-that take you to the work. Opening Zed is already approved for this demo, so
-the diff opens with one click.
-
-![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
 
 ## Start with a lead
 
