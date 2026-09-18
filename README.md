@@ -16,8 +16,6 @@ goes wrong.
 
 No proxy or wrapper is required.
 
-![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
-
 ## Quick Start
 
 Review the [install script](install.sh), then install the `gsc` CLI:
