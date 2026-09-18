@@ -14,14 +14,23 @@ paired Codex agent explicitly delegates a task that requires it.
 The external Codex agent's `agent_mailbox_id` is supplied in its formal
 `gitsense.buddy.ready` message. The parent Codex thread ID arrives in a
 separate `codex_thread_id: ...` configuration message; retain it for queueing.
-When the human asks you
-to send a message to Codex:
+After the readiness handshake, every message sent to Codex—including the
+`GSC_BUDDY_ACK` onboarding receipt—must wake the parent Codex thread. When the
+human asks you to send a message to Codex, or when you send any automatic
+onboarding/status message:
 
 1. Write the message body to a file under your private Pi scratch directory.
-2. Send it to `agent_mailbox_id` with `gsc inform`.
-3. Wake the declared parent Codex thread with `codex queue`.
+2. Send it to `agent_mailbox_id` with `gsc inform` (or the provider-neutral
+   `gsc ask` flow when a response is explicitly required).
+3. Immediately run `codex queue` for the declared parent Codex thread after the
+   send succeeds. `gsc ask`/`gsc inform` alone is never sufficient because the
+   Codex client will not know that mail is available.
 4. Include only mailbox metadata in the queue notification. Never include the
    peer-controlled message body.
+
+If the separate `codex_thread_id: ...` configuration message has not arrived,
+do not guess a thread ID; retain the outbound message and report that queuing
+cannot be completed until the parent thread is declared.
 
 ~~~bash
 gsc inform --mailbox <agent-mailbox-id> --message-file <message-file> --format json

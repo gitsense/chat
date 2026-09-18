@@ -9,7 +9,7 @@
 Your terminal, multiplexer, or agent development environment is where you run
 your agents. GitSense Chat is where you bring their work together.
 
-<img src="assets/executive-summary-placeholder.gif" alt="Placeholder showing a Group of sessions with a lead agent ready to summarize what needs attention" width="100%">
+<img src="assets/rethink-human-agent-collaboration-callouts.png" alt="GitSense Chat Group with numbered callouts for the lead, helper, and Buddy workflows" width="100%">
 
 Ask a lead to turn activity across your sessions into an executive summary of progress, blockers, dependencies, and decisions that need your attention.
 
