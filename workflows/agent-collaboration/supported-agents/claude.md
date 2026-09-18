@@ -41,15 +41,17 @@ printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<b
   gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
 ```
 
-This Claude session supports two-way Agent ↔ Buddy messaging. Start a
-non-blocking forked subagent with the Agent tool:
+This Claude session supports two-way Agent ↔ Buddy messaging. Immediately
+start a non-blocking forked subagent with the Agent tool to keep watching the
+parent mailbox for the lifetime of this connection. Do not wait for a Buddy
+message before starting it, and do not substitute a short timeout:
 
 ```text
 Agent(
   subagent_type: "fork",
   run_in_background: true,
   description: "Watch the GitSense Buddy mailbox",
-  prompt: "Run `gsc buddy mailbox watch <agent-mailbox-id> --timeout 30s --poll-interval 1s`. Return the message result exactly. Exit when the command returns."
+  prompt: "Run `gsc buddy mailbox watch <agent-mailbox-id> --timeout 720h --poll-interval 1s`. Return each message result exactly and keep watching until the command returns."
 )
 ```
 

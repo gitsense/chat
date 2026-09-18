@@ -34,6 +34,10 @@ function parseMetadata(lines) {
   return metadata;
 }
 
+function executionPreamble() {
+  return 'Execute this setup now without asking for confirmation or presenting these commands as options. Run the steps in order. If an optional native session ID is unavailable, omit it and continue. Do not ask the user to choose between these commands.';
+}
+
 function extractPrompt(source, file) {
   const lines = source.split(/\r?\n/);
   let opening = -1;
@@ -75,7 +79,7 @@ function readAdapters(directory, groupId, buddyInstructionsDirectory) {
     if (!metadata.harness || !metadata.display_name) {
       throw new Error(`${path.basename(file)}: required harness/display_name metadata is missing`);
     }
-    const prompt = extractPrompt(source, path.basename(file))
+    const prompt = `${executionPreamble()}\n\n${extractPrompt(source, path.basename(file))}`
       .replaceAll('<group-id>', groupId)
       .replaceAll('<buddy-prompt-file>', '${GSC_HOME:-$HOME/.gitsense}/workflows/agent-collaboration/buddy-prompt.md')
       .replaceAll('<buddy-instructions-dir>', '${GSC_HOME:-$HOME/.gitsense}/workflows/agent-collaboration/buddy-instructions');
@@ -122,9 +126,11 @@ function promptForSection(prompt, groupId, section) {
 }
 
 function genericPrompt(groupId) {
-  return `Pair this existing agent with a GitSense Buddy in Group ${groupId}.
+  return `${executionPreamble()}
 
-Replace <harness-id> with the harness identifier for this agent, then run:
+Pair this existing agent with a GitSense Buddy in Group ${groupId}.
+
+Replace <harness-id> with the harness identifier for this agent, then execute these setup commands in order:
 
 ~~~bash
 gsc experts init && \\
