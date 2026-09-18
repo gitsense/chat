@@ -9,6 +9,10 @@
 Your terminal, multiplexer, or agent development environment is where you run
 your agents. GitSense Chat is where you bring their work together.
 
+<img src="assets/executive-summary-placeholder.gif" alt="Placeholder showing a Group of sessions with a lead agent ready to summarize what needs attention" width="100%">
+
+Ask a lead to turn activity across your sessions into an executive summary of progress, blockers, dependencies, and decisions that need your attention.
+
 Whether you are keeping track of a few sessions or building and maintaining a
 complex system, GitSense Chat helps you coordinate related work, build
 knowledge you and your agents can reuse, and inspect activity when something
