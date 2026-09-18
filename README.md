@@ -40,17 +40,31 @@ Pair an existing agent with a Buddy to delegate work, exchange updates, and foll
 
 ▶ Demo video coming soon
 
-**Organize with a lead**
+## Quick Start
 
-Tell the lead how you want to work. It can arrange agents into sections or columns and update the Group as your needs change.
+Review the [install script](install.sh), then install the `gsc` CLI:
 
-▶ Demo video coming soon
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
 
-**Turn your Buddy into a display**
+This installs the `gsc` CLI. To install and configure GitSense Chat, ask your
+coding agent:
 
-Publish a view once, then update its backing file. The display reflects the new content without another message to the Buddy.
+```text
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
+```
 
-▶ Demo video coming soon
+You can also [build the CLI from source](https://github.com/gitsense/gsc-cli).
+
+GitSense Chat currently supports Pi sessions, which you can organize into Groups
+with lead agents. Follow
+[pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
+Insights, checkpoints, shared knowledge, messaging, lead agents, and group
+observation loops work together.
+
+GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
+same Brains, notes, lessons, and rules.
 
 ### Make knowledge available to all
 
@@ -197,32 +211,6 @@ that take you to the work. Opening Zed is already approved for this demo, so
 the diff opens with one click.
 
 ![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
-
-## Quick Start
-
-Review the [install script](install.sh), then install the `gsc` CLI:
-
-```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
-```
-
-This installs the `gsc` CLI. To install and configure GitSense Chat, ask your
-coding agent:
-
-```text
-Install and configure GitSense Chat for me. Start by running `gsc docs help`.
-```
-
-You can also [build the CLI from source](https://github.com/gitsense/gsc-cli).
-
-GitSense Chat currently supports Pi sessions, which you can organize into Groups
-with lead agents. Follow
-[pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
-Insights, checkpoints, shared knowledge, messaging, lead agents, and group
-observation loops work together.
-
-GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
-same Brains, notes, lessons, and rules.
 
 ## Start with a lead
 
