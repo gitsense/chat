@@ -27,9 +27,9 @@ system.
   </thead>
   <tbody>
     <tr>
-      <td align="center"><a href="agent-collaboration-workflow-video.mov">▶ Watch demo</a></td>
-      <td align="center"><a href="agent-collaboration-workflow-video-2.mov">▶ Watch demo</a></td>
-      <td align="center"><a href="agent-collaboration-workflow.gif">▶ Watch demo</a></td>
+      <td><a href="agent-collaboration-workflow-video.mov"><img src="assets/lead-agent-team-building-video-placeholder.svg" alt="Video placeholder for giving your agents a lead"></a></td>
+      <td><a href="agent-collaboration-workflow-video-2.mov"><img src="assets/session-insight-placeholder.svg" alt="Video placeholder for building token-efficient dashboards"></a></td>
+      <td><a href="agent-collaboration-workflow.gif"><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Video placeholder for giving your agents a Buddy"></a></td>
     </tr>
   </tbody>
 </table>
