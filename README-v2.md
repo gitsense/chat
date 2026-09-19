@@ -20,12 +20,12 @@ system.
 <table>
   <tbody>
     <tr>
-      <td width="50%"><strong>1. Bring together one or dozens of sessions</strong><br><img src="assets/beyond-tabs-group-sessions-placeholder.svg" alt="Video placeholder for bringing together one or dozens of sessions" width="100%"></td>
+      <td width="50%"><strong>1. Find related work and review it together</strong><br><img src="assets/beyond-tabs-group-sessions-placeholder.svg" alt="Video placeholder for finding related work and reviewing it together" width="100%"></td>
       <td width="50%"><strong>2. Give your agents a lead</strong><br><video src="https://github.com/user-attachments/assets/9736afd7-7caf-41c0-91fe-e8e700326654" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
-      <td width="50%"><strong>3. Build token-efficient dashboards</strong><br><a href="agent-collaboration-workflow-video-2.mov"><img src="assets/session-insight-placeholder.svg" alt="Video placeholder for building token-efficient dashboards" width="100%"></a></td>
-      <td width="50%"><strong>4. Give your agents a Buddy</strong><br><a href="agent-collaboration-workflow.gif"><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Video placeholder for giving your agents a Buddy" width="100%"></a></td>
+      <td width="50%"><strong>3. Build rich dashboards with less agent context</strong><br><a href="agent-collaboration-workflow-video-2.mov"><img src="assets/session-insight-placeholder.svg" alt="Video placeholder for building rich dashboards with less agent context" width="100%"></a></td>
+      <td width="50%"><strong>4. Give your agent another agent to call on</strong><br><a href="agent-collaboration-workflow.gif"><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Video placeholder for giving your agent another agent to call on" width="100%"></a></td>
     </tr>
   </tbody>
 </table>
