@@ -9,16 +9,30 @@
 Your terminal, multiplexer, or agent development environment is where you run
 your agents. GitSense Chat is where you bring their work together.
 
+Coordinate related work, build knowledge you and your agents can reuse, and
+inspect activity when something goes wrong—from a few sessions to a complex
+system.
+
+**Works with your existing agents. No proxy or wrapper required.**
+
 <img src="assets/rethink-human-agent-collaboration-callouts.png" alt="GitSense Chat Group with numbered callouts for the lead, helper, and Buddy workflows" width="100%">
 
-Ask a lead to turn activity across your sessions into an executive summary of progress, blockers, dependencies, and decisions that need your attention.
-
-Whether you are keeping track of a few sessions or building and maintaining a
-complex system, GitSense Chat helps you coordinate related work, build
-knowledge you and your agents can reuse, and inspect activity when something
-goes wrong.
-
-No proxy or wrapper is required.
+<table>
+  <thead>
+    <tr>
+      <th width="33%" align="center">1. Give your agents a lead</th>
+      <th width="33%" align="center">2. Build token-efficient dashboards</th>
+      <th width="34%" align="center">3. Give your agents a Buddy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><a href="agent-collaboration-workflow-video.mov">▶ Watch demo</a></td>
+      <td align="center"><a href="agent-collaboration-workflow-video-2.mov">▶ Watch demo</a></td>
+      <td align="center"><a href="agent-collaboration-workflow.gif">▶ Watch demo</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Quick Start
 
