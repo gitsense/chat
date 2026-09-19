@@ -20,7 +20,7 @@ system.
 <table>
   <tbody>
     <tr>
-      <td width="50%"><strong>1. Bring together one or dozens of sessions</strong><br><img src="assets/beyond-tabs-group-sessions-placeholder.svg" alt="Video placeholder for bringing together one or dozens of sessions" width="100%"></td>
+      <td width="50%"><strong>1. Bring together one or dozens of sessions</strong><br><video src="assets/find-related-work-and-review-it-together.mp4" controls muted loop playsinline width="100%"></video></td>
       <td width="50%"><strong>2. Give your agents a lead</strong><br><video src="https://github.com/user-attachments/assets/9736afd7-7caf-41c0-91fe-e8e700326654" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
