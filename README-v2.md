@@ -21,7 +21,7 @@ system.
   <tbody>
     <tr>
       <td width="50%"><strong>1. Find related work and review it together</strong><br><video src="https://github.com/user-attachments/assets/f12dac64-8696-4655-9feb-aaff5e19bd6d" controls muted loop playsinline width="100%"></video></td>
-      <td width="50%"><strong>2. Give your agents a lead</strong><br><video src="https://github.com/user-attachments/assets/5bc4975c-44fe-44b3-92ea-38a7b3463e5d" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>2. Bring together your work with a lead</strong><br><video src="https://github.com/user-attachments/assets/b7ae882f-c528-4117-9c9c-73e70414d17a" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
       <td width="50%"><strong>3. Build rich dashboards with less agent context</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video></td>
