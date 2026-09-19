@@ -60,31 +60,8 @@ observation loops work together.
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
 
-### Give your agents more ways to work with you
 
-Bring related agent sessions into a Group so you can follow their work in one place. Add a lead to help coordinate them, and arrange sessions into sections or columns that fit how you work.
-
-In this example, the lead knows how to guide you through pairing your Claude Code and Codex agents with Buddies in GitSense Chat.
-
-<img src="assets/agent-collaboration-workflow.gif" alt="GitSense Chat agent collaboration overview" width="100%">
-
-The lead doesn’t need to keep the exact instructions in its context. It can reference saved documentation by location, using a short embed to reuse the content and save tokens.
-
-**[Try it yourself and learn how it works](workflows/agent-collaboration/README.md)**
-
-**Create token-efficient workflows**
-
-Keep reusable instructions, choices, and actions in Markdown. Agents can display them through a short embed instead of generating the full content again.
-
-▶ Demo video coming soon
-
-**Give an agent a Buddy**
-
-Pair an existing agent with a Buddy to delegate work, exchange updates, and follow its progress in GitSense Chat.
-
-▶ Demo video coming soon
-
-### Make knowledge available to all
+### Build reusable knowledge for people and agents
 
 Share what you know and what you want your agents to know in a conversation.
 GitSense Chat can turn it into useful context your agents can query. It can
