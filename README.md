@@ -10,7 +10,7 @@ Your terminal, multiplexer, or agent development environment is where you run
 your agents. GitSense Chat is where you bring their work together.
 
 Coordinate related work, build knowledge you and your agents can reuse, and
-inspect activity when something goes wrong—from a few sessions to a complex
+inspect activity when something goes wrong, from a few sessions to a complex
 system.
 
 **Works with your existing agents. No proxy or wrapper required.**
