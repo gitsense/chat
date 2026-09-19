@@ -24,7 +24,7 @@ system.
       <td width="50%"><strong>2. Give your agents a lead</strong><br><video src="https://github.com/user-attachments/assets/5bc4975c-44fe-44b3-92ea-38a7b3463e5d" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
-      <td width="50%"><strong>3. Build rich dashboards with less agent context</strong><br><a href="agent-collaboration-workflow-video-2.mov"><img src="assets/session-insight-placeholder.svg" alt="Video placeholder for building rich dashboards with less agent context" width="100%"></a></td>
+      <td width="50%"><strong>3. Build rich dashboards with less agent context</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video></td>
       <td width="50%"><strong>4. Give your agent another agent to call on</strong><br><a href="agent-collaboration-workflow.gif"><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Video placeholder for giving your agent another agent to call on" width="100%"></a></td>
     </tr>
   </tbody>
