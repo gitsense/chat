@@ -4,7 +4,7 @@
 
 # GitSense: Chat
 
-**A platform for people and agents to work better together.**
+**Rethinking how humans and agents collaborate.**
 
 Your terminal, multiplexer, or agent development environment is where you run
 your agents. GitSense Chat is where you bring their work together.
