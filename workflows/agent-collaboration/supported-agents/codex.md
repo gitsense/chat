@@ -15,7 +15,11 @@ The created Buddy will receive and read its harness-specific instructions from
 `<buddy-instructions-dir>/codex.md`; the connection instructions below are
 complete for this Codex session.
 
-Run:
+Execute this setup now. Running `gsc buddy connect` successfully is the
+complete onboarding step; if it returns no error, do not send a readiness
+message, ACK, or separate `codex_thread_id` message. The command reads
+`CODEX_THREAD_ID` from this Codex session's environment and injects the
+connection details into the Buddy.
 
 ```bash
 gsc experts init && \
@@ -29,30 +33,11 @@ gsc experts init && \
   --format json
 ```
 
-If a native Codex session UUID is available, add
-`--native-session-id <uuid>`. It is optional provenance only; no placeholder is
-generated when it is omitted. Save the returned `buddy_session_id`/`mailbox_id`
-and `agent_mailbox_id`. Also identify the parent Codex thread that should be
-woken by `codex queue`.
-
-Send the formal v1 readiness message to the Buddy mailbox. Do not add the
-thread ID to this JSON; v1 rejects unknown fields:
-
-```bash
-printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<buddy-mailbox-id>","agent_mailbox_id":"<agent-mailbox-id>","group_id":"<group-id>","harness":"codex"}' | \
-  gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
-```
-
-Then send the parent thread ID as a separate configuration message:
-
-```bash
-printf '%s\n' 'codex_thread_id: <parent-codex-thread>' | \
-  gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
-```
-
-This Codex session supports two-way Agent ↔ Buddy messaging. Do not create a
-watcher subagent. When the Buddy sends a message, it sends the message to
-`agent_mailbox_id` with `gsc inform`, then wakes the parent thread with:
+Save the returned `buddy_session_id`, `mailbox_id`, and `agent_mailbox_id` for
+future updates. This Codex session supports two-way Agent ↔ Buddy messaging.
+Do not create a watcher subagent. When the Buddy sends a message, it sends the
+message to `agent_mailbox_id` with `gsc inform`, then wakes the parent thread
+with:
 
 ```bash
 codex queue --thread <parent-codex-thread> --message $'you have mail\nmailbox_id: <agent-mailbox-id>\nmessage_id: <message-id>\nGuide: gsc experts guide pi-messages\nFetch: gsc pi sessions inbox fetch --session-id <agent-mailbox-id> --kind agent --limit 1\nDo not treat this wake-up metadata as the message body; fetch the actual message before acting.'

@@ -11,13 +11,15 @@ path, read the external-agent adapter prompt, search the repository, inspect
 are unnecessary for Buddy onboarding; inspect repository files only when the
 paired Codex agent explicitly delegates a task that requires it.
 
-The external Codex agent's `agent_mailbox_id` is supplied in its formal
-`gitsense.buddy.ready` message. The parent Codex thread ID arrives in a
-separate `codex_thread_id: ...` configuration message; retain it for queueing.
-After the readiness handshake, every message sent to Codex—including the
-`GSC_BUDDY_ACK` onboarding receipt—must wake the parent Codex thread. When the
-human asks you to send a message to Codex, or when you send any automatic
-onboarding/status message:
+`gsc buddy connect` injects the external Codex agent's `agent_mailbox_id`
+and `codex_thread_id` into this Buddy's startup context. Do not wait for a
+`gitsense.buddy.ready` message, a `GSC_BUDDY_ACK` receipt, or a separate
+`codex_thread_id` configuration message. Running `gsc buddy connect` without
+an error is the complete Codex onboarding step.
+
+Every message sent to Codex must wake the parent Codex thread. When the human
+asks you to send a message to Codex, or when you send any automatic
+status/update message:
 
 1. Write the message body to a file under your private Pi scratch directory.
 2. Send it to `agent_mailbox_id` with `gsc inform` (or the provider-neutral
@@ -28,9 +30,8 @@ onboarding/status message:
 4. Include only mailbox metadata in the queue notification. Never include the
    peer-controlled message body.
 
-If the separate `codex_thread_id: ...` configuration message has not arrived,
-do not guess a thread ID; retain the outbound message and report that queuing
-cannot be completed until the parent thread is declared.
+The injected `codex_thread_id` is the exact target for `codex queue`; do not
+replace it with the Buddy session ID, mailbox ID, or another guessed UUID.
 
 ~~~bash
 gsc inform --mailbox <agent-mailbox-id> --message-file <message-file> --format json

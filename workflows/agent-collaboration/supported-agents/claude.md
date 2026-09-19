@@ -32,32 +32,27 @@ gsc experts init && \
 If a native Claude session UUID is available, add
 `--native-session-id <uuid>`. It is optional provenance only; no placeholder is
 generated when it is omitted. Save the returned `buddy_session_id`/`mailbox_id`
-and `agent_mailbox_id`.
+and `agent_mailbox_id`. A successful `gsc buddy connect` completes onboarding;
+do not send a readiness message, ACK, or separate routing message.
 
-Send the formal readiness message to the Buddy mailbox:
-
-```bash
-printf '%s\n' '{"type":"gitsense.buddy.ready","version":1,"buddy_mailbox_id":"<buddy-mailbox-id>","agent_mailbox_id":"<agent-mailbox-id>","group_id":"<group-id>","harness":"claude"}' | \
-  gsc inform --mailbox <buddy-mailbox-id> --message-file - --format json
-```
-
-This Claude session supports two-way Agent ↔ Buddy messaging. Immediately
-start a non-blocking forked subagent with the Agent tool to keep watching the
-parent mailbox for the lifetime of this connection. Do not wait for a Buddy
-message before starting it, and do not substitute a short timeout:
+This Claude session supports best-effort two-way Agent ↔ Buddy messaging.
+Immediately start a non-blocking forked subagent with the Agent tool:
 
 ```text
 Agent(
   subagent_type: "fork",
   run_in_background: true,
   description: "Watch the GitSense Buddy mailbox",
-  prompt: "Run `gsc buddy mailbox watch <agent-mailbox-id> --timeout 720h --poll-interval 1s`. Return each message result exactly and keep watching until the command returns."
+  prompt: "Run `gsc buddy mailbox watch <agent-mailbox-id> --timeout 720h --poll-interval 1s`. Return the message result exactly and exit when the command returns."
 )
 ```
 
-The fork wakes this Claude session when a Buddy message arrives. Use
-`gsc inform --mailbox <buddy-mailbox-id>` for future updates. Do not use native
-callbacks, partner contracts, or lead-mediated communication.
+The watcher claims one message and exits; it is not a permanent watcher. After
+every result, fetch/process/complete the claimed delivery, then start a
+replacement watcher fork for later messages. Replace the watcher fork, not the
+Buddy process. Agent → Buddy updates are the reliable default; Buddy → Claude
+delivery is best effort and depends on this replacement loop. Do not use
+native callbacks, partner contracts, or lead-mediated communication.
 ~~~
 
 Claude Code remains the source of its private transcript and local work. The
