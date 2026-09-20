@@ -15,7 +15,7 @@ system.
 
 **Works with your existing agents. No proxy or wrapper required.**
 
-<img src="assets/rethink-human-agent-collaboration-callouts.png" alt="GitSense Chat Group with numbered callouts for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
+<img src="assets/rethink-human-agent-collaboration-app.png" alt="GitSense Chat Group with numbered callouts for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
 <table>
   <tbody>
@@ -52,37 +52,6 @@ with lead agents. Follow
 [pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
 Insights, checkpoints, shared knowledge, messaging, lead agents, and group
 observation loops work together.
-
-### Bring another agent's session into GitSense Chat
-
-Near-real-time synchronization for other agent runtimes is not available yet.
-As a temporary workaround, use [txcript](https://github.com/gitsense/txcript) to
-convert a supported session into a Pi session:
-
-```bash
-cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
-
-txcript list --from claude_code
-txcript continue <session-id> \
-  --from <harness> \
-  --with pi \
-  --no-resume
-```
-
-Start the Pi session watcher if it is not already running:
-
-```bash
-gsc pi sessions sync start -d
-```
-
-The converted session will become visible in GitSense Chat shortly after the
-next successful sync. Repeat the `txcript continue` command when you want to
-refresh the snapshot; this workaround does not keep the original session in
-sync.
-
-Any agent that can run `gsc` can message an agent in GitSense Chat. Use `gsc ask`
-or `gsc inform` for agent-to-agent communication. Bidirectional Buddy
-connections are currently supported for Claude and Codex.
 
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
