@@ -6,6 +6,13 @@
 
 **Rethinking how humans and agents collaborate.**
 
+### Give your agents more ways to help
+
+Turn agent responses into actions. Open terminals, review diffs, launch
+spreadsheets, and move from an answer to the next step with one click.
+
+<img src="assets/agent-actions-demo-placeholder.svg" alt="Placeholder for a GIF showing agents offering actions to open a terminal, review a diff in Zed, and open a spreadsheet" width="100%">
+
 Your terminal, multiplexer, or agent development environment is where you run
 your agents. GitSense Chat is where you bring their work together.
 
