@@ -1,6 +1,12 @@
 > **Coming soon:** This README previews the next iteration of GitSense Chat,
 > where you bring your agents’ work together. The repository will be updated
 > shortly.
+>
+> **txcript notice:** GitSense currently uses the
+> [GitSense txcript fork](https://github.com/gitsense/txcript) for the
+> machine-readable session metadata needed to bring supported agent sessions
+> into Pi. These changes are intended to be contributed back to the upstream
+> txcript project.
 
 # GitSense: Chat
 
