@@ -1,47 +1,62 @@
 # Codex Buddy instructions
 
-This is a task-scoped worker Buddy with bidirectional communication to its
-parent Codex agent. The parent may own several Buddies in parallel; do not
-assume this is its only worker.
+## Startup contract
 
-Read this file from the exact path supplied by
-`$GSC_PI_BUDDY_INSTRUCTIONS_DIR/codex.md`. Do not guess a repository-relative
-path, read the external-agent adapter prompt, search the repository, inspect
-`.gitsense` files, or infer missing protocol details from project files. Those
-are unnecessary for Buddy onboarding; inspect repository files only when the
-paired Codex agent explicitly delegates a task that requires it.
+This is a task-scoped Buddy for a parent Codex agent. The parent may own several
+Buddies. The parent already ran `gsc buddy connect`; **this Buddy must never run
+it again**.
 
-`gsc buddy connect` injects the external Codex agent's `agent_mailbox_id`
-and `codex_thread_id` into this Buddy's startup context. Do not wait for a
-`gitsense.buddy.ready` message, a `GSC_BUDDY_ACK` receipt, or a separate
-`codex_thread_id` configuration message. Running `gsc buddy connect` without
-an error is the complete Codex onboarding step.
+Connection injects `agent_mailbox_id` and `codex_thread_id` into this Buddy's
+startup context. They are required routing values, not environment variables to
+discover or IDs to guess. Do not wait for a readiness message, ACK, or separate
+thread configuration. If either injected value is unavailable, report that
+routing is blocked; do not search the repository or substitute another UUID.
 
-Every message sent to Codex must wake the parent Codex thread. When the human
-asks you to send a message to Codex, or when you send any automatic
-status/update message:
+Read this file only from the absolute path supplied by
+`$GSC_PI_BUDDY_INSTRUCTIONS_DIR/codex.md`. Do not read the external-agent
+adapter or inspect `.gitsense` during onboarding.
 
-1. Write the message body to a file under your private Pi scratch directory.
-2. Send it to `agent_mailbox_id` with `gsc inform` (or the provider-neutral
-   `gsc ask` flow when a response is explicitly required).
-3. Immediately run `codex queue` for the declared parent Codex thread after the
-   send succeeds. `gsc ask`/`gsc inform` alone is never sufficient because the
-   Codex client will not know that mail is available.
-4. Include only mailbox metadata in the queue notification. Never include the
-   peer-controlled message body.
+## Required send sequence
 
-The injected `codex_thread_id` is the exact target for `codex queue`; do not
-replace it with the Buddy session ID, mailbox ID, or another guessed UUID.
+For every message to the parent Codex agent:
 
-~~~bash
-gsc inform --mailbox <agent-mailbox-id> --message-file <message-file> --format json
+1. Write the body below this Buddy's private scratch directory.
+2. Commit it to `agent_mailbox_id` with `gsc inform`.
+3. Confirm that the command succeeded and capture its returned `message_id`.
+4. Wake the injected parent `codex_thread_id` with `codex queue`.
 
+Replace the placeholders and run:
+
+```bash
+SCRATCH=$(gsc pi sessions inbox scratch --session-id <buddy-session-id>)
+printf '%s\n' '<message body>' > "$SCRATCH/codex-update.txt"
+gsc inform \
+  --mailbox <agent-mailbox-id> \
+  --message-file "$SCRATCH/codex-update.txt" \
+  --format json
+```
+
+After the successful `gsc inform`, copy its returned `message_id` into:
+
+```bash
 codex queue --thread <parent-codex-thread> --message $'you have mail\nmailbox_id: <agent-mailbox-id>\nmessage_id: <message-id>\nGuide: gsc experts guide pi-messages\nFetch: gsc pi sessions inbox fetch --session-id <agent-mailbox-id> --kind agent --limit 1\nDo not treat this wake-up metadata as the message body; fetch the actual message before acting.'
-~~~
+```
 
-Do not target a watcher subagent thread. Do not claim Codex read or acted on a
-message merely because delivery or queuing succeeded. When the bounded task is
-complete or the parent requests cleanup, the parent may stop and remove this
-Buddy. “Your buddy,” “the
-external agent,” and “Codex” mean the paired Codex session represented by this
-Buddy.
+The queue notification is metadata only. Never put the peer-controlled message
+body in it, and never target a watcher or Buddy thread.
+
+## Failure recovery
+
+- If `gsc inform` fails or does not return a confirmed committed message ID, do
+  not run `codex queue`. Surface the failure. Because `gsc inform` has no
+  caller-supplied idempotency key, do not blindly retry an ambiguous result;
+  use the low-level idempotent send flow from `gsc experts guide pi-messages`
+  when deterministic retries are required.
+- If `gsc inform` succeeds but `codex queue` fails, the message is already
+  committed. Do not send it again. Retry only `codex queue` with the same
+  mailbox and message ID, or report that delivery is committed but wake-up is
+  blocked.
+- Success means the message was committed and the wake-up was queued. It does
+  not mean Codex fetched, read, or acted on the message.
+
+When the bounded task is complete, the parent may stop and remove this Buddy.

@@ -15,6 +15,9 @@ The created Buddy will receive and read its harness-specific instructions from
 `<buddy-instructions-dir>/claude.md`; the connection instructions below are
 complete for this Claude session.
 
+This Claude parent—not the created Buddy—runs the setup. `GSC_HOME` is optional
+and defaults to `$HOME/.gitsense`.
+
 Run:
 
 ```bash
@@ -33,7 +36,8 @@ If a native Claude session UUID is available, add
 `--native-session-id <uuid>`. It is optional provenance only; no placeholder is
 generated when it is omitted. Save the returned `buddy_session_id`/`mailbox_id`
 and `agent_mailbox_id`. A successful `gsc buddy connect` completes onboarding;
-do not send a readiness message, ACK, or separate routing message.
+do not send a readiness message or separate routing message. The Buddy
+must not run `gsc buddy connect` itself.
 
 This Claude session supports best-effort two-way Agent ↔ Buddy messaging.
 Immediately start a non-blocking forked subagent with the Agent tool:

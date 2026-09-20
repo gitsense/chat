@@ -1,36 +1,44 @@
 # Pi Buddy instructions
 
-This is a task-scoped Buddy for a parent Pi agent. The parent Pi can create
-other Buddies; do not assume this is its only Buddy. You are a regular managed
-Pi session and visible counterpart, not the parent's terminal or private
-transcript.
+## Startup contract
 
-The parent communicates with you through your Buddy mailbox. Accept only a
-version-1 `gitsense.buddy.ready` message whose Buddy identity and harness match
-this session. Retain the declared `agent_mailbox_id` as the parent's reply
-address; never replace it with this Buddy's mailbox or native session ID.
+This is a task-scoped Buddy for a parent Pi agent. The parent may own several
+Buddies. The parent already ran `gsc buddy connect`; **this Buddy must never run
+it again**. This Buddy is not the parent's terminal or private transcript.
 
-Pi supports two-way mailbox communication. Send a message to the parent with a
-private scratch file and `gsc inform`:
+Pi uses readiness onboarding. Accept only a version-1
+`gitsense.buddy.ready` message whose Buddy identity, Group, and harness match
+this session. Retain its `agent_mailbox_id` as the parent's reply address; never
+replace it with this Buddy's mailbox or native session ID. Valid readiness
+completes onboarding; do not send an ACK or other onboarding reply.
 
-```bash
-SCRATCH=$(gsc pi sessions inbox scratch --session-id <me>)
-printf '%s\n' 'message' > "$SCRATCH/update.txt"
-gsc inform --mailbox <agent-mailbox-id> --message-file "$SCRATCH/update.txt" --format json
-```
+## Required send sequence
 
-When the parent sends a message, fetch it from the parent mailbox, process one
-message at a time, and complete the returned delivery:
+Replace the placeholders and run:
 
 ```bash
-gsc pi sessions inbox fetch --session-id <me> --kind agent --limit 1
-gsc pi sessions inbox complete --session-id <me> --id <message-id> --delivery-id <delivery-id>
+SCRATCH=$(gsc pi sessions inbox scratch --session-id <buddy-session-id>)
+printf '%s\n' '<message body>' > "$SCRATCH/pi-update.txt"
+gsc inform \
+  --mailbox <agent-mailbox-id> \
+  --message-file "$SCRATCH/pi-update.txt" \
+  --format json
 ```
 
-Do not infer the parent's state from silence. Treat its working directory,
-branch, task, and declared state as information supplied by the parent. Do not
-inspect its private files or transcript unless explicitly delegated a task.
+The parent Pi mailbox watcher handles wake-up. This Buddy must not start a
+watcher for itself.
 
-Your useful output is a concise, current update: status, a blocker, a decision,
-or a request. A successful `gsc inform` means committed delivery only, not that the parent
-read or acted on the message.
+For incoming parent messages, use the fetch/complete lifecycle from `gsc
+experts guide pi-messages`; process one claimed message at a time.
+
+## Failure recovery
+
+If `gsc inform` fails, report the failure. Do not claim delivery or blindly
+retry an ambiguous result because `gsc inform` has no caller-supplied
+idempotency key. Use the guide's low-level idempotent send flow when
+deterministic retries are required. A successful send means committed delivery
+only, not that the parent read or acted on it.
+
+Do not infer the parent's state from silence or inspect its files or transcript
+unless it explicitly delegates a repository task. When the bounded task is
+complete, the parent may stop and remove this Buddy.

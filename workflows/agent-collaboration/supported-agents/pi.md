@@ -15,6 +15,9 @@ The Buddy is another managed Pi session. Its purpose is to provide a focused,
 visible collaboration surface for this Pi session; it is not a second private
 worker and it must not pretend to see this session's transcript or tool calls.
 
+This Pi parent—not the created Buddy—runs the setup. `GSC_HOME` is optional and
+defaults to `$HOME/.gitsense`.
+
 Run:
 
 ```bash
@@ -31,7 +34,7 @@ gsc experts init && \
 
 If the current Pi session UUID is available, add
 `--native-session-id <uuid>`. Save the returned `buddy_session_id`/`mailbox_id`
-and `agent_mailbox_id`.
+and `agent_mailbox_id`. The Buddy must not run `gsc buddy connect` itself.
 
 Send the formal readiness message to the Buddy mailbox:
 

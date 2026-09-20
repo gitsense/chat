@@ -16,6 +16,11 @@ harness identifier. Add an adapter to customize a harness with native-session
 discovery, richer instructions, Persona tags, communication capability, and
 limitations. An adapter does not add runtime support by itself.
 
+Environment ownership must also be explicit: `GSC_HOME` is optional and falls
+back to `$HOME/.gitsense`; `GSC_PI_BUDDY_INSTRUCTIONS_DIR` is injected for the
+Buddy to read; and Codex's `CODEX_THREAD_ID` is parent-side routing input
+captured during connection. Routing IDs are not values the Buddy should guess.
+
 Keep each adapter focused on:
 
 - the exact harness identifier accepted by `gsc buddy connect`;
@@ -31,13 +36,20 @@ When a user wants harness-specific behavior, show a proposed `<harness>.md`
 file and wait for confirmation before writing it. Until confirmed, use the
 generic fallback.
 
-The external agent runs `gsc buddy connect`, which creates a new task-scoped
-Buddy as a regular managed Pi session and returns its Buddy mailbox plus an
-optional parent `agent_mailbox_id`. Multiple task-scoped Buddies may share the
-parent mailbox. The command returns immediately by default with
-`status: "starting"`. The external agent then sends a versioned
-`gitsense.buddy.ready` JSON message with `gsc inform`, including
-`agent_mailbox_id`.
+The external parent agent—not the created Buddy—runs `gsc buddy connect`. The
+command creates a task-scoped managed Pi Buddy and returns its Buddy mailbox
+plus an optional parent `agent_mailbox_id`. Multiple task-scoped Buddies may
+share the parent mailbox. The Buddy must never reconnect itself or repeat
+parent-side setup.
+
+Onboarding depends on the harness:
+
+- Pi and generic/legacy harnesses send a version-1 `gitsense.buddy.ready`
+  message after connection so the Buddy can retain parent routing metadata.
+  Valid readiness completes onboarding; the Buddy sends no ACK.
+- Claude and Codex complete onboarding through `gsc buddy connect`, which
+  injects parent routing metadata into the Buddy. They send no readiness or
+  separate routing message.
 
 Pi, Claude, and Codex support two-way Agent ↔ Buddy messaging through their
 mailbox wake mechanisms. Connecting again creates another Buddy; it is not a
