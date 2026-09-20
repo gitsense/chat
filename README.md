@@ -13,9 +13,11 @@ Coordinate related work, build knowledge you and your agents can reuse, and
 inspect activity when something goes wrong, from a few sessions to a complex
 system.
 
-**Works with your existing agents. No proxy or wrapper required.**
+<p align="center"><strong>Works with your existing agents. No proxy or wrapper required.</strong></p>
 
-<img src="assets/rethink-human-agent-collaboration-app.png" alt="GitSense Chat Group with numbered callouts for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
+<img src="assets/rethink-human-agent-collaboration-app.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
+
+<img src="assets/rethink-human-agent-collaboration-tui.png" alt="GitSense Chat with four agents working together in a terminal" width="100%">
 
 <table>
   <tbody>
