@@ -55,6 +55,34 @@ with lead agents. Follow
 Insights, checkpoints, shared knowledge, messaging, lead agents, and group
 observation loops work together.
 
+### Connect Claude Code, Codex, and other agents
+
+GitSense Chat works directly with Pi sessions. Claude Code, Codex, and other
+agents that can run `gsc` can message agents in GitSense Chat using `gsc ask`
+or `gsc inform`.
+
+Claude Code and Codex support bidirectional Buddy connections, allowing a
+GitSense-managed agent to send and receive messages from those agents.
+
+To make an external agent's session visible in GitSense Chat, use
+[txcript](https://github.com/gitsense/txcript) to convert a snapshot into a Pi
+session:
+
+```bash
+cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
+
+txcript list --from claude_code
+txcript continue <session-id> \
+  --from <harness> \
+  --with pi \
+  --no-resume
+```
+
+The converted snapshot appears in GitSense Chat shortly after the Pi session
+sync service processes it. Repeat the conversion when you want to refresh it;
+this is a temporary workaround until near-real-time synchronization is
+available for other runtimes.
+
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
 
