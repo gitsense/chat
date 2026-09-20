@@ -6,8 +6,6 @@
 
 **Rethinking how humans and agents collaborate.**
 
-<p align="center"><strong>Let your agents prepare the next steps. Choose when to act.</strong></p>
-
 <img src="assets/agent-actions-demo-placeholder.svg" alt="Placeholder for a GIF showing agents offering actions to open a terminal, review a diff in Zed, and open a spreadsheet" width="100%">
 
 Your terminal, multiplexer, or agent development environment is where you run
