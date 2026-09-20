@@ -15,7 +15,7 @@ system.
 
 <p align="center"><strong>Works with your existing agents. No proxy or wrapper required.</strong></p>
 
-<img src="assets/rethink-human-agent-collaboration-app.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
+<img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
 <img src="assets/rethink-human-agent-collaboration-tui.png" alt="GitSense Chat Group alongside four agents working together in a terminal" width="100%">
 
