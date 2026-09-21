@@ -6,7 +6,7 @@
 
 <p align="center"><strong>Reimagining human-agent collaboration</strong></p>
 
-<video src="https://github.com/user-attachments/assets/19caaa91-8cc5-4184-b931-37933316a30b" controls muted loop playsinline width="100%"></video>
+<video src="https://github.com/user-attachments/assets/d24909a6-cf15-410f-8fc5-618f5c349adf" controls muted loop playsinline width="100%"></video>
 
 ## Why GitSense Chat
 
