@@ -6,7 +6,7 @@
 
 <p align="center"><strong>Reimagining human-agent collaboration</strong></p>
 
-<img src="assets/agent-actions-demo-placeholder.svg" alt="Placeholder for a GIF showing agents offering actions to open a terminal, review a diff in Zed, and open a spreadsheet" width="100%">
+<video src="https://github.com/user-attachments/assets/19caaa91-8cc5-4184-b931-37933316a30b" controls muted loop playsinline width="100%"></video>
 
 ## Why GitSense Chat
 
