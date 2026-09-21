@@ -25,9 +25,14 @@ No proxy or wrapper required.
 
 <p align="center"><strong>Bring related work, shared knowledge, and agent coordination into one place.</strong></p>
 
-<img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
-
-<img src="assets/rethink-human-agent-collaboration-tui-callouts.png" alt="GitSense Chat Group alongside four agents working together in a terminal" width="100%">
+<table>
+  <tbody>
+    <tr>
+      <td width="50%"><img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%"></td>
+      <td width="50%"><img src="assets/rethink-human-agent-collaboration-tui-callouts.png" alt="GitSense Chat Group alongside four agents working together in a terminal" width="100%"></td>
+    </tr>
+  </tbody>
+</table>
 
 <table>
   <tbody>
