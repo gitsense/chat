@@ -4,7 +4,7 @@
 
 # GitSense: Chat
 
-<p align="center"><strong>Reimagining human-agent collaboration</strong></p>
+**Reimagining human-agent collaboration**
 
 
 
