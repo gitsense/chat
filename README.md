@@ -31,7 +31,7 @@ No proxy or wrapper required.
 
 <img src="assets/agent-communication-demo-placeholder.svg" alt="Video placeholder showing agents communicating and working together across agent environments" width="100%">
 
-<p align="center"><strong>Bring related work, shared knowledge, and agent coordination into one place.</strong></p>
+<p align="center"><strong>Go beyond tabs and terminal panes. Organize around the work.</strong></p>
 
 <img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
@@ -43,7 +43,7 @@ No proxy or wrapper required.
     </tr>
     <tr>
       <td width="50%"><strong>3. Build rich dashboards with less agent context</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
-      <td width="50%"><strong>4. Give your agent another agent to call on</strong><br><a href="agent-collaboration-workflow.gif"><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Video placeholder for giving your agent another agent to call on" width="100%"></a></td>
+      <td width="50%"><strong>4. Give each agent a recognizable identity</strong><br><a href="agent-collaboration-workflow.gif"><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Video placeholder for giving your agent another agent to call on" width="100%"></a></td>
     </tr>
   </tbody>
 </table>
