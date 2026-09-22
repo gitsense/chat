@@ -19,7 +19,7 @@ system.
 
 No proxy or wrapper required.
 
-### Same agents. More ways to work together
+<h3 align="center">Same agents. More ways to work together</h3>
 
 <video controls muted loop playsinline width="100%">
   <source src="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac" type="video/mp4">
@@ -27,11 +27,11 @@ No proxy or wrapper required.
 
 <p align="center"><a href="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac">Download the video if it does not play</a></p>
 
-### Same agents. More ways to communicate together
+<h3 align="center">Same agents. More ways to communicate together</h3>
 
 <img src="assets/agent-communication-demo-placeholder.svg" alt="Video placeholder showing agents communicating and working together across agent environments" width="100%">
 
-<p align="center"><strong>Go beyond tabs and terminal panes. Organize around the work.</strong></p>
+<h3 align="center">Go beyond tabs and terminal panes. Organize around the work.</h3>
 
 <img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
