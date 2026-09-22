@@ -23,6 +23,8 @@ No proxy or wrapper required.
 
 <video src="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac" controls muted loop playsinline width="100%"></video>
 
+<p align="center"><a href="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac">Download the video if it does not play</a></p>
+
 <p align="center"><strong>Bring related work, shared knowledge, and agent coordination into one place.</strong></p>
 
 <table>
