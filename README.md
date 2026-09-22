@@ -41,7 +41,7 @@ No proxy or wrapper required.
 <table>
   <tbody>
     <tr>
-      <td width="50%"><strong>1. Find related work and review it together</strong><br><video src="https://github.com/user-attachments/assets/f12dac64-8696-4655-9feb-aaff5e19bd6d" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>1. Find related work and review it together</strong><br><video src="https://github.com/user-attachments/assets/7e18ad89-fafc-42fc-934b-57fd2b113fd6" controls muted loop playsinline width="100%"></video></td>
       <td width="50%"><strong>2. Bring together your work with a lead</strong><br><video src="https://github.com/user-attachments/assets/b7ae882f-c528-4117-9c9c-73e70414d17a" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
