@@ -19,7 +19,7 @@ system.
 
 No proxy or wrapper required.
 
-<p align="center"><strong>Same agents. More ways to work together.</strong></p>
+### Same agents. More ways to work together
 
 <video controls muted loop playsinline width="100%">
   <source src="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac" type="video/mp4">
@@ -27,7 +27,7 @@ No proxy or wrapper required.
 
 <p align="center"><a href="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac">Download the video if it does not play</a></p>
 
-<p align="center"><strong>Same agents. More ways to communicate together.</strong></p>
+### Same agents. More ways to communicate together
 
 <img src="assets/agent-communication-demo-placeholder.svg" alt="Video placeholder showing agents communicating and working together across agent environments" width="100%">
 
