@@ -27,16 +27,13 @@ No proxy or wrapper required.
 
 <p align="center"><a href="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac">Download the video if it does not play</a></p>
 
+<p align="center"><strong>Same agents. More ways to communicate together.</strong></p>
+
+<img src="assets/agent-communication-demo-placeholder.svg" alt="Video placeholder showing agents communicating and working together across agent environments" width="100%">
+
 <p align="center"><strong>Bring related work, shared knowledge, and agent coordination into one place.</strong></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td width="50%"><img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%"></td>
-      <td width="50%"><img src="assets/rethink-human-agent-collaboration-tui-callouts.png" alt="GitSense Chat Group alongside four agents working together in a terminal" width="100%"></td>
-    </tr>
-  </tbody>
-</table>
+<img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
 <table>
   <tbody>
