@@ -4,7 +4,7 @@
 
 # GitSense: Chat
 
-**Reimagining human-agent collaboration**
+**Reimagining how people and agents work together**
 
 
 
@@ -31,7 +31,7 @@ No proxy or wrapper required.
 
 <img src="assets/agent-communication-demo-placeholder.svg" alt="Video placeholder showing agents communicating and working together across agent environments" width="100%">
 
-<h3 align="center">Go beyond tabs and terminal panes. Organize around the work.</h3>
+<h3 align="center">Go beyond tabs and terminal panes. Organize around the work</h3>
 
 <img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
