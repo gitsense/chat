@@ -21,7 +21,7 @@ No proxy or wrapper required.
 
 <p align="center"><strong>Same agents. More ways to work together.</strong></p>
 
-<video src="https://github.com/user-attachments/assets/d24909a6-cf15-410f-8fc5-618f5c349adf" controls muted loop playsinline width="100%"></video>
+<video src="https://github.com/user-attachments/assets/8efd81e6-ef9e-4e18-8d24-8759cf0efccb" controls muted loop playsinline width="100%"></video>
 
 <p align="center"><strong>Bring related work, shared knowledge, and agent coordination into one place.</strong></p>
 
