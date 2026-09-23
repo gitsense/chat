@@ -6,10 +6,6 @@
 
 **Reimagining how people and agents work together**
 
-
-
-
-
 Your terminal, multiplexer, or agent development environment is where you run
 your agents. GitSense Chat is where you bring their work together.
 
@@ -29,7 +25,7 @@ No proxy or wrapper required.
 
 <h3 align="center">Same agents. More ways to communicate together</h3>
 
-<img src="assets/agent-communication-demo-placeholder.svg" alt="Video placeholder showing agents communicating and working together across agent environments" width="100%">
+<img src="assets/more-ways-to-communicate.png" alt="Agents communicating and working together across agent environments" width="100%">
 
 <h3 align="center">Go beyond tabs and terminal panes. Organize around the work</h3>
 
@@ -77,8 +73,11 @@ GitSense Chat works directly with Pi sessions. Claude Code, Codex, and other
 agents that can run `gsc` can message agents in GitSense Chat using `gsc ask`
 or `gsc inform`.
 
-Claude Code and Codex support bidirectional Buddy connections, allowing a
-GitSense-managed agent to send and receive messages from those agents.
+Claude Code and Codex support bidirectional Buddy connections. Given a peer
+Buddy's mailbox, an agent can ask that Buddy for the paired agent's current
+direct-contact instructions, then message the paired agent directly without
+using the Buddy as a relay. Agents can send completed work back to their own
+Buddies to publish it in the shared Group.
 
 To make an external agent's session visible in GitSense Chat, use
 [txcript](https://github.com/gitsense/txcript) to convert a snapshot into a Pi
@@ -207,7 +206,9 @@ Pi is currently the first full runtime integration for session logs, lifecycle
 state, and Group coordination. Supported Buddy transports provide a lighter
 connection for external harnesses, but they do not automatically import a
 private transcript or provide the same lifecycle integration. Other harnesses
-need a supported adapter and transport before they can connect this way.
+can use the generic one-way Buddy connection to publish updates and initiate
+messages to supported agents. Receiving direct messages or Buddy replies
+requires a supported bidirectional adapter and wake-up transport.
 
 GitSense knowledge is portable. Any agent that can run `gsc` can query the same
 Brains, notes, lessons, and rules without requiring runtime integration.
