@@ -18,7 +18,7 @@ No proxy or wrapper required.
 <h3 align="center">Same agents. More ways to work together</h3>
 
 <video controls muted loop playsinline width="100%">
-  <source src="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac" type="video/mp4">
+  <source src="https://github.com/user-attachments/assets/690c076b-66ad-435e-82e7-f80e64226255" type="video/mp4">
 </video>
 
 <p align="center"><a href="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac">Download the video if it does not play</a></p>
