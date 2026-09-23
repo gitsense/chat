@@ -25,9 +25,9 @@ No proxy or wrapper required.
 
 <h3 align="center">Same agents. More ways to communicate together</h3>
 
-<video src="https://github-production-user-asset-6210df.s3.amazonaws.com/20134145/657497680-9f09067e-bcf1-41d6-a6da-d8b3c1c1f46e.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260923%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260923T191344Z&X-Amz-Expires=300&X-Amz-Signature=741fff7d3e354fa512ac3011b533fcc06f4b4bf924ededaa54284c8a293df4dd&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4" poster="https://github.com/user-attachments/assets/9f09067e-bcf1-41d6-a6da-d8b3c1c1f46e" controls muted loop playsinline width="100%"></video>
+<img src="assets/more-ways-to-communicate.png" alt="Agents communicating and working together across agent environments" width="100%">
 
-<p align="center"><a href="assets/more-ways-to-communicate.mp4">Download the video if it does not play</a></p>
+<p align="center"><a href="assets/more-ways-to-communicate.mp4">Download the video</a></p>
 
 <h3 align="center">Go beyond tabs and terminal panes. Organize around the work</h3>
 
