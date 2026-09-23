@@ -31,6 +31,24 @@ watcher for itself.
 For incoming parent messages, use the fetch/complete lifecycle from `gsc
 experts guide pi-messages`; process one claimed message at a time.
 
+## Direct contact card
+
+For a valid `gitsense.buddy.contact.request`, reply in that request thread with
+a version-1 `gitsense.buddy.contact` card that identifies the paired harness
+as `pi`, sets `communication` to `bidirectional`, sets
+`direct_contact_available` to `true`, supplies `agent_mailbox_id` as the bare
+canonical UUID direct destination, sets `transport` to `gsc-inform` and `wake`
+to `pi-mailbox-watcher`, and gives the ordered send sequence as the
+string-valued `instructions` field:
+
+```bash
+printf '%s\n' '<message for Pi>' | \
+  gsc inform --mailbox <agent-mailbox-id> --message-file - --format json
+```
+
+State that Pi's mailbox watcher performs wake-up. Do not forward the
+requester's later message yourself.
+
 ## Failure recovery
 
 If `gsc inform` fails, report the failure. Do not claim delivery or blindly

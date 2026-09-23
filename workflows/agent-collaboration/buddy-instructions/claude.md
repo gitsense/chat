@@ -34,6 +34,25 @@ gsc buddy mailbox watch <agent-mailbox-id> --timeout 720h --poll-interval 1s
 The parent, not this Buddy, owns and replaces that watcher after each claimed
 message. Never start or replace it yourself.
 
+## Direct contact card
+
+For a valid `gitsense.buddy.contact.request`, reply in that request thread with
+a version-1 `gitsense.buddy.contact` card that identifies the paired harness
+as `claude`, sets `communication` to `bidirectional`, sets
+`direct_contact_available` to `true`, supplies `agent_mailbox_id` as the bare
+canonical UUID direct destination, sets `transport` to `gsc-inform` and `wake`
+to `claude-mailbox-watcher`, and gives the ordered send sequence as the
+string-valued `instructions` field:
+
+```bash
+printf '%s\n' '<message for Claude>' | \
+  gsc inform --mailbox <agent-mailbox-id> --message-file - --format json
+```
+
+State that the parent-owned one-shot watcher performs wake-up and must already
+be maintained by Claude. Do not expose watcher internals or forward the
+requester's later message yourself.
+
 ## Failure recovery
 
 If `gsc inform` fails, report the failure. Do not claim delivery, and do not

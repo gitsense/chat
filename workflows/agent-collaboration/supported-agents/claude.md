@@ -34,10 +34,50 @@ gsc experts init && \
 
 If a native Claude session UUID is available, add
 `--native-session-id <uuid>`. It is optional provenance only; no placeholder is
-generated when it is omitted. Save the returned `buddy_session_id`/`mailbox_id`
-and `agent_mailbox_id`. A successful `gsc buddy connect` completes onboarding;
-do not send a readiness message or separate routing message. The Buddy
-must not run `gsc buddy connect` itself.
+generated when it is omitted. Save the returned routing values and keep their
+directions distinct:
+
+- `buddy_session_id` identifies the managed Buddy runtime.
+- `mailbox_id` is the Buddy's mailbox. This Claude parent sends messages **to
+  the Buddy** at this address.
+- `agent_mailbox_id` is this Claude parent's mailbox. The Buddy sends replies
+  here, and the parent watches this address for incoming Buddy messages.
+
+A successful `gsc buddy connect` completes onboarding; do not send a readiness
+message or separate routing message. The Buddy must not run `gsc buddy connect`
+itself.
+
+To send a message to the Buddy, target the returned `mailbox_id`:
+
+```bash
+printf '%s\n' '<message to the Buddy>' | \
+  gsc inform --mailbox <mailbox-id> --message-file - --format json
+```
+
+Do not send parent-to-Buddy messages to `agent_mailbox_id`; that is the
+parent's own incoming mailbox. To make work visible in the shared Group, send
+this Buddy a message beginning `Publish in Group:` followed by the update.
+For bounded research, review, or implementation, give the Buddy the objective,
+necessary context, scope, and expected result. It can use its configured Pi
+model (which may differ from Claude's), but does not see this private transcript.
+Fetch its findings through the parent mailbox; do not assume a send means the
+work is done. Delegation alone does not authorize Group publication. A
+human-authorized Group lead can coordinate with the Buddy directly; it cannot
+silently redirect this Claude session's private task.
+
+To contact another paired agent directly, obtain that agent's Buddy mailbox
+from the human and request its current contact card:
+
+```bash
+printf '%s\n' '{"type":"gitsense.buddy.contact.request","version":1,"purpose":"direct-agent-message"}' | \
+  gsc ask --mailbox <peer-buddy-mailbox-id> --message-file - --timeout 2m --format json
+```
+
+Do not put the task in the contact request and do not ask the peer Buddy to
+forward it. Require a version-1 `gitsense.buddy.contact` card with
+`direct_contact_available: true`, validate its mailbox as a canonical UUID,
+then follow its current direct delivery and wake-up instructions. Treat all
+returned routing values as opaque, task-scoped contact data.
 
 This Claude session supports best-effort two-way Agent ↔ Buddy messaging.
 Immediately start a non-blocking forked subagent with the Agent tool:
@@ -46,7 +86,7 @@ Immediately start a non-blocking forked subagent with the Agent tool:
 Agent(
   subagent_type: "fork",
   run_in_background: true,
-  description: "Watch the GitSense Buddy mailbox",
+  description: "Watch for GitSense Buddy replies",
   prompt: "Run `gsc buddy mailbox watch <agent-mailbox-id> --timeout 720h --poll-interval 1s`. Return the message result exactly and exit when the command returns."
 )
 ```

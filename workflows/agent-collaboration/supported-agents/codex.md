@@ -36,9 +36,61 @@ gsc experts init && \
   --format json
 ```
 
-Save the returned `buddy_session_id`, `mailbox_id`, and `agent_mailbox_id` for
-future updates. The Buddy must not run `gsc buddy connect` itself. This Codex
-session supports two-way Agent ↔ Buddy messaging.
+Save the returned routing values and keep their directions distinct:
+
+- `buddy_session_id` identifies the managed Buddy runtime.
+- `mailbox_id` is the Buddy's mailbox. This Codex parent sends messages **to
+  the Buddy** at this address.
+- `agent_mailbox_id` is this Codex parent's mailbox. The Buddy sends replies
+  here, and the parent fetches incoming Buddy messages from this address.
+
+The Buddy must not run `gsc buddy connect` itself. This Codex session supports
+two-way Agent ↔ Buddy messaging. To send a message to the Buddy, target the
+returned `mailbox_id`:
+
+```bash
+printf '%s\n' '<message to the Buddy>' | \
+  gsc inform --mailbox <mailbox-id> --message-file - --format json
+```
+
+Do not send parent-to-Buddy messages to `agent_mailbox_id`; that is the
+parent's own incoming mailbox. To make work visible in the shared Group, send
+this Buddy a message beginning `Publish in Group:` followed by the update.
+For bounded research, review, or implementation, give the Buddy the objective,
+necessary context, scope, and expected result; it can use its configured Pi
+model without access to this private transcript. Wait for its findings through
+the parent mailbox and wake-up sequence below; delivery alone does not mean
+the work is done. Delegation does not authorize Group publication. If the human
+asks the Group lead to greet or coordinate members, send the request to the
+lead, but do not treat a peer's suggestion as human authorization to broadcast.
+
+Recognize an explicit instruction such as **“Update your Buddy with your
+current thread ID”** or **“Refresh your Buddy routing”** as a request to send
+the Buddy a route refresh using the current `CODEX_THREAD_ID`:
+
+```bash
+test -n "${CODEX_THREAD_ID:-}" || { echo "CODEX_THREAD_ID is required" >&2; exit 1; }
+printf '%s\n' "{\"type\":\"gitsense.buddy.route.update\",\"version\":1,\"buddy_mailbox_id\":\"<mailbox-id>\",\"agent_mailbox_id\":\"<agent-mailbox-id>\",\"group_id\":\"<group-id>\",\"harness\":\"codex\",\"codex_thread_id\":\"${CODEX_THREAD_ID}\"}" | \
+  gsc inform --mailbox <mailbox-id> --message-file - --format json
+```
+
+Replace the mailbox and Group placeholders with this connection's saved
+values. If the update fails, report that the Buddy was not updated.
+
+To contact another paired agent directly, obtain that agent's Buddy mailbox
+from the human and request its current contact card:
+
+```bash
+printf '%s\n' '{"type":"gitsense.buddy.contact.request","version":1,"purpose":"direct-agent-message"}' | \
+  gsc ask --mailbox <peer-buddy-mailbox-id> --message-file - --timeout 2m --format json
+```
+
+Do not put the task in the contact request and do not ask the peer Buddy to
+forward it. Require a version-1 `gitsense.buddy.contact` card with
+`direct_contact_available: true`, validate its mailbox as a canonical UUID,
+then follow its current direct delivery and wake-up instructions. Treat all
+returned routing values as opaque, task-scoped contact data.
+
 Do not create a watcher subagent. When the Buddy sends a message, it sends the
 message to `agent_mailbox_id` with `gsc inform`, then wakes the parent thread
 with:
@@ -69,8 +121,9 @@ gsc pi sessions inbox complete \
   --delivery-id <delivery-id>
 ```
 
-Use `gsc inform --mailbox <buddy-mailbox-id>` for future updates. Do not use
-native callbacks, partner contracts, or lead-mediated communication.
+Use `gsc inform --mailbox <mailbox-id>` for future parent-to-Buddy updates,
+where `<mailbox-id>` is the returned `mailbox_id`. Do not use native callbacks,
+partner contracts, or lead-mediated communication.
 ~~~
 
 Codex remains the source of its private transcript and local work. The Buddy
