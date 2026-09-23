@@ -25,9 +25,7 @@ No proxy or wrapper required.
 
 <h3 align="center">Same agents. More ways to communicate together</h3>
 
-<video controls muted loop playsinline width="100%">
-  <source src="https://github.com/user-attachments/assets/db9a0583-160f-4494-a2af-8a7e9434fd78" type="video/mp4">
-</video>
+<video src="https://github.com/user-attachments/assets/db9a0583-160f-4494-a2af-8a7e9434fd78" controls muted loop playsinline width="100%"></video>
 
 <h3 align="center">Go beyond tabs and terminal panes. Organize around the work</h3>
 
