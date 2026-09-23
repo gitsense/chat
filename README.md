@@ -25,9 +25,9 @@ No proxy or wrapper required.
 
 <h3 align="center">Same agents. More ways to communicate together</h3>
 
-<img src="assets/more-ways-to-communicate.png" alt="Agents communicating and working together across agent environments" width="100%">
+<p align="center"><strong><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4">Download the video</a></strong></p>
 
-<p align="center"><a href="assets/more-ways-to-communicate.mp4">Download the video</a></p>
+<img src="assets/more-ways-to-communicate.png" alt="Agents communicating and working together across agent environments" width="100%">
 
 <h3 align="center">Go beyond tabs and terminal panes. Organize around the work</h3>
 
