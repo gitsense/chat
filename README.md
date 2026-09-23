@@ -25,7 +25,9 @@ No proxy or wrapper required.
 
 <h3 align="center">Same agents. More ways to communicate together</h3>
 
-<img src="assets/more-ways-to-communicate.png" alt="Agents communicating and working together across agent environments" width="100%">
+<video controls muted loop playsinline width="100%">
+  <source src="https://github.com/user-attachments/assets/db9a0583-160f-4494-a2af-8a7e9434fd78" type="video/mp4">
+</video>
 
 <h3 align="center">Go beyond tabs and terminal panes. Organize around the work</h3>
 
