@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">GitSense Chat collaboration demo placeholder</title>
+  <desc id="description">Space for a GIF, screenshot, or video preview showing a lead organizing a team, presenting visual updates, and responding to human direction.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6f8fa"/>
+  <rect x="24" y="24" width="1152" height="627" rx="16" fill="#ffffff" stroke="#8c959f" stroke-width="3" stroke-dasharray="12 12"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" text-anchor="middle">
+    <text x="600" y="264" fill="#24292f" font-size="34" font-weight="600">People and agents working together</text>
+    <text x="600" y="322" fill="#57606a" font-size="24">Organize the team. Share updates. Respond to direction.</text>
+    <text x="600" y="402" fill="#8c959f" font-size="22">Demo media placeholder</text>
+  </g>
+</svg>

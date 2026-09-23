@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">Agent communication demo placeholder</title>
+  <desc id="description">Placeholder for a video showing agents communicating and working together across agent environments.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6f8fa"/>
+  <rect x="24" y="24" width="1152" height="627" rx="16" fill="#ffffff" stroke="#8c959f" stroke-width="3" stroke-dasharray="12 12"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" text-anchor="middle">
+    <text x="600" y="112" fill="#24292f" font-size="38" font-weight="700">Same agents. More ways to communicate together.</text>
+    <text x="600" y="158" fill="#57606a" font-size="24">Coordinate work across agent environments.</text>
+    <rect x="105" y="245" width="280" height="190" rx="14" fill="#24292f"/>
+    <rect x="460" y="245" width="280" height="190" rx="14" fill="#24292f"/>
+    <rect x="815" y="245" width="280" height="190" rx="14" fill="#24292f"/>
+    <circle cx="245" cy="292" r="18" fill="#3fb950"/>
+    <circle cx="600" cy="292" r="18" fill="#58a6ff"/>
+    <circle cx="955" cy="292" r="18" fill="#d29922"/>
+    <text x="245" y="350" fill="#ffffff" font-size="24" font-weight="600">Agent A</text>
+    <text x="600" y="350" fill="#ffffff" font-size="24" font-weight="600">Agent B</text>
+    <text x="955" y="350" fill="#ffffff" font-size="24" font-weight="600">Agent C</text>
+    <path d="M395 335 H445" stroke="#0969da" stroke-width="8" marker-end="url(#arrow)"/>
+    <path d="M750 335 H800" stroke="#0969da" stroke-width="8" marker-end="url(#arrow)"/>
+    <text x="600" y="530" fill="#8c959f" font-size="20">Video placeholder</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#0969da"/>
+    </marker>
+  </defs>
+</svg>

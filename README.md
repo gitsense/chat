@@ -4,164 +4,47 @@
 
 # GitSense: Chat
 
-**A platform for getting more from your agents.**
+**Reimagining how people and agents work together**
 
 Your terminal, multiplexer, or agent development environment is where you run
 your agents. GitSense Chat is where you bring their work together.
 
-Whether you are keeping track of a few sessions or building and maintaining a
-complex system, GitSense Chat helps you coordinate related work, build
-knowledge you and your agents can reuse, and inspect activity when something
-goes wrong.
+Coordinate related work, build knowledge you and your agents can reuse, and
+inspect activity when something goes wrong, from a few sessions to a complex
+system.
 
-Keep using the tools and workflows you already have. GitSense Chat works
-alongside them. No proxy or wrapper is required.
+No proxy or wrapper required.
 
-### Make knowledge available to all
+<h3 align="center">Same agents. More ways to work together</h3>
 
-Share what you know and what you want your agents to know in a conversation.
-GitSense Chat can turn it into useful context your agents can query. It can
-help create focused knowledge agents, save useful findings as notes and
-lessons, and make that knowledge available to you and any agent that can run
-the GitSense Chat CLI, `gsc`.
+<video controls muted loop playsinline width="100%">
+  <source src="https://github.com/user-attachments/assets/690c076b-66ad-435e-82e7-f80e64226255" type="video/mp4">
+</video>
 
-Saved knowledge gives new work a better starting point. It can also help you
-find previous sessions when all you remember is what was discussed or which
-files were changed.
+<p align="center"><a href="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac">Download the video if it does not play</a></p>
+
+<h3 align="center">Same agents. More ways to communicate together</h3>
+
+<p align="center"><strong><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4">Download the video</a></strong></p>
+
+<img src="assets/more-ways-to-communicate.png" alt="Agents communicating and working together across agent environments" width="100%">
+
+<h3 align="center">Go beyond tabs and terminal panes. Organize around the work</h3>
+
+<img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
 <table>
-  <thead>
-    <tr>
-      <th width="50%" align="center">Same search, more context</th>
-      <th width="50%" align="center">Find work worth reusing</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td width="50%" valign="top"><img src="assets/same-search-more-to-go-on.png" alt="The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file as one example of useful context." width="100%"></td>
-      <td width="50%" valign="top"><img src="assets/resume-faster-search.png" alt="GitSense session search filtering previous work by content, time, repository, role, and file activity." width="100%"></td>
+      <td width="50%"><strong>1. Find related work and review it together</strong><br><video src="https://github.com/user-attachments/assets/7e18ad89-fafc-42fc-934b-57fd2b113fd6" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>2. Bring together your work with a lead</strong><br><video src="https://github.com/user-attachments/assets/b7ae882f-c528-4117-9c9c-73e70414d17a" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
-      <td width="50%" valign="top">Regular ripgrep on the left. GitSense adds each file’s purpose on the right, helping your agents decide where to look next.</td>
-      <td width="50%" valign="top">Search sessions by conversation, files, repository, role, or time to find work you want to pick up again.</td>
+      <td width="50%"><strong>3. Build rich dashboards with less agent context</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
+      <td width="50%"><strong>4. Give each agent a recognizable identity</strong><br><a href="agent-collaboration-workflow.gif"><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Video placeholder for giving your agent another agent to call on" width="100%"></a></td>
     </tr>
   </tbody>
 </table>
-
-**Build knowledge once, share it across agents**
-
-Create a knowledge agent that other agents can turn to for help. Here, a
-GitHub Watcher running in Pi brings together recent issues from two repositories
-and answers questions from Claude Code, Codex, and OpenCode through `gsc`.
-
-**[▶ Download and watch the demo video (MP4, 3.1 MB)](assets/create-specialized-knowledge-agents.mp4)**
-
-[![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
-
-Any agent that can run `gsc` can ask your knowledge agents for help or share
-information with them, such as new findings or a progress update.
-
-### See related work in one place
-
-Find sessions by what was discussed or which files they touched, then bring
-related work into a Group. Follow activity across the Group, and add a lead or
-dedicated agent to compare approaches, summarize progress, and help coordinate
-what happens next.
-
-Session activity stays current while your agents work, so you can follow the
-Group from one place even when its sessions are scattered across terminal tabs,
-windows, or workspaces.
-
-<p align="center"><strong>Review and monitor the work</strong></p>
-
-![Reviewing and monitoring grouped sessions in GitSense Chat](assets/beyond-tabs-review-monitor.png)
-
-Use Groups to organize your sessions by status, recent activity, role, or
-whatever makes sense for the work. A session can appear in multiple Groups
-without being moved or copied.
-
-<table>
-  <thead>
-    <tr>
-      <th width="33%" align="center">Organize by status</th>
-      <th width="33%" align="center">Review recent activity</th>
-      <th width="34%" align="center">Filter what you see</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td width="33%" valign="top"><img src="assets/organize-by-status.png" alt="A My Work Group organized as a Kanban board with an AI assistant monitoring the sessions." width="100%"></td>
-    <td width="33%" valign="top"><img src="assets/organize-by-recency.png" alt="The same My Work Group organized into sections by recent session activity with an AI assistant alongside it." width="100%"></td>
-    <td width="34%" valign="top"><img src="assets/filter-what-you-see.png" alt="A Tiles view filtered to show selected recent-activity sections from the My Work Group." width="100%"></td>
-  </tr>
-  </tbody>
-</table>
-
-### Make complex workflows easier to manage
-
-Use a Group when your task benefits from several agents, such as independent
-code reviews, competing implementations, or experiments. Your lead can create
-agents, bring in existing sessions, and direct follow-ups to specific members
-as the work changes.
-
-Add agents without leaving the Group. Create and configure an agent directly,
-bring in one already running in your terminal, or tell your lead what team you
-need.
-
-| Create an agent directly | Ask your lead to create the team |
-| --- | --- |
-| ![Creating and configuring a managed agent in GitSense Chat.](assets/create-agent-dialog.png) | ![Asking a lead to create six language-specific agents in an empty Group.](assets/lead-create-six-agents.png) |
-| Click **Create agent** to add it to the Group. You can always change the model or thinking level later. | Tell your lead how many agents you need or explain the problem first. Refine the team before creating it. |
-
-Managed agents can keep working in the background. When you want to interact
-with one, use the GitSense Chat CLI: `gsc pi sessions attach <session-id>` to
-join it or `gsc pi sessions handoff <session-id>` to move it into your terminal.
-
-This example uses Hello World to keep the workflow easy to follow. The lead
-creates six agents named C, Go, Rust, Python, JavaScript, and Java. One request
-reaches all six, then a follow-up changes only the C and Go programs.
-
-**[▶ Download and watch the demo video (MP4, 7.4 MB)](assets/scale-coordination-hello-world-lab.mp4)**
-
-![A lead coordinating six agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
-
-### Scaling includes debugging
-
-Doing more with your agents also means being able to understand what went wrong
-and improve the next run. Bring sessions into a Group, track their activity, and
-start or stop your managed agents as needed. Open a session to inspect its
-history,
-review message and tool-call counts, or browse reads, writes, and edits by file.
-
-| Start and stop agents | Session overview | File activity |
-| --- | --- | --- |
-| ![Starting and stopping a managed agent from its session view.](assets/start-stop-agents.png) | ![Session overview with activity counts and Session Insights links.](assets/overview.png) | ![File activity organized as a tree of reads, writes, and edits.](assets/file-activity.png) |
-
-Turn a wall of tool calls into findings you can act on. From the Overview, open
-Session Insights to investigate failed commands, recovery attempts, and
-verification after edits. Create different analyzers to examine the same logs
-from different perspectives, such as tool usage, code changes, or progress.
-
-For example, when building a GitHub Watcher, create an analyzer to review its API
-calls and look for evidence that it read the required skill instructions. Use
-the findings to investigate mistakes, refine instructions, and improve future
-runs.
-
-### Take action from the conversation
-
-You can ask an agent to open a diff or run a command. But coming back later can
-mean finding the right session and asking again. GitSense Chat lets agents
-include actions directly in their answers and reports, so you can open files,
-launch applications, or run commands when you're ready.
-
-You control execution permissions, including which commands can run without
-another confirmation and for how long.
-
-Here, a lead brings together findings from multiple sessions and adds actions
-that take you to the work. Opening Zed is already approved for this demo, so
-the diff opens with one click.
-
-![A GitSense action link opening the relevant code diff for review with one click.](assets/shared-workspace-with-lead-open-diff.gif)
 
 ## Quick Start
 
@@ -186,56 +69,123 @@ with lead agents. Follow
 Insights, checkpoints, shared knowledge, messaging, lead agents, and group
 observation loops work together.
 
+### Connect Claude Code, Codex, and other agents
+
+GitSense Chat works directly with Pi sessions. Claude Code, Codex, and other
+agents that can run `gsc` can message agents in GitSense Chat using `gsc ask`
+or `gsc inform`.
+
+Claude Code and Codex support bidirectional Buddy connections. Given a peer
+Buddy's mailbox, an agent can ask that Buddy for the paired agent's current
+direct-contact instructions, then message the paired agent directly without
+using the Buddy as a relay. Agents can send completed work back to their own
+Buddies to publish it in the shared Group.
+
+To make an external agent's session visible in GitSense Chat, use
+[txcript](https://github.com/gitsense/txcript) to convert a snapshot into a Pi
+session:
+
+```bash
+cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
+
+txcript list --from claude_code
+txcript continue <session-id> \
+  --from <harness> \
+  --with pi \
+  --no-resume
+```
+
+The converted snapshot appears in GitSense Chat shortly after the Pi session
+sync service processes it. Repeat the conversion when you want to refresh it;
+this is a temporary workaround until near-real-time synchronization is
+available for other runtimes.
+
 GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
 same Brains, notes, lessons, and rules.
 
-## Start with a lead
+## Work smarter with your agents
 
-Your lead is a personal GitSense assistant. Tell it what you need help with,
-from keeping an eye on sessions to creating agents and coordinating their work.
-Start small and let it help you grow, without managing every session yourself.
-
-### Create a lead in seconds
-
-Adding a lead to a Group takes two clicks. No setup, no scripting.
+Bring related sessions together, give your agents a lead, and delegate the
+progress checks and follow-ups you would otherwise handle yourself.
 
 <table>
+  <thead>
+    <tr>
+      <th width="50%" align="center">Create an assistant to watch the work</th>
+      <th width="50%" align="center">Organize the work</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td width="50%" valign="top"><strong>1. Add a lead</strong><br><br><img src="assets/create-a-lead-step-1-start.png" alt="A GitSense Chat Group with the Add a lead button ready to be selected." width="100%"><br><br>Click <strong>Add a lead</strong> from the Group.</td>
-      <td width="50%" valign="top"><strong>2. Create the lead agent</strong><br><br><img src="assets/create-a-lead-step-2-confirm.png" alt="The Add a lead agent dialog with a managed lead ready to be created." width="100%"><br><br>Confirm the settings and click <strong>Create lead agent</strong>.</td>
+      <td width="50%" valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead given a monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
+      <td width="50%" valign="top"><img src="assets/organize-by-status.png" alt="A My Work Group organized as a Kanban board with an AI assistant monitoring the sessions." width="100%"></td>
+    </tr>
+    <tr>
+      <td valign="top">Give your lead a job, like notifying you when a session stalls or finishes.</td>
+      <td valign="top">Arrange related sessions by status, recent activity, or whatever makes sense for your work.</td>
     </tr>
   </tbody>
 </table>
 
-Once it's running, tell the lead what you need or ask how it can help:
+Create agents, bring in existing sessions, and start or stop managed agents as
+the work changes. A session can appear in multiple Groups without being moved
+or copied.
 
-- Create agents or bring existing sessions into the Group.
-- Arrange sessions into columns or sections that fit your work.
-- Check progress and bring findings together.
-- Set up reminders or monitoring for things you care about.
+**Guide multiple sessions through one conversation**
 
-### Work smarter with a lead
+Tell your lead what team you need, then direct their work from the Group. In
+this Hello World demo, the lead creates six agents for C, Go, Rust, Python,
+JavaScript, and Java. One request reaches all six; a follow-up changes only
+the C and Go programs.
 
-Give your lead something to watch, remind you about, or help coordinate. It
-can check for changes and use saved checkpoints to stay informed without
-rereading every conversation. The examples below show a few ways to put it
-to work.
+**[▶ Download and watch the demo video (MP4, 7.4 MB)](assets/scale-coordination-hello-world-lab.mp4)**
 
-<table>
-  <tr>
-    <td width="50%" align="center"><strong>Delegate the watching</strong></td>
-    <td width="50%" align="center"><strong>Monitor what matters</strong></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">Give the lead a job, like notifying you when a session stalls or finishes.</td>
-    <td align="center" valign="top">Add focused agents that each watch a responsibility.</td>
-  </tr>
-  <tr>
-    <td valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead being given a one-time monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
-    <td valign="top"><img src="assets/team-dashboard.png" alt="A GitSense Chat dashboard showing focused agents monitoring different responsibilities." width="100%"></td>
-  </tr>
-</table>
+![A lead coordinating six agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)
+
+## Give your agents a better starting point
+
+Help your agents build on what you already know and what previous work
+uncovered. Save useful context as Brains, notes, and lessons that any agent
+with access to `gsc` can query.
+
+**Same search, more context**
+
+Regular ripgrep finds matching text. GitSense can add each file’s purpose,
+helping your agents decide where to look next.
+
+![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
+
+**Build knowledge once, share it across agents**
+
+Create a Group that other agents can turn to for help. Here, the GitHub
+Watcher’s lead brings together recent issues from two repositories and answers
+questions from Claude Code, Codex, and OpenCode through `gsc`.
+
+**[▶ Download and watch the demo video (MP4, 3.1 MB)](assets/create-specialized-knowledge-agents.mp4)**
+
+[![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.png)
+
+Any agent that can run `gsc` can ask your knowledge agents for help or share
+new findings with them.
+
+## Understand what happened
+
+When you need more than a progress update, open a session to inspect its
+history, review message and tool-call counts, and browse reads, writes, and
+edits by file.
+
+| Session overview | File activity |
+| --- | --- |
+| ![Session overview with activity counts and Session Insights links.](assets/overview.png) | ![File activity organized as a tree of reads, writes, and edits.](assets/file-activity.png) |
+
+From the Overview, open Session Insights to investigate failed commands,
+recovery attempts, and verification after edits. Create focused analyzers to
+examine the same logs from different perspectives, such as tool usage, code
+changes, or progress.
+
+For a GitHub Watcher, for example, an analyzer can review API calls and look
+for evidence that the agent read the required skill instructions. Use those
+findings to investigate mistakes and refine instructions for the next run.
 
 ## Security
 
@@ -254,9 +204,13 @@ allowed by your existing permissions.
 
 ## Current Support and Boundaries
 
-Pi is currently the supported runtime integration. Codex, Claude Code,
-OpenCode, and other coding-agent harnesses are not yet integrated for session
-logs, lifecycle state, or Group coordination.
+Pi is currently the first full runtime integration for session logs, lifecycle
+state, and Group coordination. Supported Buddy transports provide a lighter
+connection for external harnesses, but they do not automatically import a
+private transcript or provide the same lifecycle integration. Other harnesses
+can use the generic one-way Buddy connection to publish updates and initiate
+messages to supported agents. Receiving direct messages or Buddy replies
+requires a supported bidirectional adapter and wake-up transport.
 
 GitSense knowledge is portable. Any agent that can run `gsc` can query the same
 Brains, notes, lessons, and rules without requiring runtime integration.

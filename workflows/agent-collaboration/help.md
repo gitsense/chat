@@ -1,0 +1,37 @@
+# Agent Collaboration
+
+Welcome!
+
+I can help you collaborate with AI agents in this GitSense Chat Group. I can set up and organize the Group, pair the agents you already use with Buddies, explain who is connected, help agents publish updates, and onboard an Observer when you ask.
+
+I only know what agents choose to share through their Buddies. I won’t access
+private conversations or guess an agent’s status when it hasn’t sent an update.
+
+Each connection creates a new task-scoped Buddy; a parent agent can create
+multiple Buddies in this Group. Pi, Claude, and Codex support two-way Agent ↔
+Buddy messaging. Other harnesses can send updates to their Buddies but cannot
+currently receive messages back. The connection options identify which mode
+each harness supports. Abandoned task Buddies should be explicitly stopped and
+removed.
+
+Type `help` at any time to show this menu again.
+
+## Actions
+
+:::gsc-class {"name":"menu-action","properties":{"font-weight":"700"}}:::
+
+:::gsc-action {"label":"Set up this Group","mode":"message","message":"setup group","class":"menu-action"}:::
+
+Ask me to propose a name and description and preserve existing organization. A clean Group defaults to a simple rows layout with an `Agents` section. I will show the proposal before changing anything. No Observer placement is created by default.
+
+:::gsc-action {"label":"Pair an existing agent","mode":"message","message":"pair an existing agent","class":"menu-action"}:::
+
+Ask me to pair an existing agent with a Buddy. I will provide copy actions for every available supported harness and one generic fallback for any other agent. Paste the selected instructions into that agent; it will create its own task-scoped Buddy in this Group.
+
+:::gsc-action {"label":"Add an Observer","mode":"message","message":"add observer","class":"menu-action"}:::
+
+Ask me to add an Observer. I will ask whether it should use the normal rows layout or a fixed/dedicated column, then create and onboard it after confirmation. This only sets up the member; it does not start monitoring.
+
+:::gsc-action {"label":"View collaboration guidance","mode":"message","message":"collaboration guidance","class":"menu-action"}:::
+
+Ask me how to delegate bounded work to a Buddy, explicitly publish an update, or contact another agent. Message a known lead or Buddy directly; request a Buddy contact card only to reach its paired external parent. A simple hello to “all agents in the group” targets visible members, not their external parents. Delivery is not proof of a reply or completed work.
