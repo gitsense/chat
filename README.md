@@ -25,7 +25,7 @@ No proxy or wrapper required.
 
 <h3 align="center">Same agents. More ways to communicate together</h3>
 
-<video src="https://github.com/user-attachments/assets/6ca6aa47-e4e5-47ea-8423-188c71b0e31e" poster="assets/more-ways-to-communicate.png" controls muted loop playsinline width="100%"></video>
+<video src="https://github.com/user-attachments/assets/6ca6aa47-e4e5-47ea-8423-188c71b0e31e" poster="https://github.com/user-attachments/assets/9f09067e-bcf1-41d6-a6da-d8b3c1c1f46e" controls muted loop playsinline width="100%"></video>
 
 <p align="center"><a href="assets/more-ways-to-communicate.mp4">Download the video if it does not play</a></p>
 
