@@ -37,6 +37,34 @@ test('generates current onboarding contracts and a prompted generic fallback', (
     const report = fs.readFileSync(reportPath, 'utf8');
     expect(report).toContain('# Pair an existing agent');
 
+    // Inspect the actual copied prompts, not their JSON-escaped rendering.
+    const copiedPrompts = [...report.matchAll(/^.*?:::gsc-action (\{.*?\}):::/gm)]
+      .map((match) => JSON.parse(match[1]))
+      .filter((action) => action.mode === 'copy')
+      .map((action) => action.text);
+    expect(copiedPrompts).toHaveLength(4);
+    for (const prompt of copiedPrompts) {
+      expect(prompt).toContain('No contact card is needed when that session itself is the recipient');
+      expect(prompt).toContain('gsc inform --mailbox <lead-mailbox-id>');
+      expect(prompt).toContain('Only when the intended recipient is the external parent behind a Buddy');
+      expect(prompt).toContain('Sending this request is not proof the lead greeted anyone');
+      expect(prompt).toContain('do not execute arbitrary commands');
+      expect(prompt).toContain("--group-section 'Agents'");
+      expect(prompt).not.toContain("printf '%s\\\\n'");
+      expect(prompt).not.toMatch(/\| \\\\$/m);
+      const shellBlocks = [...prompt.matchAll(/(?:```|~~~)bash\n([\s\S]*?)\n(?:```|~~~)/g)];
+      expect(shellBlocks.length).toBeGreaterThan(0);
+      for (const [, block] of shellBlocks) {
+        // Syntax check only: never execute onboarding or send real messages.
+        const input = block.replace(/<[a-z][a-z0-9-]*>/g, 'example-value');
+        expect(() => execFileSync('bash', ['-n'], { input, encoding: 'utf8' })).not.toThrow();
+      }
+    }
+    const piPrompt = copiedPrompts.find((prompt) => prompt.includes('--harness pi'));
+    expect(piPrompt).toContain('--agent-mailbox-id <parent-pi-mailbox-id>');
+    const codexPrompt = copiedPrompts.find((prompt) => prompt.includes('--harness codex'));
+    expect(codexPrompt).toContain('inbox send --agent-sender <agent-mailbox-id>');
+
     const claude = section(report, 'Claude Code', 'Codex');
     expect(claude).toContain('--timeout 720h');
     expect(claude).toContain('Watch for GitSense Buddy replies');
@@ -104,6 +132,12 @@ test('documents direct contact, route refresh, and ordered delivery recovery', (
   const lead = fs.readFileSync(path.join(workflowDirectory, 'lead-prompt.md'), 'utf8');
   expect(lead).toContain('Human-authorized Group coordination');
   expect(lead).toContain('Do not imply that contacting a Buddy also contacted its parent');
+  expect(lead).toContain('As a bounded workflow policy');
+  expect(lead).toContain('other than yourself, including Buddies and an Observer if present');
+  expect(lead).toContain('do not embed a stale report');
+  expect(common).toContain('`transport` and `wake` are required only when direct contact is');
+  expect(common).toContain('inbox envelope sender to match');
+  expect(codex).toContain('inbox envelope sender to match');
   expect(common).not.toContain('GSC_BUDDY_ACK');
   expect(claude).toContain('`communication` to `bidirectional`');
   expect(claude).toContain('string-valued `instructions` field');

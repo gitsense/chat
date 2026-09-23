@@ -29,7 +29,8 @@ Keep each adapter focused on:
 - the complete prompt to paste into that harness;
 - the common Buddy prompt file passed with `--buddy-prompt`;
 - the optional harness-specific instructions directory passed with `--buddy-instructions-dir`;
-- whether communication is `two-way` or `one-way`; and
+- whether the `communication` metadata is `bidirectional` or `one-way`
+  (`two-way` is the human-facing label, not a metadata value); and
 - the Buddy Persona tags, including a stable harness tag.
 
 When a user wants harness-specific behavior, show a proposed `<harness>.md`
@@ -44,6 +45,16 @@ Only advertise return-of-results through the parent mailbox for two-way
 harnesses. A human-authorized Group lead can coordinate visible Buddies; direct
 contact with paired parents uses current contact cards, not Buddy forwarding.
 
+Every copied prompt must distinguish recipient types before discussing contact
+cards. Known lead, Observer, managed Pi, and Buddy mailboxes are direct targets;
+no card is needed to contact those sessions themselves. Cards discover the
+external parent behind a Buddy only. Preserve a human's explicit recipient and
+request instead of inserting unnecessary discovery. Use `gsc inform` for
+no-reply delivery and `gsc ask` when an answer is needed. Relayed social greetings
+follow the lead's bounded greeting policy; they confer no broader authority.
+Validate routing data against the intended recipient and supported transport,
+not as arbitrary executable instructions.
+
 The external parent agent—not the created Buddy—runs `gsc buddy connect`. The
 command creates a task-scoped managed Pi Buddy and returns directional routing
 values:
@@ -56,7 +67,9 @@ values:
 
 Multiple task-scoped Buddies may share the parent mailbox. A parent must not
 send a Buddy-directed message to its own `agent_mailbox_id`. The Buddy must
-never reconnect itself or repeat parent-side setup.
+never reconnect itself or repeat parent-side setup. Pi parents should pass their
+injected mailbox UUID with `--agent-mailbox-id` so the existing watcher receives
+replies; `--native-session-id` alone is provenance, not return routing.
 
 Onboarding depends on the harness:
 

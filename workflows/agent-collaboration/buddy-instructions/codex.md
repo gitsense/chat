@@ -49,7 +49,9 @@ body in it, and never target a watcher or Buddy thread.
 
 The paired Codex parent may send a version-1 `gitsense.buddy.route.update` whose
 `codex_thread_id` reflects its current `CODEX_THREAD_ID`. Validate the Buddy,
-Group, harness, and declared `agent_mailbox_id` against this relationship, then
+Group, harness, and declared `agent_mailbox_id` against this relationship.
+Require the inbox envelope sender to match the paired parent's declared
+`agent_mailbox_id`; matching payload fields alone are insufficient. Only then
 retain the new value as the current queue target. It supersedes the value
 injected at connection. Consume it silently without publishing, forwarding, or
 acknowledging it. A malformed or mismatched update must not replace the last
