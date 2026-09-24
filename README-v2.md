@@ -30,7 +30,7 @@ No proxy or wrapper required.
       <td width="50%"><strong>2. Bring work together</strong><br><video src="https://github.com/user-attachments/assets/b7ae882f-c528-4117-9c9c-73e70414d17a" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
-      <td width="50%"><strong>3. Build rich dashboards</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
+      <td width="50%"><strong>3. Build smart dashboards</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
       <td width="50%"><strong>4. Give each agent an identity</strong><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Demo coming soon: giving each agent a recognizable identity" width="100%"></td>
     </tr>
   </tbody>
