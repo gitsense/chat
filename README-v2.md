@@ -20,11 +20,20 @@ No proxy or wrapper required.
   <a href="#organize-related-work-into-groups">Organize work</a>
 </p>
 
-<img src="assets/cross-agent-teaser-placeholder.svg" alt="Teaser placeholder: a GitSense Chat lead agent coordinating Claude Code, Codex, and Pi" width="100%">
+<img src="assets/beyond-tabs-and-terminal-panes-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
-<p align="center"><strong>A lead agent in GitSense Chat coordinates work across Claude Code, Codex, and Pi.</strong><br>Teaser video and final poster coming soon.</p>
-
-<!-- Review draft: replace the placeholder with the teaser poster and link it to the new video. -->
+<table>
+  <tbody>
+    <tr>
+      <td width="50%"><strong>Find related work and review it together</strong><br><video src="https://github.com/user-attachments/assets/7e18ad89-fafc-42fc-934b-57fd2b113fd6" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>Bring together your work with a lead</strong><br><video src="https://github.com/user-attachments/assets/b7ae882f-c528-4117-9c9c-73e70414d17a" controls muted loop playsinline width="100%"></video></td>
+    </tr>
+    <tr>
+      <td width="50%"><strong>Build rich dashboards with less agent context</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
+      <td width="50%"><strong>Give each agent a recognizable identity</strong><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Demo coming soon: giving each agent a recognizable identity" width="100%"></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Your agents don’t change. How you work together does.
 
@@ -111,30 +120,10 @@ Keep the sessions for a project or task in a Group. Arrange them by status or
 priority, with a lead to help coordinate. A session can appear in multiple
 Groups without being moved or copied.
 
-<details>
-<summary>Take a closer look at a Group</summary>
-
-<img src="assets/beyond-tabs-and-terminal-panes-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
-
-</details>
-
 **Bring related work together**
 
 Find the sessions you need, review them together, and give each agent a
 recognizable identity. Add dashboards when you need a shared view of the work.
-
-<table>
-  <tbody>
-    <tr>
-      <td width="50%"><strong>Find related work and review it together</strong><br><video src="https://github.com/user-attachments/assets/7e18ad89-fafc-42fc-934b-57fd2b113fd6" controls muted loop playsinline width="100%"></video></td>
-      <td width="50%"><strong>Bring together your work with a lead</strong><br><video src="https://github.com/user-attachments/assets/b7ae882f-c528-4117-9c9c-73e70414d17a" controls muted loop playsinline width="100%"></video></td>
-    </tr>
-    <tr>
-      <td width="50%"><strong>Build rich dashboards with less agent context</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
-      <td width="50%"><strong>Give each agent a recognizable identity</strong><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Demo coming soon: giving each agent a recognizable identity" width="100%"></td>
-    </tr>
-  </tbody>
-</table>
 
 **Let your lead help you keep track**
 
