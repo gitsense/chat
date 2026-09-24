@@ -86,7 +86,7 @@ or open a result in another app when you’re ready.
     <td width="50%" valign="top">
       <strong>One conversation. Multiple sessions.</strong>
       <a href="assets/scale-coordination-hello-world-lab.mp4"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating six agents in the Hello World Lab" width="100%"></a>
-      <p>A lead agent creates six agents for a Hello World demo. One request reaches all six; a follow-up changes only the C and Go programs.</p>
+      <p>Ask the lead agent to start six language sessions. One request reaches them all. A follow-up updates only C and Go.</p>
       <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/scale-coordination-hello-world-lab.mp4">Download to watch the demo</a></p>
     </td>
   </tr>
