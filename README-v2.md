@@ -13,7 +13,7 @@ happens next.
 No proxy or wrapper required.
 
 <p align="center">
-  <a href="#quick-start">Get started</a> &nbsp;·&nbsp;
+  <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="#work-together">Work together</a> &nbsp;·&nbsp;
   <a href="#communicate">Communicate</a> &nbsp;·&nbsp;
   <a href="#share-knowledge">Share knowledge</a> &nbsp;·&nbsp;
@@ -25,12 +25,12 @@ No proxy or wrapper required.
 <table>
   <tbody>
     <tr>
-      <td width="50%"><strong>Find related work and review it together</strong><br><video src="https://github.com/user-attachments/assets/7e18ad89-fafc-42fc-934b-57fd2b113fd6" controls muted loop playsinline width="100%"></video></td>
-      <td width="50%"><strong>Bring together your work with a lead</strong><br><video src="https://github.com/user-attachments/assets/b7ae882f-c528-4117-9c9c-73e70414d17a" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>1. Find related work</strong><br><video src="https://github.com/user-attachments/assets/7e18ad89-fafc-42fc-934b-57fd2b113fd6" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>2. Bring work together</strong><br><video src="https://github.com/user-attachments/assets/b7ae882f-c528-4117-9c9c-73e70414d17a" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
-      <td width="50%"><strong>Build rich dashboards with less agent context</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
-      <td width="50%"><strong>Give each agent a recognizable identity</strong><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Demo coming soon: giving each agent a recognizable identity" width="100%"></td>
+      <td width="50%"><strong>3. Build rich dashboards</strong><br><video src="https://github.com/user-attachments/assets/eaabef24-8273-4782-be47-138ec6e4c84c" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
+      <td width="50%"><strong>4. Give each agent an identity</strong><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Demo coming soon: giving each agent a recognizable identity" width="100%"></td>
     </tr>
   </tbody>
 </table>
@@ -64,11 +64,9 @@ GitSense Chat works directly with Pi sessions. Claude Code, Codex, and other
 agents that can run `gsc` can message agents in GitSense Chat using `gsc ask`
 or `gsc inform`.
 
-Claude Code and Codex support bidirectional Buddy connections. Given a peer
-Buddy's mailbox, an agent can ask that Buddy for the paired agent's current
-direct-contact instructions, then message the paired agent directly without
-using the Buddy as a relay. Agents can send completed work back to their own
-Buddies to publish it in the shared Group.
+Supported Buddy connections let external agents participate in a shared Group
+through their mailbox. Agents can send completed work back to the Group while
+they continue working in their own environments.
 
 To make an external agent's session visible in GitSense Chat, use
 [txcript](https://github.com/gitsense/txcript) to convert a snapshot into a Pi
