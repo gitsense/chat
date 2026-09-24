@@ -35,6 +35,63 @@ No proxy or wrapper required.
   </tbody>
 </table>
 
+## Quick Start
+
+Review the [install script](install.sh), then install the `gsc` CLI:
+
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
+
+This installs the `gsc` CLI. To install and configure GitSense Chat, ask your
+coding agent:
+
+```text
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
+```
+
+You can also [build the CLI from source](https://github.com/gitsense/gsc-cli).
+
+GitSense Chat currently supports Pi sessions, which you can organize into Groups
+with lead agents. Follow
+[pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
+Insights, checkpoints, shared knowledge, messaging, lead agents, and group
+observation loops work together.
+
+### Connect Claude Code, Codex, and other agents
+
+GitSense Chat works directly with Pi sessions. Claude Code, Codex, and other
+agents that can run `gsc` can message agents in GitSense Chat using `gsc ask`
+or `gsc inform`.
+
+Claude Code and Codex support bidirectional Buddy connections. Given a peer
+Buddy's mailbox, an agent can ask that Buddy for the paired agent's current
+direct-contact instructions, then message the paired agent directly without
+using the Buddy as a relay. Agents can send completed work back to their own
+Buddies to publish it in the shared Group.
+
+To make an external agent's session visible in GitSense Chat, use
+[txcript](https://github.com/gitsense/txcript) to convert a snapshot into a Pi
+session:
+
+```bash
+cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
+
+txcript list --from claude_code
+txcript continue <session-id> \
+  --from <harness> \
+  --with pi \
+  --no-resume
+```
+
+The converted snapshot appears in GitSense Chat shortly after the Pi session
+sync service processes it. Repeat the conversion when you want to refresh it;
+this is a temporary workaround until near-real-time synchronization is
+available for other runtimes.
+
+GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
+same Brains, notes, lessons, and rules.
+
 ## Your agents don’t change. How you work together does.
 
 Ask a lead agent to coordinate related sessions so you don’t have to repeat
@@ -170,62 +227,6 @@ For a GitHub Watcher, for example, an analyzer can review API calls and look
 for evidence that the agent read the required skill instructions. Use those
 findings to investigate mistakes and refine instructions for the next run.
 
-## Quick Start
-
-Review the [install script](install.sh), then install the `gsc` CLI:
-
-```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
-```
-
-This installs the `gsc` CLI. To install and configure GitSense Chat, ask your
-coding agent:
-
-```text
-Install and configure GitSense Chat for me. Start by running `gsc docs help`.
-```
-
-You can also [build the CLI from source](https://github.com/gitsense/gsc-cli).
-
-GitSense Chat currently supports Pi sessions, which you can organize into Groups
-with lead agents. Follow
-[pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
-Insights, checkpoints, shared knowledge, messaging, lead agents, and group
-observation loops work together.
-
-### Connect Claude Code, Codex, and other agents
-
-GitSense Chat works directly with Pi sessions. Claude Code, Codex, and other
-agents that can run `gsc` can message agents in GitSense Chat using `gsc ask`
-or `gsc inform`.
-
-Claude Code and Codex support bidirectional Buddy connections. Given a peer
-Buddy's mailbox, an agent can ask that Buddy for the paired agent's current
-direct-contact instructions, then message the paired agent directly without
-using the Buddy as a relay. Agents can send completed work back to their own
-Buddies to publish it in the shared Group.
-
-To make an external agent's session visible in GitSense Chat, use
-[txcript](https://github.com/gitsense/txcript) to convert a snapshot into a Pi
-session:
-
-```bash
-cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
-
-txcript list --from claude_code
-txcript continue <session-id> \
-  --from <harness> \
-  --with pi \
-  --no-resume
-```
-
-The converted snapshot appears in GitSense Chat shortly after the Pi session
-sync service processes it. Repeat the conversion when you want to refresh it;
-this is a temporary workaround until near-real-time synchronization is
-available for other runtimes.
-
-GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
-same Brains, notes, lessons, and rules.
 
 ## Security
 
