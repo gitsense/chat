@@ -26,11 +26,11 @@ GitSense uses your agents’ session logs in the background. No wrapper or proxy
 <table>
   <tbody>
     <tr>
-      <td width="50%"><strong>1. Find related work</strong><br><video src="assets/01-find-related-work.mp4" controls muted loop playsinline width="100%"></video></td>
-      <td width="50%"><strong>2. Bring work together</strong><br><video src="assets/02-bring-work-together.mp4" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>1. Find related work</strong><br><video src="https://github.com/user-attachments/assets/b077b9f0-f4e7-40eb-9125-4d4e398e5555" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>2. Bring work together</strong><br><video src="https://github.com/user-attachments/assets/fc34dd03-a98c-4230-a9a5-82f6a479393f" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
-      <td width="50%"><strong>3. Build smart dashboards</strong><br><video src="assets/03-build-smart-dashboards.mp4" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
+      <td width="50%"><strong>3. Build smart dashboards</strong><br><video src="https://github.com/user-attachments/assets/33975bb2-9461-4be8-aaf5-9efb158a33f6" controls muted loop playsinline width="100%"></video><br><a href="workflows/checkpoint-file-dashboard/README.md">Learn more: Checkpoint File Dashboard</a></td>
       <td width="50%"><strong>4. Give each agent an identity</strong><br><img src="assets/agent-collaboration-workflow-placeholder.svg" alt="Demo coming soon: giving each agent a recognizable identity" width="100%"></td>
     </tr>
   </tbody>
