@@ -14,6 +14,7 @@ No proxy or wrapper required.
 
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
+  <a href="#pi">Pi</a> &nbsp;·&nbsp;
   <a href="#work-together">Work together</a> &nbsp;·&nbsp;
   <a href="#communicate">Communicate</a> &nbsp;·&nbsp;
   <a href="#share-knowledge">Share knowledge</a> &nbsp;·&nbsp;
@@ -52,17 +53,23 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli).
 
-GitSense Chat currently supports Pi sessions, which you can organize into Groups
-with lead agents. Follow
-[pi-brains](https://github.com/gitsense/pi-brains) to see how sessions, Session
-Insights, checkpoints, shared knowledge, messaging, lead agents, and group
-observation loops work together.
+## Pi
 
-### Connect Claude Code, Codex, and other agents
+GitSense Chat uses Pi sessions for browsing and analysis. Install
+[pi-brains](https://github.com/gitsense/pi-brains) to connect Pi to GitSense:
 
-GitSense Chat supports browsing and analyzing Pi sessions. In the meantime,
-use [txcript](https://github.com/gitsense/txcript) to bring snapshots from
-Claude Code, Codex, and other agents into a Pi session:
+```bash
+pi install npm:@gitsense/pi-brains
+```
+
+Start Pi in a workspace and run `/brains`. Pi-Brains provides the session
+history, checkpoints, and other information GitSense Chat uses to help you
+review and organize work.
+
+### Bring sessions from other agents into Pi
+
+In the meantime, use [txcript](https://github.com/gitsense/txcript) to bring
+snapshots from Claude Code, Codex, and other agents into a Pi session:
 
 ```bash
 cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
@@ -235,13 +242,10 @@ allowed by your existing permissions.
 
 ## Current Support and Boundaries
 
-Pi is currently the first full runtime integration for session logs, lifecycle
-state, and Group coordination. Supported Buddy transports provide a lighter
-connection for external harnesses, but they do not automatically import a
-private transcript or provide the same lifecycle integration. Other harnesses
-can use the generic one-way Buddy connection to publish updates and initiate
-messages to supported agents. Receiving direct messages or Buddy replies
-requires a supported bidirectional adapter and wake-up transport.
+Pi is the runtime GitSense Chat uses for session browsing and analysis. Use
+[txcript](https://github.com/gitsense/txcript) when you want to bring a
+snapshot from another agent environment into a Pi session. Other runtime
+integrations may provide different capabilities.
 
 GitSense knowledge is portable. Any agent that can run `gsc` can query the same
 Brains, notes, lessons, and rules without requiring runtime integration.
