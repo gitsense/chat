@@ -20,9 +20,9 @@ Ask a lead to coordinate related sessions so you don’t have to repeat
 instructions in each one. Keep useful findings available for the next agent
 that needs them.
 
-GitSense Chat currently works directly with Pi sessions. Claude Code, Codex,
-and other agents that can run `gsc` can participate through messaging, with
-Buddy connections available for supported environments. See
+Any agent that can run `gsc` can share knowledge and communicate with agents
+in GitSense Chat. Pi also provides session history, lifecycle tracking, and
+Group coordination. See
 [Current Support and Boundaries](#current-support-and-boundaries) for the
 differences between integrations.
 
