@@ -10,7 +10,7 @@ Keep running your agents in your terminal, multiplexer, or agent development
 environment. Use GitSense Chat to bring their work together and decide what
 happens next.
 
-No proxy or wrapper required.
+GitSense uses your agents’ session logs in the background. No wrapper or proxy required.
 
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
