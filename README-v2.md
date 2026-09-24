@@ -12,7 +12,19 @@ happens next.
 
 No proxy or wrapper required.
 
-**[Get started](#quick-start)**
+<p align="center">
+  <a href="#quick-start">Get started</a> &nbsp;·&nbsp;
+  <a href="#work-together">Work together</a> &nbsp;·&nbsp;
+  <a href="#communicate">Communicate</a> &nbsp;·&nbsp;
+  <a href="#share-knowledge">Share knowledge</a> &nbsp;·&nbsp;
+  <a href="#organize-related-work-into-groups">Organize work</a>
+</p>
+
+<img src="assets/cross-agent-teaser-placeholder.svg" alt="Teaser placeholder: a GitSense Chat lead agent coordinating Claude Code, Codex, and Pi" width="100%">
+
+<p align="center"><strong>A lead agent in GitSense Chat coordinates work across Claude Code, Codex, and Pi.</strong><br>Teaser video and final poster coming soon.</p>
+
+<!-- Review draft: replace the placeholder with the teaser poster and link it to the new video. -->
 
 ## Your agents don’t change. How you work together does.
 
@@ -25,66 +37,70 @@ in GitSense Chat. See [Quick Start](#quick-start) and
 [Current Support and Boundaries](#current-support-and-boundaries) for more
 information.
 
+<a id="work-together"></a>
+
 ### Same agents. More ways to work together.
 
 Your agents can include actions in their responses. Click to send a message
 or open a result in another app when you’re ready.
 
-**Choose a next step without typing it out**
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Choose your next step</strong>
+      <p>Click to tell the lead agent to start. Workers return actions to open a diff and a spreadsheet. You choose when to act.</p>
+      <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4"><img src="assets/rethink-human-agent-collaboration-poster.png" alt="A lead agent coordinating workers whose responses offer actions" width="100%"></a>
+      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4">Watch the demo</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <strong>Guide multiple sessions through one conversation</strong>
+      <p>A lead agent creates six agents for a Hello World demo. One request reaches all six; a follow-up changes only the C and Go programs.</p>
+      <a href="assets/scale-coordination-hello-world-lab.mp4"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating six agents in the Hello World Lab" width="100%"></a>
+      <p><a href="assets/scale-coordination-hello-world-lab.mp4">Watch the demo (MP4, 7.4 MB)</a></p>
+    </td>
+  </tr>
+</table>
 
-In this demo, a click sends “start” to the lead, which coordinates the worker
-agents in their own conversations. Their responses offer actions to open a
-diff in an editor and a spreadsheet in its app. You choose when to act.
-
-**[▶ Download and watch the demo video](https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4)**
-
-[![GitSense Chat bringing together sessions, a lead, and actions offered in agent responses.](assets/rethink-human-agent-collaboration-poster.png)](https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4)
-
-**Guide multiple sessions through one conversation**
-
-Tell your lead what team you need, then direct their work from the Group. In
-this Hello World demo, the lead creates six agents for C, Go, Rust, Python,
-JavaScript, and Java. One request reaches all six; a follow-up changes only
-the C and Go programs.
-
-**[▶ Download and watch the demo video (MP4, 7.4 MB)](assets/scale-coordination-hello-world-lab.mp4)**
-
-[![A lead coordinating six agents in the Hello World Lab.](assets/scale-coordination-hello-world-lab.png)](assets/scale-coordination-hello-world-lab.mp4)
+<a id="communicate"></a>
 
 ### Same agents. More ways to communicate.
 
-An agent working in Claude Code can ask an agent in GitSense Chat for help
-through `gsc`, then continue working in Claude Code. Other agents that can run
-`gsc` can ask questions or send updates too.
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <p>An agent working in Claude Code can ask an agent in GitSense Chat for help through <code>gsc</code>, then continue working in Claude Code. Other agents that can run <code>gsc</code> can ask questions or send updates too.</p>
+      <p>Supported Buddy connections let external agents bring completed work back to a shared Group without moving their conversations out of their own environments.</p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4"><img src="assets/more-ways-to-communicate.png" alt="Agents communicating across agent environments" width="100%"></a>
+      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4">Watch the demo</a></p>
+    </td>
+  </tr>
+</table>
 
-Supported Buddy connections let external agents bring completed work back to
-a shared Group without moving their conversations out of their own environments.
-
-**[▶ Download and watch the demo video](https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4)**
-
-[![Agents communicating and working together across agent environments.](assets/more-ways-to-communicate.png)](https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4)
+<a id="share-knowledge"></a>
 
 ### Same agents. A better starting point.
 
 Save what you learn as Brains, notes, and lessons. Any agent with access to
 `gsc` can look up that context rather than asking you to explain it again.
 
-**Same search, more context**
-
-Regular ripgrep finds matching text. GitSense can add each file’s purpose,
-helping your agents decide where to look next.
-
-![The same search in ripgrep and GitSense, with GitSense adding the purpose of each matching file.](assets/same-search-more-to-go-on.png)
-
-**Build knowledge once, share it across agents**
-
-Create a Group that other agents can turn to for help. Here, the GitHub
-Watcher’s lead brings together recent issues from two repositories and answers
-questions from Claude Code, Codex, and OpenCode through `gsc`.
-
-**[▶ Download and watch the demo video (MP4, 3.1 MB)](assets/create-specialized-knowledge-agents.mp4)**
-
-[![A GitHub Watcher in Pi alongside Claude, Codex, and OpenCode agents asking it for recent GitHub issues.](assets/create-specialized-knowledge-agents.png)](assets/create-specialized-knowledge-agents.mp4)
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <strong>Same search, more context</strong>
+      <p>Regular ripgrep finds matching text. GitSense can add each file’s purpose, helping your agents decide where to look next.</p>
+      <a href="assets/same-search-more-to-go-on.png"><img src="assets/same-search-more-to-go-on.png" alt="Ripgrep results alongside GitSense results with file-purpose context" width="100%"></a>
+      <p><a href="assets/same-search-more-to-go-on.png">View the comparison</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <strong>Build knowledge once, share it across agents</strong>
+      <p>The GitHub Watcher’s lead agent brings together issues from two repositories and answers questions from Claude Code, Codex, and OpenCode through <code>gsc</code>.</p>
+      <a href="assets/create-specialized-knowledge-agents.mp4"><img src="assets/create-specialized-knowledge-agents.png" alt="Claude Code, Codex, and OpenCode asking a GitHub Watcher for recent issues" width="100%"></a>
+      <p><a href="assets/create-specialized-knowledge-agents.mp4">Watch the demo (MP4, 3.1 MB)</a></p>
+    </td>
+  </tr>
+</table>
 
 Any agent that can run `gsc` can ask your knowledge agents for help or share
 new findings with them. Shared knowledge is not tied to Pi or to one Group.
@@ -95,7 +111,12 @@ Keep the sessions for a project or task in a Group. Arrange them by status or
 priority, with a lead to help coordinate. A session can appear in multiple
 Groups without being moved or copied.
 
+<details>
+<summary>Take a closer look at a Group</summary>
+
 <img src="assets/beyond-tabs-and-terminal-panes-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
+
+</details>
 
 **Bring related work together**
 
