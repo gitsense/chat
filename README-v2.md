@@ -57,7 +57,7 @@ For Pi setup and instructions for bringing in sessions from other agents, see
 [Runtime details](#runtime-details).
 
 
-## Your agents don’t change. How you work together does.
+## Keep your agents. Make working with them better.
 
 Ask a lead agent to coordinate related sessions so you don’t have to repeat
 instructions in each one. Keep useful findings available for the next agent
@@ -101,10 +101,10 @@ or open a result in another app when you’re ready.
     <td width="50%" valign="top">
       <p>An agent working in Claude Code can ask an agent in GitSense Chat for help through <code>gsc</code>, then continue working in Claude Code. Other agents that can run <code>gsc</code> can ask questions or send updates too.</p>
       <p>Supported Buddy connections let external agents bring completed work back to a shared Group without moving their conversations out of their own environments.</p>
+      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4">Download to watch the demo</a></p>
     </td>
     <td width="50%" valign="top">
       <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4"><img src="assets/more-ways-to-communicate.png" alt="Agents communicating across agent environments" width="100%"></a>
-      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4">Watch the demo</a></p>
     </td>
   </tr>
 </table>
@@ -116,63 +116,26 @@ or open a result in another app when you’re ready.
 Save what you learn as Brains, notes, and lessons. Any agent with access to
 `gsc` can look up that context rather than asking you to explain it again.
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <strong>Same search, more context</strong>
-      <p>Regular ripgrep finds matching text. GitSense can add each file’s purpose, helping your agents decide where to look next.</p>
-      <a href="assets/same-search-more-to-go-on.png"><img src="assets/same-search-more-to-go-on.png" alt="Ripgrep results alongside GitSense results with file-purpose context" width="100%"></a>
-      <p><a href="assets/same-search-more-to-go-on.png">View the comparison</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <strong>Build knowledge once, share it across agents</strong>
-      <p>The GitHub Watcher’s lead agent brings together issues from two repositories and answers questions from Claude Code, Codex, and OpenCode through <code>gsc</code>.</p>
-      <a href="assets/create-specialized-knowledge-agents.mp4"><img src="assets/create-specialized-knowledge-agents.png" alt="Claude Code, Codex, and OpenCode asking a GitHub Watcher for recent issues" width="100%"></a>
-      <p><a href="assets/create-specialized-knowledge-agents.mp4">Watch the demo (MP4, 3.1 MB)</a></p>
-    </td>
-  </tr>
-</table>
+**Same search, more context**
+
+Regular ripgrep finds matching text. GitSense can add each file’s purpose,
+helping your agents decide where to look next.
+
+<a href="assets/same-search-more-to-go-on.png"><img src="assets/same-search-more-to-go-on.png" alt="Ripgrep results alongside GitSense results with file-purpose context" width="100%"></a>
+
+<a href="assets/same-search-more-to-go-on.png">View the comparison</a>
+
+**Build knowledge once, share it across agents**
+
+The GitHub Watcher’s lead agent brings together issues from two repositories and
+answers questions from Claude Code, Codex, and OpenCode through `gsc`.
+
+<a href="assets/create-specialized-knowledge-agents.mp4"><img src="assets/create-specialized-knowledge-agents.png" alt="Claude Code, Codex, and OpenCode asking a GitHub Watcher for recent issues" width="100%"></a>
+
+<a href="assets/create-specialized-knowledge-agents.mp4">Watch the demo (MP4, 3.1 MB)</a>
 
 Any agent that can run `gsc` can ask your knowledge agents for help or share
 new findings with them. Shared knowledge is not tied to Pi or to one Group.
-
-## Organize related work into Groups
-
-Keep the sessions for a project or task in a Group. Arrange them by status or
-priority, with a lead to help coordinate. A session can appear in multiple
-Groups without being moved or copied.
-
-**Bring related work together**
-
-Find the sessions you need, review them together, and give each agent a
-recognizable identity. Add dashboards when you need a shared view of the work.
-
-**Let your lead help you keep track**
-
-Ask your lead to check progress or follow up with workers. For example, have
-it notify you when a session finishes or needs your attention.
-
-<table>
-  <thead>
-    <tr>
-      <th width="50%" align="center">Create an assistant to watch the work</th>
-      <th width="50%" align="center">Organize the work</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top"><img src="assets/give-your-lead-a-job.png" alt="A Group lead given a monitoring job with instructions to send a macOS notification if a session has not finished." width="100%"></td>
-      <td width="50%" valign="top"><img src="assets/organize-by-status.png" alt="A My Work Group organized as a Kanban board with an AI assistant monitoring the sessions." width="100%"></td>
-    </tr>
-    <tr>
-      <td valign="top">Give your lead a job, like notifying you when a session stalls or finishes.</td>
-      <td valign="top">Arrange related sessions by status, recent activity, or whatever makes sense for your work.</td>
-    </tr>
-  </tbody>
-</table>
-
-Create agents, bring in existing sessions, and start or stop managed agents as
-the work changes.
 
 ## Understand what happened
 
