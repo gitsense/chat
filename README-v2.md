@@ -14,7 +14,7 @@ No proxy or wrapper required.
 
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
-  <a href="#pi">Pi</a> &nbsp;·&nbsp;
+  <a href="#runtime-details">Runtime details</a> &nbsp;·&nbsp;
   <a href="#work-together">Work together</a> &nbsp;·&nbsp;
   <a href="#communicate">Communicate</a> &nbsp;·&nbsp;
   <a href="#share-knowledge">Share knowledge</a> &nbsp;·&nbsp;
@@ -53,41 +53,9 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli).
 
-## Pi
+For Pi setup and instructions for bringing in sessions from other agents, see
+[Runtime details](#runtime-details).
 
-GitSense Chat uses Pi sessions for browsing and analysis. Install
-[pi-brains](https://github.com/gitsense/pi-brains) to connect Pi to GitSense:
-
-```bash
-pi install npm:@gitsense/pi-brains
-```
-
-Start Pi in a workspace and run `/brains`. Pi-Brains provides the session
-history, checkpoints, and other information GitSense Chat uses to help you
-review and organize work.
-
-### Bring sessions from other agents into Pi
-
-In the meantime, use [txcript](https://github.com/gitsense/txcript) to bring
-snapshots from Claude Code, Codex, and other agents into a Pi session:
-
-```bash
-cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
-
-txcript list --from claude_code
-txcript continue <session-id> \
-  --from <harness> \
-  --with pi \
-  --no-resume
-```
-
-The converted snapshot appears in GitSense Chat shortly after the Pi session
-sync service processes it. Repeat the conversion when you want to refresh it;
-this is a temporary workaround until near-real-time synchronization is
-available for other runtimes.
-
-GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
-same Brains, notes, lessons, and rules.
 
 ## Your agents don’t change. How you work together does.
 
@@ -224,6 +192,46 @@ For a GitHub Watcher, for example, an analyzer can review API calls and look
 for evidence that the agent read the required skill instructions. Use those
 findings to investigate mistakes and refine instructions for the next run.
 
+
+<a id="runtime-details"></a>
+
+## Runtime details
+
+### Use Pi with pi-brains
+
+GitSense Chat uses Pi sessions for browsing and analysis. Install
+[pi-brains](https://github.com/gitsense/pi-brains) to connect Pi to GitSense:
+
+```bash
+pi install npm:@gitsense/pi-brains
+```
+
+Start Pi in a workspace and run `/brains`. Pi-Brains provides the session
+history, checkpoints, and other information GitSense Chat uses to help you
+review and organize work.
+
+### Bring sessions from other agents into Pi
+
+In the meantime, use [txcript](https://github.com/gitsense/txcript) to bring
+snapshots from Claude Code, Codex, and other agents into a Pi session:
+
+```bash
+cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
+
+txcript list --from claude_code
+txcript continue <session-id> \
+  --from <harness> \
+  --with pi \
+  --no-resume
+```
+
+The converted snapshot appears in GitSense Chat shortly after the Pi session
+sync service processes it. Repeat the conversion when you want to refresh it;
+this is a temporary workaround until near-real-time synchronization is
+available for other runtimes.
+
+GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
+same Brains, notes, lessons, and rules.
 
 ## Security
 
