@@ -123,7 +123,6 @@ helping your agents decide where to look next.
 
 <a href="assets/same-search-more-to-go-on.png"><img src="assets/same-search-more-to-go-on.png" alt="Ripgrep results alongside GitSense results with file-purpose context" width="100%"></a>
 
-<a href="assets/same-search-more-to-go-on.png">View the comparison</a>
 
 **Build knowledge once, share it across agents**
 
