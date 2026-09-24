@@ -21,10 +21,9 @@ instructions in each one. Keep useful findings available for the next agent
 that needs them.
 
 Any agent that can run `gsc` can share knowledge and communicate with agents
-in GitSense Chat. Pi also provides session history, lifecycle tracking, and
-Group coordination. See
-[Current Support and Boundaries](#current-support-and-boundaries) for the
-differences between integrations.
+in GitSense Chat. See [Quick Start](#quick-start) and
+[Current Support and Boundaries](#current-support-and-boundaries) for more
+information.
 
 ### Same agents. More ways to work together.
 
