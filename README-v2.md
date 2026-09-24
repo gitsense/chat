@@ -6,10 +6,9 @@
 
 **Reimagining how people and agents work together**
 
-Keep using your agents where you already run them—in your terminal,
-multiplexer, or agent development environment. GitSense Chat brings their work
-together and gives you more ways to communicate, coordinate, and act on what
-they produce.
+Keep running your agents in your terminal, multiplexer, or agent development
+environment. Use GitSense Chat to bring their work together and decide what
+happens next.
 
 No proxy or wrapper required.
 
@@ -17,9 +16,9 @@ No proxy or wrapper required.
 
 ## Your agents don’t change. How you work together does.
 
-You don’t need to replace your agents to work better with them. Bring related
-work into one place, guide multiple conversations through a lead, and give
-your agents access to what you and others have already learned.
+Ask a lead to coordinate related sessions so you don’t have to repeat
+instructions in each one. Keep useful findings available for the next agent
+that needs them.
 
 GitSense Chat currently works directly with Pi sessions. Claude Code, Codex,
 and other agents that can run `gsc` can participate through messaging, with
@@ -29,9 +28,8 @@ differences between integrations.
 
 ### Same agents. More ways to work together.
 
-A conversation can offer more than a text reply. Choose a next step with a
-click, have your lead coordinate the workers, and open their results in your
-own tools when you’re ready.
+Your agents can include actions in their responses. Click to send a message
+or open a result in another app when you’re ready.
 
 **Choose a next step without typing it out**
 
@@ -56,13 +54,12 @@ the C and Go programs.
 
 ### Same agents. More ways to communicate.
 
-Bring agents from different environments into the conversation. Ask questions,
-share findings, and bring completed work back to the Group without moving all
-your work into one agent environment.
+An agent working in Claude Code can ask an agent in GitSense Chat for help
+through `gsc`, then continue working in Claude Code. Other agents that can run
+`gsc` can ask questions or send updates too.
 
-Agents that can run `gsc` can ask a GitSense Chat agent for help or send it an
-update. Supported Buddy connections let external agents participate in a
-shared Group while you continue working with them in their own environments.
+Supported Buddy connections let external agents bring completed work back to
+a shared Group without moving their conversations out of their own environments.
 
 **[▶ Download and watch the demo video](https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4)**
 
@@ -70,9 +67,8 @@ shared Group while you continue working with them in their own environments.
 
 ### Same agents. A better starting point.
 
-Help your agents build on what you already know and what previous work
-uncovered, instead of explaining everything again. Save useful context as
-Brains, notes, and lessons that any agent with access to `gsc` can query.
+Save what you learn as Brains, notes, and lessons. Any agent with access to
+`gsc` can look up that context rather than asking you to explain it again.
 
 **Same search, more context**
 
@@ -94,11 +90,11 @@ questions from Claude Code, Codex, and OpenCode through `gsc`.
 Any agent that can run `gsc` can ask your knowledge agents for help or share
 new findings with them. Shared knowledge is not tied to Pi or to one Group.
 
-## Organize around the work, not the windows.
+## Organize related work into Groups
 
-Bring related sessions into a Group, give them a lead, and arrange them in a
-way that makes sense for the work. A session can appear in multiple Groups
-without being moved or copied.
+Keep the sessions for a project or task in a Group. Arrange them by status or
+priority, with a lead to help coordinate. A session can appear in multiple
+Groups without being moved or copied.
 
 <img src="assets/beyond-tabs-and-terminal-panes-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
@@ -122,9 +118,8 @@ recognizable identity. Add dashboards when you need a shared view of the work.
 
 **Let your lead help you keep track**
 
-Delegate the progress checks and follow-ups you would otherwise handle
-yourself. Give your lead a specific job, and organize the sessions by status,
-priority, or whatever helps you see what needs attention.
+Ask your lead to check progress or follow up with workers. For example, have
+it notify you when a session finishes or needs your attention.
 
 <table>
   <thead>
@@ -150,9 +145,8 @@ the work changes.
 
 ## Understand what happened
 
-When you need more than a progress update, open a session to inspect its
-history, review message and tool-call counts, and browse reads, writes, and
-edits by file.
+Open a session to see its conversation history and tool calls. Browse file
+activity to check what an agent read or changed.
 
 | Session overview | File activity |
 | --- | --- |
