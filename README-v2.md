@@ -16,7 +16,7 @@ No proxy or wrapper required.
 
 ## Your agents don’t change. How you work together does.
 
-Ask a lead to coordinate related sessions so you don’t have to repeat
+Ask a lead agent to coordinate related sessions so you don’t have to repeat
 instructions in each one. Keep useful findings available for the next agent
 that needs them.
 
