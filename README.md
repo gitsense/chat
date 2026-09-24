@@ -29,7 +29,7 @@ No proxy or wrapper required.
 
 <h3 align="center">Go beyond tabs and terminal panes. Organize around the work</h3>
 
-<img src="assets/rethink-human-agent-collaboration-app-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
+<img src="assets/beyond-tabs-and-terminal-panes-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
 <table>
   <tbody>
