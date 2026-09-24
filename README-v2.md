@@ -129,9 +129,9 @@ helping your agents decide where to look next.
 The GitHub Watcher’s lead agent brings together issues from two repositories and
 answers questions from Claude Code, Codex, and OpenCode through `gsc`.
 
-<a href="assets/create-specialized-knowledge-agents.mp4"><img src="assets/create-specialized-knowledge-agents.png" alt="Claude Code, Codex, and OpenCode asking a GitHub Watcher for recent issues" width="100%"></a>
+<a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/create-specialized-knowledge-agents.mp4"><img src="assets/create-specialized-knowledge-agents.png" alt="Claude Code, Codex, and OpenCode asking a GitHub Watcher for recent issues" width="100%"></a>
 
-<a href="assets/create-specialized-knowledge-agents.mp4">Watch the demo (MP4, 3.1 MB)</a>
+<a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/create-specialized-knowledge-agents.mp4">Download to watch the demo</a>
 
 Any agent that can run `gsc` can ask your knowledge agents for help or share
 new findings with them. Shared knowledge is not tied to Pi or to one Group.
