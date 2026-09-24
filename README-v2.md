@@ -81,13 +81,13 @@ or open a result in another app when you’re ready.
       <strong>Choose your next step</strong>
       <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4"><img src="assets/rethink-human-agent-collaboration-poster.png" alt="A lead agent coordinating workers whose responses offer actions" width="100%"></a>
       <p>Click to tell the lead agent to start. Workers return actions to open a diff and a spreadsheet. You choose when to act.</p>
-      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4">Watch the demo</a></p>
+      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4">Download to watch the demo</a></p>
     </td>
     <td width="50%" valign="top">
       <strong>One conversation. Multiple sessions.</strong>
       <a href="assets/scale-coordination-hello-world-lab.mp4"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating six agents in the Hello World Lab" width="100%"></a>
       <p>A lead agent creates six agents for a Hello World demo. One request reaches all six; a follow-up changes only the C and Go programs.</p>
-      <p><a href="assets/scale-coordination-hello-world-lab.mp4">Watch the demo (MP4, 7.4 MB)</a></p>
+      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/scale-coordination-hello-world-lab.mp4">Download to watch the demo</a></p>
     </td>
   </tr>
 </table>
