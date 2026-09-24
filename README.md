@@ -17,11 +17,9 @@ No proxy or wrapper required.
 
 <h3 align="center">Same agents. More ways to work together</h3>
 
-<video controls muted loop playsinline width="100%">
-  <source src="https://github.com/user-attachments/assets/690c076b-66ad-435e-82e7-f80e64226255" type="video/mp4">
-</video>
+<p align="center"><strong><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4">Download the video</a></strong></p>
 
-<p align="center"><a href="https://github.com/user-attachments/assets/325763e5-3117-4328-ae70-7ba714d18aac">Download the video if it does not play</a></p>
+<img src="assets/rethink-human-agent-collaboration-poster.png" alt="GitSense Chat bringing together sessions, a lead, dashboards, and Buddies" width="100%">
 
 <h3 align="center">Same agents. More ways to communicate together</h3>
 
