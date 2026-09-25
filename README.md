@@ -131,8 +131,9 @@ helping your agents decide where to look next.
 
 **Build knowledge once, share it across agents**
 
-The GitHub Watcher’s lead agent brings together issues from two repositories and
-answers questions from Claude Code, Codex, and OpenCode through `gsc`.
+Create a GitHub Watcher to follow issues across two repositories. Agents using
+Claude Code, Codex, and OpenCode can ask its lead for the latest findings
+through `gsc`.
 
 <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/create-specialized-knowledge-agents.mp4"><img src="assets/create-specialized-knowledge-agents.png" alt="Claude Code, Codex, and OpenCode asking a GitHub Watcher for recent issues" width="100%"></a>
 
