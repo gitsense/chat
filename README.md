@@ -60,20 +60,22 @@ For Pi setup and instructions for bringing in sessions from other agents, see
 [Runtime details](#runtime-details).
 
 
-## Keep your agents. Make working with them better.
+## Why GitSense Chat?
 
-Ask a lead agent to coordinate related sessions so you don’t have to repeat
-instructions in each one. Keep useful findings available for the next agent
-that needs them.
+Tabs and panes organize your windows. GitSense Chat helps you organize the
+work across them.
 
-Any agent that can run `gsc` can share knowledge and communicate with agents
-in GitSense Chat. See [Quick Start](#quick-start) and
-[Current Support and Boundaries](#current-support-and-boundaries) for more
-information.
+Bring related sessions into a Group, whether they’re tackling one task or
+specializing in different parts of a codebase. Work with a lead agent to find
+the right agent to ask, coordinate their efforts, and bring their findings
+together.
+
+Share what they learn and act directly from their responses, without carrying
+context between every conversation yourself.
 
 <a id="work-together"></a>
 
-### Same agents. More ways to work together.
+### More ways to work with your agents.
 
 Your agents can include actions in their responses. Click to send a message
 or open a result in another app when you’re ready.
@@ -97,7 +99,7 @@ or open a result in another app when you’re ready.
 
 <a id="communicate"></a>
 
-### Same agents. More ways to communicate.
+### Connect agents across environments
 
 <table width="100%">
   <tr>
@@ -114,7 +116,7 @@ or open a result in another app when you’re ready.
 
 <a id="share-knowledge"></a>
 
-### Same agents. A better starting point.
+### Give agents a better starting point
 
 Save what you learn as Brains, notes, and lessons. Any agent with access to
 `gsc` can look up that context rather than asking you to explain it again.
