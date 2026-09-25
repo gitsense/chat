@@ -29,17 +29,17 @@ agent an identity that helps you recognize its role.
 <table>
   <tbody>
     <tr>
-      <td width="50%"><strong>Find, group, and review related work</strong><br><video src="https://github.com/user-attachments/assets/33975bb2-9461-4be8-aaf5-9efb158a33f6" controls muted loop playsinline width="100%"></video></td>
-      <td width="50%"><strong>Bring sessions together with a lead</strong><br><video src="https://github.com/user-attachments/assets/fc34dd03-a98c-4230-a9a5-82f6a479393f" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>Find, group, and review related work</strong><br><video src="https://github.com/user-attachments/assets/33975bb2-9461-4be8-aaf5-9efb158a33f6" controls muted loop playsinline width="100%"></video><br><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/01-find-related-work.mp4">Download to watch the demo</a></td>
+      <td width="50%"><strong>Bring sessions together with a lead</strong><br><video src="https://github.com/user-attachments/assets/fc34dd03-a98c-4230-a9a5-82f6a479393f" controls muted loop playsinline width="100%"></video><br><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/02-bring-work-together.mp4">Download to watch the demo</a></td>
     </tr>
     <tr>
-      <td width="50%"><strong>Build dashboards with fewer tokens</strong><br><video src="https://github.com/user-attachments/assets/b077b9f0-f4e7-40eb-9125-4d4e398e5555" controls muted loop playsinline width="100%"></video></td>
-      <td width="50%"><strong>Give agents a recognizable identity</strong><br><video src="https://github.com/user-attachments/assets/b27add1a-0fc7-42af-847c-c1acec2ef04e" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>Build dashboards with fewer tokens</strong><br><video src="https://github.com/user-attachments/assets/b077b9f0-f4e7-40eb-9125-4d4e398e5555" controls muted loop playsinline width="100%"></video><br><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/03-build-smart-dashboards.mp4">Download to watch the demo</a></td>
+      <td width="50%"><strong>Give agents a recognizable identity</strong><br><video src="https://github.com/user-attachments/assets/b27add1a-0fc7-42af-847c-c1acec2ef04e" controls muted loop playsinline width="100%"></video><br><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/04-agent-identity.mp4">Download to watch the demo</a></td>
     </tr>
   </tbody>
 </table>
 
-## Quick Start
+## Quick start
 
 Review the [install script](install.sh), then install the `gsc` CLI:
 
@@ -75,7 +75,7 @@ context between every conversation yourself.
 
 <a id="work-together"></a>
 
-### More ways to work with your agents.
+### More ways to work with your agents
 
 Turn one conversation into coordinated work across multiple agents. A lead
 can direct an experiment or complex task, bring the responses together, and
@@ -93,7 +93,7 @@ you’re ready.
     </td>
     <td width="50%" valign="top">
       <strong>One conversation. Multiple sessions.</strong>
-      <a href="assets/scale-coordination-hello-world-lab.mp4"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating six agents in the Hello World Lab" width="100%"></a>
+      <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/scale-coordination-hello-world-lab.mp4"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating six agents in the Hello World Lab" width="100%"></a>
       <p>Ask the lead agent to start six language sessions. One request reaches them all. A follow-up updates only C and Go.</p>
       <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/scale-coordination-hello-world-lab.mp4">Download to watch the demo</a></p>
     </td>
@@ -143,7 +143,7 @@ through `gsc`.
 <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/create-specialized-knowledge-agents.mp4">Download to watch the demo</a>
 
 Any agent that can run `gsc` can ask your knowledge agents for help or share
-new findings with them. Shared knowledge is not tied to Pi or to one Group.
+new findings with them.
 
 ## Understand what happened
 
@@ -168,10 +168,10 @@ findings to investigate mistakes and refine instructions for the next run.
 
 ## Runtime details
 
-### Use Pi with pi-brains
+### Use Pi with Pi-Brains
 
 GitSense Chat uses Pi sessions for browsing and analysis. Install
-[pi-brains](https://github.com/gitsense/pi-brains) to connect Pi to GitSense:
+[Pi-Brains](https://github.com/gitsense/pi-brains) to connect Pi to GitSense:
 
 ```bash
 pi install npm:@gitsense/pi-brains
@@ -201,9 +201,6 @@ sync service processes it. Repeat the conversion when you want to refresh it;
 this is a temporary workaround until near-real-time synchronization is
 available for other runtimes.
 
-GitSense knowledge is not tied to Pi. Any agent that can run `gsc` can query the
-same Brains, notes, lessons, and rules.
-
 ## Security
 
 GitSense Chat is currently designed to complement an individual’s local agent
@@ -219,12 +216,7 @@ as having terminal-level access to your agent environment: they may be able to
 send messages to your agents, inspect session activity, and trigger actions
 allowed by your existing permissions.
 
-## Current Support and Boundaries
-
-Pi is the runtime GitSense Chat uses for session browsing and analysis. Use
-[txcript](https://github.com/gitsense/txcript) when you want to bring a
-snapshot from another agent environment into a Pi session. Other runtime
-integrations may provide different capabilities.
+## Current support and boundaries
 
 GitSense knowledge is portable. Any agent that can run `gsc` can query the same
 Brains, notes, lessons, and rules without requiring runtime integration.
