@@ -25,12 +25,12 @@ GitSense uses your agents’ session logs in the background. No wrapper or proxy
 <table>
   <tbody>
     <tr>
-      <td width="50%"><strong>1. Find related work</strong><br><video src="https://github.com/user-attachments/assets/33975bb2-9461-4be8-aaf5-9efb158a33f6" controls muted loop playsinline width="100%"></video></td>
-      <td width="50%"><strong>2. Bring work together</strong><br><video src="https://github.com/user-attachments/assets/fc34dd03-a98c-4230-a9a5-82f6a479393f" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>1. Find, group, and review related work</strong><br><video src="https://github.com/user-attachments/assets/33975bb2-9461-4be8-aaf5-9efb158a33f6" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>2. Bring sessions together with a lead</strong><br><video src="https://github.com/user-attachments/assets/fc34dd03-a98c-4230-a9a5-82f6a479393f" controls muted loop playsinline width="100%"></video></td>
     </tr>
     <tr>
-      <td width="50%"><strong>3. Build smart dashboards</strong><br><video src="https://github.com/user-attachments/assets/b077b9f0-f4e7-40eb-9125-4d4e398e5555" controls muted loop playsinline width="100%"></video></td>
-      <td width="50%"><strong>4. Give agents an identity</strong><br><video src="https://github.com/user-attachments/assets/b27add1a-0fc7-42af-847c-c1acec2ef04e" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>3. Build dashboards with fewer tokens</strong><br><video src="https://github.com/user-attachments/assets/b077b9f0-f4e7-40eb-9125-4d4e398e5555" controls muted loop playsinline width="100%"></video></td>
+      <td width="50%"><strong>4. Give agents a recognizable identity</strong><br><video src="https://github.com/user-attachments/assets/b27add1a-0fc7-42af-847c-c1acec2ef04e" controls muted loop playsinline width="100%"></video></td>
     </tr>
   </tbody>
 </table>
