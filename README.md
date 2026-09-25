@@ -17,8 +17,7 @@ GitSense uses your agents’ session logs in the background. No wrapper or proxy
   <a href="#runtime-details">Runtime details</a> &nbsp;·&nbsp;
   <a href="#work-together">Work together</a> &nbsp;·&nbsp;
   <a href="#communicate">Communicate</a> &nbsp;·&nbsp;
-  <a href="#share-knowledge">Share knowledge</a> &nbsp;·&nbsp;
-  <a href="#organize-related-work-into-groups">Organize work</a>
+  <a href="#share-knowledge">Share knowledge</a>
 </p>
 
 <img src="assets/beyond-tabs-and-terminal-panes-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
