@@ -77,8 +77,11 @@ context between every conversation yourself.
 
 ### More ways to work with your agents.
 
-Your agents can include actions in their responses. Click to send a message
-or open a result in another app when you’re ready.
+Turn one conversation into coordinated work across multiple agents. A lead
+can direct an experiment or complex task, bring the responses together, and
+help decide what to do next. Agents can also include actions in their
+responses, so you can send a follow-up or open a result in another app when
+you’re ready.
 
 <table width="100%">
   <tr>
@@ -181,11 +184,11 @@ review and organize work.
 ### Bring sessions from other agents into Pi
 
 In the meantime, use [txcript](https://github.com/gitsense/txcript) to bring
-snapshots from Claude Code, Codex, and other agents into a Pi session:
+snapshots from Claude Code, Codex, and other agents into a Pi session. Download the prebuilt `txcript` binary for your platform from the
+[GitSense txcript Releases](https://github.com/gitsense/txcript/releases) page
+and place it on your `PATH`.
 
 ```bash
-cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
-
 txcript list --from claude_code
 txcript continue <session-id> \
   --from <harness> \
