@@ -20,6 +20,12 @@ Keep running your agents in your terminal, multiplexer, or agent development env
 
 GitSense uses your agents’ session logs in the background. No wrapper or proxy required.
 
+## Reimagining how people and agents work together
+
+Bring related conversations into a shared workspace. Give a lead agent the
+coordination work, build dashboards your agents can update, and give each
+agent an identity that helps you recognize its role.
+
 <table>
   <tbody>
     <tr>
