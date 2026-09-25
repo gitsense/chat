@@ -14,11 +14,11 @@
   <a href="#share-knowledge">Share knowledge</a>
 </p>
 
-<img src="assets/beyond-tabs-and-terminal-panes-callouts.png" alt="GitSense Chat Group for bringing together sessions, a lead, dashboards, and Buddies" width="100%">
+<img src="assets/beyond-tabs-and-terminal-panes.png" alt="GitSense Chat for organizing agent sessions and coordinating work" width="100%">
 
-<p align="center">Keep running your agents in your terminal, multiplexer, or agent development environment. Use GitSense Chat to bring their work together and decide what happens next.</p>
+Keep running your agents in your terminal, multiplexer, or agent development environment. Use GitSense Chat to bring their work together and decide what happens next.
 
-<p align="center">GitSense uses your agents’ session logs in the background. No wrapper or proxy required.</p>
+GitSense uses your agents’ session logs in the background. No wrapper or proxy required.
 
 <table>
   <tbody>
