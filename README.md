@@ -183,10 +183,12 @@ review and organize work.
 
 ### Bring sessions from other agents into Pi
 
-In the meantime, use [txcript](https://github.com/gitsense/txcript) to bring
-snapshots from Claude Code, Codex, and other agents into a Pi session. Download the prebuilt `txcript` binary for your platform from the
-[GitSense txcript Releases](https://github.com/gitsense/txcript/releases) page
-and place it on your `PATH`.
+Use [txcript](https://github.com/skillsynchq/txcript) to bring snapshots from
+Claude Code, Codex, and other agents into a Pi session. The CLI bootstrap
+installer installs the matching upstream release binary into `~/.local/bin`
+(on supported Unix platforms). You can also download binaries directly from
+the [txcript Releases](https://github.com/skillsynchq/txcript/releases) page
+if you need to install it separately.
 
 ```bash
 txcript list --from claude_code
