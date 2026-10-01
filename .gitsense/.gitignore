@@ -1,0 +1,74 @@
+# This file is programmatically generated. DO NOT EDIT MANUALLY.
+# To regenerate, run: gsc gitignore update
+#
+# Generated on: 2026-10-01T14:46:58-04:00
+
+# core
+# SQLite database files
+*.db
+# SQLite shared memory files (WAL)
+*.db-shm
+# SQLite write-ahead log files (WAL)
+*.db-wal
+# SQLite database files
+*.sqlite
+# SQLite database files
+*.sqlite3
+# Temporary database files during atomic import
+*.tmp
+# Guide mode debug log directory
+debug/
+
+# import
+# Git import state file
+import-git.json
+# Import concurrency lock file
+.import.lock
+# Backup directory
+backups/
+
+# manifest
+# Manifest registry (derived state, can go out of sync if DB deleted)
+manifest.json
+
+# experts
+# Generated expert context file
+experts-context.md
+
+# config
+# Query configuration file
+config.json
+# Context profile directory
+profiles/
+# Profile configuration files
+*.profile.json
+
+# claude
+# Per-file change metadata (ephemeral, cleaned up post-turn)
+.change-meta.json
+# Turn-local metadata aggregation for resumption (ephemeral)
+change-metadata.jsonl
+
+# lessons
+# Current lesson draft (review before commit)
+tmp/lesson-draft.json
+# Lesson drafts directory
+lessons/drafts/
+# Archived lesson drafts after commit or manual archive
+lessons/archive/
+# Generated lessons manifest (derived from records.jsonl, rebuild with: gsc lessons build)
+manifests/gsc-lessons.json
+
+# rules
+# Generated rules manifest (derived from records.jsonl, rebuild with: gsc rules build)
+manifests/gsc-rules.json
+# Trigger debug output directory
+debug/
+
+# notes
+# Generated notes manifest (derived from records.jsonl, rebuild with: gsc notes build)
+manifests/gsc-notes.json
+
+# sessions
+# Generated sessions manifest (derived from checkpoints.jsonl, rebuild with: gsc sessions build)
+manifests/gsc-sessions.json
