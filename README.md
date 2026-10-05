@@ -20,7 +20,40 @@ Keep running your agents in your terminal, multiplexer, or agent development env
 
 GitSense uses your agents’ session logs in the background. No wrapper or proxy required.
 
-## Reimagining how people and agents work together
+## Do more with your agents. Start with a simple conversation.
+
+Your agents keep running in the terminals and environments you already use.
+GitSense Chat gives you and your agents a collaboration layer—a shared place
+to bring sessions together, communicate, and see what is happening.
+
+Tell a lead what you want. It proposes a setup for you to review and approve.
+
+**What could you take on when that collaboration is already there?**
+
+### Bring six agents into the conversation
+
+> Create six agents with unique names.
+
+The lead turns the request into a reviewable setup where you can choose names,
+models, working directories, and instructions. After you approve it, GitSense
+Chat creates the team and brings its conversations into view.
+
+<!-- Add the Multi-Agent Conversation video here. -->
+
+### Build knowledge at scale
+
+> Build a scalable knowledge layer for Codex at `~/codex`, which has close to
+> 9,000 files.
+
+You bring the goal—not a team diagram. The lead helps shape the goal, proposes
+how to organize the distributed team for your review, and establishes the
+operational visibility needed to coordinate and monitor approved work.
+
+<!-- Add the Distributed Agents video here. -->
+
+**Two short prompts. Very different ambitions. The same simple way to begin.**
+
+## Rethink what you and your agents can do together.
 
 Bring related conversations into a shared workspace. Give a lead agent the
 coordination work, build dashboards your agents can update, and give each
