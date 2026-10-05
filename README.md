@@ -23,20 +23,20 @@ GitSense uses your agents’ session logs in the background. No wrapper or proxy
 ## Do more with your agents. Start with a simple conversation.
 
 Your agents keep running in the terminals and environments you already use.
-GitSense Chat gives you and your agents a collaboration layer—a shared place
-to bring sessions together, communicate, and see what is happening.
+GitSense Chat gives you and your agents a shared place to bring sessions
+together, talk to each other, and see what is happening.
 
 Tell a lead what you want. It proposes a setup for you to review and approve.
 
-**What could you take on when that collaboration is already there?**
+**What would you do if your agents could already work together?**
 
 ### Bring six agents into the conversation
 
 > Create six agents with unique names.
 
-The lead turns the request into a reviewable setup where you can choose names,
-models, working directories, and instructions. After you approve it, GitSense
-Chat creates the team and brings its conversations into view.
+The lead gives you a form to review names, models, working directories, and
+instructions. Change what you want, then approve the setup. GitSense Chat
+creates the team so you can talk to the agents and follow their conversations.
 
 <!-- Add the Multi-Agent Conversation video here. -->
 
@@ -45,13 +45,14 @@ Chat creates the team and brings its conversations into view.
 > Build a scalable knowledge layer for Codex at `~/codex`, which has close to
 > 9,000 files.
 
-You bring the goal—not a team diagram. The lead helps shape the goal, proposes
-how to organize the distributed team for your review, and establishes the
-operational visibility needed to coordinate and monitor approved work.
+You don’t need to figure out the team structure before you start. Tell the lead
+what you want to build, and it helps you work out how to divide the work.
+You review and approve the proposed setup, then use the dashboards to follow
+what the agents are doing and guide the work.
 
 <!-- Add the Distributed Agents video here. -->
 
-**Two short prompts. Very different ambitions. The same simple way to begin.**
+**Whether you want a few perspectives or a whole team, start by asking.**
 
 ## Rethink what you and your agents can do together.
 
