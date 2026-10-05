@@ -20,15 +20,13 @@ Keep running your agents in your terminal, multiplexer, or agent development env
 
 GitSense uses your agents’ session logs in the background. No wrapper or proxy required.
 
-## Do more with your agents. Start with a simple conversation.
+## What would you do if your agents could already work together?
 
 Your agents keep running in the terminals and environments you already use.
 GitSense Chat gives you and your agents a shared place to bring sessions
 together, talk to each other, and see what is happening.
 
 Tell a lead what you want. It proposes a setup for you to review and approve.
-
-**What would you do if your agents could already work together?**
 
 ### Bring six agents into the conversation
 
