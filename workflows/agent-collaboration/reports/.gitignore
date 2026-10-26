@@ -1,3 +1,0 @@
-# Runtime-specific connection reports are served locally and must not be committed.
-*
-!.gitignore
