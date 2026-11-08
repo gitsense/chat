@@ -76,7 +76,7 @@ agent an identity that helps you recognize its role.
 Review the [install script](install.sh), then install the `gsc` CLI:
 
 ```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
 
 This installs the `gsc` CLI. To install and configure GitSense Chat, ask your
@@ -213,9 +213,30 @@ Start Pi in a workspace and run `/brains`. Pi-Brains provides the session
 history, checkpoints, and other information GitSense Chat uses to help you
 review and organize work.
 
-### Bring sessions from other agents into Pi
+### Mirror sessions from other agents
 
-Use [txcript](https://github.com/skillsynchq/txcript) to bring snapshots from
+Keep supported agents running in their own environments and mirror their
+updates into a Group. Ask your agent to connect using the Group's connection
+instructions, or enter its native session ID in GitSense Chat.
+
+For agent-guided setup, start with:
+
+```bash
+gsc experts guide buddy-mirror
+```
+
+Connecting requires your permission to share the session's latest existing
+and subsequent persisted assistant text with Group viewers until disconnected.
+Mirrors do not publish reasoning, tool results, user messages, or transcript
+history. Connecting does not automatically make the agent read the Group
+or other agents' conversations.
+
+Pi sessions don't need a mirror. Find existing Pi sessions in GitSense Chat
+and add the ones you want to a Group directly.
+
+### Import a snapshot into Pi
+
+For a separate snapshot-import option, use [txcript](https://github.com/skillsynchq/txcript) to bring snapshots from
 Claude Code, Codex, and other agents into a Pi session. The CLI bootstrap
 installer installs the matching upstream release binary into `~/.local/bin`
 (on supported Unix platforms). You can also download binaries directly from
@@ -230,10 +251,9 @@ txcript continue <session-id> \
   --no-resume
 ```
 
-The converted snapshot appears in GitSense Chat shortly after the Pi session
-sync service processes it. Repeat the conversion when you want to refresh it;
-this is a temporary workaround until near-real-time synchronization is
-available for other runtimes.
+The converted snapshot appears in GitSense Chat after the Pi session sync
+service processes it. This is a point-in-time import, not a live mirror.
+Repeat the conversion when you want to refresh the snapshot.
 
 ## Security
 

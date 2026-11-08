@@ -19,7 +19,7 @@
 Review the [install script](install.sh), then install the `gsc` CLI:
 
 ```bash
-curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
 
 To install and configure GitSense Chat, ask your coding agent:
