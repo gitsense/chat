@@ -36,7 +36,7 @@ Ask an agent to connect or enter its session ID yourself. Pi sessions don't need
       <th colspan="2">Find and add Pi sessions</th>
     </tr>
     <tr>
-      <td colspan="2"><img src="assets/readme-v2/find-and-add-placeholder.png" alt="Video placeholder: Find and add Pi sessions" width="100%"></td>
+      <td colspan="2"><img src="assets/readme-v2/find-and-add-pi-sessions.png" alt="Find and select existing Pi sessions to add to a Group in GitSense Chat." width="100%"></td>
     </tr>
   </tbody>
 </table>
