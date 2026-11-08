@@ -30,7 +30,7 @@ Ask an agent to connect or enter its session ID yourself. Pi sessions don't need
   <tbody>
     <tr>
       <td width="50%"><img src="assets/readme-v2/ask-your-agent.png" alt="OpenCode, Codex, and Claude Code in terminal panes beside their sessions in GitSense Chat." width="100%"></td>
-      <td width="50%"><img src="assets/readme-v2/connect-yourself-placeholder.png" alt="Video placeholder: Connect an agent manually" width="100%"></td>
+      <td width="50%"><img src="assets/readme-v2/connect-manually.png" alt="Terminal agent sessions beside GitSense Chat, showing how to connect an agent manually by session ID." width="100%"></td>
     </tr>
     <tr>
       <th colspan="2">Find and add Pi sessions</th>
