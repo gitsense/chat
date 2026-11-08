@@ -15,3 +15,18 @@
 <a href="hero-combined-gap-arrow.png"><img src="hero-combined-gap-arrow.png" alt="Codex and Claude Code in terminal panes beside their mirrored sessions in GitSense Chat, with an editable checklist, a searchable table, observer agents, and metric cards. The arrow reads: Same agents. More possibilities." width="100%"></a>
 
 <p align="center"><small>Click the image to view it at full resolution.</small></p>
+
+<table>
+  <thead>
+    <tr>
+      <th width="50%">Have your agents connect</th>
+      <th width="50%">Connect your agents yourself</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%"><img src="assets/readme-v2/agents-connect-placeholder.png" alt="Video placeholder: Have your agents connect" width="100%"></td>
+      <td width="50%"><img src="assets/readme-v2/connect-yourself-placeholder.png" alt="Video placeholder: Connect your agents yourself" width="100%"></td>
+    </tr>
+  </tbody>
+</table>
