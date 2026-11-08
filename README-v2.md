@@ -3,7 +3,7 @@
 <h3 align="center">Same agents. More possibilities.</h3>
 
 <p align="center">
-  <a href="README.md#quick-start">Quick start</a> &nbsp;·&nbsp;
+  <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="README.md#runtime-details">Runtime details</a> &nbsp;·&nbsp;
   <a href="README.md#work-together">Work together</a> &nbsp;·&nbsp;
   <a href="README.md#communicate">Communicate</a> &nbsp;·&nbsp;
@@ -13,6 +13,22 @@
 <p align="center">Your agents keep working where they are. GitSense Chat gives you more ways to work together.</p>
 
 <a href="hero-combined-gap-arrow.png"><img src="hero-combined-gap-arrow.png" alt="Codex and Claude Code in terminal panes beside their mirrored sessions in GitSense Chat, with an editable checklist, a searchable table, observer agents, and metric cards. The arrow reads: Same agents. More possibilities." width="100%"></a>
+
+## Quick start
+
+Review the [install script](install.sh), then install the `gsc` CLI:
+
+```bash
+curl https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
+```
+
+To install and configure GitSense Chat, ask your coding agent:
+
+```text
+Install and configure GitSense Chat for me. Start by running `gsc docs help`.
+```
+
+You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
 ## Bring your work together
 
