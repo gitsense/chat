@@ -10,7 +10,7 @@
   <a href="README.md#share-knowledge">Share knowledge</a>
 </p>
 
-<p align="center">Your agents don't change. How you can work with them does.</p>
+<p align="center">Your agents keep working where they are. GitSense Chat gives you more ways to work together.</p>
 
 <a href="hero-combined-gap-arrow.png"><img src="hero-combined-gap-arrow.png" alt="Codex and Claude Code in terminal panes beside their mirrored sessions in GitSense Chat, with an editable checklist, a searchable table, observer agents, and metric cards. The arrow reads: Same agents. More possibilities." width="100%"></a>
 
