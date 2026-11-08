@@ -14,7 +14,7 @@
 
 <a href="hero-combined-gap-arrow.png"><img src="hero-combined-gap-arrow.png" alt="Codex and Claude Code in terminal panes beside their mirrored sessions in GitSense Chat, with an editable checklist, a searchable table, observer agents, and metric cards. The arrow reads: Same agents. More possibilities." width="100%"></a>
 
-<p align="center"><small>Click the image to view it at full resolution.</small></p>
+<p align="center">It only takes seconds to give your agents more ways to help.</p>
 
 <table>
   <thead>
