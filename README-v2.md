@@ -16,6 +16,10 @@
 
 ## Bring your work together
 
+Follow related agent work side by side in a Group.
+
+Ask an agent to connect or enter its session ID yourself. Pi sessions don't need a mirror. Find existing sessions and add them directly.
+
 <table>
   <thead>
     <tr>
