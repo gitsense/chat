@@ -56,3 +56,14 @@ Ask an agent to connect or enter its session ID yourself. Pi sessions don't need
     </tr>
   </tbody>
 </table>
+
+## Give your agents more ways to help you
+
+Your agents can offer more than a reply. Ask them for tables you can explore, checklists you can use, and information arranged where you need it.
+
+<p align="center"><em>Demo video coming soon.</em></p>
+
+<!-- Video placeholder: center a "Download video (actual file size)" link above
+     a full-width screenshot with a play-button overlay. Link the thumbnail to
+     the same recording. Add the real URL, measured size and final screenshot
+     after the live rehearsal; preserve the original screenshot unchanged. -->
