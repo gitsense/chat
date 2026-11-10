@@ -63,4 +63,14 @@ Your agents can offer more than a reply. Ask them for tables you can explore, ch
 
 <p align="center"><a href="assets/readme-v2/more-ways-to-help.mp4?raw=true">Download video (12.5 MB)</a> · 3:45</p>
 
+<table>
+  <tr>
+    <td width="33%"><img src="assets/readme-v2/more-ways-to-help-teaser-1.png" alt="Weather table teaser placeholder" width="100%"></td>
+    <td width="33%"><img src="assets/readme-v2/more-ways-to-help-teaser-2.png" alt="Metric card teaser placeholder" width="100%"></td>
+    <td width="33%"><img src="assets/readme-v2/more-ways-to-help-teaser-3.png" alt="Rearranged Group teaser placeholder" width="100%"></td>
+  </tr>
+</table>
+
 <a href="assets/readme-v2/more-ways-to-help.mp4?raw=true"><img src="assets/readme-v2/more-ways-to-help-play.png" alt="Download the More ways to help demo: Claude and Codex in terminal panes beside the Demo guide and controls in GitSense Chat. Play button over the screenshot." width="100%"></a>
+
+<p align="center">Click the play image to download the MP4.</p>
