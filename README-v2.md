@@ -61,9 +61,6 @@ Ask an agent to connect or enter its session ID yourself. Pi sessions don't need
 
 Your agents can offer more than a reply. Ask them for tables you can explore, checklists you can use, and information arranged where you need it.
 
-<p align="center"><em>Demo video coming soon.</em></p>
+<p align="center"><a href="assets/readme-v2/more-ways-to-help.mp4?raw=true">Download video (12.5 MB)</a> · 3:45</p>
 
-<!-- Video placeholder: center a "Download video (actual file size)" link above
-     a full-width screenshot with a play-button overlay. Link the thumbnail to
-     the same recording. Add the real URL, measured size and final screenshot
-     after the live rehearsal; preserve the original screenshot unchanged. -->
+<a href="assets/readme-v2/more-ways-to-help.mp4?raw=true"><img src="assets/readme-v2/more-ways-to-help-play.png" alt="Download the More ways to help demo: Claude and Codex in terminal panes beside the Demo guide and controls in GitSense Chat. Play button over the screenshot." width="100%"></a>
