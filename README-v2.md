@@ -4,10 +4,10 @@
 
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
-  <a href="README.md#runtime-details">Runtime details</a> &nbsp;·&nbsp;
-  <a href="README.md#work-together">Work together</a> &nbsp;·&nbsp;
-  <a href="README.md#communicate">Communicate</a> &nbsp;·&nbsp;
-  <a href="README.md#share-knowledge">Share knowledge</a>
+  <a href="README-previous.md#runtime-details">Runtime details</a> &nbsp;·&nbsp;
+  <a href="README-previous.md#more-ways-to-work-with-your-agents">Work together</a> &nbsp;·&nbsp;
+  <a href="README-previous.md#connect-agents-across-environments">Communicate</a> &nbsp;·&nbsp;
+  <a href="README-previous.md#give-agents-a-better-starting-point">Share knowledge</a>
 </p>
 
 <p align="center">Your agents keep working where they are. GitSense Chat gives you more ways to work together.</p>
@@ -28,7 +28,7 @@ To install and configure GitSense Chat, ask your coding agent:
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
 
-You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README.md#runtime-details) for Pi setup and bringing in sessions from other agents.
+You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
 ## Bring your work together
 
@@ -61,7 +61,7 @@ Ask an agent to connect or enter its session ID yourself. Pi sessions don't need
 
 Your agents can offer more than a reply. Ask them for tables you can explore, checklists you can use, and information arranged where you need it.
 
-<p align="center"><a href="assets/readme-v2/more-ways-to-help.mp4?raw=true">Download video (12.5 MB)</a> · 3:45</p>
+<p align="center"><a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4">Open or download video (12.5 MB)</a> · 3:45</p>
 
 <table>
   <tr>
@@ -71,6 +71,6 @@ Your agents can offer more than a reply. Ask them for tables you can explore, ch
   </tr>
 </table>
 
-<a href="assets/readme-v2/more-ways-to-help.mp4?raw=true"><img src="assets/readme-v2/more-ways-to-help-play.png" alt="Download the More ways to help demo: Claude and Codex in terminal panes beside the Demo guide and controls in GitSense Chat. Play button over the screenshot." width="100%"></a>
+<a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4"><img src="assets/readme-v2/more-ways-to-help-play.png" alt="Open or download the More ways to help demo: Claude and Codex in terminal panes beside the Demo guide and controls in GitSense Chat. Play button over the screenshot." width="100%"></a>
 
-<p align="center">Click the play image to download the MP4.</p>
+<p align="center">Click the play image to open or download the MP4.</p>

@@ -1,75 +1,18 @@
-> **Coming soon:** This README previews the next iteration of GitSense Chat,
-> where you bring your agents’ work together. The repository will be updated
-> shortly.
-
 <h1 align="center">GitSense Chat</h1>
 
 <h3 align="center">Same agents. More possibilities.</h3>
 
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
-  <a href="#runtime-details">Runtime details</a> &nbsp;·&nbsp;
-  <a href="#work-together">Work together</a> &nbsp;·&nbsp;
-  <a href="#communicate">Communicate</a> &nbsp;·&nbsp;
-  <a href="#share-knowledge">Share knowledge</a>
+  <a href="README-previous.md#runtime-details">Runtime details</a> &nbsp;·&nbsp;
+  <a href="README-previous.md#more-ways-to-work-with-your-agents">Work together</a> &nbsp;·&nbsp;
+  <a href="README-previous.md#connect-agents-across-environments">Communicate</a> &nbsp;·&nbsp;
+  <a href="README-previous.md#give-agents-a-better-starting-point">Share knowledge</a>
 </p>
 
-<img src="assets/beyond-tabs-and-terminal-panes.png" alt="GitSense Chat for organizing agent sessions and coordinating work" width="100%">
+<p align="center">Your agents keep working where they are. GitSense Chat gives you more ways to work together.</p>
 
-Keep running your agents in your terminal, multiplexer, or agent development environment. Use GitSense Chat to bring their work together and decide what happens next.
-
-GitSense uses your agents’ session logs in the background. No wrapper or proxy required.
-
-## What would you do if your agents could already work together?
-
-Your agents keep running in the terminals and environments you already use.
-GitSense Chat gives you and your agents a shared place to bring sessions
-together, talk to each other, and see what is happening.
-
-Tell a lead what you want. It proposes a setup for you to review and approve.
-
-### Bring six agents into the conversation
-
-> Create six agents with unique names.
-
-The lead gives you a form to review names, models, working directories, and
-instructions. Change what you want, then approve the setup. GitSense Chat
-creates the team so you can talk to the agents and follow their conversations.
-
-<!-- Add the Multi-Agent Conversation video here. -->
-
-### Build knowledge at scale
-
-> Build a scalable knowledge layer for Codex at `~/codex`, which has close to
-> 9,000 files.
-
-You don’t need to figure out the team structure before you start. Tell the lead
-what you want to build, and it helps you work out how to divide the work.
-You review and approve the proposed setup, then use the dashboards to follow
-what the agents are doing and guide the work.
-
-<!-- Add the Distributed Agents video here. -->
-
-**Whether you want a few perspectives or a whole team, start by asking.**
-
-## Rethink what you and your agents can do together.
-
-Bring related conversations into a shared workspace. Give a lead agent the
-coordination work, build dashboards your agents can update, and give each
-agent an identity that helps you recognize its role.
-
-<table>
-  <tbody>
-    <tr>
-      <td width="50%"><strong>Find, group, and review related work</strong><br><video src="https://github.com/user-attachments/assets/33975bb2-9461-4be8-aaf5-9efb158a33f6" controls muted loop playsinline width="100%"></video><br><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/01-find-related-work.mp4">Download to watch the demo</a></td>
-      <td width="50%"><strong>Bring sessions together with a lead</strong><br><video src="https://github.com/user-attachments/assets/fc34dd03-a98c-4230-a9a5-82f6a479393f" controls muted loop playsinline width="100%"></video><br><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/02-bring-work-together.mp4">Download to watch the demo</a></td>
-    </tr>
-    <tr>
-      <td width="50%"><strong>Build dashboards with fewer tokens</strong><br><video src="https://github.com/user-attachments/assets/b077b9f0-f4e7-40eb-9125-4d4e398e5555" controls muted loop playsinline width="100%"></video><br><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/03-build-smart-dashboards.mp4">Download to watch the demo</a></td>
-      <td width="50%"><strong>Give agents a recognizable identity</strong><br><video src="https://github.com/user-attachments/assets/b27add1a-0fc7-42af-847c-c1acec2ef04e" controls muted loop playsinline width="100%"></video><br><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/04-agent-identity.mp4">Download to watch the demo</a></td>
-    </tr>
-  </tbody>
-</table>
+<a href="hero-combined-gap-arrow.png"><img src="hero-combined-gap-arrow.png" alt="Codex and Claude Code in terminal panes beside their mirrored sessions in GitSense Chat, with an editable checklist, a searchable table, observer agents, and metric cards. The arrow reads: Same agents. More possibilities." width="100%"></a>
 
 ## Quick start
 
@@ -79,225 +22,55 @@ Review the [install script](install.sh), then install the `gsc` CLI:
 curl -fsSL https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
 
-This installs the `gsc` CLI. To install and configure GitSense Chat, ask your
-coding agent:
+To install and configure GitSense Chat, ask your coding agent:
 
 ```text
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
 
-You can also [build the CLI from source](https://github.com/gitsense/gsc-cli).
+You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
-For Pi setup and instructions for bringing in sessions from other agents, see
-[Runtime details](#runtime-details).
+## Bring your work together
 
+Follow related agent work in one place with a Group.
 
-## Why GitSense Chat?
+Ask an agent to connect or enter its session ID yourself. Pi sessions don't need a mirror. Find existing sessions and add them directly.
 
-Tabs and panes organize your windows. GitSense Chat helps you organize the
-work across them.
+<table>
+  <thead>
+    <tr>
+      <th width="50%">Ask your agent</th>
+      <th width="50%">Connect manually</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%"><img src="assets/readme-v2/ask-your-agent.png" alt="OpenCode, Codex, and Claude Code in terminal panes beside their sessions in GitSense Chat." width="100%"></td>
+      <td width="50%"><img src="assets/readme-v2/connect-manually.png" alt="Terminal agent sessions beside GitSense Chat, showing how to connect an agent manually by session ID." width="100%"></td>
+    </tr>
+    <tr>
+      <th colspan="2">Find and add Pi sessions</th>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="assets/readme-v2/find-and-add-pi-sessions.png" alt="Find and select existing Pi sessions to add to a Group in GitSense Chat." width="100%"></td>
+    </tr>
+  </tbody>
+</table>
 
-Bring related sessions into a Group, whether they’re tackling one task or
-specializing in different parts of a codebase. Work with a lead agent to find
-the right agent to ask, coordinate their efforts, and bring their findings
-together.
+## Give your agents more ways to help you
 
-Share what they learn and act directly from their responses, without carrying
-context between every conversation yourself.
+Your agents can offer more than a reply. Ask them for tables you can explore, checklists you can use, and information arranged where you need it.
 
-<a id="work-together"></a>
+<p align="center"><a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4">Open or download video (12.5 MB)</a> · 3:45</p>
 
-### More ways to work with your agents
-
-Turn one conversation into coordinated work across multiple agents. A lead
-can direct an experiment or complex task, bring the responses together, and
-help decide what to do next. Agents can also include actions in their
-responses, so you can send a follow-up or open a result in another app when
-you’re ready.
-
-<table width="100%">
+<table>
   <tr>
-    <td width="50%" valign="top">
-      <strong>Choose your next step</strong>
-      <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4"><img src="assets/rethink-human-agent-collaboration-poster.png" alt="A lead agent coordinating workers whose responses offer actions" width="100%"></a>
-      <p>Click to tell the lead agent to start. Workers return actions to open a diff and a spreadsheet. You choose when to act.</p>
-      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/reimagining-human-agent-collaboration.mp4">Download to watch the demo</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <strong>One conversation. Multiple sessions.</strong>
-      <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/scale-coordination-hello-world-lab.mp4"><img src="assets/scale-coordination-hello-world-lab.png" alt="A lead coordinating six agents in the Hello World Lab" width="100%"></a>
-      <p>Ask the lead agent to start six language sessions. One request reaches them all. A follow-up updates only C and Go.</p>
-      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/scale-coordination-hello-world-lab.mp4">Download to watch the demo</a></p>
-    </td>
+    <td width="33%"><img src="assets/readme-v2/more-ways-to-help-teaser-1.png" alt="Weather table teaser placeholder" width="100%"></td>
+    <td width="33%"><img src="assets/readme-v2/more-ways-to-help-teaser-2.png" alt="Metric card teaser placeholder" width="100%"></td>
+    <td width="33%"><img src="assets/readme-v2/more-ways-to-help-teaser-3.png" alt="Rearranged Group teaser placeholder" width="100%"></td>
   </tr>
 </table>
 
-<a id="communicate"></a>
+<a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4"><img src="assets/readme-v2/more-ways-to-help-play.png" alt="Open or download the More ways to help demo: Claude and Codex in terminal panes beside the Demo guide and controls in GitSense Chat. Play button over the screenshot." width="100%"></a>
 
-### Connect agents across environments
-
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <p>An agent working in Claude Code can ask an agent in GitSense Chat for help through <code>gsc</code>, then continue working in Claude Code. Other agents that can run <code>gsc</code> can ask questions or send updates too.</p>
-      <p>Supported Buddy connections let external agents bring completed work back to a shared Group without moving their conversations out of their own environments.</p>
-      <p><a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4">Download to watch the demo</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/more-ways-to-communicate.mp4"><img src="assets/more-ways-to-communicate.png" alt="Agents communicating across agent environments" width="100%"></a>
-    </td>
-  </tr>
-</table>
-
-<a id="share-knowledge"></a>
-
-### Give agents a better starting point
-
-Save what you learn as Brains, notes, and lessons. Any agent with access to
-`gsc` can look up that context rather than asking you to explain it again.
-
-**Same search, more context**
-
-Regular ripgrep finds matching text. GitSense can add each file’s purpose,
-helping your agents decide where to look next.
-
-<a href="assets/same-search-more-to-go-on.png"><img src="assets/same-search-more-to-go-on.png" alt="Ripgrep results alongside GitSense results with file-purpose context" width="100%"></a>
-
-
-**Build knowledge once, share it across agents**
-
-Create a GitHub Watcher to follow issues across two repositories. Agents using
-Claude Code, Codex, and OpenCode can ask its lead for the latest findings
-through `gsc`.
-
-<a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/create-specialized-knowledge-agents.mp4"><img src="assets/create-specialized-knowledge-agents.png" alt="Claude Code, Codex, and OpenCode asking a GitHub Watcher for recent issues" width="100%"></a>
-
-<a href="https://raw.githubusercontent.com/gitsense/chat/main/assets/create-specialized-knowledge-agents.mp4">Download to watch the demo</a>
-
-Any agent that can run `gsc` can ask your knowledge agents for help or share
-new findings with them.
-
-## Understand what happened
-
-Open a session to see its conversation history and tool calls. Browse file
-activity to check what an agent read or changed.
-
-| Session overview | File activity |
-| --- | --- |
-| ![Session overview with activity counts and Session Insights links.](assets/overview.png) | ![File activity organized as a tree of reads, writes, and edits.](assets/file-activity.png) |
-
-From the Overview, open Session Insights to investigate failed commands,
-recovery attempts, and verification after edits. Create focused analyzers to
-examine the same logs from different perspectives, such as tool usage, code
-changes, or progress.
-
-For a GitHub Watcher, for example, an analyzer can review API calls and look
-for evidence that the agent read the required skill instructions. Use those
-findings to investigate mistakes and refine instructions for the next run.
-
-
-<a id="runtime-details"></a>
-
-## Runtime details
-
-### Use Pi with Pi-Brains
-
-GitSense Chat uses Pi sessions for browsing and analysis. Install
-[Pi-Brains](https://github.com/gitsense/pi-brains) to connect Pi to GitSense:
-
-```bash
-pi install npm:@gitsense/pi-brains
-```
-
-Start Pi in a workspace and run `/brains`. Pi-Brains provides the session
-history, checkpoints, and other information GitSense Chat uses to help you
-review and organize work.
-
-### Mirror sessions from other agents
-
-Keep supported agents running in their own environments and mirror their
-updates into a Group. Ask your agent to connect using the Group's connection
-instructions, or enter its native session ID in GitSense Chat.
-
-For agent-guided setup, start with:
-
-```bash
-gsc experts guide buddy-mirror
-```
-
-Connecting requires your permission to share the session's latest existing
-and subsequent persisted assistant text with Group viewers until disconnected.
-Mirrors do not publish reasoning, tool results, user messages, or transcript
-history. Connecting does not automatically make the agent read the Group
-or other agents' conversations.
-
-Pi sessions don't need a mirror. Find existing Pi sessions in GitSense Chat
-and add the ones you want to a Group directly.
-
-### Import a snapshot into Pi
-
-For a separate snapshot-import option, use [txcript](https://github.com/skillsynchq/txcript) to bring snapshots from
-Claude Code, Codex, and other agents into a Pi session. The CLI bootstrap
-installer installs the matching upstream release binary into `~/.local/bin`
-(on supported Unix platforms). You can also download binaries directly from
-the [txcript Releases](https://github.com/skillsynchq/txcript/releases) page
-if you need to install it separately.
-
-```bash
-txcript list --from claude_code
-txcript continue <session-id> \
-  --from <harness> \
-  --with pi \
-  --no-resume
-```
-
-The converted snapshot appears in GitSense Chat after the Pi session sync
-service processes it. This is a point-in-time import, not a live mirror.
-Repeat the conversion when you want to refresh the snapshot.
-
-## Security
-
-GitSense Chat is currently designed to complement an individual’s local agent
-workflow. It does not provide authentication or multi-user access controls.
-
-Only make GitSense Chat available through the local loopback interface, such as
-`localhost` or `127.0.0.1`. Do not expose it directly to a local network or the
-public internet.
-
-If you access GitSense Chat through a tunnel, restrict access to yourself and
-make sure the tunnel provides its own authentication. Treat anyone with access
-as having terminal-level access to your agent environment: they may be able to
-send messages to your agents, inspect session activity, and trigger actions
-allowed by your existing permissions.
-
-## Current support and boundaries
-
-GitSense knowledge is portable. Any agent that can run `gsc` can query the same
-Brains, notes, lessons, and rules without requiring runtime integration.
-
-GitSense Chat surfaces evidence and supports action. Executable actions remain
-subject to application authorization and command validation. It does not decide
-whether an agent's work is correct, and agent findings do not automatically
-become trusted knowledge. People remain responsible for reviewing evidence,
-resolving uncertainty, and deciding what happens next.
-
-## License
-
-The [`gsc` CLI](https://github.com/gitsense/gsc-cli) is licensed under the
-[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-
-Manifests are plain JSON files built on an open format. You can create, modify,
-distribute, and use them with the open-source `gsc` CLI without requiring
-GitSense Chat.
-
-GitSense Chat is licensed under the
-[Fair Core License (FCL-1.0-ALv2)](https://fcl.dev/). You may use, modify, and
-run it internally, including for personal projects, shared workflows, and
-self-hosted deployments. You may not use it to build or operate a product or
-service that competes directly with GitSense Chat.
-
-The core GitSense Chat application currently ships as minified source while the
-project is in its early stages. We intend to open the source further as the
-project matures. Under the Fair Core License, each release becomes available
-under Apache 2.0 two years after it is published. See [LICENSE](LICENSE) and
-[NOTICE](NOTICE) for the complete terms.
+<p align="center">Click the play image to open or download the MP4.</p>
