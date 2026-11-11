@@ -65,9 +65,8 @@ Your agents can offer more than a reply. Ask them for tables you can explore, ch
 
 <table>
   <tr>
-    <td width="33%"><img src="assets/readme-v2/more-ways-to-help-teaser-1.png" alt="Weather table teaser placeholder" width="100%"></td>
-    <td width="33%"><img src="assets/readme-v2/more-ways-to-help-teaser-2.png" alt="Metric card teaser placeholder" width="100%"></td>
-    <td width="33%"><img src="assets/readme-v2/more-ways-to-help-teaser-3.png" alt="Rearranged Group teaser placeholder" width="100%"></td>
+    <td width="50%"><a href="assets/readme-v2/more-ways-to-help-cards-are-agents.png"><img src="assets/readme-v2/more-ways-to-help-cards-are-agents.png" alt="Demo guide with selectable topics and a message box for chatting with the agent." width="100%"></a></td>
+    <td width="50%"><a href="assets/readme-v2/more-ways-to-help-capture-insights.png"><img src="assets/readme-v2/more-ways-to-help-capture-insights.png" alt="Editable scratchpads beside Codex's weather table and Claude's city temperature metric cards." width="100%"></a></td>
   </tr>
 </table>
 
