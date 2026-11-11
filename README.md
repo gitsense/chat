@@ -76,14 +76,13 @@ Your agents can offer more than a reply. Explore information, capture your thoug
     </td>
     <td width="65%"><a href="assets/readme-v2/more-ways-to-help-capture-insights.png"><img src="assets/readme-v2/more-ways-to-help-capture-insights.png" alt="Editable scratchpads beside Codex's weather table and Claude's city temperature metric cards." width="100%"></a></td>
   </tr>
+  <tr>
+    <td width="35%" valign="middle">
+      <h3>Watch your agents work differently</h3>
+      <p>See how you can ask Claude and Codex to present information, then change the view to suit you.</p>
+      <p><a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4">Open or download video (12.5 MB)</a> · 3:45</p>
+      <p>Click the play image to open or download the MP4.</p>
+    </td>
+    <td width="65%"><a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4"><img src="assets/readme-v2/more-ways-to-help-play.png" alt="Open or download the More ways to help demo: Claude and Codex in terminal panes beside the Demo guide and controls in GitSense Chat. Play button over the screenshot." width="100%"></a></td>
+  </tr>
 </table>
-
-### Watch your agents work differently
-
-See how you can ask Claude and Codex to present information, then change the view to suit you.
-
-<p align="center"><a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4">Open or download video (12.5 MB)</a> · 3:45</p>
-
-<a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4"><img src="assets/readme-v2/more-ways-to-help-play.png" alt="Open or download the More ways to help demo: Claude and Codex in terminal panes beside the Demo guide and controls in GitSense Chat. Play button over the screenshot." width="100%"></a>
-
-<p align="center">Click the play image to open or download the MP4.</p>
