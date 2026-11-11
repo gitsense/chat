@@ -61,14 +61,25 @@ Ask an agent to connect or enter its session ID yourself. Pi sessions don't need
 
 Your agents can offer more than a reply. Ask them for tables you can explore, checklists you can use, and information arranged where you need it.
 
-<p align="center"><a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4">Open or download video (12.5 MB)</a> · 3:45</p>
-
+<!-- Teaser copy is provisional while reviewing the layout. -->
 <table>
   <tr>
-    <td width="50%"><a href="assets/readme-v2/more-ways-to-help-cards-are-agents.png"><img src="assets/readme-v2/more-ways-to-help-cards-are-agents.png" alt="Demo guide with selectable topics and a message box for chatting with the agent." width="100%"></a></td>
-    <td width="50%"><a href="assets/readme-v2/more-ways-to-help-capture-insights.png"><img src="assets/readme-v2/more-ways-to-help-capture-insights.png" alt="Editable scratchpads beside Codex's weather table and Claude's city temperature metric cards." width="100%"></a></td>
+    <td width="35%" valign="middle">
+      <h3>Cards you can talk to</h3>
+      <p>Choose what you want explained, then ask the agent to read your selections and respond.</p>
+    </td>
+    <td width="65%"><a href="assets/readme-v2/more-ways-to-help-cards-are-agents.png"><img src="assets/readme-v2/more-ways-to-help-cards-are-agents.png" alt="Demo guide with selectable topics and a message box for chatting with the agent." width="100%"></a></td>
+  </tr>
+  <tr>
+    <td width="35%" valign="middle">
+      <h3>Notes you can build on</h3>
+      <p>Edit an agent's message as a scratchpad. Save your ideas, then start the agent to talk them through.</p>
+    </td>
+    <td width="65%"><a href="assets/readme-v2/more-ways-to-help-capture-insights.png"><img src="assets/readme-v2/more-ways-to-help-capture-insights.png" alt="Editable scratchpads beside Codex's weather table and Claude's city temperature metric cards." width="100%"></a></td>
   </tr>
 </table>
+
+<p align="center"><a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4">Open or download video (12.5 MB)</a> · 3:45</p>
 
 <a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4"><img src="assets/readme-v2/more-ways-to-help-play.png" alt="Open or download the More ways to help demo: Claude and Codex in terminal panes beside the Demo guide and controls in GitSense Chat. Play button over the screenshot." width="100%"></a>
 
