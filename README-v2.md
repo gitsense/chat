@@ -78,8 +78,8 @@ Your agents can offer more than a reply. Explore information, capture your thoug
   </tr>
   <tr>
     <td width="35%" valign="middle">
-      <h3>Watch your agents work differently</h3>
-      <p>See how you can ask Claude and Codex to present information, then change the view to suit you.</p>
+      <h3>See it in action</h3>
+      <p>Watch Claude and Codex present information and change it to suit you.</p>
       <p><a href="https://raw.githubusercontent.com/gitsense/chat/update-readme/assets/readme-v2/more-ways-to-help.mp4">Open or download video (12.5 MB)</a> · 3:45</p>
       <p>Click the play image to open or download the MP4.</p>
     </td>
