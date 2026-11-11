@@ -59,21 +59,20 @@ Ask an agent to connect or enter its session ID yourself. Pi sessions don't need
 
 ## Give your agents more ways to help you
 
-Your agents can offer more than a reply. Ask them for tables you can explore, checklists you can use, and information arranged where you need it.
+Your agents can offer more than a reply. Explore information, capture your thoughts, and decide what to do next with them.
 
-<!-- Teaser copy is provisional while reviewing the layout. -->
 <table>
   <tr>
     <td width="35%" valign="middle">
-      <h3>Cards you can talk to</h3>
-      <p>Choose what you want explained, then ask the agent to read your selections and respond.</p>
+      <h3>Plan your next step</h3>
+      <p>Consider your options and save your choices. When you're ready, ask the agent to read them and continue.</p>
     </td>
     <td width="65%"><a href="assets/readme-v2/more-ways-to-help-cards-are-agents.png"><img src="assets/readme-v2/more-ways-to-help-cards-are-agents.png" alt="Demo guide with selectable topics and a message box for chatting with the agent." width="100%"></a></td>
   </tr>
   <tr>
     <td width="35%" valign="middle">
-      <h3>Notes you can build on</h3>
-      <p>Edit an agent's message as a scratchpad. Save your ideas, then start the agent to talk them through.</p>
+      <h3>Capture ideas as they come</h3>
+      <p>Keep your thoughts beside the information you're looking at. Edit an agent's message as a scratchpad, save, and ask it to read your notes when you're ready to discuss them.</p>
     </td>
     <td width="65%"><a href="assets/readme-v2/more-ways-to-help-capture-insights.png"><img src="assets/readme-v2/more-ways-to-help-capture-insights.png" alt="Editable scratchpads beside Codex's weather table and Claude's city temperature metric cards." width="100%"></a></td>
   </tr>
