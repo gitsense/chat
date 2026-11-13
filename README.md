@@ -38,7 +38,7 @@ Yes, a pizza party. Agents need context, and so do you. GitSense Chat gives you 
 
 ### Create your collaboration space
 
-Start the pizza party workflow and bring in your agents.
+Start the pizza party workflow and bring in your agents. It sets up a checklist, pizza selections, and places for your order, reviews and restaurant options.
 
 <img src="assets/readme-v2/pizza-setup-placeholder.png" alt="Video placeholder: Create your collaboration space. Start the pizza party workflow and bring in your agents." width="100%">
 
