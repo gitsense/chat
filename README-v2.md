@@ -47,7 +47,7 @@ Explore what you can do next:
 <table>
   <tr>
     <th width="50%">Work with the Steps agent</th>
-    <th width="50%">Plan with the pizza expert</th>
+    <th width="50%">Plan with an expert</th>
   </tr>
   <tr>
     <td width="50%" valign="top">
@@ -55,7 +55,7 @@ Explore what you can do next:
       <p>Edit the checklist yourself, then ask its agent to read your changes and help refine it.</p>
     </td>
     <td width="50%" valign="top">
-      <img src="assets/readme-v2/pizza-expert-placeholder.png" alt="Video placeholder: Plan with the pizza expert." width="100%">
+      <img src="assets/readme-v2/pizza-expert-placeholder.png" alt="Video placeholder: Plan with an expert." width="100%">
       <p>Ask the expert to choose toppings, size and quantity, then review and adjust the selections directly in the builder.</p>
     </td>
   </tr>
