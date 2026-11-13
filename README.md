@@ -32,13 +32,13 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## Plan a pizza party. See a new way to work with your agents.
 
-Yes, a pizza party. Agents need context, and so do you. GitSense Chat gives you room to spread out the work behind a decision, so you can see where it stands and bring your agents into the parts where you want help. Start with pizza, then imagine your next code review, product launch or root cause analysis.
+Is AI overkill for a pizza party? Probably, but it's a familiar task for seeing how you, your agents and programs can work together in GitSense Chat. Start with pizza, then imagine your next code review, product launch or root cause analysis.
 
 <!-- Draft layout: these are placeholder images, not playable videos. Replace with verified recordings and check captions before publication. -->
 
 ### Create your collaboration space
 
-Start the pizza party workflow and bring in your agents. It sets up a checklist, pizza selections, and places for your order, reviews and restaurant options.
+Agents need context, and so do you. Start the pizza party workflow and bring in your agents. Explore the available choices, then give each agent the saved information it needs for its part.
 
 <img src="assets/readme-v2/pizza-setup-placeholder.png" alt="Video placeholder: Create your collaboration space. Start the pizza party workflow and bring in your agents." width="100%">
 
