@@ -34,7 +34,46 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 Yes, a pizza party. Agents need context, and so do you. GitSense Chat gives you room to spread out the thinking behind a decision and bring your agents into the parts where you want help. Start with pizza, then imagine your next code review, product launch or root cause analysis.
 
-<!-- Draft: add verified Pizza Party demo media here. No recording or poster is available yet. Confirm any caption against the recording before publication. -->
+<!-- Draft layout: these are placeholder images, not playable videos. Replace with verified recordings and check captions before publication. -->
+
+### Bring your agents in
+
+Start the workflow and connect Pi, Claude and Codex.
+
+<img src="assets/readme-v2/pizza-setup-placeholder.png" alt="Video placeholder: Bring your agents in. Start the workflow and connect the participants." width="100%">
+
+Explore what you can do next:
+
+<table>
+  <tr>
+    <th width="50%">Work with the Steps agent</th>
+    <th width="50%">Plan with the pizza expert</th>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme-v2/pizza-steps-placeholder.png" alt="Video placeholder: Work with the Steps agent." width="100%">
+      <p>Edit the checklist yourself or ask its agent to help.</p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme-v2/pizza-expert-placeholder.png" alt="Video placeholder: Plan with the pizza expert." width="100%">
+      <p>Ask the expert to choose toppings, size and quantity, then review and adjust the selections directly in the builder.</p>
+    </td>
+  </tr>
+  <tr>
+    <th width="50%">Get another perspective</th>
+    <th width="50%">Talk to your data</th>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/readme-v2/pizza-reviews-placeholder.png" alt="Video placeholder: Get another perspective." width="100%">
+      <p>Read each agent's review in its own pane, with their sign-offs recorded in Your Order.</p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="assets/readme-v2/pizza-data-placeholder.png" alt="Video placeholder: Talk to your data." width="100%">
+      <p>Ask about restaurants and get recommendations in a new column beside each restaurant.</p>
+    </td>
+  </tr>
+</table>
 
 The restaurants in this demo are fictional. No order is placed.
 
@@ -43,6 +82,8 @@ What would you spread out, and where would you bring an agent in? [Workflow Buil
 ## Bring your work together
 
 Follow related agent work in one place with a Group.
+
+Workflows are optional. You can also bring your existing agents into a Group.
 
 Ask an agent to connect or enter its session ID yourself. Pi sessions don't need a mirror. Find existing sessions and add them directly.
 
