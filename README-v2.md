@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="README-previous.md#runtime-details">Runtime details</a> &nbsp;·&nbsp;
-  <a href="README-previous.md#more-ways-to-work-with-your-agents">Work together</a> &nbsp;·&nbsp;
+  <a href="#bring-your-work-together">Work together</a> &nbsp;·&nbsp;
   <a href="README-previous.md#connect-agents-across-environments">Communicate</a> &nbsp;·&nbsp;
   <a href="README-previous.md#give-agents-a-better-starting-point">Share knowledge</a>
 </p>
@@ -29,6 +29,16 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
+
+## Plan a pizza party. See a new way to work with your agents.
+
+Yes, a pizza party. The terminal is great for driving a conversation with an agent. GitSense Chat gives you room to spread out the thinking behind a decision and bring your agents into the parts where you want help. Start with pizza, then imagine your next code review, product launch or root cause analysis.
+
+<!-- Draft: add verified Pizza Party demo media here. No recording or poster is available yet. Confirm any caption against the recording before publication. -->
+
+The restaurants in this demo are fictional. No order is placed.
+
+What would you spread out, and where would you bring an agent in? [Workflow Builder](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md) can help you design your own workflow.
 
 ## Bring your work together
 
