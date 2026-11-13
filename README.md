@@ -32,7 +32,7 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## Plan a pizza party. See a new way to work with your agents.
 
-Yes, a pizza party. The terminal is great for driving a conversation with an agent. GitSense Chat gives you room to spread out the thinking behind a decision and bring your agents into the parts where you want help. Start with pizza, then imagine your next code review, product launch or root cause analysis.
+Yes, a pizza party. Agents need context, and so do you. GitSense Chat gives you room to spread out the thinking behind a decision and bring your agents into the parts where you want help. Start with pizza, then imagine your next code review, product launch or root cause analysis.
 
 <!-- Draft: add verified Pizza Party demo media here. No recording or poster is available yet. Confirm any caption against the recording before publication. -->
 
