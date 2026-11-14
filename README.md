@@ -30,6 +30,16 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
+## Collaborate. Really!
+
+GitSense Chat gives your agent a way to help you manage your context. Ask it to bring the material you need together and point to the relevant passages. You can read the sources and work through the question together.
+
+Watch Claude Code help review a commit without leaving its terminal. Work with the same agent to decide what to examine, while it brings the relevant files and passages into view in GitSense Chat.
+
+<img src="assets/readme-v2/collaborate-placeholder.png" alt="Video placeholder: Claude Code in its terminal beside a GitSense Chat Group showing relevant files and passages." width="100%">
+
+*Video placeholder. Recording to come.*
+
 ## Plan a pizza party. See a new way to work with your agents.
 
 Is AI overkill for a pizza party? Probably, but it's a familiar task for seeing how you, your agents and programs can work together in GitSense Chat. Start with pizza, then imagine your next code review, product launch or root cause analysis.
