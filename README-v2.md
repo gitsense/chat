@@ -32,9 +32,9 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## Collaborate. Really!
 
-GitSense Chat gives your agent a way to help you manage your context. Ask it to bring the material you need together and point to the relevant passages. You can read the sources and work through the question together.
+GitSense Chat gives your agent a place to work alongside you. It can arrange the material you're working with and highlight what you're discussing, helping you stay oriented as the work develops.
 
-Watch Claude Code help review a commit without leaving its terminal. Work with the same agent to decide what to examine, while it brings the relevant files and passages into view in GitSense Chat.
+Watch what happens when you ask Claude Code, "Help me review this commit." You keep talking in its terminal while the same agent arranges the files in GitSense Chat and helps you work through the changes.
 
 <img src="assets/readme-v2/collaborate-placeholder.png" alt="Video placeholder: Claude Code in its terminal beside a GitSense Chat Group showing relevant files and passages." width="100%">
 
