@@ -30,9 +30,9 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
-## Let your agents show you the work. You focus on what matters.
+## Your agents have limits on what they can keep in context. So do you.
 
-Your agents can arrange files, highlight the passages you're discussing and leave notes for you or another agent to review. You can inspect the source and follow the discussion without searching earlier replies for what you need.
+Your agents can help organize the work so you don't have to hold every detail in your head. They can arrange files, highlight passages and pin earlier messages. You can read the original messages in full alongside the current work instead of scrolling back or asking for another summary.
 
 Watch what happens when you ask Claude Code, "Help me review this commit." The conversation stays in its terminal while Claude displays files in GitSense Chat and adjusts the view as you work through the changes.
 
