@@ -32,33 +32,27 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## Same agents. More ways to work together.
 
-Bring Claude Code, Codex, and OpenCode into one Group, a shared space in GitSense Chat. The agents stay in their own terminals. In Chat, you can look through what they share and make choices for them to read when you're ready.
+Bring Claude Code and Codex into one Group, a shared space in GitSense Chat. Your agents stay in their own terminals. Their replies also appear in Chat, alongside the tables, notes, and diffs you work with together.
 
-<img src="assets/readme-v2/work-together-overview-placeholder.png" alt="Layout preview: Claude Code, Codex, and OpenCode terminals on the left, with a table above a checklist and diff in GitSense Chat on the right." width="100%">
+<img src="assets/readme-v2/work-together-overview-placeholder.png" alt="Layout preview: Claude Code and Codex in their native terminals on the left. In the Group on the right, Claude Code's mirrored reply sits beside an inventory table in the top row, and Codex's mirrored reply sits beside a file checklist and diff in the row below." width="100%">
 
 *Video placeholders. Recordings to come.*
 
 <table>
   <tr>
     <td width="38%" valign="middle">
-      <h3>Talk to your data</h3>
-      <p>Ask your agent to change how a total is calculated, then check the updated column in Chat. The agent can share the table without printing every row in its reply.</p>
+      <h3>Claude Code - Inventory planner</h3>
+      <p>Ask Claude Code to plan for seven days of stock, then say, "Make that ten days. Keep the daily-demand estimates unchanged." Claude reruns the calculation. You can check what needs reordering in the same table card without it printing every row in its reply.</p>
     </td>
-    <td width="62%"><img src="assets/readme-v2/work-together-table-placeholder.png" alt="Video placeholder: A terminal request to update a calculation beside the updated table in Chat." width="100%"></td>
+    <td width="62%"><img src="assets/readme-v2/work-together-table-placeholder.png" alt="Video placeholder: Claude Code gets a request to plan for ten days of stock, and the inventory card shows the recalculated quantities." width="100%"></td>
   </tr>
   <tr>
     <td width="38%" valign="middle">
-      <h3>Type less. Answer more.</h3>
-      <p>Pick one option or check several in a Notes card. Change your choices as you go. When you're ready, tell the same agent in its terminal, "Read my answers."</p>
+      <h3>Codex - Code reviewer</h3>
+      <p>Check the files you want to review and choose Latest commit or Whole branch for each. Ask Codex to read your choices and show the changes. Change the scope or select another file, then ask Codex to update the same diff card.</p>
+      <p>Use the diff menu to copy a command or open the comparison in your editor, depending on your setup.</p>
     </td>
-    <td width="62%"><img src="assets/readme-v2/work-together-choices-placeholder.png" alt="Video placeholder: Saved choices in a Notes card beside the user's request to read them in the terminal." width="100%"></td>
-  </tr>
-  <tr>
-    <td width="38%" valign="middle">
-      <h3>Review a diff with your own tools</h3>
-      <p>Ask what changed and inspect the diff in Chat. Use the card's diff menu to copy a command or open the comparison in your editor, depending on your setup.</p>
-    </td>
-    <td width="62%"><img src="assets/readme-v2/work-together-diff-placeholder.png" alt="Video placeholder: A diff in Chat with the card's diff menu open." width="100%"></td>
+    <td width="62%"><img src="assets/readme-v2/work-together-diff-placeholder.png" alt="Video placeholder: Codex uses saved file and scope choices from a checklist to update the diff card for hello.test.js." width="100%"></td>
   </tr>
 </table>
 
