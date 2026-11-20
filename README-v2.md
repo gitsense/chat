@@ -30,15 +30,37 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
-## Your agents have limits on what they can keep in context. So do you.
+## Same agents. More ways to work together.
 
-Your agents can help organize the work so you don't have to hold every detail in your head. They can arrange files, highlight passages and pin earlier messages. You can read the original messages in full alongside the current work instead of scrolling back or asking for another summary.
+Bring Claude Code, Codex, and OpenCode into one Group, a shared space in GitSense Chat. The agents stay in their own terminals. In Chat, you can look through what they share and make choices for them to read when you're ready.
 
-Watch what happens when you ask Claude Code, "Help me review this commit." The conversation stays in its terminal while Claude displays files in GitSense Chat and adjusts the view as you work through the changes.
+<img src="assets/readme-v2/work-together-overview-placeholder.png" alt="Layout preview: Claude Code, Codex, and OpenCode terminals on the left, with a table above a checklist and diff in GitSense Chat on the right." width="100%">
 
-<img src="assets/readme-v2/collaborate-placeholder.png" alt="Video placeholder: Claude Code in its terminal beside a GitSense Chat Group showing relevant files and passages." width="100%">
+*Video placeholders. Recordings to come.*
 
-*Video placeholder. Recording to come.*
+<table>
+  <tr>
+    <td width="38%" valign="middle">
+      <h3>Talk to your data</h3>
+      <p>Ask your agent to change how a total is calculated, then check the updated column in Chat. The agent can share the table without printing every row in its reply.</p>
+    </td>
+    <td width="62%"><img src="assets/readme-v2/work-together-table-placeholder.png" alt="Video placeholder: A terminal request to update a calculation beside the updated table in Chat." width="100%"></td>
+  </tr>
+  <tr>
+    <td width="38%" valign="middle">
+      <h3>Type less. Answer more.</h3>
+      <p>Pick one option or check several in a Notes card. Change your choices as you go. When you're ready, tell the same agent in its terminal, "Read my answers."</p>
+    </td>
+    <td width="62%"><img src="assets/readme-v2/work-together-choices-placeholder.png" alt="Video placeholder: Saved choices in a Notes card beside the user's request to read them in the terminal." width="100%"></td>
+  </tr>
+  <tr>
+    <td width="38%" valign="middle">
+      <h3>Review a diff with your own tools</h3>
+      <p>Ask what changed and inspect the diff in Chat. Use the card's diff menu to copy a command or open the comparison in your editor, depending on your setup.</p>
+    </td>
+    <td width="62%"><img src="assets/readme-v2/work-together-diff-placeholder.png" alt="Video placeholder: A diff in Chat with the card's diff menu open." width="100%"></td>
+  </tr>
+</table>
 
 ## Plan a pizza party. See a new way to work with your agents.
 
