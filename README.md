@@ -34,23 +34,49 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 Create a Group in GitSense Chat to give yourself and your agents a shared workspace. It's like a breakout room with whiteboards you can talk to. Ask your agent to update a table or show a different diff, then keep working from what's already in view. Your agents can do all of this from their own terminals.
 
-In this demo, Claude Code puts the ACME inventory results in a table. You ask for a **Days of Stock** column, and Claude passes the request to Codex. You review the code with Codex, then Claude reruns the tool. The new column appears in the same table where you started.
+Watch how you can bring Claude Code and Codex into a Group and give them the tools to help you work better together.
 
 <img src="assets/readme-v2/work-together-overview-placeholder.png" alt="Layout preview: Claude Code and Codex in their native terminals on the left. In the Group on the right, Claude Code's mirrored reply sits beside an inventory table in the top row, and Codex's mirrored reply sits beside a file checklist and diff in the row below." width="100%">
 
 *Video placeholder. Recording to come.*
 
-<!-- Layout previews only. Replace all six with stills from the same recording. -->
+<!-- Layout previews only. These images are not screenshots from the recording. -->
+
+### Start a Group when you need one
+
+Your agents stay in the tools you already use. When you want a shared space, ask your agent: "Run `gsc groups help`, then create a Group in GitSense Chat and add yourself to it."
+
+Bring another agent in when you need it. Your agent can look up who's in the Group, so you can say "Ask Codex" without finding its address yourself. Codex needs a registered inbox to receive the message.
+
 <table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-01-steps-placeholder.png" alt="Layout preview of the Steps card in the ACME Group." width="100%"><br>1. Open the Steps card</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-02-inventory-placeholder.png" alt="Layout preview of Claude's inventory table before the change." width="100%"><br>2. Inspect the inventory table</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-03-handoff-placeholder.png" alt="Layout preview of Claude asking Codex to add a Days of Stock column." width="100%"><br>3. Ask Claude to hand off the request</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-create-group-placeholder.png" alt="Layout preview of a terminal prompt to create and join a Group." width="100%"><br>Ask your agent to start a Group</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-join-later-placeholder.png" alt="Layout preview of Codex joining the Development section while Claude is already in Testing." width="100%"><br>Bring another agent in later</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-find-peer-placeholder.png" alt="Layout preview of Claude finding Codex in the Group and sending it a request." width="100%"><br>Say "Ask Codex"</td>
   </tr>
+</table>
+
+### Keep what you need in view
+
+Your agents can show you a table in Chat by pointing to a file instead of pasting every row into a reply. You can save notes and decisions beside the table and come back to them as the conversation moves on. Your agents read the data or your notes when they need them.
+
+<table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-04-review-placeholder.png" alt="Layout preview of Codex's review checklist beside the diff." width="100%"><br>4. Review the diff with Codex</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-05-sign-off-placeholder.png" alt="Layout preview of the user's approval and Codex asking Claude to rerun ACME." width="100%"><br>5. Sign off and ask Claude to rerun</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-06-result-placeholder.png" alt="Layout preview of the original inventory table with the new Days of Stock column." width="100%"><br>6. See the new column in the same table</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-file-reference-placeholder.png" alt="Layout preview of a terminal reply that references an inventory CSV." width="100%"><br>Share a file without pasting every row</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-table-view-placeholder.png" alt="Layout preview of the referenced inventory CSV displayed as a table in Chat." width="100%"><br>See the table in Chat</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-saved-progress-placeholder.png" alt="Layout preview of the Steps card with completed and remaining steps." width="100%"><br>Pick up where you left off</td>
+  </tr>
+</table>
+
+### Keep using the tools you know
+
+Start with a diff or table in Chat. For a closer look, open the same comparison in Zed or use the table icon to open the CSV or TSV in a spreadsheet app you've set up.
+
+<table>
+  <tr>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-chat-diff-placeholder.png" alt="Layout preview of the ACME diff in Chat with Zed selected in the diff menu." width="100%"><br>Start with the diff in Chat</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-zed-diff-placeholder.png" alt="Layout preview of the same ACME diff open in Zed." width="100%"><br>Open the same diff in Zed</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-spreadsheet-placeholder.png" alt="Layout preview of the ACME inventory CSV open in a spreadsheet app." width="100%"><br>Open the table in your spreadsheet app</td>
   </tr>
 </table>
 
