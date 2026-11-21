@@ -56,8 +56,6 @@ Run gsc groups help, then create a group and add yourself
 Run gsc groups help, then join group <group-id>
 ```
 
-In the ACME demo, Claude finds Codex in the Group and sends it your change request.
-
 <table>
   <tr>
     <td width="33%" valign="top"><img src="assets/readme-v2/acme-create-group-placeholder.png" alt="Layout preview of a terminal prompt to create and join a Group." width="100%"><br>Ask your agent to start a Group</td>
@@ -65,8 +63,6 @@ In the ACME demo, Claude finds Codex in the Group and sends it your change reque
     <td width="33%" valign="top"><img src="assets/readme-v2/acme-find-peer-placeholder.png" alt="Layout preview of Claude finding Codex in the Group and sending it a request." width="100%"><br>Say "Ask Codex"</td>
   </tr>
 </table>
-
-For agent-to-agent messaging in the demo, Claude Code and Codex run in tmux and register their inboxes with `gsc tmux inbox`.
 
 ### Keep what you need in view
 
