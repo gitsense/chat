@@ -58,27 +58,19 @@ Run gsc groups help, then join group <group-id>
 
 <table>
   <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-create-group-placeholder.png" alt="Layout preview of a terminal prompt to create and join a Group." width="100%"><br>Ask your agent to start a Group</td>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-join-later-placeholder.png" alt="Layout preview of Codex joining the Development section while Claude is already in Testing." width="100%"><br>Bring another agent in later</td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-find-peer-placeholder.png" alt="Layout preview of Claude finding Codex in the Group and sending it a request." width="100%"><br>Say "Ask Codex"</td>
-    <td></td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/native-harnesses-placeholder.png" alt="Layout preview of Claude Code, Codex, Pi, and OpenCode in their native terminals." width="100%"><br>Agents in their terminals</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/group-harnesses-placeholder.png" alt="Layout preview of the same Claude Code, Codex, Pi, and OpenCode sessions in a GitSense Chat Group." width="100%"><br>Same agents in Chat</td>
   </tr>
 </table>
 
 ### Keep what you need in view
 
-Ask your agent to put the results you need to check beside the conversation. You can save decisions and mark what you've reviewed without searching earlier replies. Your agent can point Chat to a table file without reading its contents just to show it to you.
+Each card represents an agent. Some show what an agent found; others hold notes you can return to or ask an agent to read. Arrange the cards around the question you're trying to answer. The same Status report stays easy to find whether you're checking the whole network or investigating the slowdown in Building B.
 
 <table>
   <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-file-reference-placeholder.png" alt="Layout preview of a terminal reply that references an inventory CSV." width="100%"><br>The agent references the results file</td>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-table-view-placeholder.png" alt="Layout preview of the referenced inventory CSV displayed as a table in Chat." width="100%"><br>Chat displays the table</td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-saved-progress-placeholder.png" alt="Layout preview of the Steps card with completed and remaining steps." width="100%"><br>Keep review progress visible</td>
-    <td></td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/network-overview-placeholder.png" alt="Layout preview of Network overview, with Status report under Start here and Traffic, Devices, and Logs under Who's watching what." width="100%"><br>Network overview</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/building-b-slowdown-placeholder.png" alt="Layout preview of Building B slowdown, with the same Status report under Start here and Traffic, Logs, and Changed this week under Following the slowdown." width="100%"><br>Building B slowdown</td>
   </tr>
 </table>
 
