@@ -44,7 +44,13 @@ Watch how you can test and update the ACME inventory tool with Claude Code and C
 
 ### Start a Group when you need one
 
-Ask the agent you're already working with to create a Group and join it. Bring another agent in when you need its help. In the ACME demo, Claude finds Codex in the Group and sends it your change request.
+To create and join a Group, paste this into the agent you're already working with:
+
+```text
+Run gsc groups help, then create a Group in GitSense Chat and add yourself to it.
+```
+
+Bring another agent in when you need its help. In the ACME demo, Claude finds Codex in the Group and sends it your change request.
 
 <table>
   <tr>
@@ -54,18 +60,7 @@ Ask the agent you're already working with to create a Group and join it. Bring a
   </tr>
 </table>
 
-<details>
-<summary>Try it</summary>
-
-Paste this into the agent's terminal:
-
-```text
-Run gsc groups help, then create a Group in GitSense Chat and add yourself to it.
-```
-
 For agent-to-agent messaging in the demo, Claude Code and Codex run in tmux and register their inboxes with `gsc tmux inbox`.
-
-</details>
 
 ### Keep what you need in view
 
