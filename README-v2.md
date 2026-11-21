@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="README-previous.md#runtime-details">Runtime details</a> &nbsp;·&nbsp;
-  <a href="#give-yourself-and-your-agents-a-shared-workspace">Work together</a> &nbsp;·&nbsp;
+  <a href="#give-yourself-and-your-agents-more-ways-to-collaborate">Work together</a> &nbsp;·&nbsp;
   <a href="README-previous.md#connect-agents-across-environments">Communicate</a> &nbsp;·&nbsp;
   <a href="README-previous.md#give-agents-a-better-starting-point">Share knowledge</a>
 </p>
@@ -30,29 +30,31 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
-## Give yourself and your agents a shared workspace
+## Give yourself and your agents more ways to collaborate
 
-Bring Claude Code and Codex into one Group, a shared space in GitSense Chat. Your agents stay in their own terminals. Their replies also appear in Chat, alongside the tables, notes, and diffs you work with together.
+Think of a GitSense Chat Group as a breakout room with whiteboards for the work you're doing together. Your agents stay in their own terminals while keeping results, decisions, and review notes visible in Chat. You can return to those details as the conversation moves on.
+
+In this demo, Claude Code puts the ACME inventory results in a table. You ask for a **Days of Stock** column, and Claude passes the request to Codex. You review the code with Codex, then Claude reruns the tool. The new column appears in the same table where you started.
 
 <img src="assets/readme-v2/work-together-overview-placeholder.png" alt="Layout preview: Claude Code and Codex in their native terminals on the left. In the Group on the right, Claude Code's mirrored reply sits beside an inventory table in the top row, and Codex's mirrored reply sits beside a file checklist and diff in the row below." width="100%">
 
-*Video placeholders. Recordings to come.*
+*Video placeholder. Recording to come. The previews below show two moments from the same demo.*
 
 <table>
   <tr>
     <td width="38%" valign="middle">
-      <h3>Claude Code - Inventory planner</h3>
-      <p>Ask Claude Code to plan for seven days of stock, then say, "Make that ten days. Keep the daily-demand estimates unchanged." Claude reruns the calculation. You can check what needs reordering in the same table card without it printing every row in its reply.</p>
+      <h3>Claude Code - Inventory QA</h3>
+      <p>Ask Claude to run ACME and put the results in a table. When you want to see how long the stock will last, ask Claude to send the request to Codex.</p>
     </td>
-    <td width="62%"><img src="assets/readme-v2/work-together-table-placeholder.png" alt="Video placeholder: Claude Code gets a request to plan for ten days of stock, and the inventory card shows the recalculated quantities." width="100%"></td>
+    <td width="62%"><img src="assets/readme-v2/work-together-table-placeholder.png" alt="Layout preview: Claude Code beside the ACME inventory table and the request for a Days of Stock column." width="100%"></td>
   </tr>
   <tr>
     <td width="38%" valign="middle">
-      <h3>Codex - Code reviewer</h3>
-      <p>Check the files you want to review and choose Latest commit or Whole branch for each. Ask Codex to read your choices and show the changes. Change the scope or select another file, then ask Codex to update the same diff card.</p>
-      <p>Use the diff menu to copy a command or open the comparison in your editor, depending on your setup.</p>
+      <h3>Codex - Inventory developer</h3>
+      <p>Review the calculation and tests with Codex. Mark files as reviewed in the checklist and ask Codex to switch files in the same diff card. You can also open the diff in Zed if you've configured it.</p>
+      <p>When you sign off, ask Codex to send Claude the reviewed revision. Claude checks the new calculation and updates the original table.</p>
     </td>
-    <td width="62%"><img src="assets/readme-v2/work-together-diff-placeholder.png" alt="Video placeholder: Codex uses saved file and scope choices from a checklist to update the diff card for hello.test.js." width="100%"></td>
+    <td width="62%"><img src="assets/readme-v2/work-together-diff-placeholder.png" alt="Layout preview: Codex beside a review checklist and a diff for the ACME inventory change." width="100%"></td>
   </tr>
 </table>
 
