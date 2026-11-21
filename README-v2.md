@@ -32,9 +32,9 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## Give yourself and your agents more ways to collaborate
 
-Create a Group in GitSense Chat to give yourself and your agents a shared workspace. It's like a breakout room with whiteboards you can talk to. Ask your agent to update a table or show a different diff, then keep working from what's already in view. Your agents can do all of this from their own terminals.
+Create a Group in GitSense Chat to give yourself and your agents a shared workspace. It's like a breakout room with whiteboards you can talk to. Ask your agent in its terminal to update a table or show a different diff, then see the change in Chat.
 
-Watch how you can bring Claude Code and Codex into a Group and give them the tools to help you work better together.
+Watch how you can test and update the ACME inventory tool with Claude Code and Codex.
 
 <img src="assets/readme-v2/work-together-overview-placeholder.png" alt="Layout preview: Claude Code and Codex in their native terminals on the left. In the Group on the right, Claude Code's mirrored reply sits beside an inventory table in the top row, and Codex's mirrored reply sits beside a file checklist and diff in the row below." width="100%">
 
@@ -44,9 +44,7 @@ Watch how you can bring Claude Code and Codex into a Group and give them the too
 
 ### Start a Group when you need one
 
-Your agents stay in the tools you already use. When you want a shared space, ask your agent: "Run `gsc groups help`, then create a Group in GitSense Chat and add yourself to it."
-
-Bring another agent in when you need it. Your agent can look up who's in the Group, so you can say "Ask Codex" without finding its address yourself. Codex needs a registered inbox to receive the message.
+Ask the agent you're already working with to create a Group and join it. Bring another agent in when you need its help. In the ACME demo, Claude finds Codex in the Group and sends it your change request.
 
 <table>
   <tr>
@@ -56,21 +54,34 @@ Bring another agent in when you need it. Your agent can look up who's in the Gro
   </tr>
 </table>
 
+<details>
+<summary>Try it</summary>
+
+Paste this into the agent's terminal:
+
+```text
+Run gsc groups help, then create a Group in GitSense Chat and add yourself to it.
+```
+
+For agent-to-agent messaging in the demo, Claude Code and Codex run in tmux and register their inboxes with `gsc tmux inbox`.
+
+</details>
+
 ### Keep what you need in view
 
-Your agents can show you a table in Chat by pointing to a file instead of pasting every row into a reply. You can save notes and decisions beside the table and come back to them as the conversation moves on. Your agents read the data or your notes when they need them.
+Ask your agent to put the results you need to check beside the conversation. You can save decisions and mark what you've reviewed without searching earlier replies. Your agent can point Chat to a table file without reading its contents just to show it to you.
 
 <table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-file-reference-placeholder.png" alt="Layout preview of a terminal reply that references an inventory CSV." width="100%"><br>Share a file without pasting every row</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-table-view-placeholder.png" alt="Layout preview of the referenced inventory CSV displayed as a table in Chat." width="100%"><br>See the table in Chat</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-saved-progress-placeholder.png" alt="Layout preview of the Steps card with completed and remaining steps." width="100%"><br>Pick up where you left off</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-file-reference-placeholder.png" alt="Layout preview of a terminal reply that references an inventory CSV." width="100%"><br>The agent references the results file</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-table-view-placeholder.png" alt="Layout preview of the referenced inventory CSV displayed as a table in Chat." width="100%"><br>Chat displays the table</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-saved-progress-placeholder.png" alt="Layout preview of the Steps card with completed and remaining steps." width="100%"><br>Keep review progress visible</td>
   </tr>
 </table>
 
 ### Keep using the tools you know
 
-Start with a diff or table in Chat. For a closer look, open the same comparison in Zed or use the table icon to open the CSV or TSV in a spreadsheet app you've set up.
+Inspect a diff or table in Chat, then open it in your own tools. Open the same comparison in Zed, or use the table icon to open the CSV or TSV in a spreadsheet app you've set up.
 
 <table>
   <tr>
