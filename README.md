@@ -58,9 +58,12 @@ Run gsc groups help, then join group <group-id>
 
 <table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-create-group-placeholder.png" alt="Layout preview of a terminal prompt to create and join a Group." width="100%"><br>Ask your agent to start a Group</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-join-later-placeholder.png" alt="Layout preview of Codex joining the Development section while Claude is already in Testing." width="100%"><br>Bring another agent in later</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-find-peer-placeholder.png" alt="Layout preview of Claude finding Codex in the Group and sending it a request." width="100%"><br>Say "Ask Codex"</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-create-group-placeholder.png" alt="Layout preview of a terminal prompt to create and join a Group." width="100%"><br>Ask your agent to start a Group</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-join-later-placeholder.png" alt="Layout preview of Codex joining the Development section while Claude is already in Testing." width="100%"><br>Bring another agent in later</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-find-peer-placeholder.png" alt="Layout preview of Claude finding Codex in the Group and sending it a request." width="100%"><br>Say "Ask Codex"</td>
+    <td></td>
   </tr>
 </table>
 
@@ -70,9 +73,12 @@ Ask your agent to put the results you need to check beside the conversation. You
 
 <table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-file-reference-placeholder.png" alt="Layout preview of a terminal reply that references an inventory CSV." width="100%"><br>The agent references the results file</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-table-view-placeholder.png" alt="Layout preview of the referenced inventory CSV displayed as a table in Chat." width="100%"><br>Chat displays the table</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-saved-progress-placeholder.png" alt="Layout preview of the Steps card with completed and remaining steps." width="100%"><br>Keep review progress visible</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-file-reference-placeholder.png" alt="Layout preview of a terminal reply that references an inventory CSV." width="100%"><br>The agent references the results file</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-table-view-placeholder.png" alt="Layout preview of the referenced inventory CSV displayed as a table in Chat." width="100%"><br>Chat displays the table</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-saved-progress-placeholder.png" alt="Layout preview of the Steps card with completed and remaining steps." width="100%"><br>Keep review progress visible</td>
+    <td></td>
   </tr>
 </table>
 
