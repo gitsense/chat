@@ -76,15 +76,23 @@ Ask your agent to put the results you need to check beside the conversation. You
   </tr>
 </table>
 
-### Keep using the tools you know
+## Keep using the tools you know
 
-Inspect a diff or table in Chat, then open it in your own tools. Open the same comparison in Zed, or use the table icon to open the CSV or TSV in a spreadsheet app you've set up.
+Inspect a diff or table in Chat, then open it in the app you prefer. Open the same comparison in Zed, or use the table icon to open the CSV or TSV in a spreadsheet app you've set up.
 
+<!-- Layout previews only. Replace with screenshots of the tool handoffs. -->
 <table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-chat-diff-placeholder.png" alt="Layout preview of the ACME diff in Chat with Zed selected in the diff menu." width="100%"><br>Start with the diff in Chat</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-zed-diff-placeholder.png" alt="Layout preview of the same ACME diff open in Zed." width="100%"><br>Open the same diff in Zed</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-spreadsheet-placeholder.png" alt="Layout preview of the ACME inventory CSV open in a spreadsheet app." width="100%"><br>Open the table in your spreadsheet app</td>
+    <th width="50%">In GitSense Chat</th>
+    <th width="50%">In your tool</th>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-chat-diff-placeholder.png" alt="Layout preview of the ACME diff in Chat with Zed selected in the diff menu." width="100%"><br>Review a diff in Chat</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-zed-diff-placeholder.png" alt="Layout preview of the same ACME diff open in Zed." width="100%"><br>Open the same diff in Zed</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-chat-spreadsheet-handoff-placeholder.png" alt="Layout preview of the ACME inventory table in Chat with the spreadsheet launch option." width="100%"><br>Browse the table in Chat</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/acme-spreadsheet-placeholder.png" alt="Layout preview of the same ACME inventory CSV open in a spreadsheet app." width="100%"><br>Open the same CSV in your spreadsheet app</td>
   </tr>
 </table>
 
