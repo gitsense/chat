@@ -78,21 +78,15 @@ Ask your agent to put the results you need to check beside the conversation. You
 
 ## Keep using the tools you know
 
-Inspect a diff or table in Chat, then open it in the app you prefer. Open the same comparison in Zed, or use the table icon to open the CSV or TSV in a spreadsheet app you've set up.
+Start in Chat, then keep working in the tools you already use. When an agent shares a file, diff, or table, you can look it over in Chat and open it in an app you've set up.
 
-<!-- Layout previews only. Replace with screenshots of the tool handoffs. -->
+*Video placeholders. Short clips to come.*
+
 <table>
   <tr>
-    <th width="50%">In GitSense Chat</th>
-    <th width="50%">In your tool</th>
-  </tr>
-  <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-chat-diff-placeholder.png" alt="Layout preview of the ACME diff in Chat with Zed selected in the diff menu." width="100%"><br>Review a diff in Chat</td>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-zed-diff-placeholder.png" alt="Layout preview of the same ACME diff open in Zed." width="100%"><br>Open the same diff in Zed</td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-chat-spreadsheet-handoff-placeholder.png" alt="Layout preview of the ACME inventory table in Chat with the spreadsheet launch option." width="100%"><br>Browse the table in Chat</td>
-    <td width="50%" valign="top"><img src="assets/readme-v2/acme-spreadsheet-placeholder.png" alt="Layout preview of the same ACME inventory CSV open in a spreadsheet app." width="100%"><br>Open the same CSV in your spreadsheet app</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-open-file-clip-placeholder.png" alt="Video placeholder: the ACME source file in Chat and in an editor." width="100%"><br><strong>Open a file</strong><br>Find the stock calculation in your editor.</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-open-diff-clip-placeholder.png" alt="Video placeholder: the same ACME comparison in Chat and Zed." width="100%"><br><strong>Open a diff</strong><br>Read the lines around the change in Zed.</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/acme-open-table-clip-placeholder.png" alt="Video placeholder: the ACME inventory CSV in Chat and in a spreadsheet app." width="100%"><br><strong>Open a table</strong><br>Sort by Days of Stock in your spreadsheet.</td>
   </tr>
 </table>
 
