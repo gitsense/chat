@@ -32,7 +32,7 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## Give yourself and your agents more ways to collaborate
 
-Think of a GitSense Chat Group as a breakout room with whiteboards for the work you're doing together. Your agents stay in their own terminals while keeping results, decisions, and review notes visible in Chat. You can return to those details as the conversation moves on.
+Create a Group in GitSense Chat to give yourself and your agents a shared workspace. A Group is like a breakout room with whiteboards: your agents can lay out results and review notes in Chat so you can return to them as the conversation moves on. Your agents keep working in their own terminals.
 
 In this demo, Claude Code puts the ACME inventory results in a table. You ask for a **Days of Stock** column, and Claude passes the request to Codex. You review the code with Codex, then Claude reruns the tool. The new column appears in the same table where you started.
 
