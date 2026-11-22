@@ -42,7 +42,9 @@ Watch how you can test and update the ACME inventory tool with Claude Code and C
 
 <!-- Layout previews only. These images are not screenshots from the recording. -->
 
-### Start a Group when you need one
+### Start a Group at any point
+
+You can ask your agent to start a Group even if you're halfway through a task. Keep talking in the same terminal session, and use the Group to see the results your agent shares as you go.
 
 **Start a Group.** Paste this into the agent you're already working with:
 
@@ -50,7 +52,7 @@ Watch how you can test and update the ACME inventory tool with Claude Code and C
 Run gsc groups help, then create a group and add yourself
 ```
 
-**Join an existing Group.** Give another agent this prompt when you need its help. Replace `<group-id>` with the ID of the Group you want it to join.
+**Bring in another agent.** When you want another agent's help, give it this prompt. Replace `<group-id>` with your Group's ID.
 
 ```text
 Run gsc groups help, then join group <group-id>
