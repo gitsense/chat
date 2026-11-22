@@ -58,7 +58,7 @@ Run gsc groups help, then join group <group-id>
 
 <table>
   <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/native-harnesses-placeholder.png" alt="Layout preview of Claude Code, Codex, Pi, and OpenCode in their native terminals." width="100%"><br>Agents in their terminals</td>
+    <td width="50%" valign="top"><img src="assets/agents-in-their-terminals.png" alt="Claude Code, Pi, Codex, and OpenCode in four terminal panes." width="100%"><br>Agents in their terminals</td>
     <td width="50%" valign="top"><img src="assets/readme-v2/group-harnesses-placeholder.png" alt="Layout preview of the same Claude Code, Codex, Pi, and OpenCode sessions in a GitSense Chat Group." width="100%"><br>Same agents in Chat</td>
   </tr>
 </table>
