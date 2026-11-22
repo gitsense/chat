@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="README-previous.md#runtime-details">Runtime details</a> &nbsp;·&nbsp;
-  <a href="#give-yourself-and-your-agents-more-ways-to-collaborate">Work together</a> &nbsp;·&nbsp;
+  <a href="#keep-working-in-your-terminal-collaborate-in-gitsense-chat">Work together</a> &nbsp;·&nbsp;
   <a href="README-previous.md#connect-agents-across-environments">Communicate</a> &nbsp;·&nbsp;
   <a href="README-previous.md#give-agents-a-better-starting-point">Share knowledge</a>
 </p>
@@ -30,7 +30,7 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
-## Give yourself and your agents more ways to collaborate
+## Keep working in your terminal. Collaborate in GitSense Chat.
 
 Create a Group in GitSense Chat to give yourself and your agents a shared workspace. It's like a breakout room with whiteboards you can talk to. Ask your agent in its terminal to update a table or show a different diff, then see the change in Chat.
 
