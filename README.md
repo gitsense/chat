@@ -74,6 +74,14 @@ Each card represents an agent. Some show what an agent found; others hold notes 
   </tr>
 </table>
 
+### Follow parallel work in one place
+
+When you're working with several agents at once, checking where things stand can mean switching terminals and scrolling through each conversation. Ask your agents to keep progress updates and finished files visible in a Group. You can see what's still underway and open what's ready to review.
+
+<img src="assets/readme-v2/hello-world-progress-video-placeholder.png" alt="Video layout preview: Claude Code compiles the Rust program while Codex shares the finished Swift file and updates the shared Status card." width="100%">
+
+*Video placeholder. Recording to come.*
+
 ## Keep using the tools you know
 
 Start in Chat, then keep working in the tools you already use. When an agent shares a file, diff, or table, you can look it over in Chat and open it in an app you've set up.
