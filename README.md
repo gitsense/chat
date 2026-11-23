@@ -83,9 +83,7 @@ When your agents are spread across terminal tabs or workspaces, you can see them
   </tr>
 </table>
 
-<img src="assets/readme-v2/hello-world-group-board-placeholder.png" alt="Layout placeholder for the same six agents in one Group, with Artifacts and status across the top and the Demo guide on the right." width="100%">
-
-*Group board screenshot to come.*
+<a href="assets/readme-v2/your-terminal-tabs-in-gitsense-chat.png"><img src="assets/readme-v2/your-terminal-tabs-in-gitsense-chat.png" alt="The same six agents in one GitSense Chat Group, with Artifacts and Status cards at the top and a Demo guide on the right." width="100%"></a>
 
 ## Keep using the tools you know
 
