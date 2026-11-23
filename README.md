@@ -78,12 +78,12 @@ When your agents are spread across terminal tabs or workspaces, you can see them
 
 <table>
   <tr>
-    <td width="50%" valign="top"><a href="assets/readme-v2/hello-world-terminal-tab-1.png"><img src="assets/readme-v2/hello-world-terminal-tab-1.png" alt="The first terminal tab shows two Pi agents." width="100%"></a><br>Terminal tab 1</td>
-    <td width="50%" valign="top"><a href="assets/readme-v2/hello-world-terminal-tab-2.png"><img src="assets/readme-v2/hello-world-terminal-tab-2.png" alt="The second terminal tab shows two Claude Code agents and two Codex agents." width="100%"></a><br>Terminal tab 2</td>
+    <td width="50%" valign="top"><a href="assets/hello-world-terminal-tab-1.png"><img src="assets/hello-world-terminal-tab-1.png" alt="The first terminal tab shows two Pi agents." width="100%"></a><br>Terminal tab 1</td>
+    <td width="50%" valign="top"><a href="assets/hello-world-terminal-tab-2.png"><img src="assets/hello-world-terminal-tab-2.png" alt="The second terminal tab shows two Claude Code agents and two Codex agents." width="100%"></a><br>Terminal tab 2</td>
   </tr>
 </table>
 
-<a href="assets/readme-v2/your-terminal-tabs-in-gitsense-chat.png"><img src="assets/readme-v2/your-terminal-tabs-in-gitsense-chat.png" alt="The same six agents in one GitSense Chat Group, with Artifacts and Status cards at the top and a Demo guide on the right." width="100%"></a>
+<a href="assets/your-terminal-tabs-in-gitsense-chat.png"><img src="assets/your-terminal-tabs-in-gitsense-chat.png" alt="The same six agents in one GitSense Chat Group, with Artifacts and Status cards at the top and a Demo guide on the right." width="100%"></a>
 
 ## Keep using the tools you know
 
