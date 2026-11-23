@@ -68,13 +68,24 @@ Then organize the Group in a way that makes sense to you. Name your sections, ar
   </tr>
 </table>
 
-### Follow parallel work in one place
+## Let your agents show you where things stand
 
-When you're working with several agents at once, checking where things stand can mean switching terminals and scrolling through each conversation. Ask your agents to keep progress updates and finished files visible in a Group. You can see what's still underway and open what's ready to review.
+Ask your agents to keep progress updates and finished files visible in a Group while they work in their terminals. You can see what's underway and open what's ready to review.
 
-<img src="assets/readme-v2/hello-world-progress-video-placeholder.png" alt="Video layout preview: Claude Code compiles the Rust program while Codex shares the finished Swift file and updates the shared Status card." width="100%">
+### Bring your agents into one view
 
-*Video placeholder. Recording to come.*
+When your agents are spread across terminal tabs or workspaces, you can see them together in a Group while they keep working where they are.
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><a href="assets/readme-v2/hello-world-terminal-tab-1.png"><img src="assets/readme-v2/hello-world-terminal-tab-1.png" alt="The first terminal tab shows two Pi agents." width="100%"></a><br>Terminal tab 1</td>
+    <td width="50%" valign="top"><a href="assets/readme-v2/hello-world-terminal-tab-2.png"><img src="assets/readme-v2/hello-world-terminal-tab-2.png" alt="The second terminal tab shows two Claude Code agents and two Codex agents." width="100%"></a><br>Terminal tab 2</td>
+  </tr>
+</table>
+
+<img src="assets/readme-v2/hello-world-group-board-placeholder.png" alt="Layout placeholder for the same six agents in one Group, with Artifacts and status across the top and the Demo guide on the right." width="100%">
+
+*Group board screenshot to come.*
 
 ## Keep using the tools you know
 
