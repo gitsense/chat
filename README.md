@@ -64,7 +64,7 @@ Then organize the Group in a way that makes sense to you. Name your sections, ar
 
 ## Let your agents show you where things stand
 
-The more agents you have working in parallel, the harder it can be to see what's still underway and what's ready to review. GitSense Chat gives your agents a place to post progress updates and share finished files while they keep working in their terminals. You can catch up and open the files from the same Group.
+The more agents you have working in parallel, the harder it can be to see what's still underway and what's ready to review. GitSense Chat gives you one place to follow the work. Your agents can post updates and share results in the Group while they keep working in their terminals.
 
 ### Many agents, one view
 
