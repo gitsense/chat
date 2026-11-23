@@ -56,17 +56,15 @@ Run gsc groups help, then create a group named "Beyond tabs and panes" with the 
 Run gsc groups help, then join the group btp
 ```
 
-<img src="assets/agents-in-their-terminals.png" alt="Claude Code, Pi, Codex, and OpenCode in four terminal panes." width="100%">
+<img src="assets/agents-in-their-terminals.png" alt="Four terminal panes showing Claude Code with the prompt to create Beyond tabs and panes, and Pi, Codex, and OpenCode with the prompt to join btp." width="100%">
 
 Then organize the Group in a way that makes sense to you. Name your sections, arrange the cards, and choose how to display them.
 
-*Screenshots to come.*
-
 <table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/readme-v2/group-cards-view-placeholder.png" alt="Placeholder for the Group's Cards view." width="100%"><br>Cards</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/group-list-view-placeholder.png" alt="Placeholder for the Group's List view." width="100%"><br>List</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/group-overview-view-placeholder.png" alt="Placeholder for the Group's Overview view." width="100%"><br>Overview</td>
+    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-home.png"><img src="assets/beyond-tabs-and-panes-home.png" alt="Group Home with stock metrics above the diff, source file, and reorder table." width="100%"></a><br>Home</td>
+    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-focus.png"><img src="assets/beyond-tabs-and-panes-focus.png" alt="Focus view showing just the reorder table and code diff side by side." width="100%"></a><br>Focus</td>
+    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-tiles.png"><img src="assets/beyond-tabs-and-panes-tiles.png" alt="Tiles view showing all four agent cards in a two-by-two grid." width="100%"></a><br>Tiles</td>
   </tr>
 </table>
 
