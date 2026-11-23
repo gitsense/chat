@@ -72,7 +72,7 @@ Then organize the Group in a way that makes sense to you. Name your sections, ar
 
 Ask your agents to keep progress updates and finished files visible in a Group while they work in their terminals. You can see what's underway and open what's ready to review.
 
-### Bring your agents into one view
+### Many agents, one view
 
 When your agents are spread across terminal tabs or workspaces, you can see them together in a Group while they keep working where they are.
 
