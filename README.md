@@ -58,24 +58,15 @@ Run gsc groups help, then join the group btp
 
 <img src="assets/agents-in-their-terminals.png" alt="Claude Code, Pi, Codex, and OpenCode in four terminal panes." width="100%">
 
-*The same agents in three GitSense Chat views. Screenshots to come.*
+Then organize the Group in a way that makes sense to you. Name your sections, arrange the cards, and choose how to display them.
+
+*Screenshots to come.*
 
 <table>
   <tr>
     <td width="33%" valign="top"><img src="assets/readme-v2/group-cards-view-placeholder.png" alt="Placeholder for the Group's Cards view." width="100%"><br>Cards</td>
     <td width="33%" valign="top"><img src="assets/readme-v2/group-list-view-placeholder.png" alt="Placeholder for the Group's List view." width="100%"><br>List</td>
     <td width="33%" valign="top"><img src="assets/readme-v2/group-overview-view-placeholder.png" alt="Placeholder for the Group's Overview view." width="100%"><br>Overview</td>
-  </tr>
-</table>
-
-### Make the Group your own
-
-Name your sections and arrange cards to suit the work at hand. Keep a status report beside the details you're investigating, and set aside what you don't need right now. As your focus changes, you can rearrange the same cards.
-
-<table>
-  <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/network-overview-placeholder.png" alt="Layout preview of Network overview, with Status report under Start here and Traffic, Devices, and Logs under Who's watching what." width="100%"><br>Scan the whole network</td>
-    <td width="50%" valign="top"><img src="assets/readme-v2/building-b-slowdown-placeholder.png" alt="Layout preview of Building B slowdown, with the same Status report under Start here and Traffic, Logs, and Changed this week under Following the slowdown." width="100%"><br>Focus on the Building B slowdown</td>
   </tr>
 </table>
 
