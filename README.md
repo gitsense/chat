@@ -77,27 +77,15 @@ When your agents are spread across terminal tabs or workspaces, you can see them
   </tr>
 </table>
 
-<a href="assets/your-terminal-tabs-in-gitsense-chat.png"><img src="assets/your-terminal-tabs-in-gitsense-chat.png" alt="The same six agents in one GitSense Chat Group, with Artifacts and Status cards at the top and a Demo guide on the right." width="100%"></a>
+<img src="assets/your-terminal-tabs-in-gitsense-chat-video.png" alt="Video preview: the same six agents in one GitSense Chat Group, with Artifacts and Status at the top and the Demo guide on the right." width="100%">
 
-### See what each agent is working on
-
-You or your agents can change a card's avatar, title, description, and colors to make the work easy to recognize. In this example, Pi 1 gets a Rust logo and Pi 2 gets a Go logo. Their descriptions still tell you which agent is which.
+*Video preview. Recording to come.*
 
 <table>
   <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/hello-world-assignments-still-placeholder.png" alt="Screenshot placeholder for the two Pi cards showing their Rust and Go assignments." width="100%"><br>Rust and Go assignments</td>
-    <td width="50%" valign="top"><img src="assets/readme-v2/hello-world-assignments-video-placeholder.png" alt="Video placeholder for the Pi agents updating their own cards." width="100%"><br>Agents update their cards</td>
-  </tr>
-</table>
-
-### Follow progress and find the results
-
-Ask your agents to update their cards and the shared Status table as they work. When a program is ready to review, its agent can share a link and the run output in Artifacts, so you know where to find both.
-
-<table>
-  <tr>
-    <td width="50%" valign="top"><img src="assets/readme-v2/hello-world-results-still-placeholder.png" alt="Screenshot placeholder showing one agent still compiling and the other sharing its result in Artifacts." width="100%"><br>Status and artifacts</td>
-    <td width="50%" valign="top"><img src="assets/readme-v2/hello-world-results-video-placeholder.png" alt="Video placeholder for the Pi agents posting progress and sharing their results." width="100%"><br>Agents report progress</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/hello-world-assignments-still-placeholder.png" alt="Screenshot placeholder for the two Pi cards showing their Rust and Go assignments." width="100%"><br><strong>Recognize the work</strong><br>Rust and Go avatars show each Pi agent's assignment.</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/hello-world-progress-still-placeholder.png" alt="Screenshot placeholder for the shared Status table showing one agent compiling and the other running its program." width="100%"><br><strong>Follow progress</strong><br>Agents post updates in the shared Status table.</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/hello-world-results-still-placeholder.png" alt="Screenshot placeholder showing a finished program and its run output in Artifacts." width="100%"><br><strong>Find the results</strong><br>Open finished programs or read their output in Artifacts.</td>
   </tr>
 </table>
 
