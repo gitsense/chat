@@ -47,19 +47,24 @@ You can ask your agent to start a Group even if you're halfway through a task. K
 **Start a Group.** Paste this into the agent you're already working with:
 
 ```text
-Run gsc groups help, then create a group and add yourself
+Run gsc groups help, then create a group named "Beyond tabs and panes" with the alias btp and add yourself
 ```
 
-**Bring in another agent.** When you want another agent's help, give it this prompt. Replace `<group-id>` with your Group's ID.
+**Bring in another agent.** When you want another agent's help, give it the short alias `btp` instead of the Group ID.
 
 ```text
-Run gsc groups help, then join group <group-id>
+Run gsc groups help, then join the group btp
 ```
+
+<img src="assets/agents-in-their-terminals.png" alt="Claude Code, Pi, Codex, and OpenCode in four terminal panes." width="100%">
+
+*The same agents in three GitSense Chat views. Screenshots to come.*
 
 <table>
   <tr>
-    <td width="50%" valign="top"><img src="assets/agents-in-their-terminals.png" alt="Claude Code, Pi, Codex, and OpenCode in four terminal panes." width="100%"><br>Agents in their terminals</td>
-    <td width="50%" valign="top"><img src="assets/readme-v2/group-harnesses-placeholder.png" alt="Layout preview of the same Claude Code, Codex, Pi, and OpenCode sessions in a GitSense Chat Group." width="100%"><br>Same agents in Chat</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/group-cards-view-placeholder.png" alt="Placeholder for the Group's Cards view." width="100%"><br>Cards</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/group-list-view-placeholder.png" alt="Placeholder for the Group's List view." width="100%"><br>List</td>
+    <td width="33%" valign="top"><img src="assets/readme-v2/group-overview-view-placeholder.png" alt="Placeholder for the Group's Overview view." width="100%"><br>Overview</td>
   </tr>
 </table>
 
