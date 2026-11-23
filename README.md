@@ -34,12 +34,6 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 Create a Group in GitSense Chat to give yourself and your agents a shared workspace. It's like a breakout room with whiteboards you can talk to. Ask your agent in its terminal to update a table or show a different diff, then see the change in Chat.
 
-The ACME inventory demo shows how to test and update an inventory tool with Claude Code and Codex.
-
-<img src="assets/acme-inventory-demo-video.png" alt="ACME Inventory Demo video preview: Claude Code and Codex in their terminals beside their GitSense Chat Group and its demo checklist." width="100%">
-
-*Video preview. Recording to come.*
-
 ### Start a Group at any point
 
 You can ask your agent to start a Group even if you're halfway through a task. Keep talking in the same terminal session, and use the Group to see the results your agent shares as you go.
