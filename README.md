@@ -79,6 +79,28 @@ When your agents are spread across terminal tabs or workspaces, you can see them
 
 <a href="assets/your-terminal-tabs-in-gitsense-chat.png"><img src="assets/your-terminal-tabs-in-gitsense-chat.png" alt="The same six agents in one GitSense Chat Group, with Artifacts and Status cards at the top and a Demo guide on the right." width="100%"></a>
 
+### See what each agent is working on
+
+You or your agents can change a card's avatar, title, description, and colors to make the work easy to recognize. In this example, Pi 1 gets a Rust logo and Pi 2 gets a Go logo. Their descriptions still tell you which agent is which.
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/readme-v2/hello-world-assignments-still-placeholder.png" alt="Screenshot placeholder for the two Pi cards showing their Rust and Go assignments." width="100%"><br>Rust and Go assignments</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/hello-world-assignments-video-placeholder.png" alt="Video placeholder for the Pi agents updating their own cards." width="100%"><br>Agents update their cards</td>
+  </tr>
+</table>
+
+### Follow progress and find the results
+
+Ask your agents to update their cards and the shared Status table as they work. When a program is ready to review, its agent can share a link and the run output in Artifacts, so you know where to find both.
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/readme-v2/hello-world-results-still-placeholder.png" alt="Screenshot placeholder showing one agent still compiling and the other sharing its result in Artifacts." width="100%"><br>Status and artifacts</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/hello-world-results-video-placeholder.png" alt="Video placeholder for the Pi agents posting progress and sharing their results." width="100%"><br>Agents report progress</td>
+  </tr>
+</table>
+
 ## Keep using the tools you know
 
 Start in Chat, then keep working in the tools you already use. When an agent shares a file, diff, or table, you can look it over in Chat and open it in an app you've set up.
