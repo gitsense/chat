@@ -77,9 +77,9 @@ When your agents are spread across terminal tabs or workspaces, you can see them
   </tr>
 </table>
 
-<a href="assets/your-terminal-agents-in-gitsense-chat.mp4?raw=true"><img src="assets/your-terminal-tabs-in-gitsense-chat-video.png" alt="Watch the same six agents in one GitSense Chat Group, with Artifacts and Status at the top and the Demo guide on the right." width="100%"></a>
+<p align="center"><a href="assets/your-terminal-agents-in-gitsense-chat.mp4?raw=true">Download video (1:35, 8.5 MB)</a></p>
 
-<p align="center"><a href="assets/your-terminal-agents-in-gitsense-chat.mp4?raw=true">Download video</a></p>
+<a href="assets/your-terminal-agents-in-gitsense-chat.mp4?raw=true"><img src="assets/your-terminal-tabs-in-gitsense-chat-video.png" alt="Watch the same six agents in one GitSense Chat Group, with Artifacts and Status at the top and the Demo guide on the right." width="100%"></a>
 
 <table>
   <tr>
