@@ -90,19 +90,9 @@ Watch six sessions from two terminal tabs come together in one Group. Two Pi age
     <td width="35%" valign="middle"><strong>Too noisy? No problem.</strong><br>Switch to the GitSense Chat Tiles view and select what you want to see in the Session navigator. Here, Artifacts and Status sit side by side so you can check progress and find the results.</td>
     <td width="65%" valign="middle"><a href="assets/hello-world-artifacts-and-status-done-tiles.png"><img src="assets/hello-world-artifacts-and-status-done-tiles.png" alt="The Hello World Group in Tiles view, showing only the Artifacts and Status cards side by side." width="100%"></a></td>
   </tr>
-</table>
-
-## Keep using the tools you know
-
-Start in Chat, then keep working in the tools you already use. When an agent shares a file, diff, or table, you can look it over in Chat and open it in an app you've set up.
-
-*Video placeholders. Short clips to come.*
-
-<table>
   <tr>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-open-file-clip-placeholder.png" alt="Video placeholder: the ACME source file in Chat and in an editor." width="100%"><br><strong>Open a file</strong><br>Find the stock calculation in your editor.</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-open-diff-clip-placeholder.png" alt="Video placeholder: the same ACME comparison in Chat and Zed." width="100%"><br><strong>Open a diff</strong><br>Read the lines around the change in Zed.</td>
-    <td width="33%" valign="top"><img src="assets/readme-v2/acme-open-table-clip-placeholder.png" alt="Video placeholder: the ACME inventory CSV in Chat and in a spreadsheet app." width="100%"><br><strong>Open a table</strong><br>Sort by Days of Stock in your spreadsheet.</td>
+    <td width="35%" valign="middle"><strong>Jump to the work</strong><br>Find your agents' results in Artifacts. Click Zed next to <code>hello.go</code> to open the file in your editor.</td>
+    <td width="65%" valign="middle"><a href="assets/hello-world-artifacts-and-status-done-tiles.png"><img src="assets/hello-world-artifacts-and-status-done-tiles.png" alt="The Artifacts card in Tiles view shows a Zed link for hello.go." width="100%"></a></td>
   </tr>
 </table>
 
