@@ -83,16 +83,9 @@ Watch six sessions from two terminal tabs come together in one Group. Two Pi age
 
 <table>
   <tr>
-    <td width="35%" valign="middle"><strong>More than spinners</strong><br>Agents can change their cards' titles, avatars, and descriptions to show what they're working on. They can post progress in a shared Status table and put finished work in Artifacts, so you know where to look as they work and when they're done.</td>
-    <td width="65%" valign="middle"><a href="assets/hello-world-artifacts-and-status-done.png"><img src="assets/hello-world-artifacts-and-status-done.png" alt="The Hello World Group after both Pi agents finish: Artifacts links to the two programs, Status shows both as Done, and the Rust and Go card headers report the run output." width="100%"></a></td>
-  </tr>
-  <tr>
-    <td width="35%" valign="middle"><strong>Too noisy? No problem.</strong><br>Switch to the GitSense Chat Tiles view and select what you want to see in the Session navigator. Here, Artifacts and Status sit side by side so you can check progress and find the results.</td>
-    <td width="65%" valign="middle"><a href="assets/hello-world-artifacts-and-status-done-tiles.png"><img src="assets/hello-world-artifacts-and-status-done-tiles.png" alt="The Hello World Group in Tiles view, showing only the Artifacts and Status cards side by side." width="100%"></a></td>
-  </tr>
-  <tr>
-    <td width="35%" valign="middle"><strong>Jump to the work</strong><br>Ask your agents to collect their results in Artifacts or leave a summary with next steps on their own cards. Here, Pi 2 reports what <code>hello.go</code> printed and gives you actions to open it, run it, or copy the code.</td>
-    <td width="65%" valign="middle"><a href="assets/hello-world-demo-done-resume-the-work.png"><img src="assets/hello-world-demo-done-resume-the-work.png" alt="Tiles view showing Pi 2's summary and next steps alongside the shared Artifacts card with results from both Pi agents." width="100%"></a></td>
+    <td width="33%" valign="top"><a href="assets/hello-world-artifacts-and-status-done.png"><img src="assets/hello-world-artifacts-and-status-done.png" alt="The Hello World Group after both Pi agents finish: Artifacts links to the two programs, Status shows both as Done, and the Rust and Go card headers report the run output." width="100%"></a><br><strong>More than spinners</strong></td>
+    <td width="33%" valign="top"><a href="assets/hello-world-artifacts-and-status-done-tiles.png"><img src="assets/hello-world-artifacts-and-status-done-tiles.png" alt="The Session navigator in Tiles view shows Artifacts and Status selected and displayed side by side." width="100%"></a><br><strong>Control the flow</strong></td>
+    <td width="33%" valign="top"><a href="assets/hello-world-demo-done-resume-the-work.png"><img src="assets/hello-world-demo-done-resume-the-work.png" alt="Tiles view showing Pi 2's summary and next steps alongside the shared Artifacts card with results from both Pi agents." width="100%"></a><br><strong>Jump to the work</strong></td>
   </tr>
 </table>
 
