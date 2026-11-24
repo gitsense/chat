@@ -30,9 +30,9 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
-## Plan a pizza party with Claude Code, Codex and Pi
+## Plan a pizza party with Pi, OpenCode, Claude Code and Codex
 
-Yes, a pizza party. Make one Pi agent the pizza lead and another a toppings expert. Give the lead the workflow to follow, then build your order with help from the toppings expert. Claude Code and Codex review it. The lead checks their sign-offs and the party's needs before deciding whether to show restaurant options.
+Yes, a pizza party. Make Pi the pizza lead and OpenCode the toppings expert. Give the lead the workflow to follow, then build your order with help from the toppings expert. Claude Code and Codex review it. The lead checks their sign-offs and the party's needs before deciding whether to show restaurant options.
 
 <table>
   <tr>
