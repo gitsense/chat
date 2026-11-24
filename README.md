@@ -91,49 +91,10 @@ Watch six sessions from two terminal tabs come together in one Group. Two Pi age
 
 ## Define how you and your agents can work together
 
-Is AI overkill for a pizza party? Probably, but it's a familiar task for seeing how you, your agents and programs can work together in GitSense Chat. Start with pizza, then imagine your next code review, product launch or root cause analysis.
+**Plan a pizza party to see the difference.** Give your agents a checklist and ask them to suggest an order. Adjust the selections yourself, then bring in another agent to review them. The restaurants are fictional, and no order is placed.
 
-<!-- Draft layout: these are placeholder images, not playable videos. Replace with verified recordings and check captions before publication. -->
+<img src="assets/readme-v2/pizza-setup-placeholder.png" alt="Video placeholder for the Pizza Party workflow in GitSense Chat." width="100%">
 
-### Create your collaboration space
+*Video placeholder. Recording to come.*
 
-Agents need context, and so do you. Start the pizza party workflow and bring in your agents. Explore the available choices, then give each agent the saved information it needs for its part.
-
-<img src="assets/readme-v2/pizza-setup-placeholder.png" alt="Video placeholder: Create your collaboration space. Start the pizza party workflow and bring in your agents." width="100%">
-
-Explore what you can do next:
-
-<table>
-  <tr>
-    <th width="50%">Work with the Steps agent</th>
-    <th width="50%">Plan with an expert</th>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/readme-v2/pizza-steps-placeholder.png" alt="Video placeholder: Work with the Steps agent." width="100%">
-      <p>Edit the checklist yourself, then ask its agent to read your changes and help refine it.</p>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/readme-v2/pizza-expert-placeholder.png" alt="Video placeholder: Plan with an expert." width="100%">
-      <p>Ask the expert to choose toppings, size and quantity, then review and adjust the selections directly in the builder.</p>
-    </td>
-  </tr>
-  <tr>
-    <th width="50%">Get another perspective</th>
-    <th width="50%">Talk to your data</th>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/readme-v2/pizza-reviews-placeholder.png" alt="Video placeholder: Get another perspective." width="100%">
-      <p>Read each agent's review in its own pane, with their sign-offs recorded in Your Order.</p>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/readme-v2/pizza-data-placeholder.png" alt="Video placeholder: Talk to your data." width="100%">
-      <p>Ask about restaurants and get recommendations in a new column beside each restaurant.</p>
-    </td>
-  </tr>
-</table>
-
-The restaurants in this demo are fictional. No order is placed.
-
-What would you spread out, and where would you bring an agent in? [Workflow Builder](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md) can help you design your own workflow.
+[Learn how to design your own workflow with Workflow Builder](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md).
