@@ -32,7 +32,7 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## Plan a pizza party with Claude Code, Codex and Pi
 
-Give your agents a checklist and ask them to suggest an order. Adjust the selections yourself, then bring in another agent to review them. The restaurants are fictional, and no order is placed.
+Give your agents a checklist and ask them to suggest an order. Adjust the selections yourself, then bring in another agent to review them.
 
 <img src="assets/readme-v2/pizza-setup-placeholder.png" alt="Video placeholder for the Pizza Party workflow in GitSense Chat." width="100%">
 
