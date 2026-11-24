@@ -32,7 +32,7 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## Plan a pizza party with Claude Code, Codex and Pi
 
-Yes, a pizza party. Make Pi the pizza lead and give it the party workflow to follow. You build the order. Claude Code and Codex review it, and Pi checks their sign-offs and the party's needs before deciding whether to show restaurant options.
+Yes, a pizza party. Make one Pi agent the pizza lead and another a toppings expert. Give the lead the workflow to follow, then build your order with help from the toppings expert. Claude Code and Codex review it. The lead checks their sign-offs and the party's needs before deciding whether to show restaurant options.
 
 <table>
   <tr>
