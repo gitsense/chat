@@ -83,8 +83,12 @@ Watch six sessions from two terminal tabs come together in one Group. Two Pi age
 
 <table>
   <tr>
-    <td width="35%" valign="middle"><strong>Many agents. One place for results.</strong><br>Check Status to see who worked on what. Open Artifacts to find both programs, or check the Pi cards for their run output.</td>
+    <td width="35%" valign="middle"><strong>More than spinners</strong><br>Agents can change their cards' titles, avatars, and descriptions to show what they're working on. They can post progress in a shared Status table and put finished work in Artifacts, so you know where to look as they work and when they're done.</td>
     <td width="65%" valign="middle"><a href="assets/hello-world-artifacts-and-status-done.png"><img src="assets/hello-world-artifacts-and-status-done.png" alt="The Hello World Group after both Pi agents finish: Artifacts links to the two programs, Status shows both as Done, and the Rust and Go card headers report the run output." width="100%"></a></td>
+  </tr>
+  <tr>
+    <td width="35%" valign="middle"><strong>Too noisy? No problem.</strong><br>Choose which cards to show in Tiles. Here, just Artifacts and Status are in view, so you can check progress and find the results side by side.</td>
+    <td width="65%" valign="middle"><a href="assets/hello-world-artifacts-and-status-done-tiles.png"><img src="assets/hello-world-artifacts-and-status-done-tiles.png" alt="The Hello World Group in Tiles view, showing only the Artifacts and Status cards side by side." width="100%"></a></td>
   </tr>
 </table>
 
