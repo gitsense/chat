@@ -89,8 +89,8 @@ On the left, the two Pi agents show how they'd share the file paths and code as 
 
 <table>
   <tr>
-    <td width="35%" valign="middle"><strong>Find the results in one place</strong><br>See who finished what, and find both programs and their output.</td>
-    <td width="65%" valign="middle"><img src="assets/readme-v2/hello-world-summary-detail-placeholder.png" alt="Screenshot placeholder showing Artifacts and Status together, with matching Rust and Go badges, program links, and run output." width="100%"></td>
+    <td width="35%" valign="middle"><strong>Many agents. One place for results.</strong><br>Check Status to see who worked on what. Open Artifacts to find both programs, or check the Pi cards for their run output.</td>
+    <td width="65%" valign="middle"><a href="assets/hello-world-artifacts-and-status-done.png"><img src="assets/hello-world-artifacts-and-status-done.png" alt="The Hello World Group after both Pi agents finish: Artifacts links to the two programs, Status shows both as Done, and the Rust and Go card headers report the run output." width="100%"></a></td>
   </tr>
 </table>
 
