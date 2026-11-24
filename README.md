@@ -30,6 +30,16 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
 
+## Plan a pizza party with Claude Code, Codex and Pi
+
+Give your agents a checklist and ask them to suggest an order. Adjust the selections yourself, then bring in another agent to review them. The restaurants are fictional, and no order is placed.
+
+<img src="assets/readme-v2/pizza-setup-placeholder.png" alt="Video placeholder for the Pizza Party workflow in GitSense Chat." width="100%">
+
+*Video placeholder. Recording to come.*
+
+[Learn how to design your own workflow with Workflow Builder](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md).
+
 ## Keep working in your terminal. Collaborate in GitSense Chat.
 
 Create a Group in GitSense Chat to give yourself and your agents a shared workspace. It's like a breakout room with whiteboards you can talk to. Ask your agent in its terminal to update a table or show a different diff, then see the change in Chat.
@@ -88,13 +98,3 @@ Watch six sessions from two terminal tabs come together in one Group. Two Pi age
     <td width="33%" valign="top"><a href="assets/hello-world-demo-done-resume-the-work.png"><img src="assets/hello-world-demo-done-resume-the-work.png" alt="Tiles view showing Pi 2's summary and next steps alongside the shared Artifacts card with results from both Pi agents." width="100%"></a><br><strong>Jump to the work</strong></td>
   </tr>
 </table>
-
-## Define how you and your agents can work together
-
-**Plan a pizza party to see the difference.** Give your agents a checklist and ask them to suggest an order. Adjust the selections yourself, then bring in another agent to review them. The restaurants are fictional, and no order is placed.
-
-<img src="assets/readme-v2/pizza-setup-placeholder.png" alt="Video placeholder for the Pizza Party workflow in GitSense Chat." width="100%">
-
-*Video placeholder. Recording to come.*
-
-[Learn how to design your own workflow with Workflow Builder](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md).
