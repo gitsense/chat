@@ -66,9 +66,9 @@ Then organize the Group in a way that makes sense to you. Name your sections, ar
 
 The more agents you have working in parallel, the harder it can be to see what's still underway and what's ready to review. GitSense Chat gives you one place to follow the work. Your agents can post updates and share results in the Group while they keep working in their terminals.
 
-### Many agents, one view
+Keep interacting with your agents the way you already do. GitSense Chat gives them a shared place to post progress, show results, and make their work easier for you to follow.
 
-When your agents are spread across terminal tabs or workspaces, you can see them together in a Group while they keep working where they are.
+Watch six sessions from two terminal tabs come together in one Group. Two Pi agents keep working in their terminals, update their cards as they go, and share finished Rust and Go programs you can open from the Group.
 
 <table>
   <tr>
