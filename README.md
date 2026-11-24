@@ -81,12 +81,6 @@ Watch six sessions from two terminal tabs come together in one Group. Two Pi age
 
 <a href="assets/your-terminal-agents-in-gitsense-chat.mp4?raw=true"><img src="assets/your-terminal-tabs-in-gitsense-chat-video.png" alt="Watch the same six agents in one GitSense Chat Group, with Artifacts and Status at the top and the Demo guide on the right." width="100%"></a>
 
-### Same agents. More options.
-
-On the left, the two Pi agents show how they'd share the file paths and code as text. On the right, Pi 1 shows `hello.rs` inline. Pi 2 gives you links to open `hello.go` in a terminal, run it, or open it in Zed.
-
-<a href="assets/hello-world-gitsense-chat-composite.png"><img src="assets/hello-world-gitsense-chat-composite.png" alt="Pi 1 and Pi 2 show file paths and code in terminal panes on the left. Their GitSense Chat cards show the Rust file inline and links to work with the Go program on the right." width="100%"></a>
-
 <table>
   <tr>
     <td width="35%" valign="middle"><strong>Many agents. One place for results.</strong><br>Check Status to see who worked on what. Open Artifacts to find both programs, or check the Pi cards for their run output.</td>
