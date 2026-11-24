@@ -91,8 +91,8 @@ Watch six sessions from two terminal tabs come together in one Group. Two Pi age
     <td width="65%" valign="middle"><a href="assets/hello-world-artifacts-and-status-done-tiles.png"><img src="assets/hello-world-artifacts-and-status-done-tiles.png" alt="The Hello World Group in Tiles view, showing only the Artifacts and Status cards side by side." width="100%"></a></td>
   </tr>
   <tr>
-    <td width="35%" valign="middle"><strong>Jump to the work</strong><br>Find your agents' results in Artifacts. Click Zed next to <code>hello.go</code> to open the file in your editor.</td>
-    <td width="65%" valign="middle"><a href="assets/hello-world-artifacts-and-status-done-tiles.png"><img src="assets/hello-world-artifacts-and-status-done-tiles.png" alt="The Artifacts card in Tiles view shows a Zed link for hello.go." width="100%"></a></td>
+    <td width="35%" valign="middle"><strong>Jump to the work</strong><br>Ask your agents to collect their results in Artifacts or leave a summary with next steps on their own cards. Here, Pi 2 reports what <code>hello.go</code> printed and gives you actions to open it, run it, or copy the code.</td>
+    <td width="65%" valign="middle"><a href="assets/hello-world-demo-done-resume-the-work.png"><img src="assets/hello-world-demo-done-resume-the-work.png" alt="Tiles view showing Pi 2's summary and next steps alongside the shared Artifacts card with results from both Pi agents." width="100%"></a></td>
   </tr>
 </table>
 
