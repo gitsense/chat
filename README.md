@@ -32,11 +32,19 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## Plan a pizza party with Claude Code, Codex and Pi
 
-Give your agents a checklist and ask them to suggest an order. Adjust the selections yourself, then bring in another agent to review them.
+Yes, a pizza party. Make Pi the pizza lead and give it the party workflow to follow. You build the order. Claude Code and Codex review it, and Pi checks their sign-offs and the party's needs before deciding whether to show restaurant options.
 
-<img src="assets/readme-v2/pizza-setup-placeholder.png" alt="Video placeholder for the Pizza Party workflow in GitSense Chat." width="100%">
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/readme-v2/pizza-expert-placeholder.png" alt="Placeholder for building the pizza order." width="100%"><br>Build the order</td>
+    <td width="50%" valign="top"><img src="assets/readme-v2/pizza-reviews-placeholder.png" alt="Placeholder for Claude Code and Codex reviewing the order." width="100%"><br>Read both reviews</td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="assets/readme-v2/pizza-data-placeholder.png" alt="Placeholder for the restaurant options shown after Pi approves the order." width="100%"><br>See the restaurant options</td>
+  </tr>
+</table>
 
-*Video placeholder. Recording to come.*
+*Demo previews. Recording to come.*
 
 [Learn how to design your own workflow with Workflow Builder](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md).
 
