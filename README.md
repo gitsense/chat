@@ -30,11 +30,13 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](#runtime-details) for Pi setup and bringing in sessions from other agents.
 
-## Take part in the work, not just the conversation
+## A meeting place for you and your agents
 
-Skills guide how your agents do a task. GitSense Chat gives you a place to shape how you work with them, and how involved you get is up to you.
+A Group in GitSense Chat is a breakout room for you and your terminal agents. Any agent that can run `gsc` can post to it from its own terminal. Ask an agent to pin a status table at the top or put two results side by side, and the Group updates while you keep talking to the agent. You can also add questions to a note and ask an agent to answer them.
 
-You can [create a workflow](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md) that sets out who does what and when you step in. For a bug fix, you might ask your agent to show you what it found, then decide whether the fix belongs in the UI or the backend before it changes any code. A workflow can be a simple checklist you go through with one agent or a task you share with several, like planning a pizza party.
+When several agents work on the same task, you can open the Group and see what each one found without digging through logs or guessing which file to open.
+
+A [workflow](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md) gives your agents instructions for a task. It can spell out who does what and when to ask for your input. Both demos below use one.
 
 ### Review code with Pi, Codex and Claude Code
 
@@ -49,8 +51,6 @@ Yes, a pizza party. Make Pi the pizza lead and OpenCode the toppings expert. Giv
 *Demo preview. Recording to come.*
 
 ## Keep working in your terminal. Collaborate in GitSense Chat.
-
-Create a Group in GitSense Chat to give yourself and your agents a shared workspace. It's like a breakout room with whiteboards you can talk to. Ask your agent in its terminal to update a table or show a different diff, then see the change in Chat.
 
 ### Start a Group at any point
 
