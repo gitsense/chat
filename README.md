@@ -68,7 +68,7 @@ Run gsc groups help, then create a group named "Beyond tabs and panes" with the 
 Run gsc groups help, then join the group btp
 ```
 
-<img src="assets/agents-in-their-terminals.png" alt="Four terminal panes showing Claude Code with the prompt to create Beyond tabs and panes, and Pi, Codex, and OpenCode with the prompt to join btp." width="100%">
+<a href="assets/beyond-tabs-and-panes-composite.png"><img src="assets/beyond-tabs-and-panes-composite.png" alt="Claude Code, Pi, Codex, and OpenCode in terminal panes on the left. On the right, the same agents share stock metrics, a diff, source code, and a reorder table in GitSense Chat. The arrow reads: Same agents. More options." width="100%"></a>
 
 Then organize the Group in a way that makes sense to you. Name your sections, arrange the cards, and choose how to display them.
 
