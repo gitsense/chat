@@ -30,15 +30,23 @@ Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 
 You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](#runtime-details) for Pi setup and bringing in sessions from other agents.
 
-## Plan a pizza party with Pi, OpenCode, Claude Code and Codex
+## Take part in the work, not just the conversation
+
+Skills guide how your agents do a task. GitSense Chat gives you a place to shape how you work with them, and how involved you get is up to you.
+
+You can [create a workflow](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md) that sets out who does what and when you step in. For a bug fix, you might ask your agent to show you what it found, then decide whether the fix belongs in the UI or the backend before it changes any code. A workflow can be a simple checklist you go through with one agent or a task you share with several, like planning a pizza party.
+
+### Review code with Pi, Codex and Claude Code
+
+*Demo in development.*
+
+### Plan a pizza party with Pi, OpenCode, Claude Code and Codex
 
 Yes, a pizza party. Make Pi the pizza lead and OpenCode the toppings expert. Give the lead the workflow to follow, then build your order with help from the toppings expert. Claude Code and Codex review it. The lead checks their sign-offs and the party's needs before deciding whether to show restaurant options.
 
 <img src="assets/readme-v2/pizza-data-placeholder.png" alt="Placeholder for the restaurant options shown after Pi approves the order." width="100%">
 
 *Demo preview. Recording to come.*
-
-[Learn how to design your own workflow with Workflow Builder](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md).
 
 ## Keep working in your terminal. Collaborate in GitSense Chat.
 
