@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
-  <a href="README-previous.md#runtime-details">Runtime details</a> &nbsp;·&nbsp;
+  <a href="#runtime-details">Runtime details</a> &nbsp;·&nbsp;
   <a href="#keep-working-in-your-terminal-collaborate-in-gitsense-chat">Work together</a> &nbsp;·&nbsp;
   <a href="README-previous.md#connect-agents-across-environments">Communicate</a> &nbsp;·&nbsp;
   <a href="README-previous.md#give-agents-a-better-starting-point">Share knowledge</a>
@@ -28,7 +28,7 @@ To install and configure GitSense Chat, ask your coding agent:
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
 
-You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](README-previous.md#runtime-details) for Pi setup and bringing in sessions from other agents.
+You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](#runtime-details) for Pi setup and bringing in sessions from other agents.
 
 ## Plan a pizza party with Pi, OpenCode, Claude Code and Codex
 
@@ -106,3 +106,73 @@ Watch six sessions from two terminal tabs come together in one Group. Two Pi age
     <td width="33%" valign="top"><a href="assets/hello-world-demo-done-resume-the-work.png"><img src="assets/hello-world-demo-done-resume-the-work.png" alt="Tiles view showing Pi 2's summary and next steps alongside the shared Artifacts card with results from both Pi agents." width="100%"></a><br><strong>Jump to the work</strong></td>
   </tr>
 </table>
+
+## Pi is the proof. Other agents next.
+
+What if you could bring your agents' current sessions together and check what happened in a past one?
+
+With Pi, you can. Select the sessions you're working in and click **Create group**. To find an earlier session, search for a phrase you remember or a file your agent worked on. Open **Inspect** to compare what you asked with what the agent did. Did it read the file you expected? What did the tool return? If you want to continue that conversation, use **Resume** to copy the command and run it in your terminal. You don't need a Group to review or resume a session.
+
+Claude Code, Codex and OpenCode can already share replies in Groups while they run in their own terminals. We'd like to make their sessions just as easy to find, inspect and pick up again, where those tools support it.
+
+## Runtime details
+
+### Use Pi with Pi-Brains
+
+GitSense indexes the history Pi saves locally so you can find and inspect past sessions. Install [Pi-Brains](https://github.com/gitsense/pi-brains) to connect Pi to GitSense:
+
+```bash
+pi install npm:@gitsense/pi-brains
+```
+
+Start Pi in a workspace and run `/brains`. Pi-Brains adds messaging, checkpoints, and live session status. The GitSense session sync service indexes the history Pi saves.
+
+### Mirror sessions from other agents
+
+Keep supported agents running in their own environments and mirror their updates into a Group. Ask your agent to use the Group's connection instructions, or enter its native session ID in GitSense Chat. For agent-guided setup, start with:
+
+```bash
+gsc experts guide buddy-mirror
+```
+
+Connecting requires your permission to share the session's latest saved assistant text and subsequent updates with Group viewers until you disconnect it. Mirrors do not publish reasoning, tool results, user messages, or transcript history. Connecting does not automatically make the agent read the Group or other agents' conversations.
+
+Pi sessions don't need a mirror. Find existing Pi sessions in GitSense Chat and add them to a Group directly.
+
+### Import a snapshot into Pi
+
+Use [txcript](https://github.com/skillsynchq/txcript) to convert a session from Claude Code, Codex, or another supported agent into a Pi session. The CLI bootstrap installer installs the matching upstream binary into `~/.local/bin` on supported Unix platforms. You can also download it from [txcript Releases](https://github.com/skillsynchq/txcript/releases).
+
+```bash
+txcript list --from claude_code
+txcript continue <session-id> \
+  --from <harness> \
+  --with pi \
+  --no-resume
+```
+
+The converted snapshot appears in GitSense Chat after the Pi session sync service processes it. The snapshot captures the session at the time you import it. Repeat the conversion to refresh it.
+
+## Security
+
+GitSense Chat is designed for an individual's local agent workflow. It does not provide authentication or multi-user access controls.
+
+Only make GitSense Chat available through the local loopback interface, such as `localhost` or `127.0.0.1`. Do not expose it directly to a local network or the public internet.
+
+If you access GitSense Chat through a tunnel, restrict access to yourself and make sure the tunnel provides its own authentication. Treat anyone with access as having terminal-level access to your agent environment: they may be able to send messages to your agents, inspect session activity, and trigger actions allowed by your existing permissions.
+
+## Current support and boundaries
+
+Any agent that can run `gsc` can query the same Brains, notes, lessons, and rules without requiring runtime integration.
+
+Executable actions remain subject to application authorization and command validation. GitSense Chat does not decide whether an agent's work is correct, and agent findings do not automatically become trusted knowledge. You decide what evidence to trust and what happens next.
+
+## License
+
+The [`gsc` CLI](https://github.com/gitsense/gsc-cli) is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+Manifests are plain JSON files built on an open format. You can create, modify, distribute, and use them with the open-source `gsc` CLI without requiring GitSense Chat.
+
+GitSense Chat is licensed under the [Fair Core License (FCL-1.0-ALv2)](https://fcl.dev/). You may use, modify, and run it internally, including for personal projects, shared workflows, and self-hosted deployments. You may not use it to build or operate a product or service that competes directly with GitSense Chat.
+
+The core GitSense Chat application currently ships as minified source. We intend to open the source further as the project matures. Under the Fair Core License, each release becomes available under Apache 2.0 two years after it is published. See [LICENSE](LICENSE) and [NOTICE](NOTICE) for the complete terms.
