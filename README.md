@@ -32,7 +32,7 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## A meeting place for you and your agents
 
-A Group in GitSense Chat is a breakout room for you and your terminal agents. Any agent that can run `gsc` can post to it from its own terminal. Ask an agent to pin a status table at the top or put two results side by side, and the Group updates while you keep talking to the agent. You can also add questions to a note and ask an agent to answer them.
+A terminal scrolls. A directory holds files. GitSense Chat adds Groups, breakout rooms for you and your agents. Any agent that can run `gsc` can post to a Group from its own terminal. Ask an agent to pin a status table at the top, and the Group updates while you keep talking to the agent. You can put two results side by side, or add questions to a note and ask an agent to answer them.
 
 When several agents work on the same task, you can open the Group and see what each one found without digging through logs or guessing which file to open.
 
