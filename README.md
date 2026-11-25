@@ -74,9 +74,8 @@ Then organize the Group in a way that makes sense to you. Name your sections, ar
 
 <table>
   <tr>
-    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-home.png"><img src="assets/beyond-tabs-and-panes-home.png" alt="Group Home with stock metrics above the diff, source file, and reorder table." width="100%"></a><br>Home</td>
-    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-focus.png"><img src="assets/beyond-tabs-and-panes-focus.png" alt="Focus view showing just the reorder table and code diff side by side." width="100%"></a><br>Focus</td>
-    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-tiles.png"><img src="assets/beyond-tabs-and-panes-tiles.png" alt="Tiles view showing all four agent cards in a two-by-two grid." width="100%"></a><br>Tiles</td>
+    <td width="50%" valign="top"><a href="assets/beyond-tabs-and-panes-focus.png"><img src="assets/beyond-tabs-and-panes-focus.png" alt="Focus view showing just the reorder table and code diff side by side." width="100%"></a><br>Focus</td>
+    <td width="50%" valign="top"><a href="assets/beyond-tabs-and-panes-tiles.png"><img src="assets/beyond-tabs-and-panes-tiles.png" alt="Tiles view showing all four agent cards in a two-by-two grid." width="100%"></a><br>Tiles</td>
   </tr>
 </table>
 
