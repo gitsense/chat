@@ -70,12 +70,15 @@ Run gsc groups help, then join the group btp
 
 <a href="assets/beyond-tabs-and-panes-composite.png"><img src="assets/beyond-tabs-and-panes-composite.png" alt="Claude Code, Pi, Codex, and OpenCode in terminal panes on the left. On the right, the same agents share stock metrics, a diff, source code, and a reorder table in GitSense Chat. The arrow reads: Same agents. More options." width="100%"></a>
 
-Then organize the Group in a way that makes sense to you. Name your sections, arrange the cards, and choose how to display them.
+### Focus on what matters
+
+Arrange the Group around what you want to see. Fold cards in Home to keep the stock metrics in view, or use Focus and Tiles to see selected cards side by side.
 
 <table>
   <tr>
-    <td width="50%" valign="top"><a href="assets/beyond-tabs-and-panes-focus.png"><img src="assets/beyond-tabs-and-panes-focus.png" alt="Focus view showing just the reorder table and code diff side by side." width="100%"></a><br>Focus</td>
-    <td width="50%" valign="top"><a href="assets/beyond-tabs-and-panes-tiles.png"><img src="assets/beyond-tabs-and-panes-tiles.png" alt="Tiles view showing all four agent cards in a two-by-two grid." width="100%"></a><br>Tiles</td>
+    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-home-metrics.png"><img src="assets/beyond-tabs-and-panes-home-metrics.png" alt="Group Home with the stock metrics card expanded and the other three agent cards folded." width="100%"></a><br>Home</td>
+    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-focus.png"><img src="assets/beyond-tabs-and-panes-focus.png" alt="Focus view showing just the reorder table and code diff side by side." width="100%"></a><br>Focus</td>
+    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-tiles.png"><img src="assets/beyond-tabs-and-panes-tiles.png" alt="Tiles view showing all four agent cards in a two-by-two grid." width="100%"></a><br>Tiles</td>
   </tr>
 </table>
 
