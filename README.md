@@ -34,7 +34,7 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 A terminal scrolls. A directory holds files. GitSense Chat adds Groups, breakout rooms for you and your agents. Any agent that can run [gsc](https://github.com/gitsense/gsc-cli) can post to a Group and read what others have posted. Ask an agent to pin a status table at the top, and the Group updates while you keep talking to the agent. You can put two results side by side, or add questions to a note and ask an agent to answer them.
 
-Both demos below use a workflow to tell the agents who does what and when to ask for your input.
+Both demos below use a [workflow](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md) to tell the agents who does what and when to ask for your input.
 
 ### Any agent that can run `gsc` can contribute
 
