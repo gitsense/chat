@@ -65,6 +65,14 @@ Pi saves your sessions locally, and you can resume them in Pi without opening Gi
 
 The Pi page lists the sessions Pi saved. Each one has links to monitor it in a Group, inspect it or resume it, and the panel on the right shows which files the selected session read.
 
+<table>
+  <tr>
+    <td width="33%" valign="top"><a href="assets/pi-session-files.png"><img src="assets/pi-session-files.png" alt="A Pi session's Files tab filtered by setup, showing 4 of 50 files. setup-operations is expanded to list three reads and three edits, each with how long ago it happened." width="100%"></a><br><strong>Files</strong><br>Filter by a file name to see each read and edit the session made to it, and when.</td>
+    <td width="33%" valign="top"><a href="assets/pi-session-error.png"><img src="assets/pi-session-error.png" alt="A Pi session's tool calls marked success or error. A failed npm exec call is expanded to show its command, with Command and Result tabs and a Copy button." width="100%"></a><br><strong>Errors</strong><br>See which tool calls failed. Open one to review its command and result, and copy either one.</td>
+    <td width="33%" valign="top"><a href="assets/pi-session-search.png"><img src="assets/pi-session-search.png" alt="A Pi session's Search tab with inbox.go entered and the type set to Tool calls, showing 4 results next to the matching tool call in the session." width="100%"></a><br><strong>Search</strong><br>Search the session for text, such as inbox.go, and narrow the results to tool calls.</td>
+  </tr>
+</table>
+
 Your other agents can join in too. Tell Claude Code, Codex or OpenCode to run `gsc experts init` and join your Group, then ask it to show a diff in its reply. You can review the diff in the Group next to what your other agents shared. `gsc experts init` starts your agent with a short overview, and it reads more only when a task needs it.
 
 Replies can also include links that open a file in your editor, so you can jump back to the tools you already use.
