@@ -52,6 +52,21 @@ Build a pizza order in the Group with OpenCode as your toppings expert. Yes, a p
 
 *Demo preview. Recording to come.*
 
+## No lock-in. Pi is the proof.
+
+Pi saves your sessions locally, and you can resume them in Pi without opening GitSense Chat. Reach for GitSense Chat when you want to:
+
+- Search your sessions for "bug", create a Group from the matches, and add a lead to help you review them.
+- Open Inspect to see tool calls and their results.
+- Message a running Pi session from GitSense Chat and follow its replies as they come in.
+- Copy a Resume command and run it in your terminal to pick up the conversation.
+
+Your other agents can join in too. Tell Claude Code, Codex or OpenCode to run `gsc experts init` and join your Group, then ask it to show a diff in its reply. You can review the diff in the Group next to what your other agents shared. `gsc experts init` starts your agent with a short overview, and it reads more only when a task needs it.
+
+Replies can also include links that open a file in your editor, so you can jump back to the tools you already use.
+
+We'd like to make other agents' sessions as easy to find, inspect and resume as Pi's, where those tools support it.
+
 ## Keep working in your terminal. Collaborate in GitSense Chat.
 
 ### Start a Group at any point
@@ -110,14 +125,6 @@ Watch six sessions from two terminal tabs come together in one Group. Two Pi age
     <td width="33%" valign="top"><a href="assets/hello-world-demo-done-resume-the-work.png"><img src="assets/hello-world-demo-done-resume-the-work.png" alt="Tiles view showing Pi 2's summary and next steps alongside the shared Artifacts card with results from both Pi agents." width="100%"></a><br><strong>Jump to the work</strong></td>
   </tr>
 </table>
-
-## Pi is the proof. Other agents next.
-
-What if you could bring your agents' current sessions together and check what happened in a past one?
-
-With Pi, you can. Select the sessions you're working in and click **Create group**. To find an earlier session, search for a phrase you remember or a file your agent worked on. Open **Inspect** to compare what you asked with what the agent did. Did it read the file you expected? What did the tool return? If you want to continue that conversation, use **Resume** to copy the command and run it in your terminal. You don't need a Group to review or resume a session.
-
-Claude Code, Codex and OpenCode can already share replies in Groups while they run in their own terminals. We'd like to make their sessions just as easy to find, inspect and pick up again, where those tools support it.
 
 ## Runtime details
 
