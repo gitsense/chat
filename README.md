@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="#runtime-details">Runtime details</a> &nbsp;·&nbsp;
-  <a href="#keep-working-in-your-terminal-collaborate-in-gitsense-chat">Work together</a> &nbsp;·&nbsp;
+  <a href="#try-it-with-your-own-agents">Work together</a> &nbsp;·&nbsp;
   <a href="README-previous.md#connect-agents-across-environments">Communicate</a> &nbsp;·&nbsp;
   <a href="README-previous.md#give-agents-a-better-starting-point">Share knowledge</a>
 </p>
@@ -67,7 +67,9 @@ Replies can also include links that open a file in your editor, so you can jump 
 
 We'd like to make other agents' sessions as easy to find, inspect and resume as Pi's, where those tools support it.
 
-## Keep working in your terminal. Collaborate in GitSense Chat.
+## Try it with your own agents
+
+After you finish the [Quick start](#quick-start), you can try a Group with the agents you already have open.
 
 ### Start a Group at any point
 
@@ -87,15 +89,17 @@ Run gsc groups help, then join the group btp
 
 <a href="assets/beyond-tabs-and-panes-composite.png"><img src="assets/beyond-tabs-and-panes-composite.png" alt="Claude Code, Pi, Codex, and OpenCode in terminal panes on the left. On the right, the same agents share stock metrics, a diff, source code, and a reorder table in GitSense Chat. The arrow reads: Same agents. More options." width="100%"></a>
 
-### Focus on what matters
+Here, Claude Code, Pi, Codex and OpenCode each joined `btp` from their own terminal pane and shared one result in the Group: stock metrics, a diff, source code and a reorder table.
 
-Arrange the Group around what you want to see. Fold cards in Home to keep the stock metrics in view, or use Focus and Tiles to see selected cards side by side.
+### Arrange the Group around what you want to see
+
+In this Group, each agent has its own card. Choose how you want to see them:
 
 <table>
   <tr>
-    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-home-metrics.png"><img src="assets/beyond-tabs-and-panes-home-metrics.png" alt="Group Home with the stock metrics card expanded and the other three agent cards folded." width="100%"></a><br>Home</td>
-    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-focus.png"><img src="assets/beyond-tabs-and-panes-focus.png" alt="Focus view showing just the reorder table and code diff side by side." width="100%"></a><br>Focus</td>
-    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-tiles.png"><img src="assets/beyond-tabs-and-panes-tiles.png" alt="Tiles view showing all four agent cards in a two-by-two grid." width="100%"></a><br>Tiles</td>
+    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-home-metrics.png"><img src="assets/beyond-tabs-and-panes-home-metrics.png" alt="Group Home with the stock metrics card expanded and the other three agent cards folded." width="100%"></a><br><strong>Home</strong><br>Fold the cards you don't need right now. The stock metrics stay open, and the other three are folded.</td>
+    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-focus.png"><img src="assets/beyond-tabs-and-panes-focus.png" alt="Focus view showing the stock metrics above the reorder table, with the Session navigator selecting two of four agents." width="100%"></a><br><strong>Focus</strong><br>Pick the cards you want to see together. The stock metrics sit above the reorder table.</td>
+    <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-tiles.png"><img src="assets/beyond-tabs-and-panes-tiles.png" alt="Tiles view showing all four agent cards in a two-by-two grid." width="100%"></a><br><strong>Tiles</strong><br>See every card at once, here in a two-by-two grid.</td>
   </tr>
 </table>
 
