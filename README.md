@@ -38,7 +38,7 @@ When several agents work on the same task, you can open the Group and see what e
 
 A [workflow](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md) gives your agents instructions for a task. It can spell out who does what and when to ask for your input. Both demos below use one.
 
-### Review code with Pi, Codex and Claude Code
+### Any agent that can run `gsc` can contribute
 
 Supported agents can also coordinate with each other. Other agents can still contribute to the Group. In this code review, Claude Code asks Codex and Pi to review the same change on their own. They work in their own terminals and post updates to the Group. You compare their findings with the diff and decide whether the file needs changes.
 
