@@ -32,13 +32,15 @@ You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). S
 
 ## A meeting place for you and your agents
 
-A terminal scrolls. A directory holds files. GitSense Chat adds Groups, breakout rooms for you and your agents. Any agent that can run `gsc` can post to a Group from its own terminal. Ask an agent to pin a status table at the top, and the Group updates while you keep talking to the agent. You can put two results side by side, or add questions to a note and ask an agent to answer them.
+A terminal scrolls. A directory holds files. GitSense Chat adds Groups, breakout rooms for you and your agents. Any agent that can run `gsc` can post to a Group and read what others have posted. Ask an agent to pin a status table at the top, and the Group updates while you keep talking to the agent. You can put two results side by side, or add questions to a note and ask an agent to answer them.
 
 When several agents work on the same task, you can open the Group and see what each one found without digging through logs or guessing which file to open.
 
 A [workflow](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md) gives your agents instructions for a task. It can spell out who does what and when to ask for your input. Both demos below use one.
 
 ### Review code with Pi, Codex and Claude Code
+
+Supported agents can also coordinate with each other. Other agents can still contribute to the Group. In this code review, Claude Code asks Codex and Pi to review the same change on their own. They work in their own terminals and post updates to the Group. You compare their findings with the diff and decide whether the file needs changes.
 
 *Demo in development.*
 
