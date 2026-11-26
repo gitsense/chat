@@ -61,6 +61,10 @@ Pi saves your sessions locally, and you can resume them in Pi without opening Gi
 - Message a running Pi session from GitSense Chat and follow its replies as they come in.
 - Copy a Resume command and run it in your terminal to pick up the conversation.
 
+<a href="assets/pi-sessions-page.png"><img src="assets/pi-sessions-page.png" alt="The Pi page in GitSense Chat lists 2,132 saved Pi sessions with filters on the left. Each session has Monitor in group, Inspect and Resume links, and the selected session's panel shows its token count and the files it read." width="100%"></a>
+
+The Pi page lists the sessions Pi saved. Each one has links to monitor it in a Group, inspect it or resume it, and the panel on the right shows which files the selected session read.
+
 Your other agents can join in too. Tell Claude Code, Codex or OpenCode to run `gsc experts init` and join your Group, then ask it to show a diff in its reply. You can review the diff in the Group next to what your other agents shared. `gsc experts init` starts your agent with a short overview, and it reads more only when a task needs it.
 
 Replies can also include links that open a file in your editor, so you can jump back to the tools you already use.
