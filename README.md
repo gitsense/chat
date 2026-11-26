@@ -46,7 +46,7 @@ In this code review demo, you bring together Claude Code, Codex and Pi. Claude C
 
 ### Take part in the work, not just the conversation
 
-Plan a pizza party with Pi, OpenCode, Claude Code and Codex to learn how a workflow brings you into the work. Yes, a pizza party. Make Pi the pizza lead and OpenCode the toppings expert. Give the lead the workflow to follow, then build your order with help from the toppings expert. Claude Code and Codex review it. The lead checks their sign-offs and the party's needs before deciding whether to show restaurant options.
+Plan a pizza party with Pi, OpenCode, Claude Code and Codex to learn how to shape the work. Yes, a pizza party. Make Pi the pizza lead and OpenCode the toppings expert. Give the lead the workflow to follow, then build your order with help from the toppings expert. Claude Code and Codex review it. The lead checks their sign-offs and the party's needs before deciding whether to show restaurant options.
 
 <img src="assets/readme-v2/pizza-data-placeholder.png" alt="Placeholder for the restaurant options shown after Pi approves the order." width="100%">
 
