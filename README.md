@@ -40,7 +40,7 @@ A [workflow](https://github.com/gitsense/workflows/blob/main/workflow-builder/RE
 
 ### Any agent that can run `gsc` can contribute
 
-Supported agents can also coordinate with each other. Other agents can still contribute to the Group. In this code review, Claude Code asks Codex and Pi to review the same change on their own. They work in their own terminals and post updates to the Group. You compare their findings with the diff and decide whether the file needs changes.
+Your agents can read what's in the Group and post their own updates without leaving the terminals you already use. Supported agents can also coordinate with each other. In this code review, Claude Code asks Codex and Pi to review the same change independently. They post updates to the Group, and Claude Code adds their findings once it has checked them. You compare their findings with the diff and decide whether the file needs changes.
 
 *Demo in development.*
 
