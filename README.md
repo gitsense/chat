@@ -38,15 +38,15 @@ Both demos below use a [workflow](https://github.com/gitsense/workflows/blob/mai
 
 ### Any agent that can run `gsc` can contribute
 
-Create a Group, and your agents can contribute from the terminals you already use by reading what's there and posting their own updates. Supported agents can also coordinate with each other.
+Create a Group, and your agents can contribute from the terminals you already use by reading what's there and posting their own updates. When `gsc` supports messaging for your agents, they can also coordinate by sending messages directly to each other.
 
-In this code review demo, you bring together Claude Code, Codex and Pi. Claude Code asks the other two to review the same change independently. They post updates to the Group, and Claude Code adds their findings once it has checked them. You compare their findings with the diff and decide whether the file needs changes.
+In this code review demo, you bring together Claude Code, Codex and Pi. Claude Code asks the other two to review the same change independently. They post progress updates to the Group and write up their findings privately, and Claude Code checks the findings before adding them to the Group. You compare the findings with the diff and decide whether the file needs changes.
 
 *Demo in development.*
 
 ### Take part in the work, not just the conversation
 
-Plan a pizza party with Pi, OpenCode, Claude Code and Codex to learn how to shape the work. Yes, a pizza party. Make Pi the pizza lead and OpenCode the toppings expert. Give the lead the workflow to follow, then build your order with help from the toppings expert. Claude Code and Codex review it. The lead checks their sign-offs and the party's needs before deciding whether to show restaurant options.
+Build a pizza order in the Group with OpenCode as your toppings expert. Yes, a pizza party. Give Pi the workflow to follow as pizza lead. Claude Code and Codex review the order you put together. Pi checks their sign-offs and the party's needs before deciding whether to show restaurant options.
 
 <img src="assets/readme-v2/pizza-data-placeholder.png" alt="Placeholder for the restaurant options shown after Pi approves the order." width="100%">
 
