@@ -38,7 +38,9 @@ Both demos below use a [workflow](https://github.com/gitsense/workflows/blob/mai
 
 ### Any agent that can run `gsc` can contribute
 
-Create a Group, and your agents can contribute from the terminals you already use by reading what's there and posting their own updates. Supported agents can also coordinate with each other. In this code review, Claude Code asks Codex and Pi to review the same change independently. They post updates to the Group, and Claude Code adds their findings once it has checked them. You compare their findings with the diff and decide whether the file needs changes.
+Create a Group, and your agents can contribute from the terminals you already use by reading what's there and posting their own updates. Supported agents can also coordinate with each other.
+
+In this code review demo, Claude Code asks Codex and Pi to review the same change independently. They post updates to the Group, and Claude Code adds their findings once it has checked them. You compare their findings with the diff and decide whether the file needs changes.
 
 *Demo in development.*
 
