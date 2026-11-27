@@ -14,15 +14,13 @@
 
 <a href="assets/readme-hero-callout.png"><img src="assets/readme-hero-callout.png" alt="Claude Code's terminal reply beside the searchable inventory table it displays in GitSense Chat. An arrow from the terminal to Chat reads: Same agent. Same reply." width="100%"></a>
 
-## Let Claude drive, you steer
+## Use one checklist to guide Claude Code, Pi and Codex
 
-Your agents can do more than you think with GitSense Chat. Watch how you can have Claude Code coordinate Pi and Codex while you decide what happens next by ticking boxes in the Group.
+Give Claude Code one prompt. After that, each box you tick sends Claude a message. Claude decides when to hand work to Pi or Codex. You can follow their progress, then open Codex's diff in your editor.
 
-<img src="assets/readme-v2/claude-drive-you-steer-placeholder.png" alt="Placeholder for the video where each tick in the Demo guide sends Claude a message, and Claude passes the step to Pi or Codex." width="100%">
+<img src="assets/readme-v2/checklist-guide-agents-placeholder.png" alt="Placeholder for the video where each tick in a checklist sends Claude a message, and Claude hands the work to Pi or Codex." width="100%">
 
 *Demo preview. Recording to come.*
-
-The Demo guide keeps you in the loop. You can work with several agents at once and still see which step they're on and what comes next. Any agent that can run `gsc` can take Claude's place, so try it with the agents you already use, starting with the Quick start below.
 
 ## Quick start
 
