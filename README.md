@@ -14,6 +14,16 @@
 
 <a href="assets/readme-hero-callout.png"><img src="assets/readme-hero-callout.png" alt="Claude Code's terminal reply beside the searchable inventory table it displays in GitSense Chat. An arrow from the terminal to Chat reads: Same agent. Same reply." width="100%"></a>
 
+## Let Claude drive, you steer
+
+Your agents can do more than you think with GitSense Chat. Watch how you can have Claude Code coordinate Pi and Codex while you decide what happens next by ticking boxes in the Group.
+
+<img src="assets/readme-v2/claude-drive-you-steer-placeholder.png" alt="Placeholder for the video where each tick in the Demo guide sends Claude a message, and Claude passes the step to Pi or Codex." width="100%">
+
+*Demo preview. Recording to come.*
+
+The Demo guide keeps you in the loop. You can work with several agents at once and still see which step they're on and what comes next. Any agent that can run `gsc` can take Claude's place, so try it with the agents you already use, starting with the Quick start below.
+
 ## Quick start
 
 Review the [install script](install.sh), then install the `gsc` CLI:
@@ -112,33 +122,6 @@ In this Group, each agent has its own card. Choose how you want to see them:
     <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-home-metrics.png"><img src="assets/beyond-tabs-and-panes-home-metrics.png" alt="Group Home with the stock metrics card expanded and the other three agent cards folded." width="100%"></a><br><strong>Home</strong><br>Fold the cards you don't need right now. The stock metrics stay open, and the other three are folded.</td>
     <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-focus.png"><img src="assets/beyond-tabs-and-panes-focus.png" alt="Focus view showing the stock metrics above the reorder table, with the Session navigator selecting two of four agents." width="100%"></a><br><strong>Focus</strong><br>Pick the cards you want to see together. The stock metrics sit above the reorder table.</td>
     <td width="33%" valign="top"><a href="assets/beyond-tabs-and-panes-tiles.png"><img src="assets/beyond-tabs-and-panes-tiles.png" alt="Tiles view showing all four agent cards in a two-by-two grid." width="100%"></a><br><strong>Tiles</strong><br>See every card at once, here in a two-by-two grid.</td>
-  </tr>
-</table>
-
-## Let your agents show you where things stand
-
-The more agents you have working in parallel, the harder it can be to see what's still underway and what's ready to review. GitSense Chat gives you one place to follow the work. Your agents can post updates and share results in the Group while they keep working in their terminals.
-
-Keep interacting with your agents the way you already do. GitSense Chat gives them a shared place to post progress, show results, and make their work easier for you to follow.
-
-Watch six sessions from two terminal tabs come together in one Group. Two Pi agents keep working in their terminals, update their cards as they go, and share finished Rust and Go programs you can open from the Group.
-
-<table>
-  <tr>
-    <td width="50%" valign="top"><a href="assets/hello-world-terminal-tab-1.png"><img src="assets/hello-world-terminal-tab-1.png" alt="The first terminal tab shows two Pi agents." width="100%"></a><br>Terminal tab 1</td>
-    <td width="50%" valign="top"><a href="assets/hello-world-terminal-tab-2.png"><img src="assets/hello-world-terminal-tab-2.png" alt="The second terminal tab shows two Claude Code agents and two Codex agents." width="100%"></a><br>Terminal tab 2</td>
-  </tr>
-</table>
-
-<p align="center"><a href="assets/your-terminal-agents-in-gitsense-chat.mp4?raw=true">Download video (1:35, 8.5 MB)</a></p>
-
-<a href="assets/your-terminal-agents-in-gitsense-chat.mp4?raw=true"><img src="assets/your-terminal-tabs-in-gitsense-chat-video.png" alt="Watch the same six agents in one GitSense Chat Group, with Artifacts and Status at the top and the Demo guide on the right." width="100%"></a>
-
-<table>
-  <tr>
-    <td width="33%" valign="top"><a href="assets/hello-world-artifacts-and-status-done.png"><img src="assets/hello-world-artifacts-and-status-done.png" alt="The Hello World Group after both Pi agents finish: Artifacts links to the two programs, Status shows both as Done, and the Rust and Go card headers report the run output." width="100%"></a><br><strong>More than spinners</strong></td>
-    <td width="33%" valign="top"><a href="assets/hello-world-artifacts-and-status-done-tiles.png"><img src="assets/hello-world-artifacts-and-status-done-tiles.png" alt="The Session navigator in Tiles view shows Artifacts and Status selected and displayed side by side." width="100%"></a><br><strong>Control the flow</strong></td>
-    <td width="33%" valign="top"><a href="assets/hello-world-demo-done-resume-the-work.png"><img src="assets/hello-world-demo-done-resume-the-work.png" alt="Tiles view showing Pi 2's summary and next steps alongside the shared Artifacts card with results from both Pi agents." width="100%"></a><br><strong>Jump to the work</strong></td>
   </tr>
 </table>
 
