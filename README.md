@@ -4,25 +4,25 @@
 
 <p align="center">
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
-  <a href="#runtime-details">Runtime details</a> &nbsp;·&nbsp;
-  <a href="#try-it-with-your-own-agents">Work together</a> &nbsp;·&nbsp;
-  <a href="README-previous.md#connect-agents-across-environments">Communicate</a> &nbsp;·&nbsp;
-  <a href="README-previous.md#give-agents-a-better-starting-point">Share knowledge</a>
+  <a href="#a-meeting-place-for-you-and-your-agents">Work together</a> &nbsp;·&nbsp;
+  <a href="#no-lock-in-pi-is-the-proof">Pi sessions</a> &nbsp;·&nbsp;
+  <a href="#try-it-with-your-own-agents">Try it</a> &nbsp;·&nbsp;
+  <a href="#current-support-and-boundaries">What works today</a>
 </p>
 
-<p align="center">Your agents keep working where they are. GitSense Chat gives you more ways to work together.</p>
+<p align="center">Your agents keep working where they are. GitSense Chat is a local web app where you and your agents share results and decide what happens next.</p>
 
 <a href="assets/readme-hero-callout.png"><img src="assets/readme-hero-callout.png" alt="Claude Code's terminal reply beside the searchable inventory table it displays in GitSense Chat. An arrow from the terminal to Chat reads: Same agent. Same reply." width="100%"></a>
 
 ## Rethink how you instruct your agents
 
-Tick a box in GitSense Chat to send your agents their next step, or have them act when you type a phrase like "ship it" into a shared note. In the video, Claude Code gets each tick in its terminal and decides what the step needs. When Pi marks its work done, Claude hands the work to Codex. You follow both beside the checklist, then open Codex's diff in your editor.
+Tick a box in GitSense Chat to send your agents their next step, or have them act when you type a phrase like "ship it" into a shared note. In the demo, every tick sends Claude Code a message in its terminal, and Claude decides what the step needs. It hands one step to Pi, and when Pi marks its work done, Claude Code hands the work to Codex. You follow their progress beside the checklist, then open Codex's diff in your editor.
 
 <img src="assets/readme-v2/rethink-instruct-agents-placeholder.png" alt="Placeholder for the video where each tick in a checklist sends Claude a message, and Claude hands the work to Pi or Codex." width="100%">
 
 *Demo preview. Recording to come.*
 
-To set this up for your own notes, ask your agent to run `gsc sessions hooks --help`, and review the script it proposes before you turn it on.
+To set this up for your own notes, ask your agent to run `gsc sessions hooks --help`. It will propose a hook program. The program runs as you, so review it before you turn it on.
 
 ## Quick start
 
@@ -32,23 +32,23 @@ Review the [install script](install.sh), then install the `gsc` CLI:
 curl -fsSL https://raw.githubusercontent.com/gitsense/chat/refs/heads/main/install.sh | bash
 ```
 
-To install and configure GitSense Chat, ask your coding agent:
+`gsc` is the command-line tool your agents use. GitSense Chat is the app you open in your browser. To install and configure it, ask your coding agent:
 
 ```text
 Install and configure GitSense Chat for me. Start by running `gsc docs help`.
 ```
 
-You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](#runtime-details) for Pi setup and bringing in sessions from other agents.
+You can also [build the CLI from source](https://github.com/gitsense/gsc-cli). See [Runtime details](#runtime-details) for Pi setup and bringing in sessions from other agents, and [Current support](#current-support-and-boundaries) for what each agent can do today.
 
 ## A meeting place for you and your agents
 
-A terminal scrolls. A directory holds files. GitSense Chat adds Groups, breakout rooms for you and your agents. Any agent that can run [gsc](https://github.com/gitsense/gsc-cli) can post to a Group and read what others have posted. Ask an agent to pin a status table at the top, and the Group updates while you keep talking to the agent. You can put two results side by side, or add questions to a note and ask an agent to answer them.
+A terminal scrolls. A directory holds files. GitSense Chat adds Groups: breakout rooms for you and your agents. Any agent that can run [gsc](https://github.com/gitsense/gsc-cli) can post to a Group and read what others have posted. Ask an agent to pin a status table at the top, and the Group updates while you keep talking to the agent. You can put two results side by side, or add questions to a note and ask an agent to answer them.
 
 Both demos below use a [workflow](https://github.com/gitsense/workflows/blob/main/workflow-builder/README.md) to tell the agents who does what and when to ask for your input.
 
 ### Any agent that can run `gsc` can contribute
 
-Create a Group, and your agents can contribute from the terminals you already use by reading what's there and posting their own updates. When `gsc` supports messaging for your agents, they can also coordinate by sending messages directly to each other.
+Create a Group, and your agents can contribute from the terminals you already use by reading what's there and posting their own updates. Agents can also message each other directly: Pi through Pi-Brains, and Claude Code, Codex or OpenCode when they run in tmux.
 
 In this code review demo, you bring together Claude Code, Codex and Pi. Claude Code asks the other two to review the same change independently. They post progress updates to the Group and write up their findings privately, and Claude Code checks the findings before adding them to the Group. You compare the findings with the diff and decide whether the file needs changes.
 
@@ -56,7 +56,7 @@ In this code review demo, you bring together Claude Code, Codex and Pi. Claude C
 
 ### Take part in the work, not just the conversation
 
-Build a pizza order in the Group with OpenCode as your toppings expert. Yes, a pizza party. Give Pi the workflow to follow as pizza lead. Claude Code and Codex review the order you put together. Pi checks their sign-offs and the party's needs before deciding whether to show restaurant options.
+Build a pizza order for a party in the Group, with OpenCode as your toppings expert. Yes, a pizza party. Give Pi the workflow to follow as pizza lead. Claude Code and Codex review the order you put together. Pi checks their sign-offs and the party's needs before deciding whether to show restaurant options.
 
 <img src="assets/readme-v2/pizza-data-placeholder.png" alt="Placeholder for the restaurant options shown after Pi approves the order." width="100%">
 
@@ -66,14 +66,14 @@ Build a pizza order in the Group with OpenCode as your toppings expert. Yes, a p
 
 Pi saves your sessions locally, and you can resume them in Pi without opening GitSense Chat. Reach for GitSense Chat when you want to:
 
-- Search your sessions for "bug", create a Group from the matches, and add a lead to help you review them.
-- Open Inspect to see tool calls and their results.
+- Search your sessions for "bug", create a Group from the matches, and add a lead agent to help you review them.
+- Open a session's Inspect view to see tool calls and their results.
 - Message a running Pi session from GitSense Chat and follow its replies as they come in.
 - Copy a Resume command and run it in your terminal to pick up the conversation.
 
 <a href="assets/pi-sessions-page.png"><img src="assets/pi-sessions-page.png" alt="The Pi page in GitSense Chat lists 2,132 saved Pi sessions with filters on the left. Each session has Monitor in group, Inspect and Resume links, and the selected session's panel shows its token count and the files it read." width="100%"></a>
 
-The Pi page lists the sessions Pi saved. Each one has links to monitor it in a Group, inspect it or resume it, and the panel on the right shows which files the selected session read.
+The panel on the right shows the selected session's token count and the files it read.
 
 <table>
   <tr>
@@ -100,16 +100,16 @@ You can ask your agent to start a Group even if you're halfway through a task. K
 **Start a Group.** Paste this into the agent you're already working with:
 
 ```text
-Run gsc groups help, then create a group named "Beyond tabs and panes" with the alias btp and add yourself
+Run gsc groups help, then create a group named "Beyond tabs and panes" with the alias btp and add yourself.
 ```
 
 **Bring in another agent.** When you want another agent's help, give it the short alias `btp` instead of the Group ID.
 
 ```text
-Run gsc groups help, then join the group btp
+Run gsc groups help, then join the group btp.
 ```
 
-<a href="assets/beyond-tabs-and-panes-composite.png"><img src="assets/beyond-tabs-and-panes-composite.png" alt="Claude Code, Pi, Codex, and OpenCode in terminal panes on the left. On the right, the same agents share stock metrics, a diff, source code, and a reorder table in GitSense Chat. The arrow reads: Same agents. More options." width="100%"></a>
+<a href="assets/beyond-tabs-and-panes-composite.png"><img src="assets/beyond-tabs-and-panes-composite.png" alt="Claude Code, Pi, Codex and OpenCode in terminal panes on the left. On the right, the same agents share stock metrics, a diff, source code and a reorder table in GitSense Chat. The arrow reads: Same agents. More options." width="100%"></a>
 
 Here, Claude Code, Pi, Codex and OpenCode each joined `btp` from their own terminal pane and shared one result in the Group: stock metrics, a diff, source code and a reorder table.
 
@@ -129,34 +129,34 @@ In this Group, each agent has its own card. Choose how you want to see them:
 
 ### Use Pi with Pi-Brains
 
-GitSense indexes the history Pi saves locally so you can find and inspect past sessions. Install [Pi-Brains](https://github.com/gitsense/pi-brains) to connect Pi to GitSense:
+The Pi session sync service in GitSense Chat indexes the history Pi saves locally, so you can find and inspect past sessions. Install [Pi-Brains](https://github.com/gitsense/pi-brains) to connect Pi to GitSense Chat:
 
 ```bash
 pi install npm:@gitsense/pi-brains
 ```
 
-Start Pi in a workspace and run `/brains`. Pi-Brains adds messaging, checkpoints, and live session status. The GitSense session sync service indexes the history Pi saves.
+Start Pi in a workspace and run `/brains`. Pi-Brains adds messaging, checkpoints and live session status.
 
 ### Mirror sessions from other agents
 
-Keep supported agents running in their own environments and mirror their updates into a Group. Ask your agent to use the Group's connection instructions, or enter its native session ID in GitSense Chat. For agent-guided setup, start with:
+Keep supported agents running in their own environments and mirror their updates into a Group. Mirrors read sessions through [txcript](#import-a-snapshot-into-pi), so install it first. Ask your agent to use the Group's connection instructions, or enter the agent's own session ID in GitSense Chat. For agent-guided setup, start with:
 
 ```bash
 gsc experts guide buddy-mirror
 ```
 
-Connecting requires your permission to share the session's latest saved assistant text and subsequent updates with Group viewers until you disconnect it. Mirrors do not publish reasoning, tool results, user messages, or transcript history. Connecting does not automatically make the agent read the Group or other agents' conversations.
+Connecting needs your permission. Once a session is connected, the Group shows its latest saved reply and each reply after that, until you disconnect. Mirrors don't share reasoning, tool results, your messages or the rest of the conversation. Connecting also doesn't make the agent read the Group or other agents' conversations.
 
 Pi sessions don't need a mirror. Find existing Pi sessions in GitSense Chat and add them to a Group directly.
 
 ### Import a snapshot into Pi
 
-Use [txcript](https://github.com/skillsynchq/txcript) to convert a session from Claude Code, Codex, or another supported agent into a Pi session. The CLI bootstrap installer installs the matching upstream binary into `~/.local/bin` on supported Unix platforms. You can also download it from [txcript Releases](https://github.com/skillsynchq/txcript/releases).
+Use [txcript](https://github.com/gitsense/txcript) to convert a session from Claude Code, Codex or another supported agent into a Pi session. Download it from [txcript Releases](https://github.com/gitsense/txcript/releases) and put it on your `PATH`. GitSense maintains this fork with fixes that `gsc` needs, so use it instead of the upstream release.
 
 ```bash
 txcript list --from claude_code
 txcript continue <session-id> \
-  --from <harness> \
+  --from claude_code \
   --with pi \
   --no-resume
 ```
@@ -165,7 +165,7 @@ The converted snapshot appears in GitSense Chat after the Pi session sync servic
 
 ## Security
 
-GitSense Chat is designed for an individual's local agent workflow. It does not provide authentication or multi-user access controls.
+GitSense Chat is built for one person running their own agents on their own machine. It has no authentication and no multi-user access controls.
 
 Only make GitSense Chat available through the local loopback interface, such as `localhost` or `127.0.0.1`. Do not expose it directly to a local network or the public internet.
 
@@ -173,16 +173,26 @@ If you access GitSense Chat through a tunnel, restrict access to yourself and ma
 
 ## Current support and boundaries
 
-Any agent that can run `gsc` can query the same Brains, notes, lessons, and rules without requiring runtime integration.
+Your agents can query the same Brains, notes, lessons and rules through `gsc`, with no wrapper or proxy. A Brain is a database `gsc` can search. Some Brains describe your code, such as each file's purpose. Others hold the rules, notes and lessons you save.
 
-Executable actions remain subject to application authorization and command validation. GitSense Chat does not decide whether an agent's work is correct, and agent findings do not automatically become trusted knowledge. You decide what evidence to trust and what happens next.
+| What you can do | Pi | Claude Code, Codex, OpenCode |
+| :--- | :--- | :--- |
+| Query Brains, notes, lessons and rules | Yes | Yes |
+| Join a Group and post to it | Yes | Yes |
+| Message other agents | Yes, with Pi-Brains | When running in tmux |
+| Show replies in a Group | Add the session to the Group | [Mirror the session](#mirror-sessions-from-other-agents) |
+| Find, inspect and resume sessions in GitSense Chat | Yes | Not yet |
+
+An action button or form in an agent's reply doesn't grant any permission on its own. GitSense Chat checks whether the action is allowed and validates the command before it runs.
+
+GitSense Chat doesn't decide whether an agent's work is correct, and agent findings don't become trusted knowledge automatically. You decide what evidence to trust and what happens next.
 
 ## License
 
 The [`gsc` CLI](https://github.com/gitsense/gsc-cli) is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-Manifests are plain JSON files built on an open format. You can create, modify, distribute, and use them with the open-source `gsc` CLI without requiring GitSense Chat.
+Manifests, the plain JSON files that Brains are built from, use an open format. You can create, modify, distribute and use them with the open-source `gsc` CLI without requiring GitSense Chat.
 
-GitSense Chat is licensed under the [Fair Core License (FCL-1.0-ALv2)](https://fcl.dev/). You may use, modify, and run it internally, including for personal projects, shared workflows, and self-hosted deployments. You may not use it to build or operate a product or service that competes directly with GitSense Chat.
+GitSense Chat is licensed under the [Fair Core License (FCL-1.0-ALv2)](https://fcl.dev/). You may use, modify and run it internally, including for personal projects, shared workflows and self-hosted deployments. You may not use it to build or operate a product or service that competes directly with GitSense Chat.
 
 The core GitSense Chat application currently ships as minified source. We intend to open the source further as the project matures. Under the Fair Core License, each release becomes available under Apache 2.0 two years after it is published. See [LICENSE](LICENSE) and [NOTICE](NOTICE) for the complete terms.
