@@ -14,13 +14,15 @@
 
 <a href="assets/readme-hero-callout.png"><img src="assets/readme-hero-callout.png" alt="Claude Code's terminal reply beside the searchable inventory table it displays in GitSense Chat. An arrow from the terminal to Chat reads: Same agent. Same reply." width="100%"></a>
 
-## Use one checklist to guide Claude Code, Pi and Codex
+## Rethink how you instruct your agents
 
-Give Claude Code one prompt. After that, each box you tick sends Claude a message. Claude decides when to hand work to Pi or Codex. You can follow their progress, then open Codex's diff in your editor.
+Tick a box in GitSense Chat to send your agents their next step, or have them act when you type a phrase like "ship it" into a shared note. In the video, Claude Code gets each tick in its terminal and decides what the step needs. When Pi marks its work done, Claude hands the work to Codex. You follow both beside the checklist, then open Codex's diff in your editor.
 
-<img src="assets/readme-v2/checklist-guide-agents-placeholder.png" alt="Placeholder for the video where each tick in a checklist sends Claude a message, and Claude hands the work to Pi or Codex." width="100%">
+<img src="assets/readme-v2/rethink-instruct-agents-placeholder.png" alt="Placeholder for the video where each tick in a checklist sends Claude a message, and Claude hands the work to Pi or Codex." width="100%">
 
 *Demo preview. Recording to come.*
+
+To set this up for your own notes, ask your agent to run `gsc sessions hooks --help`, and review the script it proposes before you turn it on.
 
 ## Quick start
 
