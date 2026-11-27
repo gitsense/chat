@@ -20,7 +20,9 @@
 
 In the demo below, ticking a box in GitSense Chat sends Claude Code a message in its terminal telling it what to do next. Claude passes the steps to Pi and Codex, and Codex doesn't start until Pi is done, even if you tick too early. The checklist stays beside the work, so you can see what's next without opening a file.
 
-It works the other way too. Pi and Codex post their progress to a Status table as they go, so you can follow along without reading their terminals. When Codex finishes, it leaves you more than a file: next to hey.rs in Artifacts is a link that opens the diff in Zed. Click it whenever you're ready, without asking Codex again.
+**Watch how your agents can help.**
+
+Pi and Codex post their progress to a Status table as they go, so you can follow along without reading their terminals. When Codex finishes, it leaves you more than a file: next to hey.rs in Artifacts is a link that opens the diff in Zed. Click it whenever you're ready, without asking Codex again.
 
 <img src="assets/readme-v2/rethink-instruct-agents-placeholder.png" alt="The demo Group before the first tick: the Demo guide checklist on the right, Pi's and Codex's cards, an empty Artifacts card, and a Status table listing Pi and Codex as Waiting." width="100%">
 
