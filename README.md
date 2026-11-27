@@ -14,15 +14,17 @@
 
 <a href="assets/readme-hero-callout.png"><img src="assets/readme-hero-callout.png" alt="Claude Code's terminal reply beside the searchable inventory table it displays in GitSense Chat. An arrow from the terminal to Chat reads: Same agent. Same reply." width="100%"></a>
 
-## Rethink how you instruct your agents
+## Rethink how you instruct your agents and how they can help
 
-Tick a box in GitSense Chat to send your agents their next step, or have them act when you type a phrase like "ship it" into a shared note. In the demo, every tick sends Claude Code a message in its terminal, and Claude decides what the step needs. It hands one step to Pi, and when Pi marks its work done, Claude Code hands the work to Codex. You follow their progress beside the checklist, then open Codex's diff in your editor.
+Watch what a tick can do. In the demo below, ticking a box in GitSense Chat sends Claude Code a message in its terminal telling it what to do next. Claude passes the steps to Pi and Codex, and Codex doesn't start until Pi is done, even if you tick too early. The checklist stays beside the work, so you can see what's next without opening a file.
 
-<img src="assets/readme-v2/rethink-instruct-agents-placeholder.png" alt="Placeholder for the video where each tick in a checklist sends Claude a message, and Claude hands the work to Pi or Codex." width="100%">
+It works the other way too. Pi and Codex post their progress to a Status table as they go, so you can follow along without reading their terminals. When Codex finishes, it leaves you more than a file: next to hey.rs in Artifacts is a link that opens the diff in Zed. Click it whenever you're ready, without asking Codex again.
+
+<img src="assets/readme-v2/rethink-instruct-agents-placeholder.png" alt="The demo Group before the first tick: the Demo guide checklist on the right, Pi's and Codex's cards, an empty Artifacts card, and a Status table listing Pi and Codex as Waiting." width="100%">
 
 *Demo preview. Recording to come.*
 
-To set this up for your own notes, ask your agent to run `gsc sessions hooks --help`. It will propose a hook program. The program runs as you, so review it before you turn it on.
+To set up your own checklist, ask your agent to run `gsc sessions hooks --help`. It will propose a hook program. The program runs as you, so review it before you turn it on.
 
 ## Quick start
 
