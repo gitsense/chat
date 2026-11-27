@@ -237,9 +237,15 @@ and add the ones you want to a Group directly.
 ### Import a snapshot into Pi
 
 For a separate snapshot-import option, use [txcript](https://github.com/gitsense/txcript) to bring snapshots from
-Claude Code, Codex, and other agents into a Pi session. Download it from the
-[txcript Releases](https://github.com/gitsense/txcript/releases) page and put
-it on your `PATH`. GitSense maintains this fork with fixes that `gsc` needs.
+Claude Code, Codex, and other agents into a Pi session. GitSense maintains this
+fork with fixes that `gsc` needs. Build it from source with Rust 1.96 or newer,
+and make sure `~/.cargo/bin` is on your `PATH`:
+
+```bash
+cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
+```
+
+Then convert a session:
 
 ```bash
 txcript list --from claude_code

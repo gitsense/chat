@@ -151,7 +151,13 @@ Pi sessions don't need a mirror. Find existing Pi sessions in GitSense Chat and 
 
 ### Import a snapshot into Pi
 
-Use [txcript](https://github.com/gitsense/txcript) to convert a session from Claude Code, Codex or another supported agent into a Pi session. Download it from [txcript Releases](https://github.com/gitsense/txcript/releases) and put it on your `PATH`. GitSense maintains this fork with fixes that `gsc` needs, so use it instead of the upstream release.
+Use [txcript](https://github.com/gitsense/txcript) to convert a session from Claude Code, Codex or another supported agent into a Pi session. GitSense maintains this fork with fixes that `gsc` needs, so use it instead of the upstream package. Build it from source with Rust 1.96 or newer, and make sure `~/.cargo/bin` is on your `PATH`:
+
+```bash
+cargo install --git https://github.com/gitsense/txcript txcript-cli --locked
+```
+
+Then convert a session:
 
 ```bash
 txcript list --from claude_code
