@@ -236,12 +236,10 @@ and add the ones you want to a Group directly.
 
 ### Import a snapshot into Pi
 
-For a separate snapshot-import option, use [txcript](https://github.com/skillsynchq/txcript) to bring snapshots from
-Claude Code, Codex, and other agents into a Pi session. The CLI bootstrap
-installer installs the matching upstream release binary into `~/.local/bin`
-(on supported Unix platforms). You can also download binaries directly from
-the [txcript Releases](https://github.com/skillsynchq/txcript/releases) page
-if you need to install it separately.
+For a separate snapshot-import option, use [txcript](https://github.com/gitsense/txcript) to bring snapshots from
+Claude Code, Codex, and other agents into a Pi session. Download it from the
+[txcript Releases](https://github.com/gitsense/txcript/releases) page and put
+it on your `PATH`. GitSense maintains this fork with fixes that `gsc` needs.
 
 ```bash
 txcript list --from claude_code
