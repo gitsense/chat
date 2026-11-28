@@ -10,11 +10,13 @@
   <a href="#current-support-and-boundaries">What works today</a>
 </p>
 
-<p align="center">Your agents keep working where they are. GitSense Chat is a local web app where you and your agents share results and decide what happens next.</p>
+<p align="center">Your agents keep working where they are. GitSense Chat gives you ways to work with them that a terminal can't.</p>
 
 <a href="assets/readme-hero-callout.png"><img src="assets/readme-hero-callout.png" alt="Claude Code's terminal reply beside the searchable inventory table it displays in GitSense Chat. An arrow from the terminal to Chat reads: Same agent. Same reply." width="100%"></a>
 
-## Rethink how you instruct your agents and how they can help
+## Your agents can do more than you think
+
+Bring in the agents you already use and let them work together. You can follow their progress and review their work, all from one place.
 
 **Watch what a tick can do.**
 
